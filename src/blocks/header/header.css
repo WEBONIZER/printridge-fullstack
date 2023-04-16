@@ -10,7 +10,7 @@
     border-bottom: 1px solid rgba(84, 84, 84, 0.7);
 }
 
-@media all and (max-width: 320px) {
+/*@media all and (max-width: 320px) {
     .header {
         min-height: 56px;
         max-width: 320px;
@@ -18,4 +18,4 @@
         margin-bottom: 42px;
 
     }
-}
+}*/
