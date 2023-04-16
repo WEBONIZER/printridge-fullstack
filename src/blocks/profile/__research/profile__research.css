@@ -1,0 +1,23 @@
+.profile__research {
+    margin: 0;
+    grid-area: research;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #fff;
+}
+
+@media all and (max-width: 520px) {
+    .profile__research {
+        max-width: 282px;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        margin-left: 16px;
+    }
+}

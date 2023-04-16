@@ -1,0 +1,8 @@
+.elements__box {
+    margin: 0;
+    min-width: 246px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
