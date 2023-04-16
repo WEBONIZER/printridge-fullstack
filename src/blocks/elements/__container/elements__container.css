@@ -1,8 +1,0 @@
-.elements__container {
-    margin: 0;
-    min-width: 246px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}

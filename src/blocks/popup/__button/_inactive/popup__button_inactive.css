@@ -1,7 +1,0 @@
-.popup__button_inactive {
-    opacity: 0.2;
-}
-
-.popup__button_inactive:disabled {
-    opacity: 0.2;
-}
