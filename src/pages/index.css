@@ -2,11 +2,36 @@
 @import url(../vendor/fonts.css);
 @import url(../blocks/page/page.css);
 
+@import url(../blocks/link/link.css);
+
 @import url(../blocks/header/header.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/__info/header__info.css);
+@import url(../blocks/header/__link/header__link.css);
+@import url(../blocks/header/__link/_phone/header__link_phone.css);
 
 @import url(../blocks/main-menu/main-menu.css);
 @import url(../blocks/main-menu/__element/main-menu__element.css);
 
+@import url(../blocks/sections/sections.css);
+@import url(../blocks/sections/_hidden/sections_hidden.css);
+
 @import url(../blocks/footer/footer.css);
+
+@import url(../blocks/main-section/main-section.css);
+
+@import url(../blocks/refill-section/refill-section.css);
+@import url(../blocks/refill-section/refill__number/refill__number.css);
+@import url(../blocks/refill-section/refill__model/refill__model.css);
+@import url(../blocks/refill-section/refill__use-in/refill__use-in.css);
+@import url(../blocks/refill-section/refill__prise-refill/refill__prise-refill.css);
+@import url(../blocks/refill-section/refill__price-recovery/refill__price-recovery.css);
+@import url(../blocks/refill-section/__table/refill-section__table.css);
+@import url(../blocks/refill-section/__table/_header/refill-section__table_header.css);
+@import url(../blocks/refill-section/__table/_cell/refill-section__table_cell.css);
+
+@import url(../blocks/repair-section/repair-section.css);
+
+@import url(../blocks/contact-section/contact-section.css);
+
+@import url(../blocks/company-section/company-section.css);
