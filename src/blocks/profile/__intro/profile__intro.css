@@ -1,0 +1,26 @@
+.profile__intro {
+    margin: 0;
+    padding-left: 34px;
+    max-width: 336px;
+    display: grid;
+    grid-template-columns: 294px 24px;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+    "jac edit-button"
+    "research research";
+    gap: 8px 17px;
+    align-items: center;
+}
+
+@media all and (max-width: 520px) {
+    .profile__intro {
+        padding-top: 27px;
+        grid-template-areas: 
+        "jac edit-button"
+        "research";
+        grid-template-columns: 245px  18px;
+        padding-left: 0;
+        min-width: 282px;
+        gap: 6px 0px;
+    }
+}
