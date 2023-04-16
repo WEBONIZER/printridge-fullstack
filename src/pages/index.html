@@ -13,7 +13,7 @@
         
         <div class="header__info">
             <a class="link" href="tel:+78129819972" class="footer__links">
-                <p class="header__link">+7 (812) 981-99-72</p>
+                <p class="header__link header__link_phone">+7 (812) 981-99-72</p>
             </a>
             <a class="link" href="mailto:fox.spb@bk.ru">
                 <p class="header__link"">fox.spb@bk.ru</p></a>
@@ -33,13 +33,34 @@
         </ul>
         <div class="sections">
             <section class="section-element main-section">Тут будет всякая информация о компании</section>
-            <section class="section-element refill-section sections_hidden">Тут будет информация по заправке картриджей</section>
+            <section class="section-element refill-section sections_hidden">
+                <p>Тут будет информация по заправке картриджей</p>
+                <table id="table-refill">
+                    <tr>
+                        <td><p class="refill-section__table refill-section__table_header">Картридж</p></td>
+                        <td><p class="refill-section__table refill-section__table_header">Замена чипа</p></td>
+                        <td><p class="refill-section__table refill-section__table_header">Устройства</p></td>
+                        <td><p class="refill-section__table refill-section__table_header">Заправка</p></td>
+                        <td><p class="refill-section__table refill-section__table_header">Восстановление</p></td>
+                    </tr>      
+                </table>
+            </section>
             <section class="section-element repair-section sections_hidden">Тут будет информация по ремонту оргтехники</section>
             <section class="section-element contact-section sections_hidden">Тут будут контакты</section>
             <section class="section-element company-section sections_hidden">Тут будет информация о компании</section>
         </div>
     </main>
+    <template id="cart-refill">
+        <tr class="cart-refill-template">
+            <td><p class="refill__number refill-section__table refill-section__table_cell" id="refill__number">данные1</p></td>
+            <td><p class="refill__number refill-section__table refill-section__table_cell" id="refill__model">данные2</p></td>
+            <td><p class="refill__number refill-section__table refill-section__table_cell" id="refill__use-in"> данные3</p></td>
+            <td><p class="refill__number refill-section__table refill-section__table_cell" id="refill__prise-refill">данные4</p></td>
+            <td><p class="refill__number refill-section__table refill-section__table_cell" id="refill__price-recovery">данные5</p></td>
+        </tr>
+    </template>
     <footer class="footer">
+
     </footer>
 </body>
 

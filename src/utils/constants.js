@@ -1,4 +1,5 @@
 import MainMenuClass from '../components/mainMenu.js'
+import refillObject from '../source/refill.js'
 
 const selectors = {
     mainMenu: document.querySelector('.main-menu'),
@@ -20,6 +21,16 @@ const selectors = {
     logo: document.querySelector('.header__logo'),
 }
 
+const refillSelectors = {
+    templateRefill: document.querySelector('#cart-refill').content,
+    tableRefill: document.querySelector('#table-refill'),
+    number: document.querySelector('#refill__number'),
+    model: document.querySelector('#refill__model'),
+    useIn: document.querySelector('#refill__use-in'),
+    priseRefill: document.querySelector('#refill__prise-refill'),
+    priseRecovery: document.querySelector('#refill__price-recovery'),
+}
+
 const menuClasses = {
     MainMenuClass1: new MainMenuClass(selectors.mainSection, selectors.allSectionElements),
     MainMenuClass2: new MainMenuClass(selectors.refillSection, selectors.allSectionElements),
@@ -28,6 +39,6 @@ const menuClasses = {
     MainMenuClass5: new MainMenuClass(selectors.companySection, selectors.allSectionElements),
 }
 
-const constants = { selectors, menuClasses };
+const constants = { selectors, menuClasses, refillObject, refillSelectors };
 
 export default constants;

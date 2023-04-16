@@ -30,3 +30,20 @@ constants.selectors.mainCompanyElement.addEventListener('click', () => {
     constants.menuClasses.MainMenuClass5._toggleHidden()
     constants.menuClasses.MainMenuClass5._handleClick()
 })
+
+function priceCreate (number, model, useIn, priseRefill, priseRecovery) {
+    const newElement = constants.refillSelectors.templateRefill.querySelector('.cart-refill-template').cloneNode(true);
+    newElement.querySelector('#refill__number').textContent = number;
+    newElement.querySelector('#refill__model').textContent = model;
+    newElement.querySelector('#refill__use-in').textContent = useIn;
+    newElement.querySelector('#refill__prise-refill').textContent = priseRefill;
+    newElement.querySelector('#refill__price-recovery').textContent = priseRecovery;
+    return newElement;
+}
+
+constants.refillObject.forEach((item) => {
+    constants.refillSelectors.tableRefill.append(priceCreate(item.modelCart, item.chip, item.devices, item.rfl, item.recovery));
+    
+})
+
+
