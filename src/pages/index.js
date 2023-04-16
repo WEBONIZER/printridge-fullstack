@@ -1,6 +1,11 @@
 import '../pages/index.css'; 
 import constants from '../utils/constants.js';
 
+constants.selectors.logo.addEventListener('click', () => {
+    constants.menuClasses.MainMenuClass1._toggleHidden()
+    constants.menuClasses.MainMenuClass1._handleClick()
+})
+
 constants.selectors.mainPageElement.addEventListener('click', () => {
     constants.menuClasses.MainMenuClass1._toggleHidden()
     constants.menuClasses.MainMenuClass1._handleClick()

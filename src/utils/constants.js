@@ -17,6 +17,7 @@ const selectors = {
     contactSection: document.querySelector('.contact-section'),
     companySection: document.querySelector('.company-section'),
     sections: document.querySelector('.sections'),
+    logo: document.querySelector('.header__logo'),
 }
 
 const menuClasses = {
