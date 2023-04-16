@@ -27,7 +27,7 @@ const popupEditButton = document.querySelector('#button-edit-save');
 const popupAvatarButton = document.querySelector('#button-add-avatar');
 const avatarLink = document.querySelector('#popup-avatar-link');
 const avatarElement = document.querySelector('.profile__avatar');
-let id;
+let id; 
 
 // Селекторы для валидации
 
