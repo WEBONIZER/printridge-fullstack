@@ -1,8 +1,8 @@
-import { createCard, createCards } from './components/card.js'
-import * as valid from "./components/validate.js";
-import * as api from "./components/api.js";
-import { openPopup, closePopup } from './components/popup.js';
-import './pages/index.css'; // добавляем импорт главного файла стилей 
+import { createCard, createCards } from '../components/card.js'
+import * as valid from "../components/validate.js";
+import * as api from "../components/api.js";
+import { openPopup, closePopup } from '../components/popup.js';
+import '../pages/index.css'; // добавляем импорт главного файла стилей 
 
 // Переменные
 
