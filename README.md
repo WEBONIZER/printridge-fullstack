@@ -7,3 +7,4 @@ npm i react-dnd
 npm i uuid 
 npm i react-router-dom 
 npm i react-router-dom@latest
+npm i gh pages dash dash save dev
