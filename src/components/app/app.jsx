@@ -6,6 +6,7 @@ import Main from '../../pages/main/main'
 import Repair from '../../pages/repair/repair'
 import Refill from '../../pages/refill/refill'
 import Contacts from '../../pages/contacts/contacts'
+import RefillItemPage from '../../pages/refill-item-page/refill-item-page'
 import NotFound404 from '../../pages/not-found/not-found'
 
 
@@ -23,6 +24,8 @@ function App() {
           <Route index element={<Main />} />
           <Route path="/repair" element={<Repair />} />
           <Route path="/refill" element={<Refill />} />
+          <Route path="/refill/:vendor" element={<Refill />} />
+          <Route path="/refill/:vendor/:model" element={<RefillItemPage />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
