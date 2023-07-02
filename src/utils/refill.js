@@ -1,4 +1,4 @@
-export const refillData = [
+export const refill = [
     {
         modelCart: "CF281A",
         vendor: 'HP',
@@ -72,7 +72,7 @@ export const refillData = [
         recovery_price: "Уточняйте"
     },
     {
-        modelCart: "CF233A",
+        modelCart: "CF233A ",
         vendor: 'HP',
         chip: "с заменой чипа",
         devices: "HP LJ M106 \/ M134",
@@ -80,40 +80,8 @@ export const refillData = [
         recovery_price: "Уточняйте"
     },
     {
-        modelCart: "CF234A",
+        modelCart: "CF234A ",
         vendor: 'HP',
-        chip: "с заменой чипа",
-        devices: "HP LJ M106 \/ M134",
-        refill_price: "-",
-        recovery_price: "Уточняйте"
-    },
-    {
-        modelCart: "MLT-115S",
-        vendor: 'Samsung',
-        chip: "с заменой чипа",
-        devices: "HP LJ M106 \/ M134",
-        refill_price: "1300 ₽",
-        recovery_price: "Уточняйте"
-    },
-    {
-        modelCart: "MLT-111S",
-        vendor: 'Samsung',
-        chip: "с заменой чипа",
-        devices: "HP LJ M106 \/ M134",
-        refill_price: "-",
-        recovery_price: "Уточняйте"
-    },
-    {
-        modelCart: "TK-1170",
-        vendor: 'Kyocera',
-        chip: "с заменой чипа",
-        devices: "HP LJ M106 \/ M134",
-        refill_price: "1300 ₽",
-        recovery_price: "Уточняйте"
-    },
-    {
-        modelCart: "TK-895",
-        vendor: 'Kyocera',
         chip: "с заменой чипа",
         devices: "HP LJ M106 \/ M134",
         refill_price: "-",
