@@ -1,9 +1,9 @@
-//import styles from './orders.module.css'
+import HeaderComponent from '../../components/header/header'
 
 function Header() {
 
     return (
-        <p>Header</p>
+        <HeaderComponent />
     );
 }
 

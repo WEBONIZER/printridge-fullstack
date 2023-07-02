@@ -5,7 +5,7 @@ export const refillData = [
         modelCart: "CF281A",
         id: uuidv4(),
         vendor: 'HP',
-        chip: "-",
+        chip: false,
         devices: "LJ Pro M604 / M605 / M606 / M630",
         refill_price: "900 ₽",
         recovery_price: "1550 ₽"
@@ -14,7 +14,7 @@ export const refillData = [
         modelCart: "CF281X",
         id: uuidv4(),
         vendor: 'HP',
-        chip: "-",
+        chip: false,
         devices: "LJ Pro M604 / M605 / M606 / M630",
         refill_price: "1150 ₽",
         recovery_price: "1850 ₽"
