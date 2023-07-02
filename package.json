@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dendeadlift.github.io/fox/",
+  "homepage": "https://dendeadlift.github.io/fox",
   "name": "c",
   "version": "0.1.0",
   "private": true,
@@ -48,5 +48,8 @@
   "description": "npx create-react-app npm init",
   "main": "index.js",
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }
