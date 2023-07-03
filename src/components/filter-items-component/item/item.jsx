@@ -7,7 +7,7 @@ function Item({ modelCart, vend, chip, devices, recovery_price, refill_price }) 
     const { vendor } = useParams()
     const location = useLocation();
     const locationPathname = location.pathname;
-    const img = require(`../../../images/refill/${vendor}/${modelCart}.png`);
+    //const img = require(`../../../images/refill/${vendor}/${modelCart}.png`);
 
     return (
         <Link
@@ -17,7 +17,10 @@ function Item({ modelCart, vend, chip, devices, recovery_price, refill_price }) 
             className={styles.link}
         >
             <div className={styles.price_row}>
-                <img className={styles.image} src={img} alt={modelCart} />
+                <img 
+                className={styles.image} 
+                //src={img} 
+                alt={modelCart} />
                 <p className={styles.model_cart}>{modelCart}</p>
                 <p className={styles.vendor}>{vend}</p>
                 <p className={styles.chip}>{`${chip ? 'уточняйте' : 'не требуется'}`}</p>
