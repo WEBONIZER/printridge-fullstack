@@ -12,9 +12,11 @@ function RefillComponent() {
     console.log(locationPathname)
 
     return (
+        < div className={styles.container}>
+        <VendorMenu />
         <div className={styles.price_container}>
-            <VendorMenu />
             <FilterItemsComponent data={filterCategory} />
+        </div>
         </div>
     );
 }

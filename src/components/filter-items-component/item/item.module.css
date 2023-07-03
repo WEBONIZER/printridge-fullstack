@@ -1,6 +1,6 @@
 .price_row {
     padding: 2px 0;
-    width: 80%;
+    width: 100%;
     height: 20px;
     display: flex;
     flex-direction: row;

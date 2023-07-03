@@ -1,9 +1,9 @@
-//import styles from './orders.module.css'
+import FooterComponent from '../../components/footer/footer'
 
 function Footer() {
 
     return (
-        <p>Footer</p>
+        <FooterComponent />
     );
 }
 
