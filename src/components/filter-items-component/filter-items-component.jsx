@@ -14,6 +14,7 @@ function FilterItemsComponent({ data }) {
                 recovery_price={i.recovery_price}
                 refill_price={i.refill_price}
                 key={key}
+                examples={i.examples}
                 
             />
             )

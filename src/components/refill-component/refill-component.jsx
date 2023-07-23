@@ -9,7 +9,7 @@ function RefillComponent() {
     const location = useLocation();
     const locationPathname = location.pathname.substring(8);
     const filterCategory = refillData.filter((i) => i.vendor.toLowerCase() === locationPathname)
-    console.log(locationPathname)
+    //console.log(locationPathname)
 
     return (
         < div className={styles.container}>

@@ -8,3 +8,5 @@ npm i uuid
 npm i react-router-dom 
 npm i react-router-dom@latest
 npm i gh pages dash dash save dev
+
+npm install gh-pages --save-dev

@@ -4,6 +4,25 @@ export const refillData =
     [
         {
             modelCart: "CF281A",
+            examples: [
+                {
+                    title: 'Заправка CF281A',
+                    photo: [
+                        {
+                            item: 'CF218A.png',
+                        },
+                        {
+                            item: 'CF233A.png',
+                        }
+                    ],
+                    text: 'Заправка картриджей HP CF281A процесс, знакомый многим. В интернете множество предложений по заправке данных картриджей, в том числе с очень заниженной ценой, что привлекает клиентов, конечно же. Помимо этого, в интернетах множество примеров как заправить картридж HP CF281A. Пример именно такой заправки вы видите на рисунке 1 сверху. Видно, что картридж заправлен самым дешёвым тонером и не вычищен бункер отработки от отработанного тонера. Собственно, неудовлетворительное качество печати и привело клиента в наш сервисный центр. В итоге, картридж был полностью вычищен от отработки, от старого тонера и перезаправлен нашим, проверенным тонером. Результат на рисунке 2.',
+                },
+                {
+                    title: 'Восстановление CF281A',
+                    photo: [],
+                    text: '',
+                },
+            ],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -13,6 +32,7 @@ export const refillData =
         },
         {
             modelCart: "CF281X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -22,6 +42,7 @@ export const refillData =
         },
         {
             modelCart: "CF281A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -31,6 +52,7 @@ export const refillData =
         },
         {
             modelCart: "CF281X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -40,6 +62,7 @@ export const refillData =
         },
         {
             modelCart: "CF218A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -49,6 +72,7 @@ export const refillData =
         },
         {
             modelCart: "CF218A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -58,6 +82,7 @@ export const refillData =
         },
         {
             modelCart: "CF219A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -67,6 +92,7 @@ export const refillData =
         },
         {
             modelCart: "CF219A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -76,6 +102,7 @@ export const refillData =
         },
         {
             modelCart: "CF233A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -85,6 +112,7 @@ export const refillData =
         },
         {
             modelCart: "CF233A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -94,6 +122,7 @@ export const refillData =
         },
         {
             modelCart: "CF234A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -103,6 +132,7 @@ export const refillData =
         },
         {
             modelCart: "CF230A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -112,6 +142,7 @@ export const refillData =
         },
         {
             modelCart: "CF230X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -121,6 +152,7 @@ export const refillData =
         },
         {
             modelCart: "CF230A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -130,6 +162,7 @@ export const refillData =
         },
         {
             modelCart: "CF230X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -139,6 +172,7 @@ export const refillData =
         },
         {
             modelCart: "CF287A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -148,6 +182,7 @@ export const refillData =
         },
         {
             modelCart: "CF287X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -157,6 +192,7 @@ export const refillData =
         },
         {
             modelCart: "CF237A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -166,6 +202,7 @@ export const refillData =
         },
         {
             modelCart: "CF237X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -175,6 +212,7 @@ export const refillData =
         },
         {
             modelCart: "CF237Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -184,6 +222,7 @@ export const refillData =
         },
         {
             modelCart: "CF237A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -193,6 +232,7 @@ export const refillData =
         },
         {
             modelCart: "CF237X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -202,6 +242,7 @@ export const refillData =
         },
         {
             modelCart: "CF237Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -211,6 +252,7 @@ export const refillData =
         },
         {
             modelCart: "CF279A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -220,6 +262,7 @@ export const refillData =
         },
         {
             modelCart: "CF217A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -229,6 +272,7 @@ export const refillData =
         },
         {
             modelCart: "CF231A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -238,6 +282,7 @@ export const refillData =
         },
         {
             modelCart: "CF226A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -247,6 +292,7 @@ export const refillData =
         },
         {
             modelCart: "CF226X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -256,6 +302,7 @@ export const refillData =
         },
         {
             modelCart: "CF226A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -265,6 +312,7 @@ export const refillData =
         },
         {
             modelCart: "CF226X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -274,6 +322,7 @@ export const refillData =
         },
         {
             modelCart: "CF214A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -283,6 +332,7 @@ export const refillData =
         },
         {
             modelCart: "CF214X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -292,6 +342,7 @@ export const refillData =
         },
         {
             modelCart: "CF283A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -301,6 +352,7 @@ export const refillData =
         },
         {
             modelCart: "CF283A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -310,6 +362,7 @@ export const refillData =
         },
         {
             modelCart: "CB435A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -319,6 +372,7 @@ export const refillData =
         },
         {
             modelCart: "CB435A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -328,6 +382,7 @@ export const refillData =
         },
         {
             modelCart: "CE255A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -337,6 +392,7 @@ export const refillData =
         },
         {
             modelCart: "CE255X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -346,6 +402,7 @@ export const refillData =
         },
         {
             modelCart: "CE255A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -355,6 +412,7 @@ export const refillData =
         },
         {
             modelCart: "CE255X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -364,6 +422,7 @@ export const refillData =
         },
         {
             modelCart: "C4092A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -373,6 +432,7 @@ export const refillData =
         },
         {
             modelCart: "C4096A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -382,6 +442,7 @@ export const refillData =
         },
         {
             modelCart: "C4127A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -391,6 +452,7 @@ export const refillData =
         },
         {
             modelCart: "C4127X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -400,6 +462,7 @@ export const refillData =
         },
         {
             modelCart: "C4129X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -409,6 +472,7 @@ export const refillData =
         },
         {
             modelCart: "C4182X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -418,6 +482,7 @@ export const refillData =
         },
         {
             modelCart: "C7115X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -427,6 +492,7 @@ export const refillData =
         },
         {
             modelCart: "C8543X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -436,6 +502,7 @@ export const refillData =
         },
         {
             modelCart: "CB436A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -445,6 +512,7 @@ export const refillData =
         },
         {
             modelCart: "CB436A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -454,6 +522,7 @@ export const refillData =
         },
         {
             modelCart: "CC364A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -463,6 +532,7 @@ export const refillData =
         },
         {
             modelCart: "CC364X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -472,6 +542,7 @@ export const refillData =
         },
         {
             modelCart: "CE278A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -481,6 +552,7 @@ export const refillData =
         },
         {
             modelCart: "CE278A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -490,6 +562,7 @@ export const refillData =
         },
         {
             modelCart: "CE285A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -499,6 +572,7 @@ export const refillData =
         },
         {
             modelCart: "CE285A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -508,6 +582,7 @@ export const refillData =
         },
         {
             modelCart: "CE390A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -517,6 +592,7 @@ export const refillData =
         },
         {
             modelCart: "CE390X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -526,6 +602,7 @@ export const refillData =
         },
         {
             modelCart: "CE505A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -535,6 +612,7 @@ export const refillData =
         },
         {
             modelCart: "CE505X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -544,6 +622,7 @@ export const refillData =
         },
         {
             modelCart: "CE505A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -553,6 +632,7 @@ export const refillData =
         },
         {
             modelCart: "CE505X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -562,6 +642,7 @@ export const refillData =
         },
         {
             modelCart: "CF280A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -571,6 +652,7 @@ export const refillData =
         },
         {
             modelCart: "CF280X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -580,6 +662,7 @@ export const refillData =
         },
         {
             modelCart: "CF280A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -589,6 +672,7 @@ export const refillData =
         },
         {
             modelCart: "CF280X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -598,6 +682,7 @@ export const refillData =
         },
         {
             modelCart: "Q1338A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -607,6 +692,7 @@ export const refillData =
         },
         {
             modelCart: "Q1339A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -616,6 +702,7 @@ export const refillData =
         },
         {
             modelCart: "Q2610A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -625,6 +712,7 @@ export const refillData =
         },
         {
             modelCart: "Q2612A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -634,6 +722,7 @@ export const refillData =
         },
         {
             modelCart: "Q2613A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -643,6 +732,7 @@ export const refillData =
         },
         {
             modelCart: "Q2613X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -652,6 +742,7 @@ export const refillData =
         },
         {
             modelCart: "Q2624A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -661,6 +752,7 @@ export const refillData =
         },
         {
             modelCart: "Q5942A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -670,6 +762,7 @@ export const refillData =
         },
         {
             modelCart: "Q5942X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -679,6 +772,7 @@ export const refillData =
         },
         {
             modelCart: "Q5945A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -688,6 +782,7 @@ export const refillData =
         },
         {
             modelCart: "Q5949A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -697,6 +792,7 @@ export const refillData =
         },
         {
             modelCart: "Q5949X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -706,6 +802,7 @@ export const refillData =
         },
         {
             modelCart: "Q5949A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -715,6 +812,7 @@ export const refillData =
         },
         {
             modelCart: "Q5949X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -724,6 +822,7 @@ export const refillData =
         },
         {
             modelCart: "Q6511X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -733,6 +832,7 @@ export const refillData =
         },
         {
             modelCart: "Q6511X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -742,6 +842,7 @@ export const refillData =
         },
         {
             modelCart: "Q7516A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -751,6 +852,7 @@ export const refillData =
         },
         {
             modelCart: "Q7516A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -760,6 +862,7 @@ export const refillData =
         },
         {
             modelCart: "Q7551A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -769,6 +872,7 @@ export const refillData =
         },
         {
             modelCart: "Q7551X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -778,6 +882,7 @@ export const refillData =
         },
         {
             modelCart: "Q7551A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -787,6 +892,7 @@ export const refillData =
         },
         {
             modelCart: "Q7551X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -796,6 +902,7 @@ export const refillData =
         },
         {
             modelCart: "Q7553A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -805,6 +912,7 @@ export const refillData =
         },
         {
             modelCart: "Q7553X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -814,6 +922,7 @@ export const refillData =
         },
         {
             modelCart: "Q7553A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -823,6 +932,7 @@ export const refillData =
         },
         {
             modelCart: "Q7553X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -832,6 +942,7 @@ export const refillData =
         },
         {
             modelCart: "Q7570A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -841,6 +952,7 @@ export const refillData =
         },
         {
             modelCart: "Q7560A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -850,6 +962,7 @@ export const refillData =
         },
         {
             modelCart: "Q7561A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -859,6 +972,7 @@ export const refillData =
         },
         {
             modelCart: "Q7562A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -868,6 +982,7 @@ export const refillData =
         },
         {
             modelCart: "Q7563A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -877,6 +992,7 @@ export const refillData =
         },
         {
             modelCart: "Q5950A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -886,6 +1002,7 @@ export const refillData =
         },
         {
             modelCart: "Q5951A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -895,6 +1012,7 @@ export const refillData =
         },
         {
             modelCart: "Q5952A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -904,6 +1022,7 @@ export const refillData =
         },
         {
             modelCart: "Q5953A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -913,6 +1032,7 @@ export const refillData =
         },
         {
             modelCart: "Q6000A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -922,6 +1042,7 @@ export const refillData =
         },
         {
             modelCart: "Q6001A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -931,6 +1052,7 @@ export const refillData =
         },
         {
             modelCart: "Q6002A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -940,6 +1062,7 @@ export const refillData =
         },
         {
             modelCart: "Q6003A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -949,6 +1072,7 @@ export const refillData =
         },
         {
             modelCart: "Q6460A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -958,6 +1082,7 @@ export const refillData =
         },
         {
             modelCart: "Q6461A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -967,6 +1092,7 @@ export const refillData =
         },
         {
             modelCart: "Q6462A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -976,6 +1102,7 @@ export const refillData =
         },
         {
             modelCart: "Q6463A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -985,6 +1112,7 @@ export const refillData =
         },
         {
             modelCart: "Q6470A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -994,6 +1122,7 @@ export const refillData =
         },
         {
             modelCart: "Q6471A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1003,6 +1132,7 @@ export const refillData =
         },
         {
             modelCart: "Q6472A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1012,6 +1142,7 @@ export const refillData =
         },
         {
             modelCart: "Q6473A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1021,6 +1152,7 @@ export const refillData =
         },
         {
             modelCart: "CF400A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1030,6 +1162,7 @@ export const refillData =
         },
         {
             modelCart: "CF401A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1039,6 +1172,7 @@ export const refillData =
         },
         {
             modelCart: "CF402A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1048,6 +1182,7 @@ export const refillData =
         },
         {
             modelCart: "CF403A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1057,6 +1192,7 @@ export const refillData =
         },
         {
             modelCart: "CF400X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1066,6 +1202,7 @@ export const refillData =
         },
         {
             modelCart: "CF401X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1075,6 +1212,7 @@ export const refillData =
         },
         {
             modelCart: "CF402X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1084,6 +1222,7 @@ export const refillData =
         },
         {
             modelCart: "CF403X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1093,6 +1232,7 @@ export const refillData =
         },
         {
             modelCart: "CF410A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1102,6 +1242,7 @@ export const refillData =
         },
         {
             modelCart: "CF411A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1111,6 +1252,7 @@ export const refillData =
         },
         {
             modelCart: "CF412A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1120,6 +1262,7 @@ export const refillData =
         },
         {
             modelCart: "CF413A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1129,6 +1272,7 @@ export const refillData =
         },
         {
             modelCart: "CF410X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1138,6 +1282,7 @@ export const refillData =
         },
         {
             modelCart: "CF411X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1147,6 +1292,7 @@ export const refillData =
         },
         {
             modelCart: "CF412X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1156,6 +1302,7 @@ export const refillData =
         },
         {
             modelCart: "CF413X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1165,6 +1312,7 @@ export const refillData =
         },
         {
             modelCart: "CF350A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1174,6 +1322,7 @@ export const refillData =
         },
         {
             modelCart: "CF351A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1183,6 +1332,7 @@ export const refillData =
         },
         {
             modelCart: "CF352A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1192,6 +1342,7 @@ export const refillData =
         },
         {
             modelCart: "CF353A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1201,6 +1352,7 @@ export const refillData =
         },
         {
             modelCart: "CF450A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1210,6 +1362,7 @@ export const refillData =
         },
         {
             modelCart: "CF451A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1219,6 +1372,7 @@ export const refillData =
         },
         {
             modelCart: "CF452A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1228,6 +1382,7 @@ export const refillData =
         },
         {
             modelCart: "CF4533A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1237,6 +1392,7 @@ export const refillData =
         },
         {
             modelCart: "CF470X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1246,6 +1402,7 @@ export const refillData =
         },
         {
             modelCart: "CF471X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1255,6 +1412,7 @@ export const refillData =
         },
         {
             modelCart: "CF472X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1264,6 +1422,7 @@ export const refillData =
         },
         {
             modelCart: "CF473X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1273,6 +1432,7 @@ export const refillData =
         },
         {
             modelCart: "CF470X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1282,6 +1442,7 @@ export const refillData =
         },
         {
             modelCart: "CF471X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1291,6 +1452,7 @@ export const refillData =
         },
         {
             modelCart: "CF472X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1300,6 +1462,7 @@ export const refillData =
         },
         {
             modelCart: "CF473X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1309,6 +1472,7 @@ export const refillData =
         },
         {
             modelCart: "CF300A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1318,6 +1482,7 @@ export const refillData =
         },
         {
             modelCart: "CF301A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1327,6 +1492,7 @@ export const refillData =
         },
         {
             modelCart: "CF302A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1336,6 +1502,7 @@ export const refillData =
         },
         {
             modelCart: "CF303A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1345,6 +1512,7 @@ export const refillData =
         },
         {
             modelCart: "CE270A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1354,6 +1522,7 @@ export const refillData =
         },
         {
             modelCart: "CE271A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1363,6 +1532,7 @@ export const refillData =
         },
         {
             modelCart: "CE272A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1372,6 +1542,7 @@ export const refillData =
         },
         {
             modelCart: "CE273A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "HP",
@@ -1381,6 +1552,7 @@ export const refillData =
         },
         {
             modelCart: "CF310A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1390,6 +1562,7 @@ export const refillData =
         },
         {
             modelCart: "CF311A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1399,6 +1572,7 @@ export const refillData =
         },
         {
             modelCart: "CF312A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1408,6 +1582,7 @@ export const refillData =
         },
         {
             modelCart: "CF313A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1417,6 +1592,7 @@ export const refillData =
         },
         {
             modelCart: "Q2670A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1426,6 +1602,7 @@ export const refillData =
         },
         {
             modelCart: "Q2671A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1435,6 +1612,7 @@ export const refillData =
         },
         {
             modelCart: "Q2672A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1444,6 +1622,7 @@ export const refillData =
         },
         {
             modelCart: "Q2673A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1453,6 +1632,7 @@ export const refillData =
         },
         {
             modelCart: "CF320A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1462,6 +1642,7 @@ export const refillData =
         },
         {
             modelCart: "CF330X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1471,6 +1652,7 @@ export const refillData =
         },
         {
             modelCart: "CF331A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1480,6 +1662,7 @@ export const refillData =
         },
         {
             modelCart: "CF332A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1489,6 +1672,7 @@ export const refillData =
         },
         {
             modelCart: "CF333A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1498,6 +1682,7 @@ export const refillData =
         },
         {
             modelCart: "CF360A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1507,6 +1692,7 @@ export const refillData =
         },
         {
             modelCart: "CF361A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1516,6 +1702,7 @@ export const refillData =
         },
         {
             modelCart: "CF362A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1525,6 +1712,7 @@ export const refillData =
         },
         {
             modelCart: "CF363A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1534,6 +1722,7 @@ export const refillData =
         },
         {
             modelCart: "CF360X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1543,6 +1732,7 @@ export const refillData =
         },
         {
             modelCart: "CF361X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1552,6 +1742,7 @@ export const refillData =
         },
         {
             modelCart: "CF362X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1561,6 +1752,7 @@ export const refillData =
         },
         {
             modelCart: "CF363X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1570,6 +1762,7 @@ export const refillData =
         },
         {
             modelCart: "CE740A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1579,6 +1772,7 @@ export const refillData =
         },
         {
             modelCart: "CE741A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1588,6 +1782,7 @@ export const refillData =
         },
         {
             modelCart: "CE742A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1597,6 +1792,7 @@ export const refillData =
         },
         {
             modelCart: "CE743A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1606,6 +1802,7 @@ export const refillData =
         },
         {
             modelCart: "CF030A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1615,6 +1812,7 @@ export const refillData =
         },
         {
             modelCart: "CF031A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1624,6 +1822,7 @@ export const refillData =
         },
         {
             modelCart: "CF032A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1633,6 +1832,7 @@ export const refillData =
         },
         {
             modelCart: "CF033A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1642,6 +1842,7 @@ export const refillData =
         },
         {
             modelCart: "CB400A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1651,6 +1852,7 @@ export const refillData =
         },
         {
             modelCart: "CB401A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1660,6 +1862,7 @@ export const refillData =
         },
         {
             modelCart: "CB402A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1669,6 +1872,7 @@ export const refillData =
         },
         {
             modelCart: "CB403A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1678,6 +1882,7 @@ export const refillData =
         },
         {
             modelCart: "CC530A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1687,6 +1892,7 @@ export const refillData =
         },
         {
             modelCart: "CC531A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1696,6 +1902,7 @@ export const refillData =
         },
         {
             modelCart: "CC532A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1705,6 +1912,7 @@ export const refillData =
         },
         {
             modelCart: "CC533A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1714,6 +1922,7 @@ export const refillData =
         },
         {
             modelCart: "CE250A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1723,6 +1932,7 @@ export const refillData =
         },
         {
             modelCart: "CE251A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1732,6 +1942,7 @@ export const refillData =
         },
         {
             modelCart: "CE252A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1741,6 +1952,7 @@ export const refillData =
         },
         {
             modelCart: "CE253A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1750,6 +1962,7 @@ export const refillData =
         },
         {
             modelCart: "CE260A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1759,6 +1972,7 @@ export const refillData =
         },
         {
             modelCart: "CE261A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1768,6 +1982,7 @@ export const refillData =
         },
         {
             modelCart: "CE262A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1777,6 +1992,7 @@ export const refillData =
         },
         {
             modelCart: "CE263A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1786,6 +2002,7 @@ export const refillData =
         },
         {
             modelCart: "CE310A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1795,6 +2012,7 @@ export const refillData =
         },
         {
             modelCart: "CE311A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1804,6 +2022,7 @@ export const refillData =
         },
         {
             modelCart: "CE312A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1813,6 +2032,7 @@ export const refillData =
         },
         {
             modelCart: "CE313A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1822,6 +2042,7 @@ export const refillData =
         },
         {
             modelCart: "CE320A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1831,6 +2052,7 @@ export const refillData =
         },
         {
             modelCart: "CE321A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1840,6 +2062,7 @@ export const refillData =
         },
         {
             modelCart: "CE322A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1849,6 +2072,7 @@ export const refillData =
         },
         {
             modelCart: "CE323A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1858,6 +2082,7 @@ export const refillData =
         },
         {
             modelCart: "CE400A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1867,6 +2092,7 @@ export const refillData =
         },
         {
             modelCart: "CE401A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1876,6 +2102,7 @@ export const refillData =
         },
         {
             modelCart: "CE402A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1885,6 +2112,7 @@ export const refillData =
         },
         {
             modelCart: "CE403A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1894,6 +2122,7 @@ export const refillData =
         },
         {
             modelCart: "CE410A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1903,6 +2132,7 @@ export const refillData =
         },
         {
             modelCart: "CE411A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1912,6 +2142,7 @@ export const refillData =
         },
         {
             modelCart: "CE412A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1921,6 +2152,7 @@ export const refillData =
         },
         {
             modelCart: "CE413A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1930,6 +2162,7 @@ export const refillData =
         },
         {
             modelCart: "CF210A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1939,6 +2172,7 @@ export const refillData =
         },
         {
             modelCart: "CF211A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1948,6 +2182,7 @@ export const refillData =
         },
         {
             modelCart: "CF212A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1957,6 +2192,7 @@ export const refillData =
         },
         {
             modelCart: "CF213A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1966,6 +2202,7 @@ export const refillData =
         },
         {
             modelCart: "CB540A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1975,6 +2212,7 @@ export const refillData =
         },
         {
             modelCart: "CB541A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1984,6 +2222,7 @@ export const refillData =
         },
         {
             modelCart: "CB542A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -1993,6 +2232,7 @@ export const refillData =
         },
         {
             modelCart: "CB543A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "HP",
@@ -2002,6 +2242,7 @@ export const refillData =
         },
         {
             modelCart: "703",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2011,6 +2252,7 @@ export const refillData =
         },
         {
             modelCart: "706",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2020,6 +2262,7 @@ export const refillData =
         },
         {
             modelCart: "708",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2029,6 +2272,7 @@ export const refillData =
         },
         {
             modelCart: "708H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2038,6 +2282,7 @@ export const refillData =
         },
         {
             modelCart: "710",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2047,6 +2292,7 @@ export const refillData =
         },
         {
             modelCart: "712",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2056,6 +2302,7 @@ export const refillData =
         },
         {
             modelCart: "713",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2065,6 +2312,7 @@ export const refillData =
         },
         {
             modelCart: "714",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2074,6 +2322,7 @@ export const refillData =
         },
         {
             modelCart: "715",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2083,6 +2332,7 @@ export const refillData =
         },
         {
             modelCart: "715H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2092,6 +2342,7 @@ export const refillData =
         },
         {
             modelCart: "719",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2101,6 +2352,7 @@ export const refillData =
         },
         {
             modelCart: "719H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2110,6 +2362,7 @@ export const refillData =
         },
         {
             modelCart: "724",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2119,6 +2372,7 @@ export const refillData =
         },
         {
             modelCart: "725",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2128,6 +2382,7 @@ export const refillData =
         },
         {
             modelCart: "726",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2137,6 +2392,7 @@ export const refillData =
         },
         {
             modelCart: "728",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2146,6 +2402,7 @@ export const refillData =
         },
         {
             modelCart: "EP-22",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2155,6 +2412,7 @@ export const refillData =
         },
         {
             modelCart: "EP-26",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2164,6 +2422,7 @@ export const refillData =
         },
         {
             modelCart: "EP-27",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2173,6 +2432,7 @@ export const refillData =
         },
         {
             modelCart: "FX-10",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2182,6 +2442,7 @@ export const refillData =
         },
         {
             modelCart: "707",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2191,6 +2452,7 @@ export const refillData =
         },
         {
             modelCart: "711",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2200,6 +2462,7 @@ export const refillData =
         },
         {
             modelCart: "716 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2209,6 +2472,7 @@ export const refillData =
         },
         {
             modelCart: "716 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2218,6 +2482,7 @@ export const refillData =
         },
         {
             modelCart: "716 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2227,6 +2492,7 @@ export const refillData =
         },
         {
             modelCart: "716 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2236,6 +2502,7 @@ export const refillData =
         },
         {
             modelCart: "717 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2245,6 +2512,7 @@ export const refillData =
         },
         {
             modelCart: "717 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2254,6 +2522,7 @@ export const refillData =
         },
         {
             modelCart: "717 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2263,6 +2532,7 @@ export const refillData =
         },
         {
             modelCart: "717 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2272,6 +2542,7 @@ export const refillData =
         },
         {
             modelCart: "718 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2281,6 +2552,7 @@ export const refillData =
         },
         {
             modelCart: "718 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2290,6 +2562,7 @@ export const refillData =
         },
         {
             modelCart: "718 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2299,6 +2572,7 @@ export const refillData =
         },
         {
             modelCart: "718 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2308,6 +2582,7 @@ export const refillData =
         },
         {
             modelCart: "723 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2317,6 +2592,7 @@ export const refillData =
         },
         {
             modelCart: "723 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2326,6 +2602,7 @@ export const refillData =
         },
         {
             modelCart: "723 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2335,6 +2612,7 @@ export const refillData =
         },
         {
             modelCart: "723 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2344,6 +2622,7 @@ export const refillData =
         },
         {
             modelCart: "729 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2353,6 +2632,7 @@ export const refillData =
         },
         {
             modelCart: "729 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2362,6 +2642,7 @@ export const refillData =
         },
         {
             modelCart: "729 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2371,6 +2652,7 @@ export const refillData =
         },
         {
             modelCart: "729 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2380,6 +2662,7 @@ export const refillData =
         },
         {
             modelCart: "701 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2389,6 +2672,7 @@ export const refillData =
         },
         {
             modelCart: "701 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2398,6 +2682,7 @@ export const refillData =
         },
         {
             modelCart: "701 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2407,6 +2692,7 @@ export const refillData =
         },
         {
             modelCart: "701 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2416,6 +2702,7 @@ export const refillData =
         },
         {
             modelCart: "731 Bk",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2425,6 +2712,7 @@ export const refillData =
         },
         {
             modelCart: "731 C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2434,6 +2722,7 @@ export const refillData =
         },
         {
             modelCart: "731 M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2443,6 +2732,7 @@ export const refillData =
         },
         {
             modelCart: "731 Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2452,6 +2742,7 @@ export const refillData =
         },
         {
             modelCart: "040BK",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2461,6 +2752,7 @@ export const refillData =
         },
         {
             modelCart: "040C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2470,6 +2762,7 @@ export const refillData =
         },
         {
             modelCart: "040M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2479,6 +2772,7 @@ export const refillData =
         },
         {
             modelCart: "040Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2488,6 +2782,7 @@ export const refillData =
         },
         {
             modelCart: "040H BK",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2497,6 +2792,7 @@ export const refillData =
         },
         {
             modelCart: "040H C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2506,6 +2802,7 @@ export const refillData =
         },
         {
             modelCart: "040H M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2515,6 +2812,7 @@ export const refillData =
         },
         {
             modelCart: "040H Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Canon",
@@ -2524,6 +2822,7 @@ export const refillData =
         },
         {
             modelCart: "737",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2533,6 +2832,7 @@ export const refillData =
         },
         {
             modelCart: "724H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2542,6 +2842,7 @@ export const refillData =
         },
         {
             modelCart: "039",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2551,6 +2852,7 @@ export const refillData =
         },
         {
             modelCart: "039H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2560,6 +2862,7 @@ export const refillData =
         },
         {
             modelCart: "041",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2569,6 +2872,7 @@ export const refillData =
         },
         {
             modelCart: "041H",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Canon",
@@ -2578,6 +2882,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K504S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2587,6 +2892,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C504S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2596,6 +2902,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M504S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2605,6 +2912,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y504S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2614,6 +2922,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K504L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2623,6 +2932,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C504L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2632,6 +2942,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M504L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2641,6 +2952,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y504L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2650,6 +2962,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K506S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2659,6 +2972,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C506S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2668,6 +2982,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M506S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2677,6 +2992,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y506S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2686,6 +3002,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K506L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2695,6 +3012,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C506L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2704,6 +3022,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M506L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2713,6 +3032,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y506L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2722,6 +3042,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-500D7K",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2731,6 +3052,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-500D5C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2740,6 +3062,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-500D5M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2749,6 +3072,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-500D5Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2758,6 +3082,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D3K",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2767,6 +3092,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D2C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2776,6 +3102,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D2M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2785,6 +3112,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D2Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2794,6 +3122,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D7K",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2803,6 +3132,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D5C",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2812,6 +3142,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D5M",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2821,6 +3152,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-510D5Y",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2830,6 +3162,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-K300A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2839,6 +3172,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-C300A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2848,6 +3182,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-M300A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2857,6 +3192,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-Y300A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2866,6 +3202,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-K350A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2875,6 +3212,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-C350A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2884,6 +3222,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-M350A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2893,6 +3232,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-Y350A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2902,6 +3242,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-K600A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2911,6 +3252,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-C600A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2920,6 +3262,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-M600A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2929,6 +3272,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-Y600A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2938,6 +3282,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-K660A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2947,6 +3292,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-C660A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2956,6 +3302,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-M660A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2965,6 +3312,7 @@ export const refillData =
         },
         {
             modelCart: "CLP-Y660A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2974,6 +3322,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K406S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2983,6 +3332,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C406S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -2992,6 +3342,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M406S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3001,6 +3352,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y406S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3010,6 +3362,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K406S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3019,6 +3372,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C406S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3028,6 +3382,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M406S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3037,6 +3392,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y406S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3046,6 +3402,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K407S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3055,6 +3412,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C407S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3064,6 +3422,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M407S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3073,6 +3432,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y407S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3082,6 +3442,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K407S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3091,6 +3452,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C407S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3100,6 +3462,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M407S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3109,6 +3472,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y407S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3118,6 +3482,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K409S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3127,6 +3492,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C409S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3136,6 +3502,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M409S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3145,6 +3512,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y409S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3154,6 +3522,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-K409S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3163,6 +3532,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-C409S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3172,6 +3542,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-M409S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3181,6 +3552,7 @@ export const refillData =
         },
         {
             modelCart: "CLT-Y409S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3190,6 +3562,7 @@ export const refillData =
         },
         {
             modelCart: "ML-1210D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3199,6 +3572,7 @@ export const refillData =
         },
         {
             modelCart: "ML-1520D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3208,6 +3582,7 @@ export const refillData =
         },
         {
             modelCart: "ML-1610D2",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3217,6 +3592,7 @@ export const refillData =
         },
         {
             modelCart: "ML-1650D8",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3226,6 +3602,7 @@ export const refillData =
         },
         {
             modelCart: "ML-1710D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3235,6 +3612,7 @@ export const refillData =
         },
         {
             modelCart: "ML-2150D8",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3244,6 +3622,7 @@ export const refillData =
         },
         {
             modelCart: "ML-2250D5",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3253,6 +3632,7 @@ export const refillData =
         },
         {
             modelCart: "ML-2550DA",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3262,6 +3642,7 @@ export const refillData =
         },
         {
             modelCart: "ML-3560D6",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3271,6 +3652,7 @@ export const refillData =
         },
         {
             modelCart: "ML-3560DB",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3280,6 +3662,7 @@ export const refillData =
         },
         {
             modelCart: "ML-4500D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3289,6 +3672,7 @@ export const refillData =
         },
         {
             modelCart: "ML-4550A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3298,6 +3682,7 @@ export const refillData =
         },
         {
             modelCart: "ML-4550B",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3307,6 +3692,7 @@ export const refillData =
         },
         {
             modelCart: "ML-4550A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3316,6 +3702,7 @@ export const refillData =
         },
         {
             modelCart: "ML-4550B",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3325,6 +3712,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D1630A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3334,6 +3722,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D2850A",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3343,6 +3732,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D2850B",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3352,6 +3742,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D2850A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3361,6 +3752,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D2850B",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3370,6 +3762,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D3050A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3379,6 +3772,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D3050B",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3388,6 +3782,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D3470A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3397,6 +3792,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D3470B",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3406,6 +3802,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D4550A 10K",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3415,6 +3812,7 @@ export const refillData =
         },
         {
             modelCart: "ML-D4550A 20K",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3424,6 +3822,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D101S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3433,6 +3832,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D101S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3442,6 +3842,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D101L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3451,6 +3852,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D101L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3460,6 +3862,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D111L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3469,6 +3872,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D111L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3478,6 +3882,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D111S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3487,6 +3892,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D111S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3496,6 +3902,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D115",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3505,6 +3912,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D115",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3514,6 +3922,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D103L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3523,6 +3932,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D103S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3540,6 +3950,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D103S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3549,6 +3960,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D104S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3558,6 +3970,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D104X",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3567,6 +3980,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D104S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3576,6 +3990,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D104X",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3585,6 +4000,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D105L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3594,6 +4010,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D105S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3603,6 +4020,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D105L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3612,6 +4030,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D105S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3621,6 +4040,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D106S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3630,6 +4050,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D106S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3639,6 +4060,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D108S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3648,6 +4070,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D108S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3657,6 +4080,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D109S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3666,6 +4090,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D109S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3675,6 +4100,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D117S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3684,6 +4110,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D117S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3693,6 +4120,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3702,6 +4130,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3711,6 +4140,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203E",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3720,6 +4150,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3729,6 +4160,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203E",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3738,6 +4170,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D203S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3747,6 +4180,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3756,6 +4190,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3765,6 +4200,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205E",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3774,6 +4210,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3783,6 +4220,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3792,6 +4230,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D205E",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3801,6 +4240,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D208L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3810,6 +4250,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D208S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3819,6 +4260,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D208L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3828,6 +4270,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D208S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3837,6 +4280,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D209L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3846,6 +4290,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D209S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3855,6 +4300,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D209L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3864,6 +4310,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D209S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3873,6 +4320,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D305S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3882,6 +4330,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D305L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3891,6 +4340,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D305S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3900,6 +4350,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D305L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3909,6 +4360,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307E",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3918,6 +4370,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3927,6 +4380,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3936,6 +4390,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307E",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3945,6 +4400,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3954,6 +4410,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D307S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3963,6 +4420,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D309L",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3972,6 +4430,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D309S",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3981,6 +4440,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D309L",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3990,6 +4450,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D309S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -3999,6 +4460,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D704S",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4008,6 +4470,7 @@ export const refillData =
         },
         {
             modelCart: "MLT-D707",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4017,6 +4480,7 @@ export const refillData =
         },
         {
             modelCart: "SCX-4100D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4026,6 +4490,7 @@ export const refillData =
         },
         {
             modelCart: "SCX-4216D3",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4035,6 +4500,7 @@ export const refillData =
         },
         {
             modelCart: "SCX-6320D8",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4044,6 +4510,7 @@ export const refillData =
         },
         {
             modelCart: "SCX-D4200A",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Samsung",
@@ -4053,6 +4520,7 @@ export const refillData =
         },
         {
             modelCart: "106R02778",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4062,6 +4530,7 @@ export const refillData =
         },
         {
             modelCart: "106R02782",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4071,6 +4540,7 @@ export const refillData =
         },
         {
             modelCart: "106R02778",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4080,6 +4550,7 @@ export const refillData =
         },
         {
             modelCart: "106R02782",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4091,6 +4562,7 @@ export const refillData =
             modelCart: "006R01461",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
             refill_price: "6500 ₽",
@@ -4100,6 +4572,7 @@ export const refillData =
             modelCart: "006R01464",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
             refill_price: "6500 ₽",
@@ -4109,6 +4582,7 @@ export const refillData =
             modelCart: "006R01463",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
             refill_price: "6500 ₽",
@@ -4118,6 +4592,7 @@ export const refillData =
             modelCart: "006R01462",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
             refill_price: "6500 ₽",
@@ -4127,6 +4602,7 @@ export const refillData =
             modelCart: "006R01573",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 5019 / WC 5021",
             refill_price: "900 ₽",
@@ -4134,6 +4610,7 @@ export const refillData =
         },
         {
             modelCart: "106R01413",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4143,6 +4620,7 @@ export const refillData =
         },
         {
             modelCart: "106R02612",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4152,6 +4630,7 @@ export const refillData =
         },
         {
             modelCart: "106R02606",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4161,6 +4640,7 @@ export const refillData =
         },
         {
             modelCart: "106R02607",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4170,6 +4650,7 @@ export const refillData =
         },
         {
             modelCart: "106R02608",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4179,6 +4660,7 @@ export const refillData =
         },
         {
             modelCart: "106R02609",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4188,6 +4670,7 @@ export const refillData =
         },
         {
             modelCart: "106R02610",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4197,6 +4680,7 @@ export const refillData =
         },
         {
             modelCart: "106R02611",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4206,6 +4690,7 @@ export const refillData =
         },
         {
             modelCart: "106R01446",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4215,6 +4700,7 @@ export const refillData =
         },
         {
             modelCart: "106R01443",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4224,6 +4710,7 @@ export const refillData =
         },
         {
             modelCart: "106R01444",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4233,6 +4720,7 @@ export const refillData =
         },
         {
             modelCart: "106R01445",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4242,6 +4730,7 @@ export const refillData =
         },
         {
             modelCart: "106R01440",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4251,6 +4740,7 @@ export const refillData =
         },
         {
             modelCart: "106R01441",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4260,6 +4750,7 @@ export const refillData =
         },
         {
             modelCart: "106R01442",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4269,6 +4760,7 @@ export const refillData =
         },
         {
             modelCart: "006R01278",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4280,6 +4772,7 @@ export const refillData =
             modelCart: "013R00601",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "PE120 / PE120i",
             refill_price: "500 ₽",
@@ -4289,6 +4782,7 @@ export const refillData =
             modelCart: "013R00606",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "PE120 / PE120i",
             refill_price: "500 ₽",
@@ -4298,6 +4792,7 @@ export const refillData =
             modelCart: "013R00607",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Pe114e",
             refill_price: "400 ₽",
@@ -4305,6 +4800,7 @@ export const refillData =
         },
         {
             modelCart: "013R00621",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4314,6 +4810,7 @@ export const refillData =
         },
         {
             modelCart: "013R00625",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4325,6 +4822,7 @@ export const refillData =
             modelCart: "16200100",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6200",
             refill_price: "1950 ₽",
@@ -4390,6 +4888,7 @@ export const refillData =
             modelCart: "106R00461",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3400",
             refill_price: "950 ₽",
@@ -4399,6 +4898,7 @@ export const refillData =
             modelCart: "106R00462",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3400",
             refill_price: "950 ₽",
@@ -4408,6 +4908,7 @@ export const refillData =
             modelCart: "106R00668",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "1950 ₽",
@@ -4417,6 +4918,7 @@ export const refillData =
             modelCart: "106R00669",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "1950 ₽",
@@ -4426,6 +4928,7 @@ export const refillData =
             modelCart: "106R00670",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "1950 ₽",
@@ -4435,6 +4938,7 @@ export const refillData =
             modelCart: "106R00671",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "1950 ₽",
@@ -4444,6 +4948,7 @@ export const refillData =
             modelCart: "106R00672",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "2250 ₽",
@@ -4453,6 +4958,7 @@ export const refillData =
             modelCart: "106R00673",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "2250 ₽",
@@ -4462,6 +4968,7 @@ export const refillData =
             modelCart: "106R00674",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "2250 ₽",
@@ -4471,6 +4978,7 @@ export const refillData =
             modelCart: "106R00675",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6250",
             refill_price: "2250 ₽",
@@ -4480,6 +4988,7 @@ export const refillData =
             modelCart: "106R00676",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "1200 ₽",
@@ -4489,6 +4998,7 @@ export const refillData =
             modelCart: "106R00677",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "1200 ₽",
@@ -4498,6 +5008,7 @@ export const refillData =
             modelCart: "106R00678",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "1200 ₽",
@@ -4507,6 +5018,7 @@ export const refillData =
             modelCart: "106R00679",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "1100 ₽",
@@ -4516,6 +5028,7 @@ export const refillData =
             modelCart: "106R00680",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "2200 ₽",
@@ -4525,6 +5038,7 @@ export const refillData =
             modelCart: "106R00681",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "2200 ₽",
@@ -4534,6 +5048,7 @@ export const refillData =
             modelCart: "106R00682",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "2200 ₽",
@@ -4543,6 +5058,7 @@ export const refillData =
             modelCart: "106R00684",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6100",
             refill_price: "2200 ₽",
@@ -4552,6 +5068,7 @@ export const refillData =
             modelCart: "106R00687",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3450",
             refill_price: "950 ₽",
@@ -4561,6 +5078,7 @@ export const refillData =
             modelCart: "106R00688",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3450",
             refill_price: "950 ₽",
@@ -4570,6 +5088,7 @@ export const refillData =
             modelCart: "106R01034",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3420 / Phaser 3425",
             refill_price: "1050 ₽",
@@ -4579,6 +5098,7 @@ export const refillData =
             modelCart: "106R01073",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
             refill_price: "2100 ₽",
@@ -4588,6 +5108,7 @@ export const refillData =
             modelCart: "106R01074",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
             refill_price: "2100 ₽",
@@ -4597,6 +5118,7 @@ export const refillData =
             modelCart: "106R01075",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
             refill_price: "2100 ₽",
@@ -4606,6 +5128,7 @@ export const refillData =
             modelCart: "106R01076",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
             refill_price: "2100 ₽",
@@ -4615,6 +5138,7 @@ export const refillData =
             modelCart: "106R01080",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 7400",
             refill_price: "2600 ₽",
@@ -4624,6 +5148,7 @@ export const refillData =
             modelCart: "106R01082",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 7400",
             refill_price: "2250 ₽",
@@ -4633,6 +5158,7 @@ export const refillData =
             modelCart: "106R01083",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300",
             refill_price: "2250 ₽",
@@ -4642,6 +5168,7 @@ export const refillData =
             modelCart: "106R01084",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300",
             refill_price: "2250 ₽",
@@ -4651,6 +5178,7 @@ export const refillData =
             modelCart: "106R01085",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6300",
             refill_price: "2250 ₽",
@@ -4660,6 +5188,7 @@ export const refillData =
             modelCart: "106R01148",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3500",
             refill_price: "950 ₽",
@@ -4669,6 +5198,7 @@ export const refillData =
             modelCart: "106R01149",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3500",
             refill_price: "950 ₽",
@@ -4678,6 +5208,7 @@ export const refillData =
             modelCart: "106R01150",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 7400",
             refill_price: "2600 ₽",
@@ -4687,6 +5218,7 @@ export const refillData =
             modelCart: "106R01151",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 7400",
             refill_price: "2600 ₽",
@@ -4696,6 +5228,7 @@ export const refillData =
             modelCart: "106R01152",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 7400",
             refill_price: "2600 ₽",
@@ -4703,6 +5236,7 @@ export const refillData =
         },
         {
             modelCart: "106R01159",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4712,6 +5246,7 @@ export const refillData =
         },
         {
             modelCart: "106R01203",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4721,6 +5256,7 @@ export const refillData =
         },
         {
             modelCart: "106R01204",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4730,6 +5266,7 @@ export const refillData =
         },
         {
             modelCart: "106R01206",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -4741,6 +5278,7 @@ export const refillData =
             modelCart: "106R01245",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3428",
             refill_price: "950 ₽",
@@ -4750,6 +5288,7 @@ export const refillData =
             modelCart: "106R01246",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3428",
             refill_price: "950 ₽",
@@ -4759,6 +5298,7 @@ export const refillData =
             modelCart: "106R01282",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6130",
             refill_price: "1100 ₽",
@@ -4768,6 +5308,7 @@ export const refillData =
             modelCart: "106R01283",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6130",
             refill_price: "1100 ₽",
@@ -4777,6 +5318,7 @@ export const refillData =
             modelCart: "106R01284",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6130",
             refill_price: "1100 ₽",
@@ -4786,6 +5328,7 @@ export const refillData =
             modelCart: "106R01285",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6130",
             refill_price: "1100 ₽",
@@ -4795,6 +5338,7 @@ export const refillData =
             modelCart: "106R01335",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6125",
             refill_price: "1300 ₽",
@@ -4804,6 +5348,7 @@ export const refillData =
             modelCart: "106R01336",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6125",
             refill_price: "1300 ₽",
@@ -4813,6 +5358,7 @@ export const refillData =
             modelCart: "106R01337",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6125",
             refill_price: "1300 ₽",
@@ -4822,6 +5368,7 @@ export const refillData =
             modelCart: "106R01338",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6125",
             refill_price: "1300 ₽",
@@ -4831,6 +5378,7 @@ export const refillData =
             modelCart: "106R01370",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3600",
             refill_price: "1300 ₽",
@@ -4840,6 +5388,7 @@ export const refillData =
             modelCart: "106R01371",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3600",
             refill_price: "1300 ₽",
@@ -4849,6 +5398,7 @@ export const refillData =
             modelCart: "106R01372",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3600",
             refill_price: "1400 ₽",
@@ -4858,6 +5408,7 @@ export const refillData =
             modelCart: "106R01373",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3250",
             refill_price: "650 ₽",
@@ -4867,6 +5418,7 @@ export const refillData =
             modelCart: "106R01374",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3250",
             refill_price: "850 ₽",
@@ -4876,6 +5428,7 @@ export const refillData =
             modelCart: "106R01378",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3100",
             refill_price: "400 ₽",
@@ -4885,6 +5438,7 @@ export const refillData =
             modelCart: "106R01379",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3100",
             refill_price: "500 ₽",
@@ -4894,6 +5448,7 @@ export const refillData =
             modelCart: "106R01388",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4903,6 +5458,7 @@ export const refillData =
             modelCart: "106R01389",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4912,6 +5468,7 @@ export const refillData =
             modelCart: "106R01390",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4921,6 +5478,7 @@ export const refillData =
             modelCart: "106R01391",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4930,6 +5488,7 @@ export const refillData =
             modelCart: "106R01400",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4939,6 +5498,7 @@ export const refillData =
             modelCart: "106R01402",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1450 ₽",
@@ -4948,6 +5508,7 @@ export const refillData =
             modelCart: "106R01403",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6280",
             refill_price: "1650 ₽",
@@ -4957,6 +5518,7 @@ export const refillData =
             modelCart: "106R01411",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3300MFP",
             refill_price: "850 ₽",
@@ -4966,6 +5528,7 @@ export const refillData =
             modelCart: "106R01412",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3300MFP",
             refill_price: "850 ₽",
@@ -4975,6 +5538,7 @@ export const refillData =
             modelCart: "106R01414",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3435",
             refill_price: "950 ₽",
@@ -4984,6 +5548,7 @@ export const refillData =
             modelCart: "106R01415",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3435",
             refill_price: "850 ₽",
@@ -4993,6 +5558,7 @@ export const refillData =
             modelCart: "106R01456",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 128",
             refill_price: "1300 ₽",
@@ -5002,6 +5568,7 @@ export const refillData =
             modelCart: "106R01457",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 128",
             refill_price: "1300 ₽",
@@ -5011,6 +5578,7 @@ export const refillData =
             modelCart: "106R01458",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 128",
             refill_price: "1300 ₽",
@@ -5020,6 +5588,7 @@ export const refillData =
             modelCart: "106R01459",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 128",
             refill_price: "1300 ₽",
@@ -5029,6 +5598,7 @@ export const refillData =
             modelCart: "106R01463",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "800 ₽",
@@ -5038,6 +5608,7 @@ export const refillData =
             modelCart: "106R01464",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "800 ₽",
@@ -5047,6 +5618,7 @@ export const refillData =
             modelCart: "106R01465",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "800 ₽",
@@ -5056,6 +5628,7 @@ export const refillData =
             modelCart: "106R01473",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "1000 ₽",
@@ -5065,6 +5638,7 @@ export const refillData =
             modelCart: "106R01474",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "1000 ₽",
@@ -5074,6 +5648,7 @@ export const refillData =
             modelCart: "106R01475",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "1000 ₽",
@@ -5083,6 +5658,7 @@ export const refillData =
             modelCart: "106R01476",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
             refill_price: "1100 ₽",
@@ -5092,6 +5668,7 @@ export const refillData =
             modelCart: "106R01481",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6140",
             refill_price: "1300 ₽",
@@ -5101,6 +5678,7 @@ export const refillData =
             modelCart: "106R01482",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6140",
             refill_price: "1300 ₽",
@@ -5110,6 +5688,7 @@ export const refillData =
             modelCart: "106R01483",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6140",
             refill_price: "1300 ₽",
@@ -5119,6 +5698,7 @@ export const refillData =
             modelCart: "106R01484",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 6140",
             refill_price: "1300 ₽",
@@ -5126,6 +5706,7 @@ export const refillData =
         },
         {
             modelCart: "106R01485",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5135,6 +5716,7 @@ export const refillData =
         },
         {
             modelCart: "106R01487",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5144,6 +5726,7 @@ export const refillData =
         },
         {
             modelCart: "106R01485",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5153,6 +5736,7 @@ export const refillData =
         },
         {
             modelCart: "106R01487",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5162,6 +5746,7 @@ export const refillData =
         },
         {
             modelCart: "106R01529",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5171,6 +5756,7 @@ export const refillData =
         },
         {
             modelCart: "106R01531",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5180,6 +5766,7 @@ export const refillData =
         },
         {
             modelCart: "106R01570",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5189,6 +5776,7 @@ export const refillData =
         },
         {
             modelCart: "106R01571",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5198,6 +5786,7 @@ export const refillData =
         },
         {
             modelCart: "106R01572",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5207,6 +5796,7 @@ export const refillData =
         },
         {
             modelCart: "106R01573",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5216,6 +5806,7 @@ export const refillData =
         },
         {
             modelCart: "106R01624",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5225,6 +5816,7 @@ export const refillData =
         },
         {
             modelCart: "106R01625",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5234,6 +5826,7 @@ export const refillData =
         },
         {
             modelCart: "106R01626",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5243,6 +5836,7 @@ export const refillData =
         },
         {
             modelCart: "106R01598",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5252,6 +5846,7 @@ export const refillData =
         },
         {
             modelCart: "106R01599",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5261,6 +5856,7 @@ export const refillData =
         },
         {
             modelCart: "106R01600",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5270,6 +5866,7 @@ export const refillData =
         },
         {
             modelCart: "106R01601",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5279,6 +5876,7 @@ export const refillData =
         },
         {
             modelCart: "106R01602",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5288,6 +5886,7 @@ export const refillData =
         },
         {
             modelCart: "106R01603",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5297,6 +5896,7 @@ export const refillData =
         },
         {
             modelCart: "106R01604",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5306,6 +5906,7 @@ export const refillData =
         },
         {
             modelCart: "106R01631",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5315,6 +5916,7 @@ export const refillData =
         },
         {
             modelCart: "106R01632",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5324,6 +5926,7 @@ export const refillData =
         },
         {
             modelCart: "106R01633",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5333,6 +5936,7 @@ export const refillData =
         },
         {
             modelCart: "106R01634",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5342,6 +5946,7 @@ export const refillData =
         },
         {
             modelCart: "106R02181",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5351,6 +5956,7 @@ export const refillData =
         },
         {
             modelCart: "106R02183",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5360,6 +5966,7 @@ export const refillData =
         },
         {
             modelCart: "106R02310",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5369,6 +5976,7 @@ export const refillData =
         },
         {
             modelCart: "108R00794",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5378,6 +5986,7 @@ export const refillData =
         },
         {
             modelCart: "108R00796",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5387,6 +5996,7 @@ export const refillData =
         },
         {
             modelCart: "108R00908",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5396,6 +6006,7 @@ export const refillData =
         },
         {
             modelCart: "108R00909",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5405,6 +6016,7 @@ export const refillData =
         },
         {
             modelCart: "108R00908",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5414,6 +6026,7 @@ export const refillData =
         },
         {
             modelCart: "108R00909",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5425,6 +6038,7 @@ export const refillData =
             modelCart: "109R00639",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3110 / Phaser 3210",
             refill_price: "400 ₽",
@@ -5434,6 +6048,7 @@ export const refillData =
             modelCart: "113R00296",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "P8E / P8EX / 385",
             refill_price: "600 ₽",
@@ -5443,6 +6058,7 @@ export const refillData =
             modelCart: "113R00495",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 5400",
             refill_price: "1600 ₽",
@@ -5452,6 +6068,7 @@ export const refillData =
             modelCart: "113R00627",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 4400",
             refill_price: "1700 ₽",
@@ -5461,6 +6078,7 @@ export const refillData =
             modelCart: "113R00628",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 4400",
             refill_price: "1700 ₽",
@@ -5470,6 +6088,7 @@ export const refillData =
             modelCart: "113R00656",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 4500",
             refill_price: "1500 ₽",
@@ -5479,6 +6098,7 @@ export const refillData =
             modelCart: "113R00667",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "PE16 / PE16e",
             refill_price: "400 ₽",
@@ -5486,6 +6106,7 @@ export const refillData =
         },
         {
             modelCart: "113R00689",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5495,6 +6116,7 @@ export const refillData =
         },
         {
             modelCart: "113R00690",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5504,6 +6126,7 @@ export const refillData =
         },
         {
             modelCart: "113R00691",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5513,6 +6136,7 @@ export const refillData =
         },
         {
             modelCart: "113R00692",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5522,6 +6146,7 @@ export const refillData =
         },
         {
             modelCart: "113R00693",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5531,6 +6156,7 @@ export const refillData =
         },
         {
             modelCart: "113R00694",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5540,6 +6166,7 @@ export const refillData =
         },
         {
             modelCart: "113R00695",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5551,6 +6178,7 @@ export const refillData =
             modelCart: "113R00712",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 4510",
             refill_price: "1500 ₽",
@@ -5558,6 +6186,7 @@ export const refillData =
         },
         {
             modelCart: "113R00719",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5567,6 +6196,7 @@ export const refillData =
         },
         {
             modelCart: "113R00720",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5576,6 +6206,7 @@ export const refillData =
         },
         {
             modelCart: "113R00721",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5585,6 +6216,7 @@ export const refillData =
         },
         {
             modelCart: "113R00722",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5594,6 +6226,7 @@ export const refillData =
         },
         {
             modelCart: "113R00723",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5603,6 +6236,7 @@ export const refillData =
         },
         {
             modelCart: "113R00724",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5612,6 +6246,7 @@ export const refillData =
         },
         {
             modelCart: "113R00725",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5621,6 +6256,7 @@ export const refillData =
         },
         {
             modelCart: "113R00726",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5632,6 +6268,7 @@ export const refillData =
             modelCart: "113R00730",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3200MFP",
             refill_price: "650 ₽",
@@ -5641,6 +6278,7 @@ export const refillData =
             modelCart: "113R00735",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 3200MFP",
             refill_price: "400 ₽",
@@ -5648,6 +6286,7 @@ export const refillData =
         },
         {
             modelCart: "106R03622",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5657,6 +6296,7 @@ export const refillData =
         },
         {
             modelCart: "106R03624",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5666,6 +6306,7 @@ export const refillData =
         },
         {
             modelCart: "106R03620",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5675,6 +6316,7 @@ export const refillData =
         },
         {
             modelCart: "106R02763",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5684,6 +6326,7 @@ export const refillData =
         },
         {
             modelCart: "106R02760",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5693,6 +6336,7 @@ export const refillData =
         },
         {
             modelCart: "106R02761",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5702,6 +6346,7 @@ export const refillData =
         },
         {
             modelCart: "106R02762",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5711,6 +6356,7 @@ export const refillData =
         },
         {
             modelCart: "106R02759",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5720,6 +6366,7 @@ export const refillData =
         },
         {
             modelCart: "106R02756",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5729,6 +6376,7 @@ export const refillData =
         },
         {
             modelCart: "106R02757",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5738,6 +6386,7 @@ export const refillData =
         },
         {
             modelCart: "106R02758",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5747,6 +6396,7 @@ export const refillData =
         },
         {
             modelCart: "106R03484",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5756,6 +6406,7 @@ export const refillData =
         },
         {
             modelCart: "106R03481",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5765,6 +6416,7 @@ export const refillData =
         },
         {
             modelCart: "106R03482",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5774,6 +6426,7 @@ export const refillData =
         },
         {
             modelCart: "106R03483",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5783,6 +6436,7 @@ export const refillData =
         },
         {
             modelCart: "106R02773",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5792,6 +6446,7 @@ export const refillData =
         },
         {
             modelCart: "106R03048",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5801,6 +6456,7 @@ export const refillData =
         },
         {
             modelCart: "106R02773",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5810,6 +6466,7 @@ export const refillData =
         },
         {
             modelCart: "106R03048",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5819,6 +6476,7 @@ export const refillData =
         },
         {
             modelCart: "106R02720",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5828,6 +6486,7 @@ export const refillData =
         },
         {
             modelCart: "106R02722",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5837,6 +6496,7 @@ export const refillData =
         },
         {
             modelCart: "106R02731",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5846,6 +6506,7 @@ export const refillData =
         },
         {
             modelCart: "106R03581",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5855,6 +6516,7 @@ export const refillData =
         },
         {
             modelCart: "106R03583",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5864,6 +6526,7 @@ export const refillData =
         },
         {
             modelCart: "106R03585",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5875,6 +6538,7 @@ export const refillData =
             modelCart: "113R00711",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "Phaser 4510",
             refill_price: "1000 ₽",
@@ -5882,6 +6546,7 @@ export const refillData =
         },
         {
             modelCart: "106R02721",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5891,6 +6556,7 @@ export const refillData =
         },
         {
             modelCart: "106R02723",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5900,6 +6566,7 @@ export const refillData =
         },
         {
             modelCart: "106R02732",
+            examples: [],
             chip: true,
             id: uuidv4(),
             vendor: "Xerox",
@@ -5911,6 +6578,7 @@ export const refillData =
             modelCart: "106R02736",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 3655",
             refill_price: "Уточняйте",
@@ -5920,6 +6588,7 @@ export const refillData =
             modelCart: "106R02738",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WC 3655",
             refill_price: "Уточняйте",
@@ -5929,6 +6598,7 @@ export const refillData =
             modelCart: "106R03105",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WCP 4265",
             refill_price: "Уточняйте",
@@ -5938,6 +6608,7 @@ export const refillData =
             modelCart: "106R02735",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WCP 4265",
             refill_price: "Уточняйте",
@@ -5947,6 +6618,7 @@ export const refillData =
             modelCart: "106R03103",
             id: uuidv4(),
             vendor: "Xerox",
+            examples: [],
             chip: false,
             devices: "WCP 4265",
             refill_price: "Уточняйте",
@@ -5954,6 +6626,7 @@ export const refillData =
         },
         {
             modelCart: "TN-110BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -5963,6 +6636,7 @@ export const refillData =
         },
         {
             modelCart: "TN-110C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -5972,6 +6646,7 @@ export const refillData =
         },
         {
             modelCart: "TN-110M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -5981,6 +6656,7 @@ export const refillData =
         },
         {
             modelCart: "TN-115BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -5990,6 +6666,7 @@ export const refillData =
         },
         {
             modelCart: "TN-115C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -5999,6 +6676,7 @@ export const refillData =
         },
         {
             modelCart: "TN-115M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6008,6 +6686,7 @@ export const refillData =
         },
         {
             modelCart: "TN-12BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6017,6 +6696,7 @@ export const refillData =
         },
         {
             modelCart: "TN-12C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6026,6 +6706,7 @@ export const refillData =
         },
         {
             modelCart: "TN-12M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6035,6 +6716,7 @@ export const refillData =
         },
         {
             modelCart: "TN-12Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6044,6 +6726,7 @@ export const refillData =
         },
         {
             modelCart: "TN-130BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6053,6 +6736,7 @@ export const refillData =
         },
         {
             modelCart: "TN-130C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6062,6 +6746,7 @@ export const refillData =
         },
         {
             modelCart: "TN-130M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6071,6 +6756,7 @@ export const refillData =
         },
         {
             modelCart: "TN-130Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6080,6 +6766,7 @@ export const refillData =
         },
         {
             modelCart: "TN-135BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6089,6 +6776,7 @@ export const refillData =
         },
         {
             modelCart: "TN-135C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6098,6 +6786,7 @@ export const refillData =
         },
         {
             modelCart: "TN-135M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6107,6 +6796,7 @@ export const refillData =
         },
         {
             modelCart: "TN-135Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6116,6 +6806,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2000",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6125,6 +6816,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2080",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6134,6 +6826,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2085",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6143,6 +6836,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2090",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6152,6 +6846,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2135",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6161,6 +6856,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2175",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6170,6 +6866,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2235",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6179,6 +6876,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2275",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6188,6 +6886,7 @@ export const refillData =
         },
         {
             modelCart: "TN-230BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6197,6 +6896,7 @@ export const refillData =
         },
         {
             modelCart: "TN-230C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6206,6 +6906,7 @@ export const refillData =
         },
         {
             modelCart: "TN-230M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6215,6 +6916,7 @@ export const refillData =
         },
         {
             modelCart: "TN-230Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6224,6 +6926,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3030",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6233,6 +6936,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3060",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6242,6 +6946,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3130",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6251,6 +6956,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3170",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6260,6 +6966,7 @@ export const refillData =
         },
         {
             modelCart: "TN-320BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6269,6 +6976,7 @@ export const refillData =
         },
         {
             modelCart: "TN-320C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6278,6 +6986,7 @@ export const refillData =
         },
         {
             modelCart: "TN-320M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6287,6 +6996,7 @@ export const refillData =
         },
         {
             modelCart: "TN-320Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6296,6 +7006,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3230",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6305,6 +7016,7 @@ export const refillData =
         },
         {
             modelCart: "TN-325BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6314,6 +7026,7 @@ export const refillData =
         },
         {
             modelCart: "TN-325C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6323,6 +7036,7 @@ export const refillData =
         },
         {
             modelCart: "TN-325M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6332,6 +7046,7 @@ export const refillData =
         },
         {
             modelCart: "TN-325Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6341,6 +7056,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3280",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6350,6 +7066,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3330",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6359,6 +7076,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3380",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6368,6 +7086,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3390",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6377,6 +7096,7 @@ export const refillData =
         },
         {
             modelCart: "TN-4100",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6386,6 +7106,7 @@ export const refillData =
         },
         {
             modelCart: "TN-430",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6395,6 +7116,7 @@ export const refillData =
         },
         {
             modelCart: "TN-1095",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6404,6 +7126,7 @@ export const refillData =
         },
         {
             modelCart: "TN-900BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6413,6 +7136,7 @@ export const refillData =
         },
         {
             modelCart: "TN-900C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6422,6 +7146,7 @@ export const refillData =
         },
         {
             modelCart: "TN-900M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6431,6 +7156,7 @@ export const refillData =
         },
         {
             modelCart: "TN-900Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6440,6 +7166,7 @@ export const refillData =
         },
         {
             modelCart: "TN-321BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6449,6 +7176,7 @@ export const refillData =
         },
         {
             modelCart: "TN-321C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6458,6 +7186,7 @@ export const refillData =
         },
         {
             modelCart: "TN-321M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6467,6 +7196,7 @@ export const refillData =
         },
         {
             modelCart: "TN-321Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6476,6 +7206,7 @@ export const refillData =
         },
         {
             modelCart: "TN-326BK",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6485,6 +7216,7 @@ export const refillData =
         },
         {
             modelCart: "TN-326C",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6494,6 +7226,7 @@ export const refillData =
         },
         {
             modelCart: "TN-326M",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6503,6 +7236,7 @@ export const refillData =
         },
         {
             modelCart: "TN-326Y",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6512,6 +7246,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2335",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6521,6 +7256,7 @@ export const refillData =
         },
         {
             modelCart: "TN-2375",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6530,6 +7266,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3430",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6539,6 +7276,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3480",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6549,7 +7287,8 @@ export const refillData =
         {
             modelCart: "TN-1075",
 
-            vendor: "Brother", chip: false,
+            examples: [],vendor: "Brother", 
+            chip: false,
             devices: "HL-1110 / HL-1112 / HL-1210 / HL-1212",
             refill_price: "500 ₽",
             recovery_price: "Уточняйте"
@@ -6557,13 +7296,15 @@ export const refillData =
         {
             modelCart: "TN-1075",
 
-            vendor: "Brother", chip: true,
+            examples: [],vendor: "Brother", 
+            chip: true,
             devices: "HL-1110 / HL-1112 / HL-1210 / HL-1212",
             refill_price: "900 ₽",
             recovery_price: "Уточняйте"
         },
         {
             modelCart: "TN-3512",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6573,6 +7314,7 @@ export const refillData =
         },
         {
             modelCart: "TN-3520",
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "Brother",
@@ -6584,6 +7326,7 @@ export const refillData =
             modelCart: "Panasonic KX-A144A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-F2900 / KX-3000 / KX-3100",
             refill_price: "450 ₽",
@@ -6593,6 +7336,7 @@ export const refillData =
             modelCart: "Panasonic KX-FA75",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-FLM600 / KX-FLM650 ",
             refill_price: "750 ₽",
@@ -6602,6 +7346,7 @@ export const refillData =
             modelCart: "Panasonic KX-FA76A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-FL501RU / KX-FL502RU / KX-FL503RU / KX-FL521RU / KX-FL523RU / KX-FL751RU / KX-FL753RU ",
             refill_price: "400 ₽",
@@ -6611,6 +7356,7 @@ export const refillData =
             modelCart: "Panasonic KX-FA83A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-FL511 / KX-FL512 / KX-FL513RU / KX-FL540RU / KX-FL541RU / KX-FL543RU / KX-FLM653RU",
             refill_price: "400 ₽",
@@ -6620,6 +7366,7 @@ export const refillData =
             modelCart: "Panasonic KX-FA85A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-FLB801 / KX-FLB803 / KX-FLB803RU / KX-FLB811 / KX-FLB812 / KX-FLB813 / KX-FLB851 / KX-FLB853RU / KX-FLB881",
             refill_price: "550 ₽",
@@ -6629,6 +7376,7 @@ export const refillData =
             modelCart: "Panasonic KX-FAT400",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: true,
             devices: "KX-MB1500RU",
             refill_price: "600 ₽",
@@ -6638,6 +7386,7 @@ export const refillData =
             modelCart: "Panasonic KX-FAT410",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: true,
             devices: "KX-MB1500RU",
             refill_price: "700 ₽",
@@ -6647,6 +7396,7 @@ export const refillData =
             modelCart: "Panasonic KX-FAT411",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-MB1900RU / KX-MB2000RU / KX-MB2010 / KX-MB2020RU / KX-MB2025RU / KX-MB2030RU",
             refill_price: "600 ₽",
@@ -6656,6 +7406,7 @@ export const refillData =
             modelCart: "Panasonic KX-FAT88A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-FL401RU / KX-FL403RU / KX-FL411RU / KX-FL413RU",
             refill_price: "400 ₽",
@@ -6665,6 +7416,7 @@ export const refillData =
             modelCart: "Panasonic KX-FAT92A",
             id: uuidv4(),
             vendor: "Panasonic",
+            examples: [],
             chip: false,
             devices: "KX-MB262 / 263 RU / 283RU / 763RU / 772RU / 773RU / 781RU",
             refill_price: "400 ₽",
@@ -6674,6 +7426,7 @@ export const refillData =
             modelCart: "AL-100TD",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AL-1000 / AL-1200 / AL-1520",
             refill_price: "850 ₽",
@@ -6683,6 +7436,7 @@ export const refillData =
             modelCart: "AL-110DC",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AL-1217 / AL-1555",
             refill_price: "850 ₽",
@@ -6692,6 +7446,7 @@ export const refillData =
             modelCart: "AL-80TD",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AL-800 / AL-840",
             refill_price: "850 ₽",
@@ -6701,6 +7456,7 @@ export const refillData =
             modelCart: "AM-30DC",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AM-300 / AL-400",
             refill_price: "650 ₽",
@@ -6710,6 +7466,7 @@ export const refillData =
             modelCart: "AR-016T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-5015 / AR-5120 / AR-5316 / AR-5320",
             refill_price: "1450 ₽",
@@ -6719,6 +7476,7 @@ export const refillData =
             modelCart: "AR-016LT",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-5015 / AR-5120 / AR-5316 / AR-5320",
             refill_price: "1450 ₽",
@@ -6728,6 +7486,7 @@ export const refillData =
             modelCart: "AR-020T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-5516 / AR-5520",
             refill_price: "1500 ₽",
@@ -6737,6 +7496,7 @@ export const refillData =
             modelCart: "AR-150DC",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-120E / AR-150",
             refill_price: "850 ₽",
@@ -6746,6 +7506,7 @@ export const refillData =
             modelCart: "AR-152T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-151 / AR-153 / AR-156 / AR-5012 / AR-5415 / AR-122E / AR- M150 / AR-M155",
             refill_price: "1000 ₽",
@@ -6755,6 +7516,7 @@ export const refillData =
             modelCart: "AR-156T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-150 / AR-151 / AR-153 / AR-156 / AR-121E",
             refill_price: "950 ₽",
@@ -6764,6 +7526,7 @@ export const refillData =
             modelCart: "AR-168LT",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-153 / AR-5012 / AR-5415 / AR-122E / AR-M150 / AR-M155",
             refill_price: "1000 ₽",
@@ -6773,6 +7536,7 @@ export const refillData =
             modelCart: "AR-168T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-153 / AR-5012 / AR-5415 / AR-122E / AR-M150 / AR-M155",
             refill_price: "1000 ₽",
@@ -6782,6 +7546,7 @@ export const refillData =
             modelCart: "AR-200DC",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-161 / AR-200 / AR-205",
             refill_price: "1600 ₽",
@@ -6791,6 +7556,7 @@ export const refillData =
             modelCart: "AR-202LT",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-162 / AR-163 / AR-164 / AR-201 / AR-206 / AR-207 / AR-M160 / AR-M205",
             refill_price: "1450 ₽",
@@ -6800,6 +7566,7 @@ export const refillData =
             modelCart: "AR-202T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-163 / AR-201 / AR-206 / AR-M160 / AR-M165 / AR-M205 / AR-M207",
             refill_price: "1450 ₽",
@@ -6809,6 +7576,7 @@ export const refillData =
             modelCart: "AR-208T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-5420 / AR-M201 / AR-203E",
             refill_price: "950 ₽",
@@ -6818,6 +7586,7 @@ export const refillData =
             modelCart: "AR-270T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-235 / AR-275 / AR-M236 / AR-M276",
             refill_price: "1500 ₽",
@@ -6827,6 +7596,7 @@ export const refillData =
             modelCart: "AR-310T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-5625 / AR-5631 / AR-M256 / AR-M316",
             refill_price: "1900 ₽",
@@ -6836,6 +7606,7 @@ export const refillData =
             modelCart: "AR-450T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-M350N / AR-M350U / AR-M450N / AR-M450U",
             refill_price: "1500 ₽",
@@ -6845,6 +7616,7 @@ export const refillData =
             modelCart: "AR-455T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-M351 / AR-M451 / MX-M350N / MX-M350U / MX-M450N / MX-M450U",
             refill_price: "1900 ₽",
@@ -6854,6 +7626,7 @@ export const refillData =
             modelCart: "AR-621T",
             id: uuidv4(),
             vendor: "Sharp",
+            examples: [],
             chip: true,
             devices: "AR-M550N / AR-M550U / AR-M620N / AR-M620U / AR-M700N / AR-M700U",
             refill_price: "2800 ₽",
@@ -6863,6 +7636,7 @@ export const refillData =
             modelCart: "TK-1110",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-1040 / FS-1020MFP / FS-1120MFP / FS-1060MFP",
             refill_price: "650 ₽",
@@ -6872,6 +7646,7 @@ export const refillData =
             modelCart: "TK-1120",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-1025MFP",
             refill_price: "650 ₽",
@@ -6881,6 +7656,7 @@ export const refillData =
             modelCart: "TK-3110",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-4100",
             refill_price: "1600 ₽",
@@ -6890,6 +7666,7 @@ export const refillData =
             modelCart: "TK-3130",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-4200 / FS-4300",
             refill_price: "1900 ₽",
@@ -6899,6 +7676,7 @@ export const refillData =
             modelCart: "TK-3170",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "P3050dn / P3050dn / P3055dn / P3060dn",
             refill_price: "1900 ₽",
@@ -6908,6 +7686,7 @@ export const refillData =
             modelCart: "TK-3170",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P3050dn / P3050dn / P3055dn / P3060dn",
             refill_price: "2100 ₽",
@@ -6917,6 +7696,7 @@ export const refillData =
             modelCart: "TK-3150",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "M3040idn / M3540idn",
             refill_price: "1800 ₽",
@@ -6926,6 +7706,7 @@ export const refillData =
             modelCart: "TK-3150",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M3040idn / M3540idn",
             refill_price: "2000 ₽",
@@ -6935,6 +7716,7 @@ export const refillData =
             modelCart: "TK-3160",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "P3045dn / P3050dn / P3055dn / P3060dn",
             refill_price: "1700 ₽",
@@ -6944,6 +7726,7 @@ export const refillData =
             modelCart: "TK-3160",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P3045dn / P3050dn / P3055dn / P3060dn",
             refill_price: "1900 ₽",
@@ -6953,6 +7736,7 @@ export const refillData =
             modelCart: "TK-3100",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-2100 / M3040 / M3540",
             refill_price: "1500 ₽",
@@ -6962,6 +7746,7 @@ export const refillData =
             modelCart: "TK-4105",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 1800 / TASKalfa 1801 / TASKalfa 2200 / TASKalfa 2201",
             refill_price: "1900 ₽",
@@ -6971,6 +7756,7 @@ export const refillData =
             modelCart: "TK-6305",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 3500 / TASKalfa 4500 / TASKalfa 5500",
             refill_price: "3500 ₽",
@@ -6980,6 +7766,7 @@ export const refillData =
             modelCart: "TK-7205",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "Taskalfa 3510",
             refill_price: "3500 ₽",
@@ -6989,6 +7776,7 @@ export const refillData =
             modelCart: "TK-895K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
             refill_price: "3500 ₽",
@@ -6998,6 +7786,7 @@ export const refillData =
             modelCart: "TK-895C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
             refill_price: "3500 ₽",
@@ -7007,6 +7796,7 @@ export const refillData =
             modelCart: "TK-895M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
             refill_price: "3500 ₽",
@@ -7016,6 +7806,7 @@ export const refillData =
             modelCart: "TK-895Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
             refill_price: "3500 ₽",
@@ -7025,6 +7816,7 @@ export const refillData =
             modelCart: "TK-100",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "KM-1500",
             refill_price: "1100 ₽",
@@ -7034,6 +7826,7 @@ export const refillData =
             modelCart: "TK-110",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-720 / FS-820 / FS-920 / FS-1016MFP / FS-1116MFP",
             refill_price: "1100 ₽",
@@ -7043,6 +7836,7 @@ export const refillData =
             modelCart: "TK-1100",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1110 / 1024MFP",
             refill_price: "1100 ₽",
@@ -7052,6 +7846,7 @@ export const refillData =
             modelCart: "TK-110E",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-720 / FS-820 / FS-920 / FS-1016MFP",
             refill_price: "1100 ₽",
@@ -7061,6 +7856,7 @@ export const refillData =
             modelCart: "TK-1140",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-1035MFP / FS-1135MFP / M2035 / M2535",
             refill_price: "1200 ₽",
@@ -7070,6 +7866,7 @@ export const refillData =
             modelCart: "TK-1150",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "M2135dn / M2635dn / M2735dw / P2235dn / P2235dw",
             refill_price: "900 ₽",
@@ -7079,6 +7876,7 @@ export const refillData =
             modelCart: "TK-1150",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M2135dn / M2635dn / M2735dw / P2235dn / P2235dw",
             refill_price: "1100 ₽",
@@ -7088,6 +7886,7 @@ export const refillData =
             modelCart: "TK-1170",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "M2040dn / M2540dn / M2640idw",
             refill_price: "1100 ₽",
@@ -7097,6 +7896,7 @@ export const refillData =
             modelCart: "TK-1170",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M2040dn / M2540dn / M2640idw",
             refill_price: "1300 ₽",
@@ -7106,6 +7906,7 @@ export const refillData =
             modelCart: "TK-1160",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "P2040dn / P2040dw",
             refill_price: "1100 ₽",
@@ -7115,6 +7916,7 @@ export const refillData =
             modelCart: "TK-1160",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P2040dn / P2040dw",
             refill_price: "1300 ₽",
@@ -7124,6 +7926,7 @@ export const refillData =
             modelCart: "TK-1200",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "P2335dw / M2235dn / M2735dn / M2835dw",
             refill_price: "1100 ₽",
@@ -7133,6 +7936,7 @@ export const refillData =
             modelCart: "TK-1200",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P2335dw / M2235dn / M2735dn / M2835dw",
             refill_price: "1300 ₽",
@@ -7142,6 +7946,7 @@ export const refillData =
             modelCart: "TK-120",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1030D",
             refill_price: "1100 ₽",
@@ -7151,6 +7956,7 @@ export const refillData =
             modelCart: "TK-130",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1028MFP / FS-1128MFP / FS-1300 / FS-1350DN",
             refill_price: "1100 ₽",
@@ -7160,6 +7966,7 @@ export const refillData =
             modelCart: "TK-140",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1100",
             refill_price: "1100 ₽",
@@ -7169,6 +7976,7 @@ export const refillData =
             modelCart: "TK-150C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C1020MFP",
             refill_price: "3200 ₽",
@@ -7178,6 +7986,7 @@ export const refillData =
             modelCart: "TK-150K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C1020MFP",
             refill_price: "3200 ₽",
@@ -7187,6 +7996,7 @@ export const refillData =
             modelCart: "TK-150M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C1020MFP",
             refill_price: "3200 ₽",
@@ -7196,6 +8006,7 @@ export const refillData =
             modelCart: "TK-150Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C1020MFP",
             refill_price: "3200 ₽",
@@ -7205,6 +8016,7 @@ export const refillData =
             modelCart: "TK-160",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1120",
             refill_price: "1000 ₽",
@@ -7214,6 +8026,7 @@ export const refillData =
             modelCart: "TK-17",
 
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1010 / FS-1050 / FS-1000",
             refill_price: "1200 ₽",
@@ -7223,6 +8036,7 @@ export const refillData =
             modelCart: "TK-170",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1320",
             refill_price: "1200 ₽",
@@ -7232,6 +8046,7 @@ export const refillData =
             modelCart: "TK-18",
 
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1018MFP / FS-1020D / FS-1118MFP",
             refill_price: "1200 ₽",
@@ -7241,6 +8056,7 @@ export const refillData =
             modelCart: "TK-20H",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1700 / FS-1750 / FS-3700 / FS-3750 / FS-6700 / FS-6900",
             refill_price: "1400 ₽",
@@ -7250,6 +8066,7 @@ export const refillData =
             modelCart: "TK-310",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-2000 / FS-3900 / FS-4000",
             refill_price: "1200 ₽",
@@ -7259,6 +8076,7 @@ export const refillData =
             modelCart: "TK-320",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-3900DN / FS-4000DN",
             refill_price: "1100 ₽",
@@ -7268,6 +8086,7 @@ export const refillData =
             modelCart: "TK-330",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-4000DN",
             refill_price: "1300 ₽",
@@ -7277,6 +8096,7 @@ export const refillData =
             modelCart: "TK-340",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-2020",
             refill_price: "1100 ₽",
@@ -7286,6 +8106,7 @@ export const refillData =
             modelCart: "TK-350",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-3040MFP / FS-3040MFP+ / FS-3140MFP+ / FS-3540MFP",
             refill_price: "1100 ₽",
@@ -7295,6 +8116,7 @@ export const refillData =
             modelCart: "TK-360",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-4020DN",
             refill_price: "1300 ₽",
@@ -7304,6 +8126,7 @@ export const refillData =
             modelCart: "TK-400",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-6020 ",
             refill_price: "1100 ₽",
@@ -7313,6 +8136,7 @@ export const refillData =
             modelCart: "TK-410",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "KM-1620 / KM-1635 / KM-1650 / KM-2020 / KM-2050 / KM-2550",
             refill_price: "1700 ₽",
@@ -7322,6 +8146,7 @@ export const refillData =
             modelCart: "TK-420",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "KM-2550",
             refill_price: "1700 ₽",
@@ -7331,6 +8156,7 @@ export const refillData =
             modelCart: "TK-435",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 180 / TASKalfa 181 / TASKalfa 220 / TASKalfa 221",
             refill_price: "1700 ₽",
@@ -7340,6 +8166,7 @@ export const refillData =
             modelCart: "TK-440",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-6950DN",
             refill_price: "1100 ₽",
@@ -7349,6 +8176,7 @@ export const refillData =
             modelCart: "TK-450",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-6970DN",
             refill_price: "1300 ₽",
@@ -7358,6 +8186,7 @@ export const refillData =
             modelCart: "TK-475",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-6025MFP / FS-6025MFP / FS-6030MFP / FS-6525MFP / FS-6530MFP",
             refill_price: "1500 ₽",
@@ -7367,6 +8196,7 @@ export const refillData =
             modelCart: "TK-510C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
             refill_price: "2500 ₽",
@@ -7376,6 +8206,7 @@ export const refillData =
             modelCart: "TK-510K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
             refill_price: "2500 ₽",
@@ -7385,6 +8216,7 @@ export const refillData =
             modelCart: "TK-510M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
             refill_price: "2500 ₽",
@@ -7394,6 +8226,7 @@ export const refillData =
             modelCart: "TK-510Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
             refill_price: "2500 ₽",
@@ -7403,6 +8236,7 @@ export const refillData =
             modelCart: "TK-520C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5015N",
             refill_price: "1900 ₽",
@@ -7412,6 +8246,7 @@ export const refillData =
             modelCart: "TK-520K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5015N",
             refill_price: "1900 ₽",
@@ -7421,6 +8256,7 @@ export const refillData =
             modelCart: "TK-520M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5015N",
             refill_price: "1900 ₽",
@@ -7430,6 +8266,7 @@ export const refillData =
             modelCart: "TK-520Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5015N",
             refill_price: "1900 ₽",
@@ -7439,6 +8276,7 @@ export const refillData =
             modelCart: "TK-540C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5100DN",
             refill_price: "2200 ₽",
@@ -7448,6 +8286,7 @@ export const refillData =
             modelCart: "TK-540K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5100DN",
             refill_price: "2200 ₽",
@@ -7457,6 +8296,7 @@ export const refillData =
             modelCart: "TK-540M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5100DN",
             refill_price: "2200 ₽",
@@ -7466,6 +8306,7 @@ export const refillData =
             modelCart: "TK-540Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5100DN",
             refill_price: "2200 ₽",
@@ -7475,6 +8316,7 @@ export const refillData =
             modelCart: "TK-55",
 
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1920",
             refill_price: "1200 ₽",
@@ -7484,6 +8326,7 @@ export const refillData =
             modelCart: "TK-550C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5200DN",
             refill_price: "2300 ₽",
@@ -7493,6 +8336,7 @@ export const refillData =
             modelCart: "TK-550K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5200DN",
             refill_price: "2300 ₽",
@@ -7502,6 +8346,7 @@ export const refillData =
             modelCart: "TK-550M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5200DN",
             refill_price: "2300 ₽",
@@ -7511,6 +8356,7 @@ export const refillData =
             modelCart: "TK-550Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5200DN",
             refill_price: "2300 ₽",
@@ -7520,6 +8366,7 @@ export const refillData =
             modelCart: "TK-560C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5350",
             refill_price: "2900 ₽",
@@ -7529,6 +8376,7 @@ export const refillData =
             modelCart: "TK-560K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5351",
             refill_price: "2900 ₽",
@@ -7538,6 +8386,7 @@ export const refillData =
             modelCart: "TK-560M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5352",
             refill_price: "2900 ₽",
@@ -7547,6 +8396,7 @@ export const refillData =
             modelCart: "TK-560Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5353",
             refill_price: "2900 ₽",
@@ -7556,6 +8406,7 @@ export const refillData =
             modelCart: "TK-570C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5400DN",
             refill_price: "3500 ₽",
@@ -7565,6 +8416,7 @@ export const refillData =
             modelCart: "TK-570K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5400DN",
             refill_price: "3500 ₽",
@@ -7574,6 +8426,7 @@ export const refillData =
             modelCart: "TK-570M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5400DN",
             refill_price: "3500 ₽",
@@ -7583,6 +8436,7 @@ export const refillData =
             modelCart: "TK-570Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5400DN",
             refill_price: "3500 ₽",
@@ -7592,6 +8446,7 @@ export const refillData =
             modelCart: "TK-580C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
             refill_price: "1900 ₽",
@@ -7601,6 +8456,7 @@ export const refillData =
             modelCart: "TK-580K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
             refill_price: "1900 ₽",
@@ -7610,6 +8466,7 @@ export const refillData =
             modelCart: "TK-580M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
             refill_price: "1900 ₽",
@@ -7619,6 +8476,7 @@ export const refillData =
             modelCart: "TK-580Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
             refill_price: "1900 ₽",
@@ -7628,6 +8486,7 @@ export const refillData =
             modelCart: "TK-590C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
             refill_price: "2500 ₽",
@@ -7637,6 +8496,7 @@ export const refillData =
             modelCart: "TK-590K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
             refill_price: "2500 ₽",
@@ -7646,6 +8506,7 @@ export const refillData =
             modelCart: "TK-590M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
             refill_price: "2500 ₽",
@@ -7655,6 +8516,7 @@ export const refillData =
             modelCart: "TK-590Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
             refill_price: "2500 ₽",
@@ -7664,6 +8526,7 @@ export const refillData =
             modelCart: "TK-60",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: false,
             devices: "FS-1800",
             refill_price: "1200 ₽",
@@ -7673,6 +8536,7 @@ export const refillData =
             modelCart: "TK-715",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "KM-3050 / KM-4050 / KM-5050",
             refill_price: "3 500 ₽",
@@ -7682,6 +8546,7 @@ export const refillData =
             modelCart: "TK-7300",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS P4040dn",
             refill_price: "2200 ₽",
@@ -7691,6 +8556,7 @@ export const refillData =
             modelCart: "TK-1130",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS M2030dn / M2530dn / FS-1030MFP / FS-1130MFP",
             refill_price: "950 ₽",
@@ -7700,6 +8566,7 @@ export const refillData =
             modelCart: "TK-7105",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 3010i",
             refill_price: "3000 ₽",
@@ -7709,6 +8576,7 @@ export const refillData =
             modelCart: "TK-6705",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 6500i / TASKalfa 6501i / TASKalfa 8000i / TASKalfa 8001i",
             refill_price: "45 000 ₽",
@@ -7718,6 +8586,7 @@ export const refillData =
             modelCart: "TK-6325",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 4002i / 5002i / 6002i",
             refill_price: "3500 ₽",
@@ -7727,6 +8596,7 @@ export const refillData =
             modelCart: "TK-5240K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
             refill_price: "2200 ₽",
@@ -7736,6 +8606,7 @@ export const refillData =
             modelCart: "TK-5240C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
             refill_price: "2200 ₽",
@@ -7745,6 +8616,7 @@ export const refillData =
             modelCart: "TK-5240M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
             refill_price: "2200 ₽",
@@ -7754,6 +8626,7 @@ export const refillData =
             modelCart: "TK-5240Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
             refill_price: "2200 ₽",
@@ -7763,6 +8636,7 @@ export const refillData =
             modelCart: "TK-574K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS P7035",
             refill_price: "4000 ₽",
@@ -7772,6 +8646,7 @@ export const refillData =
             modelCart: "TK-574C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS P7035",
             refill_price: "4000 ₽",
@@ -7781,6 +8656,7 @@ export const refillData =
             modelCart: "TK-574M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS P7035",
             refill_price: "4000 ₽",
@@ -7790,6 +8666,7 @@ export const refillData =
             modelCart: "TK-574Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "ECOSYS P7035",
             refill_price: "4000 ₽",
@@ -7799,6 +8676,7 @@ export const refillData =
             modelCart: "TK-5140K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
             refill_price: "3200 ₽",
@@ -7808,6 +8686,7 @@ export const refillData =
             modelCart: "TK-5140C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
             refill_price: "3200 ₽",
@@ -7817,6 +8696,7 @@ export const refillData =
             modelCart: "TK-5140M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
             refill_price: "3200 ₽",
@@ -7826,6 +8706,7 @@ export const refillData =
             modelCart: "TK-5140Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
             refill_price: "3200 ₽",
@@ -7835,6 +8716,7 @@ export const refillData =
             modelCart: "TK-5150K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
             refill_price: "4000 ₽",
@@ -7844,6 +8726,7 @@ export const refillData =
             modelCart: "TK-5150C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
             refill_price: "4000 ₽",
@@ -7853,6 +8736,7 @@ export const refillData =
             modelCart: "TK-5150M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
             refill_price: "4000 ₽",
@@ -7862,6 +8746,7 @@ export const refillData =
             modelCart: "TK-5150Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
             refill_price: "4000 ₽",
@@ -7871,6 +8756,7 @@ export const refillData =
             modelCart: "TK-5220K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
             refill_price: "2200 ₽",
@@ -7880,6 +8766,7 @@ export const refillData =
             modelCart: "TK-5220C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
             refill_price: "2200 ₽",
@@ -7889,6 +8776,7 @@ export const refillData =
             modelCart: "TK-5220M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
             refill_price: "2200 ₽",
@@ -7898,6 +8786,7 @@ export const refillData =
             modelCart: "TK-5220Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
             refill_price: "2200 ₽",
@@ -7907,6 +8796,7 @@ export const refillData =
             modelCart: "TK-5230K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5021cdn",
             refill_price: "2200 ₽",
@@ -7916,6 +8806,7 @@ export const refillData =
             modelCart: "TK-5230C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5021cdn",
             refill_price: "2200 ₽",
@@ -7925,6 +8816,7 @@ export const refillData =
             modelCart: "TK-5230M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5021cdn",
             refill_price: "2200 ₽",
@@ -7934,6 +8826,7 @@ export const refillData =
             modelCart: "TK-5230Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "M5521cdn / M5021cdn",
             refill_price: "2200 ₽",
@@ -7943,6 +8836,7 @@ export const refillData =
             modelCart: "TK-5195K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
             refill_price: "3500 ₽",
@@ -7952,6 +8846,7 @@ export const refillData =
             modelCart: "TK-5195C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
             refill_price: "3500 ₽",
@@ -7961,6 +8856,7 @@ export const refillData =
             modelCart: "TK-5195M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
             refill_price: "3500 ₽",
@@ -7970,6 +8866,7 @@ export const refillData =
             modelCart: "TK-5195Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
             refill_price: "3500 ₽",
@@ -7979,6 +8876,7 @@ export const refillData =
             modelCart: "TK-5215K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
             refill_price: "4000 ₽",
@@ -7988,6 +8886,7 @@ export const refillData =
             modelCart: "TK-5215C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
             refill_price: "4000 ₽",
@@ -7997,6 +8896,7 @@ export const refillData =
             modelCart: "TK-5215M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
             refill_price: "4000 ₽",
@@ -8006,6 +8906,7 @@ export const refillData =
             modelCart: "TK-5215Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
             refill_price: "4000 ₽",
@@ -8015,6 +8916,7 @@ export const refillData =
             modelCart: "TK-8345K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
             refill_price: "4000 ₽",
@@ -8024,6 +8926,7 @@ export const refillData =
             modelCart: "TK-8345C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
             refill_price: "4000 ₽",
@@ -8033,6 +8936,7 @@ export const refillData =
             modelCart: "TK-8345M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
             refill_price: "4000 ₽",
@@ -8042,6 +8946,7 @@ export const refillData =
             modelCart: "TK-8345Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
             refill_price: "4000 ₽",
@@ -8051,6 +8956,7 @@ export const refillData =
             modelCart: "TK-8525K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
             refill_price: "6000 ₽",
@@ -8060,6 +8966,7 @@ export const refillData =
             modelCart: "TK-8525C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
             refill_price: "6000 ₽",
@@ -8069,6 +8976,7 @@ export const refillData =
             modelCart: "TK-8525M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
             refill_price: "6000 ₽",
@@ -8078,6 +8986,7 @@ export const refillData =
             modelCart: "TK-8525Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
             refill_price: "6000 ₽",
@@ -8087,6 +8996,7 @@ export const refillData =
             modelCart: "TK-8705K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
             refill_price: "8000 ₽",
@@ -8096,6 +9006,7 @@ export const refillData =
             modelCart: "TK-8705C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
             refill_price: "8000 ₽",
@@ -8105,6 +9016,7 @@ export const refillData =
             modelCart: "TK-8705M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
             refill_price: "8000 ₽",
@@ -8114,6 +9026,7 @@ export const refillData =
             modelCart: "TK-8705Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
             refill_price: "8000 ₽",
@@ -8123,6 +9036,7 @@ export const refillData =
             modelCart: "TK-8515K",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
             refill_price: "4000 ₽",
@@ -8132,6 +9046,7 @@ export const refillData =
             modelCart: "TK-8515C",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
             refill_price: "4000 ₽",
@@ -8141,6 +9056,7 @@ export const refillData =
             modelCart: "TK-8515M",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
             refill_price: "4000 ₽",
@@ -8150,6 +9066,7 @@ export const refillData =
             modelCart: "TK-8515Y",
             id: uuidv4(),
             vendor: "Kyocera",
+            examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
             refill_price: "4000 ₽",
@@ -8159,6 +9076,7 @@ export const refillData =
             modelCart: "SP 101E",
             id: uuidv4(),
             vendor: "Ricoh",
+            examples: [],
             chip: false,
             devices: "Ricoh Aficio SP 100 / SP 100SU / SP 100SF",
             refill_price: "500 ₽",
@@ -8168,6 +9086,7 @@ export const refillData =
             modelCart: "SP 100E",
             id: uuidv4(),
             vendor: "Ricoh",
+            examples: [],
             chip: false,
             devices: "Aficio SP 100 / SP 100SU / SP 100SF",
             refill_price: "500 ₽",
@@ -8177,6 +9096,7 @@ export const refillData =
             modelCart: "SP 150LE",
             id: uuidv4(),
             vendor: "Ricoh",
+            examples: [],
             chip: true,
             devices: "Ricoh SP 150",
             refill_price: "650 ₽",
@@ -8186,6 +9106,7 @@ export const refillData =
             modelCart: "SP 150НE",
             id: uuidv4(),
             vendor: "Ricoh",
+            examples: [],
             chip: true,
             devices: "Ricoh SP 150",
             refill_price: "650 ₽",
@@ -8195,6 +9116,7 @@ export const refillData =
             modelCart: "44844613 Y",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C822",
             refill_price: "4500 ₽",
@@ -8204,6 +9126,7 @@ export const refillData =
             modelCart: "44844614 M",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C823",
             refill_price: "4500 ₽",
@@ -8213,6 +9136,7 @@ export const refillData =
             modelCart: "44844615 C",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C824",
             refill_price: "4500 ₽",
@@ -8221,6 +9145,7 @@ export const refillData =
         {
             modelCart: "44844616 Bk",
             vendor: "OKI", 
+            examples: [],
             chip: true,
             devices: "C825",
             refill_price: "4500 ₽",
@@ -8230,6 +9155,7 @@ export const refillData =
             modelCart: "44844625 Y",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C826",
             refill_price: "4500 ₽",
@@ -8239,6 +9165,7 @@ export const refillData =
             modelCart: "44844626 M",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C827",
             refill_price: "4500 ₽",
@@ -8248,6 +9175,7 @@ export const refillData =
             modelCart: "44844627 C",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C828",
             refill_price: "4500 ₽",
@@ -8257,6 +9185,7 @@ export const refillData =
             modelCart: "44844628 Bk",
             id: uuidv4(),
             vendor: "OKI",
+            examples: [],
             chip: true,
             devices: "C829",
             refill_price: "4500 ₽",
@@ -8266,6 +9195,7 @@ export const refillData =
             modelCart: "TNP24",
             id: uuidv4(),
             vendor: "Minolta",
+            examples: [],
             chip: false,
             devices: "bizhub 20 / bizhub 20P",
             refill_price: "600 ₽",
@@ -8275,6 +9205,7 @@ export const refillData =
             modelCart: "DR-P01",
             id: uuidv4(),
             vendor: "Minolta",
+            examples: [],
             chip: false,
             devices: "bizhub 20 / bizhub 20P",
             refill_price: "Уточняйте",

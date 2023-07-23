@@ -1,5 +1,5 @@
 {
-  "homepage": "https://dendeadlift.github.io/foxnpm",
+  "homepage": "https://dendeadlift.github.io/fox/",
   "name": "c",
   "version": "0.1.0",
   "private": true,
@@ -50,6 +50,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^5.0.0"
   }
 }
