@@ -9,5 +9,6 @@ npm i react-router-dom
 npm i react-router-dom@latest
 npm i gh pages dash dash save dev
 
+https://github.com/gitname/react-gh-pages
 npm install gh-pages --save-dev
 git remote set-url origin https://github.com/dendeadlift/fox.git
