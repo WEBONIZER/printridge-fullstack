@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/foxnpm/static/css/main.b4fb744a.css",
-    "main.js": "/foxnpm/static/js/main.e1953b17.js",
-    "static/media/MLT-111S.png": "/foxnpm/static/media/MLT-111S.e713253ada26163c81f1.png",
-    "static/media/CF218A.png": "/foxnpm/static/media/CF218A.58c85e8c61d008f70e73.png",
-    "static/media/CF281X.png": "/foxnpm/static/media/CF281X.583853063a36869bd8ee.png",
-    "static/media/TK-895.png": "/foxnpm/static/media/TK-895.28ac4ab5f54353972651.png",
-    "static/media/TK-1170.png": "/foxnpm/static/media/TK-1170.cd6ca03ff9c63212fcc1.png",
-    "static/media/CF219A.png": "/foxnpm/static/media/CF219A.7965be16edf5ca71fd83.png",
-    "static/media/CF234A.png": "/foxnpm/static/media/CF234A.5e320df0d03601a2095f.png",
-    "static/media/CF281A.png": "/foxnpm/static/media/CF281A.53fe834356cd080c8214.png",
-    "static/media/CF233A.png": "/foxnpm/static/media/CF233A.576440c6bf5ac5e7ce39.png",
-    "static/media/MLT-115S.png": "/foxnpm/static/media/MLT-115S.4cb305160e2ef3400a6f.png",
-    "index.html": "/foxnpm/index.html",
-    "main.b4fb744a.css.map": "/foxnpm/static/css/main.b4fb744a.css.map",
-    "main.e1953b17.js.map": "/foxnpm/static/js/main.e1953b17.js.map"
+    "main.css": "/fox/static/css/main.91668d2b.css",
+    "main.js": "/fox/static/js/main.039924e6.js",
+    "static/media/MLT-111S.png": "/fox/static/media/MLT-111S.e713253ada26163c81f1.png",
+    "static/media/CF218A.png": "/fox/static/media/CF218A.58c85e8c61d008f70e73.png",
+    "static/media/CF281X.png": "/fox/static/media/CF281X.583853063a36869bd8ee.png",
+    "static/media/TK-895.png": "/fox/static/media/TK-895.28ac4ab5f54353972651.png",
+    "static/media/TK-1170.png": "/fox/static/media/TK-1170.cd6ca03ff9c63212fcc1.png",
+    "static/media/CF219A.png": "/fox/static/media/CF219A.7965be16edf5ca71fd83.png",
+    "static/media/CF234A.png": "/fox/static/media/CF234A.5e320df0d03601a2095f.png",
+    "static/media/CF281A.png": "/fox/static/media/CF281A.53fe834356cd080c8214.png",
+    "static/media/CF233A.png": "/fox/static/media/CF233A.576440c6bf5ac5e7ce39.png",
+    "static/media/MLT-115S.png": "/fox/static/media/MLT-115S.4cb305160e2ef3400a6f.png",
+    "index.html": "/fox/index.html",
+    "main.91668d2b.css.map": "/fox/static/css/main.91668d2b.css.map",
+    "main.039924e6.js.map": "/fox/static/js/main.039924e6.js.map"
   },
   "entrypoints": [
-    "static/css/main.b4fb744a.css",
-    "static/js/main.e1953b17.js"
+    "static/css/main.91668d2b.css",
+    "static/js/main.039924e6.js"
   ]
 }
