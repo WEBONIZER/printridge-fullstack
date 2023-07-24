@@ -10,13 +10,27 @@
     float: left;
     height: 50px;
     padding: 0 10px;
-    background-color: aqua;
+    background-color: #f2f2f3;
     text-decoration: none;
     transition: all 0.3s;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    color: #000;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+}
+
+.link:hover {
+    scale: 1.08;
+    transition: scale 0.3s linear;
+}
+
+.active {
+    scale: 1.06;
+    color: #000;
+    background-color: aqua;
 }
 
 .tab {
@@ -28,17 +42,14 @@
     gap: 10px;
 }
 
-.link:hover {
-    scale: 1.08;
-    transition: scale 0.3s linear;
-}
-
 .box {
     width: 100%;
     padding: 6px 12px;
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
+    background-color: lavenderblush;
+    border-radius: 30px;
 }
 
 .images_box {
@@ -55,6 +66,7 @@
     width: 150px;
     height: 150px;
     border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
 .image:active {
@@ -62,6 +74,8 @@
     transition: scale 0.3s linear;
 }
 
-.title {
+.title {}
 
+.text {
+    font-size: 18px;
 }

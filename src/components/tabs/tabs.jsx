@@ -1,12 +1,10 @@
-import styles from './tabs.module.css'
-import React from 'react'
+import styles from './tabs.module.css';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
-
 function TabContent({ title, photo, text }) {
-    const { model, vendor } = useParams()
-
+    const { model, vendor } = useParams();
 
     return (
         <div className={styles.tabcontent}>
@@ -14,50 +12,50 @@ function TabContent({ title, photo, text }) {
                 {title}
             </h3>
             <div className={styles.images_box}>
-                {
-                    photo.map(i => {
-                        const images = require.context('../../images/examples/refill', true);
-                        const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null
+                {photo.map(i => {
+                    const images = require.context('../../images/examples/refill', true);
+                    const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null;
 
-                        return (
-                            <img
-                                className={styles.image}
-                                src={img}
-                                alt={'фото'}
-                            />)
-                    })
-                }
+                    return (
+                        <img
+                            className={styles.image}
+                            src={img}
+                            alt={'фото'}
+                        />
+                    );
+                })}
             </div>
-            <p>
+            <p className={styles.text}>
                 {text}
             </p>
         </div>
     );
-};
+}
 
 function Tabs({ items }) {
-
-    const activeLink = ({ isActive }) => ({ color: isActive ? '#F2F2F3' : '#000' });
-
-    const [active, setActive] = React.useState(null);
+    const [active, setActive] = useState(0);
 
     const openTab = e => setActive(e.target.dataset.index);
 
     return (
         <div className={styles.box}>
+            <h3>Примеры нашей работы</h3>
             <div className={styles.tab}>
                 {items.map((n, i) => (
                     <NavLink
-                        style={activeLink}
-                        className={styles.link}
+                        key={i}
+                        className={`${styles.link} ${active == i ? styles.active : ''}`}
                         onClick={openTab}
                         data-index={i}
-                    >{n.title}</NavLink>
+                    >
+                        {n.title}
+                    </NavLink>
                 ))}
             </div>
             {items[active] && <TabContent {...items[active]} />}
         </div>
     );
 }
+
 
 export default Tabs;

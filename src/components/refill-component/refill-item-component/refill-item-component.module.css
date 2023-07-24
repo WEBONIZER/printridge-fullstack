@@ -20,13 +20,28 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .tabs_box {
-    width: 100%;
+    width: 50%;
     min-height: 250px;
     display: flex;
     flex-direction: row;
     justify-content: start;
+}
+
+.text_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.price_container {
+    width: 100%;
+}
+
+.left_box {
+    width: 50%;
 }
