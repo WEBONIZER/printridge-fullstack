@@ -8,7 +8,7 @@ function Item({ modelCart, vend, chip, devices, recovery_price, refill_price, ex
     const location = useLocation();
     const locationPathname = location.pathname;
     const img = images.keys().includes(`./${vendor}/${modelCart}.png`) ? images(`./${vendor}/${modelCart}.png`) : null;
-    
+
     return (
         <Link
             key={modelCart}

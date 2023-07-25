@@ -16,6 +16,7 @@ function VendorMenu() {
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
+                  exact={true}
                   >HP
                   </NavLink>
                   <NavLink 

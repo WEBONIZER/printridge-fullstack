@@ -1,11 +1,17 @@
+.container {
+    display: flex;
+    flex-direction: column;  
+}
+
 .price_container {
-    margin: 0;
-    width: 600px;
+    width: 100%;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
 }
+
 
 .vendor_name {
     margin: 0;
