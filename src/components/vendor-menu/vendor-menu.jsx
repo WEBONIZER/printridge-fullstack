@@ -5,7 +5,7 @@ function VendorMenu() {
 
     const location = useLocation();
 
-    const activeLink = ({ isActive }) => ({ color: isActive ? 'yellow' : 'black' });
+    const activeLink = ({ isActive }) => ({ color: isActive ? '#e76e1a' : '#000' });
 
     //const locationCategory = 
 

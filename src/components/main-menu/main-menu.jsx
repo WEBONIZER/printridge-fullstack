@@ -3,7 +3,7 @@ import styles from './main-menu.module.css'
 import { NavLink } from 'react-router-dom';
 
 function MainMenu() {
-    const activeLink = ({ isActive }) => ({ color: isActive ? '#F2F2F3' : '#000' });
+    const activeLink = ({ isActive }) => ({ color: isActive ? '#fff' : '#000' });
     //const navigate = useNavigate();
 
     return (

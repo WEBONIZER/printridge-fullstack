@@ -9,14 +9,15 @@
 }
 
 .item_link {
-    text-decoration: none;
     color: #fff;
+    text-decoration: none;
     width: 100px;
     height: 30px;
-    background-color: #be63fa;
+    background-color: #7b59971e;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 10px;
 }
