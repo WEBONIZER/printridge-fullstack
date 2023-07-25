@@ -13,10 +13,10 @@ function RefillComponent() {
 
     return (
         < div className={styles.container}>
-        <VendorMenu />
-        <div className={styles.price_container}>
-            <FilterItemsComponent data={filterCategory} />
-        </div>
+            <VendorMenu />
+            <div className={styles.price_container}>
+                <FilterItemsComponent data={filterCategory} />
+            </div>
         </div>
     );
 }

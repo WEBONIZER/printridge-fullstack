@@ -8,7 +8,18 @@ import styles from './filter-items-component.module.css'
 function FilterItemsComponent({ data }) {
     const { vendor } = useParams()
     const filterValue = useSelector((state) => state.filter.value.value);
-    const filteredData = data.filter(i => i.modelCart.toLowerCase().includes(filterValue === undefined ? '' : filterValue.toLowerCase()))
+    const filteredData = data.filter(i => (
+        i.modelCart.toLowerCase().includes(filterValue === undefined
+            ?
+            ''
+            :
+            filterValue.toLowerCase()))
+        ||
+        i.devices.toLowerCase().includes(filterValue === undefined
+            ?
+            ''
+            :
+            filterValue.toLowerCase()));
 
     return (vendor !== undefined ? (
         <div className={styles.container}>

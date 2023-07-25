@@ -23,36 +23,34 @@
 }
 
 .model_cart {
-    padding-left: 3px;
+    padding-left: 7px;
     border-left: 1px solid #000000;
     margin: 0;
     width: 120px;
 }
 
 .vendor {
-    padding-left: 3px;
+    padding-left: 7px;
     border-left: 1px solid #000000;
     margin: 0;
     width: 70px;
 }
 
 .chip {
-    padding-left: 3px;
+    padding-left: 7px;
     border-left: 1px solid #000000;
     margin: 0;
     width: 110px;
-    text-align: center;
 }
 
 .devices {
-    padding-left: 3px;
+    padding-left: 7px;
     border-left: 1px solid #000000;
     margin: 0;
     width: 600px;
 }
 
 .recovery_price {
-    padding-left: 3px;
     border-left: 1px solid #000000;
     margin: 0;
     width: 100px;
@@ -60,10 +58,9 @@
 }
 
 .refill_price {
-    padding-left: 3px;
     border-left: 1px solid #000000;
     margin: 0;
-    width: 100px;
+    width: 80px;
     text-align: center;
 }
 

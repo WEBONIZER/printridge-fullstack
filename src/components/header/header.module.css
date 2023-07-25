@@ -1,6 +1,6 @@
 .container {
     margin: 0;
-    width: 80%;
+    width: 100%;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,17 @@
 .info_box {
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo_container {
+    width: 100%;
+    display: flex;
     flex-direction: row;
-    align-items: flex-start;
     justify-content: space-between;
+}
+
+.giraffe {
+    height: 300px;
 }
