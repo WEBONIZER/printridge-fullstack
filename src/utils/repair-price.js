@@ -89,4 +89,14 @@ export const repairPrintersPrice = [
         speed: 30,
         price: {},
     },
+    {
+        vendor: 'canon',
+        model: 'LBP-3300',
+        device: 'printer',
+        type: 'mono',
+        format: 'A4',
+        capacity: 2500,
+        speed: 21,
+        price: {},
+    },
 ]

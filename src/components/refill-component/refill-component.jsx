@@ -5,11 +5,10 @@ import { refillData } from '../../utils/refill'
 import { VendorMenu } from '../vendor-menu/vendor-menu'
 
 function RefillComponent() {
-    const { vendor } = useParams()
+
     const location = useLocation();
     const locationPathname = location.pathname.substring(8);
     const filterCategory = refillData.filter((i) => i.vendor.toLowerCase() === locationPathname)
-    //console.log(locationPathname)
 
     return (
         < div className={styles.container}>

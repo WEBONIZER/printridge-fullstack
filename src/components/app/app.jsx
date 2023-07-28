@@ -7,11 +7,12 @@ import Repair from '../../pages/repair/repair'
 import Refill from '../../pages/refill/refill'
 import Contacts from '../../pages/contacts/contacts'
 import RefillItemPage from '../../pages/refill-item-page/refill-item-page'
+import RepairItemPage from '../../pages/repair-item-page/repair-item-page'
 import NotFound404 from '../../pages/not-found/not-found'
 import { repair } from '../../utils/repair'
 
 function App() {
-  console.log(repair)
+  //console.log(repair)
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
@@ -23,6 +24,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="/repair" element={<Repair />} />
+          <Route path="/repair/:vendor" element={<Repair />} />
+          <Route path="/repair/:vendor/:model" element={<RepairItemPage />} />
           <Route path="/refill" element={<Refill />} />
           <Route path="/refill/:vendor" element={<Refill />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemPage />} />

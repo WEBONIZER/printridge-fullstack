@@ -1,7 +1,7 @@
-import style from './vendor-menu.module.css'
+import style from './vendor-menu-repair.module.css'
 import { NavLink, useLocation } from 'react-router-dom'
  
-function VendorMenu() {
+function VendorMenuRepair() {
 
     const location = useLocation();
 
@@ -10,7 +10,7 @@ function VendorMenu() {
     return (
             <nav className={style.navigation}>
                   <NavLink 
-                  to='/refill/hp' 
+                  to='/repair/hp' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
@@ -18,56 +18,56 @@ function VendorMenu() {
                   >HP
                   </NavLink>
                   <NavLink 
-                  to='/refill/canon' 
+                  to='/repair/canon' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Canon
                   </NavLink>
                   <NavLink 
-                  to='/refill/samsung' 
+                  to='/repair/samsung' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Samsung
                   </NavLink>
                   <NavLink 
-                  to='/refill/kyocera' 
+                  to='/repair/kyocera' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Kyocera
                   </NavLink>
                   <NavLink 
-                  to='/refill/xerox' 
+                  to='/repair/xerox' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Xerox
                   </NavLink>
                   <NavLink 
-                  to='/refill/brother' 
+                  to='/repair/brother' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Brother
                   </NavLink>
                   <NavLink 
-                  to='/refill/oki' 
+                  to='/repair/oki' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >OKI
                   </NavLink>
                   <NavLink 
-                  to='/refill/pantum' 
+                  to='/repair/pantum' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >Pantum
                   </NavLink>
                   <NavLink 
-                  to='/refill/minolta' 
+                  to='/repair/minolta' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
@@ -77,4 +77,4 @@ function VendorMenu() {
     )
 }
 
-export { VendorMenu }
+export { VendorMenuRepair }

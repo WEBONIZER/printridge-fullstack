@@ -1,0 +1,23 @@
+.navigation {
+    width: 100%;
+    padding-bottom: 10px;
+    min-height: 50px;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    gap: 10px;
+}
+
+.item_link {
+    color: #fff;
+    text-decoration: none;
+    width: 100px;
+    height: 30px;
+    background-color: #7b59971e;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+}

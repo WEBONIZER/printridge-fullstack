@@ -1,0 +1,72 @@
+.price_row {
+    padding: 2px 0;
+    width: 100%;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 0.5px solid black;
+    cursor: pointer;
+    background-color: azure;
+    border-radius: 30px;
+}
+
+.price_row:hover {
+    scale: 1.02;
+    transition: scale 0.2s linear;
+}
+
+.link {
+    width: 100%;
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.type {
+    padding-left: 7px;
+    margin: 0;
+    width: 120px;
+}
+
+.device {
+    padding-left: 7px;
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 70px;
+}
+
+.model {
+    padding-left: 7px;
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 20%;
+}
+
+.vend {
+    padding-left: 7px;
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 10%;
+}
+
+.format {
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 5%;
+    text-align: center;
+}
+
+.speed {
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 15%;
+    text-align: center;
+}
+
+.capacity {
+    border-left: 1px solid #000000;
+    margin: 0;
+    width: 30%;
+    text-align: center;
+}

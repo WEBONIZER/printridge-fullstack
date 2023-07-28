@@ -1,10 +1,10 @@
-//import styles from './orders.module.css'
-
+import RepairComponent from '../../components/repair-component/repair-component'
+ 
 function Repair() {
 
-    return (
-        <p>Repair</p>
-    );
-}
+        return (
+            <RepairComponent />
+        );
+    }
 
 export default Repair;
