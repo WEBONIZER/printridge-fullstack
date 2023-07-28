@@ -8,10 +8,10 @@ import Refill from '../../pages/refill/refill'
 import Contacts from '../../pages/contacts/contacts'
 import RefillItemPage from '../../pages/refill-item-page/refill-item-page'
 import NotFound404 from '../../pages/not-found/not-found'
-
+import { repair } from '../../utils/repair'
 
 function App() {
-
+  console.log(repair)
   const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
