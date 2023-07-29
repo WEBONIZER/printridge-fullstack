@@ -9,7 +9,7 @@ function RepairComponent() {
    // const location = useLocation();
    // const locationPathname = location.pathname.substring(8);
     const filterCategory = repair.filter((i) => i.vendor === vendor)
-    
+    console.log(vendor)
     return (
         < div className={styles.container}>
             <VendorMenuRepair />
