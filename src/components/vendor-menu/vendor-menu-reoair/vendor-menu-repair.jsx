@@ -73,6 +73,20 @@ function VendorMenuRepair() {
                   state={{ background: location }}
                   >Minolta
                   </NavLink>
+                  <NavLink 
+                  to='/repair/epson' 
+                  className={style.item_link} 
+                  style={activeLink} 
+                  state={{ background: location }}
+                  >Epson
+                  </NavLink>
+                  <NavLink 
+                  to='/repair/sharp' 
+                  className={style.item_link} 
+                  style={activeLink} 
+                  state={{ background: location }}
+                  >Sharp
+                  </NavLink>
             </nav>
     )
 }

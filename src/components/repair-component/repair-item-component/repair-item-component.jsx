@@ -8,7 +8,7 @@ function RepairItemComponent() {
     const { model, vendor } = useParams()
     const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
     const img = images.keys().includes(`./${vendor}/${model}.png`) ? images(`./${vendor}/${model}.png`) : null;
-    //console.log(data)
+    //console.log(model)
     return (
         <div className={styles.container}>
             <h1 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h1>
@@ -48,12 +48,11 @@ function RepairItemComponent() {
                             Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!</p>
                     </div>
                 </div>
-                {/*<{
-                    data.examples.length !== 0
+                 {data.examples.length !== 0
                     &&
                     <div className={styles.tabs_box}>
                         <Tabs items={data.examples} />
-                    </div>*/}
+                    </div>}
             </div>
         </div>
     );

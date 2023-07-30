@@ -39,7 +39,7 @@ function RepairItemsComponent({ data }) {
                             speed={i.speed}
                             capacity={i.capacity}
                             key={key}
-                            //examples={i.examples}
+                            examples={i.examples}
                         />
                     )
                 })}
