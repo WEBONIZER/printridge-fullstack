@@ -1,3 +1,4 @@
+import React from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
@@ -11,7 +12,7 @@ import RepairItemPage from '../../pages/repair-item-page/repair-item-page'
 import NotFound404 from '../../pages/not-found/not-found'
 import { repair } from '../../utils/repair'
 
-function App() {
+const App: React.FC = () => {
   //console.log(repair)
   const dispatch = useDispatch();
   const location = useLocation();

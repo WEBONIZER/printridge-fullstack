@@ -1,12 +1,11 @@
 import styles from './repair-item.module.css';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { FC } from "react";
+import { Link, useLocation } from 'react-router-dom';
 
-function RepairItem({ type, device, vend, model, format, speed, capacity, examples }) {
-    const images = require.context('../../../../images/repair', true);
-    const { vendor } = useParams();
+const RepairItem: FC = ({ type, device, vend, model, format, speed, capacity, examples }: any) => {
+
     const location = useLocation();
     const locationPathname = location.pathname;
-    const img = images.keys().includes(`./${vendor}/${model}.png`) ? images(`./${vendor}/${model}.png`) : null;
 
     return (
         <Link

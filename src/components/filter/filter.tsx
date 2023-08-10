@@ -1,13 +1,13 @@
-import style from './filter.module.css'
-import React from "react";
+import styles from './filter.module.css'
+import { useEffect, useState, FC } from "react";
 import { useDispatch } from "react-redux";
 import { SEARCH_DATA_REQUEST } from '../../services/actions/filter'
 
-const Filter = () => {
+const Filter: FC = () => {
     const dispatch = useDispatch();
-    const [value, setValue] = React.useState('');
+    const [value, setValue] = useState('');
 
-    React.useEffect(() => {
+    useEffect(() => {
         dispatch({
             type: SEARCH_DATA_REQUEST,
             value: value,
@@ -24,7 +24,7 @@ const Filter = () => {
                     type="text"
                     name="search"
                     placeholder='&nbsp;&nbsp;&nbsp;Введите модель картриджа'
-                    className={style.input}
+                    className={styles.input}
                     onChange={(e) => setValue(e.target.value)}
                 />
             </label>

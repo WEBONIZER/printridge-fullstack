@@ -706,7 +706,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "CF4533A",
+            modelCart: "CF453A",
             examples: [],
             chip: false,
             id: uuidv4(),

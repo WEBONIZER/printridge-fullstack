@@ -1,13 +1,25 @@
 import styles from './item.module.css';
 import { useParams, Link, useLocation } from 'react-router-dom';
+import { FC, useState, useEffect } from "react";
 
-
-function Item({ modelCart, vend, chip, devices, recovery_price, refill_price, examples }) {
-    const images = require.context('../../../images/refill', true);
+const Item: FC = ({ modelCart, vend, chip, devices, recovery_price, refill_price, examples }: any) => {
+    const [img, setImg] = useState<string | null>(null);
     const { vendor } = useParams();
     const location = useLocation();
     const locationPathname = location.pathname;
-    const img = images.keys().includes(`./${vendor}/${modelCart}.png`) ? images(`./${vendor}/${modelCart}.png`) : null;
+
+    useEffect(() => {
+        const loadImage = async () => {
+            try {
+                const imgModule = await import(`../../../images/refill/${vendor}/${modelCart}.png`);
+                setImg(imgModule.default);
+            } catch (error) {
+                // Image does not exist
+                setImg(null);
+            }
+        };
+        loadImage();
+    }, [modelCart, vendor]);
 
     return (
         <Link
