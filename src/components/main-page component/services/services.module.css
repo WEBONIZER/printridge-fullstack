@@ -1,0 +1,21 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.box0 {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #e8ebbf;
+}
+
+.box1 {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #d3eeea;
+}
