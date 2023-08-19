@@ -4,6 +4,7 @@ export const refillData =
     [
         {
             modelCart: "CF281A",
+            resource: 10500,
             examples: [
                 {
                     title: 'Заправка CF281A',
@@ -47,6 +48,7 @@ export const refillData =
         },
         {
             modelCart: "CF281X",
+            resource: 25000,
             examples: [],
             chip: false,
             id: uuidv4(),
@@ -57,6 +59,7 @@ export const refillData =
         },
         {
             modelCart: "CF218A",
+            resource: 1400,
             examples: [],
             chip: false,
             id: uuidv4(),
@@ -3802,6 +3805,28 @@ export const refillData =
             devices: "SCX-4200 / SCX-4220",
             refill_price: "500 ₽",
             recovery_price: "1050 ₽",
+        },
+        {
+            modelCart: "101R00664",
+            resource: 10000,
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "Xerox",
+            devices: "B205 / B210 / B215",
+            refill_price: "Уточняйте",
+            recovery_price: "2500 ₽",
+        },
+        {
+            modelCart: "106R04348",
+            resource: 3000,
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "Xerox",
+            devices: "B205 / B210 / B215",
+            refill_price: "1700 ₽",
+            recovery_price: "Уточняйте",
         },
         {
             modelCart: "106R02778",

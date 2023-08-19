@@ -23,6 +23,7 @@ function RefillItemComponent() {
                     )}
                     <div className={styles.price_container}>
                         <h2>подходит для {data.devices}</h2>
+                        {data.resource && <p>Ресурс картриджа: {data.resource} стр., при заполнении страницы 5%</p>}
                         <h2>Стоимость услуг:</h2>
                         <strong><p>Заправка картриджа {`${data.modelCart}`}: {`${data.refill_price}`}</p></strong>
                         <strong><p>Восстановление картриджа {`${data.modelCart}`}: {`${data.recovery_price}`}</p></strong>
