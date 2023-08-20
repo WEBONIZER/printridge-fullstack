@@ -1,8 +1,7 @@
 import ReactDOM from "react-dom";
 import style from '../modal/modal.module.css';
 import ModalOverlay from './modal-overlay/modal-overlay';
-import { useEffect, ReactNode } from 'react';
-//import { CloseIcon } from "@ya.praktikum/react-developer-burger-ui-components";
+import { useEffect } from 'react';
 
 const modalRoot = document.getElementById("react-modals");
 

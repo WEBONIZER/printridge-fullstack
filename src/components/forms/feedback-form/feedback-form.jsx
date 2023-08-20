@@ -2,8 +2,6 @@ import styles from './feedback-form.module.css'
 
 const FeedbackForm = () => {
 
-
-
     return (
         <div className={styles.conteiner}>
             <h2 className={styles.title}>Напишите нам</h2>
