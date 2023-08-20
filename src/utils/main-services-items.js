@@ -8,4 +8,8 @@ export const mainServicesItems =
         title: 'Ремонт принтеров',
         description: 'Немного текста про ремонт принтеров',
     },
+    flashing: {
+        title: 'Перепрошивка принтеров и МФУ',
+        description: 'Немного текста про перепрошивку',
+    },
 }
