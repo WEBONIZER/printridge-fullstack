@@ -1,6 +1,8 @@
 import React from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { useSelector } from "react-redux";
+import Modal from '../modal/modal'
+import FeedbackForm from '../forms/feedback-form/feedback-form'
 import { useDispatch } from "react-redux";
 import Layout from '../../pages/layout/layout'
 import Main from '../../pages/main/main'
@@ -19,6 +21,10 @@ const App: React.FC = () => {
   const navigate = useNavigate();
   const background = location.state && location.state.background;
 
+  const handleModalClose = () => {
+    navigate(-1);
+  };
+
   return (
     <>
       <Routes>
@@ -34,6 +40,20 @@ const App: React.FC = () => {
           <Route path="*" element={<NotFound404 />} />
         </Route>
       </Routes>
+      {
+        background && (
+          <Routes>
+            <Route
+              path='/'
+              element={
+                <Modal onClose={handleModalClose} closeButton={handleModalClose}>
+                  <FeedbackForm />
+                </Modal>
+              }
+            />
+          </Routes>
+        )
+      }
     </>
   );
 }
