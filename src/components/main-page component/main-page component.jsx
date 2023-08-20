@@ -7,7 +7,6 @@ const MainPageComponent = () => {
 
     return (
         <>
-            <h1>Главная страница</h1>
             <Services />
         </>
     )
