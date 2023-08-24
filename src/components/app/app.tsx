@@ -2,7 +2,6 @@ import React from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Modal from '../modal/modal'
 import FeedbackForm from '../forms/feedback-form/feedback-form'
-//import { useDispatch } from "react-redux";
 import Layout from '../../pages/layout/layout'
 import Main from '../../pages/main/main'
 import Repair from '../../pages/repair/repair'
@@ -14,7 +13,6 @@ import NotFound404 from '../../pages/not-found/not-found'
 
 const App: React.FC = () => {
   
-  //const dispatch = useDispatch();
   const location = useLocation();
   const navigate = useNavigate();
   const background = location.state && location.state.background;
