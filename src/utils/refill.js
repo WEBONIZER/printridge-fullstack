@@ -3825,7 +3825,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "Xerox",
             devices: "B205 / B210 / B215",
-            refill_price: "1700 ₽",
+            refill_price: "2000 ₽",
             recovery_price: "Уточняйте",
         },
         {

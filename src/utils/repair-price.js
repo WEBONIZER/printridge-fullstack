@@ -8,10 +8,9 @@ export const repairPrintersPrice = [
         capacity: 2000,
         speed: 8,
         price: {},
-        examples: [],
         examples: [
             {
-                title: 'Заправка CF281A',
+                title: 'Ремонт LaserJet 1010',
                 photo: [
                     {
                         item: 'CF218A.png',
@@ -23,7 +22,7 @@ export const repairPrintersPrice = [
                 text: (
                     <div>
                         <p>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>Заправка картриджей HP CF281A</strong> процесс, знакомый многим. В интернете множество предложений по заправке данных картриджей, в том числе с очень заниженной ценой, что привлекает клиентов, конечно же.
+                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>Ремонт принтеров LaserJet 1010</strong> процесс, знакомый многим. В интернете множество предложений по заправке данных картриджей, в том числе с очень заниженной ценой, что привлекает клиентов, конечно же.
                         </p>
                         <p>
                             &nbsp;&nbsp;&nbsp;&nbsp;Помимо этого, в интернетах множество примеров как <strong>заправить картридж HP CF281A</strong>.
@@ -32,15 +31,6 @@ export const repairPrintersPrice = [
                         </p>
                     </div>
                 ),
-            },
-            {
-                title: 'Восстановление CF281A',
-                photo: [
-                    {
-                        item: 'CF218A.png',
-                    },
-                ],
-                text: '',
             },
         ],
     },

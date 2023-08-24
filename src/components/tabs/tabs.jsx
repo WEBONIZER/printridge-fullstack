@@ -1,9 +1,11 @@
 import styles from './tabs.module.css';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 
 function TabContent({ title, photo, text }) {
+
+    const location = useLocation();
     const { model, vendor } = useParams();
 
     return (
@@ -12,9 +14,11 @@ function TabContent({ title, photo, text }) {
                 {title}
             </h3>
             <div className={styles.images_box}>
-                {photo.map(i => {
+                {location.pathname.includes('refill') ? photo.map(i => {
                     const images = require.context('../../images/examples/refill', true);
-                    const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null;
+                    const img = images.keys().includes(`./${vendor}/${model}/${i.item}`)
+                        ?
+                        images(`./${vendor}/${model}/${i.item}`) : null;
 
                     return (
                         <img
@@ -23,7 +27,21 @@ function TabContent({ title, photo, text }) {
                             alt={'фото'}
                         />
                     );
-                })}
+                })
+                    :
+                    photo.map(i => {
+                        const images = require.context('../../images/examples/repair', true);
+                        const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null;
+
+                        return (
+                            <img
+                                className={styles.image}
+                                src={img}
+                                alt={'фото'}
+                            />
+                        );
+                    })
+                }
             </div>
             <p className={styles.text}>
                 {text}
