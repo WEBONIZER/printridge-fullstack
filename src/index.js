@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 import thunk from 'redux-thunk';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -20,7 +20,7 @@ const enhancer = composeEnhancers(applyMiddleware(thunk));
 
 const store = createStore(rootReducer, enhancer);
 
-ReactDOM.render(
+createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
@@ -28,5 +28,4 @@ ReactDOM.render(
       </BrowserRouter>
     </Provider>
   </React.StrictMode>,
-  document.getElementById("root")
 );

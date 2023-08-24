@@ -14,7 +14,7 @@ function TabContent({ title, photo, text }) {
                 {title}
             </h3>
             <div className={styles.images_box}>
-                {location.pathname.includes('refill') ? photo.map(i => {
+                {location.pathname.includes('refill') ? photo.map((i, key) => {
                     const images = require.context('../../images/examples/refill', true);
                     const img = images.keys().includes(`./${vendor}/${model}/${i.item}`)
                         ?
@@ -25,11 +25,12 @@ function TabContent({ title, photo, text }) {
                             className={styles.image}
                             src={img}
                             alt={'фото'}
+                            key={key}
                         />
                     );
                 })
                     :
-                    photo.map(i => {
+                    photo.map((i, key) => {
                         const images = require.context('../../images/examples/repair', true);
                         const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null;
 
@@ -38,14 +39,15 @@ function TabContent({ title, photo, text }) {
                                 className={styles.image}
                                 src={img}
                                 alt={'фото'}
+                                key={key}
                             />
                         );
                     })
                 }
             </div>
-            <p className={styles.text}>
+            <section className={styles.text}>
                 {text}
-            </p>
+            </section>
         </div>
     );
 }
