@@ -46,25 +46,11 @@ function VendorMenuRepair() {
                   >Xerox
                   </NavLink>
                   <NavLink 
-                  to='/repair/brother' 
-                  className={style.item_link} 
-                  style={activeLink} 
-                  state={{ background: location }}
-                  >Brother
-                  </NavLink>
-                  <NavLink 
                   to='/repair/oki' 
                   className={style.item_link} 
                   style={activeLink} 
                   state={{ background: location }}
                   >OKI
-                  </NavLink>
-                  <NavLink 
-                  to='/repair/pantum' 
-                  className={style.item_link} 
-                  style={activeLink} 
-                  state={{ background: location }}
-                  >Pantum
                   </NavLink>
                   <NavLink 
                   to='/repair/minolta' 

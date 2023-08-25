@@ -1,4 +1,4 @@
-export const repairPrintersPrice = [
+export const repairPrintersPrice = [ 
     {
         vendor: 'hp',
         model: 'LaserJet 1010',
@@ -603,17 +603,6 @@ export const repairPrintersPrice = [
         device: "MFU",
         vendor: "hp",
         type: "mono",
-        price: {},
-        examples: [],
-    },
-    {
-        model: "LaserJet CP1025",
-        format: "A4",
-        speed: 16,
-        capacity: 15000,
-        device: "printer",
-        vendor: "hp",
-        type: "color",
         price: {},
         examples: [],
     },
