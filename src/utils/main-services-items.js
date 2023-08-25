@@ -1,5 +1,3 @@
-import MLTD111S from '../images/refill/samsung/MLT-D111S.png'
-
 export const mainServicesItems =
 {
     refill: {
