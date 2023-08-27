@@ -23,7 +23,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Routes>
+      <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
           <Route path="/repair" element={<Repair />} />

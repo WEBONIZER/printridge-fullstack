@@ -13,7 +13,7 @@ function VendorMenuRepair() {
                   to='/repair/hp' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   exact="true"
                   >HP
                   </NavLink>
@@ -21,56 +21,56 @@ function VendorMenuRepair() {
                   to='/repair/canon' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Canon
                   </NavLink>
                   <NavLink 
                   to='/repair/samsung' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Samsung
                   </NavLink>
                   <NavLink 
                   to='/repair/kyocera' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Kyocera
                   </NavLink>
                   <NavLink 
                   to='/repair/xerox' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Xerox
                   </NavLink>
                   <NavLink 
                   to='/repair/oki' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >OKI
                   </NavLink>
                   <NavLink 
                   to='/repair/minolta' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Minolta
                   </NavLink>
                   <NavLink 
                   to='/repair/epson' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Epson
                   </NavLink>
                   <NavLink 
                   to='/repair/sharp' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Sharp
                   </NavLink>
             </nav>

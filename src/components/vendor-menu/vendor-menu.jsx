@@ -13,7 +13,7 @@ function VendorMenu() {
                   to='/refill/hp' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   exact="true"
                   >HP
                   </NavLink>
@@ -21,56 +21,56 @@ function VendorMenu() {
                   to='/refill/canon' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Canon
                   </NavLink>
                   <NavLink 
                   to='/refill/samsung' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Samsung
                   </NavLink>
                   <NavLink 
                   to='/refill/kyocera' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Kyocera
                   </NavLink>
                   <NavLink 
                   to='/refill/xerox' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Xerox
                   </NavLink>
                   <NavLink 
                   to='/refill/brother' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Brother
                   </NavLink>
                   <NavLink 
                   to='/refill/oki' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >OKI
                   </NavLink>
                   <NavLink 
                   to='/refill/pantum' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Pantum
                   </NavLink>
                   <NavLink 
                   to='/refill/minolta' 
                   className={style.item_link} 
                   style={activeLink} 
-                  state={{ background: location }}
+                  //state={{ background: location }}
                   >Minolta
                   </NavLink>
             </nav>
