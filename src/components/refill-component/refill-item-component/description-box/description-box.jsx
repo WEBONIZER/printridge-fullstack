@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 const DescriptionBox = () => {
 
     const { model } = useParams()
-    const data = refillData.find((i) => i.modelCart === model)
+    const data = refillData.find((i) => i.modelCart = model)
 
     return (
         <div className={styles.text_container}>
