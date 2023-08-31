@@ -1,9 +1,7 @@
 import styles from './refill-item.module.css'
-import React from 'react';
 
 const RefillItem = ({ title, description, text, style, image }) => {
 
-    //console.log(images)
     return (
         <div className={style}>
             <h3 className={styles.title}>{title}</h3>

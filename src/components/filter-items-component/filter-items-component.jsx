@@ -1,7 +1,6 @@
 import Item from './item/item'
 import { useParams } from "react-router-dom";
 import { Filter } from '../filter/filter'
-import React from "react";
 import { useSelector } from "react-redux";
 import styles from './filter-items-component.module.css'
 

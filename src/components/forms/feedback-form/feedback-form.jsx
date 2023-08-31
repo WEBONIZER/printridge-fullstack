@@ -1,5 +1,5 @@
 import styles from './feedback-form.module.css'
-import { useLocation, useParams, useNavigate } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 const FeedbackForm = () => {
 

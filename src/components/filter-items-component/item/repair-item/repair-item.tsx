@@ -11,7 +11,6 @@ const RepairItem: FC = ({ type, device, vend, model, format, speed, capacity, ex
         <Link
             key={model}
             to={`${locationPathname}/${model.replace(/\s/g, '')}`}
-            //state={{ background: location }}
             className={styles.link}
         >
             <div className={styles.price_row}>

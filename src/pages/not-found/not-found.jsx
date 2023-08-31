@@ -1,4 +1,3 @@
-//import styles from './not-found.module.css'
 import { NavLink } from 'react-router-dom'
 
 function NotFound404() {

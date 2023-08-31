@@ -11,7 +11,6 @@ function RefillItemComponent() {
     const { model } = useParams()
     const data = refillData.find((i) => i.modelCart === model)
 
-
     return (
         <div className={styles.container}>
             <h1 className={styles.header}>Заправка картриджа {`${data.vendor} ${data.modelCart}`}</h1>

@@ -1,7 +1,6 @@
 import RepairItem from '../item/repair-item/repair-item'
 import { useParams } from "react-router-dom";
 import { Filter } from '../../filter/filter'
-import React from "react";
 import { useSelector } from "react-redux";
 import styles from './repair-items-component.module.css'
 
@@ -20,7 +19,7 @@ function RepairItemsComponent({ data }) {
             ''
             :
             filterValue.toLowerCase()));
-    //console.log(data)
+
     return (vendor !== undefined ? (
         <div className={styles.container}>
             <h2>

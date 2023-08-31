@@ -14,7 +14,6 @@ const Item: FC = ({ modelCart, vend, chip, devices, recovery_price, refill_price
                 const imgModule = await import(`../../../images/refill/${vendor}/${modelCart}.png`);
                 setImg(imgModule.default);
             } catch (error) {
-                // Image does not exist
                 setImg(null);
             }
         };
@@ -25,7 +24,6 @@ const Item: FC = ({ modelCart, vend, chip, devices, recovery_price, refill_price
         <Link
             key={modelCart}
             to={`${locationPathname}/${modelCart}`}
-            //state={{ background: location }}
             className={styles.link}
         >
             <div className={styles.price_row}>

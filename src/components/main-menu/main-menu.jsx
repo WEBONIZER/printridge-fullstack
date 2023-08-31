@@ -1,10 +1,9 @@
-//import { useNavigate } from "react-router-dom";
 import styles from './main-menu.module.css'
 import { NavLink } from 'react-router-dom';
 
 function MainMenu() {
+
     const activeLink = ({ isActive }) => ({ color: isActive ? '#fff' : '#000' });
-    //const navigate = useNavigate();
 
     return (
         <nav className={styles.main_menu}>
