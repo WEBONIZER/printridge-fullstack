@@ -8,7 +8,7 @@ function RepairComponent() {
 
     const { vendor } = useParams()
     const filterCategory = repair.filter((i) => i.vendor === vendor)
-
+ 
     return (
         < div className={styles.container}>
             <VendorMenuRepair />

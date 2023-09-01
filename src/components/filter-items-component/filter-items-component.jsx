@@ -3,9 +3,10 @@ import { useParams } from "react-router-dom";
 import { Filter } from '../filter/filter'
 import { useSelector } from "react-redux";
 import styles from './filter-items-component.module.css'
+import { refillData } from '../../utils/refill'
 
 function FilterItemsComponent({ data }) {
-    
+
     const { vendor } = useParams()
     const filterValue = useSelector((state) => state.filter.value.value);
     const filteredData = data.filter(i => (
@@ -20,7 +21,7 @@ function FilterItemsComponent({ data }) {
             ''
             :
             filterValue.toLowerCase()));
-console.log(data)
+    
     return (vendor !== undefined ? (
         <div className={styles.container}>
             <h2>
@@ -28,7 +29,7 @@ console.log(data)
             </h2>
             {vendor !== undefined && <Filter />}
             <div className={styles.price_container}>
-                {filteredData.map((i, key) => {
+                {filteredData && filteredData.map((i, key) => {
                     return (
                         <Item
                             modelCart={i.modelCart}

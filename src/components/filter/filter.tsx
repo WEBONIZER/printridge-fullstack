@@ -14,13 +14,10 @@ const Filter: FC = () => {
             value: value,
         })
     }, [value, dispatch])
-
+ 
     return (
         <>
             <label>
-                <p>
-                    Фильтр:&nbsp;
-                </p>
                 <input
                     type="text"
                     name="search"

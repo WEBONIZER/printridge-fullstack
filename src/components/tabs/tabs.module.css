@@ -30,7 +30,7 @@
 .active {
     scale: 1.06;
     color: #000;
-    background-color: aqua;
+    background-color: rgb(218, 245, 245);
 }
 
 .tab {
@@ -48,8 +48,8 @@
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
-    background-color: lavenderblush;
-    border-radius: 30px;
+    background-color: rgb(242, 245, 247);
+    border-radius: 10px;
 }
 
 .images_box {

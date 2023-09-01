@@ -3,9 +3,8 @@ import {
 } from '../actions/filter'
 
 const initialState = {
-  filterRequest: true,
   filter: [],
-  value: ''
+  value: '',
 
 }
 
@@ -15,7 +14,6 @@ export const filterReducer = (state = initialState, action) => {
     case SEARCH_DATA_REQUEST: {
       return {
         ...state,
-        filterRequest: true,
         value: action
       };
     }

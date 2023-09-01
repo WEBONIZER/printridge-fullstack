@@ -13,7 +13,7 @@ function RefillItemComponent() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.header}>Заправка картриджа {`${data.vendor} ${data.modelCart}`}</h1>
+            <h1 className={styles.header}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h1>
             <div className={styles.img_desc_box}>
                 <div className={styles.left_box}>
                     <ImageBox />
