@@ -156,6 +156,8 @@ export const repair = repairPrintersPrice.map(i => {
     } else if ((i.device === 'MFU' && i.type === 'color' && i.format === 'A4' && i.capacity > 100000)) {
         i.price = colorMFU100kA4;
         return i;
+    } else {
+        return i;
     }
 })
 

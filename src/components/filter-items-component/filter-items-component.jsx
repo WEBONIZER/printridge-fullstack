@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import styles from './filter-items-component.module.css'
 
 function FilterItemsComponent({ data }) {
+    
     const { vendor } = useParams()
     const filterValue = useSelector((state) => state.filter.value.value);
     const filteredData = data.filter(i => (
@@ -19,7 +20,7 @@ function FilterItemsComponent({ data }) {
             ''
             :
             filterValue.toLowerCase()));
-
+console.log(data)
     return (vendor !== undefined ? (
         <div className={styles.container}>
             <h2>

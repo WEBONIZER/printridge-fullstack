@@ -64,7 +64,7 @@ function Tabs({ items }) {
                 {items.map((n, i) => (
                     <NavLink
                         key={i}
-                        className={`${styles.link} ${active == i ? styles.active : ''}`}
+                        className={`${styles.link} ${active.toString() === i.toString() ? styles.active : ''}`}
                         onClick={openTab}
                         data-index={i}
                     >
@@ -76,6 +76,5 @@ function Tabs({ items }) {
         </div>
     );
 }
-
 
 export default Tabs;

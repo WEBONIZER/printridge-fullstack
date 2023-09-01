@@ -6,7 +6,13 @@ function FooterComponent() {
         <div className={styles.footer}>
             <div className={styles.footer_box}>
                 <p>Карта</p>
-                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Auga0_ks-D3ak0vpXW1nfm9qGWBf_9R73&amp;source=constructor" width="95%" height="280px" frameBorder="1"></iframe>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Auga0_ks-D3ak0vpXW1nfm9qGWBf_9R73&amp;source=constructor"
+                    width="95%"
+                    height="80%"
+                    frameBorder="1"
+                    title="Карта"
+                ></iframe>
             </div>
             <div className={styles.footer_box}>
                 <p>Соцсети</p>

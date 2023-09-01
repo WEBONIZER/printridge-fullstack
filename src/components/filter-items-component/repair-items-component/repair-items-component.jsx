@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import styles from './repair-items-component.module.css'
 
 function RepairItemsComponent({ data }) {
+    
     const { vendor } = useParams()
     const filterValue = useSelector((state) => state.filter.value.value);
     const filteredData = data.filter(i => (

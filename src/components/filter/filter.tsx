@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { SEARCH_DATA_REQUEST } from '../../services/actions/filter'
 
 const Filter: FC = () => {
+    
     const dispatch = useDispatch();
     const [value, setValue] = useState('');
 

@@ -9,12 +9,12 @@
     border-bottom: 0.5px solid black;
     cursor: pointer;
     background-color: azure;
-    border-radius: 30px;
+    border-radius: 7px;
 }
 
 .price_row:hover {
-    scale: 1.02;
-    transition: scale 0.2s linear;
+    scale: 1.005;
+    background-color: rgb(168, 175, 175);
 }
 
 .link {
@@ -25,7 +25,6 @@
 
 .model_cart {
     padding-left: 7px;
-    border-left: 1px solid #000000;
     margin: 0;
     width: 120px;
 }

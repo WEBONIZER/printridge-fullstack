@@ -1,24 +1,11 @@
 import styles from './item.module.css';
-import { useParams, Link, useLocation } from 'react-router-dom';
-import { FC, useState, useEffect } from "react";
+import { Link, useLocation } from 'react-router-dom';
+import { FC } from "react";
 
 const Item: FC = ({ modelCart, vend, chip, devices, recovery_price, refill_price, examples }: any) => {
-    const [img, setImg] = useState<string | null>(null);
-    const { vendor } = useParams();
+    
     const location = useLocation();
     const locationPathname = location.pathname;
-
-    useEffect(() => {
-        const loadImage = async () => {
-            try {
-                const imgModule = await import(`../../../images/refill/${vendor}/${modelCart}.png`);
-                setImg(imgModule.default);
-            } catch (error) {
-                setImg(null);
-            }
-        };
-        loadImage();
-    }, [modelCart, vendor]);
 
     return (
         <Link
@@ -27,13 +14,6 @@ const Item: FC = ({ modelCart, vend, chip, devices, recovery_price, refill_price
             className={styles.link}
         >
             <div className={styles.price_row}>
-                {img && (
-                    <img
-                        className={styles.image}
-                        src={img}
-                        alt={modelCart}
-                    />
-                )}
                 <p className={styles.model_cart}>{modelCart}</p>
                 <p className={styles.vendor}>{vend}</p>
                 <p className={styles.chip}>{chip ? 'уточняйте' : 'не требуется'}</p>
