@@ -4,43 +4,5 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    background-color: #f0f0f0;
     padding-bottom: 50px;
-}
-
-.box {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.box0 {
-    padding: 15px 20px;
-    width: 30%;
-    min-height: 300px;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: #e8ebbf;
-}
-
-.box0:hover {
-    cursor: pointer;
-    scale: 1.05;
-    transition: scale 0.3s linear;
-}
-
-.box1 {
-    padding: 15px 20px;
-    width: 30%;
-    min-height: 300px;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: #d3eeea;
-}
-
-.box1:hover {
-    cursor: pointer;
-    scale: 1.05;
-    transition: scale 0.3s linear;
 }
