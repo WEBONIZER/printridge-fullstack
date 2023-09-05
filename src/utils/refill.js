@@ -437,7 +437,7 @@ export const refillData =
             chip: false,
             id: uuidv4(),
             vendor: "hp",
-            devices: "LJ 1010 / 1012 / 1018 / 1020 / 1020 / 1022 / 3015 / 3030 / 3050 / 3055 / M1005 / M1319",
+            devices: "LJ 1010 / 1012 / 1018 / 1020 / 1020 / 1022 / 3015 / 3030 / 3050 / M1319",
             refill_price: "400 ₽",
             recovery_price: "950 ₽",
         },
