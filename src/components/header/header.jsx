@@ -9,7 +9,7 @@ function HeaderComponent() {
                     <NavLink
                         className={styles.link}
                         to="/">
-                        <h1 className={styles.header}>ПРИНТРИДЖ</h1>
+                        <p className={styles.Logo}>ПРИНТРИДЖ</p>
                     </NavLink>
                     <div>
                         <p>

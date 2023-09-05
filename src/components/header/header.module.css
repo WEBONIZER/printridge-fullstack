@@ -7,8 +7,10 @@
     border-bottom: 1px solid black;
 }
 
-.header {
+.Logo {
     margin: 0;
+    font-size: 30px;
+    font-weight: 900;
 }
 
 .link {
@@ -34,4 +36,13 @@
 .phone {
     font-size: 24px;
     font-weight: 900;
+}
+
+@media all and (max-width: 500px) {
+    .Logo {
+        font-size: 20px;
+    }
+    .phone {
+        font-size: 20px;
+    }
 }
