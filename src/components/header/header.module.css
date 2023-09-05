@@ -38,16 +38,27 @@
     font-weight: 900;
 }
 
+.feedbackbutton {
+    display: none;
+}
+
 @media all and (max-width: 500px) {
     .Logo {
         font-size: 20px;
     }
 
     .phone {
+        margin: 10px 0;
         font-size: 20px;
     }
 
     .logo_container {
         border-right: 1px solid gray;
+    }
+
+    .feedbackbutton {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 }

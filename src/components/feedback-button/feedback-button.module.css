@@ -25,3 +25,10 @@
     transform: scale(1);
   }
 }
+
+@media all and (max-width: 500px) {
+  .container {
+    padding: 2px 15px;
+    font-size: 14px;
+  }
+}

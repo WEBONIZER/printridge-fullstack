@@ -14,3 +14,10 @@
     flex-direction: row;
     align-items: flex-start;
 }
+
+@media all and (max-width: 500px) {
+    .main {
+        flex-direction: column;
+        justify-items: flex-start;
+    }
+}
