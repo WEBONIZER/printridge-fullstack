@@ -16,6 +16,9 @@
 }
 
 @media all and (max-width: 500px) {
+    .app {
+        width: 97%;
+    }
     .main {
         flex-direction: column;
         justify-items: flex-start;

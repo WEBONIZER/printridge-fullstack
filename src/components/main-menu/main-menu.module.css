@@ -23,3 +23,10 @@
     scale: 1.08;
     transition: scale 0.3s linear;
 }
+
+@media all and (max-width: 500px) {
+    .link {
+        width: 140px;
+        font-size: 14px;
+    }
+}
