@@ -25,12 +25,13 @@
 @media all and (max-width: 500px) {
     .navigation {
         width: 50%;
-        padding-left: 5px;
-        grid-template-columns: repeat(auto-fit, 80px);
+        padding-left: 10px;
+        grid-template-columns: repeat(auto-fit, 55px);
         gap: 15px;
     }
     .item_link {
         border: 1px solid black;
-        width: 80px;
+        width: 55px;
+        font-size: 12px;
     }
 }
