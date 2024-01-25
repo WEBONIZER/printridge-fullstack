@@ -1,22 +1,23 @@
 .main_menu {
     margin: 0;
-    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 50px;
 }
 
 .link {
-    width: 200px;
-    height: 50px;
-    background-color: #e76e1a;
+    margin: 0;
+    height: 22px;
     text-decoration: none;
-    transition: all 0.3s;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
+    color: #0C0C0C;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .link:hover {

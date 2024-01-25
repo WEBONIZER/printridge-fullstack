@@ -10,13 +10,6 @@ function MainMenu() {
             <NavLink
                 style={activeLink}
                 className={styles.link}
-                to="/"
-            >
-                Главная
-            </NavLink>
-            <NavLink
-                style={activeLink}
-                className={styles.link}
                 to="/refill"
             >
                 Заправка картриджей

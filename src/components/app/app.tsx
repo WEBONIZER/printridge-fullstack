@@ -1,3 +1,4 @@
+import './app.module.css';
 import React from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import Modal from '../modal/modal'

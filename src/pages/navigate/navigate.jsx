@@ -12,7 +12,6 @@ function NavigationMenu() {
     return (
         <div className={styles.container}>
             <div className={styles.menu}>
-                <MainMenu />
                 <div className={styles.feedbackbutton}>
                     <FeedbackButton />
                 </div>

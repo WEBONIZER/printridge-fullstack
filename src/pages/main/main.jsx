@@ -1,11 +1,19 @@
 import styles from './main.module.css'
-import MainPageComponent from '../../components/main-page component/main-page component'
+import MainPageDescriptionBox from '../../components/main-page-description-box/main-page-description-box'
+import imagePrinterWithPlus from '../../images/printer-with-plus.svg'
 
-function Main() {
+const Main = () => {
 
     return (
         <div className={styles.main_box}>
-            <MainPageComponent />
+            <MainPageDescriptionBox
+                title='Заправка картриджей'
+                description='Заправка картриджей нужна для заправки картриджейЗаправка картриджей 
+            нужна для заправки картриджейЗаправка картриджей нужна для заправки картриджейЗаправка картриджей нужна 
+            для заправки картриджейЗаправка картриджей нужна для заправки картриджейЗаправка картриджей нужна для 
+            заправки картриджейЗаправка картриджей нужна для заправки картриджей'
+                image={imagePrinterWithPlus}
+            />
         </div>
     );
 }

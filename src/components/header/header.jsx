@@ -1,28 +1,31 @@
 import styles from './header.module.css'
-import { NavLink } from 'react-router-dom';
-import SocialIcons from './social-icons/social-icons'
-import FeedbackButton from '../../components/feedback-button/feedback-button'
+import { NavLink } from 'react-router-dom'
+import MainMenu from '../main-menu/main-menu'
+import image from '../../images/Rectangle_850.svg'
+import imagePrinter from '../../images/image-printer-blue.svg'
 
 function HeaderComponent() {
     return (
         <div className={styles.container}>
             <div className={styles.logo_container}>
-                    <NavLink
-                        className={styles.link}
-                        to="/">
-                        <p className={styles.Logo}>ПРИНТРИДЖ</p>
-                    </NavLink>
-                    <div>
-                        <p>
-                            Обуховской обороны, 116к1, лит. Е, 4-й этаж
-                        </p>
-                        <p>fox.spb@bk.ru</p>
+                <div className={styles.info_box}>
+                    <div className={styles.logo_and_menu}>
+                        <NavLink
+                            className={styles.link}
+                            to="/">
+                            Printridge
+                        </NavLink>
+                        <MainMenu />
                     </div>
+                    <div className={styles.slogan_box}>
+                        <p className={styles.slogan_big}>Printridge — решение проблем с печатной техникой</p>
+                        <p className={styles.slogan_small}>Заправка картриджей всех видов и ремонт принтеров любой модели и любой сложности</p>
+                    </div>
+                </div>
             </div>
-            <div className={styles.phone_social_box}>
-                <SocialIcons />
-                <a className={styles.link} href={`tel:${+7 - 953 - 368 - 18 - 36}`}>{<p className={styles.phone}>8-953-368-18-36</p>}</a>
-                <div className={styles.feedbackbutton}><FeedbackButton /></div>
+            <div className={styles.images_box}>
+                <img className={styles.image} src={image} alt="Фото" />
+                <img className={styles.image} src={imagePrinter} alt="Принтер" />
             </div>
         </div>
     );
