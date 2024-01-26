@@ -1,6 +1,6 @@
 import './app.module.css';
 import React from 'react';
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Modal from '../modal/modal'
 import FeedbackForm from '../forms/feedback-form/feedback-form'
 import Layout from '../../pages/layout/layout'
@@ -33,7 +33,7 @@ const App: React.FC = () => {
       {background && (
           <Routes>
             <Route
-              path='/'
+              path={`${location.pathname}`}
               element={
                 <Modal >
                   <FeedbackForm />

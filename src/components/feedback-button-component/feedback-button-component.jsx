@@ -13,7 +13,7 @@ const FeedbackButtonComponent = () => {
             </div>
             <Link
                 className={styles.button}
-                to='/'
+                to={`${location.pathname}`}
                 state={{ background: location }}
             >
                 Написать
