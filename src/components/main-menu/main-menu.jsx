@@ -13,13 +13,13 @@ function MainMenu({ position }) {
             </NavLink>
             <NavLink
                 className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
-                to="/refill"
+                to="/refill/hp"
             >
                 Заправка картриджей
             </NavLink>
             <NavLink
                 className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
-                to="/repair"
+                to="/repair/hp"
             >
                 Ремонт принтеров
             </NavLink>
