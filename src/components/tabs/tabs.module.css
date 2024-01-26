@@ -34,7 +34,6 @@
 }
 
 .tab {
-    border-bottom: 1px solid #ccc;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,13 +42,10 @@
 }
 
 .box {
-    width: 100%;
-    padding: 6px 12px;
+    margin: 0 auto 50px;
+    width: 92.81%;
     display: flex;
     flex-direction: column;
-    border: 1px solid #ccc;
-    background-color: rgb(242, 245, 247);
-    border-radius: 10px;
 }
 
 .images_box {
@@ -74,7 +70,9 @@
     transition: scale 0.3s linear;
 }
 
-.title {}
+.title {
+    margin: 0;
+}
 
 .text {
     font-size: 18px;

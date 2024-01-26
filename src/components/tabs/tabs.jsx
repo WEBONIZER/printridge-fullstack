@@ -59,7 +59,7 @@ function Tabs({ items }) {
 
     return (
         <div className={styles.box}>
-            <h3>Примеры нашей работы</h3>
+            <h2 className={styles.title}>Примеры нашей работы</h2>
             <div className={styles.tab}>
                 {items.map((n, i) => (
                     <NavLink
