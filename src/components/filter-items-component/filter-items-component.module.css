@@ -1,23 +1,92 @@
-.container {
-
-    display: flex;
-    flex-direction: column;
-    height: 700px;
-}
-
 .price_container {
-    padding: 0 10px;
-    width: 100%;
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2px;
-    overflow-y: scroll;
+  position: relative;
+  margin: 0 auto 50px;
+  width: 92.81%;
+  max-height: 1068px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
+.price_container::-webkit-scrollbar {
+  display: none;
+}
 
-.vendor_name {
-    margin: 0;
-    width: 100%;
+.price_row {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #001027;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 20px;
+}
+
+.model_cart {
+  margin: auto 0 auto 36px;
+  width: 15.47%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.vendor {
+  margin: auto 0;
+  width: 30.95%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip {
+  margin: auto 0;
+  width: 15.47%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.refill_price {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.recovery_price {
+  margin: auto 36px auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
 }

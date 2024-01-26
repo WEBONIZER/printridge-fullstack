@@ -6,7 +6,7 @@ import FeedbackForm from '../forms/feedback-form/feedback-form'
 import Layout from '../../pages/layout/layout'
 import Main from '../../pages/main/main'
 import Repair from '../../pages/repair/repair'
-import Refill from '../../pages/refill/refill'
+import RefillComponent from '../../components/refill-component/refill-component'
 import Contacts from '../../pages/contacts/contacts'
 import RefillItemPage from '../../pages/refill-item-page/refill-item-page'
 import RepairItemPage from '../../pages/repair-item-page/repair-item-page'
@@ -24,7 +24,7 @@ const App: React.FC = () => {
           <Route index element={<Main />} />
           <Route path="/repair/:vendor" element={<Repair />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemPage />} />
-          <Route path="/refill/:vendor" element={<Refill />} />
+          <Route path="/refill/:vendor" element={<RefillComponent />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemPage />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound404 />} />
