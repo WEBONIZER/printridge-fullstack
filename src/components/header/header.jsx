@@ -15,7 +15,7 @@ function HeaderComponent() {
                             to="/">
                             Printridge
                         </NavLink>
-                        <MainMenu />
+                        <MainMenu position={'header'} />
                     </div>
                     <div className={styles.slogan_box}>
                         <p className={styles.slogan_big}>Printridge — решение проблем с печатной техникой</p>

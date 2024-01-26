@@ -1,0 +1,43 @@
+.icons_box {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.icon_vk {
+  width: 60px;
+  height: 60px;
+  text-decoration: none;
+  background-image: url("../../images/icon-vk.svg");
+  background-size: 60px 60px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.icon_vk:hover {
+    background-image: url("../../images/icon-vk-hover.svg");
+}
+
+.icon_telegram {
+    width: 60px;
+    height: 60px;
+    text-decoration: none;
+    background-image: url("../../images/icon-telegram.svg");
+    background-size: 60px 60px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.icon_telegram:hover {
+    background-image: url("../../images/icon-telegram-hover.svg");
+}
+
+@media all and (max-width: 500px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}

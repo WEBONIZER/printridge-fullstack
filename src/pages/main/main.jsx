@@ -1,19 +1,14 @@
 import styles from './main.module.css'
 import MainPageDescriptionBox from '../../components/main-page-description-box/main-page-description-box'
-import imagePrinterWithPlus from '../../images/printer-with-plus.svg'
+import { mainDescriptionBoxes } from '../../utils/main-description-boxes'
 
 const Main = () => {
 
     return (
         <div className={styles.main_box}>
-            <MainPageDescriptionBox
-                title='Заправка картриджей'
-                description='Заправка картриджей нужна для заправки картриджейЗаправка картриджей 
-            нужна для заправки картриджейЗаправка картриджей нужна для заправки картриджейЗаправка картриджей нужна 
-            для заправки картриджейЗаправка картриджей нужна для заправки картриджейЗаправка картриджей нужна для 
-            заправки картриджейЗаправка картриджей нужна для заправки картриджей'
-                image={imagePrinterWithPlus}
-            />
+            {mainDescriptionBoxes.map((i) => (
+                <MainPageDescriptionBox title={i.title} description={i.description} name={i.name} />
+            ))}
         </div>
     );
 }

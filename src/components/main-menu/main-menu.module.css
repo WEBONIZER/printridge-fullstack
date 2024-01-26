@@ -1,4 +1,4 @@
-.main_menu {
+.main_menu_horisontal {
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -6,23 +6,40 @@
     gap: 50px;
 }
 
+.main_menu_vertical {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 24px;
+}
+
 .link {
     margin: 0;
-    height: 22px;
-    text-decoration: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     color: #0C0C0C;
     font-size: 18px;
     font-weight: 400;
 }
 
+.link_footer {
+    margin: 0;
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.link_footer:hover {
+    color: #005CE5;
+}
+
+.link_invisible {
+    display: none;
+}
+
 .link:hover {
-    scale: 1.08;
-    transition: scale 0.3s linear;
+    color: #005CE5;
 }
 
 @media all and (max-width: 500px) {

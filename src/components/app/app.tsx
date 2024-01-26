@@ -15,42 +15,33 @@ import NotFound404 from '../../pages/not-found/not-found'
 const App: React.FC = () => {
   
   const location = useLocation();
-  const navigate = useNavigate();
   const background = location.state && location.state.background;
-
-  const handleModalClose = () => {
-    navigate(-1);
-  };
 
   return (
     <>
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="/repair" element={<Repair />} />
           <Route path="/repair/:vendor" element={<Repair />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemPage />} />
-          <Route path="/refill" element={<Refill />} />
           <Route path="/refill/:vendor" element={<Refill />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemPage />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
       </Routes>
-      {
-        background && (
+      {background && (
           <Routes>
             <Route
               path='/'
               element={
-                <Modal onClose={handleModalClose} closeButton={handleModalClose}>
+                <Modal >
                   <FeedbackForm />
                 </Modal>
               }
             />
           </Routes>
-        )
-      }
+        )}
     </>
   );
 }

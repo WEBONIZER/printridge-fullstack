@@ -1,6 +1,6 @@
 import HeaderComponent from '../../components/header/header'
-import Footer from "../footer/footer";
-import NavigationMenu from '../navigate/navigate'
+import FooterComponent from "../../components/footer/footer";
+import FeedbackButtonComponent from '../../components/feedback-button-component/feedback-button-component'
 import styles from './layout.module.css'
 import { Outlet } from 'react-router-dom'
 
@@ -11,8 +11,8 @@ const Layout = () => {
             <main className={styles.main}>
                 <Outlet />
             </main>
-            <NavigationMenu />
-            {/*<Footer />*/}
+            <FeedbackButtonComponent />
+            <FooterComponent />
         </div>
     )
 }

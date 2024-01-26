@@ -1,9 +1,13 @@
 import styles from './modal-overlay.module.css';
+import { Link } from "react-router-dom";
 
-const ModalOverlay = ({ onClose }) => {
+const ModalOverlay = () => {
 
     return (
-        <div className={styles.modal_overlay} onClick={onClose}></div>
+        <Link
+            className={styles.modal_overlay}
+            state={null}
+        />
     )
 }
 

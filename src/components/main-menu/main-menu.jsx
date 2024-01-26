@@ -1,29 +1,30 @@
 import styles from './main-menu.module.css'
 import { NavLink } from 'react-router-dom';
 
-function MainMenu() {
-
-    const activeLink = ({ isActive }) => ({ color: isActive ? '#fff' : '#000' });
+function MainMenu({ position }) {
 
     return (
-        <nav className={styles.main_menu}>
+        <nav className={position === 'header' && styles.main_menu_horisontal || position === 'footer' && styles.main_menu_vertical}>
             <NavLink
-                style={activeLink}
-                className={styles.link}
+                className={position === 'footer' ? styles.link_footer : styles.link_invisible}
+                to="/"
+            >
+                Главная
+            </NavLink>
+            <NavLink
+                className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
                 to="/refill"
             >
                 Заправка картриджей
             </NavLink>
             <NavLink
-                style={activeLink}
-                className={styles.link}
+                className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
                 to="/repair"
             >
                 Ремонт принтеров
             </NavLink>
             <NavLink
-                style={activeLink}
-                className={styles.link}
+                className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
                 to="/contacts"
             >
                 Контакты
