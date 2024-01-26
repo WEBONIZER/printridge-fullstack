@@ -18,19 +18,11 @@
     gap: 12px;
 }
 
-.title {
-    margin: 0;
-    width: 100%;
-    color: #0C0C0C;
-    font-size: 46px;
-    font-weight: 700;
-}
-
 .description {
     margin: 0;
     width: 100%;
     color: #0C0C0C;
-    font-size: 32px;
+    font-size: 46px;
     font-weight: 500;
 }
 

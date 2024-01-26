@@ -13,9 +13,6 @@ function RefillComponent() {
     return (
         < div className={styles.container}>
             <div className={styles.title_box}>
-                <h2 className={styles.title}>
-                    Заправка картриджей {vendor === undefined ? '' : vendor.toUpperCase()}
-                </h2>
                 <p className={styles.description}>Выберите производителя и модель картриджа</p>
             </div>
             <VendorMenu />

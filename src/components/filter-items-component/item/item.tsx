@@ -26,10 +26,13 @@ const Item: FC<ItemProps> = ({ modelCart, vend, chip, devices, recovery_price, r
         >
             <div className={styles.price_row}>
                 <p className={styles.model_cart}>{`${modelCart.toUpperCase()}`}</p>
-                <p className={styles.vendor}>{`${vend.toUpperCase()}`}</p>
+                <p className={styles.separator}>{'|'}</p>
+                <p className={styles.vendor}>{`${vend.toUpperCase()} ${devices}`}</p>
+                <p className={styles.separator}>{'|'}</p>
                 <p className={styles.chip}>{chip ? 'уточняйте' : 'не требуется'}</p>
-                <p className={styles.devices}>{`${vend} ${devices}`}</p>
+                <p className={styles.separator}>{'|'}</p>
                 <p className={styles.refill_price}>{refill_price}</p>
+                <p className={styles.separator}>{'|'}</p>
                 <p className={styles.recovery_price}>{recovery_price}</p>
             </div>
         </Link>
