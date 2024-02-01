@@ -130,3 +130,24 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
+
+@media all and (max-width: 500px) {
+  .footer {
+    margin: 0 auto;
+    width: 89.33%;
+    height: 694px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .footer_box {
+    width: 49.42%;
+    width: 100%;
+    background-color: #14243b;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: row;
+  }
+}

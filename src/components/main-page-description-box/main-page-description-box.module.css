@@ -70,3 +70,119 @@
   font-size: 24px;
   font-weight: 400;
 }
+
+.link_image_to_refill_mobile {
+  display: none;
+}
+
+.link_image_to_refill_mobile:hover {
+  display: none;
+}
+
+.link_image_to_repair_mobile {
+  display: none;
+}
+
+.link_image_to_repair_mobile:hover {
+  display: none;
+}
+
+.mobile_button {
+  display: none;
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    margin: 14px auto 0;
+    width: 89.33%;
+    height: 504px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .content_box {
+    width: 88.05%;
+    height: 288px;
+    margin: 0 24px 0 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .link_image_to_refill_mobile {
+    display: block;
+    margin: 24px 24px 0 24px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/printer-with-plus.svg");
+    background-size: 100% 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .link_image_to_repair_mobile {
+    display: block;
+    margin: 24px 24px 0 24px;
+    width: 60px;
+    height: 60px;
+    background-image: url("../../images/image-to-repair.svg");
+    background-size: 100% 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .link_image_to_refill {
+    display: none;
+  }
+  
+  .link_image_to_refill:hover {
+    display: none;
+  }
+  
+  .link_image_to_repair {
+    display: none;
+  }
+  
+  .link_image_to_repair:hover {
+    display: none;
+  }
+
+  .title {
+    margin: 0;
+    color: #005ce5;
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  .description {
+    margin: 0;
+    color: #0c0c0c;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .mobile_button {
+    margin:  0 24px 24px;
+    padding: 20px 0;
+    width: 88.05%;
+    border-radius: 16px;
+    background-color: #005CE5;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .button_name {
+    margin: 0;
+    height: 20px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}

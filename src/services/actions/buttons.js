@@ -1,0 +1,1 @@
+export const MENU_MOBILE_BUTTON = 'MENU_MOBILE_BUTTON';
