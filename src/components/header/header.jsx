@@ -1,8 +1,8 @@
 import styles from './header.module.css'
 import { NavLink, useLocation, useParams } from 'react-router-dom'
 import MainMenu from '../main-menu/main-menu'
-import image from '../../images/Rectangle_850.svg'
-import imagePrinter from '../../images/image-printer-blue.svg'
+import imageCall from '../../images/call.svg'
+import imageEarth from '../../images/language.svg'
 
 function HeaderComponent() {
 
@@ -36,8 +36,17 @@ function HeaderComponent() {
                 </div>
             </div>
             <div className={styles.images_box}>
-                <img className={styles.image} src={image} alt="Фото" />
-                <img className={styles.image} src={imagePrinter} alt="Принтер" />
+                <div className={styles.mail_box}>
+                    <div className={styles.phone_box}>
+                        <img className={styles.phone_box_image} src={imageCall} alt="Трубка" />
+                        <p className={styles.phone_text}>+7 994 439-01-49</p>
+                    </div>
+                    <div className={styles.phone_box}>
+                        <img className={styles.phone_box_image} src={imageEarth} alt="Трубка" />
+                        <p className={styles.phone_text}>sales@printridge.ru</p>
+                    </div>
+                </div>
+                <div className={styles.image}> </div>
             </div>
         </div>
     );
