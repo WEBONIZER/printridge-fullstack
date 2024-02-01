@@ -7,7 +7,7 @@ import Layout from '../../pages/layout/layout'
 import Main from '../../pages/main/main'
 import RepairComponent from '../../components/repair-component/repair-component'
 import RefillComponent from '../../components/refill-component/refill-component'
-import Contacts from '../../pages/contacts/contacts'
+import ContactsComponent from '../../components/contacts-component/contacts-component'
 import RefillItemComponent from '../../components/refill-component/refill-item-component/refill-item-component'
 import RepairItemComponent from '../../components/repair-component/repair-item-component/repair-item-component'
 import NotFound404 from '../../pages/not-found/not-found'
@@ -26,7 +26,7 @@ const App: React.FC = () => {
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillComponent />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemComponent />} />
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/contacts" element={<ContactsComponent />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
       </Routes>
