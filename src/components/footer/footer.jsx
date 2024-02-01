@@ -12,7 +12,7 @@ function FooterComponent() {
                 <div className={styles.adress_box}>
                     <div className={styles.adress_container}>
                         <img className={styles.location_img} src={locationImg} alt="location" />
-                        <p className={styles.adress_text}>{'Обуховской обороны, д. 116 корп. 1, лит. Е, 4-й этаж'}</p>
+                        <p className={styles.adress_text}>{'Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'}</p>
                     </div>
                     <p className={styles.site_name_text}>{'Printridge'}</p>
                 </div>
@@ -24,8 +24,8 @@ function FooterComponent() {
             <div className={styles.footer_box}>
                 <div className={styles.contacts_box}>
                     <p className={styles.contacts}>{'Контактная информация'}</p>
-                    <p className={styles.phone}>{'+7 (953) 368-18-36'}</p>
-                    <p className={styles.email}>{'fox.spb@bk.ru'}</p>
+                    <p className={styles.phone}>{'+7 994 439-01-49'}</p>
+                    <p className={styles.email}>{'sales@printridge.ru'}</p>
                 </div>
                 <div className={styles.social_box}>
                     <SocialIcons />

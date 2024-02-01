@@ -38,5 +38,5 @@ const Item: FC<ItemProps> = ({ modelCart, vend, chip, devices, recovery_price, r
         </Link>
     );
 }
-
+ 
 export default Item;

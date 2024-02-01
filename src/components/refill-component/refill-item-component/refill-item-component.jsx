@@ -15,13 +15,27 @@ function RefillItemComponent() {
             <div className={styles.img_desc_box}>
                 <div className={styles.left_box}>
                     <h2 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
-                    <div className={styles.price_container}>
-                        <p className={styles.devices}>Подходит для {data.devices}</p>
-                        {data.resource && <p className={styles.resource}>Ресурс картриджа: {data.resource} стр., при заполнении страницы 5%</p>}
-                        <p className={styles.prices}>Стоимость услуг:</p>
-                        <p className={styles.pefill_price}>Заправка картриджа {`${data.modelCart}`}: {`${data.refill_price}`}</p>
-                        <p className={styles.refill_repair_price}>Восстановление картриджа {`${data.modelCart}`}: {`${data.recovery_price}`}</p>
-                        <p className={styles.chip_price}>Замена чипа: {`${data.chip ? 'уточняйте' : 'не требуется'}`}</p>
+                    <div className={styles.text_box}>
+                        <p className={styles.blue_text}>Совместимые модели</p>
+                        <p className={styles.black_text}>{data.devices}</p>
+                    </div>
+                    <div className={styles.text_box}>
+                        <p className={styles.blue_text}>Ресурс картриджа:</p>
+                        <p className={styles.black_text}>{`${data.resource} стр., при заполнении страницы 5%`}</p>
+                    </div>
+
+                    <p className={styles.boxes_title}>Цены</p>
+                    <div className={styles.text_box}>
+                        <p className={styles.blue_text}>{`Заправка картриджа ${data.modelCart}`}</p>
+                        <p className={styles.black_text}>{data.refill_price}</p>
+                    </div>
+                    <div className={styles.text_box}>
+                        <p className={styles.blue_text}>{`Восстановление картриджа ${data.modelCart}`}</p>
+                        <p className={styles.black_text}>{data.recovery_price}</p>
+                    </div>
+                    <div className={styles.text_box}>
+                        <p className={styles.blue_text}>Замена чипа</p>
+                        <p className={styles.black_text}>{data.chip ? 'уточняйте' : 'не требуется'}</p>
                     </div>
                 </div>
                 <ImageBox />

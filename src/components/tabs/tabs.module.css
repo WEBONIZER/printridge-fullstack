@@ -1,79 +1,92 @@
 .tabcontent {
-    padding: 6px 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 50px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .link {
-    float: left;
-    height: 50px;
-    padding: 0 10px;
-    background-color: #f2f2f3;
-    text-decoration: none;
-    transition: all 0.3s;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    color: #000;
-    border-radius: 15px;
-    border: 1px solid #ccc;
+  width: 32.04%;
+  height: 100%;
+  background-color: #005ce5;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .link:hover {
-    scale: 1.08;
-    transition: scale 0.3s linear;
+  background-color: #76a6ee;
 }
 
 .active {
-    scale: 1.06;
-    color: #000;
-    background-color: rgb(218, 245, 245);
+  width: 32.04%;
+  height: 100%;
+  background-color: #001027;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .tab {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
+  margin: 50px 0 0 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .box {
-    margin: 0 auto 50px;
-    width: 92.81%;
-    display: flex;
-    flex-direction: column;
+  margin: 50px 0 0 0;
+  width: 92.81%;
+  display: flex;
+  flex-direction: column;
 }
 
 .images_box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
+  margin: 50px 0 0 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 
 .image {
-    cursor: pointer;
-    padding: 5px;
-    width: 150px;
-    height: 150px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-}
-
-.image:active {
-    scale: 3.5;
-    transition: scale 0.3s linear;
+  margin: 0;
+  width: 49.05%;
+  border-radius: 40px;
 }
 
 .title {
-    margin: 0;
+  margin: 0;
+  width: 100%;
+  height: 42px;
+  font-size: 36px;
+  font-weight: 500;
 }
 
 .text {
-    font-size: 18px;
+  margin: 50px 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
 }

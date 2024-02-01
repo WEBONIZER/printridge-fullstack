@@ -10,9 +10,8 @@ function TabContent({ title, photo, text }) {
 
     return (
         <div className={styles.tabcontent}>
-            <h3 className={styles.title}>
-                {title}
-            </h3>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.text}>{text}</p>
             <div className={styles.images_box}>
                 {location.pathname.includes('refill') ? photo.map((i, key) => {
                     const images = require.context('../../images/examples/refill', true);
@@ -45,9 +44,6 @@ function TabContent({ title, photo, text }) {
                     })
                 }
             </div>
-            <section className={styles.text}>
-                {text}
-            </section>
         </div>
     );
 }

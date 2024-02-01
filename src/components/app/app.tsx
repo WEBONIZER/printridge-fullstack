@@ -5,11 +5,11 @@ import Modal from '../modal/modal'
 import FeedbackForm from '../forms/feedback-form/feedback-form'
 import Layout from '../../pages/layout/layout'
 import Main from '../../pages/main/main'
-import Repair from '../../pages/repair/repair'
+import RepairComponent from '../../components/repair-component/repair-component'
 import RefillComponent from '../../components/refill-component/refill-component'
 import Contacts from '../../pages/contacts/contacts'
 import RefillItemComponent from '../../components/refill-component/refill-item-component/refill-item-component'
-import RepairItemPage from '../../pages/repair-item-page/repair-item-page'
+import RepairItemComponent from '../../components/repair-component/repair-item-component/repair-item-component'
 import NotFound404 from '../../pages/not-found/not-found'
 
 const App: React.FC = () => {
@@ -22,8 +22,8 @@ const App: React.FC = () => {
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="/repair/:vendor" element={<Repair />} />
-          <Route path="/repair/:vendor/:model" element={<RepairItemPage />} />
+          <Route path="/repair/:vendor" element={<RepairComponent />} />
+          <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillComponent />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemComponent />} />
           <Route path="/contacts" element={<Contacts />} />
