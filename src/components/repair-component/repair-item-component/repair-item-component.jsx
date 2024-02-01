@@ -15,50 +15,52 @@ function RepairItemComponent() {
                 <div className={styles.price_container}>
                     <h2 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
                     <p className={styles.boxes_title}>Цены</p>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Диагностика</p>
-                        <p className={styles.black_text}>{data.price.diagnostics}</p>
+                    <div className={styles.price_wrap_box}>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Диагностика</p>
+                            <p className={styles.black_text}>{data.price.diagnostics}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>ТО</p>
+                            <p className={styles.black_text}>{data.price.TO}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Замена роликов</p>
+                            <p className={styles.black_text}>{data.price.rollers}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт барабана</p>
+                            <p className={styles.black_text}>{data.price.drum}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт термоблока (печки)</p>
+                            <p className={styles.black_text}>{data.price.therm}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт дуплекса</p>
+                            <p className={styles.black_text}>{data.price.duplex}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт редуктора</p>
+                            <p className={styles.black_text}>{data.price.reducer}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт лазера</p>
+                            <p className={styles.black_text}>{data.price.laser}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт электроники</p>
+                            <p className={styles.black_text}>{data.price.electronics}</p>
+                        </div>
+                        {data.price.scaner !== null && <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт сканера</p>
+                            <p className={styles.black_text}>{data.price.scaner}</p>
+                        </div>}
+                        {data.price.adf !== null && <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Ремонт автоподатчика (ADF)</p>
+                            <p className={styles.black_text}>{data.price.adf}</p>
+                        </div>}
                     </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>ТО</p>
-                        <p className={styles.black_text}>{data.price.TO}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Замена роликов</p>
-                        <p className={styles.black_text}>{data.price.rollers}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт барабана</p>
-                        <p className={styles.black_text}>{data.price.drum}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт термоблока (печки)</p>
-                        <p className={styles.black_text}>{data.price.therm}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт дуплекса</p>
-                        <p className={styles.black_text}>{data.price.duplex}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт редуктора</p>
-                        <p className={styles.black_text}>{data.price.reducer}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт лазера</p>
-                        <p className={styles.black_text}>{data.price.laser}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт электроники</p>
-                        <p className={styles.black_text}>{data.price.electronics}</p>
-                    </div>
-                    {data.price.scaner !== null && <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт сканера</p>
-                        <p className={styles.black_text}>{data.price.scaner}</p>
-                    </div>}
-                    {data.price.adf !== null && <div className={styles.text_box}>
-                        <p className={styles.blue_text}>Ремонт автоподатчика (ADF)</p>
-                        <p className={styles.black_text}>{data.price.adf}</p>
-                    </div>}
                 </div>
                 {img && (
                     <img
