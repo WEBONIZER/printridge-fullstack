@@ -201,7 +201,7 @@
     max-height: 42.4vw;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 2.8vw;
   }
 
   .slogan_big {
@@ -236,7 +236,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 2.8vw;
   }
 
   .phone_box {
@@ -246,7 +246,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    gap: 16px;
+    gap: 3.2vw;
   }
 
   .phone_box_image {
