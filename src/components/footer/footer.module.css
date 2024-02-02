@@ -134,7 +134,7 @@
 @media all and (max-width: 500px) {
   .footer {
     margin: 0 auto 4.8vw;
-    width: 89.33%;
+    width: 95.33%;
     height: 139.6vw;
     display: flex;
     flex-direction: column;
@@ -156,18 +156,18 @@
   }
 
   .adress_box {
-    margin: 4.8vw;
+    margin: 4.8vw auto;
     width: 87.05%;
-    height: 69.13%;
+    height: 66.13%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
   }
   
   .adress_container {
     width: 100%;
-    height: 9.6vw;
+    height: 9vw;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -184,7 +184,7 @@
     margin: 0;
     width: 87.36%;
     height: 100%;
-    font-size: 2.8vw;
+    font-size: 3.8vw;
     font-weight: 400;
     color: #fff;
   }
@@ -200,7 +200,7 @@
   }
   
   .menu_box {
-    margin: 3.8vw 4.8vw 4.8vw 4.8vw;
+    margin: 3.8vw auto 4.8vw auto;
     width: 87.05%;
     height: 69.13%;
     display: flex;
@@ -210,8 +210,8 @@
   }
   
   .contacts_box {
-    margin: 4.8vw 4.8vw 0 4.8vw;
-    width: 57.26%;
+    margin: 4.8vw auto 0 auto;
+    width: 87.05%;
     height: 69.13%;
     display: flex;
     flex-direction: column;
@@ -248,8 +248,8 @@
   }
   
   .social_box {
-    margin: 4.8vw auto 4.8vw 8.2vw;
-    width: 26.8vw;
+    margin: 4.8vw auto 4.8vw auto;
+    width: 87.05%;
     height: 12vw;
     display: flex;
     flex-direction: column;
