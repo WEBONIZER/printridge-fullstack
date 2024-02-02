@@ -10,7 +10,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: self-start;
+  align-items: flex-start;
   gap: 24px;
 }
 
@@ -44,11 +44,11 @@
 
 @media all and (max-width: 500px) {
   .main_menu_horisontal {
-    margin: 34px 0 0 0;
+    margin: 6.8vw 0 0 0;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    gap: 3.2vw;
   }
 
   .main_menu_vertical {
@@ -56,7 +56,8 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 24px;
+    gap: 4.8vw;
+    gap: 2.8vw;
   }
 
   .link {
@@ -64,7 +65,7 @@
     width: 33%;
     text-decoration: none;
     color: #0c0c0c;
-    font-size: 18px;
+    font-size: 3.6vw;
     font-weight: 400;
   }
 
@@ -72,7 +73,7 @@
     margin: 0;
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 3.6vw;
     font-weight: 400;
   }
 

@@ -128,7 +128,7 @@
   .container {
     margin: 24px auto 0;
     width: 89.33%;
-    height: 644px;
+    height: 128.8vw;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -136,17 +136,17 @@
 
   .logo_container {
     width: 100%;
-    height: 500px;
+    height: 100vw;
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    border-radius: 30px;
+    border-radius: 6vw;
   }
 
   .info_box {
-    margin: 24px;
+    margin: 24px 4.8vw;
     width: 88.05%;
-    height: 500px;
+    height: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,7 +166,7 @@
 
   .logo_and_menu_mobile {
     width: 100%;
-    min-height: 60px;
+    min-height: 12vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -176,15 +176,16 @@
     text-decoration: none;
     margin: 0;
     color: #0c0c0c;
-    font-size: 24px;
+    font-size: 4.8vw;
     font-weight: 700;
   }
 
   .mobile_menu_button {
     margin: 0;
-    width: 60px;
-    height: 60px;
+    width: 12vw;
+    height: 12vw;
     background-image: url('../../images/mobile-menu-button.svg');
+    background-size: 12vw 12vw;
     text-decoration: none;
   }
 
@@ -197,7 +198,7 @@
 
   .slogan_box {
     width: 100%;
-    max-height: 212px;
+    max-height: 42.4vw;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -206,20 +207,20 @@
   .slogan_big {
     margin: 0;
     color: #005ce5;
-    font-size: 34px;
+    font-size: 6.8vw;
     font-weight: 500;
   }
 
   .slogan_small {
     margin: 0;
     color: #0c0c0c;
-    font-size: 18px;
+    font-size: 3.6vw;
     font-weight: 400;
   }
 
   .images_box {
     width: 100%;
-    height: 122px;
+    height: 26vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -228,9 +229,9 @@
 
   .mail_box {
     width: 97.61%;
-    height: 122px;
+    height: 26vw;
     background-color: #005ce5;
-    border-radius: 30px;
+    border-radius: 6vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -240,7 +241,7 @@
 
   .phone_box {
     width: 79.26%;
-    height: 34px;
+    height: 6.8vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -249,14 +250,14 @@
   }
 
   .phone_box_image {
-    width: 30px;
-    height: 30px;
+    width: 6vw;
+    height: 6vw;
   }
 
   .phone_text {
     margin: 0;
     color: #fff;
-    font-size: 24px;
+    font-size: 4.8vw;
     font-weight: 400;
   }
 
