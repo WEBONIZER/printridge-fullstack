@@ -126,12 +126,12 @@
 
 @media all and (max-width: 500px) {
   .container {
-    margin: 24px auto 0;
+    margin: 4.8vw auto 0;
     width: 89.33%;
     height: 128.8vw;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 2.8vw;
   }
 
   .logo_container {
@@ -144,7 +144,7 @@
   }
 
   .info_box {
-    margin: 24px 4.8vw;
+    margin: 4.8vw;
     width: 88.05%;
     height: 100vw;
     display: flex;
