@@ -1,18 +1,18 @@
 .icons_box {
-  height: 60px;
+  height: 4.16vw;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 1.66vw;
 }
 
 .icon_vk {
-  width: 60px;
-  height: 60px;
+  width: 4.16vw;
+  height: 4.16vw;
   text-decoration: none;
   background-image: url("../../images/icon-vk.svg");
-  background-size: 60px 60px;
+  background-size: 4.16vw 4.16vw;
   object-fit: cover;
   object-position: center;
 }
@@ -22,11 +22,11 @@
 }
 
 .icon_telegram {
-    width: 60px;
-    height: 60px;
+    width: 4.16vw;
+    height: 4.16vw;
     text-decoration: none;
     background-image: url("../../images/icon-telegram.svg");
-    background-size: 60px 60px;
+    background-size: 4.16vw 4.16vw;
     object-fit: cover;
     object-position: center;
 }
