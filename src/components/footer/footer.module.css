@@ -133,7 +133,7 @@
 
 @media all and (max-width: 500px) {
   .footer {
-    margin: 0 auto;
+    margin: 0 auto 4.8vw;
     width: 89.33%;
     height: 139.6vw;
     display: flex;
