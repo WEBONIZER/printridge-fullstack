@@ -1,7 +1,7 @@
 .container {
   margin: 1.66vw auto 0;
   width: 96.66%;
-  height: 41.66vw;
+  height: 600px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  border-radius: 2.77vw;
+  border-radius: 40px;
 }
 
 .info_box {
@@ -27,7 +27,7 @@
 
 .logo_and_menu {
   width: 100%;
-  height: 2.5vw;
+  height: 36px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -42,7 +42,7 @@
   text-decoration: none;
   margin: 0;
   color: #0c0c0c;
-  font-size: 2.08vw;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -55,29 +55,29 @@
 
 .slogan_box {
   width: 100%;
-  max-height: 23.54vw;
+  max-height: 339px;
   display: flex;
   flex-direction: column;
-  gap: 1.66vw;
+  gap: 24px;
 }
 
 .slogan_big {
   margin: 0;
   color: #005ce5;
-  font-size: 4.37vw;
+  font-size: 64px;
   font-weight: 500;
 }
 
 .slogan_small {
   margin: 0;
   color: #0c0c0c;
-  font-size: 1.8vw;
+  font-size: 26px;
   font-weight: 400;
 }
 
 .images_box {
   width: 24.13%;
-  height: 41.66vw;
+  height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,23 +87,23 @@
 .mail_box {
   width: 97.61%;
   height: 29%;
-  border: 0.27vw solid #005ce5;
-  border-radius: 2.77vw;
+  border: 4px solid #005ce5;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.04vw;
+  gap: 15px;
 }
 
 .phone_box {
   width: 79.26%;
-  height: 2.36vw;
+  height: 34px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.11vw;
+  gap: 16px;
 }
 
 .phone_box_image {
@@ -113,16 +113,76 @@
 .phone_text {
   margin: 0;
   color: #fff;
-  font-size: 1.66vw;
+  font-size: 24px;
   font-weight: 400;
 }
 
 .image {
   width: 100%;
   height: 67%;
-  border-radius: 2.77vw;
+  border-radius: 40px;
   background-image: url("../../images/image-printer-blue.svg");
   background-size: 100% 100%;
+}
+
+@media all and (max-width: 1440px) {
+.container {
+  margin: 1.66vw auto 0;
+  height: 41.66vw;
+}
+
+.logo_container {
+  height: 100%;
+  border-radius: 2.77vw;
+}
+
+.info_box {
+  margin: 3.47vw;
+}
+
+.logo_and_menu {
+  height: 2.5vw;
+}
+
+.link {
+  font-size: 2.08vw;
+}
+
+.slogan_box {
+  max-height: 23.54vw;
+  gap: 1.66vw;
+}
+
+.slogan_big {
+  font-size: 4.37vw;
+}
+
+.slogan_small {
+  font-size: 1.8vw;
+}
+
+.images_box {
+  height: 41.66vw;
+}
+
+.mail_box {
+  border: 0.27vw solid #005ce5;
+  border-radius: 2.77vw;
+  gap: 1.04vw;
+}
+
+.phone_box {
+  height: 2.36vw;
+  gap: 1.11vw;
+}
+
+.phone_text {
+  font-size: 1.66vw;
+}
+
+.image {
+  border-radius: 2.77vw;
+}
 }
 
 @media all and (max-width: 500px) {
