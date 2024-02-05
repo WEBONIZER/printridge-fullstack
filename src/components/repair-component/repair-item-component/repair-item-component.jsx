@@ -14,6 +14,28 @@ function RepairItemComponent() {
             <div className={styles.img_desc_box}>
                 <div className={styles.price_container}>
                     <h2 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
+                    <div className={styles.specifications}>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Способ печати</p>
+                            <p className={styles.black_text}>{data.price.therm}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Вид</p>
+                            <p className={styles.black_text}>{data.price.duplex}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Формат печати</p>
+                            <p className={styles.black_text}>{data.price.reducer}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Скорость</p>
+                            <p className={styles.black_text}>{data.price.laser}</p>
+                        </div>
+                        <div className={styles.text_box}>
+                            <p className={styles.blue_text}>Нагрузка</p>
+                            <p className={styles.black_text}>{data.price.electronics}</p>
+                        </div>
+                    </div>
                     <p className={styles.boxes_title}>Цены</p>
                     <div className={styles.price_wrap_box}>
                         <div className={styles.text_box}>

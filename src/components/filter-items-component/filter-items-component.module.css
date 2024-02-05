@@ -21,6 +21,7 @@
   top: 0;
   z-index: 1;
   width: 100%;
+  height: 60px;
   background-color: #001027;
   color: #fff;
   display: flex;
@@ -89,4 +90,45 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
+}
+
+@media all and (max-width: 1440px) {
+  .price_container {
+    margin: 0 auto 3.47vw;
+    max-height: 74.16vw;
+    gap: 1.66vw;
+  }
+
+  .price_row {
+    height: 4.16vw;
+    gap: 1.04vw;
+    border-radius: 1.38vw;
+  }
+
+  .model_cart {
+    margin: auto 0 auto 2.5vw;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .vendor {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .chip {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .refill_price {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .recovery_price {
+    margin: auto 2.5vw auto 0;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
 }

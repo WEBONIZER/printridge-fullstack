@@ -45,14 +45,14 @@
   width: 36.11%;
   height: 100%;
   color: #005CE5;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .black_text {
   height: 100%;
   color: #0C0C0C;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 400;
 }
 
@@ -62,4 +62,41 @@
   height: 42px;
   font-size: 36px;
   font-weight: 500;
+}
+
+@media all and (max-width: 1440px) {
+  .container {
+    margin: 1.11vw auto 0;
+    border-radius: 2.77vw;
+  }
+  
+  .img_desc_box {
+    margin: 3.47vw auto 0;
+    height: 27.29vw;
+    gap: 12.5vw;
+  }
+  
+  .name {
+    height: 3.47vw;
+    font-size: 3.28vw;
+  }
+  
+  .text_box {
+    margin: 1.66vw 0 0 0;
+    height: 1.66vw;
+  }
+  
+  .blue_text {
+    font-size: 1.25vw;
+  }
+  
+  .black_text {
+    font-size: 1.25vw;
+  }
+  
+  .boxes_title {
+    margin: 3.47vw 0 0 0;
+    height: 2.91vw;
+    font-size: 2.5vw;
+  }
 }

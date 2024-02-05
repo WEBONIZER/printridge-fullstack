@@ -25,3 +25,20 @@
   font-size: 46px;
   font-weight: 500;
 }
+
+@media all and (max-width: 1440px) {
+  .container {
+    margin: 11.1vw auto 0;
+    gap: 3.47vw;
+    border-radius: 2.77vw;
+  }
+
+  .title_box {
+    margin: 3.47vw auto 0;
+    gap: 0.83vw;
+  }
+
+  .description {
+    font-size: 3.19vw;
+  }
+}

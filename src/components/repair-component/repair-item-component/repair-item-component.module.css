@@ -29,6 +29,13 @@
   flex-wrap: wrap;
 }
 
+.specifications {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 .image {
   width: 27.58%;
   height: 90.59%;
@@ -45,6 +52,8 @@
 .text_container {
   margin: 50px auto;
   width: 92.81%;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .boxes_title {
@@ -69,13 +78,57 @@
   width: 75%;
   height: 100%;
   color: #005ce5;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .black_text {
   height: 100%;
   color: #0c0c0c;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 400;
+}
+
+@media all and (max-width: 1440px) {
+  .container {
+    margin: 1.11vw auto 0;
+    border-radius: 2.77vw;
+  }
+  
+  .img_desc_box {
+    margin: 3.47vw 0 0 0;
+  }
+  
+  .price_wrap_box {
+    height: 20.83vw;
+  }
+  
+  .header {
+    height: 3.47vw;
+    font-size: 3.19vw;
+  }
+  
+  .text_container {
+    margin: 3.47vw auto;
+    font-size: 1.25vw;
+  }
+  
+  .boxes_title {
+    margin: 3.47vw 0 0 0;
+    height: 2.91vw;
+    font-size: 2.5vw;
+  }
+  
+  .text_box {
+    margin: 1.66vw 0 0 0;
+    height: 1.66vw;
+  }
+  
+  .blue_text {
+    font-size: 1.25vw;
+  }
+  
+  .black_text {
+    font-size: 1.25vw;
+  } 
 }

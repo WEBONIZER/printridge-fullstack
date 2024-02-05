@@ -4,3 +4,10 @@
     font-size: 18px;
     font-weight: 400;
 }
+
+@media all and (max-width: 1440px) {
+    .text_container {
+        margin: 3.47vw 0;
+        font-size: 1.25vw;
+    }
+}
