@@ -11,19 +11,12 @@ function MainMenu({ position }) {
     const { mobileMenuButton } = useSelector((state) => state.buttons);
 
     const handleClick = () => {
-        if (!mobileMenuButton) {
-            dispatch({
-                type: MENU_MOBILE_BUTTON,
-                mobileMenuButton: true
-            })
-        } else {
-            dispatch({
-                type: MENU_MOBILE_BUTTON,
-                mobileMenuButton: false
-            })
-        }
+        dispatch({
+            type: MENU_MOBILE_BUTTON,
+            mobileMenuButton: false
+        })
     }
-console.log(mobileMenuButton)
+    //console.log(mobileMenuButton)
     return (
         <nav className={position === 'header' && styles.main_menu_horisontal || (position === 'footer' && mobileMenuButton ? styles.main_menu_center_align : styles.main_menu_vertical)}>
             <NavLink
