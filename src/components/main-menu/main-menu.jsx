@@ -23,9 +23,9 @@ function MainMenu({ position }) {
             })
         }
     }
-
+console.log(mobileMenuButton)
     return (
-        <nav className={position === 'header' && styles.main_menu_horisontal || position === 'footer' && mobileMenuButton ? styles.main_menu_center_align : styles.main_menu_vertical}>
+        <nav className={position === 'header' && styles.main_menu_horisontal || (position === 'footer' && mobileMenuButton ? styles.main_menu_center_align : styles.main_menu_vertical)}>
             <NavLink
                 className={position === 'footer' ? styles.link_footer : styles.link_invisible}
                 to="/"
