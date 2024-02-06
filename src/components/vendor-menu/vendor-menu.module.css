@@ -56,3 +56,27 @@
     font-size: 1.52vw;
   }
 }
+
+@media all and (max-width: 500px) {
+  .navigation {
+    width: 88.62%;
+    height: 56.4vw;
+    margin: 0 auto;
+    gap: 2.8vw;
+    flex-wrap: wrap;
+  }
+  
+  .item_link {
+    width: 48.12%;
+    height: 21.27%;
+    border-radius: 3.2vw;
+    font-size: 3.2vw;
+  }
+  
+  .item_link_active {
+    width: 48.12%;
+    height: 21.27%;
+    border-radius: 3.2vw;
+    font-size: 3.2vw;
+  }
+}

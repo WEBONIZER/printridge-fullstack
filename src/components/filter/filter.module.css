@@ -4,8 +4,8 @@
   width: 91.37%;
   height: 76px;
   border-radius: 20px;
-  border: 2px solid #89919D;
-  color: #89919D;
+  border: 2px solid #89919d;
+  color: #89919d;
   font-size: 18px;
   font-weight: 500;
 }
@@ -19,7 +19,18 @@
     padding: 0 0.69vw;
     height: 5.27vw;
     border-radius: 1.38vw;
-    border: 0.38vw solid #89919D;
+    border: 0.38vw solid #89919d;
     font-size: 1.25vw;
+  }
+}
+
+@media all and (max-width: 1440px) {
+  .input {
+    padding: 0 4.8vw;
+    width: 77.25%;
+    height: 12vw;
+    border-radius: 3.2vw;
+    border: 0.4vw solid #89919d;
+    font-size: 3.2vw;
   }
 }

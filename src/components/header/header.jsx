@@ -29,7 +29,7 @@ function HeaderComponent() {
             })
         }
     }
-    console.log(mobileMenuButton)
+    //console.log(mobileMenuButton)
     return (
         <div className={styles.container}>
             <div className={styles.logo_container}>

@@ -9,7 +9,7 @@
 
 .main {
     margin: 0 auto;
-    width: 100%;
+    width: 96.66%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -17,6 +17,7 @@
 
 @media all and (max-width: 500px) {
     .main {
+        width: 95.33%;
         flex-direction: column;
         justify-items: flex-start;
     }
