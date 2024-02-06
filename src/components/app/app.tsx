@@ -1,6 +1,7 @@
 import './app.module.css';
 import React from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { useSelector } from "react-redux"
 import Modal from '../modal/modal'
 import FeedbackForm from '../forms/feedback-form/feedback-form'
 import Layout from '../../pages/layout/layout'
@@ -11,11 +12,13 @@ import ContactsComponent from '../../components/contacts-component/contacts-comp
 import RefillItemComponent from '../../components/refill-component/refill-item-component/refill-item-component'
 import RepairItemComponent from '../../components/repair-component/repair-item-component/repair-item-component'
 import NotFound404 from '../../pages/not-found/not-found'
+import MainMenu from '../main-menu/main-menu'
 
 const App: React.FC = () => {
   
   const location = useLocation();
   const background = location.state && location.state.background;
+  const { mobileMenuButton } = useSelector((state: any) => state.buttons);
 
   return (
     <>
@@ -37,6 +40,18 @@ const App: React.FC = () => {
               element={
                 <Modal >
                   <FeedbackForm />
+                </Modal>
+              }
+            />
+          </Routes>
+        )}
+        {mobileMenuButton && (
+          <Routes>
+            <Route
+              path={`${location.pathname}`}
+              element={
+                <Modal >
+                  <MainMenu position={'footer'} />
                 </Modal>
               }
             />

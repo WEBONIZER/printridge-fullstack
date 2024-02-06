@@ -11,3 +11,11 @@
         font-size: 1.25vw;
     }
 }
+
+@media all and (max-width: 500px) {
+    .text_container {
+        width: 88.62%;
+        margin: 4.8vw auto 7.2vw;
+        font-size: 3.6vw;
+    }
+}

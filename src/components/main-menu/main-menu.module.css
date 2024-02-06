@@ -88,7 +88,6 @@
   }
 }
 
-
 @media all and (max-width: 500px) {
   .main_menu_horisontal {
     margin: 6.8vw 0 0 0;
@@ -103,8 +102,17 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 4.8vw;
     gap: 2.8vw;
+  }
+
+  .main_menu_center_align {
+    margin: 0;
+    font-size: 5.8vw;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4.8vw;
   }
 
   .link {

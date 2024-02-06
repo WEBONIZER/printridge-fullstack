@@ -26,11 +26,11 @@ function RefillItemComponent() {
 
                     <p className={styles.boxes_title}>Цены</p>
                     <div className={styles.text_box}>
-                        <p className={styles.blue_text}>{`Заправка картриджа ${data.modelCart}`}</p>
+                        <p className={styles.blue_text}>{`Заправка ${data.modelCart}`}</p>
                         <p className={styles.black_text}>{data.refill_price}</p>
                     </div>
                     <div className={styles.text_box}>
-                        <p className={styles.blue_text}>{`Восстановление картриджа ${data.modelCart}`}</p>
+                        <p className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</p>
                         <p className={styles.black_text}>{data.recovery_price}</p>
                     </div>
                     <div className={styles.text_box}>
@@ -39,6 +39,7 @@ function RefillItemComponent() {
                     </div>
                 </div>
                 <ImageBox />
+                <h2 className={styles.name_mobile}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
             </div>
             <DescriptionBox />
             {data.examples.length !== 0 && <Tabs items={data.examples} />}

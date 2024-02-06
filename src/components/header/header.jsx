@@ -53,7 +53,6 @@ function HeaderComponent() {
                                 className={styles.mobile_menu_button}
                                 onClick={handleClick} />
                         </div>
-                        {mobileMenuButton ? <MainMenu position={'header'} /> : null}
                     </div>
                     <div className={styles.slogan_box}>
                         <h1 className={styles.slogan_big}>{
