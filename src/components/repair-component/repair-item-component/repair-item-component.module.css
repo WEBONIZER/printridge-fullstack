@@ -49,6 +49,10 @@
   font-weight: 500;
 }
 
+.header_mobile {
+  display: none;
+}
+
 .text_container {
   margin: 50px auto;
   width: 92.81%;
