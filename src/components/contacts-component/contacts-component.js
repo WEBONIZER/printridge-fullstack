@@ -5,10 +5,13 @@ const ContactsComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.info_contacts}>
-                <div className={styles.info_row}>
+                <Link
+                    className={styles.info_row}
+                    to={`yandexnavi://search?text=${encodeURIComponent('Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж')}`}
+                >
                     <div className={styles.info_row_img_location} />
                     <p className={styles.info_row_text}>Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж</p>
-                </div>
+                </Link>
                 <Link
                     className={styles.info_row}
                     to={`tel:+79944390149`}

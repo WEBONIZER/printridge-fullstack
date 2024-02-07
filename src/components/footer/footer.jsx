@@ -12,7 +12,10 @@ function FooterComponent() {
                 <div className={styles.adress_box}>
                     <div className={styles.adress_container}>
                         <img className={styles.location_img} src={locationImg} alt="location" />
-                        <p className={styles.adress_text}>{'Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'}</p>
+                        <Link
+                            className={styles.adress_text}
+                            to={`yandexnavi://search?text='Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'`}
+                        >{'Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'}</Link>
                     </div>
                     <p className={styles.site_name_text}>{'Printridge'}</p>
                 </div>
