@@ -91,6 +91,7 @@ function RepairItemComponent() {
                         alt={model}
                     />
                 )}
+                <h2 className={styles.header_mobile}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
             </div>
             <p className={styles.text_container}>&nbsp;&nbsp;&nbsp;&nbsp;Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
                 Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!

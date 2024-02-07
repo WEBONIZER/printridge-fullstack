@@ -24,8 +24,14 @@ function FooterComponent() {
             <div className={styles.footer_box}>
                 <div className={styles.contacts_box}>
                     <p className={styles.contacts}>{'Контактная информация'}</p>
-                    <p className={styles.phone}>{'+7 994 439-01-49'}</p>
-                    <p className={styles.email}>{'sales@printridge.ru'}</p>
+                    <Link
+                        className={styles.phone}
+                        to={`tel:+7 994 439-01-49`}
+                    >{'+7 994 439-01-49'}</Link>
+                    <Link
+                        className={styles.email}
+                        to={`mailto:sales@printridge.ru`}
+                    >{'sales@printridge.ru'}</Link>
                 </div>
                 <div className={styles.social_box}>
                     <SocialIcons />

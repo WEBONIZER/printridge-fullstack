@@ -24,13 +24,13 @@ function RepairItemsComponent({ data }) {
     return (
         <div className={styles.price_container}>
             <div className={styles.price_row}>
-                <p className={styles.model}>{'Модель принтера'}</p>
+                <p className={styles.model}>{'Устройство'}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.type}>{'Способ печати'}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.device}>{'Устройство'}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.format}>{'Формат печати'}</p>
+                <p className={styles.format}>{'Формат'}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.speed}>{'Скорость'}</p>
                 <p className={styles.separator}>{'|'}</p>

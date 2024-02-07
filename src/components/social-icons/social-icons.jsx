@@ -11,11 +11,15 @@ const SocialIcons = () => {
         <div className={styles.icons_box}>
             <Link
                 className={styles.icon_vk}
-                to={"https://vk.com/"}
+                to="https://vk.com/printridgespb"
+                target="_blank"
+                rel="noopener noreferrer"
             />
             <Link
                 className={styles.icon_telegram}
-                to={"https://t.me/+79516878803"}
+                to="https://t.me/DenFoxPrint"
+                target="_blank"
+                rel="noopener noreferrer"
             />
         </div>
     )

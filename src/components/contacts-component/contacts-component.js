@@ -1,34 +1,46 @@
 import styles from './contacts-component.module.css'
-import imgLocation from '../../images/location_on.svg'
-import imgCall from '../../images/call-blue.svg'
-import imgEarth from '../../images/language-blue.svg'
-import imgVk from '../../images/icon-vk.svg'
-import imgTelegram from '../../images/icon-telegram.svg'
+import { Link } from 'react-router-dom';
 
 const ContactsComponent = () => {
     return (
         <div className={styles.container}>
             <div className={styles.info_contacts}>
                 <div className={styles.info_row}>
-                    <img className={styles.info_row_img} src={imgLocation} alt="Локация" />
+                    <div className={styles.info_row_img_location} />
                     <p className={styles.info_row_text}>Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж</p>
                 </div>
-                <div className={styles.info_row}>
-                    <img className={styles.info_row_img} src={imgCall} alt="Телефон" />
+                <Link
+                    className={styles.info_row}
+                    to={`tel:+7 994 439-01-49`}
+                >
+                    <div className={styles.info_row_img_call} />
                     <p className={styles.info_row_text}>+7 994 439-01-49</p>
-                </div>
-                <div className={styles.info_row}>
-                    <img className={styles.info_row_img} src={imgEarth} alt="Почта" />
+                </Link>
+                <Link
+                    className={styles.info_row}
+                    to={`mailto:sales@printridge.ru`}
+                >
+                    <div className={styles.info_row_img_earth} />
                     <p className={styles.info_row_text}>sales@printridge.ru</p>
-                </div>
-                <div className={styles.info_row}>
-                    <img className={styles.info_row_img} src={imgVk} alt="ВК" />
+                </Link>
+                <Link
+                    className={styles.info_row}
+                    to="https://vk.com/printridgespb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div className={styles.info_row_img_vk} />
                     <p className={styles.info_row_text}>VK</p>
-                </div>
-                <div className={styles.info_row}>
-                    <img className={styles.info_row_img} src={imgTelegram} alt="Телеграм" />
+                </Link>
+                <Link
+                    className={styles.info_row}
+                    to="https://t.me/DenFoxPrint"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <div className={styles.info_row_img_telegram} />
                     <p className={styles.info_row_text}>@DenFoxPrint</p>
-                </div>
+                </Link>
             </div>
             <div className={styles.map_box}>
                 <iframe

@@ -1,6 +1,6 @@
 .container {
   margin: 16px auto 0;
-  width: 96.66%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,7 @@
   align-items: center;
   justify-content: flex-start;
   gap: 16px;
+  text-decoration: none;
 }
 
 .info_row_text {
@@ -37,10 +38,54 @@
   font-weight: 400;
 }
 
-.info_row_img {
+.info_row_img_location {
   margin: 0;
   width: 30px;
   height: 30px;
+  background-image: url("../../images/location_on.svg");
+  background-size: 30px 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info_row_img_call {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/call-blue.svg");
+  background-size: 30px 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info_row_img_earth {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/language-blue.svg");
+  background-size: 30px 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info_row_img_vk {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-vk.svg");
+  background-size: 30px 30px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info_row_img_telegram {
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url("../../images/icon-telegram.svg");
+  background-size: 30px 30px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .map_box {
@@ -79,9 +124,34 @@
     font-size: 1.94vw;
   }
 
-  .info_row_img {
+  .info_row_img_location {
     width: 2.08vw;
     height: 2.08vw;
+    background-size: 2.08vw 2.08vw;
+  }
+
+  .info_row_img_call {
+    width: 2.08vw;
+    height: 2.08vw;
+    background-size: 2.08vw 2.08vw;
+  }
+
+  .info_row_img_earth {
+    width: 2.08vw;
+    height: 2.08vw;
+    background-size: 2.08vw 2.08vw;
+  }
+
+  .info_row_img_vk {
+    width: 2.08vw;
+    height: 2.08vw;
+    background-size: 2.08vw 2.08vw;
+  }
+
+  .info_row_img_telegram {
+    width: 2.08vw;
+    height: 2.08vw;
+    background-size: 2.08vw 2.08vw;
   }
 
   .map_box {
@@ -92,5 +162,75 @@
 
   .map_box iframe {
     border-radius: 2.77vw;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .container {
+    margin: 2.8vw auto 0;
+    gap: 2.8vw;
+  }
+
+  .info_contacts {
+    padding: 4.8vw 0;
+    gap: 4.8vw;
+    border-radius: 6vw;
+    background-color: #005ce5;
+    color: #ffffff;
+  }
+
+  .info_row {
+    min-height: 4.8vw;
+    gap: 3.2vw;
+  }
+
+  .info_row_text {
+    font-size: 3.6vw;
+    color: #ffffff;
+  }
+
+  .info_row_img_location {
+    width: 4.8vw;
+    height: 4.8vw;
+    background-size: 4.8vw 4.8vw;
+    background-image: url("../../images/location_on_white.svg");
+  }
+
+  .info_row_img_call {
+    width: 4.8vw;
+    height: 4.8vw;
+    background-size: 4.8vw 4.8vw;
+    background-image: url("../../images/call_white.svg");
+  }
+
+  .info_row_img_earth {
+    width: 4.8vw;
+    height: 4.8vw;
+    background-size: 4.8vw 4.8vw;
+    background-image: url("../../images/language_white.svg");
+  }
+
+  .info_row_img_vk {
+    width: 4.8vw;
+    height: 4.8vw;
+    background-size: 4.8vw 4.8vw;
+    background-image: url("../../images/icon-vk_white.svg");
+  }
+
+  .info_row_img_telegram {
+    width: 4.8vw;
+    height: 4.8vw;
+    background-size: 4.8vw 4.8vw;
+    background-image: url("../../images/icon-telegram_white.svg");
+  }
+
+  .map_box {
+    height: 120vw;
+    gap: 1.66vw;
+    border-radius: 6vw;
+  }
+
+  .map_box iframe {
+    border-radius: 6vw;
   }
 }

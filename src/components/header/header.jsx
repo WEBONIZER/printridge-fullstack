@@ -72,11 +72,17 @@ function HeaderComponent() {
                 <div className={styles.mail_box}>
                     <div className={styles.phone_box}>
                         <img className={styles.phone_box_image} src={imageCall} alt="Трубка" />
-                        <p className={styles.phone_text}>+7 994 439-01-49</p>
+                        <NavLink
+                            className={styles.phone_text}
+                            to={`tel:+7 994 439-01-49`}
+                        >+7 994 439-01-49</NavLink>
                     </div>
                     <div className={styles.phone_box}>
                         <img className={styles.phone_box_image} src={imageEarth} alt="Трубка" />
-                        <p className={styles.phone_text}>sales@printridge.ru</p>
+                        <NavLink
+                            className={styles.phone_text}
+                            to={`mailto:sales@printridge.ru`}
+                        >sales@printridge.ru</NavLink>
                     </div>
                 </div>
                 <div className={styles.image}> </div>

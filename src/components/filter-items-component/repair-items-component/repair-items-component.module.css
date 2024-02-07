@@ -152,3 +152,57 @@
     font-size: 1.25vw;
   }
 }
+
+@media all and (max-width: 500px) {
+  .price_container {
+    margin: 0 auto 4.8vw;
+    width: 88.42%;
+    max-height: 86vw;
+    gap: 2.8vw;
+  }
+
+  .separator:nth-child(6),
+  .separator:nth-child(8),
+  .separator:nth-child(10) {
+    display: none;
+  }
+
+  .price_row {
+    width: 100%;
+    height: 12vw;
+    gap: 2.8vw;
+    border-radius: 3.2vw;
+  }
+
+  .model {
+    margin: auto 0 auto 4.8vw;
+    width: 34.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .type {
+    width: 26.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .device {
+    display: none;
+  }
+
+  .format {
+    margin: auto 4.8vw auto 0;
+    width: 18.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .speed {
+    display: none;
+  }
+
+  .capacity {
+    display: none;
+  }
+}
