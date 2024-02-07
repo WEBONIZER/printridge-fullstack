@@ -19,12 +19,12 @@
     padding: 0 0.69vw;
     height: 5.27vw;
     border-radius: 1.38vw;
-    border: 0.38vw solid #89919d;
+    border: 0.16vw solid #89919d;
     font-size: 1.25vw;
   }
 }
 
-@media all and (max-width: 1440px) {
+@media all and (max-width: 500px) {
   .input {
     padding: 0 4.8vw;
     width: 77.25%;
