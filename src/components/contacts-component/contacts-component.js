@@ -11,7 +11,7 @@ const ContactsComponent = () => {
                 </div>
                 <Link
                     className={styles.info_row}
-                    to={`tel:+7 994 439-01-49`}
+                    to={`tel:+79944390149`}
                 >
                     <div className={styles.info_row_img_call} />
                     <p className={styles.info_row_text}>+7 994 439-01-49</p>

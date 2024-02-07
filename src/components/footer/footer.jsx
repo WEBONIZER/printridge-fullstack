@@ -26,7 +26,7 @@ function FooterComponent() {
                     <p className={styles.contacts}>{'Контактная информация'}</p>
                     <Link
                         className={styles.phone}
-                        to={`tel:+7 994 439-01-49`}
+                        to={`tel:+79944390149`}
                     >{'+7 994 439-01-49'}</Link>
                     <Link
                         className={styles.email}

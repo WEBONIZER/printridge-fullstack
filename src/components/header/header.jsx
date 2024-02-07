@@ -74,7 +74,7 @@ function HeaderComponent() {
                         <img className={styles.phone_box_image} src={imageCall} alt="Трубка" />
                         <NavLink
                             className={styles.phone_text}
-                            to={`tel:+7 994 439-01-49`}
+                            to={`tel:+79944390149`}
                         >+7 994 439-01-49</NavLink>
                     </div>
                     <div className={styles.phone_box}>
