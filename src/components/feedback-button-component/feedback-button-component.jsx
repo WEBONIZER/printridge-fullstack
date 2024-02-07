@@ -13,8 +13,11 @@ const FeedbackButtonComponent = () => {
             </div>
             <Link
                 className={styles.button}
-                to={`${location.pathname}`}
-                state={{ background: location }}
+                //to={`${location.pathname}`}
+                //state={{ background: location }}
+                to="https://t.me/DenFoxPrint"
+                target="_blank"
+                rel="noopener noreferrer"
             >
                 Написать
             </Link>
