@@ -74,14 +74,14 @@ function RepairItemComponent() {
                             <p className={styles.blue_text}>Ремонт электроники</p>
                             <p className={styles.black_text}>{data.price.electronics}</p>
                         </div>
-                        {data.price.scaner !== null && <div className={styles.text_box}>
+                        <div className={styles.text_box}>
                             <p className={styles.blue_text}>Ремонт сканера</p>
-                            <p className={styles.black_text}>{data.price.scaner}</p>
-                        </div>}
-                        {data.price.adf !== null && <div className={styles.text_box}>
+                            <p className={styles.black_text}>{data.price.scaner ? data.price.scaner : '-'}</p>
+                        </div>
+                        <div className={styles.text_box}>
                             <p className={styles.blue_text}>Ремонт автоподатчика (ADF)</p>
-                            <p className={styles.black_text}>{data.price.adf}</p>
-                        </div>}
+                            <p className={styles.black_text}>{data.price.adf ? data.price.adf : '-'}</p>
+                        </div>
                     </div>
                 </div>
                 {img && (
@@ -93,14 +93,19 @@ function RepairItemComponent() {
                 )}
                 <h2 className={styles.header_mobile}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
             </div>
-            <p className={styles.text_container}>&nbsp;&nbsp;&nbsp;&nbsp;Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер! Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
-                Для заправки картриджей {`${data.vendor.toUpperCase()} ${data.model}`} используется самый лучший в мире тонер!
+            <p className={styles.text_container}>
+                Выше указаны цены за ремонт конкретного блока вашего аппарата, без стоимости запчастей! Это обусловлено тем, что цены на запчасти постоянно меняются.
+                Сколько будет стоить ремонт именно в вашем случае, мы сможем сказать после диагностики.<br /><br />
+                Для быстрой диагностики неисправностей, в случаях, когда устройство печатает с дефектами,
+                подготовьте, пожалуйста, скан с примером или фото в хорошем качестве. Это значительно ускорит процесс ремонта и, 
+                в большинстве случаев, сделает диагностику <strong>БЕСПЛАТНОЙ!</strong><br /><br />
+                Большую часть неисправностей вашей техники возможно решить <strong>на выезде</strong>, не забирая устройство. 
+                Потому, <strong>ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</strong> осуществляется
+                как на выезде (в офисе клиента), так и в стационаре (в нашей мастерской).<br /><br />
+                Для ремонта {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`} используются оригинальные запчасти. 
+                Но, по желанию клиента, возможна
+                установка совместимых. Качественные совместимые запчасти очень часто работают дольше и качественнее, нежели оригинал. Хотя, в ряде случаев, ресурс может быть меньше.
+                О всех возможных нюансах и последствиях мы вас непременно предупредим.<br /><br />
             </p>
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
         </div>
