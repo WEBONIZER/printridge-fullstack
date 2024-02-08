@@ -17,23 +17,23 @@ function RepairItemComponent() {
                     <div className={styles.specifications}>
                         <div className={styles.text_box}>
                             <p className={styles.blue_text}>Способ печати</p>
-                            <p className={styles.black_text}>{data.price.therm}</p>
+                            <p className={styles.black_text}>{data.type === 'mono' && 'Монохромный' || data.type === 'color' && 'Цветной'}</p>
                         </div>
                         <div className={styles.text_box}>
-                            <p className={styles.blue_text}>Вид</p>
-                            <p className={styles.black_text}>{data.price.duplex}</p>
+                            <p className={styles.blue_text}>Тип устройства</p>
+                            <p className={styles.black_text}>{data.device === 'printer' && 'Принтер' || data.device === 'MFU' && 'МФУ'}</p>
                         </div>
                         <div className={styles.text_box}>
                             <p className={styles.blue_text}>Формат печати</p>
-                            <p className={styles.black_text}>{data.price.reducer}</p>
+                            <p className={styles.black_text}>{data.format}</p>
                         </div>
                         <div className={styles.text_box}>
                             <p className={styles.blue_text}>Скорость</p>
-                            <p className={styles.black_text}>{data.price.laser}</p>
+                            <p className={styles.black_text}>{`${data.speed} стр./мин.`}</p>
                         </div>
                         <div className={styles.text_box}>
-                            <p className={styles.blue_text}>Нагрузка</p>
-                            <p className={styles.black_text}>{data.price.electronics}</p>
+                            <p className={styles.blue_text}>Максимальная нагрузка (стр.)</p>
+                            <p className={styles.black_text}>{`${data.capacity} в месяц`}</p>
                         </div>
                     </div>
                     <p className={styles.boxes_title}>Цены</p>
