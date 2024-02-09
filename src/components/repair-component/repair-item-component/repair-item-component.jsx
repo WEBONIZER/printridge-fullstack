@@ -2,13 +2,15 @@ import styles from './repair-item-component.module.css'
 import { useParams } from "react-router-dom";
 import { repair } from '../../../utils/repair';
 import Tabs from '../../tabs/tabs';
+import ImageRapairBox from '../image-repair-box/image-repair-box'
+import DescriptionRepairBox from '../description-repair-box/description-repair-box'
+import UseCartridges from '../use-cartridges/use-cartridges'
 
 function RepairItemComponent() {
-    const images = require.context('../../../images/repair', true);
-    const { model, vendor } = useParams()
-    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
-    const img = images.keys().includes(`./${vendor}/${model}.png`) ? images(`./${vendor}/${model}.png`) : null;
 
+    const { model } = useParams()
+    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
+    
     return (
         <div className={styles.container}>
             <div className={styles.img_desc_box}>
@@ -84,29 +86,11 @@ function RepairItemComponent() {
                         </div>
                     </div>
                 </div>
-                {img && (
-                    <img
-                        className={styles.image}
-                        src={img}
-                        alt={model}
-                    />
-                )}
+                <ImageRapairBox />
                 <h2 className={styles.header_mobile}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
             </div>
-            <p className={styles.text_container}>
-                Выше указаны цены за ремонт конкретного блока вашего аппарата, без стоимости запчастей! Это обусловлено тем, что цены на запчасти постоянно меняются.
-                Сколько будет стоить ремонт именно в вашем случае, мы сможем сказать после диагностики.<br /><br />
-                Для быстрой диагностики неисправностей, в случаях, когда устройство печатает с дефектами,
-                подготовьте, пожалуйста, скан с примером или фото в хорошем качестве. Это значительно ускорит процесс ремонта и, 
-                в большинстве случаев, сделает диагностику <strong>БЕСПЛАТНОЙ!</strong><br /><br />
-                Большую часть неисправностей вашей техники возможно решить <strong>на выезде</strong>, не забирая устройство. 
-                Потому, <strong>ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</strong> осуществляется
-                как на выезде (в офисе клиента), так и в стационаре (в нашей мастерской).<br /><br />
-                Для ремонта {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`} используются оригинальные запчасти. 
-                Но, по желанию клиента, возможна
-                установка совместимых. Качественные совместимые запчасти очень часто работают дольше и качественнее, нежели оригинал. Хотя, в ряде случаев, ресурс может быть меньше.
-                О всех возможных нюансах и последствиях мы вас непременно предупредим.<br /><br />
-            </p>
+            <DescriptionRepairBox />
+            {data.cartridges.length !== 0 && <UseCartridges model={model} cartridgesArray={data.cartridges} />}
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
         </div>
     );

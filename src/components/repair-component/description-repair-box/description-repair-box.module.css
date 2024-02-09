@@ -1,0 +1,21 @@
+.text_container {
+    margin: 50px 0;
+    width: 92.81%;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@media all and (max-width: 1440px) {
+    .text_container {
+        margin: 3.47vw 0;
+        font-size: 1.25vw;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .text_container {
+        width: 88.62%;
+        margin: 4.8vw auto 7.2vw;
+        font-size: 3.6vw;
+    }
+}
