@@ -139,7 +139,7 @@
     margin: 0;
     width: 100%;
     min-height: 6.8vw;
-    font-size: 5.6vw;
+    font-size: 5.4vw;
     font-weight: 500;
   }
 
@@ -152,6 +152,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 2.8vw;
+    overflow: hidden; /* Скрыть текст, который выходит за пределы элемента */
+    text-overflow: ellipsis; /*Добавить многоточие, когда текст обрезается*/
   }
 
   .text_box:nth-child(2) {
