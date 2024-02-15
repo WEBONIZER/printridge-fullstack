@@ -1,19 +1,20 @@
 .container {
-  margin: 0 0 50px 0;
-  width: 92.81%;
-  height: 120px;
+  margin: 16px 0;
+  width: 100%;
+  height: 160px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   border: 2px solid #89919d;
-  border-radius: 20px;
+  border-radius: 40px;
+  background-color: #fff;
 }
 
 .image {
   margin: auto 0 auto 16px;
   width: 120px;
-  height: 100%;
+  height: 90%;
   border-radius: 20px;
 }
 
@@ -29,7 +30,7 @@
   margin: 0;
   color: #0c0c0c;
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .price {
@@ -57,10 +58,10 @@
 
 @media all and (max-width: 1440px) {
   .container {
-    margin: 0 0 3.47vw 0;
+    margin: 1.11vw auto;
     height: 8.33vw;
     border: 0.13vw solid #89919d;
-    border-radius: 1.38vw;
+    border-radius: 2.77vw;
   }
 
   .image {
@@ -90,7 +91,39 @@
 }
 
 @media all and (max-width: 500px) {
-    .container {
-        margin: 0 0 7.2vw 0;
-      }
+  .container {
+    padding: 2.8vw 0;
+    margin: 2.8vw auto;
+    border-radius: 6vw;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .info_box {
+    margin: 0 auto 1.11vw;
+    width: 88.62%;
+    gap: 0.83vw;
+  }
+
+  .title {
+    font-size: 4.8vw;
+  }
+
+  .price {
+    font-size: 2.8vw;
+  }
+
+  .button {
+    width: 88.62%;
+    height: 6.44vw;
+    margin: auto 1.11vw auto 0;
+    border-radius: 6vw;
+    font-size: 3vw;
+  }
 }

@@ -1,0 +1,58 @@
+import styles from './repair-price-component.module.css'
+
+const RepairPriceComponent = ({ data }) => {
+    return (
+        <div className={styles.container}>
+            <p className={styles.boxes_title}>Цены</p>
+            <div className={styles.price_wrap_box}>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Диагностика</p>
+                    <p className={styles.price}>{data.price.diagnostics}</p>
+                </div>
+                {/*<div className={styles.separator}></div>*/}
+                <div className={styles.text_box}>
+                    <p className={styles.text}>ТО</p>
+                    <p className={styles.price}>{data.price.TO}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Замена роликов</p>
+                    <p className={styles.price}>{data.price.rollers}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт барабана</p>
+                    <p className={styles.price}>{data.price.drum}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт термоблока (печки)</p>
+                    <p className={styles.price}>{data.price.therm}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт дуплекса</p>
+                    <p className={styles.price}>{data.price.duplex}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт редуктора</p>
+                    <p className={styles.price}>{data.price.reducer}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт лазера</p>
+                    <p className={styles.price}>{data.price.laser}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт электроники</p>
+                    <p className={styles.price}>{data.price.electronics}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт сканера</p>
+                    <p className={styles.price}>{data.price.scaner ? data.price.scaner : '-'}</p>
+                </div>
+                <div className={styles.text_box}>
+                    <p className={styles.text}>Ремонт автоподатчика (ADF)</p>
+                    <p className={styles.price}>{data.price.adf ? data.price.adf : '-'}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default RepairPriceComponent

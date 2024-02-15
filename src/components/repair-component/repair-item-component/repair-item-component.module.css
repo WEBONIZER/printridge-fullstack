@@ -1,5 +1,6 @@
 .container {
   margin: 16px auto 0;
+  padding: 50px 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -10,8 +11,9 @@
 }
 
 .img_desc_box {
-  margin: 50px 0 0 0;
+  margin: 0 auto;
   width: 92.81%;
+  min-height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -84,11 +86,12 @@
 @media all and (max-width: 1440px) {
   .container {
     margin: 1.11vw auto 0;
+    padding: 3.47vw 0;
     border-radius: 2.77vw;
   }
 
   .img_desc_box {
-    margin: 3.47vw 0 0 0;
+    margin: 0 auto;
   }
 
   .price_wrap_box {
@@ -122,14 +125,14 @@
 
 @media all and (max-width: 500px) {
   .container {
+    padding: 4.8vw 0;
     margin: 2.8vw auto 0;
     border-radius: 6vw;
   }
 
   .img_desc_box {
-    margin: 4.8vw auto 0;
+    margin: 0 auto;
     width: 88.62%;
-    min-height: 161.6vw;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
