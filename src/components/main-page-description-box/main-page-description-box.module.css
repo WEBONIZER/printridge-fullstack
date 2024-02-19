@@ -140,7 +140,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .container {
     margin: 2.8vw 0 0 0;
     width: 100%;

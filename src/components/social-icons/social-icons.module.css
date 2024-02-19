@@ -35,7 +35,7 @@
     background-image: url("../../images/icon-telegram-hover.svg");
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .icons_box {
     height: 100%;
     display: flex;

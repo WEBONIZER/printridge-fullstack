@@ -15,7 +15,7 @@
     align-items: flex-start;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
     .main {
         width: 95.33%;
         flex-direction: column;

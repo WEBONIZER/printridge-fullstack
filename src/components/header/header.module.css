@@ -1,5 +1,5 @@
 .container {
-  margin: 1.66vw auto 0;
+  margin: 24px auto 0;
   width: 96.66%;
   height: 600px;
   display: flex;
@@ -128,7 +128,7 @@
 
 @media all and (max-width: 1440px) {
 .container {
-  margin: 1.66vw auto 0;
+  margin: 1.11vw auto 0;
   height: 41.66vw;
 }
 
@@ -186,9 +186,9 @@
 }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .container {
-    margin: 4.8vw auto 0;
+    margin: 2.8vw auto 0;
     width: 95.33%;
     height: 128.8vw;
     display: flex;

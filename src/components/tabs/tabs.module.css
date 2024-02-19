@@ -141,7 +141,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .tabcontent {
     margin: 4.8vw auto 0 auto;
     display: flex;

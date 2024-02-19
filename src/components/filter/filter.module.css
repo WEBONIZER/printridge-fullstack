@@ -24,7 +24,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .input {
     padding: 0 4.8vw;
     width: 77.25%;

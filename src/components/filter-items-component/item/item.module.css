@@ -121,7 +121,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .link {
     height: 10.2vw;
   }

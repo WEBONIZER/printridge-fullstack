@@ -133,7 +133,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .price_container {
     margin: 0 auto 4.8vw;
     width: 88.62%;

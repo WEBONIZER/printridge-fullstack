@@ -12,7 +12,7 @@
     gap: 35px;
 } 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
     .container {
         width: 100%;
         gap: 5px;

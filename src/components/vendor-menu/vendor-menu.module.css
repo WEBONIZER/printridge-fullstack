@@ -57,7 +57,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .navigation {
     width: 88.62%;
     height: 56.4vw;

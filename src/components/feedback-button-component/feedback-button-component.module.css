@@ -86,9 +86,9 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .container {
-    margin: 3.2vw auto;
+    margin: 2.8vw auto;
     width: 95.33%;
     height: 55.2vw;
     background-color: #005ce5;

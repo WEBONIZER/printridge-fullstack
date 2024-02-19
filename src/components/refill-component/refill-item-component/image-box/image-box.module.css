@@ -3,7 +3,7 @@
   height: 90.59%;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .image {
     width: 71.2vw;
     height: 71.2vw;

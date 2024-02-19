@@ -88,7 +88,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .main_menu_horisontal {
     margin: 6.8vw 0 0 0;
     display: flex;

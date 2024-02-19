@@ -84,7 +84,7 @@
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .container {
     padding: 4.8vw 0;
     margin: 2.8vw auto;

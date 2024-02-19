@@ -12,7 +12,7 @@
     }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
     .text_container {
         width: 88.62%;
         margin: 4.8vw auto 7.2vw;
