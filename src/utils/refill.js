@@ -7741,6 +7741,94 @@ export const refillData =
             devices: "FS-4100",
             refill_price: "1600 ₽",
             recovery_price: "Уточняйте"
+        },  
+        {
+            modelCart: "TK-5230K",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 2600,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5521 / M5021",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },  
+        {
+            modelCart: "TK-5230C",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 2200,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5521 / M5021",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },     
+        {
+            modelCart: "TK-5230M",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 2200,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5521 / M5021",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },       
+        {
+            modelCart: "TK-5230Y",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 2200,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5521 / M5021",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },   
+        {
+            modelCart: "TK-5240K",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 4000,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5526 / M5026",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },                
+        {
+            modelCart: "TK-5240C",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 3000,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5526 / M5026",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },                
+        {
+            modelCart: "TK-5240M",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 3000,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5526 / M5026",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
+        },                
+        {
+            modelCart: "TK-5240Y",
+            id: uuidv4(),
+            vendor: "kyocera",
+            resource: 3000,
+            examples: [],
+            chip: true,
+            devices: "Kyocera ECOSYS M5526 / M5026",
+            refill_price: "2200 ₽",
+            recovery_price: "Уточняйте"
         },
         {
             modelCart: "TK-3130",
@@ -8673,46 +8761,6 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "TK-5240K",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5240C",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5240M",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5240Y",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P5026cdn / P5026cdw / M5526cdn / M5526cdw",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
             modelCart: "TK-574K",
             id: uuidv4(),
             vendor: "kyocera",
@@ -8869,46 +8917,6 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5230K",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "M5521cdn / M5021cdn",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5230C",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "M5521cdn / M5021cdn",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5230M",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "M5521cdn / M5021cdn",
-            refill_price: "2200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-5230Y",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "M5521cdn / M5021cdn",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
         },
