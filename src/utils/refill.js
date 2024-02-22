@@ -5,36 +5,7 @@ export const refillData =
         {
             modelCart: "CF281A",
             resource: 10500,
-            examples: [
-                {
-                    title: 'Заправка CF281A',
-                    photo: [
-                        {
-                            item: 'CF218A.png',
-                        },
-                        {
-                            item: 'CF233A.png',
-                        }
-                    ],
-                    text: (
-                        <>
-                            &nbsp;&nbsp;&nbsp;&nbsp;<strong>Заправка картриджей hp CF281A</strong> процесс, знакомый многим. В интернете множество предложений по заправке данных картриджей, в том числе с очень заниженной ценой, что привлекает клиентов, конечно же.
-                            Помимо этого, в интернетах множество примеров как <strong>заправить картридж hp CF281A</strong>.
-                            Пример именно такой заправки вы видите на рисунке 1 сверху. Видно, что картридж заправлен самым дешёвым тонером и не вычищен бункер отработки от отработанного тонера. Собственно, неудовлетворительное качество печати и привело клиента в наш сервисный центр.
-                            В итоге, картридж был полностью вычищен от отработки, от старого тонера и перезаправлен нашим, проверенным тонером.
-                        </>
-                    ),
-                },
-                {
-                    title: 'Восстановление CF281A',
-                    photo: [
-                        {
-                            item: 'CF218A.png',
-                        },
-                    ],
-                    text: '',
-                },
-            ],
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "hp",
@@ -45,40 +16,7 @@ export const refillData =
         {
             modelCart: "CF281X",
             resource: 25000,
-            examples: [
-                {
-                    title: 'Заправка CF281X',
-                    photo: [
-                        {
-                            item: 'CF218A.png',
-                        },
-                        {
-                            item: 'CF233A.png',
-                        }
-                    ],
-                    text: (
-                        <>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<strong>Заправка картриджей hp CF281X</strong> процесс, знакомый многим. В интернете множество предложений по заправке данных картриджей, в том числе с очень заниженной ценой, что привлекает клиентов, конечно же.
-                            </p>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;Помимо этого, в интернетах множество примеров как <strong>заправить картридж hp CF281X</strong>.
-                                Пример именно такой заправки вы видите на рисунке 1 сверху. Видно, что картридж заправлен самым дешёвым тонером и не вычищен бункер отработки от отработанного тонера. Собственно, неудовлетворительное качество печати и привело клиента в наш сервисный центр.
-                                В итоге, картридж был полностью вычищен от отработки, от старого тонера и перезаправлен нашим, проверенным тонером.
-                            </p>
-                        </>
-                    ),
-                },
-                {
-                    title: 'Восстановление CF281X',
-                    photo: [
-                        {
-                            item: 'CF218A.png',
-                        },
-                    ],
-                    text: '',
-                },
-            ],
+            examples: [],
             chip: false,
             id: uuidv4(),
             vendor: "hp",
@@ -7741,7 +7679,7 @@ export const refillData =
             devices: "FS-4100",
             refill_price: "1600 ₽",
             recovery_price: "Уточняйте"
-        },  
+        },
         {
             modelCart: "TK-5230K",
             id: uuidv4(),
@@ -7752,7 +7690,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5521 / M5021",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },  
+        },
         {
             modelCart: "TK-5230C",
             id: uuidv4(),
@@ -7763,7 +7701,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5521 / M5021",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },     
+        },
         {
             modelCart: "TK-5230M",
             id: uuidv4(),
@@ -7774,7 +7712,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5521 / M5021",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },       
+        },
         {
             modelCart: "TK-5230Y",
             id: uuidv4(),
@@ -7785,7 +7723,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5521 / M5021",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },   
+        },
         {
             modelCart: "TK-5240K",
             id: uuidv4(),
@@ -7796,7 +7734,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5526 / M5026",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },                
+        },
         {
             modelCart: "TK-5240C",
             id: uuidv4(),
@@ -7807,7 +7745,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5526 / M5026",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },                
+        },
         {
             modelCart: "TK-5240M",
             id: uuidv4(),
@@ -7818,7 +7756,7 @@ export const refillData =
             devices: "Kyocera ECOSYS M5526 / M5026",
             refill_price: "2200 ₽",
             recovery_price: "Уточняйте"
-        },                
+        },
         {
             modelCart: "TK-5240Y",
             id: uuidv4(),
