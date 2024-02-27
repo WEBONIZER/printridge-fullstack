@@ -1,49 +1,17 @@
 import styles from './tabs.module.css';
 import { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { useParams } from "react-router-dom";
+import { NavLink } from 'react-router-dom';
+import MediaSlider from '../media-slider/media-slider'
 
-function TabContent({ title, photo, text }) {
-
-    const location = useLocation();
-    const { model, vendor } = useParams();
+function TabContent({ title, photo, text, video }) {
 
     return (
         <div className={styles.tabcontent}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.text}>{text}</p>
             <div className={styles.images_box}>
-                {location.pathname.includes('refill') ? photo.map((i, key) => {
-                    const images = require.context('../../images/examples/refill', true);
-                    const img = images.keys().includes(`./${vendor}/${model}/${i.item}`)
-                        ?
-                        images(`./${vendor}/${model}/${i.item}`) : null;
-
-                    return (
-                        <img
-                            className={styles.image}
-                            src={img}
-                            alt={'фото'}
-                            key={key}
-                        />
-                    );
-                })
-                    :
-                    photo.map((i, key) => {
-                        const images = require.context('../../images/examples/repair', true);
-                        const img = images.keys().includes(`./${vendor}/${model}/${i.item}`) ? images(`./${vendor}/${model}/${i.item}`) : null;
-
-                        return (
-                            <img
-                                className={styles.image}
-                                src={img}
-                                alt={'фото'}
-                                key={key}
-                            />
-                        );
-                    })
-                }
             </div>
+            <MediaSlider photos={photo} videos={video} />
         </div>
     );
 }

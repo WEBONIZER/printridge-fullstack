@@ -217,7 +217,7 @@ export const refillData =
             vendor: "hp",
             devices: "LJ Pro M402 / M426",
             refill_price: "500 ₽",
-            recovery_price: "1000"
+            recovery_price: "1200"
         },
         {
             modelCart: "CF226X",
@@ -226,8 +226,28 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M402 / M426",
-            refill_price: "700 ₽",
+            refill_price: "800 ₽",
+            recovery_price: "1500"
+        },
+        {
+            modelCart: "CF259A",
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "LJ Pro M404 / M428",
+            refill_price: "500 ₽",
             recovery_price: "1200"
+        },
+        {
+            modelCart: "CF259X",
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "LJ Pro M404 / M428",
+            refill_price: "800 ₽",
+            recovery_price: "1500"
         },
         {
             modelCart: "CF214A",

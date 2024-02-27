@@ -242,6 +242,36 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "LaserJet M404",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "CF259A",
+            "CF259X",
+        ],
+        device: "printer",
+        vendor: "hp",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "LaserJet M428",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "CF259A",
+            "CF259X",
+        ],
+        device: "MFU",
+        vendor: "hp",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "LaserJet P3015",
         format: "A4",
         speed: 40,
@@ -4119,6 +4149,7 @@ export const repairPrintersPrice = [
                         item: 'IMG_20240226_155150_308.jpg',
                     },
                 ],
+                video: [],
                 text: (
                     <>
                         <p>
@@ -4160,6 +4191,7 @@ export const repairPrintersPrice = [
                         item: 'IMG_20240226_155150_308.jpg',
                     },
                 ],
+                video: [],
                 text: (
                     <>
                         <p>
@@ -4807,6 +4839,7 @@ export const repairPrintersPrice = [
                         item: 'IMG_20240220_140834_660.png',
                     },
                 ],
+                video: [],
                 text: (
                     <>
                         <p>
