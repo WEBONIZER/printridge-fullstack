@@ -4251,11 +4251,41 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "FS-1135MFP",
+        format: "A4",
+        speed: 28,
+        capacity: 20000,
+        cartridges: [
+            "TK-1140"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },    
+    {
+        model: "FS-1035MFP",
+        format: "A4",
+        speed: 28,
+        capacity: 20000,
+        cartridges: [
+            "TK-1140"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "ECOSYS M2035",
         format: "A4",
         speed: 35,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-1140"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4267,7 +4297,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-1140"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
