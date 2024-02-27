@@ -7991,21 +7991,12 @@ export const refillData =
         {
             modelCart: "TK-1170",
             id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: false,
-            devices: "M2040dn / M2540dn / M2640idw",
-            refill_price: "1100 ₽",
-            recovery_price: "-"
-        },
-        {
-            modelCart: "TK-1170",
-            id: uuidv4(),
+            resource: 7200,
             vendor: "kyocera",
             examples: [],
             chip: true,
             devices: "M2040dn / M2540dn / M2640idw",
-            refill_price: "1300 ₽",
+            refill_price: "1400 ₽",
             recovery_price: "-"
         },
         {

@@ -4097,6 +4097,34 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "M2040",
+        format: "A4",
+        speed: 40,
+        capacity: 50000,
+        cartridges: [
+            "TK-1170"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "M2540",
+        format: "A4",
+        speed: 40,
+        capacity: 50000,
+        cartridges: [
+            "TK-1170"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "ECOSYS M2530",
         format: "A4",
         speed: 30,
@@ -4373,6 +4401,34 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "TASKalfa 180",
+        format: "A3",
+        speed: 18,
+        capacity: 20000,
+        cartridges: [
+            "TK-435"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "TASKalfa 181",
+        format: "A3",
+        speed: 18,
+        capacity: 20000,
+        cartridges: [
+            "TK-435"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "TASKalfa 2201",
         format: "A3",
         speed: 22,
@@ -4385,23 +4441,27 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 2200",
+        model: "TASKalfa 221",
         format: "A3",
         speed: 22,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-435"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
         price: {},
         examples: [],
-    },
+    },    
     {
-        model: "TASKalfa 181",
+        model: "TASKalfa 220",
         format: "A3",
-        speed: 18,
+        speed: 22,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-435"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
