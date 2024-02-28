@@ -4545,7 +4545,7 @@ export const repairPrintersPrice = [
         type: "mono",
         price: {},
         examples: [
-            {
+            { 
                 title: 'Восстановление Kyocera TASKAlfa 181',
                 photo: [
                     {
