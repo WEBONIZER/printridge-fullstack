@@ -1,84 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://printridge.ru/</loc>
+  <loc>https://printridge.ru/</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/hp</loc>
+  <loc>https://printridge.ru/refill/hp</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/canon</loc>
+  <loc>https://printridge.ru/refill/canon</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/samsung</loc>
+  <loc>https://printridge.ru/refill/samsung</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/xerox</loc>
+  <loc>https://printridge.ru/refill/xerox</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/kyocera</loc>
+  <loc>https://printridge.ru/refill/kyocera</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/oki</loc>
+  <loc>https://printridge.ru/refill/oki</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/minolta</loc>
+  <loc>https://printridge.ru/refill/minolta</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/refill/sharp</loc>
+  <loc>https://printridge.ru/refill/sharp</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/hp</loc>
+  <loc>https://printridge.ru/repair/hp</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/canon</loc>
+  <loc>https://printridge.ru/repair/canon</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/samsung</loc>
+  <loc>https://printridge.ru/repair/samsung</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/xerox</loc>
+  <loc>https://printridge.ru/repair/xerox</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/kyocera</loc>
+  <loc>https://printridge.ru/repair/kyocera</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/oki</loc>
+  <loc>https://printridge.ru/repair/oki</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/minolta</loc>
+  <loc>https://printridge.ru/repair/minolta</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/epson</loc>
+  <loc>https://printridge.ru/repair/epson</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/repair/sharp</loc>
+  <loc>https://printridge.ru/repair/sharp</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 <url>
-  <loc>http://printridge.ru/contacts</loc>
+  <loc>https://printridge.ru/contacts</loc>
   <lastmod>2024-02-09</lastmod>
 </url>
 </urlset>

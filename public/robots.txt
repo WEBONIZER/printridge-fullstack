@@ -2,5 +2,5 @@
 User-agent: *
 Disallow:
 
-Host: http://printridge.ru/
-Sitemap: http://printridge.ru/sitemap.xml
+Host: https://printridge.ru/
+Sitemap: https://printridge.ru/sitemap.xml
