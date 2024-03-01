@@ -22,8 +22,6 @@ const FeedbackButtonComponent = () => {
                 Написать
             </Link>
         </div>
-
-
     )
 }
 

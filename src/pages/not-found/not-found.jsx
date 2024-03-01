@@ -1,14 +1,13 @@
-import { NavLink } from 'react-router-dom'
+import styles from './not-found.module.css'
 
 function NotFound404() {
 
     return (
-        <>
-            <p>
-                NotFound404
-                <NavLink to='/' >Перейти на главную страницу</NavLink>
-            </p>
-        </>
+        <div className={styles.container}>
+            <div className={styles.info_box}>
+                <h2 className={styles.title}>404 - Страница не найдена</h2>
+            </div>
+        </div>
     );
 }
 
