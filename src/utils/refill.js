@@ -2463,6 +2463,26 @@ export const refillData =
             recovery_price: "2450 ₽",
         },
         {
+            modelCart: "052",
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "canon",
+            devices: "LBP212 / LBP214 / LBP215 / MF421 / MF426 / MF428 / MF429",
+            refill_price: "500 ₽",
+            recovery_price: "1200"
+        },
+        {
+            modelCart: "052H",
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "canon",
+            devices: "LBP212 / LBP214 / LBP215 / MF421 / MF426 / MF428 / MF429",
+            refill_price: "800 ₽",
+            recovery_price: "1500"
+        },
+        {
             modelCart: "723M",
             examples: [],
             resource: 8500,

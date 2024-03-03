@@ -2013,6 +2013,153 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "MF421",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "MFU",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [
+            {
+                title: 'Ремонт Canon MF421',
+                photo: [
+                    {
+                        item: 'IMG_20240301_135556_5251595766230.jpg',
+                    },
+                    {
+                        item: 'IMG_20240301_135605_699-614528615.jpg',
+                    },
+                    {
+                        item: 'IMG_20240301_135735_577347337782.jpg',
+                    },
+                    {
+                        item: 'IMG_20240301_140047_538-527769413.jpg',
+                    },
+                    {
+                        item: 'IMG_20240301_141156_420-1508218095.jpg',
+                    },
+                    {
+                        item: 'IMG_20240301_141253_224345880657.jpg',
+                    },
+                ],
+                video: [
+                    'https://www.youtube.com/embed/Qf3vQ-JmKhs'
+                ],
+                text: (
+                    <>
+                        <p>
+                            В данном примере мы рассказываем о восстановлении термоблока Canon MF421
+                        </p>
+                        <p>
+                            Были выполнены замена термоплёнки, замена прижимного резинового вала, техническое обслуживание.<br/><br/>
+                            <strong>Замена термоплёнки на Canon MF421</strong> выполняется в течение 20 - 30 минут.
+                            Все перечисленные работы возможно выполнить прямо в офисе у клиента, как и было сделано в данном случае. Для произведения работ необходимо наличие пустого стола.
+                        </p>
+                        <p>
+                            За подробностями пишите или звоните нам по указанным контактам.
+                        </p>
+                    </>
+                ),
+            },
+        ],
+    },
+    {
+        model: "MF426",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "MFU",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "MF428",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "MFU",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "MF429",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "MFU",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "LBP212",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "printer",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "LBP214",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "printer",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "LBP215",
+        format: "A4",
+        speed: 38,
+        capacity: 80000,
+        cartridges: [
+            "052",
+            "052H",
+        ],
+        device: "printer",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "8285",
         format: "A3",
         speed: 85,
