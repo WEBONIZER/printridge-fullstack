@@ -17,17 +17,17 @@ const PhotosComponent = ({ imgagesNameArr }) => {
         location.pathname.includes('refill') ?
             imgagesNameArr.map((i, key) => {
                 const img = {
-                    src: require(`../../../images/examples/refill/${vendor}/${model}/${i.item}`),
+                    src: `https://storage.yandexcloud.net/printridge/examples/refill/${vendor}/${model}/${i.item}`,
                     alt: i.item,
-                 };
+                };
                 imagesArr.push(img);
 
             }) :
             imgagesNameArr.map((i, key) => {
                 const img = {
-                    src: require(`../../../images/examples/repair/${vendor}/${model}/${i.item}`),
+                    src: `https://storage.yandexcloud.net/printridge/examples/repair/${vendor}/${model}/${i.item}`,
                     alt: i.item,
-                 };
+                };
                 imagesArr.push(img);
             })
 
@@ -43,7 +43,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
     const prevSlide = () => {
         setCurrentImg(currentImg === 0 ? imagesArr.length - 1 : currentImg - 1);
     };
-    
+
     return (
         <div className={styles.container}>
             <button

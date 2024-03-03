@@ -5027,16 +5027,16 @@ export const repairPrintersPrice = [
                 title: 'Kyocera ECOSYS M5526 мажет',
                 photo: [
                     {
-                        item: 'IMG_20240220_141345_302.png',
+                        item: 'IMG_20240220_141345_302.jpg',
                     },
                     {
-                        item: 'IMG_20240220_141400_557_14-27-43.png',
+                        item: 'IMG_20240220_141400_557_14-27-43.jpg',
                     },
                     {
-                        item: 'IMG_20240220_140838_503.png',
+                        item: 'IMG_20240220_140838_503.jpg',
                     },
                     {
-                        item: 'IMG_20240220_140834_660.png',
+                        item: 'IMG_20240220_140834_660.jpg',
                     },
                 ],
                 video: [],

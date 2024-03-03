@@ -49,7 +49,7 @@ function RepairItemComponent() {
             </div>
             <RepairPriceComponent data={data} />
             <DescriptionRepairBox />
-            {data.cartridges.length !== 0 && <UseCartridges model={model} cartridgesArray={data.cartridges} />}
+            {data.cartridges.length !== 0 && <UseCartridges cartridgesArray={data.cartridges} />}
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
         </div>
     );
