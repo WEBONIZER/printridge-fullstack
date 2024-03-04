@@ -1,22 +1,10 @@
 import styles from './tabs.module.css';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import MediaSlider from '../media-slider/media-slider'
-
-function TabContent({ title, photo, text, video }) {
-
-    return (
-        <div className={styles.tabcontent}>
-            <h3 className={styles.title}>{title}</h3>
-            <p className={styles.text}>{text}</p>
-            <div className={styles.images_box}>
-            </div>
-            <MediaSlider photos={photo} videos={video} />
-        </div>
-    );
-}
+import TabContent from './tab-contenet/tab-contenet'
 
 function Tabs({ items }) {
+    
     const [active, setActive] = useState(0);
 
     const openTab = e => setActive(e.target.dataset.index);

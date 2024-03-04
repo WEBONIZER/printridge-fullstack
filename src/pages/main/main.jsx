@@ -6,8 +6,8 @@ const Main = () => {
 
     return (
         <div className={styles.main_box}>
-            {mainDescriptionBoxes.map((i) => (
-                <MainPageDescriptionBox title={i.title} description={i.description} name={i.name} />
+            {mainDescriptionBoxes.map((i, key) => (
+                <MainPageDescriptionBox title={i.title} description={i.description} name={i.name} key={key} />
             ))}
         </div>
     );

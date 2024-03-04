@@ -168,7 +168,7 @@
     width: 12vw;
     height: 12vw;
     background-image: url("../../images/printer-with-plus.svg");
-    background-size: 100% 100%;
+    background-size: 12vw 12vw;
     object-fit: cover;
     object-position: center;
   }
@@ -179,7 +179,29 @@
     width: 12vw;
     height: 12vw;
     background-image: url("../../images/image-to-repair.svg");
-    background-size: 100% 100%;
+    background-size: 12vw 12vw;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .link_image_to_refill_mobile:hover {
+    display: block;
+    margin: 4.8vw 4.8vw 0 4.8vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../../images/main-blocks-image-hover.svg");
+    background-size: 12vw 12vw;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .link_image_to_repair_mobile:hover {
+    display: block;
+    margin: 4.8vw 4.8vw 0 4.8vw;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../../images/main-blocks-image-hover.svg");
+    background-size: 12vw 12vw;
     object-fit: cover;
     object-position: center;
   }
