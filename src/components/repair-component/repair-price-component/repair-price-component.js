@@ -1,6 +1,25 @@
 import styles from './repair-price-component.module.css'
+import { useEffect } from 'react';
+import { useParams } from "react-router-dom";
 
 const RepairPriceComponent = ({ data }) => {
+
+    const { vendor, model } = useParams()
+
+    useEffect(() => {
+        document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()}`;
+        document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()}`);
+        document.querySelector('meta[name="description"]').setAttribute('content', `
+        Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
+        Диагностика ${data.price.diagnostics}
+        ТО ${data.price.TO}
+        Замена роликов ${data.price.rollers}
+        Ремонт барабана ${data.price.drum}
+        Ремонт термоблока (печки) ${data.price.therm}
+        Ремонт электроники ${data.price.electronics}
+        `);        
+    }, [vendor, model]);
+
     return (
         <div className={styles.container}>
             <p className={styles.boxes_title}>Цены</p>
@@ -9,7 +28,6 @@ const RepairPriceComponent = ({ data }) => {
                     <p className={styles.text}>Диагностика</p>
                     <p className={styles.price}>{data.price.diagnostics}</p>
                 </div>
-                {/*<div className={styles.separator}></div>*/}
                 <div className={styles.text_box}>
                     <p className={styles.text}>ТО</p>
                     <p className={styles.price}>{data.price.TO}</p>

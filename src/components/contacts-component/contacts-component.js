@@ -1,7 +1,15 @@
 import styles from './contacts-component.module.css'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const ContactsComponent = () => {
+const ContactsComponent = () => {    
+
+    useEffect(() => {
+        document.title = "Компания ПРИНТРИДЖ, контакты";
+        document.querySelector('meta[name="title"]').setAttribute('content', `Компания ПРИНТРИДЖ, контакты`);
+        document.querySelector('meta[name="description"]').setAttribute('content', `Информация о компании ПРИНТРИДЖ, контакты`);
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.info_contacts}>

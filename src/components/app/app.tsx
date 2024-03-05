@@ -14,7 +14,7 @@ import RepairItemComponent from '../../components/repair-component/repair-item-c
 import NotFound404 from '../../pages/not-found/not-found'
 import MainMenu from '../main-menu/main-menu'
 
-const App: React.FC = () => {
+const App: React.FC = () => {  
   
   const location = useLocation();
   const background = location.state && location.state.background;
