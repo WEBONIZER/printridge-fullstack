@@ -13,6 +13,7 @@ import RefillItemComponent from '../../components/refill-component/refill-item-c
 import RepairItemComponent from '../../components/repair-component/repair-item-component/repair-item-component'
 import NotFound404 from '../../pages/not-found/not-found'
 import MainMenu from '../main-menu/main-menu'
+import SitemapGenerator from '../sitemap-generator/sitemap-generator'
 
 const App: React.FC = () => {  
   
@@ -25,6 +26,7 @@ const App: React.FC = () => {
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
+          <Route path="/map" element={<SitemapGenerator />} />
           <Route path="/repair/:vendor" element={<RepairComponent />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillComponent />} />
