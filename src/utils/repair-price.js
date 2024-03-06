@@ -3202,7 +3202,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 28,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "106R02778"
+        ],
         device: "printer",
         vendor: "xerox",
         type: "mono",
@@ -3382,7 +3384,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 28,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "106R02778"
+        ],
         device: "MFU",
         vendor: "xerox",
         type: "mono",

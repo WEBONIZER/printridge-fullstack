@@ -4545,16 +4545,6 @@ export const refillData =
             recovery_price: "Уточняйте",
         },
         {
-            modelCart: "106R02778",
-            examples: [],
-            chip: false,
-            id: uuidv4(),
-            vendor: "xerox",
-            devices: "Phaser 3052 / Phaser 3260 / WC 3215 / WC 3225",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
-        },
-        {
             modelCart: "106R02782",
             examples: [],
             chip: false,
@@ -4566,7 +4556,52 @@ export const refillData =
         },
         {
             modelCart: "106R02778",
-            examples: [],
+            resource: 3000,
+            examples: [
+                {
+                    title: 'Заправляем Xerox 106R02778',
+                    photo: [
+                        {
+                            item: '106R0277800-02-39.jpg',
+                        },
+                        {
+                            item: '106R0277800-01-04.jpg',
+                        },
+                        {
+                            item: '106R0277800-02-14.jpg',
+                        },
+                        {
+                            item: '106R0277800-01-21.jpg',
+                        },
+                        {
+                            item: '106R0277800-01-32.jpg',
+                        },
+                        {
+                            item: '106R0277800-02-36.jpg',
+                        },
+                    ],
+                    video: [
+                        'https://www.youtube.com/embed/Va0N8MPGdDU'
+                    ],
+                    text: (
+                        <>
+                            <p>
+                                Процесс заправки картридж <strong>Xerox 106R02778</strong> ничем не примечателен и максимально прост. Если ваш принтер перепрошит и замена чипа не требуется,
+                                старый чип можно не удалять, а просто заклеить его скотчем, как показано на фото.
+                            </p>
+                            <p>
+                                Сначала картридж разбирается, если это можно так назвать)) На самом деле, достаточно снять правую крышку. Если запайки не срезаны, их можно 
+                                легко удалить подручными средствами. В нашем случае картридж уже вскрывался и крышка держится на защёлках, что немного упрощает её снятие.
+                                Далее извлекаем пробку, засыпаем тонер, закрываем и всё готово. Протираем вал проявки и картридж готов ехать к клиенту.<br /><br />
+                                <strong>Заправка картриджа Xerox 106R02778</strong> возможна как в нашей мастерской, так и на выезде.
+                            </p>
+                            <p>
+                                За подробностями пишите или звоните нам по указанным контактам.
+                            </p>
+                        </>
+                    ),
+                }
+            ],
             chip: true,
             id: uuidv4(),
             vendor: "xerox",
@@ -7868,22 +7903,13 @@ export const refillData =
         },
         {
             modelCart: "TK-3170",
+            resource: 15000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
             chip: false,
-            devices: "P3050dn / P3050dn / P3055dn / P3060dn",
+            devices: "P3050 / P3055dn / P3060dn",
             refill_price: "1900 ₽",
-            recovery_price: "-"
-        },
-        {
-            modelCart: "TK-3170",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P3050dn / P3050dn / P3055dn / P3060dn",
-            refill_price: "2100 ₽",
             recovery_price: "-"
         },
         {
@@ -8048,22 +8074,13 @@ export const refillData =
         },
         {
             modelCart: "TK-1140",
+            resource: 7200,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
             chip: true,
             devices: "FS-1035MFP / FS-1135MFP / M2035 / M2535",
             refill_price: "1200 ₽",
-            recovery_price: "Уточняйте"
-        },
-        {
-            modelCart: "TK-1150",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: false,
-            devices: "M2135dn / M2635dn / M2735dw / P2235dn / P2235dw",
-            refill_price: "900 ₽",
             recovery_price: "Уточняйте"
         },
         {
@@ -8092,16 +8109,6 @@ export const refillData =
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
-            chip: false,
-            devices: "P2040dn / P2040dw",
-            refill_price: "1100 ₽",
-            recovery_price: "-"
-        },
-        {
-            modelCart: "TK-1160",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
             chip: true,
             devices: "P2040dn / P2040dw",
             refill_price: "1300 ₽",
@@ -8109,22 +8116,13 @@ export const refillData =
         },
         {
             modelCart: "TK-1200",
+            resource: 3000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
             chip: false,
             devices: "P2335dw / M2235dn / M2735dn / M2835dw",
             refill_price: "1100 ₽",
-            recovery_price: "-"
-        },
-        {
-            modelCart: "TK-1200",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
-            chip: true,
-            devices: "P2335dw / M2235dn / M2735dn / M2835dw",
-            refill_price: "1300 ₽",
             recovery_price: "-"
         },
         {
