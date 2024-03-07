@@ -13,7 +13,7 @@ function RefillItemComponent() {
 
     useEffect(() => {
         document.title = `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()}`;
-        document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()}`);
+        document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`);
     }, [vendor, model]);
 
