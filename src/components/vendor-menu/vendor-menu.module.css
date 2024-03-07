@@ -5,8 +5,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 24px;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -43,7 +42,7 @@
 @media all and (max-width: 1440px) {
   .navigation {
     height: 12.77vw;
-    gap: 1.66vw;
+    gap: auto 1.11vw;
   }
 
   .item_link {

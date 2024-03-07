@@ -6,7 +6,7 @@ function VendorMenu() {
     const { vendor } = useParams()
 
     return (
-        <nav className={style.navigation}>
+        <nav className={style.navigation}> 
             <NavLink
                 to='/refill/hp'
                 className={vendor === 'hp' ? style.item_link_active : style.item_link}
