@@ -15,9 +15,10 @@ function RepairItemComponent() {
     return (
         <div>
             <div className={styles.container}>
+            <h2 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
                 <div className={styles.img_desc_box}>
                     <div className={styles.price_container}>
-                        <h2 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
+                        
                         <div className={styles.specifications}>
                             <div className={styles.text_box}>
                                 <p className={styles.blue_text}>Способ печати</p>

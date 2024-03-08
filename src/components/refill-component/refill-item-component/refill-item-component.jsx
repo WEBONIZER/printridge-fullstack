@@ -20,9 +20,9 @@ function RefillItemComponent() {
     return (
         <div>
             <div className={styles.container}>
+                <h2 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
                 <div className={styles.img_desc_box}>
                     <div className={styles.left_box}>
-                        <h2 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
                         <div className={styles.text_box}>
                             <p className={styles.blue_text}>Совместимые модели</p>
                             <p className={styles.black_text}>{data.devices}</p>

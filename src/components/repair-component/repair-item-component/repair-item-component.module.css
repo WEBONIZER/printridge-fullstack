@@ -39,8 +39,8 @@
 }
 
 .header {
-  margin: 0;
-  width: 100%;
+  margin: 0 auto;
+  width: 92.81%;
   height: 50px;
   font-size: 46px;
   font-weight: 500;

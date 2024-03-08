@@ -4595,16 +4595,6 @@ export const refillData =
             recovery_price: "Уточняйте",
         },
         {
-            modelCart: "106R02782",
-            examples: [],
-            chip: false,
-            id: uuidv4(),
-            vendor: "xerox",
-            devices: "Phaser 3052 / Phaser 3260 / WC 3215 / WC 3225",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
-        },
-        {
             modelCart: "106R02778",
             resource: 3000,
             examples: [
