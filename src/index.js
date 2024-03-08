@@ -8,9 +8,6 @@ import "./index.css";
 import App from "./components/app/app";
 import { rootReducer } from './services/reducers/root-reducer';
 
-
-
-
 const composeEnhancers =
   typeof window === 'object' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
     ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__({})

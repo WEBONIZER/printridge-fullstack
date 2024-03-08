@@ -7,7 +7,7 @@ const RepairPriceComponent = ({ data }) => {
     const { vendor, model } = useParams()
 
     useEffect(() => {
-        document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()}`;
+        document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `
         Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
