@@ -20,9 +20,9 @@ const LaptopItem: FC = ({ vend, processorVendor, model, display, ram, ramType }:
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.processorVendor}>{processorVendor}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.display}>{display}</p>
+                <p className={styles.display}>{`${display} "`}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.ram}>{ram}</p>
+                <p className={styles.ram}>{`${ram} Гб`}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.ramType}>{ramType}</p>
             </div>
