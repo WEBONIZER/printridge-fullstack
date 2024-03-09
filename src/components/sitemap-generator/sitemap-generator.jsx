@@ -1,6 +1,7 @@
 import styles from './sitemap-generator.module.css'
 import { repairPrintersPrice } from '../../utils/repair-price'
 import { refillData } from '../../utils/refill'
+import { laptopRepairPrice } from '../../utils/laptops-price'
 
 const SitemapGenerator = () => {
 
@@ -11,7 +12,7 @@ const SitemapGenerator = () => {
             {refillData.map((i, key) =>
                 <p>
                     {`<url>
-                        <loc>https://printridge.ru/${i.vendor}/${i.modelCart}</loc>
+                        <loc>https://printridge.ru/refill/${i.vendor}/${i.modelCart}</loc>
                         <lastmod>${lastmod}</lastmod>
                     </url>
                     `}
@@ -20,7 +21,16 @@ const SitemapGenerator = () => {
             {repairPrintersPrice.map((i, key) =>
                 <p>
                     {`<url>
-                        <loc>https://printridge.ru/${i.vendor}/${i.model.replace(/\s/g, '')}</loc>
+                        <loc>https://printridge.ru/repair/${i.vendor}/${i.model.replace(/\s/g, '')}</loc>
+                        <lastmod>${lastmod}</lastmod>
+                    </url>
+                    `}
+                </p>
+            )}
+            {laptopRepairPrice.map((i, key) =>
+                <p>
+                    {`<url>
+                        <loc>https://printridge.ru/remont-noutbukov/${i.vendor}/${i.model.replace(/\s/g, '')}</loc>
                         <lastmod>${lastmod}</lastmod>
                     </url>
                     `}

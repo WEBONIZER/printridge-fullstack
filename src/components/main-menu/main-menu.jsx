@@ -42,6 +42,13 @@ function MainMenu({ position }) {
             </NavLink>
             <NavLink
                 className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
+                to="/remont-noutbukov/hp"
+                onClick={handleClick}
+            >
+                Ремонт ноутбуков
+            </NavLink>
+            <NavLink
+                className={position === 'header' && styles.link || position === 'footer' && styles.link_footer}
                 to="/contacts"
                 onClick={handleClick}
             >

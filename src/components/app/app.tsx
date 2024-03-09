@@ -14,6 +14,8 @@ import RepairItemComponent from '../../components/repair-component/repair-item-c
 import NotFound404 from '../../pages/not-found/not-found'
 import MainMenu from '../main-menu/main-menu'
 import SitemapGenerator from '../sitemap-generator/sitemap-generator'
+import RepairLaptopsComponent from '../repair-laptops-component/repair-laptops-component'
+import RepairLaptopsItemComponent from '../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component'
 
 const App: React.FC = () => {  
   
@@ -31,6 +33,8 @@ const App: React.FC = () => {
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillComponent />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemComponent />} />
+          <Route path="/remont-noutbukov/:vendor" element={<RepairLaptopsComponent />} />
+          <Route path="/remont-noutbukov/:vendor/:model" element={<RepairLaptopsItemComponent />} />
           <Route path="/contacts" element={<ContactsComponent />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
