@@ -4234,6 +4234,48 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "P3050",
+        format: "A4",
+        speed: 50,
+        capacity: 200000,
+        cartridges: [
+            "TK-3170"
+        ],
+        device: "printer",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "P3055",
+        format: "A4",
+        speed: 50,
+        capacity: 200000,
+        cartridges: [
+            "TK-3170"
+        ],
+        device: "printer",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "P3060",
+        format: "A4",
+        speed: 50,
+        capacity: 200000,
+        cartridges: [
+            "TK-3170"
+        ],
+        device: "printer",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "FS-4300",
         format: "A4",
         speed: 60,
