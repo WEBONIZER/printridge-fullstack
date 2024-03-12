@@ -8016,8 +8016,63 @@ export const refillData =
             vendor: "kyocera",
             examples: [],
             chip: false,
-            devices: "P3045dn / P3050dn / P3055dn / P3060dn",
+            devices: "P3045 / P3050 / P3055 / P3060",
             refill_price: "1700 ₽",
+            recovery_price: "-"
+        },
+        {
+            modelCart: "TK-6115",
+            resource: 15000,
+            id: uuidv4(),
+            vendor: "kyocera",
+            examples: [],
+            chip: false,
+            devices: "M4125 / M4132",
+            refill_price: "2000 ₽",
+            recovery_price: "-"
+        },
+        {
+            modelCart: "TK-8115K",
+            resource: 15000,
+            id: uuidv4(),
+            vendor: "kyocera",
+            examples: [],
+            chip: false,
+            devices: "M8124 / M8130",
+            refill_price: "3500 ₽",
+            recovery_price: "-"
+        },
+        {
+            modelCart: "TK-8115C",
+            resource: 6000,
+            id: uuidv4(),
+            vendor: "kyocera",
+            examples: [],
+            chip: false,
+            devices: "M8124 / M8130",
+            refill_price: "3500 ₽",
+            recovery_price: "-"
+        },
+        {
+            modelCart: "TK-8115M",
+            resource: 6000,
+            id: uuidv4(),
+            vendor: "kyocera",
+            examples: [],
+            chip: false,
+            devices: "M8124 / M8130",
+            refill_price: "3500 ₽",
+            recovery_price: "-"
+        },
+        {
+            modelCart: "TK-8115Y",
+            resource: 6000,
+            id: uuidv4(),
+            vendor: "kyocera",
+            examples: [],
+            chip: false,
+            devices: "M8124 / M8130",
+            refill_price: "3500 ₽",
             recovery_price: "-"
         },
         {
@@ -8072,6 +8127,7 @@ export const refillData =
         },
         {
             modelCart: "TK-895K",
+            resource: 12000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
@@ -8082,16 +8138,18 @@ export const refillData =
         },
         {
             modelCart: "TK-895C",
+            resource: 6000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
             chip: true,
-            devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
+            devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
             refill_price: "3500 ₽",
             recovery_price: "Уточняйте"
         },
         {
             modelCart: "TK-895M",
+            resource: 6000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
@@ -8102,6 +8160,7 @@ export const refillData =
         },
         {
             modelCart: "TK-895Y",
+            resource: 6000,
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
