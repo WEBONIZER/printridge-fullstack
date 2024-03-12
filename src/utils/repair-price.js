@@ -4118,7 +4118,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 20,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-1110"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4130,7 +4132,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 25,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1110"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4142,7 +4146,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1150"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4154,7 +4160,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1150"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4166,7 +4174,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 50000,
-        cartridges: [],
+        cartridges: [
+            "TK-170"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4178,7 +4188,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 30,
         capacity: 50000,
-        cartridges: [],
+        cartridges: [
+            "TK-160"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4190,7 +4202,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-3100"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4202,7 +4216,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-340"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4214,7 +4230,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 45,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-3110"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4226,7 +4244,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 50,
         capacity: 25000,
-        cartridges: [],
+        cartridges: [
+            "TK-3130"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4280,7 +4300,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 60,
         capacity: 27500,
-        cartridges: [],
+        cartridges: [
+            "TK-3130"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4292,7 +4314,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 35,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-450"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4304,7 +4328,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 40,
         capacity: 18000,
-        cartridges: [],
+        cartridges: [
+            "TK-7300"
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "mono",
@@ -4340,7 +4366,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 25,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1120"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4615,7 +4643,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 30,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1130"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4627,7 +4657,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 30,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1130"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4639,7 +4671,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 20,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1140"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4651,7 +4685,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 20,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1140"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4663,7 +4699,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 25,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-1140"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4675,7 +4713,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 28,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-130"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4743,7 +4783,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-3100"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4755,7 +4797,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-3100"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4767,7 +4811,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-350"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4779,7 +4825,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-350"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4791,7 +4839,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-350"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4803,7 +4853,9 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 40,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-350"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4879,7 +4931,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 25,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-475"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -4993,7 +5047,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 30,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-475"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5005,7 +5061,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 30,
         capacity: 10000,
-        cartridges: [],
+        cartridges: [
+            "TK-715"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5029,7 +5087,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 18,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-4105"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5041,7 +5101,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 18,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-4105"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5141,7 +5203,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 22,
         capacity: 20000,
-        cartridges: [],
+        cartridges: [
+            "TK-4105"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5205,7 +5269,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 35,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "TK-7205"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5217,7 +5283,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 45,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "TK-6305"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5229,7 +5297,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 30,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "TK-7105"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5241,7 +5311,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 55,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "TK-6305"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5253,7 +5325,9 @@ export const repairPrintersPrice = [
         format: "A3",
         speed: 55,
         capacity: 30000,
-        cartridges: [],
+        cartridges: [
+            "TK-6305"
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "mono",
@@ -5325,7 +5399,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 21,
         capacity: 50000,
-        cartridges: [],
+        cartridges: [
+            "TK-580K",
+            "TK-580C",
+            "TK-580M",
+            "TK-580Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5337,7 +5416,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 21,
         capacity: 50000,
-        cartridges: [],
+        cartridges: [
+            "TK-580K",
+            "TK-580C",
+            "TK-580M",
+            "TK-580Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5349,7 +5433,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 30,
         capacity: 80000,
-        cartridges: [],
+        cartridges: [
+            "TK-560K",
+            "TK-560C",
+            "TK-560M",
+            "TK-560Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5361,7 +5450,11 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 80000,
-        cartridges: [],
+        cartridges: [
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5373,7 +5466,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 30,
         capacity: 90000,
-        cartridges: [],
+        cartridges: [
+            "TK-5140K",
+            "TK-5140C",
+            "TK-5140M",
+            "TK-5140Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5454,7 +5552,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-5150K",
+            "TK-5150C",
+            "TK-5150M",
+            "TK-5150Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5466,7 +5569,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 15000,
-        cartridges: [],
+        cartridges: [
+            "TK-570K",
+            "TK-570C",
+            "TK-570M",
+            "TK-570Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5478,7 +5586,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 35,
         capacity: 18000,
-        cartridges: [],
+        cartridges: [
+            "TK-574K",
+            "TK-574C",
+            "TK-574M",
+            "TK-574Y",
+        ],
         device: "printer",
         vendor: "kyocera",
         type: "color",
@@ -5514,7 +5627,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [],
+        cartridges: [            
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "color",
@@ -5526,7 +5644,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [],
+        cartridges: [
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "color",
@@ -5538,7 +5661,11 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [],
+        cartridges: [
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",],
         device: "MFU",
         vendor: "kyocera",
         type: "color",
@@ -5550,7 +5677,11 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [],
+        cartridges: [
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",],
         device: "MFU",
         vendor: "kyocera",
         type: "color",
@@ -5562,7 +5693,12 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [],
+        cartridges: [
+            "TK-590K",
+            "TK-590C",
+            "TK-590M",
+            "TK-590Y",
+        ],
         device: "MFU",
         vendor: "kyocera",
         type: "color",

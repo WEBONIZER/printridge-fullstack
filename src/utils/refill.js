@@ -8132,7 +8132,7 @@ export const refillData =
             vendor: "kyocera",
             examples: [],
             chip: true,
-            devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
+            devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
             refill_price: "3500 ₽",
             recovery_price: "Уточняйте"
         },
@@ -8154,7 +8154,7 @@ export const refillData =
             vendor: "kyocera",
             examples: [],
             chip: true,
-            devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
+            devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
             refill_price: "3500 ₽",
             recovery_price: "Уточняйте"
         },
@@ -8165,7 +8165,7 @@ export const refillData =
             vendor: "kyocera",
             examples: [],
             chip: true,
-            devices: "FS-C8020MFP / FS-C8025MFP / FS-C8520MFP / FS-C8525MFP",
+            devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
             refill_price: "3500 ₽",
             recovery_price: "Уточняйте"
         },
