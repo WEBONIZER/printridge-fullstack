@@ -38,10 +38,6 @@ function RepairLaptopsItemComponent() {
                                 <p className={styles.blue_text}>Тип оперативной памяти:</p>
                                 <p className={styles.black_text}>{data.ramType}</p>
                             </div>
-                            <div className={styles.text_box}>
-                                <p className={styles.blue_text}>Дата релиза процессора:</p>
-                                <p className={styles.black_text}>{data.processorReleaseDate}</p>
-                            </div>
                         </div>
                     </div>
                     <ImageRapairBox />

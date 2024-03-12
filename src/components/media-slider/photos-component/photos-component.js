@@ -14,7 +14,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
 
     const pullImagesToArr = () => {
 
-        location.pathname.includes('refill') ?
+        location.pathname.includes('refill') &&
             imgagesNameArr.map((i, key) => {
                 const img = {
                     src: `https://storage.yandexcloud.net/printridge/examples/refill/${vendor}/${model}/${i.item}`,
@@ -22,16 +22,23 @@ const PhotosComponent = ({ imgagesNameArr }) => {
                 };
                 imagesArr.push(img);
 
-            }) :
+            }) ||
+            location.pathname.includes('repair') &&
             imgagesNameArr.map((i, key) => {
                 const img = {
                     src: `https://storage.yandexcloud.net/printridge/examples/repair/${vendor}/${model}/${i.item}`,
                     alt: i.item,
                 };
                 imagesArr.push(img);
+            }) ||
+            location.pathname.includes('remont-noutbukov') &&
+            imgagesNameArr.map((i, key) => {
+                const img = {
+                    src: `https://storage.yandexcloud.net/printridge/examples/remont-noutbukov/${vendor}/${model}/${i.item}`,
+                    alt: i.item,
+                };
+                imagesArr.push(img);
             })
-
-
         return imagesArr;
     }
     pullImagesToArr()
