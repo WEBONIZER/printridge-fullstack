@@ -32,7 +32,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M104 / M132",
-            refill_price: "400 ₽",
+            refill_price: "500 ₽",
             recovery_price: "-"
         },
         {
@@ -81,6 +81,7 @@ export const refillData =
         },
         {
             modelCart: "CF219A",
+            resource: 12000,
             examples: [],
             chip: false,
             id: uuidv4(),
