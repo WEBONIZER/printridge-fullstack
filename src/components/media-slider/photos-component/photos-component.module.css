@@ -20,13 +20,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  left: 1%;
+  height: 100%;
+  left: 0;
   margin: 0;
-  width: 4%;
+  width: 6%;
   border: none;
   border-radius: 5px;
-  background-color: #e7eff4;
+  font-size: 1.5vw;
+  background-color: rgb(231, 239, 244, 0.2);
   cursor: pointer;
 }
 
@@ -36,22 +37,23 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  right: 1%;
+  height: 100%;
+  right: 0;
   margin: 0;
-  width: 4%;
+  width: 6%;
   border: none;
   border-radius: 5px;
-  background-color: #e7eff4;
+  font-size: 1.5vw;
+  background-color: rgb(231, 239, 244, 0.2);
   cursor: pointer;
 }
 
 .button_left:hover {
-  background-color: #c8ddea;
+  background-color: rgb(200, 221, 234, 0.3);
 }
 
 .button_right:hover {
-  background-color: #c8ddea;
+  background-color: rgb(200, 221, 234, 0.3);
 }
 
 @media all and (max-width: 768px) {
@@ -60,14 +62,14 @@
   }
 
   .button_right {
-    height: 33.02vw;
-    width: 7%;
+    width: 6%;
     border-radius: 5px;
+    font-size: 3.5vw;
   }
 
   .button_left {
-    height: 33.02vw;
-    width: 7%;
+    width: 6%;
     border-radius: 5px;
+    font-size: 3.5vw;
   }
 }
