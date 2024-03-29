@@ -1,12 +1,16 @@
 import styles from './repair-laptops-price-component.module.css'
 import { useEffect } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 
 const RepairPriceComponent = ({ data }) => {
+
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.com${location.pathname}`;
 
     const { vendor, model } = useParams()
 
     useEffect(() => {
+        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `

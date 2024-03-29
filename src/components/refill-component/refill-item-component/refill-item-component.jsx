@@ -5,13 +5,18 @@ import Tabs from '../../tabs/tabs';
 import ImageBox from '../refill-item-component/image-box/image-box'
 import DescriptionBox from './description-box/description-box'
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function RefillItemComponent() {
+
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.com${location.pathname}`;
 
     const { vendor, model } = useParams()
     const data = refillData.find((i) => i.modelCart === model)
 
     useEffect(() => {
+        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`);
