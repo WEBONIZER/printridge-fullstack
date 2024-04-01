@@ -12,7 +12,7 @@ const RepairPriceComponent = ({ data }) => {
     useEffect(() => {
         document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
-        document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()}`);
+        document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`);
         document.querySelector('meta[name="description"]').setAttribute('content', `
         Стоимость ремонта ноутбука ${vendor.toUpperCase()} ${model}
         Диагностика ${data.price.diagnostics}

@@ -13,7 +13,7 @@ const RepairPriceComponent = ({ data }) => {
     useEffect(() => {
         document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
-        document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()}`);
+        document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`);
         document.querySelector('meta[name="description"]').setAttribute('content', `
         Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
         Диагностика ${data.price.diagnostics}
