@@ -42,6 +42,10 @@
     <lastmod>2024-02-09</lastmod>
   </url>
   <url>
+    <loc>https://printridge.ru/refill/pantum</loc>
+    <lastmod>2024-02-09</lastmod>
+  </url>
+  <url>
     <loc>https://printridge.ru/repair/hp</loc>
     <lastmod>2024-02-09</lastmod>
   </url>
@@ -1400,6 +1404,8 @@
 <url> <loc>https://printridge.ru/refill/xerox/106R02773</loc> <lastmod>2024-04-02</lastmod> <priority>1.0</priority> <link rel="canonical">https://printridge.ru/refill/xerox/106R02773</link> </url>
 
 <url> <loc>https://printridge.ru/refill/xerox/106R03048</loc> <lastmod>2024-04-02</lastmod> <priority>1.0</priority> <link rel="canonical">https://printridge.ru/refill/xerox/106R03048</link> </url>
+
+<url> <loc>https://printridge.ru/refill/pantum/PC-211P</loc> <lastmod>2024-04-02</lastmod> <priority>1.0</priority> <link rel="canonical">https://printridge.ru/refill/pantum/PC-211P</link> </url>
 
 <url> <loc>https://printridge.ru/refill/xerox/106R02720</loc> <lastmod>2024-04-02</lastmod> <priority>1.0</priority> <link rel="canonical">https://printridge.ru/refill/xerox/106R02720</link> </url>
 

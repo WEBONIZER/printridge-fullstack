@@ -47,6 +47,11 @@ function VendorMenu() {
                 className={vendor === 'minolta' ? style.item_link_active : style.item_link}
             >Minolta
             </NavLink>
+            <NavLink
+                to='/refill/pantum'
+                className={vendor === 'pantum' ? style.item_link_active : style.item_link}
+            >Pantum
+            </NavLink>
         </nav>
     )
 }
