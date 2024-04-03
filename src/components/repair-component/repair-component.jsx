@@ -1,5 +1,5 @@
 import styles from './repair-component.module.css'
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import RepairItemsComponent from '../filter-items-component/repair-items-component/repair-items-component'
 import VendorMenuRepair from '../vendor-menu/vendor-menu-reoair/vendor-menu-repair'
 import { repair } from '../../utils/repair'
@@ -9,9 +9,12 @@ import { useEffect } from 'react';
 function RepairComponent() {
 
     const { vendor } = useParams()
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterCategory = repair.filter((i) => i.vendor === vendor)
 
     useEffect(() => {
+        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Прайс по ремонту принтеров и МФУ ${vendor.toUpperCase()}`);

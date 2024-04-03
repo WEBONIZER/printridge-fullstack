@@ -10,7 +10,7 @@ import { useLocation } from 'react-router-dom';
 function RefillItemComponent() {
 
     const location = useLocation();
-    const canonicalUrl = `https://printridge.com${location.pathname}`;
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
 
     const { vendor, model } = useParams()
     const data = refillData.find((i) => i.modelCart === model)

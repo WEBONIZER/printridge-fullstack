@@ -1,5 +1,5 @@
 import styles from './refill-component.module.css'
-import { useParams } from 'react-router-dom';
+import { useParams, useLocation } from 'react-router-dom';
 import FilterItemsComponent from '../filter-items-component/filter-items-component'
 import { refillData } from '../../utils/refill'
 import { VendorMenu } from '../vendor-menu/vendor-menu'
@@ -9,9 +9,12 @@ import { useEffect } from 'react';
 function RefillComponent() {
 
     const { vendor } = useParams()
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterCategory = refillData.filter((i) => i.vendor === vendor)
 
     useEffect(() => {
+        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = `Заправка картриджей ${vendor.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Стоимость заправки картриджей ${vendor.toUpperCase()}`);

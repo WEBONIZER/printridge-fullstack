@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 const RepairPriceComponent = ({ data }) => {
 
     const location = useLocation();
-    const canonicalUrl = `https://printridge.com${location.pathname}`;
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
 
     const { vendor, model } = useParams()
 
