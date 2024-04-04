@@ -1,10 +1,15 @@
 import styles from './contacts-component.module.css'
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ContactsComponent = () => {    
+    
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
 
     useEffect(() => {
+        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
         document.title = "Компания ПРИНТРИДЖ, контакты";
         document.querySelector('meta[name="title"]').setAttribute('content', `Компания ПРИНТРИДЖ, контакты`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Информация о компании ПРИНТРИДЖ, контакты`);
