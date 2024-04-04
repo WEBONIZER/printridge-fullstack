@@ -15,7 +15,6 @@ const SitemapGenerator = () => {
                         <loc>https://printridge.ru/refill/${i.vendor}/${i.modelCart}</loc>
                         <lastmod>${lastmod}</lastmod>
                         <priority>1.0</priority>
-                        <link rel="canonical">https://printridge.ru/refill/${i.vendor}/${i.modelCart}</link>
                     </url>
                     `}
                 </p>
@@ -26,7 +25,6 @@ const SitemapGenerator = () => {
                         <loc>https://printridge.ru/repair/${i.vendor}/${i.model.replace(/\s/g, '')}</loc>
                         <lastmod>${lastmod}</lastmod>
                         <priority>1.0</priority>
-                        <link rel="canonical">https://printridge.ru/repair/${i.vendor}/${i.model.replace(/\s/g, '')}</link>
                     </url>
                     `}
                 </p>
@@ -37,7 +35,6 @@ const SitemapGenerator = () => {
                         <loc>https://printridge.ru/remont-noutbukov/${i.vendor}/${i.model.replace(/\s/g, '')}</loc>
                         <lastmod>${lastmod}</lastmod>
                         <priority>1.0</priority>
-                        <link rel="canonical">https://printridge.ru/remont-noutbukov/${i.vendor}/${i.model.replace(/\s/g, '')}</link>
                     </url>
                     `}
                 </p>
