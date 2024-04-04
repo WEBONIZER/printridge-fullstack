@@ -13,6 +13,7 @@ const ContactsComponent = () => {
         document.title = "Компания ПРИНТРИДЖ, контакты";
         document.querySelector('meta[name="title"]').setAttribute('content', `Компания ПРИНТРИДЖ, контакты`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Информация о компании ПРИНТРИДЖ, контакты`);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт ноутбуков контакты, заправка картриджей контакты, ремонт принтеров контакты, ремонт мфу контакты, в Санкт-Петербурге, выезд, на выезде`);
     }, []);
 
     return (

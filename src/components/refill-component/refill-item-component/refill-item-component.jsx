@@ -20,6 +20,7 @@ function RefillItemComponent() {
         document.title = `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor, model]);
 
     return (

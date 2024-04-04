@@ -22,7 +22,8 @@ const RepairPriceComponent = ({ data }) => {
         Ремонт барабана ${data.price.drum}
         Ремонт термоблока (печки) ${data.price.therm}
         Ремонт электроники ${data.price.electronics}
-        `);        
+        `);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor, model]);
 
     return (

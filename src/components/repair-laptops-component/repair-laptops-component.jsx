@@ -18,6 +18,7 @@ function RepairLaptopsComponent() {
         document.title = `Ремонт ноутбуков ${vendor.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт ноутбуков ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Прайс по ремонту ноутбуков ${vendor.toUpperCase()}`);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт ноутбуков ${vendor.toUpperCase()}, чистка ноутбуков ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
 
     return (

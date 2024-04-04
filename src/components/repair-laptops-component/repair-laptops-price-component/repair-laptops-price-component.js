@@ -21,7 +21,8 @@ const RepairPriceComponent = ({ data }) => {
         Установка программ ${data.price.installPO}
         Удаление вирусов ${data.price.antivirus}
         Замена матрицы ${data.price.matrixReplacement}
-        `);        
+        `);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}, чистка ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}, удаление вирусов, установка windows, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor, model]);
 
     return (

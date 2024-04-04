@@ -18,6 +18,7 @@ function RefillComponent() {
         document.title = `Заправка картриджей ${vendor.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Стоимость заправки картриджей ${vendor.toUpperCase()}`);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `заправка картриджей ${vendor.toUpperCase()}, заправить картридж ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
 
     return (

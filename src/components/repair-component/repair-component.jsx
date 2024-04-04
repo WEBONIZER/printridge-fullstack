@@ -18,6 +18,7 @@ function RepairComponent() {
         document.title = `Ремонт принтеров и МФУ ${vendor.toUpperCase()}`;
         document.querySelector('meta[name="title"]').setAttribute('content', `Ремонт принтеров и МФУ ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="description"]').setAttribute('content', `Прайс по ремонту принтеров и МФУ ${vendor.toUpperCase()}`);
+        document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт принтеров и МФУ ${vendor.toUpperCase()}, техническое обслуживание принтеров и МФУ ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
 
     return (
