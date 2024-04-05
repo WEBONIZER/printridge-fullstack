@@ -36,6 +36,61 @@ export const refillData =
             recovery_price: "-"
         },
         {
+            modelCart: "W1106A",
+            resource: 1000,
+            examples: [
+                {
+                    title: 'Заправка W1106A',
+                    photo: [
+                        {
+                            item: '106-1.jpg',
+                        },
+                        {
+                            item: '106-2.jpg',
+                        },
+                        {
+                            item: '106-3.jpg',
+                        },
+                        {
+                            item: '106-4.jpg',
+                        },
+                        {
+                            item: '106-5.jpg',
+                        },
+                        {
+                            item: '106-6.jpg',
+                        },
+                    ],
+                    video: [],
+                    text: (
+                        <>
+                            <p>
+                                Ниже показан пример заправки оригинального картриджа <strong>HP W1106A</strong>.
+                            </p>
+                            <p>
+                                Данные картриджи являются полными аналогами <a href="https://printridge.ru/refill/samsung/MLT-D104S">SAMSUNG MLT-D104S</a>, которые использовались при принтерах
+                                и мфу SAMSUNG ML-1660, SCX-3200 и др. Так же, как и прародитель, W1106A имеют чип, который запрограммирован на определённое количество копий. По истечении ресурса, 
+                                аппарат блокируется и требует установить новый картридж, с новым чипом. На страницах нашего сайта вы можете найти информацию о перепрошивке <a href="https://printridge.ru/repair/hp/135a">МФУ HP 135a</a><br /><br />
+                                Сам процесс заправки картриджа достаточно простой. Крышки картриджа крепятся не на болты, а запайками, которые необходимо срезать. После этого картридж делится
+                                на две половины. Чистится бункер отработки и заправляется бункер с тонером. При необходимости, чистится дозирующее лезвие.<br /><br />
+                                После всех манипуляций, необходимо установить чип, либо перепрошить сам аппарат.<br /><br />
+                                <strong>Заправка картриджа HP W1106A</strong> возможна как в нашей мастерской, так и на выезде.
+                            </p>
+                            <p>
+                                За подробностями пишите или звоните нам по указанным контактам.
+                            </p>
+                        </>
+                    ),
+                },
+            ],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "Laser 107a / MFP 135a / 137a",
+            refill_price: "500 ₽",
+            recovery_price: "1200 ₽",
+        },
+        {
             modelCart: "Q7570A",
             resource: 15000,
             examples: [],
@@ -4142,43 +4197,14 @@ export const refillData =
         },
         {
             modelCart: "MLT-D104S",
+            resource: 1000,
             examples: [],
             chip: false,
-            id: uuidv4(),
-            vendor: "samsung",
-            devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
-        },
-        {
-            modelCart: "MLT-D104X",
-            examples: [],
-            chip: false,
-            id: uuidv4(),
-            vendor: "samsung",
-            devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
-        },
-        {
-            modelCart: "MLT-D104S",
-            examples: [],
-            chip: true,
-            id: uuidv4(),
-            vendor: "samsung",
-            devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
-        },
-        {
-            modelCart: "MLT-D104X",
-            examples: [],
-            chip: true,
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
             refill_price: "500 ₽",
-            recovery_price: "1150 ₽",
+            recovery_price: "1200 ₽",
         },
         {
             modelCart: "MLT-D105L",

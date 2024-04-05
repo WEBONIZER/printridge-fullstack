@@ -84,60 +84,74 @@ export const repairPrintersPrice = [
         capacity: 10000,
         speed: 22,
         price: {},
+        examples: [],
+    },
+    {
+        vendor: 'hp',
+        model: '135a',
+        cartridges: [
+            'W1106A'
+        ],
+        device: 'MFU',
+        type: 'mono',
+        format: 'A4',
+        capacity: 10000,
+        speed: 20,
+        price: {},
         examples: [
             {
-                title: 'Перепрошивка HP Laser MFP 132a',
+                title: 'Перепрошивка HP Laser MFP 135a',
                 photo: [
                     {
-                        item: 'pereproshivka-132-1.jpg',
+                        item: 'pereproshivka-135-1.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-2.jpg',
+                        item: 'pereproshivka-135-2.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-3.jpg',
+                        item: 'pereproshivka-135-3.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-4.jpg',
+                        item: 'pereproshivka-135-4.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-5.jpg',
+                        item: 'pereproshivka-135-5.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-6.jpg',
+                        item: 'pereproshivka-135-6.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-6.png',
+                        item: 'pereproshivka-135-6.png',
                     },
                     {
-                        item: 'pereproshivka-132-7.png',
+                        item: 'pereproshivka-135-7.png',
                     },
                     {
-                        item: 'pereproshivka-132-8.jpg',
+                        item: 'pereproshivka-135-8.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-9.jpg',
+                        item: 'pereproshivka-135-9.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-10.jpg',
+                        item: 'pereproshivka-135-10.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-11.jpg',
+                        item: 'pereproshivka-135-11.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-12.png',
+                        item: 'pereproshivka-135-12.png',
                     },
                     {
-                        item: 'pereproshivka-132-13.jpg',
+                        item: 'pereproshivka-135-13.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-14.jpg',
+                        item: 'pereproshivka-135-14.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-15.jpg',
+                        item: 'pereproshivka-135-15.jpg',
                     },
                     {
-                        item: 'pereproshivka-132-16.jpg',
+                        item: 'pereproshivka-135-16.jpg',
                     },
                 ],
                 video: [
@@ -146,7 +160,7 @@ export const repairPrintersPrice = [
                 text: (
                     <>
                         <p>
-                            Ниже мы кратко опишем процесс <strong>перепрошивки мфу HP Laser MFP 132a</strong> и возможные трудности, при её выполнении.
+                            Ниже мы кратко опишем процесс <strong>перепрошивки мфу HP Laser MFP 135a</strong> и возможные трудности, при её выполнении.
                         </p>
                         <p>
                             Перепрошивка современных принтеров и мфу HP, в большинстве случаев, достаточно сложный процесс. Этот процесс сильно отличается от старших братьев Samsung (да-да, современные
@@ -155,7 +169,7 @@ export const repairPrintersPrice = [
                             Для этого с аппарата снимается плата форматтера и выпаивается микросхема, либо цепляется прищепка, как в нашем случае.
                             И даже при наличии навыков, данная процедура получилась не сразу. После первой попытки аппарат не включился, на экране высветились чёрные квадратики и никаких признаков жизни не наблюдалось.
                             Пришлось шить микросхему 4 раза, только тогда всё заработало.<br /><br />
-                            После манипуляций с программатором, появилась возможность <strong>прошить мфу HP Laser MFP 132a</strong> стандартным способом.
+                            После манипуляций с программатором, появилась возможность <strong>прошить мфу HP Laser MFP 135a</strong> стандартным способом.
                             После всех манипуляций необходимо заклеить на картридже чип и убедиться, что мфу может работать без него.
                         </p>
                         <p>
@@ -379,11 +393,11 @@ export const repairPrintersPrice = [
                             Ошибка: <strong>Указанные картриджи были заблокированы микропрограммой принтера HP M428</strong>
                         </p>
                         <p>
-                            Возможно что в принтере стоит защита от неоригинальных картриджей. В таком случае, принтер будет работать только с оригинальными чипами.<br /><br/>
-                            <strong>Решение:</strong><br /><br/> 
-                            Для того чтобы отключить защиту, нужно зайти в веб-интерфейс мфу и открыть <strong>«Параметры»</strong>. 
-                            Найти там пункт <strong>«Параметры расходных материалов»</strong>. 
-                            В открывшемся окне настроек есть раздел <strong>«Использование картриджей»</strong>, который и отвечает за проверку картриджей на оригинальность. 
+                            Возможно что в принтере стоит защита от неоригинальных картриджей. В таком случае, принтер будет работать только с оригинальными чипами.<br /><br />
+                            <strong>Решение:</strong><br /><br />
+                            Для того чтобы отключить защиту, нужно зайти в веб-интерфейс мфу и открыть <strong>«Параметры»</strong>.
+                            Найти там пункт <strong>«Параметры расходных материалов»</strong>.
+                            В открывшемся окне настроек есть раздел <strong>«Использование картриджей»</strong>, который и отвечает за проверку картриджей на оригинальность.
                             Выключаем его и сохраняем настройки. После этого МФУ должно работать с любыми картриджами.
                         </p>
                         <p>
@@ -5722,7 +5736,7 @@ export const repairPrintersPrice = [
         format: "A4",
         speed: 26,
         capacity: 65000,
-        cartridges: [            
+        cartridges: [
             "TK-590K",
             "TK-590C",
             "TK-590M",
