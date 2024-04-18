@@ -21,11 +21,11 @@ function NotFound404() {
         <>
             <div className={styles.container}>
                 <div className={styles.info_box}>
-                    <h2 className={styles.title}>404 - Страница не найдена</h2>
+                    <h1 className={styles.title}>404 - Страница не найдена</h1>
                 </div>
                 <Link className={styles.button} to='/'>Вернуться на главную</Link>
             </div>
-            <Navigate to="/404" replace />
+    <Navigate to="/404" replace />
         </>
     );
 }

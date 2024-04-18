@@ -36,7 +36,7 @@ const App: React.FC = () => {
           <Route path="/remont-noutbukov/:vendor" element={<RepairLaptopsComponent />} />
           <Route path="/remont-noutbukov/:vendor/:model" element={<RepairLaptopsItemComponent />} />
           <Route path="/contacts" element={<ContactsComponent />} />
-          {/*<Route path="*" element={<NotFound404 />} />*/}
+          <Route path="*" element={<NotFound404 />} />
         </Route>
       </Routes>
       {background && (
