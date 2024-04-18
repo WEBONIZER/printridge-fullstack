@@ -2595,6 +2595,20 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "MF247",
+        format: "A4",
+        speed: 27,
+        capacity: 15000,
+        cartridges: [
+            "CF283A",
+        ],
+        device: "MFU",
+        vendor: "canon",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "2422",
         format: "A3",
         speed: 22,

@@ -1,5 +1,6 @@
 .container {
   margin: 16px auto;
+  padding: 1vw 0;
   width: 100%;
   height: auto;
   background-color: #be1d25;
@@ -82,9 +83,9 @@
   .container {
     margin: 2.8vw auto;
     width: 100%;
-    height: 20.2vw;
-    background-color: #005ce5;
+    height: auto;
     border-radius: 8vw;
+    padding: 8vw 0;
   }
 
   .info_box {

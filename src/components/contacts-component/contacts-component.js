@@ -67,14 +67,6 @@ const ContactsComponent = () => {
                     frameborder="0">
                 </iframe>
             </div>
-            {/*<div className={styles.map_box_menu}>
-                <iframe
-                    src="http://brontosaur.ru:555/idiot-spb"
-                    width="100%"
-                    height="850"
-                    frameborder="0">
-                </iframe>
-    </div>*/}
         </div>
     )
 }
