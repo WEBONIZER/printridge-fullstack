@@ -1,12 +1,20 @@
 import styles from './not-found.module.css'
-import { Link, Navigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 function NotFound404() {
 
+    fetch('http://localhost:3002/404')
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Ошибка:', error));
+
+
+    const navigate = useNavigate()
+
     const location = useLocation();
-    const canonicalUrl = `https://printridge.ru${location.pathname}`;
+    const canonicalUrl = ``;
 
     useEffect(() => {
         document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
@@ -17,6 +25,7 @@ function NotFound404() {
         ремонт принтеров, ремонт мфу, ремонт ноутбуков, установка операционных систем Windows, Linux, удаление вирусов, в Санкт-Петербурге, Санкт-Петербург`);
     }, []);
 
+    
     return (
         <>
             <div className={styles.container}>
@@ -24,8 +33,9 @@ function NotFound404() {
                     <h1 className={styles.title}>404 - Страница не найдена</h1>
                 </div>
                 <Link className={styles.button} to='/'>Вернуться на главную</Link>
+                <Link className={styles.button} onClick={() => { navigate(-1) }}>Вернуться назад</Link>
             </div>
-    <Navigate to="/404" replace />
+            <Navigate to="/404" replace />
         </>
     );
 }

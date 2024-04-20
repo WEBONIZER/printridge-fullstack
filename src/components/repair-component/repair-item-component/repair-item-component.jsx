@@ -1,4 +1,5 @@
 import styles from './repair-item-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { repair } from '../../../utils/repair';
 import Tabs from '../../tabs/tabs';
@@ -12,7 +13,7 @@ function RepairItemComponent() {
     const { model } = useParams()
     const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
 
-    return (
+    return (data ?
         <div>
             <div className={styles.container}>
             <h2 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
@@ -52,7 +53,8 @@ function RepairItemComponent() {
             <DescriptionRepairBox />
             {data.cartridges.length !== 0 && <UseCartridges cartridgesArray={data.cartridges} />}
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 

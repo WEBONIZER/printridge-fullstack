@@ -1,4 +1,5 @@
 import styles from './refill-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
 import FilterItemsComponent from '../filter-items-component/filter-items-component'
 import { refillData } from '../../utils/refill'
@@ -20,8 +21,8 @@ function RefillComponent() {
         document.querySelector('meta[name="description"]').setAttribute('content', `Стоимость заправки картриджей ${vendor.toUpperCase()}`);
         document.querySelector('meta[name="keywords"]').setAttribute('content', `заправка картриджей ${vendor.toUpperCase()}, заправить картридж ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
-
-    return (
+console.log(filterCategory)
+    return (filterCategory.length > 0 ?
         < div className={styles.container}>
             <div className={styles.title_box}>
                 <p className={styles.description}>Выберите производителя и модель картриджа</p>
@@ -29,7 +30,8 @@ function RefillComponent() {
             <VendorMenu />
             <Filter />
             <FilterItemsComponent data={filterCategory} />
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 

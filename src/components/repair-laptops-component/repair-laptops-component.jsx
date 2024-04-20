@@ -1,4 +1,5 @@
 import styles from './repair-laptops-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
 import FilterLaptopsComponent from './filter-items-component/filter-laptops-component'
 import VendorMenuLaptops from '../vendor-menu/vendor-menu-laptops/vendor-menu-laptops'
@@ -21,7 +22,7 @@ function RepairLaptopsComponent() {
         document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт ноутбуков ${vendor.toUpperCase()}, чистка ноутбуков ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
 
-    return (
+    return (filterCategory.length > 0 ?
         < div className={styles.container}>
             <div className={styles.title_box}>
                 <p className={styles.description}>Выберите производителя и модель ноутбука</p>
@@ -29,7 +30,8 @@ function RepairLaptopsComponent() {
             <VendorMenuLaptops />
             <Filter />
             <FilterLaptopsComponent data={filterCategory} />
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 

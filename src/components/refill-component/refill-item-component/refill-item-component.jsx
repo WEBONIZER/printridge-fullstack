@@ -1,4 +1,5 @@
 import styles from './refill-item-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { refillData } from '../../../utils/refill';
 import Tabs from '../../tabs/tabs';
@@ -16,14 +17,18 @@ function RefillItemComponent() {
     const data = refillData.find((i) => i.modelCart === model)
 
     useEffect(() => {
-        document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
-        document.title = `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
-        document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`);
-        document.querySelector('meta[name="description"]').setAttribute('content', `Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`);
-        document.querySelector('meta[name="keywords"]').setAttribute('content', `заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${data.devices}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
+        if (data) {
+            document.querySelector('link[rel="canonical"]').setAttribute('href', canonicalUrl);
+            document.title = `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`;
+            document.querySelector('meta[name="title"]').setAttribute('content', `Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`);
+            document.querySelector('meta[name="description"]').setAttribute('content', `Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`);
+            document.querySelector('meta[name="keywords"]').setAttribute('content', `заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${data.devices}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
+        } else {
+            return
+        }
     }, [vendor, model]);
-
-    return (
+    
+    return (data ?
         <div>
             <div className={styles.container}>
                 <h2 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
@@ -58,7 +63,8 @@ function RefillItemComponent() {
                 <DescriptionBox />
             </div>
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 

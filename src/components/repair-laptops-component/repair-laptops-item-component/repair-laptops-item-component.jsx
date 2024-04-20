@@ -1,4 +1,5 @@
 import styles from './repair-laptops-item-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { repairLaptops } from '../../../utils/laptops';
 import Tabs from '../../tabs/tabs';
@@ -11,7 +12,7 @@ function RepairLaptopsItemComponent() {
     const { model } = useParams()
     const data = repairLaptops.find((i) => i.model.replace(/\s/g, '') === model)
 
-    return (
+    return (data ?
         <div>
             <div className={styles.container}>
             <h2 className={styles.header}>Ремонт ноутбука {`${data.vendor.toUpperCase()} ${data.series !== '' ? data.series : ''} ${data.model}`}</h2>
@@ -49,7 +50,8 @@ function RepairLaptopsItemComponent() {
             <RepairPriceComponent data={data} />
             <DescriptionRepairBox />
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 

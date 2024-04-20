@@ -1,4 +1,5 @@
 import styles from './repair-component.module.css'
+import { Navigate } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
 import RepairItemsComponent from '../filter-items-component/repair-items-component/repair-items-component'
 import VendorMenuRepair from '../vendor-menu/vendor-menu-reoair/vendor-menu-repair'
@@ -21,7 +22,7 @@ function RepairComponent() {
         document.querySelector('meta[name="keywords"]').setAttribute('content', `ремонт принтеров и МФУ ${vendor.toUpperCase()}, техническое обслуживание принтеров и МФУ ${vendor.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`);
     }, [vendor]);
 
-    return (
+    return (filterCategory.length > 0 ?
         < div className={styles.container}>
             <div className={styles.title_box}>
                 <p className={styles.description}>Выберите производителя и модель принтера</p>
@@ -29,7 +30,8 @@ function RepairComponent() {
             <VendorMenuRepair />
             <Filter />
             <RepairItemsComponent data={filterCategory} />
-        </div>
+        </div> :
+        <Navigate to="/404" replace />
     );
 }
 
