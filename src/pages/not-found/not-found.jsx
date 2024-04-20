@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 function NotFound404() {
 
-    fetch('http://localhost:3002/404')
+    fetch('http://localhost:3002/404') 
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error('Ошибка:', error));
