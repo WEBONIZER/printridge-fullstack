@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     host: "127.0.0.1",
     //host: "localhost",
-    //port: 443,
-    port: 3000,
+    port: 443,
+    //port: 3000,
   },
 });
