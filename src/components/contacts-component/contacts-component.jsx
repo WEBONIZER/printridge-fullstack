@@ -5,7 +5,7 @@ import { useLocation } from 'react-router-dom';
 
 const ContactsComponent = () => {    
     
-    const location = useLocation();
+    const location = useLocation(); 
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
 
     useEffect(() => {

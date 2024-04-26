@@ -1,5 +1,6 @@
 import styles from './not-found.module.css';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { renderToString } from "react-dom/server";
 import { useEffect } from 'react';
 
 function NotFound404() {

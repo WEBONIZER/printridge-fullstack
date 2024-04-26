@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/print.svg" />
+  <link rel="icon" type="image/svg+xml" href="/logopng.png" />
   <link rel="canonical" href={canonicalUrl} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -21,11 +21,14 @@
     заправка монохромных картриджей, заправка цветных  картриджей, ремонт и техническое обслуживание МФУ, принтеров, ремонт ноутбуков, установка операционных систем Windows, 
     Linux, удаление/чистка от вирусов, установка различных программ и драйверов, установка устройств,  восстановление данных, 
     модернизация компьютера и замена комплектующих, сборка компьютера">
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo.png" />
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="apple-touch-icon" href="logopng.png" />
   <title>ПРИНТРИДЖ</title>
   <meta name="description" content="Компания ПРИНТРИДЖ. Заправка картриджей, ремонт принтеров и МФУ." />
   <meta name="yandex-verification" content="31f07b85a0af1d61" />
+  
+</head>
+
+<body>
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript">
     (function (m, e, t, r, i, k, a) {
@@ -41,19 +44,19 @@
       trackLinks: true,
       accurateTrackBounce: true,
       webvisor: true
-    });
+    }); 
   </script>
   <noscript>
-    <div><img src="https://mc.yandex.ru/watch/96390511" style="position:absolute; left:-9999px;" alt="" /></div>
+    <div>
+      <img src="https://mc.yandex.ru/watch/96390511" style="position:absolute; left:-9999px;" alt="" />
+    </div>
   </noscript>
   <!-- /Yandex.Metrika counter -->
   <meta name="google-site-verification" content="mXlGEtHBfbQ2lO6g0TU28ptDJaEGXWp_B0IinAaOgVE" />
-</head>
-
-<body>
   <noscript></noscript>
   <div id="root"></div>
   <div id="react-modals"></div>
+  <script type="module" src="./src/index.jsx"></script>
 </body>
 
 </html>
