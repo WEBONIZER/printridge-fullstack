@@ -2,7 +2,7 @@ import { jsx, jsxs, Fragment } from "react/jsx-runtime";
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server.mjs";
 import { useEffect, useState, StrictMode } from "react";
-import { createRoot } from "react-dom/client";
+import { hydrateRoot } from "react-dom/client";
 import { useDispatch, useSelector, Provider } from "react-redux";
 import { useLocation, Link, NavLink, useParams, Outlet, Navigate, useNavigate, Routes, Route, BrowserRouter } from "react-router-dom";
 import ReactDOM from "react-dom";
@@ -21333,11 +21333,12 @@ const rootStore = configureStore({
   reducer: rootReducer,
   devTools: true
 });
-let root;
 const content = /* @__PURE__ */ jsx(StrictMode, { children: /* @__PURE__ */ jsx(Provider, { store: rootStore, children: /* @__PURE__ */ jsx(App, {}) }) });
 if (typeof window !== "undefined") {
-  root = document.getElementById("root");
-  createRoot(root).render(/* @__PURE__ */ jsx(BrowserRouter, { children: content }));
+  hydrateRoot(
+    document.getElementById("root"),
+    /* @__PURE__ */ jsx(BrowserRouter, { children: content })
+  );
 }
 const render = (url) => {
   return renderToString(/* @__PURE__ */ jsx(StaticRouter, { location: url, children: content }));
