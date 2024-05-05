@@ -1,7 +1,18 @@
+import { StrictMode } from "react";
 import { renderToString } from "react-dom/server";
+import { Provider } from "react-redux";
 import { StaticRouter } from "react-router-dom/server";
-import { content } from "./entry-client"; 
+import { App } from "./components/app/app";
+import { rootStore } from "./services/reducers";
 
 export const render = (url) => {
-  return renderToString(<StaticRouter location={url}>{content}</StaticRouter>);
+  return renderToString(
+    <StrictMode>
+      <Provider store={rootStore}>
+        <StaticRouter location={url}>
+          <App />
+        </StaticRouter>
+      </Provider>
+    </StrictMode>
+  );
 };

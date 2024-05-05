@@ -4,23 +4,21 @@ import { readFileSync } from "fs";
 import { resolve } from "path";
 import serveStatic from "serve-static";
 import { render } from "./dist/server/entry-server.js";
+import { Helmet } from "react-helmet";
 
 ((http) => {
   http.listen(80, () => {
     http
       .use(compression(), serveStatic(resolve("dist/client"), { index: false }))
       .use("*", async (req, res, next) => {
-        const head = "";
-        const layout = render(req.originalUrl);
-
         try {
           res
             .status(200)
             .set({ "Content-Type": "text/html" })
             .end(
               readFileSync(resolve("dist/client/index.html"), "utf-8")
-                .replace("<!--app-head-->", head)
-                .replace("<!--app-layout-->", layout)
+                .replace("<!--app-head-->", Helmet.renderStatic())
+                .replace("<!--app-layout-->", render(req.originalUrl))
             );
         } catch (error) {
           next(error);

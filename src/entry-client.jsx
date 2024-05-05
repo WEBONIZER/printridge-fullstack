@@ -7,17 +7,15 @@ import { rootStore } from "./services/reducers";
 
 import "./index.css";
 
-export const content = (
-  <StrictMode>
-    <Provider store={rootStore}>
-      <App />
-    </Provider>
-  </StrictMode>
-);
-
 if (typeof window !== "undefined") {
   hydrateRoot(
     document.getElementById("root"),
-    <BrowserRouter>{content}</BrowserRouter>
+    <StrictMode>
+      <Provider store={rootStore}>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </Provider>
+    </StrictMode>
   );
 }
