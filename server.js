@@ -7,7 +7,7 @@ import { render } from "./dist/server/entry-server.js";
 import { Helmet } from "react-helmet";
 
 ((http) => {
-  http.listen(80, () => {
+  http.listen(3000, () => {
     http
       .use(compression(), serveStatic(resolve("dist/client"), { index: false }))
       .use("*", async (req, res, next) => {
