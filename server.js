@@ -6,23 +6,25 @@ import serveStatic from "serve-static";
 import { render } from "./dist/server/entry-server.js";
 import { Helmet } from "react-helmet";
 
-((http) => {
-  http.listen(3000, () => {
-    http
-      .use(compression(), serveStatic(resolve("dist/client"), { index: false }))
-      .use("*", async (req, res, next) => {
-        try {
-          res
-            .status(200)
-            .set({ "Content-Type": "text/html" })
-            .end(
-              readFileSync(resolve("dist/client/index.html"), "utf-8")
-                .replace("<!--app-head-->", Helmet.renderStatic())
-                .replace("<!--app-layout-->", render(req.originalUrl))
-            );
-        } catch (error) {
-          next(error);
-        }
-      });
-  });
-})(express());
+const app = express();
+app.use(compression());
+app.use(serveStatic(resolve("dist/client"), { index: false }));
+
+app.get('*', async (req, res, next) => {
+    try {
+        const html = render(req.originalUrl);
+        const helmet = Helmet.renderStatic();
+
+        const indexFile = readFileSync(resolve("dist/client/index.html"), "utf-8")
+            .replace("<!--app-head-->", helmet.title.toString() + helmet.meta.toString() + helmet.link.toString())
+            .replace("<!--app-layout-->", html);
+
+        res.status(200).set({ "Content-Type": "text/html" }).end(indexFile);
+    } catch (error) {
+        next(error);
+    }
+});
+
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
