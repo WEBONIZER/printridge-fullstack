@@ -10,6 +10,10 @@ const app = express();
 app.use(compression());
 app.use(serveStatic(resolve("dist/client"), { index: false }));
 
+//app.get('/404', (req, res) => {
+//    res.status(404).send('Not Found');
+//});
+
 app.get('*', async (req, res, next) => {
     try {
         const html = render(req.originalUrl);
