@@ -15,6 +15,36 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
+        model: 'M236',
+        cartridges: [
+            'W1360A_136A',
+            'W1360X_136X',
+        ],
+        device: 'MFU',
+        type: 'mono',
+        format: 'A4',
+        capacity: 2000,
+        speed: 29,
+        price: {},
+        examples: [],
+    },
+    {
+        vendor: 'hp',
+        model: 'M211d',
+        cartridges: [
+            'W1360A_136A',
+            'W1360X_136X',
+        ],
+        device: 'printer',
+        type: 'mono',
+        format: 'A4',
+        capacity: 2000,
+        speed: 29,
+        price: {},
+        examples: [],
+    },
+    {
+        vendor: 'hp',
         model: 'LaserJet M602',
         cartridges: [
             "CE390A",

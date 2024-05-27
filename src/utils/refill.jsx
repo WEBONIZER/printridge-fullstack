@@ -3,6 +3,28 @@ import { v4 as uuidv4 } from "uuid";
 export const refillData =
     [
         {
+            modelCart: "W1360A_136A",
+            resource: 1150,
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "LJ M211d / M236",
+            refill_price: "500 ₽",
+            recovery_price: "1150 ₽",
+        },
+        {
+            modelCart: "W1360X_136X",
+            resource: 2600,
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "LJ M211d / M236",
+            refill_price: "700 ₽",
+            recovery_price: "1300 ₽",
+        },
+        {
             modelCart: "CF281A",
             resource: 10500,
             examples: [],
