@@ -25,6 +25,17 @@ export const refillData =
             recovery_price: "1300 ₽",
         },
         {
+            modelCart: "CF325X_25X",
+            resource: 40000,
+            examples: [],
+            chip: false,
+            id: uuidv4(),
+            vendor: "hp",
+            devices: "LJ 800 Enterprise M806X",
+            refill_price: "5000 ₽",
+            recovery_price: "6000 ₽",
+        },
+        {
             modelCart: "CF281A",
             resource: 10500,
             examples: [],
