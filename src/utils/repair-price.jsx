@@ -1,7 +1,7 @@
 export const repairPrintersPrice = [
     {
         vendor: 'hp',
-        model: 'LaserJet 1010',
+        model: '1010',
         cartridges: [
             'Q2612A',
         ],
@@ -59,7 +59,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet M602',
+        model: 'M602',
         cartridges: [
             "CE390A",
             "CE390X",
@@ -74,7 +74,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet 5000',
+        model: '5000',
         cartridges: [
             "C4129X",
         ],
@@ -88,7 +88,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet M1536',
+        model: 'M1536',
         cartridges: [
             "CE278A",
         ],
@@ -102,7 +102,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet M725',
+        model: 'M725',
         cartridges: [
             "CF214A",
             "CF214X",
@@ -226,7 +226,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet CP1025',
+        model: 'CP1025',
         cartridges: [
             "CE310A",
             "CE311A",
@@ -243,7 +243,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet CP5225',
+        model: 'CP5225',
         cartridges: [
             "CE740A",
             "CE741A",
@@ -260,7 +260,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet M175',
+        model: 'M175',
         cartridges: [
             "CE310A",
             "CE311A",
@@ -277,7 +277,7 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'LaserJet M775',
+        model: 'M775',
         cartridges: [
             "CE340A",
             "CE341A",
@@ -308,7 +308,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P1102",
+        model: "P1102",
         format: "A4",
         speed: 18,
         capacity: 5000,
@@ -340,7 +340,7 @@ export const repairPrintersPrice = [
                 text: (
                     <>
                         <p>
-                            В этом примере показывается процесс <strong>замены ролика захвата для HP LaserJet P1102</strong>.
+                            В этом примере показывается процесс <strong>замены ролика захвата для HP P1102</strong>.
                         </p>
                         <p>
                             Данная процедура достаточно проста и выполняется как в нашем офисе, так и на выезде. Весь ремонт занимает не более 10 минут.<br /><br />
@@ -359,7 +359,7 @@ export const repairPrintersPrice = [
         ],
     },
     {
-        model: "LaserJet M201",
+        model: "M201",
         format: "A4",
         speed: 25,
         capacity: 8000,
@@ -373,7 +373,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P2035",
+        model: "P2035",
         format: "A4",
         speed: 30,
         capacity: 25000,
@@ -387,7 +387,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P2055",
+        model: "P2055",
         format: "A4",
         speed: 30,
         capacity: 25000,
@@ -402,7 +402,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M401",
+        model: "M401",
         format: "A4",
         speed: 33,
         capacity: 50000,
@@ -417,7 +417,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M402",
+        model: "M402",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -432,7 +432,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M404",
+        model: "M404",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -447,7 +447,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M428",
+        model: "M428",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -490,7 +490,7 @@ export const repairPrintersPrice = [
         ],
     },
     {
-        model: "LaserJet P3015",
+        model: "P3015",
         format: "A4",
         speed: 40,
         capacity: 10000,
@@ -505,7 +505,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M506",
+        model: "M506",
         format: "A4",
         speed: 43,
         capacity: 15000,
@@ -520,7 +520,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M604",
+        model: "M604",
         format: "A4",
         speed: 50,
         capacity: 17500,
@@ -535,7 +535,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M601",
+        model: "M601",
         format: "A4",
         speed: 43,
         capacity: 17500,
@@ -550,7 +550,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P4014",
+        model: "P4014",
         format: "A4",
         speed: 43,
         capacity: 17500,
@@ -565,7 +565,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M605",
+        model: "M605",
         format: "A4",
         speed: 55,
         capacity: 22500,
@@ -580,7 +580,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M602",
+        model: "M602",
         format: "A4",
         speed: 50,
         capacity: 22500,
@@ -595,7 +595,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P4515",
+        model: "P4515",
         format: "A4",
         speed: 60,
         capacity: 22500,
@@ -610,7 +610,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet P4015",
+        model: "P4015",
         format: "A4",
         speed: 60,
         capacity: 22500,
@@ -625,7 +625,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M606",
+        model: "M606",
         format: "A4",
         speed: 62,
         capacity: 27500,
@@ -640,7 +640,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M603",
+        model: "M603",
         format: "A4",
         speed: 60,
         capacity: 27500,
@@ -655,7 +655,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet 5200",
+        model: "5200",
         format: "A3",
         speed: 35,
         capacity: 65000,
@@ -669,7 +669,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M712",
+        model: "M712",
         format: "A3",
         speed: 41,
         capacity: 10000,
@@ -684,7 +684,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M806",
+        model: "M806",
         format: "A3",
         speed: 56,
         capacity: 30000,
@@ -698,7 +698,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet 9050",
+        model: "9050",
         format: "A3",
         speed: 50,
         capacity: 30000,
@@ -712,7 +712,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet 3050",
+        model: "3050",
         format: "A4",
         speed: 18,
         capacity: 7000,
@@ -726,7 +726,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M125",
+        model: "M125",
         format: "A4",
         speed: 20,
         capacity: 8000,
@@ -740,7 +740,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M225",
+        model: "M225",
         format: "A4",
         speed: 25,
         capacity: 8000,
@@ -754,7 +754,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M127",
+        model: "M127",
         format: "A4",
         speed: 21,
         capacity: 8000,
@@ -768,7 +768,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M1212",
+        model: "M1212",
         format: "A4",
         speed: 18,
         capacity: 8000,
@@ -782,7 +782,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M1319",
+        model: "M1319",
         format: "A4",
         speed: 19,
         capacity: 8000,
@@ -796,7 +796,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M1217",
+        model: "M1217",
         format: "A4",
         speed: 18,
         capacity: 8000,
@@ -810,7 +810,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M425",
+        model: "M425",
         format: "A4",
         speed: 33,
         capacity: 50000,
@@ -825,7 +825,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M521",
+        model: "M521",
         format: "A4",
         speed: 40,
         capacity: 75000,
@@ -840,7 +840,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M525",
+        model: "M525",
         format: "A4",
         speed: 40,
         capacity: 75000,
@@ -855,7 +855,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M3027",
+        model: "M3027",
         format: "A4",
         speed: 25,
         capacity: 75000,
@@ -870,7 +870,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M3035",
+        model: "M3035",
         format: "A4",
         speed: 33,
         capacity: 75000,
@@ -885,7 +885,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M426",
+        model: "M426",
         format: "A4",
         speed: 40,
         capacity: 80000,
@@ -900,7 +900,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M630",
+        model: "M630",
         format: "A4",
         speed: 57,
         capacity: 25000,
@@ -915,7 +915,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M4555",
+        model: "M4555",
         format: "A4",
         speed: 55,
         capacity: 25000,
@@ -930,7 +930,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M435",
+        model: "M435",
         format: "A3",
         speed: 30,
         capacity: 65000,
@@ -944,7 +944,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M725",
+        model: "M725",
         format: "A3",
         speed: 41,
         capacity: 20000,
@@ -959,7 +959,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M5025",
+        model: "M5025",
         format: "A3",
         speed: 25,
         capacity: 20000,
@@ -973,7 +973,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M5035",
+        model: "M5035",
         format: "A3",
         speed: 35,
         capacity: 20000,
@@ -987,7 +987,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M830",
+        model: "M830",
         format: "A3",
         speed: 56,
         capacity: 30000,
@@ -1001,7 +1001,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M9040",
+        model: "M9040",
         format: "A3",
         speed: 40,
         capacity: 30000,
@@ -1015,7 +1015,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M9050",
+        model: "M9050",
         format: "A3",
         speed: 50,
         capacity: 30000,
@@ -1029,7 +1029,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M252",
+        model: "M252",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -1050,7 +1050,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M251",
+        model: "M251",
         format: "A4",
         speed: 14,
         capacity: 30000,
@@ -1067,7 +1067,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M351",
+        model: "M351",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -1084,7 +1084,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Laserjet M451",
+        model: "M451",
         format: "A4",
         speed: 20,
         capacity: 40000,
@@ -1101,7 +1101,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M452",
+        model: "M452",
         format: "A4",
         speed: 28,
         capacity: 50000,
@@ -1118,7 +1118,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M551",
+        model: "M551",
         format: "A4",
         speed: 32,
         capacity: 75000,
@@ -1135,7 +1135,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M553",
+        model: "M553",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -1156,7 +1156,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M552",
+        model: "M552",
         format: "A4",
         speed: 33,
         capacity: 80000,
@@ -1177,7 +1177,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CP4025",
+        model: "CP4025",
         format: "A4",
         speed: 35,
         capacity: 10000,
@@ -1194,7 +1194,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M651",
+        model: "M651",
         format: "A4",
         speed: 42,
         capacity: 12000,
@@ -1215,7 +1215,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CP4525",
+        model: "CP4525",
         format: "A4",
         speed: 40,
         capacity: 12000,
@@ -1232,7 +1232,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CP5225",
+        model: "CP5225",
         format: "A3",
         speed: 20,
         capacity: 75000,
@@ -1249,7 +1249,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M750",
+        model: "M750",
         format: "A3",
         speed: 30,
         capacity: 12000,
@@ -1266,7 +1266,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CP5525",
+        model: "CP5525",
         format: "A3",
         speed: 30,
         capacity: 12000,
@@ -1283,7 +1283,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet 5550",
+        model: "5550",
         format: "A3",
         speed: 28,
         capacity: 12000,
@@ -1300,7 +1300,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M855",
+        model: "M855",
         format: "A3",
         speed: 46,
         capacity: 17500,
@@ -1317,7 +1317,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CP6015",
+        model: "CP6015",
         format: "A3",
         speed: 41,
         capacity: 17500,
@@ -1334,7 +1334,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M176",
+        model: "M176",
         format: "A4",
         speed: 16,
         capacity: 20000,
@@ -1351,7 +1351,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M177",
+        model: "M177",
         format: "A4",
         speed: 16,
         capacity: 20000,
@@ -1368,7 +1368,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M277",
+        model: "M277",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -1389,7 +1389,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Laserjet M274",
+        model: "M274",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -1410,7 +1410,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M476",
+        model: "M476",
         format: "A4",
         speed: 21,
         capacity: 40000,
@@ -1427,7 +1427,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M477",
+        model: "M477",
         format: "A4",
         speed: 28,
         capacity: 50000,
@@ -1448,7 +1448,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M570",
+        model: "M570",
         format: "A4",
         speed: 30,
         capacity: 75000,
@@ -1465,7 +1465,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M575",
+        model: "M575",
         format: "A4",
         speed: 30,
         capacity: 75000,
@@ -1482,7 +1482,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CM3530",
+        model: "CM3530",
         format: "A4",
         speed: 31,
         capacity: 75000,
@@ -1499,7 +1499,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M680",
+        model: "M680",
         format: "A4",
         speed: 42,
         capacity: 12000,
@@ -1520,7 +1520,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CM4540",
+        model: "CM4540",
         format: "A4",
         speed: 40,
         capacity: 17500,
@@ -1537,7 +1537,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M775",
+        model: "M775",
         format: "A3",
         speed: 30,
         capacity: 12000,
@@ -1554,7 +1554,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet M880",
+        model: "M880",
         format: "A3",
         speed: 46,
         capacity: 20000,
@@ -1571,7 +1571,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CM6030",
+        model: "CM6030",
         format: "A3",
         speed: 31,
         capacity: 20000,
@@ -1588,7 +1588,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "LaserJet CM6040",
+        model: "CM6040",
         format: "A3",
         speed: 41,
         capacity: 20000,
@@ -2718,7 +2718,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2020",
+        model: "M2020",
         format: "A4",
         speed: 20,
         capacity: 10000,
@@ -2742,7 +2742,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2830",
+        model: "M2830",
         format: "A4",
         speed: 28,
         capacity: 12000,
@@ -2754,7 +2754,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2820",
+        model: "M2820",
         format: "A4",
         speed: 28,
         capacity: 12000,
@@ -2814,7 +2814,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ProXpress M3820",
+        model: "ProM3820",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -2862,7 +2862,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ProXpress M4020",
+        model: "ProM4020",
         format: "A4",
         speed: 40,
         capacity: 10000,
@@ -2958,7 +2958,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2070",
+        model: "M2070",
         format: "A4",
         speed: 20,
         capacity: 10000,
@@ -2970,7 +2970,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2870",
+        model: "M2870",
         format: "A4",
         speed: 28,
         capacity: 12000,
@@ -2994,7 +2994,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress M2880",
+        model: "M2880",
         format: "A4",
         speed: 28,
         capacity: 12000,
@@ -3030,7 +3030,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ProXpress M3870",
+        model: "ProM3870",
         format: "A4",
         speed: 38,
         capacity: 80000,
@@ -3042,7 +3042,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ProXpress M4070",
+        model: "ProM4070",
         format: "A4",
         speed: 40,
         capacity: 10000,
@@ -3066,7 +3066,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "MultiXpress M4580",
+        model: "MultiM4580",
         format: "A4",
         speed: 45,
         capacity: 20000,
@@ -3078,7 +3078,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "MultiXpress M5370",
+        model: "MultiM5370",
         format: "A4",
         speed: 53,
         capacity: 30000,
@@ -3090,7 +3090,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "MultiXpress K2200",
+        model: "MultiK2200",
         format: "A3",
         speed: 20,
         capacity: 50000,
@@ -3150,7 +3150,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress C430",
+        model: "C430",
         format: "A4",
         speed: 18,
         capacity: 20000,
@@ -3162,31 +3162,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress C430",
-        format: "A4",
-        speed: 18,
-        capacity: 20000,
-        cartridges: [],
-        device: "printer",
-        vendor: "samsung",
-        type: "color",
-        price: {},
-        examples: [],
-    },
-    {
-        model: "CLP-365",
-        format: "A4",
-        speed: 18,
-        capacity: 20000,
-        cartridges: [],
-        device: "printer",
-        vendor: "samsung",
-        type: "color",
-        price: {},
-        examples: [],
-    },
-    {
-        model: "Xpress C410",
+        model: "C430",
         format: "A4",
         speed: 18,
         capacity: 20000,
@@ -3210,7 +3186,31 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress C1810",
+        model: "C410",
+        format: "A4",
+        speed: 18,
+        capacity: 20000,
+        cartridges: [],
+        device: "printer",
+        vendor: "samsung",
+        type: "color",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "CLP-365",
+        format: "A4",
+        speed: 18,
+        capacity: 20000,
+        cartridges: [],
+        device: "printer",
+        vendor: "samsung",
+        type: "color",
+        price: {},
+        examples: [],
+    },
+    {
+        model: "C1810",
         format: "A4",
         speed: 18,
         capacity: 40000,
@@ -3258,7 +3258,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress C480",
+        model: "C480",
         format: "A4",
         speed: 18,
         capacity: 20000,
@@ -3282,7 +3282,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Xpress C1860",
+        model: "C1860",
         format: "A4",
         speed: 18,
         capacity: 40000,
@@ -3390,7 +3390,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3020",
+        model: "3020",
         format: "A4",
         speed: 20,
         capacity: 15000,
@@ -3402,7 +3402,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3260",
+        model: "3260",
         format: "A4",
         speed: 28,
         capacity: 30000,
@@ -3416,7 +3416,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3052",
+        model: "3052",
         format: "A4",
         speed: 26,
         capacity: 30000,
@@ -3428,7 +3428,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3250",
+        model: "3250",
         format: "A4",
         speed: 28,
         capacity: 50000,
@@ -3440,7 +3440,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3420",
+        model: "3420",
         format: "A4",
         speed: 20,
         capacity: 50000,
@@ -3452,7 +3452,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3320",
+        model: "3320",
         format: "A4",
         speed: 35,
         capacity: 80000,
@@ -3464,7 +3464,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3500",
+        model: "3500",
         format: "A4",
         speed: 33,
         capacity: 10000,
@@ -3476,7 +3476,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3610",
+        model: "3610",
         format: "A4",
         speed: 47,
         capacity: 11000,
@@ -3488,7 +3488,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 4500",
+        model: "4500",
         format: "A4",
         speed: 35,
         capacity: 15000,
@@ -3500,7 +3500,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 4510",
+        model: "4510",
         format: "A4",
         speed: 43,
         capacity: 20000,
@@ -3512,7 +3512,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 4622",
+        model: "4622",
         format: "A4",
         speed: 52,
         capacity: 27500,
@@ -3524,7 +3524,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 4600",
+        model: "4600",
         format: "A4",
         speed: 52,
         capacity: 27500,
@@ -3536,7 +3536,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 4620",
+        model: "4620",
         format: "A4",
         speed: 62,
         capacity: 27500,
@@ -3548,7 +3548,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 5335",
+        model: "5335",
         format: "A3",
         speed: 35,
         capacity: 10000,
@@ -3560,7 +3560,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 5550",
+        model: "5550",
         format: "A3",
         speed: 50,
         capacity: 30000,
@@ -3572,7 +3572,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3025",
+        model: "3025",
         format: "A4",
         speed: 20,
         capacity: 15000,
@@ -3584,7 +3584,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3225",
+        model: "3225",
         format: "A4",
         speed: 28,
         capacity: 30000,
@@ -3598,7 +3598,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3215",
+        model: "3215",
         format: "A4",
         speed: 27,
         capacity: 30000,
@@ -3610,7 +3610,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3315",
+        model: "3315",
         format: "A4",
         speed: 31,
         capacity: 50000,
@@ -3622,7 +3622,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3210",
+        model: "3210",
         format: "A4",
         speed: 24,
         capacity: 50000,
@@ -3634,7 +3634,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3220",
+        model: "3220",
         format: "A4",
         speed: 28,
         capacity: 50000,
@@ -3646,7 +3646,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 3635",
+        model: "3635",
         format: "A4",
         speed: 33,
         capacity: 75000,
@@ -3658,7 +3658,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3325",
+        model: "3325",
         format: "A4",
         speed: 35,
         capacity: 80000,
@@ -3670,7 +3670,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3615",
+        model: "3615",
         format: "A4",
         speed: 47,
         capacity: 11000,
@@ -3682,7 +3682,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 3655",
+        model: "3655",
         format: "A4",
         speed: 45,
         capacity: 15000,
@@ -3694,7 +3694,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 4250",
+        model: "4250",
         format: "A4",
         speed: 43,
         capacity: 20000,
@@ -3706,7 +3706,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 4260",
+        model: "4260",
         format: "A4",
         speed: 53,
         capacity: 25000,
@@ -3718,7 +3718,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 4265",
+        model: "4265",
         format: "A4",
         speed: 55,
         capacity: 25000,
@@ -3730,7 +3730,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5016",
+        model: "5016",
         format: "A3",
         speed: 16,
         capacity: 15000,
@@ -3742,7 +3742,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5022",
+        model: "5022",
         format: "A3",
         speed: 22,
         capacity: 20000,
@@ -3754,7 +3754,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5021",
+        model: "5021",
         format: "A3",
         speed: 20,
         capacity: 25000,
@@ -3766,7 +3766,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5024",
+        model: "5024",
         format: "A3",
         speed: 24,
         capacity: 25000,
@@ -3778,7 +3778,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5222",
+        model: "5222",
         format: "A3",
         speed: 22,
         capacity: 70000,
@@ -3790,7 +3790,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5225",
+        model: "5225",
         format: "A3",
         speed: 25,
         capacity: 75000,
@@ -3802,7 +3802,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5325",
+        model: "5325",
         format: "A3",
         speed: 25,
         capacity: 10000,
@@ -3814,7 +3814,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5230",
+        model: "5230",
         format: "A3",
         speed: 30,
         capacity: 10000,
@@ -3826,7 +3826,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5330",
+        model: "5330",
         format: "A3",
         speed: 30,
         capacity: 12500,
@@ -3838,7 +3838,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5632",
+        model: "5632",
         format: "A3",
         speed: 32,
         capacity: 12500,
@@ -3850,7 +3850,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5735",
+        model: "5735",
         format: "A3",
         speed: 35,
         capacity: 12500,
@@ -3862,7 +3862,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5335",
+        model: "5335",
         format: "A3",
         speed: 35,
         capacity: 15000,
@@ -3874,7 +3874,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5945",
+        model: "5945",
         format: "A3",
         speed: 45,
         capacity: 17500,
@@ -3886,7 +3886,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5845",
+        model: "5845",
         format: "A3",
         speed: 45,
         capacity: 17500,
@@ -3898,7 +3898,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5955",
+        model: "5955",
         format: "A3",
         speed: 55,
         capacity: 20000,
@@ -3910,7 +3910,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5855",
+        model: "5855",
         format: "A3",
         speed: 55,
         capacity: 20000,
@@ -3922,7 +3922,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5865",
+        model: "5865",
         format: "A3",
         speed: 65,
         capacity: 25000,
@@ -3934,7 +3934,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5875",
+        model: "5875",
         format: "A3",
         speed: 75,
         capacity: 30000,
@@ -3946,7 +3946,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 5890",
+        model: "5890",
         format: "A3",
         speed: 90,
         capacity: 40000,
@@ -3958,7 +3958,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6000",
+        model: "6000",
         format: "A4",
         speed: 12,
         capacity: 30000,
@@ -3970,7 +3970,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6022",
+        model: "6022",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -3982,7 +3982,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6020",
+        model: "6020",
         format: "A4",
         speed: 12,
         capacity: 30000,
@@ -3994,7 +3994,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6010",
+        model: "6010",
         format: "A4",
         speed: 15,
         capacity: 30000,
@@ -4006,7 +4006,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6500",
+        model: "6500",
         format: "A4",
         speed: 23,
         capacity: 40000,
@@ -4018,7 +4018,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6280",
+        model: "6280",
         format: "A4",
         speed: 30,
         capacity: 70000,
@@ -4030,7 +4030,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6280",
+        model: "6280",
         format: "A4",
         speed: 30,
         capacity: 70000,
@@ -4042,7 +4042,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6600",
+        model: "6600",
         format: "A4",
         speed: 35,
         capacity: 80000,
@@ -4054,7 +4054,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6360",
+        model: "6360",
         format: "A4",
         speed: 40,
         capacity: 10000,
@@ -4066,7 +4066,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6360",
+        model: "6360",
         format: "A4",
         speed: 40,
         capacity: 10000,
@@ -4078,7 +4078,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 6700",
+        model: "6700",
         format: "A4",
         speed: 45,
         capacity: 12000,
@@ -4090,7 +4090,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 7100",
+        model: "7100",
         format: "A3",
         speed: 30,
         capacity: 55000,
@@ -4102,7 +4102,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 7500",
+        model: "7500",
         format: "A3",
         speed: 35,
         capacity: 15000,
@@ -4114,7 +4114,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Phaser 7800",
+        model: "7800",
         format: "A3",
         speed: 45,
         capacity: 22500,
@@ -4126,7 +4126,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6015",
+        model: "6015",
         format: "A4",
         speed: 15,
         capacity: 30000,
@@ -4138,7 +4138,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6025",
+        model: "6025",
         format: "A4",
         speed: 12,
         capacity: 30000,
@@ -4150,7 +4150,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6027",
+        model: "6027",
         format: "A4",
         speed: 18,
         capacity: 30000,
@@ -4162,7 +4162,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6505",
+        model: "6505",
         format: "A4",
         speed: 23,
         capacity: 40000,
@@ -4174,7 +4174,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6605",
+        model: "6605",
         format: "A4",
         speed: 35,
         capacity: 80000,
@@ -4186,7 +4186,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6655",
+        model: "6655",
         format: "A4",
         speed: 36,
         capacity: 10000,
@@ -4198,7 +4198,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 6400",
+        model: "6400",
         format: "A4",
         speed: 35,
         capacity: 12000,
@@ -4210,7 +4210,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7120",
+        model: "7120",
         format: "A3",
         speed: 20,
         capacity: 50000,
@@ -4222,7 +4222,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7125",
+        model: "7125",
         format: "A3",
         speed: 25,
         capacity: 60000,
@@ -4234,7 +4234,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7220",
+        model: "7220",
         format: "A3",
         speed: 20,
         capacity: 87000,
@@ -4246,7 +4246,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7220",
+        model: "7220",
         format: "A3",
         speed: 20,
         capacity: 87000,
@@ -4258,7 +4258,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7830",
+        model: "7830",
         format: "A3",
         speed: 30,
         capacity: 90000,
@@ -4270,7 +4270,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7225",
+        model: "7225",
         format: "A3",
         speed: 25,
         capacity: 10700,
@@ -4282,7 +4282,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7835",
+        model: "7835",
         format: "A3",
         speed: 35,
         capacity: 11000,
@@ -4294,7 +4294,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7845",
+        model: "7845",
         format: "A3",
         speed: 45,
         capacity: 20000,
@@ -4306,7 +4306,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "WorkCentre 7855",
+        model: "7855",
         format: "A3",
         speed: 55,
         capacity: 30000,
@@ -4346,7 +4346,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P2035",
+        model: "P2035",
         format: "A4",
         speed: 35,
         capacity: 20000,
@@ -4360,7 +4360,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P2135",
+        model: "P2135",
         format: "A4",
         speed: 35,
         capacity: 20000,
@@ -4528,7 +4528,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P4040",
+        model: "P4040",
         format: "A3",
         speed: 40,
         capacity: 18000,
@@ -4734,7 +4734,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P3150",
+        model: "P3150",
         format: "A4",
         speed: 50,
         capacity: 200000,
@@ -4776,7 +4776,7 @@ export const repairPrintersPrice = [
                 text: (
                     <>
                         <p>
-                            Ниже приведён пример одной из самых распространённых причин обращения клиентов в сервисные центры. Данная неисправность часто встречается на принтерах <strong>ECOSYS P3150</strong> и им подобных.
+                            Ниже приведён пример одной из самых распространённых причин обращения клиентов в сервисные центры. Данная неисправность часто встречается на принтерах <strong>P3150</strong> и им подобных.
                             На примере видно как по центру листа размазывается тонер. В нашем случае масштаб трагедии невелик, но, со временем, дефект может расползаться на весь лист, может проявляться по краю листа  и т.д.
                         </p>
 
@@ -4903,7 +4903,7 @@ export const repairPrintersPrice = [
         ],
     },
     {
-        model: "ECOSYS M2530",
+        model: "M2530",
         format: "A4",
         speed: 30,
         capacity: 20000,
@@ -4917,7 +4917,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M2030",
+        model: "M2030",
         format: "A4",
         speed: 30,
         capacity: 20000,
@@ -5015,7 +5015,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M2035",
+        model: "M2035",
         format: "A4",
         speed: 35,
         capacity: 10000,
@@ -5029,7 +5029,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M2535",
+        model: "M2535",
         format: "A4",
         speed: 35,
         capacity: 10000,
@@ -5043,7 +5043,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M3540",
+        model: "M3540",
         format: "A4",
         speed: 40,
         capacity: 15000,
@@ -5057,7 +5057,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M3040",
+        model: "M3040",
         format: "A4",
         speed: 40,
         capacity: 15000,
@@ -5071,7 +5071,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M3540",
+        model: "M3540",
         format: "A4",
         speed: 40,
         capacity: 15000,
@@ -5139,7 +5139,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M3560",
+        model: "M3560",
         format: "A4",
         speed: 60,
         capacity: 27500,
@@ -5151,7 +5151,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M3550",
+        model: "M3550",
         format: "A4",
         speed: 50,
         capacity: 27500,
@@ -5335,7 +5335,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 3500",
+        model: "3500",
         format: "A3",
         speed: 35,
         capacity: 17500,
@@ -5347,7 +5347,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 1801",
+        model: "1801",
         format: "A3",
         speed: 18,
         capacity: 20000,
@@ -5361,7 +5361,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 1800",
+        model: "1800",
         format: "A3",
         speed: 18,
         capacity: 20000,
@@ -5375,7 +5375,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKAlfa 180",
+        model: "180",
         format: "A3",
         speed: 18,
         capacity: 20000,
@@ -5389,7 +5389,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKAlfa 181",
+        model: "181",
         format: "A3",
         speed: 18,
         capacity: 20000,
@@ -5402,7 +5402,7 @@ export const repairPrintersPrice = [
         price: {},
         examples: [
             {
-                title: 'Восстановление Kyocera TASKAlfa 181',
+                title: 'Восстановление Kyocera 181',
                 photo: [
                     {
                         item: 'IMG_20240228_131820_306.jpg',
@@ -5441,7 +5441,7 @@ export const repairPrintersPrice = [
                 text: (
                     <>
                         <p>
-                            В данном примере мы показываем процесс восстановления Kyocera TASKAlfa 181. Пробег аппарата - 420 814 копий!
+                            В данном примере мы показываем процесс восстановления Kyocera 181. Пробег аппарата - 420 814 копий!
                             Клиент думал списывать аппарат, но у нас получилось вдохнуть в него новую жизнь.
                         </p>
                         <p>
@@ -5452,7 +5452,7 @@ export const repairPrintersPrice = [
                             Так же были заменены ролики захвата из кассеты и вал переноса изображения.
                             В процессе ремонта было сделано техническое обслуживание и очистка бункера отработки.<br /><br />
                             На фотографии с примерами печати слева оригинал, справа копия. Результат ремонта говорит сам за себя. Старичок ещё поживёт и напечатает не одну сотню тысяч копий)<br /><br />
-                            <strong>Ремонт Kyocera TASKAlfa 181</strong> возможен как в нашей мастерской, так и на выезде.
+                            <strong>Ремонт Kyocera 181</strong> возможен как в нашей мастерской, так и на выезде.
                         </p>
                         <p>
                             За подробностями пишите или звоните нам по указанным контактам.
@@ -5463,7 +5463,7 @@ export const repairPrintersPrice = [
         ],
     },
     {
-        model: "TASKalfa 2201",
+        model: "2201",
         format: "A3",
         speed: 22,
         capacity: 20000,
@@ -5477,7 +5477,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 221",
+        model: "221",
         format: "A3",
         speed: 22,
         capacity: 20000,
@@ -5491,7 +5491,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 220",
+        model: "220",
         format: "A3",
         speed: 22,
         capacity: 20000,
@@ -5517,7 +5517,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 3501",
+        model: "3501",
         format: "A3",
         speed: 35,
         capacity: 30000,
@@ -5529,7 +5529,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 3510",
+        model: "3510",
         format: "A3",
         speed: 35,
         capacity: 30000,
@@ -5543,7 +5543,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 4501",
+        model: "4501",
         format: "A3",
         speed: 45,
         capacity: 30000,
@@ -5557,7 +5557,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 3010",
+        model: "3010",
         format: "A3",
         speed: 30,
         capacity: 30000,
@@ -5571,7 +5571,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 5501",
+        model: "5501",
         format: "A3",
         speed: 55,
         capacity: 30000,
@@ -5585,7 +5585,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 5500",
+        model: "5500",
         format: "A3",
         speed: 55,
         capacity: 30000,
@@ -5599,7 +5599,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 6501",
+        model: "6501",
         format: "A3",
         speed: 65,
         capacity: 35000,
@@ -5611,7 +5611,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 8001",
+        model: "8001",
         format: "A3",
         speed: 80,
         capacity: 35000,
@@ -5623,7 +5623,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 6500",
+        model: "6500",
         format: "A3",
         speed: 65,
         capacity: 35000,
@@ -5635,7 +5635,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 8000",
+        model: "8000",
         format: "A3",
         speed: 80,
         capacity: 35000,
@@ -5647,7 +5647,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "TASKalfa 420",
+        model: "420",
         format: "A3",
         speed: 42,
         capacity: 40000,
@@ -5659,7 +5659,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P6021",
+        model: "P6021",
         format: "A4",
         speed: 21,
         capacity: 50000,
@@ -5693,7 +5693,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P6030",
+        model: "P6030",
         format: "A4",
         speed: 30,
         capacity: 80000,
@@ -5710,7 +5710,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P6026",
+        model: "P6026",
         format: "A4",
         speed: 26,
         capacity: 80000,
@@ -5726,7 +5726,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P6130",
+        model: "P6130",
         format: "A4",
         speed: 30,
         capacity: 90000,
@@ -5743,7 +5743,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M5521",
+        model: "M5521",
         format: "A4",
         speed: 23,
         capacity: 50000,
@@ -5760,7 +5760,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M5526",
+        model: "M5526",
         format: "A4",
         speed: 23,
         capacity: 50000,
@@ -5776,7 +5776,7 @@ export const repairPrintersPrice = [
         price: {},
         examples: [
             {
-                title: 'Kyocera ECOSYS M5526 мажет',
+                title: 'Kyocera M5526 мажет',
                 photo: [
                     {
                         item: 'IMG_20240220_141345_302.jpg',
@@ -5801,7 +5801,7 @@ export const repairPrintersPrice = [
                         <p>
                             Данная неисправность встречается достаточно часто. Принтер мажет на нескольких первых страницах двумя полосками.
                             Далее печать нормальная. Но, бывают случаи, когда дефект не уходит и принтер мажет постоянно.&nbsp;
-                            <strong>Ремонт ленты переноса Kyocera ECOSYS M5526</strong> возможен как в нашей мастерской, так и на выезде.
+                            <strong>Ремонт ленты переноса Kyocera M5526</strong> возможен как в нашей мастерской, так и на выезде.
                         </p>
                         <p>
                             За подробностями пишите или звоните нам по указанным контактам.
@@ -5812,7 +5812,7 @@ export const repairPrintersPrice = [
         ],
     },
     {
-        model: "ECOSYS P6035",
+        model: "P6035",
         format: "A4",
         speed: 35,
         capacity: 15000,
@@ -5846,7 +5846,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS P7035",
+        model: "P7035",
         format: "A4",
         speed: 35,
         capacity: 18000,
@@ -5953,7 +5953,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "ECOSYS M6026",
+        model: "M6026",
         format: "A4",
         speed: 26,
         capacity: 65000,
@@ -5970,7 +5970,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1400",
+        model: "1400",
         format: "A4",
         speed: 16,
         capacity: 2000,
@@ -5982,7 +5982,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1350",
+        model: "1350",
         format: "A4",
         speed: 20,
         capacity: 3000,
@@ -5994,7 +5994,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1300",
+        model: "1300",
         format: "A4",
         speed: 16,
         capacity: 6000,
@@ -6006,7 +6006,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 20p",
+        model: "20p",
         format: "A4",
         speed: 30,
         capacity: 8000,
@@ -6018,7 +6018,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 3300P",
+        model: "3300P",
         format: "A4",
         speed: 33,
         capacity: 10000,
@@ -6030,7 +6030,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 4000P",
+        model: "4000P",
         format: "A4",
         speed: 40,
         capacity: 20000,
@@ -6042,7 +6042,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 4700P",
+        model: "4700P",
         format: "A4",
         speed: 47,
         capacity: 20000,
@@ -6054,7 +6054,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 4650",
+        model: "4650",
         format: "A4",
         speed: 34,
         capacity: 10000,
@@ -6066,7 +6066,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 5650",
+        model: "5650",
         format: "A4",
         speed: 43,
         capacity: 11000,
@@ -6078,7 +6078,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 40P",
+        model: "40P",
         format: "A4",
         speed: 43,
         capacity: 15000,
@@ -6090,7 +6090,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 9100",
+        model: "9100",
         format: "A3",
         speed: 35,
         capacity: 6000,
@@ -6114,7 +6114,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1390MF",
+        model: "1390MF",
         format: "A4",
         speed: 20,
         capacity: 3000,
@@ -6126,7 +6126,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1380MF",
+        model: "1380MF",
         format: "A4",
         speed: 20,
         capacity: 3000,
@@ -6138,7 +6138,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 190f",
+        model: "190f",
         format: "A4",
         speed: 19,
         capacity: 7500,
@@ -6150,7 +6150,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 20",
+        model: "20",
         format: "A4",
         speed: 30,
         capacity: 8000,
@@ -6162,7 +6162,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1480MF",
+        model: "1480MF",
         format: "A4",
         speed: 20,
         capacity: 4000,
@@ -6174,7 +6174,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 43",
+        model: "43",
         format: "A4",
         speed: 43,
         capacity: 20000,
@@ -6186,7 +6186,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "PagePro 1490MF",
+        model: "1490MF",
         format: "A4",
         speed: 20,
         capacity: 3000,
@@ -6198,7 +6198,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 160",
+        model: "160",
         format: "A4",
         speed: 21,
         capacity: 3000,
@@ -6222,7 +6222,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 25e",
+        model: "25e",
         format: "A4",
         speed: 36,
         capacity: 10000,
@@ -6234,7 +6234,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 131f",
+        model: "131f",
         format: "A4",
         speed: 13,
         capacity: 16000,
@@ -6258,7 +6258,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 130f",
+        model: "130f",
         format: "A4",
         speed: 13,
         capacity: 5000,
@@ -6270,7 +6270,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 161",
+        model: "161",
         format: "A4",
         speed: 16,
         capacity: 3000,
@@ -6294,7 +6294,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 4050",
+        model: "4050",
         format: "A4",
         speed: 40,
         capacity: 20000,
@@ -6306,7 +6306,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 3320",
+        model: "3320",
         format: "A4",
         speed: 33,
         capacity: 20000,
@@ -6318,7 +6318,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 4020",
+        model: "4020",
         format: "A4",
         speed: 40,
         capacity: 20000,
@@ -6330,7 +6330,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 4750",
+        model: "4750",
         format: "A4",
         speed: 47,
         capacity: 20000,
@@ -6342,7 +6342,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 185",
+        model: "185",
         format: "A3",
         speed: 18,
         capacity: 55000,
@@ -6354,7 +6354,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 210",
+        model: "210",
         format: "A3",
         speed: 21,
         capacity: 15000,
@@ -6366,7 +6366,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 162",
+        model: "162",
         format: "A3",
         speed: 16,
         capacity: 10000,
@@ -6402,7 +6402,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 195",
+        model: "195",
         format: "A3",
         speed: 18,
         capacity: 11000,
@@ -6414,7 +6414,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 165",
+        model: "165",
         format: "A3",
         speed: 16,
         capacity: 12000,
@@ -6426,7 +6426,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 215",
+        model: "215",
         format: "A3",
         speed: 21,
         capacity: 12000,
@@ -6462,7 +6462,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 224e",
+        model: "224e",
         format: "A3",
         speed: 22,
         capacity: 29000,
@@ -6474,7 +6474,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 250",
+        model: "250",
         format: "A3",
         speed: 25,
         capacity: 28000,
@@ -6486,7 +6486,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 223",
+        model: "223",
         format: "A3",
         speed: 22,
         capacity: 19000,
@@ -6498,7 +6498,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 36",
+        model: "36",
         format: "A3",
         speed: 36,
         capacity: 20000,
@@ -6534,7 +6534,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 184",
+        model: "184",
         format: "A3",
         speed: 28,
         capacity: 28000,
@@ -6546,7 +6546,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 363",
+        model: "363",
         format: "A3",
         speed: 36,
         capacity: 48000,
@@ -6558,7 +6558,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 42",
+        model: "42",
         format: "A3",
         speed: 42,
         capacity: 20000,
@@ -6570,7 +6570,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 423",
+        model: "423",
         format: "A3",
         speed: 43,
         capacity: 25000,
@@ -6582,7 +6582,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 364e",
+        model: "364e",
         format: "A3",
         speed: 36,
         capacity: 29000,
@@ -6594,7 +6594,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 284e",
+        model: "284e",
         format: "A3",
         speed: 28,
         capacity: 29000,
@@ -6606,7 +6606,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 454e",
+        model: "454e",
         format: "A3",
         speed: 45,
         capacity: 29000,
@@ -6618,7 +6618,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 420",
+        model: "420",
         format: "A3",
         speed: 42,
         capacity: 29000,
@@ -6630,7 +6630,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 421",
+        model: "421",
         format: "A3",
         speed: 45,
         capacity: 14500,
@@ -6642,7 +6642,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 283",
+        model: "283",
         format: "A3",
         speed: 36,
         capacity: 12500,
@@ -6654,7 +6654,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 552",
+        model: "552",
         format: "A3",
         speed: 55,
         capacity: 45000,
@@ -6666,7 +6666,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 554e",
+        model: "554e",
         format: "A3",
         speed: 55,
         capacity: 29000,
@@ -6678,7 +6678,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 500",
+        model: "500",
         format: "A3",
         speed: 50,
         capacity: 20000,
@@ -6690,7 +6690,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 501",
+        model: "501",
         format: "A3",
         speed: 50,
         capacity: 15000,
@@ -6702,7 +6702,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 654e",
+        model: "654e",
         format: "A3",
         speed: 65,
         capacity: 49000,
@@ -6714,7 +6714,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 362",
+        model: "362",
         format: "A3",
         speed: 36,
         capacity: 17500,
@@ -6726,7 +6726,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 222",
+        model: "222",
         format: "A3",
         speed: 22,
         capacity: 17500,
@@ -6738,7 +6738,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 350",
+        model: "350",
         format: "A3",
         speed: 35,
         capacity: 48000,
@@ -6750,7 +6750,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 754e",
+        model: "754e",
         format: "A3",
         speed: 75,
         capacity: 49000,
@@ -6762,7 +6762,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 600",
+        model: "600",
         format: "A3",
         speed: 60,
         capacity: 20000,
@@ -6774,7 +6774,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 601",
+        model: "601",
         format: "A3",
         speed: 60,
         capacity: 29000,
@@ -6786,7 +6786,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "bizhub 211",
+        model: "211",
         format: "A3",
         speed: 21,
         capacity: 40000,
@@ -8310,7 +8310,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "Station 8600",
+        model: "8600",
         format: "A3",
         speed: 35,
         capacity: 5000,

@@ -7691,7 +7691,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-A144A",
+            modelCart: "KX-A144A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7701,7 +7701,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FA75",
+            modelCart: "KX-FA75",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7711,7 +7711,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FA76A",
+            modelCart: "KX-FA76A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7721,7 +7721,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FA83A",
+            modelCart: "KX-FA83A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7731,7 +7731,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FA85A",
+            modelCart: "KX-FA85A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7741,7 +7741,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FAT400",
+            modelCart: "KX-FAT400",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7751,7 +7751,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FAT410",
+            modelCart: "KX-FAT410",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7761,7 +7761,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FAT411",
+            modelCart: "KX-FAT411",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7771,7 +7771,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FAT88A",
+            modelCart: "KX-FAT88A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
@@ -7781,7 +7781,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "Panasonic KX-FAT92A",
+            modelCart: "KX-FAT92A",
             id: uuidv4(),
             vendor: "Panasonic",
             examples: [],
