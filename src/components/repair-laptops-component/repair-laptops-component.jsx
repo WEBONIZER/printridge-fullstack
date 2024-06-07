@@ -14,7 +14,7 @@ function RepairLaptopsComponent() {
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterCategory = repairLaptops.filter((i) => i.vendor === vendor)
 
-    return (filterCategory.length > 0 ?
+    return (
         <>
             <Helmet>
                 <title>{`Ремонт ноутбуков ${vendor.toUpperCase()}`}</title>
@@ -37,8 +37,7 @@ function RepairLaptopsComponent() {
                 <Filter />
                 <FilterLaptopsComponent data={filterCategory} />
             </div>
-        </> :
-        <Navigate to="/404" replace />
+        </>
     );
 }
 

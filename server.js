@@ -76,6 +76,10 @@ const render404Page = (req, res) => {
     res.status(404).set({ "Content-Type": "text/html" }).end(errorPageHTML);
 };
 
+app.get('/404', (req, res) => {
+    render404Page(req, res);
+});
+
 
 pathsToRender.forEach(path => app.get(path, renderPage));
 
