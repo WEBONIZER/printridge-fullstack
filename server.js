@@ -76,10 +76,12 @@ const render404Page = (req, res) => {
     res.status(404).set({ "Content-Type": "text/html" }).end(errorPageHTML);
 };
 
-app.get('/404', (req, res) => {
-    render404Page(req, res);
+app.use((req, res, next) => {
+    if (req.originalUrl.includes('?')) {
+        return render404Page(req, res);
+    }
+    next();
 });
-
 
 pathsToRender.forEach(path => app.get(path, renderPage));
 
@@ -117,10 +119,7 @@ laptopRepairPrice.forEach(laptop => {
     });
 });
 
-// Обработчик для всех остальных маршрутов (если ни один из маршрутов не совпадет)
-app.use((req, res) => {
-    render404Page(req, res);
-});
+app.get('*', render404Page);
 
 app.listen(3000, () => {
     console.log("Сервер слушает порт 3000");
