@@ -9581,7 +9581,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "SP 101E",
+            modelCart: "SP-101E",
             id: uuidv4(),
             vendor: "Ricoh",
             examples: [],
@@ -9591,7 +9591,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "SP 100E",
+            modelCart: "SP-100E",
             id: uuidv4(),
             vendor: "Ricoh",
             examples: [],
@@ -9601,7 +9601,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "SP 150LE",
+            modelCart: "SP-150LE",
             id: uuidv4(),
             vendor: "Ricoh",
             examples: [],
@@ -9611,7 +9611,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "SP 150НE",
+            modelCart: "SP-150НE",
             id: uuidv4(),
             vendor: "Ricoh",
             examples: [],
@@ -9621,7 +9621,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844613 Y",
+            modelCart: "44844613Y",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9631,7 +9631,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844614 M",
+            modelCart: "44844614M",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9641,7 +9641,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844615 C",
+            modelCart: "44844615C",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9651,7 +9651,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844616 Bk",
+            modelCart: "44844616Bk",
             vendor: "oki",
             examples: [],
             chip: true,
@@ -9660,7 +9660,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844625 Y",
+            modelCart: "44844625Y",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9670,7 +9670,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844626 M",
+            modelCart: "44844626M",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9680,7 +9680,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844627 C",
+            modelCart: "44844627C",
             id: uuidv4(),
             vendor: "oki",
             examples: [],
@@ -9690,7 +9690,7 @@ export const refillData =
             recovery_price: "Уточняйте"
         },
         {
-            modelCart: "44844628 Bk",
+            modelCart: "44844628Bk",
             id: uuidv4(),
             vendor: "oki",
             examples: [],

@@ -3614,51 +3614,51 @@ export const refillData =
             vendor: "kyocera",
         },
         {
-            modelCart: "SP 101E",
+            modelCart: "SP-101E",
             vendor: "Ricoh",
         },
         {
-            modelCart: "SP 100E",
+            modelCart: "SP-100E",
             vendor: "Ricoh",
         },
         {
-            modelCart: "SP 150LE",
+            modelCart: "SP-150LE",
             vendor: "Ricoh",
         },
         {
-            modelCart: "SP 150НE",
+            modelCart: "SP-150НE",
             vendor: "Ricoh",
         },
         {
-            modelCart: "44844613 Y",
+            modelCart: "44844613Y",
             vendor: "oki",
         },
         {
-            modelCart: "44844614 M",
+            modelCart: "44844614M",
             vendor: "oki",
         },
         {
-            modelCart: "44844615 C",
+            modelCart: "44844615C",
             vendor: "oki",
         },
         {
-            modelCart: "44844616 Bk",
+            modelCart: "44844616Bk",
             vendor: "oki",
         },
         {
-            modelCart: "44844625 Y",
+            modelCart: "44844625Y",
             vendor: "oki",
         },
         {
-            modelCart: "44844626 M",
+            modelCart: "44844626M",
             vendor: "oki",
         },
         {
-            modelCart: "44844627 C",
+            modelCart: "44844627C",
             vendor: "oki",
         },
         {
-            modelCart: "44844628 Bk",
+            modelCart: "44844628Bk",
             vendor: "oki",
         },
         {
