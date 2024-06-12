@@ -15,7 +15,7 @@ function RepairLaptopsItemComponent() {
     return (data ?
         <div>
             <div className={styles.container}>
-            <h2 className={styles.header}>Ремонт ноутбука {`${data.vendor.toUpperCase()} ${data.series !== '' ? data.series : ''} ${data.model}`}</h2>
+            <h1 className={styles.header}>Ремонт ноутбука {`${data.vendor.toUpperCase()} ${data.series !== '' ? data.series : ''} ${data.model}`}</h1>
                 <div className={styles.img_desc_box}>
                     <div className={styles.price_container}>                        
                         <div className={styles.specifications}>

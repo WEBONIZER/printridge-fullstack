@@ -55,12 +55,12 @@ function HeaderComponent() {
                         </div>
                     </div>
                     <div className={styles.slogan_box}>
-                        <h1 className={styles.slogan_big}>{
+                        <p className={styles.slogan_big}>{
                             location.pathname.includes('refill') && `Заправка картриджей ${vendor === undefined ? '' : vendor.toUpperCase()}` ||
                             location.pathname.includes('repair') && 'Ремонт принтеров и МФУ' ||
                             location.pathname.includes('remont-noutbukov') && 'Ремонт ноутбуков' ||
                             'Printridge — решение проблем с компьютерной техникой'
-                        }</h1>
+                        }</p>
                         <p className={styles.slogan_small}>{
                             location.pathname.includes('refill') && 'Заправка картриджей помогает существенно экономить на печати' ||
                             location.pathname.includes('repair') && 'Ремонт принтеров и МФУ осуществляется на выезде и в нашем офисе' ||

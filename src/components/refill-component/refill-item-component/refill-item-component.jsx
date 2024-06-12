@@ -33,7 +33,7 @@ function RefillItemComponent() {
             </Helmet>
             <div>
                 <div className={styles.container}>
-                    <h2 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
+                    <h1 className={styles.name}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h1>
                     <div className={styles.img_desc_box}>
                         <div className={styles.left_box}>
                             <div className={styles.text_box}>
