@@ -3686,6 +3686,10 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
+        model: 'M608',
+    },
+    {
+        vendor: 'hp',
         model: 'M806X',
     },
     {
