@@ -8,6 +8,8 @@ const ContactsComponent = () => {
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
 
+    const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
+
     return (
         <>
             <Helmet>
@@ -20,8 +22,17 @@ const ContactsComponent = () => {
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Информация о компании ПРИНТРИДЖ, контакты`}
+                    content={`Информация о местонахождении и времени работы компании ПРИНТРИДЖ, контактные данные`}
                 />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={`Компания ПРИНТРИДЖ, контакты`} />
+                <meta property="og:description" content={`Информация о местонахождении и времени работы компании ПРИНТРИДЖ, контактные данные`} />
+                <meta property="og:image" content={<img
+                    className={styles.image}
+                    src={img}
+                    alt={`ПРИНТРИДЖ, контакты`}
+                />} />
+                <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.container}>
                 <div className={styles.info_contacts}>

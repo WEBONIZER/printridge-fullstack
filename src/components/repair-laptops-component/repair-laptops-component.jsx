@@ -14,6 +14,8 @@ function RepairLaptopsComponent() {
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterCategory = repairLaptops.filter((i) => i.vendor === vendor)
 
+    const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
+
     return (
         <>
             <Helmet>
@@ -28,6 +30,15 @@ function RepairLaptopsComponent() {
                     name="description"
                     content={`Прайс по ремонту ноутбуков ${vendor.toUpperCase()}`}
                 />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={`Ремонт ноутбуков ${vendor.toUpperCase()}`} />
+                <meta property="og:description" content={`Прайс по ремонту ноутбуков ${vendor.toUpperCase()}`} />
+                <meta property="og:image" content={<img
+                    className={styles.image}
+                    src={img}
+                    alt={`Заправка ноутбуков ${vendor}`}
+                />} />
+                <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             < div className={styles.container}>
                 <div className={styles.title_box}>

@@ -19,7 +19,7 @@ const RepairPriceComponent = ({ data }) => {
                 <meta name="title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
-                    content={`ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`}
+                    content={`ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
