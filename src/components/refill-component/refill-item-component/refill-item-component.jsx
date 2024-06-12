@@ -19,7 +19,7 @@ function RefillItemComponent() {
     return (data ?
         <>
             <Helmet>
-                <title>{`Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <title>{`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
                 <meta name="title" content={`Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
@@ -28,7 +28,7 @@ function RefillItemComponent() {
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Заправка ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
+                    content={`Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
                 />
             </Helmet>
             <div>
