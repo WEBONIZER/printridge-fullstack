@@ -16,6 +16,8 @@ function RefillItemComponent() {
     const { vendor, model } = useParams()
     const data = refillData.find((i) => i.modelCart === model)
 
+    const img = `https://storage.yandexcloud.net/printridge/refill/${vendor}/${model}.png`;
+
     return (data ?
         <>
             <Helmet>
@@ -30,6 +32,15 @@ function RefillItemComponent() {
                     name="description"
                     content={`Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
                 />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:description" content={`Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`} />
+                <meta property="og:image" content={<img
+                    className={styles.image}
+                    src={img}
+                    alt={`Заправка картриджа ${model}`}
+                />} />
+                <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div>
                 <div className={styles.container}>

@@ -9,10 +9,12 @@ const RepairPriceComponent = ({ data }) => {
 
     const { vendor, model } = useParams()
 
+    const img = `https://storage.yandexcloud.net/printridge/laptops/${vendor}/${model}.png`;
+
     return (
         <>
             <Helmet>
-                <title>{`Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <title>{`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
                 <meta name="title" content={`Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
@@ -29,6 +31,15 @@ const RepairPriceComponent = ({ data }) => {
                     Удаление вирусов ${data.price.antivirus}
                     Замена матрицы ${data.price.matrixReplacement}`}
                 />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:description" content={`Стоимость ремонта ноутбука ${vendor.toUpperCase()} ${model}`} />
+                <meta property="og:image" content={<img
+                    className={styles.image}
+                    src={img}
+                    alt={`Ремонт ноутбука ${model}`}
+                />} />
+                <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.container}>
                 <p className={styles.boxes_title}>Цены</p>

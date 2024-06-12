@@ -11,7 +11,7 @@ import RepairPriceComponent from '../repair-price-component/repair-price-compone
 function RepairItemComponent() {
 
     const { model } = useParams()
-    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
+    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)    
 
     return (data ?
         <div>

@@ -10,10 +10,12 @@ const RepairPriceComponent = ({ data }) => {
 
     const { vendor, model } = useParams()
 
+    const img = `https://storage.yandexcloud.net/printridge/refill/${vendor}/${model}.png`;
+
     return (
         <>
             <Helmet>
-                <title>{`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <title>{`Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
                 <meta name="title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
@@ -30,6 +32,15 @@ const RepairPriceComponent = ({ data }) => {
                     Ремонт термоблока (печки) ${data.price.therm}
                     Ремонт электроники ${data.price.electronics}`}
                 />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:description" content={`Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}`} />
+                <meta property="og:image" content={<img
+                    className={styles.image}
+                    src={img}
+                    alt={`Ремонт принтера ${model}`}
+                />} />
+                <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.container}>
                 <p className={styles.boxes_title}>Цены</p>
