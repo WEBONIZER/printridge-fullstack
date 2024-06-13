@@ -69,7 +69,7 @@ function RefillItemComponent() {
                     {JSON.stringify(schemaData)}
                 </script>
                 <title>{`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
+                <meta name="title" content={`Заправка ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
                     content={`заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${data.devices}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`}
