@@ -68,7 +68,7 @@ function RefillItemComponent() {
                 <script type="application/ld+json">
                     {JSON.stringify(schemaData)}
                 </script>
-                <title>{`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <title>{`Заправка ${model.toUpperCase()}`}</title>
                 <meta name="title" content={`Заправка ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
