@@ -12,7 +12,7 @@ const UseCartridges = ({ cartridgesArray }) => {
             return (
                 cartridge !== undefined &&
                 <div className={styles.container} key={key}>
-                    <img className={styles.image} src={`https://storage.yandexcloud.net/printridge/refill/${cartridge.vendor}/${cartridge.modelCart}.png`} />
+                    <img className={styles.image} src={`https://storage.yandexcloud.net/printridge/refill/${cartridge.vendor}/${cartridge.modelCart}.png`} alt={`Ремонт ${cartridge.modelCart}`} />
                     <div className={styles.info_box}>
                         <p className={styles.title}>{`Заправка картриджа ${cartridge.vendor.toUpperCase()} ${cartridge.modelCart}`}</p>
                         <p className={styles.price}>{`Стоимость заправки ${cartridge.refill_price}`}</p>
