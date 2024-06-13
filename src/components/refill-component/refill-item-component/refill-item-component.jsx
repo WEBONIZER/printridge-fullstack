@@ -77,15 +77,15 @@ function RefillItemComponent() {
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
+                    content={`заправка ${model.toUpperCase()}, Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
-                <meta property="og:description" content={`Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`} />
+                <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
+                <meta property="og:description" content={`Стоимость заправки ${data.modelCart} - ${data.refill_price}, стоимость восстановления ${data.modelCart} ${data.recovery_price}`} />
                 <meta property="og:image" content={<img
                     className={styles.image}
                     src={img}
-                    alt={`Заправка картриджа ${model}`}
+                    alt={`Заправка ${model.toUpperCase()}`}
                 />} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
