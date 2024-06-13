@@ -236,7 +236,7 @@ export const refillData =
             recovery_price: "6500 ₽"
         },
         {
-            modelCart: "C8543Х",
+            modelCart: "C8543X",
             resource: 30000,
             examples: [],
             chip: false,
@@ -4148,26 +4148,6 @@ export const refillData =
             devices: "ML-3470",
             refill_price: "1050 ₽",
             recovery_price: "1700 ₽",
-        },
-        {
-            modelCart: "ML-D4550A 10K",
-            examples: [],
-            chip: true,
-            id: uuidv4(),
-            vendor: "samsung",
-            devices: "ML-4550 / ML-4050",
-            refill_price: "900 ₽",
-            recovery_price: "2200 ₽",
-        },
-        {
-            modelCart: "ML-D4550A 20K",
-            examples: [],
-            chip: true,
-            id: uuidv4(),
-            vendor: "samsung",
-            devices: "ML-4550 / ML-4050",
-            refill_price: "1400 ₽",
-            recovery_price: "2900 ₽",
         },
         {
             modelCart: "MLT-D101S",

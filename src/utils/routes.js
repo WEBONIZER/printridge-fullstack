@@ -43,7 +43,7 @@ export const refillData =
             vendor: "hp",
         },
         {
-            modelCart: "C8543Х",
+            modelCart: "C8543X",
             vendor: "hp",
         },
         {
@@ -1476,14 +1476,6 @@ export const refillData =
         },
         {
             modelCart: "ML-D3470B",
-            vendor: "samsung",
-        },
-        {
-            modelCart: "ML-D4550A 10K",
-            vendor: "samsung",
-        },
-        {
-            modelCart: "ML-D4550A 20K",
             vendor: "samsung",
         },
         {
@@ -6153,5 +6145,5 @@ export const pathsToRender = [
     '/remont-noutbukov/asus',
     '/remont-noutbukov/huawei',
     '/remont-noutbukov/sony',
-    '/remont-нoutbukov/dell'
+    '/remont-noutbukov/dell'
 ];
