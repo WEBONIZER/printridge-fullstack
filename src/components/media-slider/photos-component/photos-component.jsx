@@ -18,7 +18,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
             imgagesNameArr.map((i, key) => {
                 const img = {
                     src: `https://storage.yandexcloud.net/printridge/examples/refill/${vendor}/${model}/${i.item}`,
-                    alt: i.item,
+                    alt: `Заправка ${model}`,
                 };
                 imagesArr.push(img);
 
@@ -27,7 +27,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
             imgagesNameArr.map((i, key) => {
                 const img = {
                     src: `https://storage.yandexcloud.net/printridge/examples/repair/${vendor}/${model}/${i.item}`,
-                    alt: i.item,
+                    alt: `Ремонт ${model}`,
                 };
                 imagesArr.push(img);
             }) ||
@@ -35,7 +35,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
             imgagesNameArr.map((i, key) => {
                 const img = {
                     src: `https://storage.yandexcloud.net/printridge/examples/remont-noutbukov/${vendor}/${model}/${i.item}`,
-                    alt: i.item,
+                    alt: `Ремонт ${model}`,
                 };
                 imagesArr.push(img);
             })
