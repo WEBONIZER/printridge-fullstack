@@ -87,7 +87,7 @@ const RepairPriceComponent = ({ data }) => {
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.container}>
-                <h2 className={styles.boxes_title}>{`Ремонт ${data.model}`}</h2>
+                <h3 className={styles.boxes_title}>{`Ремонт ${data.model}`}</h3>
                 <div className={styles.price_wrap_box}>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Диагностика</p>

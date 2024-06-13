@@ -44,7 +44,7 @@ function RepairItemComponent() {
                         </div>
                     </div>
                     <ImageRapairBox />
-                    <h1 className={styles.header_mobile}>Ремонт {`${data.model}`}</h1>
+                    <h2 className={styles.header_mobile}>Ремонт {`${data.model}`}</h2>
                 </div>
 
 

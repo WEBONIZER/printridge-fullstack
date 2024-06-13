@@ -101,11 +101,11 @@ function RefillItemComponent() {
 
                             <p className={styles.boxes_title}>Цены</p>
                             <div className={styles.text_box}>
-                                <h2 className={styles.blue_text}>{`Заправка ${data.modelCart}`}</h2>
+                                <h3 className={styles.blue_text}>{`Заправка ${data.modelCart}`}</h3>
                                 <p className={styles.black_text}>{data.refill_price}</p>
                             </div>
                             <div className={styles.text_box}>
-                                <h2 className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</h2>
+                                <h3 className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</h3>
                                 <p className={styles.black_text}>{data.recovery_price}</p>
                             </div>
                             <div className={styles.text_box}>
@@ -114,7 +114,7 @@ function RefillItemComponent() {
                             </div>
                         </div>
                         <ImageBox />
-                        <h1 className={styles.name_mobile}>Заправка {`${data.modelCart}`}</h1>
+                        <h2 className={styles.name_mobile}>Заправка {`${data.modelCart}`}</h2>
                     </div>
                     <DescriptionBox />
                 </div>
