@@ -10,7 +10,7 @@ const RepairPriceComponent = ({ data }) => {
 
     const { vendor, model } = useParams()
 
-    const img = `https://storage.yandexcloud.net/printridge/refill/${vendor}/${model}.png`;
+    const img = `https://storage.yandexcloud.net/printridge/repair/${vendor}/${model}.png`;
 
     const schemaData = {
         "@context": "https://schema.org/",
