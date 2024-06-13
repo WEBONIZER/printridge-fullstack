@@ -12,19 +12,67 @@ const RepairPriceComponent = ({ data }) => {
 
     const img = `https://storage.yandexcloud.net/printridge/refill/${vendor}/${model}.png`;
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": [
+            {
+                "@language": "en",
+                "@value": "Printer Repair"
+            },
+            {
+                "@language": "ru",
+                "@value": "Ремонт принтеров"
+            }
+        ],
+        "provider": {
+            "@type": "Organization",
+            "name": "Принтридж",
+            "url": "https://printridge.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Тамбовская улица, 32, оф. 508, 5-й этаж",
+                "addressLocality": "Санкт-Петербург",
+                "addressRegion": "СПб",
+                "postalCode": "192007",
+                "addressCountry": "RU"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Санкт-Петербург"
+        },
+        "serviceOutput": {
+            "@type": "Product",
+            "name": `Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}`,
+            "image": `${img}`,
+            "description": `Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${model.toUpperCase()}`,
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": data.price.diagnostics,
+                "url": `${canonicalUrl}`
+            }
+        }
+    }
+
     return (
         <>
             <Helmet>
-                <title>{`Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
+                <title>{`Ремонт ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <meta name="title" content={`Ремонт ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
-                    content={`ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
+                    content={`ремонт ${model.toUpperCase()}, ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
+                    content={`ремонт ${model.toUpperCase()}
+                    Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
                     Диагностика ${data.price.diagnostics}
                     ТО ${data.price.TO}
                     Замена роликов ${data.price.rollers}
@@ -33,17 +81,13 @@ const RepairPriceComponent = ({ data }) => {
                     Ремонт электроники ${data.price.electronics}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:title" content={`Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta property="og:description" content={`Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}`} />
-                <meta property="og:image" content={<img
-                    className={styles.image}
-                    src={img}
-                    alt={`Ремонт принтера ${model}`}
-                />} />
+                <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.container}>
-                <p className={styles.boxes_title}>Цены</p>
+                <h2 className={styles.boxes_title}>{`Ремонт ${data.model}`}</h2>
                 <div className={styles.price_wrap_box}>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Диагностика</p>

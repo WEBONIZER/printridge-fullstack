@@ -50,14 +50,14 @@ function RefillItemComponent() {
         },
         "serviceOutput": {
             "@type": "Product",
-            "name": "Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}",
-            "image": "img",
-            "description": "Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} - ${data.recovery_price}",
+            "name": `Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`,
+            "image": `${img}`,
+            "description": `Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} - ${data.recovery_price}`,
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
                 "price": data.refill_price,
-                "url": "canonicalUrl"
+                "url": `${canonicalUrl}`
             }
         }
     }
@@ -77,7 +77,7 @@ function RefillItemComponent() {
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`заправка ${model.toUpperCase()}, Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
+                    content={`заправка ${model.toUpperCase()}, заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} ${data.recovery_price}`}
                 />
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
@@ -102,10 +102,10 @@ function RefillItemComponent() {
                             <p className={styles.boxes_title}>Цены</p>
                             <div className={styles.text_box}>
                                 <h2 className={styles.blue_text}>{`Заправка ${data.modelCart}`}</h2>
-                                <h2 className={styles.black_text}>{data.refill_price}</h2>
+                                <p className={styles.black_text}>{data.refill_price}</p>
                             </div>
                             <div className={styles.text_box}>
-                                <p className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</p>
+                                <h2 className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</h2>
                                 <p className={styles.black_text}>{data.recovery_price}</p>
                             </div>
                             <div className={styles.text_box}>

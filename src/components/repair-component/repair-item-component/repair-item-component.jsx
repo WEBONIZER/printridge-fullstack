@@ -11,15 +11,15 @@ import RepairPriceComponent from '../repair-price-component/repair-price-compone
 function RepairItemComponent() {
 
     const { model } = useParams()
-    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)    
+    const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
 
-    return (data ?
+    return (data &&
         <div>
             <div className={styles.container}>
-            <h1 className={styles.header}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h1>
+                <h1 className={styles.header}>Ремонт {`${data.model}`}</h1>
                 <div className={styles.img_desc_box}>
                     <div className={styles.price_container}>
-                        
+
                         <div className={styles.specifications}>
                             <div className={styles.text_box}>
                                 <p className={styles.blue_text}>Способ печати</p>
@@ -44,7 +44,7 @@ function RepairItemComponent() {
                         </div>
                     </div>
                     <ImageRapairBox />
-                    <h2 className={styles.header_mobile}>Ремонт {data.device === 'printer' ? 'принтера' : 'МФУ'} {`${data.vendor.toUpperCase()} ${data.model}`}</h2>
+                    <h1 className={styles.header_mobile}>Ремонт {`${data.model}`}</h1>
                 </div>
 
 
@@ -53,8 +53,7 @@ function RepairItemComponent() {
             <DescriptionRepairBox />
             {data.cartridges.length !== 0 && <UseCartridges cartridgesArray={data.cartridges} />}
             {data.examples.length !== 0 && <Tabs items={data.examples} />}
-        </div> :
-        <Navigate to="/404" replace />
+        </div>
     );
 }
 

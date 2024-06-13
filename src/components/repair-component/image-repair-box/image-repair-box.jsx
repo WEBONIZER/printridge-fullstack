@@ -12,7 +12,7 @@ const ImageRapairBox = () => {
             <img
                 className={styles.image}
                 src={img}
-                alt={`Ремонт принтера ${model}`}
+                alt={`Ремонт ${model}`}
             />
         )
     )
