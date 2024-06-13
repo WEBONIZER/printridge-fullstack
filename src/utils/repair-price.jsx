@@ -5243,6 +5243,20 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
+        model: "FS-6025",
+        format: "A3",
+        speed: 25,
+        capacity: 10000,
+        cartridges: [
+            "TK-475"
+        ],
+        device: "MFU",
+        vendor: "kyocera",
+        type: "mono",
+        price: {},
+        examples: [],
+    },
+    {
         model: "FS-6525MFP",
         format: "A3",
         speed: 25,

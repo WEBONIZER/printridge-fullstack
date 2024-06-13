@@ -5041,6 +5041,10 @@ export const repairPrintersPrice = [
         vendor: "kyocera",
     },
     {
+        model: "FS-6025",
+        vendor: "kyocera",
+    },
+    {
         model: "M8124",
         vendor: "kyocera",
     },
