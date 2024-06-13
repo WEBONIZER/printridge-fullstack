@@ -18,9 +18,56 @@ function RefillItemComponent() {
 
     const img = `https://storage.yandexcloud.net/printridge/refill/${vendor}/${model}.png`;
 
-    return (data ?
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": [
+            {
+                "@language": "en",
+                "@value": "Cartridge Refill"
+            },
+            {
+                "@language": "ru",
+                "@value": "Заправка картриджей"
+            }
+        ],
+        "provider": {
+            "@type": "Organization",
+            "name": "Принтридж",
+            "url": "https://printridge.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Тамбовская улица, 32, оф. 508, 5-й этаж",
+                "addressLocality": "Санкт-Петербург",
+                "addressRegion": "СПб",
+                "postalCode": "192007",
+                "addressCountry": "RU"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Санкт-Петербург"
+        },
+        "serviceOutput": {
+            "@type": "Product",
+            "name": "Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}",
+            "image": "img",
+            "description": "Заправка картриджа ${data.modelCart} - ${data.refill_price} Восстановление ${data.modelCart} - ${data.recovery_price}",
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": data.refill_price,
+                "url": "canonicalUrl"
+            }
+        }
+    }
+
+    return (data &&
         <>
             <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
                 <title>{`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
                 <meta name="title" content={`Заправка картриджей ${vendor.toUpperCase()} ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
                 <meta
@@ -51,10 +98,10 @@ function RefillItemComponent() {
                                 <p className={styles.blue_text}>Совместимые модели</p>
                                 <p className={styles.black_text}>{data.devices}</p>
                             </div>
-                            <div className={styles.text_box}>
+                            {data.resource !== undefined ? <div className={styles.text_box}>
                                 <p className={styles.blue_text}>Ресурс картриджа:</p>
                                 <p className={styles.black_text}>{`${data.resource} стр., при заполнении страницы 5%`}</p>
-                            </div>
+                            </div> : ''}
 
                             <p className={styles.boxes_title}>Цены</p>
                             <div className={styles.text_box}>
@@ -77,8 +124,7 @@ function RefillItemComponent() {
                 </div>
                 {data.examples.length !== 0 && <Tabs items={data.examples} />}
             </div>
-        </> :
-        <Navigate to="/404" replace />
+        </>
     );
 }
 
