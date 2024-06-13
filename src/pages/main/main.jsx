@@ -11,9 +11,56 @@ const Main = () => {
 
     const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": [
+            {
+                "@language": "en",
+                "@value": "Cartridge Refill"
+            },
+            {
+                "@language": "ru",
+                "@value": "Заправка картриджей"
+            }
+        ],
+        "provider": {
+            "@type": "Organization",
+            "name": "Принтридж",
+            "url": "https://printridge.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Тамбовская улица, 32, оф. 508, 5-й этаж",
+                "addressLocality": "Санкт-Петербург",
+                "addressRegion": "СПб",
+                "postalCode": "192007",
+                "addressCountry": "RU"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Санкт-Петербург"
+        },
+        "serviceOutput": {
+            "@type": "Product",
+            "name": `Принтридж. Главная страница`,
+            "image": `${img}`,
+            "description": `Заправка картриджей, ремонт принтеров и мфу, ремонт ноутбуков`,
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "500",
+                "url": `${canonicalUrl}`
+            }
+        }
+    }
+
     return (
         <>
             <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
                 <title>{`ПРИНТРИДЖ - ремонт оргтехники в Санкт-Петербурге`}</title>
                 <meta name="title" content={`ПРИНТРИДЖ - ремонт оргтехники в Санкт-Петербурге`} />
                 <meta
@@ -29,11 +76,7 @@ const Main = () => {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`ПРИНТРИДЖ - ремонт оргтехники в Санкт-Петербурге`} />
                 <meta property="og:description" content={`Главная страница сайта компании ПРИНТРИДЖ. Заправка картриджей, ремонт принтеров и мфу, ремонт ноутбуков в Санкт-Петербурге`} />
-                <meta property="og:image" content={<img
-                    className={styles.image}
-                    src={img}
-                    alt={`ПРИНТРИДЖ, главная страница`}
-                />} />
+                <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div className={styles.main_box}>

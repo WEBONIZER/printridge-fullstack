@@ -10,9 +10,56 @@ const ContactsComponent = () => {
 
     const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": [
+            {
+                "@language": "en",
+                "@value": "Cartridge Refill"
+            },
+            {
+                "@language": "ru",
+                "@value": "Заправка картриджей"
+            }
+        ],
+        "provider": {
+            "@type": "Organization",
+            "name": "Принтридж",
+            "url": "https://printridge.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Тамбовская улица, 32, оф. 508, 5-й этаж",
+                "addressLocality": "Санкт-Петербург",
+                "addressRegion": "СПб",
+                "postalCode": "192007",
+                "addressCountry": "RU"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Санкт-Петербург"
+        },
+        "serviceOutput": {
+            "@type": "Product",
+            "name": `Принтридж. Контакты`,
+            "image": `${img}`,
+            "description": `Контакты. Заправка картриджей, ремонт принтеров и мфу, ремонт ноутбуков`,
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": "500",
+                "url": `${canonicalUrl}`
+            }
+        }
+    }
+
     return (
         <>
             <Helmet>
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
                 <title>{`Компания ПРИНТРИДЖ, контакты`}</title>
                 <meta name="title" content={`Компания ПРИНТРИДЖ, контакты`} />
                 <meta
