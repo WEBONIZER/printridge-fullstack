@@ -12,7 +12,7 @@ const ImageBox = () => {
             <img
                 className={styles.image}
                 src={img}
-                alt={`Заправка картриджа ${model}`}
+                alt={`Заправка ${model}`}
             />
         )
     )

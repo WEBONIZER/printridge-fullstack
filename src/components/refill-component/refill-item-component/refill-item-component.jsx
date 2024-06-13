@@ -68,8 +68,8 @@ function RefillItemComponent() {
                 <script type="application/ld+json">
                     {JSON.stringify(schemaData)}
                 </script>
-                <title>{`Заправка ${model.toUpperCase()}`}</title>
-                <meta name="title" content={`Заправка ${model.toUpperCase()} для ${data.devices} в Санкт-Петербурге`} />
+                <title>{`Заправка ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <meta name="title" content={`Заправка ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
                     content={`заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${data.devices}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`}
@@ -82,11 +82,7 @@ function RefillItemComponent() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
                 <meta property="og:description" content={`Стоимость заправки ${data.modelCart} - ${data.refill_price}, стоимость восстановления ${data.modelCart} ${data.recovery_price}`} />
-                <meta property="og:image" content={<img
-                    className={styles.image}
-                    src={img}
-                    alt={`Заправка ${model.toUpperCase()}`}
-                />} />
+                <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div>
@@ -105,8 +101,8 @@ function RefillItemComponent() {
 
                             <p className={styles.boxes_title}>Цены</p>
                             <div className={styles.text_box}>
-                                <p className={styles.blue_text}>{`Заправка ${data.modelCart}`}</p>
-                                <p className={styles.black_text}>{data.refill_price}</p>
+                                <h2 className={styles.blue_text}>{`Заправка ${data.modelCart}`}</h2>
+                                <h2 className={styles.black_text}>{data.refill_price}</h2>
                             </div>
                             <div className={styles.text_box}>
                                 <p className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</p>
@@ -118,7 +114,7 @@ function RefillItemComponent() {
                             </div>
                         </div>
                         <ImageBox />
-                        <h2 className={styles.name_mobile}>Заправка картриджа {`${data.vendor.toUpperCase()} ${data.modelCart}`}</h2>
+                        <h1 className={styles.name_mobile}>Заправка {`${data.modelCart}`}</h1>
                     </div>
                     <DescriptionBox />
                 </div>
