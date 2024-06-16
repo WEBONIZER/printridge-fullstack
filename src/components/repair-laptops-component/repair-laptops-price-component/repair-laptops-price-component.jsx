@@ -11,19 +11,68 @@ const RepairPriceComponent = ({ data }) => {
 
     const img = `https://storage.yandexcloud.net/printridge/laptops/${vendor}/${model}.png`;
 
+    const schemaData = {
+        "@context": "https://schema.org/",
+        "@type": "Service",
+        "serviceType": [
+            {
+                "@language": "en",
+                "@value": "Laptop Repair"
+            },
+            {
+                "@language": "ru",
+                "@value": "Ремонт ноутбуков"
+            }
+        ],
+        "provider": {
+            "@type": "Organization",
+            "name": "Принтридж",
+            "url": "https://printridge.ru",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Тамбовская улица, 32, оф. 508, 5-й этаж",
+                "addressLocality": "Санкт-Петербург",
+                "addressRegion": "СПб",
+                "postalCode": "192007",
+                "addressCountry": "RU"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Санкт-Петербург"
+        },
+        "serviceOutput": {
+            "@type": "Product",
+            "name": `Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}`,
+            "image": `${img}`,
+            "description": `Ремонт ноутбука ${model.toUpperCase()}`,
+            "offers": {
+                "@type": "Offer",
+                "priceCurrency": "RUB",
+                "price": data.price.TO,
+                "url": `${canonicalUrl}`,
+                "priceValidUntil": new Date().toLocaleDateString(),
+                "availability": "https://schema.org/InStock"
+            }
+        }
+    }
+
     return (
         <>
             <Helmet>
-                <title>{`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Ремонт ноутбуков ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <script type="application/ld+json">
+                    {JSON.stringify(schemaData)}
+                </script>
+                <title>{`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}`}</title>
+                <meta name="title" content={`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
                 <meta
                     name="keywords"
-                    content={`ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}, чистка ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}, удаление вирусов, установка windows, в Санкт-Петербурге, выезд, на выезде`}
+                    content={`ремонт ноутбука ${model.toUpperCase()}, чистка ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()}, удаление вирусов, установка windows, в Санкт-Петербурге, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Стоимость ремонта ноутбука ${vendor.toUpperCase()} ${model}
+                    content={`ремонт ноутбука ${model.toUpperCase()}, стоимость.
                     Диагностика ${data.price.diagnostics}
                     Чистка ноутбука ${data.price.TO}
                     Замена термопасты ${data.price.thermalPaste}
@@ -32,7 +81,7 @@ const RepairPriceComponent = ({ data }) => {
                     Замена матрицы ${data.price.matrixReplacement}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Ремонт ноутбука ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:title" content={`Ремонт ноутбука ${model.toUpperCase()}`} />
                 <meta property="og:description" content={`Стоимость ремонта ноутбука ${vendor.toUpperCase()} ${model}`} />
                 <meta property="og:image" content={<img
                     className={styles.image}

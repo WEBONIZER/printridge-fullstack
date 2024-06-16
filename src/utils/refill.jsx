@@ -8241,16 +8241,6 @@ export const refillData =
             id: uuidv4(),
             vendor: "kyocera",
             examples: [],
-            chip: false,
-            devices: "M3040idn / M3540idn",
-            refill_price: "1800 ₽",
-            recovery_price: "-"
-        },
-        {
-            modelCart: "TK-3150",
-            id: uuidv4(),
-            vendor: "kyocera",
-            examples: [],
             chip: true,
             devices: "M3040idn / M3540idn",
             refill_price: "2000 ₽",

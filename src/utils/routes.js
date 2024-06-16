@@ -3087,10 +3087,6 @@ export const refillData =
             vendor: "kyocera",
         },
         {
-            modelCart: "TK-3150",
-            vendor: "kyocera",
-        },
-        {
             modelCart: "TK-3160",
             vendor: "kyocera",
         },

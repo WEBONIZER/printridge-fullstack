@@ -51,7 +51,9 @@ const RepairPriceComponent = ({ data }) => {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
                 "price": data.price.diagnostics,
-                "url": `${canonicalUrl}`
+                "url": `${canonicalUrl}`,
+                "priceValidUntil": new Date().toLocaleDateString(),
+                "availability": "https://schema.org/InStock"
             }
         }
     }

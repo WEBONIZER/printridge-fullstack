@@ -53,7 +53,7 @@ const ContactsComponent = () => {
             }
         }
     }
-
+//console.log(schemaData)
     return (
         <>
             <Helmet>

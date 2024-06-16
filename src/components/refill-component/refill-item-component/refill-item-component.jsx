@@ -57,11 +57,13 @@ function RefillItemComponent() {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
                 "price": data.refill_price,
-                "url": `${canonicalUrl}`
+                "url": `${canonicalUrl}`,
+                "priceValidUntil": new Date().toLocaleDateString(),
+                "availability": "https://schema.org/InStock"
             }
         }
     }
-
+    console.log(schemaData)
     return (data &&
         <>
             <Helmet>
