@@ -63,7 +63,7 @@ function RefillItemComponent() {
             }
         }
     }
-    console.log(schemaData)
+    //console.log(schemaData)
     return (data &&
         <>
             <Helmet>

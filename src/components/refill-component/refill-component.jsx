@@ -16,7 +16,7 @@ function RefillComponent() {
 
     const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
 
-    return (filterCategory.length > 0 ?
+    return (filterCategory.length > 0 &&
         <>
             <Helmet>
                 <title>{`Заправка картриджей ${vendor.toUpperCase()}`}</title>
@@ -48,8 +48,7 @@ function RefillComponent() {
                 <Filter />
                 <FilterItemsComponent data={filterCategory} />
             </div>
-        </> :
-        <Navigate to="/404" replace />
+        </>
     );
 }
 
