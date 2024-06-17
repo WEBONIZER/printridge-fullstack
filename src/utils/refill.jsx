@@ -89,8 +89,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M211d / M236",
-            refill_price: "500 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "500",
+            recovery_price: "1150",
         },
         {
             modelCart: "W1360X_136X",
@@ -100,8 +100,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M211d / M236",
-            refill_price: "700 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "700",
+            recovery_price: "1300",
         },
         {
             modelCart: "CF325X_25X",
@@ -111,8 +111,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 800 Enterprise M806X",
-            refill_price: "5000 ₽",
-            recovery_price: "6000 ₽",
+            refill_price: "5000",
+            recovery_price: "6000",
         },
         {
             modelCart: "CF281A",
@@ -122,8 +122,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M604 / M605 / M606 / M630",
-            refill_price: "900 ₽",
-            recovery_price: "1550 ₽",
+            refill_price: "900",
+            recovery_price: "1550",
         },
         {
             modelCart: "CF281X",
@@ -133,8 +133,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M604 / M605 / M606 / M630",
-            refill_price: "1150 ₽",
-            recovery_price: "1850 ₽",
+            refill_price: "1150",
+            recovery_price: "1850",
         },
         {
             modelCart: "CF218A",
@@ -144,7 +144,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M104 / M132",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "-"
         },
         {
@@ -199,8 +199,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "Laser 107a / MFP 135a / 137a",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "Q7570A",
@@ -210,7 +210,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M5025 / M5035",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "-"
         },
         {
@@ -221,7 +221,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M435 / M701 / M706",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "-"
         },
         {
@@ -232,8 +232,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M806 / M830",
-            refill_price: "5000 ₽",
-            recovery_price: "6500 ₽"
+            refill_price: "5000",
+            recovery_price: "6500"
         },
         {
             modelCart: "C8543X",
@@ -243,8 +243,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 9000 / 9040 / 9050",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽"
+            refill_price: "2500",
+            recovery_price: "3500"
         },
         {
             modelCart: "CF219A",
@@ -255,7 +255,7 @@ export const refillData =
             vendor: "hp",
             devices: "LJ M104 / M132",
             refill_price: "-",
-            recovery_price: "1200 ₽",
+            recovery_price: "1200",
         },
         {
             modelCart: "CF233A",
@@ -264,7 +264,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M106 / M134",
-            refill_price: "450 ₽",
+            refill_price: "450",
             recovery_price: "Уточняйте"
         },
         {
@@ -284,8 +284,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M203 / M227",
-            refill_price: "500 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "500",
+            recovery_price: "1500",
         },
         {
             modelCart: "CF230X",
@@ -294,8 +294,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M203 / M227",
-            refill_price: "1000 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1000",
+            recovery_price: "2000",
         },
         {
             modelCart: "CF287A",
@@ -304,8 +304,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M501 / M506 / M527",
-            refill_price: "1500 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1500",
+            recovery_price: "2500",
         },
         {
             modelCart: "CF287X",
@@ -314,8 +314,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M501 / M506 / M527",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2500",
+            recovery_price: "3500",
         },
         {
             modelCart: "CF237A",
@@ -325,8 +325,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M607 / M608 / M609 / M631 / M632",
-            refill_price: "1500 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "1500",
+            recovery_price: "3000",
         },
         {
             modelCart: "CF237X",
@@ -412,8 +412,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M607 / M608 / M609 / M631 / M633",
-            refill_price: "2500 ₽",
-            recovery_price: "4000 ₽",
+            refill_price: "2500",
+            recovery_price: "4000",
         },
         {
             modelCart: "CF237Y",
@@ -423,8 +423,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M607 / M608 / M609 / M631 / M634",
-            refill_price: "4500 ₽",
-            recovery_price: "6000 ₽",
+            refill_price: "4500",
+            recovery_price: "6000",
         },
         {
             modelCart: "CF279A",
@@ -433,8 +433,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M12 / M26",
-            refill_price: "450 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "450",
+            recovery_price: "1000",
         },
         {
             modelCart: "CF217A",
@@ -443,7 +443,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M102 / М130",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -453,7 +453,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M230",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -463,7 +463,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M402 / M426",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "1200"
         },
         {
@@ -473,7 +473,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M402 / M426",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "1500"
         },
         {
@@ -483,7 +483,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M404 / M428",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "1200"
         },
         {
@@ -541,7 +541,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M404 / M428",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "1500"
         },
         {
@@ -551,8 +551,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M712 / M725",
-            refill_price: "1250 ₽",
-            recovery_price: "2250 ₽",
+            refill_price: "1250",
+            recovery_price: "2250",
         },
         {
             modelCart: "CF214X",
@@ -561,8 +561,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M712 / M725",
-            refill_price: "1850 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1850",
+            recovery_price: "2850",
         },
         {
             modelCart: "CF244A",
@@ -610,8 +610,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M15 / M28",
-            refill_price: "500 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "500",
+            recovery_price: "1100",
         },
         {
             modelCart: "CF283A",
@@ -621,8 +621,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro M125 / M127 / M201 / M225",
-            refill_price: "500 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "500",
+            recovery_price: "1100",
         },
         {
             modelCart: "CB435A",
@@ -631,8 +631,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ P1005 / P1006 / P1007 / P1008",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CE255A",
@@ -641,8 +641,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Enterprise 500 MFP M525c / P3015 / M521",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "C4129X",
@@ -652,8 +652,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 5000",
-            refill_price: "2000 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2000",
+            recovery_price: "3500",
         },
         {
             modelCart: "CE255X",
@@ -662,8 +662,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Enterprise 500 MFP M525c / P3015 / M521",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "CB436A",
@@ -672,8 +672,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M1120 MFP / M1522n MFP / P1505",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CC364A",
@@ -682,8 +682,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ P4014 / P4015n / P4515n",
-            refill_price: "950 ₽",
-            recovery_price: "1850 ₽",
+            refill_price: "950",
+            recovery_price: "1850",
         },
         {
             modelCart: "CC364X",
@@ -692,8 +692,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ P4014 / P4015n / P4515n",
-            refill_price: "1350 ₽",
-            recovery_price: "2150 ₽",
+            refill_price: "1350",
+            recovery_price: "2150",
         },
         {
             modelCart: "CE278A",
@@ -702,8 +702,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M1536dnf MFP / P1566 / P1606",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CE285A",
@@ -712,8 +712,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M1132 / M1218nfs / M1212nf / M1214nfh / M1217nfw / P1102w",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CE390A",
@@ -723,8 +723,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M4555dn MFP / 600 M601n / M602dn / 603xh",
-            refill_price: "1200 ₽",
-            recovery_price: "1950 ₽",
+            refill_price: "1200",
+            recovery_price: "1950",
         },
         {
             modelCart: "CE390X",
@@ -780,8 +780,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M4555dn MFP / 600 M601n / M602dn / 603xh",
-            refill_price: "1600 ₽",
-            recovery_price: "2300 ₽",
+            refill_price: "1600",
+            recovery_price: "2300",
         },
         {
             modelCart: "CE505A",
@@ -790,8 +790,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ P2035 / 2050 / P2055",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CE505X",
@@ -800,8 +800,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 2050 / P2055",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "Q7516A",
@@ -811,8 +811,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 5200",
-            refill_price: "2000 ₽",
-            recovery_price: "2500 ₽"
+            refill_price: "2000",
+            recovery_price: "2500"
         },
         {
             modelCart: "CF280A",
@@ -821,8 +821,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 400 M401a / M425dw / M425dn",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "CF280X",
@@ -831,8 +831,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 400 M401a / M425dw / M425dn",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "Q2612A",
@@ -841,8 +841,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 1010 / 1012 / 1018 / 1020 / 1020 / 1022 / 3015 / 3030 / 3050 / M1319",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "Q5949A",
@@ -851,8 +851,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 1160 / 1320 / 3390 / 3392 MFP",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "Q5949X",
@@ -861,8 +861,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 1160 / 1320 / 3390 / 3392 MFP",
-            refill_price: "500 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "500",
+            recovery_price: "1150",
         },
         {
             modelCart: "Q6511X",
@@ -871,8 +871,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 2410 / 2420 / 2430",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "Q7551A",
@@ -881,8 +881,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M3027 MFP / M3035 MFP / P3005",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "Q7551X",
@@ -891,8 +891,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M3027 MFP / M3035 MFP / P3005",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "Q7553A",
@@ -901,8 +901,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M2727nf MFP / P2014 / P2015",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "Q7553X",
@@ -911,8 +911,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M2727nf MFP / P2014 / P2015",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "CF400A",
@@ -921,8 +921,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1200 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1200",
+            recovery_price: "1700",
         },
         {
             modelCart: "CF401A",
@@ -931,8 +931,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1200 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1200",
+            recovery_price: "1700",
         },
         {
             modelCart: "CF402A",
@@ -941,8 +941,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1200 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1200",
+            recovery_price: "1700",
         },
         {
             modelCart: "CF403A",
@@ -951,8 +951,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1200 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1200",
+            recovery_price: "1700",
         },
         {
             modelCart: "CF400X",
@@ -961,8 +961,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1500 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1500",
+            recovery_price: "2000",
         },
         {
             modelCart: "CF401X",
@@ -971,8 +971,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1500 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1500",
+            recovery_price: "2000",
         },
         {
             modelCart: "CF402X",
@@ -981,8 +981,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1500 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1500",
+            recovery_price: "2000",
         },
         {
             modelCart: "CF403X",
@@ -991,8 +991,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M252 / M274n / M277n / M277dw",
-            refill_price: "1500 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1500",
+            recovery_price: "2000",
         },
         {
             modelCart: "CF410A",
@@ -1001,8 +1001,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "1800 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1800",
+            recovery_price: "2500",
         },
         {
             modelCart: "CF411A",
@@ -1011,8 +1011,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "1800 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1800",
+            recovery_price: "2500",
         },
         {
             modelCart: "CF412A",
@@ -1021,8 +1021,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "1800 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1800",
+            recovery_price: "2500",
         },
         {
             modelCart: "CF413A",
@@ -1031,8 +1031,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "1800 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1800",
+            recovery_price: "2500",
         },
         {
             modelCart: "CF410X",
@@ -1041,8 +1041,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "2300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "2300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CF411X",
@@ -1051,8 +1051,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "2300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "2300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CF412X",
@@ -1061,8 +1061,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "2300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "2300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CF413X",
@@ -1071,8 +1071,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M377 / M452 / M477",
-            refill_price: "2300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "2300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CF350A",
@@ -1081,7 +1081,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M153 / M176 / M177",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1091,7 +1091,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M153 / M176 / M178",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1101,7 +1101,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M153 / M176 / M179",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1111,7 +1111,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M153 / M176 / M180",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1121,7 +1121,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M652 / M653 / M681 / M682",
-            refill_price: "1800 ₽",
+            refill_price: "1800",
             recovery_price: "Уточняйте"
         },
         {
@@ -1131,7 +1131,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M652 / M653 / M681 / M682",
-            refill_price: "1800 ₽",
+            refill_price: "1800",
             recovery_price: "Уточняйте"
         },
         {
@@ -1141,7 +1141,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M652 / M653 / M681 / M682",
-            refill_price: "1800 ₽",
+            refill_price: "1800",
             recovery_price: "Уточняйте"
         },
         {
@@ -1151,7 +1151,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M652 / M653 / M681 / M682",
-            refill_price: "1800 ₽",
+            refill_price: "1800",
             recovery_price: "Уточняйте"
         },
         {
@@ -1161,7 +1161,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1171,7 +1171,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1181,7 +1181,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1191,7 +1191,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1201,7 +1201,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1211,7 +1211,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1221,7 +1221,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1231,7 +1231,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M681 / M682",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1241,7 +1241,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M880",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1251,7 +1251,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M880",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1261,7 +1261,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M880",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1271,7 +1271,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M880",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1282,7 +1282,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5520 / CP5525 / M750",
-            refill_price: "4300 ₽",
+            refill_price: "4300",
             recovery_price: "Уточняйте"
         },
         {
@@ -1293,7 +1293,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5520 / CP5525 / M750",
-            refill_price: "4300 ₽",
+            refill_price: "4300",
             recovery_price: "Уточняйте"
         },
         {
@@ -1304,7 +1304,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5520 / CP5525 / M750",
-            refill_price: "4300 ₽",
+            refill_price: "4300",
             recovery_price: "Уточняйте"
         },
         {
@@ -1315,7 +1315,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5520 / CP5525 / M750",
-            refill_price: "4300 ₽",
+            refill_price: "4300",
             recovery_price: "Уточняйте"
         },
         {
@@ -1326,7 +1326,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1337,7 +1337,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1348,7 +1348,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1359,7 +1359,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -1370,7 +1370,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855 / CM6030 / CM6040 / CP6015",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1381,7 +1381,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855 / CM6030 / CM6040 / CP6015",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1392,7 +1392,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855 / CM6030 / CM6040 / CP6015",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1403,7 +1403,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M855 / CM6030 / CM6040 / CP6015",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -1413,8 +1413,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF321A",
@@ -1423,8 +1423,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF322A",
@@ -1433,8 +1433,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF323A",
@@ -1443,8 +1443,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF330X",
@@ -1453,8 +1453,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "3 500 ₽",
-            recovery_price: "4 500 ₽",
+            refill_price: "3 500",
+            recovery_price: "4 500",
         },
         {
             modelCart: "CF331A",
@@ -1463,8 +1463,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF332A",
@@ -1473,8 +1473,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M680",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF333A",
@@ -1483,8 +1483,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M651 / M684",
-            refill_price: "2500 ₽",
-            recovery_price: "3 500 ₽",
+            refill_price: "2500",
+            recovery_price: "3 500",
         },
         {
             modelCart: "CF360A",
@@ -1493,8 +1493,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M577",
-            refill_price: "2000 ₽",
-            recovery_price: "2700 ₽",
+            refill_price: "2000",
+            recovery_price: "2700",
         },
         {
             modelCart: "CF361A",
@@ -1503,8 +1503,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M577",
-            refill_price: "2000 ₽",
-            recovery_price: "2700 ₽",
+            refill_price: "2000",
+            recovery_price: "2700",
         },
         {
             modelCart: "CF362A",
@@ -1513,8 +1513,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M577",
-            refill_price: "2000 ₽",
-            recovery_price: "2700 ₽",
+            refill_price: "2000",
+            recovery_price: "2700",
         },
         {
             modelCart: "CF363A",
@@ -1523,8 +1523,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M577",
-            refill_price: "2000 ₽",
-            recovery_price: "2700 ₽",
+            refill_price: "2000",
+            recovery_price: "2700",
         },
         {
             modelCart: "CF360X",
@@ -1533,8 +1533,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M581",
-            refill_price: "3 500 ₽",
-            recovery_price: "4 500 ₽",
+            refill_price: "3 500",
+            recovery_price: "4 500",
         },
         {
             modelCart: "CF361X",
@@ -1543,8 +1543,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M581",
-            refill_price: "3 500 ₽",
-            recovery_price: "4 500 ₽",
+            refill_price: "3 500",
+            recovery_price: "4 500",
         },
         {
             modelCart: "CF362X",
@@ -1553,8 +1553,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M581",
-            refill_price: "3 500 ₽",
-            recovery_price: "4 500 ₽",
+            refill_price: "3 500",
+            recovery_price: "4 500",
         },
         {
             modelCart: "CF363X",
@@ -1563,8 +1563,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ M552 / M553 / M581",
-            refill_price: "3 500 ₽",
-            recovery_price: "4 500 ₽",
+            refill_price: "3 500",
+            recovery_price: "4 500",
         },
         {
             modelCart: "CE740A",
@@ -1573,8 +1573,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5225",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE741A",
@@ -1583,8 +1583,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5225",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE742A",
@@ -1593,8 +1593,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5225",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE743A",
@@ -1603,8 +1603,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP5225",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CF030A",
@@ -1613,8 +1613,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CM4540f MFP",
-            refill_price: "2100 ₽",
-            recovery_price: "3050 ₽",
+            refill_price: "2100",
+            recovery_price: "3050",
         },
         {
             modelCart: "CF031A",
@@ -1623,8 +1623,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CM4540f MFP",
-            refill_price: "2100 ₽",
-            recovery_price: "3050 ₽",
+            refill_price: "2100",
+            recovery_price: "3050",
         },
         {
             modelCart: "CF032A",
@@ -1633,8 +1633,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CM4540f MFP",
-            refill_price: "2100 ₽",
-            recovery_price: "3050 ₽",
+            refill_price: "2100",
+            recovery_price: "3050",
         },
         {
             modelCart: "CF033A",
@@ -1643,8 +1643,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CM4540f MFP",
-            refill_price: "2100 ₽",
-            recovery_price: "3050 ₽",
+            refill_price: "2100",
+            recovery_price: "3050",
         },
         {
             modelCart: "CB400A",
@@ -1653,8 +1653,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP4005",
-            refill_price: "1900 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1900",
+            recovery_price: "2500",
         },
         {
             modelCart: "CB401A",
@@ -1663,8 +1663,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP4005",
-            refill_price: "1900 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1900",
+            recovery_price: "2500",
         },
         {
             modelCart: "CB402A",
@@ -1673,8 +1673,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP4005",
-            refill_price: "1900 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1900",
+            recovery_price: "2500",
         },
         {
             modelCart: "CB403A",
@@ -1683,8 +1683,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CP4005",
-            refill_price: "1900 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1900",
+            recovery_price: "2500",
         },
         {
             modelCart: "CC530A",
@@ -1694,8 +1694,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM2320 / CP2020 / CP2025 / M351 / M375 / M5451 / M475 / M476",
-            refill_price: "1450 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1450",
+            recovery_price: "1900",
         },
         {
             modelCart: "CC531A",
@@ -1705,8 +1705,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM2320 / CP2020 / CP2025 / M351 / M375 / M5451 / M475 / M476",
-            refill_price: "1450 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1450",
+            recovery_price: "1900",
         },
         {
             modelCart: "CC532A",
@@ -1716,8 +1716,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM2320 / CP2020 / CP2025 / M351 / M375 / M5451 / M475 / M476",
-            refill_price: "1450 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1450",
+            recovery_price: "1900",
         },
         {
             modelCart: "CC533A",
@@ -1727,8 +1727,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM2320 / CP2020 / CP2025 / M351 / M375 / M5451 / M475 / M476",
-            refill_price: "1450 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1450",
+            recovery_price: "1900",
         },
         {
             modelCart: "CE250A",
@@ -1737,8 +1737,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM3530 MFP / CP3525",
-            refill_price: "1700 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1700",
+            recovery_price: "2500",
         },
         {
             modelCart: "CE251A",
@@ -1747,8 +1747,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM3530 MFP / CP3525",
-            refill_price: "2100 ₽",
-            recovery_price: "2900 ₽",
+            refill_price: "2100",
+            recovery_price: "2900",
         },
         {
             modelCart: "CE252A",
@@ -1757,8 +1757,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM3530 MFP / CP3525",
-            refill_price: "2100 ₽",
-            recovery_price: "2900 ₽",
+            refill_price: "2100",
+            recovery_price: "2900",
         },
         {
             modelCart: "CE253A",
@@ -1767,8 +1767,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM3530 MFP / CP3525",
-            refill_price: "2100 ₽",
-            recovery_price: "2900 ₽",
+            refill_price: "2100",
+            recovery_price: "2900",
         },
         {
             modelCart: "CE260A",
@@ -1777,8 +1777,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CP4025dn / CP4525dn",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "CE261A",
@@ -1787,8 +1787,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CP4025dn / CP4525dn",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "CE262A",
@@ -1797,8 +1797,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CP4025dn / CP4525dn",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "CE263A",
@@ -1807,8 +1807,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ CM4540 MFP / CP4025dn / CP4525dn",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "CE310A",
@@ -1817,7 +1817,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 100 C MFP M175a / CP1025 / M275",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -1827,7 +1827,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 100 C MFP M175a / CP1025 / M275",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -1837,7 +1837,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 100 C MFP M175a / CP1025 / M275",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -1847,7 +1847,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 100 C MFP M175a / CP1025 / M275",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -1858,7 +1858,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ 5500 ",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1869,7 +1869,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ 5500 ",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1880,7 +1880,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ 5500 ",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1891,7 +1891,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "CLJ 5500 ",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1902,7 +1902,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M775",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1913,7 +1913,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M775",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1924,7 +1924,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M775",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1935,7 +1935,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ M775",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "4500"
         },
         {
@@ -1945,8 +1945,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro CM1415 / CP1525",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CE321A",
@@ -1955,8 +1955,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro CM1415 / CP1525",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CE322A",
@@ -1965,8 +1965,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro CM1415 / CP1525",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CE323A",
@@ -1975,8 +1975,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro CM1415 / CP1525",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CE400A",
@@ -1985,8 +1985,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 500 CM551dn /  M570dn /  M575c",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE401A",
@@ -1995,8 +1995,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 500 CM551dn /  M570dn /  M575c",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE402A",
@@ -2005,8 +2005,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 500 CM551dn /  M570dn /  M575c",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE403A",
@@ -2015,8 +2015,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ 500 CM551dn /  M570dn /  M575c",
-            refill_price: "1700 ₽",
-            recovery_price: "2850 ₽",
+            refill_price: "1700",
+            recovery_price: "2850",
         },
         {
             modelCart: "CE410A",
@@ -2025,8 +2025,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 300 CM351a / M451dn / M475dn",
-            refill_price: "1450 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1450",
+            recovery_price: "2100",
         },
         {
             modelCart: "CE411A",
@@ -2035,8 +2035,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 300 CM351a / M451dn / M475dn",
-            refill_price: "1450 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1450",
+            recovery_price: "2100",
         },
         {
             modelCart: "CE412A",
@@ -2045,8 +2045,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 300 CM351a / M451dn / M475dn",
-            refill_price: "1450 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1450",
+            recovery_price: "2100",
         },
         {
             modelCart: "CE413A",
@@ -2055,8 +2055,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 300 CM351a / M451dn / M475dn",
-            refill_price: "1450 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1450",
+            recovery_price: "2100",
         },
         {
             modelCart: "CF210A",
@@ -2065,8 +2065,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 200 CM251nw / CM276nw",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CF211A",
@@ -2075,8 +2075,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 200 CM251nw / CM276nw",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CF212A",
@@ -2085,8 +2085,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 200 CM251nw / CM276nw",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CF213A",
@@ -2095,8 +2095,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ Pro 200 CM251nw / CM276nw",
-            refill_price: "1200 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1200",
+            recovery_price: "1750",
         },
         {
             modelCart: "CB540A",
@@ -2105,8 +2105,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ CM1312 MFP / CP1215 / CP1515n / CP1518n",
-            refill_price: "1100 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1100",
+            recovery_price: "1750",
         },
         {
             modelCart: "CB541A",
@@ -2115,8 +2115,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ CM1312 MFP / CP1215 / CP1515n / CP1518n",
-            refill_price: "1100 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1100",
+            recovery_price: "1750",
         },
         {
             modelCart: "CB542A",
@@ -2125,8 +2125,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ CM1312 MFP / CP1215 / CP1515n / CP1518n",
-            refill_price: "1100 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1100",
+            recovery_price: "1750",
         },
         {
             modelCart: "CB543A",
@@ -2135,8 +2135,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "hp",
             devices: "LJ CM1312 MFP / CP1215 / CP1515n / CP1518n",
-            refill_price: "1100 ₽",
-            recovery_price: "1750 ₽",
+            refill_price: "1100",
+            recovery_price: "1750",
         },
         {
             modelCart: "703",
@@ -2145,8 +2145,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP2900 / LBP3000 / LBP2900 / LBP2900B / LBP3000",
-            refill_price: "350 ₽",
-            recovery_price: "900 ₽",
+            refill_price: "350",
+            recovery_price: "900",
         },
         {
             modelCart: "706",
@@ -2155,8 +2155,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF6560PL / MF6530 / MF6540PL / MF6550 / MF6580PL",
-            refill_price: "450 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "450",
+            recovery_price: "1250",
         },
         {
             modelCart: "708",
@@ -2165,8 +2165,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3300 / LBP3300 / LBP3360",
-            refill_price: "350 ₽",
-            recovery_price: "1050 ₽",
+            refill_price: "350",
+            recovery_price: "1050",
         },
         {
             modelCart: "708H",
@@ -2175,8 +2175,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3300 / LBP3300 / LBP3360",
-            refill_price: "550 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "550",
+            recovery_price: "1200",
         },
         {
             modelCart: "710",
@@ -2185,8 +2185,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3460",
-            refill_price: "550 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "550",
+            recovery_price: "1100",
         },
         {
             modelCart: "712",
@@ -2196,8 +2196,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3010 / LBP3100",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "713",
@@ -2206,8 +2206,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP 3250 / LBP3250",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "714",
@@ -2216,8 +2216,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "FAXL3000 / FAXL3000IP",
-            refill_price: "450 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "450",
+            recovery_price: "1250",
         },
         {
             modelCart: "715",
@@ -2226,8 +2226,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3310 / LBP3370",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "715H",
@@ -2236,8 +2236,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP3310 / LBP3370",
-            refill_price: "700 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "700",
+            recovery_price: "1200",
         },
         {
             modelCart: "719",
@@ -2247,8 +2247,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6680 / MF5980 / LBP251 / LBP252 / LBP253 / MF411 / MF418 / MF419 / MF416 / MF410",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "719H",
@@ -2258,8 +2258,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6680 / MF5980 / LBP251 / LBP252 / LBP253 / MF411 / MF418 / MF419 / MF416 / MF410",
-            refill_price: "800 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "800",
+            recovery_price: "1600",
         },
         {
             modelCart: "724",
@@ -2269,8 +2269,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6750 / LBP6780 / MF512 / MF515",
-            refill_price: "800 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "800",
+            recovery_price: "1500",
         },
         {
             modelCart: "724H",
@@ -2280,8 +2280,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6750 / LBP6780 / MF512 / MF515",
-            refill_price: "1300 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1300",
+            recovery_price: "2500",
         },
         {
             modelCart: "725",
@@ -2291,8 +2291,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6000 / LBP6020 / MF3010",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "726",
@@ -2302,8 +2302,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6200 / LBP6230",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "728",
@@ -2313,8 +2313,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF4410 / MF4430 / MF4450 / MF4550 / MF4570 / MF4580 / MF4730 / MF4750 / MF4780",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "EP-22",
@@ -2324,8 +2324,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP1120 / LBP250 / LBP350 / LBP800 / LBP810 / LBP1110",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "EP-27",
@@ -2335,8 +2335,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "3110 / 3240 / 5630 / 5650 / 5730 / 5750 / 5770 / 3200 / 3228",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "FX-10",
@@ -2346,8 +2346,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF4018 / 4120 / 4150 / 4270 / 4320D / 4330D / 4340D / 4370DN",
-            refill_price: "400 ₽",
-            recovery_price: "950 ₽",
+            refill_price: "400",
+            recovery_price: "950",
         },
         {
             modelCart: "707Bk",
@@ -2357,8 +2357,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5000 / LBP5100",
-            refill_price: "1600 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1600",
+            recovery_price: "2500",
         },
         {
             modelCart: "707C",
@@ -2368,8 +2368,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5000 / LBP5100",
-            refill_price: "1600 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1600",
+            recovery_price: "2500",
         },
         {
             modelCart: "707M",
@@ -2379,8 +2379,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5000 / LBP5100",
-            refill_price: "1600 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1600",
+            recovery_price: "2500",
         },
         {
             modelCart: "707Y",
@@ -2390,8 +2390,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5000 / LBP5100",
-            refill_price: "1600 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1600",
+            recovery_price: "2500",
         },
         {
             modelCart: "711Bk",
@@ -2401,8 +2401,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5300 / LBP5360 / MF8450 / MF9130 / MF9170 / MF9220Cdn / MF9280C",
-            refill_price: "3000 ₽",
-            recovery_price: "4500 ₽",
+            refill_price: "3000",
+            recovery_price: "4500",
         },
         {
             modelCart: "711C",
@@ -2412,8 +2412,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5300 / LBP5360 / MF8450 / MF9130 / MF9170 / MF9220Cdn / MF9280C",
-            refill_price: "3000 ₽",
-            recovery_price: "4500 ₽",
+            refill_price: "3000",
+            recovery_price: "4500",
         },
         {
             modelCart: "711M",
@@ -2423,8 +2423,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5300 / LBP5360 / MF8450 / MF9130 / MF9170 / MF9220Cdn / MF9280C",
-            refill_price: "3000 ₽",
-            recovery_price: "4500 ₽",
+            refill_price: "3000",
+            recovery_price: "4500",
         },
         {
             modelCart: "711Y",
@@ -2434,8 +2434,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5300 / LBP5360 / MF8450 / MF9130 / MF9170 / MF9220Cdn / MF9280C",
-            refill_price: "3000 ₽",
-            recovery_price: "4500 ₽",
+            refill_price: "3000",
+            recovery_price: "4500",
         },
         {
             modelCart: "718Bk",
@@ -2445,8 +2445,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7200 / LBP7680 / LBP7660 / LBP7210 / MF8330 / MF8350 / MF8540 / MF8550 / MF8580 / MF8360 / MF83/0 / MF8340 / MF724 / MF728 / MF729",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "718C",
@@ -2456,8 +2456,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7200 / LBP7680 / LBP7660 / LBP7210 / MF8330 / MF8350 / MF8540 / MF8550 / MF8580 / MF8360 / MF83/0 / MF8340 / MF724 / MF728 / MF729",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "718M",
@@ -2467,8 +2467,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7200 / LBP7680 / LBP7660 / LBP7210 / MF8330 / MF8350 / MF8540 / MF8550 / MF8580 / MF8360 / MF83/0 / MF8340 / MF724 / MF728 / MF729",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "718Y",
@@ -2478,8 +2478,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7200 / LBP7680 / LBP7660 / LBP7210 / MF8330 / MF8350 / MF8540 / MF8550 / MF8580 / MF8360 / MF83/0 / MF8340 / MF724 / MF728 / MF729",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "716Bk",
@@ -2489,8 +2489,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5050 / MF8030 / MF8050 / MF8040 / MF8080",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "716C",
@@ -2500,8 +2500,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5050 / MF8030 / MF8050 / MF8040 / MF8080",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "716M",
@@ -2511,8 +2511,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5050 / MF8030 / MF8050 / MF8040 / MF8080",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "716Y",
@@ -2522,8 +2522,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5050 / MF8030 / MF8050 / MF8040 / MF8080",
-            refill_price: "1600 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1600",
+            recovery_price: "2000",
         },
         {
             modelCart: "717Bk",
@@ -2532,8 +2532,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF8450",
-            refill_price: "1400 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1400",
+            recovery_price: "2100",
         },
         {
             modelCart: "717C",
@@ -2542,8 +2542,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF8450",
-            refill_price: "1400 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1400",
+            recovery_price: "2100",
         },
         {
             modelCart: "717M",
@@ -2552,8 +2552,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF8450",
-            refill_price: "1400 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1400",
+            recovery_price: "2100",
         },
         {
             modelCart: "717Y",
@@ -2562,8 +2562,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF8450",
-            refill_price: "1400 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1400",
+            recovery_price: "2100",
         },
         {
             modelCart: "C-EXV33",
@@ -2573,7 +2573,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 2520 / 2525 / 2530 / 2535 / 2545",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -2584,7 +2584,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 4225 / 4235 / 4025 / 4035",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2595,7 +2595,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 4025 / 4035 / 4045 / 4051 / 4245 / 4251",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -2606,7 +2606,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 2202 / 2204",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -2617,7 +2617,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 2016 / 2018 / 2020 / 2022 / 2320 / 2420 / 2422 / 2025",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -2628,7 +2628,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 1730 / 1740 / 1750",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -2639,7 +2639,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 6055 / 6065 / 6075 / 6255 / 6265 / 6275 / 6555",
-            refill_price: "6500 ₽",
+            refill_price: "6500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2650,7 +2650,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR 8085 / 8095 / 8105 / 8205 / 8285 / 8295",
-            refill_price: "7500 ₽",
+            refill_price: "7500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2661,7 +2661,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C3320 / C3325 / C3330 / C3520 / C3530",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2672,7 +2672,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C3320 / C3325 / C3330 / C3520 / C3530",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2683,7 +2683,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C3320 / C3325 / C3330 / C3520 / C3530",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2694,7 +2694,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C3320 / C3325 / C3330 / C3520 / C3530",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2705,7 +2705,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2020 / C2025 / C2030 / C2220 / C2225 / C2230",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2716,7 +2716,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2020 / C2025 / C2030 / C2220 / C2225 / C2230",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2727,7 +2727,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2020 / C2025 / C2030 / C2220 / C2225 / C2230",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2738,7 +2738,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2020 / C2025 / C2030 / C2220 / C2225 / C2230",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2749,7 +2749,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2550 / C2880 / C3080 / C3580 / C3880 / C2380 / C2880 / C3380 / C3580",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2760,7 +2760,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2550 / C2880 / C3080 / C3580 / C3880 / C2380 / C2880 / C3380 / C3580",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2771,7 +2771,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2550 / C2880 / C3080 / C3580 / C3880 / C2380 / C2880 / C3380 / C3580",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2782,7 +2782,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C2550 / C2880 / C3080 / C3580 / C3880 / C2380 / C2880 / C3380 / C3580",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -2793,8 +2793,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7750Cdn",
-            refill_price: "1650 ₽",
-            recovery_price: "2450 ₽",
+            refill_price: "1650",
+            recovery_price: "2450",
         },
         {
             modelCart: "723C",
@@ -2804,8 +2804,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7750Cdn",
-            refill_price: "1650 ₽",
-            recovery_price: "2450 ₽",
+            refill_price: "1650",
+            recovery_price: "2450",
         },
         {
             modelCart: "052",
@@ -2814,7 +2814,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP212 / LBP214 / LBP215 / MF421 / MF426 / MF428 / MF429",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "1200"
         },
         {
@@ -2824,7 +2824,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP212 / LBP214 / LBP215 / MF421 / MF426 / MF428 / MF429",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "1500"
         },
         {
@@ -2835,8 +2835,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7750Cdn",
-            refill_price: "1650 ₽",
-            recovery_price: "2450 ₽",
+            refill_price: "1650",
+            recovery_price: "2450",
         },
         {
             modelCart: "723Y",
@@ -2846,8 +2846,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7750Cdn",
-            refill_price: "1650 ₽",
-            recovery_price: "2450 ₽",
+            refill_price: "1650",
+            recovery_price: "2450",
         },
         {
             modelCart: "729Bk",
@@ -2857,7 +2857,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7010C / LBP7018C",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -2868,7 +2868,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7010C / LBP7018C",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -2879,7 +2879,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7010C / LBP7018C",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -2890,7 +2890,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7010C / LBP7018C",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -2901,7 +2901,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5200 / MF8180C",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -2912,7 +2912,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5200 / MF8180C",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -2923,7 +2923,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5200 / MF8180C",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -2934,7 +2934,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP5200 / MF8180C",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -2945,7 +2945,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7100Cn / 7110Cw / MF628C / MF8280C",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "Уточняйте"
         },
         {
@@ -2956,7 +2956,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7100Cn / 7110Cw / MF628C / MF8280C",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "Уточняйте"
         },
         {
@@ -2967,7 +2967,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7100Cn / 7110Cw / MF628C / MF8280C",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "Уточняйте"
         },
         {
@@ -2978,7 +2978,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7100Cn / 7110Cw / MF628C / MF8280C",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "Уточняйте"
         },
         {
@@ -2989,7 +2989,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7780",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -3000,7 +3000,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7780",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -3011,7 +3011,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7780",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -3022,7 +3022,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7780",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -3033,7 +3033,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP7780",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -3044,7 +3044,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C250 / C350 / C351",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -3055,7 +3055,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C250 / C350 / C351",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -3066,7 +3066,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C250 / C350 / C351",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -3077,7 +3077,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "iR C250 / C350 / C351",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -3088,7 +3088,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710 / LBP712",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -3099,7 +3099,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710 / LBP712",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -3110,7 +3110,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710 / LBP712",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -3121,7 +3121,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710 / LBP712",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -3132,7 +3132,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710",
-            refill_price: "3900 ₽",
+            refill_price: "3900",
             recovery_price: "Уточняйте"
         },
         {
@@ -3143,7 +3143,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710",
-            refill_price: "3900 ₽",
+            refill_price: "3900",
             recovery_price: "Уточняйте"
         },
         {
@@ -3154,7 +3154,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710",
-            refill_price: "3900 ₽",
+            refill_price: "3900",
             recovery_price: "Уточняйте"
         },
         {
@@ -3165,7 +3165,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP710",
-            refill_price: "3900 ₽",
+            refill_price: "3900",
             recovery_price: "Уточняйте"
         },
         {
@@ -3176,8 +3176,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "MF211 / MF212 / MF216 / MF217 / MF226 / MF229 / MF231 / MF249",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "724H",
@@ -3186,8 +3186,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP6750",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "039",
@@ -3196,8 +3196,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP351 / LBP352",
-            refill_price: "1300 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1300",
+            recovery_price: "2000",
         },
         {
             modelCart: "039H",
@@ -3206,8 +3206,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP351 / LBP352",
-            refill_price: "1700 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1700",
+            recovery_price: "2500",
         },
         {
             modelCart: "041",
@@ -3216,8 +3216,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP312",
-            refill_price: "1300 ₽",
-            recovery_price: "2000 ₽",
+            refill_price: "1300",
+            recovery_price: "2000",
         },
         {
             modelCart: "041H",
@@ -3226,8 +3226,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "canon",
             devices: "LBP312",
-            refill_price: "1700 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1700",
+            recovery_price: "2500",
         },
         {
             modelCart: "CLT-K504S",
@@ -3236,8 +3236,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1000 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1000",
+            recovery_price: "2500",
         },
         {
             modelCart: "CLT-C504S",
@@ -3246,8 +3246,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1000 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1000",
+            recovery_price: "2500",
         },
         {
             modelCart: "CLT-M504S",
@@ -3256,8 +3256,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1000 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1000",
+            recovery_price: "2500",
         },
         {
             modelCart: "CLT-Y504S",
@@ -3266,8 +3266,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1000 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1000",
+            recovery_price: "2500",
         },
         {
             modelCart: "CLT-K504L",
@@ -3276,8 +3276,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "1300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CLT-C504L",
@@ -3286,8 +3286,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "1300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CLT-M504L",
@@ -3296,8 +3296,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "1300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CLT-Y504L",
@@ -3306,8 +3306,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-415 / CLP-470 / CLP-475 / CLX-4195",
-            refill_price: "1300 ₽",
-            recovery_price: "3000 ₽",
+            refill_price: "1300",
+            recovery_price: "3000",
         },
         {
             modelCart: "CLT-K506S",
@@ -3316,8 +3316,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "1800 ₽",
-            recovery_price: "2800 ₽",
+            refill_price: "1800",
+            recovery_price: "2800",
         },
         {
             modelCart: "CLT-C506S",
@@ -3326,8 +3326,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "1800 ₽",
-            recovery_price: "2800 ₽",
+            refill_price: "1800",
+            recovery_price: "2800",
         },
         {
             modelCart: "CLT-M506S",
@@ -3336,8 +3336,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "1800 ₽",
-            recovery_price: "2800 ₽",
+            refill_price: "1800",
+            recovery_price: "2800",
         },
         {
             modelCart: "CLT-Y506S",
@@ -3346,8 +3346,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "1800 ₽",
-            recovery_price: "2800 ₽",
+            refill_price: "1800",
+            recovery_price: "2800",
         },
         {
             modelCart: "CLT-K506L",
@@ -3356,8 +3356,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2500",
+            recovery_price: "3500",
         },
         {
             modelCart: "CLT-C506L",
@@ -3366,8 +3366,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2500",
+            recovery_price: "3500",
         },
         {
             modelCart: "CLT-M506L",
@@ -3376,8 +3376,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2500",
+            recovery_price: "3500",
         },
         {
             modelCart: "CLT-Y506L",
@@ -3386,8 +3386,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-680 / CLX-6260",
-            refill_price: "2500 ₽",
-            recovery_price: "3500 ₽",
+            refill_price: "2500",
+            recovery_price: "3500",
         },
         {
             modelCart: "CLP-500D7K",
@@ -3396,7 +3396,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-500 / CLP-550 / CLP-515N",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "-"
         },
         {
@@ -3406,7 +3406,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-500 / CLP-550 / CLP-515N",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "-"
         },
         {
@@ -3416,7 +3416,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-500 / CLP-550 / CLP-515N",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "-"
         },
         {
@@ -3426,7 +3426,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-500 / CLP-550 / CLP-515N",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "-"
         },
         {
@@ -3436,7 +3436,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3446,7 +3446,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3456,7 +3456,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3466,7 +3466,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3476,7 +3476,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3486,7 +3486,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3496,7 +3496,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3506,7 +3506,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-510 / CLP-511G / CLP-515N",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -3516,7 +3516,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-300 / CLX-3160N / CLX-2160 / CLX-2161K",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "-"
         },
         {
@@ -3526,7 +3526,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-300 / CLX-3160N / CLX-2160 / CLX-2161K",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "-"
         },
         {
@@ -3536,7 +3536,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-300 / CLX-3160N / CLX-2160 / CLX-2161K",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "-"
         },
         {
@@ -3546,7 +3546,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-300 / CLX-3160N / CLX-2160 / CLX-2161K",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "-"
         },
         {
@@ -3556,7 +3556,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-350N",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3566,7 +3566,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-350N",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3576,7 +3576,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-350N",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3586,7 +3586,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-350N",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3596,7 +3596,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-600 / CLP-650",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "-"
         },
         {
@@ -3606,7 +3606,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-600 / CLP-650",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "-"
         },
         {
@@ -3616,7 +3616,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-600 / CLP-650",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "-"
         },
         {
@@ -3626,7 +3626,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-600 / CLP-650",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "-"
         },
         {
@@ -3636,7 +3636,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-610 / CLP-660 / CLX-6200 / CLX-6210 / CLX-6240 / CLX-6200",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "-"
         },
         {
@@ -3646,7 +3646,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-610 / CLP-660 / CLX-6200 / CLX-6210 / CLX-6240 / CLX-6200",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "-"
         },
         {
@@ -3656,7 +3656,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-610 / CLP-660 / CLX-6200 / CLX-6210 / CLX-6240 / CLX-6200",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "-"
         },
         {
@@ -3666,7 +3666,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-610 / CLP-660 / CLX-6200 / CLX-6210 / CLX-6240 / CLX-6200",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "-"
         },
         {
@@ -3676,7 +3676,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3686,7 +3686,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3696,7 +3696,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3706,7 +3706,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3716,7 +3716,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3726,7 +3726,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3736,7 +3736,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3746,7 +3746,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-360 / CLP-365 / CLX-3300 / CLX-3305",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3756,7 +3756,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3766,7 +3766,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3776,7 +3776,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3786,7 +3786,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3796,7 +3796,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "-"
         },
         {
@@ -3806,7 +3806,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "-"
         },
         {
@@ -3816,7 +3816,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "-"
         },
         {
@@ -3826,7 +3826,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-320 / CLP-325 / CLX-3185 / CLX-3180",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "-"
         },
         {
@@ -3836,7 +3836,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3846,7 +3846,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3856,7 +3856,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3866,7 +3866,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -3876,7 +3876,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3886,7 +3886,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3896,7 +3896,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3906,7 +3906,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "CLP-310 / CLP-315 / CLX-3170 / CLX-3175",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -3916,8 +3916,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1200 / ML-1210 / ML-1010 / ML-1020",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "ML-1520D3",
@@ -3926,8 +3926,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1520",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "ML-1610D2",
@@ -3936,8 +3936,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1610 / ML-1615 / ML-1620",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "ML-1650D8",
@@ -3946,8 +3946,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1650",
-            refill_price: "800 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "800",
+            recovery_price: "1450",
         },
         {
             modelCart: "ML-1710D3",
@@ -3956,8 +3956,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1700 / ML-1500 / ML-1510 / ML-1710",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "ML-2150D8",
@@ -3966,8 +3966,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2150 / ML-2151",
-            refill_price: "800 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "800",
+            recovery_price: "1450",
         },
         {
             modelCart: "ML-2250D5",
@@ -3976,8 +3976,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2250 / ML-2251",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "ML-2550DA",
@@ -3986,8 +3986,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2550",
-            refill_price: "900 ₽",
-            recovery_price: "1400 ₽",
+            refill_price: "900",
+            recovery_price: "1400",
         },
         {
             modelCart: "ML-3560D6",
@@ -3996,8 +3996,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3560",
-            refill_price: "650 ₽",
-            recovery_price: "1350 ₽",
+            refill_price: "650",
+            recovery_price: "1350",
         },
         {
             modelCart: "ML-3560DB",
@@ -4006,8 +4006,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3560",
-            refill_price: "900 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "900",
+            recovery_price: "1600",
         },
         {
             modelCart: "ML-4500D3",
@@ -4016,8 +4016,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4500 / ML-4600",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "ML-4550A",
@@ -4026,8 +4026,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4550 / ML-4050",
-            refill_price: "700 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "700",
+            recovery_price: "1700",
         },
         {
             modelCart: "ML-4550B",
@@ -4036,8 +4036,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4550 / ML-4050",
-            refill_price: "1300 ₽",
-            recovery_price: "2300 ₽",
+            refill_price: "1300",
+            recovery_price: "2300",
         },
         {
             modelCart: "ML-4550A",
@@ -4046,8 +4046,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4550 / ML-4050",
-            refill_price: "900 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "900",
+            recovery_price: "1900",
         },
         {
             modelCart: "ML-4550B",
@@ -4056,8 +4056,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4550 / ML-4050",
-            refill_price: "1500 ₽",
-            recovery_price: "2500 ₽",
+            refill_price: "1500",
+            recovery_price: "2500",
         },
         {
             modelCart: "ML-D1630A",
@@ -4066,8 +4066,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1630 / SCX-4500",
-            refill_price: "600 ₽",
-            recovery_price: "1050 ₽",
+            refill_price: "600",
+            recovery_price: "1050",
         },
         {
             modelCart: "ML-D2850A",
@@ -4076,8 +4076,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2850 / ML-2855",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "ML-D2850B",
@@ -4086,8 +4086,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2850 / ML-2855",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "ML-D2850A",
@@ -4096,8 +4096,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2850 / ML-2855",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "ML-D2850B",
@@ -4106,8 +4106,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2850 / ML-2855",
-            refill_price: "750 ₽",
-            recovery_price: "1350 ₽",
+            refill_price: "750",
+            recovery_price: "1350",
         },
         {
             modelCart: "ML-D3050A",
@@ -4116,8 +4116,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3050",
-            refill_price: "700 ₽",
-            recovery_price: "1400 ₽",
+            refill_price: "700",
+            recovery_price: "1400",
         },
         {
             modelCart: "ML-D3050B",
@@ -4126,8 +4126,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3050",
-            refill_price: "1000 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1000",
+            recovery_price: "1700",
         },
         {
             modelCart: "ML-D3470A",
@@ -4136,8 +4136,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3470",
-            refill_price: "750 ₽",
-            recovery_price: "1400 ₽",
+            refill_price: "750",
+            recovery_price: "1400",
         },
         {
             modelCart: "ML-D3470B",
@@ -4146,8 +4146,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3470",
-            refill_price: "1050 ₽",
-            recovery_price: "1700 ₽",
+            refill_price: "1050",
+            recovery_price: "1700",
         },
         {
             modelCart: "MLT-D101S",
@@ -4156,8 +4156,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2160 / ML-2165 / SCX-3400 / SCX-3405 / SCX-3407",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D101S",
@@ -4166,8 +4166,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2160 / ML-2165 / SCX-3400 / SCX-3405 / SCX-3407",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D101L",
@@ -4176,8 +4176,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2160 / ML-2165 / SCX-3400 / SCX-3405 / SCX-3407",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D101L",
@@ -4186,8 +4186,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2160 / ML-2165 / SCX-3400 / SCX-3405 / SCX-3407",
-            refill_price: "650 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "650",
+            recovery_price: "1250",
         },
         {
             modelCart: "MLT-D111L",
@@ -4196,8 +4196,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2020 / SL-M2022 / SL-M2070 / SL-M2070W",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D111L",
@@ -4206,8 +4206,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2020 / SL-M2022 / SL-M2070 / SL-M2070W",
-            refill_price: "650 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "650",
+            recovery_price: "1250",
         },
         {
             modelCart: "MLT-D111S",
@@ -4216,8 +4216,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2020 / SL-M2022 / SL-M2070 / SL-M2070W",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D111S",
@@ -4226,8 +4226,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2020 / SL-M2022 / SL-M2070 / SL-M2070W",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D115",
@@ -4236,8 +4236,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2620 / SL-M2820 / SL-M2870 / SL-M2830 / SL-M2880",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D115",
@@ -4246,8 +4246,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2620 / SL-M2820 / SL-M2870 / SL-M2830 / SL-M2880",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D103L",
@@ -4256,8 +4256,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M2620 / SL-M2820 / SL-M2870 / SL-M2830 / SL-M2880",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D103S",
@@ -4266,16 +4266,16 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2950 / ML-2955 / SCX-4725 / SCX-4727 / SCX-4728 / SCX-4729",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D103L",
             devices: "SL-M2620 / SL-M2820 / SL-M2870 / SL-M2830 / SL-M2880",
             id: uuidv4(),
             vendor: "samsung",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D103S",
@@ -4284,8 +4284,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2950 / ML-2955 / SCX-4725 / SCX-4727 / SCX-4728 / SCX-4729",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D104S",
@@ -4295,8 +4295,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D105L",
@@ -4305,8 +4305,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1910 / ML-1915 / ML-2525 / ML-2540 / ML-2580 / SCX-4600 / SCX-4623",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D105S",
@@ -4315,8 +4315,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1910 / ML-1915 / ML-2525 / ML-2540 / ML-2580 / SCX-4600 / SCX-4623",
-            refill_price: "550 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "550",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D105L",
@@ -4325,8 +4325,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1910 / ML-1915 / ML-2525 / ML-2540 / ML-2580 / SCX-4600 / SCX-4623",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D105S",
@@ -4335,8 +4335,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1910 / ML-1915 / ML-2525 / ML-2540 / ML-2580 / SCX-4600 / SCX-4623",
-            refill_price: "400 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "400",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D106S",
@@ -4345,8 +4345,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2245",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D106S",
@@ -4355,8 +4355,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2245",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D108S",
@@ -4365,8 +4365,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D108S",
@@ -4375,8 +4375,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-1660 / ML-1665 / ML-1860 / ML-1865 / SCX-3200 / SCX-3205",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D109S",
@@ -4385,8 +4385,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-4300",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D109S",
@@ -4395,8 +4395,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-4300",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D117S",
@@ -4405,8 +4405,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4650 / SCX-4655",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D117S",
@@ -4415,8 +4415,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4650 / SCX-4655",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D203S",
@@ -4425,8 +4425,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D203L",
@@ -4435,8 +4435,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "500 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "500",
+            recovery_price: "1100",
         },
         {
             modelCart: "MLT-D203E",
@@ -4445,8 +4445,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "650 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "650",
+            recovery_price: "1250",
         },
         {
             modelCart: "MLT-D203L",
@@ -4455,8 +4455,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D203E",
@@ -4465,8 +4465,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "700 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "700",
+            recovery_price: "1300",
         },
         {
             modelCart: "MLT-D203S",
@@ -4475,8 +4475,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-M3820 / SL-M3870 / SL-M4020 / SL-M4070",
-            refill_price: "850 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "850",
+            recovery_price: "1450",
         },
         {
             modelCart: "MLT-D205S",
@@ -4485,8 +4485,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / ML-3712 / SCX-5637 / SCX-5737",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D205L",
@@ -4495,8 +4495,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / ML-3712 / SCX-5637 / SCX-5737",
-            refill_price: "500 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "500",
+            recovery_price: "1100",
         },
         {
             modelCart: "MLT-D205E",
@@ -4505,8 +4505,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / ML-3712 / SCX-5637 / SCX-5737",
-            refill_price: "650 ₽",
-            recovery_price: "1350 ₽",
+            refill_price: "650",
+            recovery_price: "1350",
         },
         {
             modelCart: "MLT-D205S",
@@ -4515,8 +4515,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / SCX-4833 / SCX-5637",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D205L",
@@ -4525,8 +4525,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / SCX-4833 / SCX-5637",
-            refill_price: "650 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "650",
+            recovery_price: "1250",
         },
         {
             modelCart: "MLT-D205E",
@@ -4535,8 +4535,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3310 / ML-3710 / SCX-4833 / SCX-5637",
-            refill_price: "800 ₽",
-            recovery_price: "1550 ₽",
+            refill_price: "800",
+            recovery_price: "1550",
         },
         {
             modelCart: "MLT-D208L",
@@ -4545,8 +4545,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-5635 / SCX-5835",
-            refill_price: "800 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "800",
+            recovery_price: "1500",
         },
         {
             modelCart: "MLT-D208S",
@@ -4555,8 +4555,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-5635 / SCX-5835",
-            refill_price: "600 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "600",
+            recovery_price: "1300",
         },
         {
             modelCart: "MLT-D208L",
@@ -4565,8 +4565,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-5635 / SCX-5835",
-            refill_price: "950 ₽",
-            recovery_price: "1650 ₽",
+            refill_price: "950",
+            recovery_price: "1650",
         },
         {
             modelCart: "MLT-D208S",
@@ -4575,8 +4575,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-5635 / SCX-5835",
-            refill_price: "750 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "750",
+            recovery_price: "1450",
         },
         {
             modelCart: "MLT-D209L",
@@ -4585,8 +4585,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2855 / SCX-4824 / SCX-4826 / SCX-4828",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "MLT-D209S",
@@ -4595,8 +4595,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2855 / SCX-4824 / SCX-4826 / SCX-4828",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "MLT-D209L",
@@ -4605,8 +4605,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2855 / SCX-4824 / SCX-4826 / SCX-4828",
-            refill_price: "650 ₽",
-            recovery_price: "1350 ₽",
+            refill_price: "650",
+            recovery_price: "1350",
         },
         {
             modelCart: "MLT-D209S",
@@ -4615,8 +4615,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-2855 / SCX-4824 / SCX-4826 / SCX-4828",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "MLT-D305S",
@@ -4625,8 +4625,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3750ND",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "MLT-D305L",
@@ -4635,8 +4635,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3750ND",
-            refill_price: "850 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "850",
+            recovery_price: "1500",
         },
         {
             modelCart: "MLT-D305S",
@@ -4645,8 +4645,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3750ND",
-            refill_price: "800 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "800",
+            recovery_price: "1450",
         },
         {
             modelCart: "MLT-D305L",
@@ -4655,8 +4655,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-3750ND",
-            refill_price: "1000 ₽",
-            recovery_price: "1650 ₽",
+            refill_price: "1000",
+            recovery_price: "1650",
         },
         {
             modelCart: "MLT-D307E",
@@ -4665,7 +4665,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "-"
         },
         {
@@ -4675,7 +4675,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "-"
         },
         {
@@ -4685,7 +4685,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "-"
         },
         {
@@ -4695,7 +4695,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "950 ₽",
+            refill_price: "950",
             recovery_price: "-"
         },
         {
@@ -4705,7 +4705,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "1150 ₽",
+            refill_price: "1150",
             recovery_price: "-"
         },
         {
@@ -4715,7 +4715,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-4510 / ML-5010 / ML-5015",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "-"
         },
         {
@@ -4725,7 +4725,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-5510 / ML-6510",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "-"
         },
         {
@@ -4735,7 +4735,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-5510 / ML-6510",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "-"
         },
         {
@@ -4745,7 +4745,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-5510 / ML-6510",
-            refill_price: "2900 ₽",
+            refill_price: "2900",
             recovery_price: "-"
         },
         {
@@ -4755,7 +4755,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "ML-5510 / ML-6510",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "-"
         },
         {
@@ -4765,7 +4765,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "K3300NR / K3250NR",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "-"
         },
         {
@@ -4775,7 +4775,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SL-K2200ND / SL-K2200",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "-"
         },
         {
@@ -4785,8 +4785,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-4100",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "SCX-4216D3",
@@ -4795,8 +4795,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-4016 / SCX-4116 / SCX-4216",
-            refill_price: "400 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "400",
+            recovery_price: "1200",
         },
         {
             modelCart: "SCX-6320D8",
@@ -4805,8 +4805,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-6220 / SCX-6320",
-            refill_price: "800 ₽",
-            recovery_price: "1850 ₽",
+            refill_price: "800",
+            recovery_price: "1850",
         },
         {
             modelCart: "SCX-D4200A",
@@ -4815,8 +4815,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "samsung",
             devices: "SCX-4200 / SCX-4220",
-            refill_price: "500 ₽",
-            recovery_price: "1050 ₽",
+            refill_price: "500",
+            recovery_price: "1050",
         },
         {
             modelCart: "101R00664",
@@ -4827,7 +4827,7 @@ export const refillData =
             vendor: "xerox",
             devices: "B205 / B210 / B215",
             refill_price: "Уточняйте",
-            recovery_price: "2500 ₽",
+            recovery_price: "2500",
         },
         {
             modelCart: "106R04348",
@@ -4837,7 +4837,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "B205 / B210 / B215",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте",
         },
         {
@@ -4892,8 +4892,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3052 / Phaser 3260 / WC 3215 / WC 3225",
-            refill_price: "650 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "650",
+            recovery_price: "1150",
         },
         {
             modelCart: "106R02782",
@@ -4902,8 +4902,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3052 / Phaser 3260 / WC 3215 / WC 3225",
-            refill_price: "650 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "650",
+            recovery_price: "1150",
         },
         {
             modelCart: "006R01461",
@@ -4912,7 +4912,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
-            refill_price: "6500 ₽",
+            refill_price: "6500",
             recovery_price: "Уточняйте"
         },
         {
@@ -4922,7 +4922,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
-            refill_price: "6500 ₽",
+            refill_price: "6500",
             recovery_price: "Уточняйте"
         },
         {
@@ -4932,7 +4932,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
-            refill_price: "6500 ₽",
+            refill_price: "6500",
             recovery_price: "Уточняйте"
         },
         {
@@ -4942,7 +4942,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "WC 7120 / WC 7125 / WC 7220 / WC 7225",
-            refill_price: "6500 ₽",
+            refill_price: "6500",
             recovery_price: "Уточняйте"
         },
         {
@@ -4952,7 +4952,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "WC 5019 / WC 5021",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -4962,7 +4962,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 5222",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -4972,7 +4972,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -4982,7 +4982,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -4992,7 +4992,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -5002,7 +5002,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -5012,7 +5012,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -5022,7 +5022,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -5032,7 +5032,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7100N",
-            refill_price: "2700 ₽",
+            refill_price: "2700",
             recovery_price: "Уточняйте"
         },
         {
@@ -5042,7 +5042,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5052,7 +5052,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5062,7 +5062,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5072,7 +5072,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5082,7 +5082,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5092,7 +5092,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5102,7 +5102,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7500DN",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5112,7 +5112,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 4118",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -5122,8 +5122,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "PE120 / PE120i",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "013R00606",
@@ -5132,8 +5132,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "PE120 / PE120i",
-            refill_price: "500 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "500",
+            recovery_price: "1200",
         },
         {
             modelCart: "013R00607",
@@ -5142,8 +5142,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Pe114e",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "013R00621",
@@ -5152,8 +5152,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "PE220",
-            refill_price: "600 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "600",
+            recovery_price: "1200",
         },
         {
             modelCart: "013R00625",
@@ -5162,8 +5162,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3119",
-            refill_price: "500 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "500",
+            recovery_price: "1100",
         },
         {
             modelCart: "16200100",
@@ -5172,7 +5172,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6200",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5180,7 +5180,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5188,7 +5188,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5196,7 +5196,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5204,7 +5204,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5212,7 +5212,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5220,7 +5220,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5228,7 +5228,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6200",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5238,8 +5238,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3400",
-            refill_price: "950 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "950",
+            recovery_price: "1600",
         },
         {
             modelCart: "106R00462",
@@ -5248,8 +5248,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3400",
-            refill_price: "950 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "950",
+            recovery_price: "1600",
         },
         {
             modelCart: "106R00668",
@@ -5258,7 +5258,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5268,7 +5268,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5278,7 +5278,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5288,7 +5288,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -5298,7 +5298,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5308,7 +5308,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5318,7 +5318,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5328,7 +5328,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6250",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5338,7 +5338,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5348,7 +5348,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5358,7 +5358,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5368,7 +5368,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5378,7 +5378,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5388,7 +5388,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5398,7 +5398,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5408,7 +5408,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6100",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -5418,8 +5418,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3450",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R00688",
@@ -5428,8 +5428,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3450",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01034",
@@ -5438,8 +5438,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3420 / Phaser 3425",
-            refill_price: "1050 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "1050",
+            recovery_price: "1600",
         },
         {
             modelCart: "106R01073",
@@ -5448,7 +5448,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5458,7 +5458,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5468,7 +5468,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5478,7 +5478,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300 / Phaser 6350",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5488,7 +5488,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 7400",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -5498,7 +5498,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 7400",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5508,7 +5508,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5518,7 +5518,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5528,7 +5528,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6300",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -5538,8 +5538,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3500",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01149",
@@ -5548,8 +5548,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3500",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01150",
@@ -5558,7 +5558,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 7400",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -5568,7 +5568,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 7400",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -5578,7 +5578,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 7400",
-            refill_price: "2600 ₽",
+            refill_price: "2600",
             recovery_price: "Уточняйте"
         },
         {
@@ -5588,8 +5588,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3117 / Phaser 3122 / Phaser 3124 / Phaser 3125",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "106R01203",
@@ -5598,7 +5598,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6110",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5608,7 +5608,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6110",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5618,7 +5618,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6110",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5628,8 +5628,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3428",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01246",
@@ -5638,8 +5638,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3428",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01282",
@@ -5648,7 +5648,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6130",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5658,7 +5658,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6130",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5668,7 +5668,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6130",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5678,7 +5678,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5688,7 +5688,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5698,7 +5698,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5708,7 +5708,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5718,7 +5718,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5728,7 +5728,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5738,7 +5738,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5748,7 +5748,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "VersaLink C7000",
-            refill_price: "5000 ₽",
+            refill_price: "5000",
             recovery_price: "Уточняйте"
         },
         {
@@ -5758,7 +5758,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6130",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -5768,7 +5768,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6125",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5778,7 +5778,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6125",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5788,7 +5788,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6125",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5798,7 +5798,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6125",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5808,8 +5808,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3600",
-            refill_price: "1300 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1300",
+            recovery_price: "2100",
         },
         {
             modelCart: "106R01371",
@@ -5818,8 +5818,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3600",
-            refill_price: "1300 ₽",
-            recovery_price: "2100 ₽",
+            refill_price: "1300",
+            recovery_price: "2100",
         },
         {
             modelCart: "106R01372",
@@ -5828,8 +5828,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3600",
-            refill_price: "1400 ₽",
-            recovery_price: "2300 ₽",
+            refill_price: "1400",
+            recovery_price: "2300",
         },
         {
             modelCart: "106R01373",
@@ -5838,8 +5838,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3250",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "106R01374",
@@ -5848,8 +5848,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3250",
-            refill_price: "850 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "850",
+            recovery_price: "1600",
         },
         {
             modelCart: "106R01378",
@@ -5858,8 +5858,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3100",
-            refill_price: "400 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "400",
+            recovery_price: "1200",
         },
         {
             modelCart: "106R01379",
@@ -5868,8 +5868,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3100",
-            refill_price: "500 ₽",
-            recovery_price: "1400 ₽",
+            refill_price: "500",
+            recovery_price: "1400",
         },
         {
             modelCart: "106R01388",
@@ -5878,7 +5878,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5888,7 +5888,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5898,7 +5898,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5908,7 +5908,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5918,7 +5918,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5928,7 +5928,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -5938,7 +5938,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6280",
-            refill_price: "1650 ₽",
+            refill_price: "1650",
             recovery_price: "Уточняйте"
         },
         {
@@ -5948,8 +5948,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3300MFP",
-            refill_price: "850 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "850",
+            recovery_price: "1300",
         },
         {
             modelCart: "106R01412",
@@ -5958,8 +5958,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3300MFP",
-            refill_price: "850 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "850",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01414",
@@ -5968,8 +5968,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3435",
-            refill_price: "950 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "950",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01415",
@@ -5978,8 +5978,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3435",
-            refill_price: "850 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "850",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R01456",
@@ -5988,7 +5988,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 128",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -5998,7 +5998,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 128",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6008,7 +6008,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 128",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6018,7 +6018,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 128",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6028,7 +6028,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -6038,7 +6038,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -6048,7 +6048,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -6058,7 +6058,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6068,7 +6068,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6078,7 +6078,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6088,7 +6088,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6121MFP",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6098,7 +6098,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6140",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6108,7 +6108,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6140",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6118,7 +6118,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6140",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6128,7 +6128,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 6140",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6138,8 +6138,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3210 / WC 3220",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "106R01487",
@@ -6148,8 +6148,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3210 / WC 3220",
-            refill_price: "500 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "500",
+            recovery_price: "1300",
         },
         {
             modelCart: "106R01485",
@@ -6158,8 +6158,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3210 / WC 3220",
-            refill_price: "550 ₽",
-            recovery_price: "1250 ₽",
+            refill_price: "550",
+            recovery_price: "1250",
         },
         {
             modelCart: "106R01487",
@@ -6168,8 +6168,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3210 / WC 3220",
-            refill_price: "650 ₽",
-            recovery_price: "1350 ₽",
+            refill_price: "650",
+            recovery_price: "1350",
         },
         {
             modelCart: "106R01529",
@@ -6178,8 +6178,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3550",
-            refill_price: "800 ₽",
-            recovery_price: "1600 ₽",
+            refill_price: "800",
+            recovery_price: "1600",
         },
         {
             modelCart: "106R01531",
@@ -6188,8 +6188,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3550",
-            refill_price: "1000 ₽",
-            recovery_price: "1950 ₽",
+            refill_price: "1000",
+            recovery_price: "1950",
         },
         {
             modelCart: "106R01570",
@@ -6198,7 +6198,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6208,7 +6208,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6218,7 +6218,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6228,7 +6228,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "7000 ₽",
+            refill_price: "7000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6238,7 +6238,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6248,7 +6248,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6258,7 +6258,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 7800",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6268,7 +6268,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -6278,7 +6278,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -6288,7 +6288,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -6298,7 +6298,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -6308,7 +6308,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -6318,7 +6318,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "2250 ₽",
+            refill_price: "2250",
             recovery_price: "Уточняйте"
         },
         {
@@ -6328,7 +6328,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6500",
-            refill_price: "1950 ₽",
+            refill_price: "1950",
             recovery_price: "Уточняйте"
         },
         {
@@ -6338,7 +6338,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6000 / Phaser 6010 / WC 6015",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6348,7 +6348,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6000 / Phaser 6010 / WC 6015",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6358,7 +6358,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6000 / Phaser 6010 / WC 6015",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6368,7 +6368,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6000 / Phaser 6010 / WC 6015",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6378,7 +6378,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3010 / WC 3040 / WC 3045",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -6388,7 +6388,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3010 / WC 3040 / WC 3045",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -6398,7 +6398,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "WC 3315 / WC 3325",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -6408,8 +6408,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3635MFP",
-            refill_price: "1150 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1150",
+            recovery_price: "1900",
         },
         {
             modelCart: "108R00796",
@@ -6418,8 +6418,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3635MFP",
-            refill_price: "1150 ₽",
-            recovery_price: "1900 ₽",
+            refill_price: "1150",
+            recovery_price: "1900",
         },
         {
             modelCart: "108R00908",
@@ -6428,8 +6428,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3140 / Phaser 3155 / Phaser 3160",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "108R00909",
@@ -6438,8 +6438,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3140 / Phaser 3155 / Phaser 3160",
-            refill_price: "400 ₽",
-            recovery_price: "1000 ₽",
+            refill_price: "400",
+            recovery_price: "1000",
         },
         {
             modelCart: "108R00908",
@@ -6448,8 +6448,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3140 / Phaser 3155 / Phaser 3160",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "108R00909",
@@ -6458,8 +6458,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3140 / Phaser 3155 / Phaser 3160",
-            refill_price: "550 ₽",
-            recovery_price: "1150 ₽",
+            refill_price: "550",
+            recovery_price: "1150",
         },
         {
             modelCart: "109R00639",
@@ -6468,8 +6468,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3110 / Phaser 3210",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "113R00296",
@@ -6478,7 +6478,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "P8E / P8EX / 385",
-            refill_price: "600 ₽",
+            refill_price: "600",
             recovery_price: "Уточняйте"
         },
         {
@@ -6488,7 +6488,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 5400",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -6498,8 +6498,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 4400",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "113R00628",
@@ -6508,8 +6508,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 4400",
-            refill_price: "1700 ₽",
-            recovery_price: "2600 ₽",
+            refill_price: "1700",
+            recovery_price: "2600",
         },
         {
             modelCart: "113R00656",
@@ -6518,8 +6518,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 4500",
-            refill_price: "1500 ₽",
-            recovery_price: "2300 ₽",
+            refill_price: "1500",
+            recovery_price: "2300",
         },
         {
             modelCart: "113R00667",
@@ -6528,8 +6528,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "PE16 / PE16e",
-            refill_price: "400 ₽",
-            recovery_price: "1100 ₽",
+            refill_price: "400",
+            recovery_price: "1100",
         },
         {
             modelCart: "113R00689",
@@ -6538,7 +6538,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6548,7 +6548,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6558,7 +6558,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6568,7 +6568,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -6578,7 +6578,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6588,7 +6588,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6598,7 +6598,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6115MFP / Phaser 6120",
-            refill_price: "2100 ₽",
+            refill_price: "2100",
             recovery_price: "Уточняйте"
         },
         {
@@ -6608,8 +6608,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 4510",
-            refill_price: "1500 ₽",
-            recovery_price: "2400 ₽",
+            refill_price: "1500",
+            recovery_price: "2400",
         },
         {
             modelCart: "113R00719",
@@ -6618,7 +6618,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6628,7 +6628,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6638,7 +6638,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6648,7 +6648,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6658,7 +6658,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6668,7 +6668,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6678,7 +6678,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -6688,7 +6688,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6180",
-            refill_price: "1650 ₽",
+            refill_price: "1650",
             recovery_price: "Уточняйте"
         },
         {
@@ -6698,8 +6698,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3200MFP",
-            refill_price: "650 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "650",
+            recovery_price: "1300",
         },
         {
             modelCart: "113R00735",
@@ -6708,8 +6708,8 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 3200MFP",
-            refill_price: "400 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "400",
+            recovery_price: "1200",
         },
         {
             modelCart: "106R03622",
@@ -6718,7 +6718,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3330 / WorkCentre 3335 / 3345 / xerox Phaser 3330 / WC 3335 / WC 3345",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6728,7 +6728,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3330 / WorkCentre 3335 / 3345 / xerox Phaser 3330 / WC 3335 / WC 3345",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6738,7 +6738,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3330 / WorkCentre 3335 / 3345 / xerox Phaser 3330 / WC 3335 / WC 3345",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6748,7 +6748,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6758,7 +6758,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6768,7 +6768,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6778,7 +6778,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6788,7 +6788,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6798,7 +6798,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6808,7 +6808,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6818,7 +6818,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6020 / Phaser 6022 / WC 5020 / WC 6025 / WC 6027",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6828,7 +6828,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6510 / WC 6515",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6838,7 +6838,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6510 / WC 6515",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6848,7 +6848,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6510 / WC 6515",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6858,7 +6858,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 6510 / WC 6515",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6868,8 +6868,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3020 / WC 3025",
-            refill_price: "400 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "400",
+            recovery_price: "1200",
         },
         {
             modelCart: "106R03048",
@@ -6878,8 +6878,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3020 / WC 3025",
-            refill_price: "400 ₽",
-            recovery_price: "1200 ₽",
+            refill_price: "400",
+            recovery_price: "1200",
         },
         {
             modelCart: "106R02773",
@@ -6888,8 +6888,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3020 / WC 3025",
-            refill_price: "650 ₽",
-            recovery_price: "1500 ₽",
+            refill_price: "650",
+            recovery_price: "1500",
         },
         {
             modelCart: "106R03048",
@@ -6898,8 +6898,8 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3020 / WC 3025",
-            refill_price: "650 ₽",
-            recovery_price: "1450 ₽",
+            refill_price: "650",
+            recovery_price: "1450",
         },
         {
             modelCart: "106R02720",
@@ -6908,7 +6908,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -6918,7 +6918,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6928,7 +6928,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -6938,7 +6938,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "VersaLink B400 / xerox VersaLink B405",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6948,7 +6948,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "VersaLink B400 / xerox VersaLink B405",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6958,7 +6958,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "VersaLink B400 / xerox VersaLink B405",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6968,7 +6968,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Phaser 4510",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -6978,7 +6978,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -6988,7 +6988,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -6998,7 +6998,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "xerox",
             devices: "Phaser 3610 / WC 3615",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7058,7 +7058,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7068,7 +7068,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7078,7 +7078,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7088,7 +7088,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7098,7 +7098,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7108,7 +7108,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1050 ₽",
+            refill_price: "1050",
             recovery_price: "Уточняйте"
         },
         {
@@ -7118,7 +7118,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4200",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -7128,7 +7128,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4200",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -7138,7 +7138,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4200",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -7148,7 +7148,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4200",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -7158,7 +7158,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7168,7 +7168,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7178,7 +7178,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7188,7 +7188,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7198,7 +7198,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7208,7 +7208,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7218,7 +7218,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7228,7 +7228,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4040 / MFC-9440 / MFC-9450",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7238,7 +7238,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2030 / HL-2040 / MFC-7225 / MFC-7820 / DCP-7010",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7248,7 +7248,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2130 / DCP-7055",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7258,7 +7258,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2035",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7268,7 +7268,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2032 / DCP-7057",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7278,7 +7278,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2140 / HL-2170 / MFC-7320R / DCP-7030 / DCP-7040 / DCP-7045",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7288,7 +7288,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2140 / HL-2150 / HL-2170 / MFC-7840 / DCP-7030",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7298,7 +7298,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2240 / HL-2250 / MFC-7360 / MFC-7860 / DCP-7060",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7308,7 +7308,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-2240 / HL-2250 / MFC-7360 / MFC-7860 / DCP-7060",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7318,7 +7318,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-3040 / HL-3070 / MFC-9120 / MFC-9320 / DCP-9010",
-            refill_price: "950 ₽",
+            refill_price: "950",
             recovery_price: "Уточняйте"
         },
         {
@@ -7328,7 +7328,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-3040 / HL-3070 / MFC-9120 / MFC-9320 / DCP-9010",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7338,7 +7338,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-3040 / HL-3070 / MFC-9120 / MFC-9320 / DCP-9010",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7348,7 +7348,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-3040 / HL-3070 / MFC-9120 / MFC-9320 / DCP-9010",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7358,7 +7358,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5130 / HL-5140 / HL-5150 / HL-5170 / MFC-8220 / MFC-8220 / MFC-8440",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7368,7 +7368,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5130 / HL-5140 / HL-5150 / HL-5170 / MFC-8220 / MFC-8220 / MFC-8440",
-            refill_price: "700 ₽",
+            refill_price: "700",
             recovery_price: "Уточняйте"
         },
         {
@@ -7378,7 +7378,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5240 / HL-5250 / HL-5250 / MFC-8460 / MFC-8860",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7388,7 +7388,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5240 / HL-5250 / HL-5250 / MFC-8460 / MFC-8860",
-            refill_price: "700 ₽",
+            refill_price: "700",
             recovery_price: "Уточняйте"
         },
         {
@@ -7398,7 +7398,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4140 / HL-4150 / HL-4570 / MFC-9460 / MFC-9465",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -7408,7 +7408,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4140 / HL-4150 / HL-4570 / MFC-9460 / MFC-9465",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -7418,7 +7418,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4140 / HL-4150 / HL-4570 / MFC-9460 / MFC-9465",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -7428,7 +7428,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4140 / HL-4150 / HL-4570 / MFC-9460 / MFC-9465",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -7438,7 +7438,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5340 / HL-5350 / HL-5370 / MFC-8370 / MFC-8880 / DCP-8070",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7448,7 +7448,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4150 / HL-4570 / MFC-9460 / MFC-9465 / DCP-9055",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7458,7 +7458,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4150 / HL-4570 / MFC-9460 / MFC-9465 / DCP-9055",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7468,7 +7468,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4150 / HL-4570 / MFC-9460 / MFC-9465 / DCP-9055",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7478,7 +7478,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-4150 / HL-4570 / MFC-9460 / MFC-9465 / DCP-9055",
-            refill_price: "1250 ₽",
+            refill_price: "1250",
             recovery_price: "Уточняйте"
         },
         {
@@ -7488,7 +7488,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5340 / HL-5350 / HL-5370 / MFC-8370 / MFC-8880 / DCP-8070",
-            refill_price: "700 ₽",
+            refill_price: "700",
             recovery_price: "Уточняйте"
         },
         {
@@ -7498,7 +7498,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5440 / HL-5450 / HL-6180 / MFC-8520 / MFC-8950 / MFC-8950",
-            refill_price: "600 ₽",
+            refill_price: "600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7508,7 +7508,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-5440 / HL-5450 / HL-6180 / MFC-8520 / MFC-8950 / MFC-8950",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -7518,7 +7518,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-6180 / MFC-8950 / DCP-8250",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -7528,7 +7528,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-6050",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7538,7 +7538,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-1030 / HL-1230 / MFC-8600 / MFC-8700 / MFC-9700",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7548,7 +7548,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-1202R / DCP-1602R",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7558,7 +7558,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L9200 / MFC-L9550",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -7568,7 +7568,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L9200 / MFC-L9551",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -7578,7 +7578,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L9200 / MFC-L9552",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -7588,7 +7588,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L9200 / MFC-L9553",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -7598,7 +7598,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8850",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7608,7 +7608,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8851",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7618,7 +7618,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8852",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7628,7 +7628,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8853",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7638,7 +7638,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8854",
-            refill_price: "2800 ₽",
+            refill_price: "2800",
             recovery_price: "Уточняйте"
         },
         {
@@ -7648,7 +7648,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8855",
-            refill_price: "2800 ₽",
+            refill_price: "2800",
             recovery_price: "Уточняйте"
         },
         {
@@ -7658,7 +7658,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8856",
-            refill_price: "2800 ₽",
+            refill_price: "2800",
             recovery_price: "Уточняйте"
         },
         {
@@ -7668,7 +7668,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L8400 / DCP-L8450 / HL-L8250 / HL-L8350 / MFC-L8650 / MFC-L8857",
-            refill_price: "2800 ₽",
+            refill_price: "2800",
             recovery_price: "Уточняйте"
         },
         {
@@ -7678,7 +7678,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L2300 / HL-L2340 / DCP-L2500 / DCP-L2520 / DCP-L2560 / MFC-2700",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7688,7 +7688,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L2300 / HL-L2340 / DCP-L2500 / DCP-L2520 / DCP-L2560 / MFC-2700",
-            refill_price: "700 ₽",
+            refill_price: "700",
             recovery_price: "Уточняйте"
         },
         {
@@ -7698,7 +7698,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L5500 / DCP-L6600 / HL-L5000D / HL-L5100 / HL-L5200",
-            refill_price: "550 ₽",
+            refill_price: "550",
             recovery_price: "Уточняйте"
         },
         {
@@ -7708,7 +7708,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "DCP-L5500 / DCP-L6600 / HL-L5000D / HL-L5100 / HL-L5200",
-            refill_price: "800 ₽",
+            refill_price: "800",
             recovery_price: "Уточняйте"
         },
         {
@@ -7717,7 +7717,7 @@ export const refillData =
             examples: [], vendor: "brother",
             chip: false,
             devices: "HL-1110 / HL-1112 / HL-1210 / HL-1212",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7726,7 +7726,7 @@ export const refillData =
             examples: [], vendor: "brother",
             chip: true,
             devices: "HL-1110 / HL-1112 / HL-1210 / HL-1212",
-            refill_price: "900 ₽",
+            refill_price: "900",
             recovery_price: "Уточняйте"
         },
         {
@@ -7736,7 +7736,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L2300 / HL-L2340 / DCP-L2500 / DCP-L2520 / DCP-L2560 / MFC-27000",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7746,7 +7746,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "brother",
             devices: "HL-L2300 / HL-L2340 / DCP-L2500 / DCP-L2520 / DCP-L2560 / MFC-2700",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7756,7 +7756,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-F2900 / KX-3000 / KX-3100",
-            refill_price: "450 ₽",
+            refill_price: "450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7766,7 +7766,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-FLM600 / KX-FLM650 ",
-            refill_price: "750 ₽",
+            refill_price: "750",
             recovery_price: "Уточняйте"
         },
         {
@@ -7776,7 +7776,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-FL501RU / KX-FL502RU / KX-FL503RU / KX-FL521RU / KX-FL523RU / KX-FL751RU / KX-FL753RU ",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7786,7 +7786,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-FL511 / KX-FL512 / KX-FL513RU / KX-FL540RU / KX-FL541RU / KX-FL543RU / KX-FLM653RU",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7796,7 +7796,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-FLB801 / KX-FLB803 / KX-FLB803RU / KX-FLB811 / KX-FLB812 / KX-FLB813 / KX-FLB851 / KX-FLB853RU / KX-FLB881",
-            refill_price: "550 ₽",
+            refill_price: "550",
             recovery_price: "Уточняйте"
         },
         {
@@ -7806,7 +7806,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "KX-MB1500RU",
-            refill_price: "600 ₽",
+            refill_price: "600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7816,7 +7816,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "KX-MB1500RU",
-            refill_price: "700 ₽",
+            refill_price: "700",
             recovery_price: "Уточняйте"
         },
         {
@@ -7826,7 +7826,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-MB1900RU / KX-MB2000RU / KX-MB2010 / KX-MB2020RU / KX-MB2025RU / KX-MB2030RU",
-            refill_price: "600 ₽",
+            refill_price: "600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7836,7 +7836,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-FL401RU / KX-FL403RU / KX-FL411RU / KX-FL413RU",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7846,7 +7846,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KX-MB262 / 263 RU / 283RU / 763RU / 772RU / 773RU / 781RU",
-            refill_price: "400 ₽",
+            refill_price: "400",
             recovery_price: "Уточняйте"
         },
         {
@@ -7856,7 +7856,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AL-1000 / AL-1200 / AL-1520",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "Уточняйте"
         },
         {
@@ -7866,7 +7866,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AL-1217 / AL-1555",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "Уточняйте"
         },
         {
@@ -7876,7 +7876,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AL-800 / AL-840",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "Уточняйте"
         },
         {
@@ -7886,7 +7886,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AM-300 / AL-400",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -7896,7 +7896,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-5015 / AR-5120 / AR-5316 / AR-5320",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7906,7 +7906,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-5015 / AR-5120 / AR-5316 / AR-5320",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7916,7 +7916,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-5516 / AR-5520",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -7926,7 +7926,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-120E / AR-150",
-            refill_price: "850 ₽",
+            refill_price: "850",
             recovery_price: "Уточняйте"
         },
         {
@@ -7936,7 +7936,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-151 / AR-153 / AR-156 / AR-5012 / AR-5415 / AR-122E / AR- M150 / AR-M155",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7946,7 +7946,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-150 / AR-151 / AR-153 / AR-156 / AR-121E",
-            refill_price: "950 ₽",
+            refill_price: "950",
             recovery_price: "Уточняйте"
         },
         {
@@ -7956,7 +7956,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-153 / AR-5012 / AR-5415 / AR-122E / AR-M150 / AR-M155",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7966,7 +7966,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-153 / AR-5012 / AR-5415 / AR-122E / AR-M150 / AR-M155",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -7976,7 +7976,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-161 / AR-200 / AR-205",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -7986,7 +7986,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-162 / AR-163 / AR-164 / AR-201 / AR-206 / AR-207 / AR-M160 / AR-M205",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -7996,7 +7996,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-163 / AR-201 / AR-206 / AR-M160 / AR-M165 / AR-M205 / AR-M207",
-            refill_price: "1450 ₽",
+            refill_price: "1450",
             recovery_price: "Уточняйте"
         },
         {
@@ -8006,7 +8006,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-5420 / AR-M201 / AR-203E",
-            refill_price: "950 ₽",
+            refill_price: "950",
             recovery_price: "Уточняйте"
         },
         {
@@ -8016,7 +8016,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-235 / AR-275 / AR-M236 / AR-M276",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8026,7 +8026,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-5625 / AR-5631 / AR-M256 / AR-M316",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8036,7 +8036,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-M350N / AR-M350U / AR-M450N / AR-M450U",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8046,7 +8046,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-M351 / AR-M451 / MX-M350N / MX-M350U / MX-M450N / MX-M450U",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8056,7 +8056,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "AR-M550N / AR-M550U / AR-M620N / AR-M620U / AR-M700N / AR-M700U",
-            refill_price: "2800 ₽",
+            refill_price: "2800",
             recovery_price: "Уточняйте"
         },
         {
@@ -8066,7 +8066,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-1040 / FS-1020MFP / FS-1120MFP / FS-1060MFP",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -8076,7 +8076,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-1025MFP",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -8086,7 +8086,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-4100",
-            refill_price: "1600 ₽",
+            refill_price: "1600",
             recovery_price: "Уточняйте"
         },
         {
@@ -8097,7 +8097,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5521 / M5021",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8108,7 +8108,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5521 / M5021",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8119,7 +8119,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5521 / M5021",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8130,7 +8130,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5521 / M5021",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8141,7 +8141,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5526 / M5026",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8152,7 +8152,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5526 / M5026",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8163,7 +8163,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5526 / M5026",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8174,7 +8174,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Kyocera ECOSYS M5526 / M5026",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8184,7 +8184,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-4200 / FS-4300",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8233,7 +8233,7 @@ export const refillData =
             ],
             chip: false,
             devices: "P3050 / P3055 / P3060",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "-"
         },
         {
@@ -8243,7 +8243,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M3040idn / M3540idn",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "-"
         },
         {
@@ -8254,7 +8254,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "P3045 / P3050 / P3055 / P3060",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "-"
         },
         {
@@ -8309,7 +8309,7 @@ export const refillData =
             ],
             chip: false,
             devices: "M4125 / M4132",
-            refill_price: "2000 ₽",
+            refill_price: "2000",
             recovery_price: "-"
         },
         {
@@ -8320,7 +8320,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "M8124 / M8130",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "-"
         },
         {
@@ -8331,7 +8331,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "M8124 / M8130",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "-"
         },
         {
@@ -8342,7 +8342,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "M8124 / M8130",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "-"
         },
         {
@@ -8353,7 +8353,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "M8124 / M8130",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "-"
         },
         {
@@ -8363,7 +8363,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-2100 / M3040 / M3540",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8373,7 +8373,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 1800 / TASKalfa 1801 / TASKalfa 2200 / TASKalfa 2201",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8383,7 +8383,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 3500 / TASKalfa 4500 / TASKalfa 5500",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8393,7 +8393,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Taskalfa 3510",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8404,7 +8404,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8415,7 +8415,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8426,7 +8426,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8437,7 +8437,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C8020 / FS-C8025 / FS-C8520 / FS-C8525",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8447,7 +8447,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "KM-1500",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8457,7 +8457,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-720 / FS-820 / FS-920 / FS-1016MFP / FS-1116MFP",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8467,7 +8467,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1110 / 1024MFP",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8477,7 +8477,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-720 / FS-820 / FS-920 / FS-1016MFP",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8488,7 +8488,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-1035MFP / FS-1135MFP / M2035 / M2535",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8498,7 +8498,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M2135dn / M2635dn / M2735dw / P2235dn / P2235dw",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8555,7 +8555,7 @@ export const refillData =
             ],
             chip: true,
             devices: "M2040dn / M2540dn / M2640idw",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "-"
         },
         {
@@ -8565,7 +8565,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "P2040dn / P2040dw",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "-"
         },
         {
@@ -8576,7 +8576,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "P2335dw / M2235dn / M2735dn / M2835dw",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "-"
         },
         {
@@ -8586,7 +8586,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1030D",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8596,7 +8596,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1028MFP / FS-1128MFP / FS-1300 / FS-1350DN",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8606,7 +8606,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1100",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8616,7 +8616,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C1020MFP",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8626,7 +8626,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C1020MFP",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8636,7 +8636,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C1020MFP",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8646,7 +8646,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C1020MFP",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8656,7 +8656,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1120",
-            refill_price: "1000 ₽",
+            refill_price: "1000",
             recovery_price: "Уточняйте"
         },
         {
@@ -8666,7 +8666,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1010 / FS-1050 / FS-1000",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8676,7 +8676,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1320",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8686,7 +8686,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1018MFP / FS-1020D / FS-1118MFP",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8696,7 +8696,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1700 / FS-1750 / FS-3700 / FS-3750 / FS-6700 / FS-6900",
-            refill_price: "1400 ₽",
+            refill_price: "1400",
             recovery_price: "Уточняйте"
         },
         {
@@ -8706,7 +8706,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-2000 / FS-3900 / FS-4000",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8716,7 +8716,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-3900DN / FS-4000DN",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8726,7 +8726,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-4000DN",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8736,7 +8736,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-2020",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8746,7 +8746,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-3040MFP / FS-3040MFP+ / FS-3140MFP+ / FS-3540MFP",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8756,7 +8756,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-4020DN",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8766,7 +8766,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-6020 ",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8776,7 +8776,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "KM-1620 / KM-1635 / KM-1650 / KM-2020 / KM-2050 / KM-2550",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "Уточняйте"
         },
         {
@@ -8786,7 +8786,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "KM-2550",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "Уточняйте"
         },
         {
@@ -8796,7 +8796,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 180 / TASKalfa 181 / TASKalfa 220 / TASKalfa 221",
-            refill_price: "1700 ₽",
+            refill_price: "1700",
             recovery_price: "Уточняйте"
         },
         {
@@ -8806,7 +8806,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-6950DN",
-            refill_price: "1100 ₽",
+            refill_price: "1100",
             recovery_price: "Уточняйте"
         },
         {
@@ -8816,7 +8816,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-6970DN",
-            refill_price: "1300 ₽",
+            refill_price: "1300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8826,7 +8826,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-6025MFP / FS-6025MFP / FS-6030MFP / FS-6525MFP / FS-6530MFP",
-            refill_price: "1500 ₽",
+            refill_price: "1500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8836,7 +8836,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8846,7 +8846,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8856,7 +8856,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8866,7 +8866,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5020N / FS-C5025N / FS-C5030N",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -8876,7 +8876,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5015N",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8886,7 +8886,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5015N",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8896,7 +8896,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5015N",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8906,7 +8906,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5015N",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -8916,7 +8916,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5100DN",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8926,7 +8926,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5100DN",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8936,7 +8936,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5100DN",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8946,7 +8946,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5100DN",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8956,7 +8956,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1920",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -8966,7 +8966,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5200DN",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8976,7 +8976,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5200DN",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8986,7 +8986,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5200DN",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -8996,7 +8996,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5200DN",
-            refill_price: "2300 ₽",
+            refill_price: "2300",
             recovery_price: "Уточняйте"
         },
         {
@@ -9006,7 +9006,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5350",
-            refill_price: "2900 ₽",
+            refill_price: "2900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9016,7 +9016,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5351",
-            refill_price: "2900 ₽",
+            refill_price: "2900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9026,7 +9026,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5352",
-            refill_price: "2900 ₽",
+            refill_price: "2900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9036,7 +9036,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5300DN / P6030 / P6030cdn / C5353",
-            refill_price: "2900 ₽",
+            refill_price: "2900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9046,7 +9046,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5400DN",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9056,7 +9056,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5400DN",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9066,7 +9066,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5400DN",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9076,7 +9076,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5400DN",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9086,7 +9086,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9096,7 +9096,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9106,7 +9106,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9116,7 +9116,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C5150DN / P6021cdn",
-            refill_price: "1900 ₽",
+            refill_price: "1900",
             recovery_price: "Уточняйте"
         },
         {
@@ -9126,7 +9126,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9136,7 +9136,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9146,7 +9146,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9156,7 +9156,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "FS-C2026MFP / FS-C2026MFP / FS-C2126MFP / FS-C2526MFP / M6026",
-            refill_price: "2500 ₽",
+            refill_price: "2500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9166,7 +9166,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "FS-1800",
-            refill_price: "1200 ₽",
+            refill_price: "1200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9176,7 +9176,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "KM-3050 / KM-4050 / KM-5050",
-            refill_price: "3 500 ₽",
+            refill_price: "3 500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9186,7 +9186,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS P4040dn",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9196,7 +9196,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS M2030dn / M2530dn / FS-1030MFP / FS-1130MFP",
-            refill_price: "950 ₽",
+            refill_price: "950",
             recovery_price: "Уточняйте"
         },
         {
@@ -9206,7 +9206,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 3010i",
-            refill_price: "3000 ₽",
+            refill_price: "3000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9216,7 +9216,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 6500i / TASKalfa 6501i / TASKalfa 8000i / TASKalfa 8001i",
-            refill_price: "45 000 ₽",
+            refill_price: "45 000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9226,7 +9226,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 4002i / 5002i / 6002i",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9236,7 +9236,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS P7035",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9246,7 +9246,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS P7035",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9256,7 +9256,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS P7035",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9266,7 +9266,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "ECOSYS P7035",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9276,7 +9276,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9286,7 +9286,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9296,7 +9296,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9306,7 +9306,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6030cdn / M6530cdn / M6130CDN",
-            refill_price: "3200 ₽",
+            refill_price: "3200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9316,7 +9316,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9326,7 +9326,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9336,7 +9336,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9346,7 +9346,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M6035cidn / M6535cidn",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9356,7 +9356,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9366,7 +9366,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9376,7 +9376,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9386,7 +9386,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "M5521cdn / M5526cdn / P5021cdn / P5026cdn",
-            refill_price: "2200 ₽",
+            refill_price: "2200",
             recovery_price: "Уточняйте"
         },
         {
@@ -9396,7 +9396,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9406,7 +9406,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9416,7 +9416,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9426,7 +9426,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 306ci",
-            refill_price: "3500 ₽",
+            refill_price: "3500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9436,7 +9436,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9446,7 +9446,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9456,7 +9456,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9466,7 +9466,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 406ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9476,7 +9476,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9486,7 +9486,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9496,7 +9496,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9506,7 +9506,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 2552ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9516,7 +9516,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9526,7 +9526,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9536,7 +9536,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9546,7 +9546,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 4052ci",
-            refill_price: "6000 ₽",
+            refill_price: "6000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9556,7 +9556,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
-            refill_price: "8000 ₽",
+            refill_price: "8000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9566,7 +9566,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
-            refill_price: "8000 ₽",
+            refill_price: "8000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9576,7 +9576,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
-            refill_price: "8000 ₽",
+            refill_price: "8000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9586,7 +9586,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 6550ci / TASKalfa 7550ci / TASKalfa 6551ci / TASKalfa 7551ci",
-            refill_price: "8000 ₽",
+            refill_price: "8000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9596,7 +9596,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9606,7 +9606,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9616,7 +9616,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9626,7 +9626,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "TASKalfa 5052ci / TASKalfa 6052ci",
-            refill_price: "4000 ₽",
+            refill_price: "4000",
             recovery_price: "Уточняйте"
         },
         {
@@ -9636,7 +9636,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Ricoh Aficio SP 100 / SP 100SU / SP 100SF",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9646,7 +9646,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "Aficio SP 100 / SP 100SU / SP 100SF",
-            refill_price: "500 ₽",
+            refill_price: "500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9656,7 +9656,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Ricoh SP 150",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -9666,7 +9666,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "Ricoh SP 150",
-            refill_price: "650 ₽",
+            refill_price: "650",
             recovery_price: "Уточняйте"
         },
         {
@@ -9676,7 +9676,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C822",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9686,7 +9686,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C823",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9696,7 +9696,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C824",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9705,7 +9705,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C825",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9715,7 +9715,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C826",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9725,7 +9725,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C827",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9735,7 +9735,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C828",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9745,7 +9745,7 @@ export const refillData =
             examples: [],
             chip: true,
             devices: "C829",
-            refill_price: "4500 ₽",
+            refill_price: "4500",
             recovery_price: "Уточняйте"
         },
         {
@@ -9755,7 +9755,7 @@ export const refillData =
             examples: [],
             chip: false,
             devices: "bizhub 20 / bizhub 20P",
-            refill_price: "600 ₽",
+            refill_price: "600",
             recovery_price: "Уточняйте"
         },
         {
@@ -9766,7 +9766,7 @@ export const refillData =
             chip: false,
             devices: "bizhub 20 / bizhub 20P",
             refill_price: "Уточняйте",
-            recovery_price: "1500 ₽"
+            recovery_price: "1500"
         },
         {
             modelCart: "PC-211P",
@@ -9811,7 +9811,7 @@ export const refillData =
             id: uuidv4(),
             vendor: "pantum",
             devices: "M6500 / M6507 / M6550NW / P2200 / P2207 / P2500 / P2516 / P2518",
-            refill_price: "600 ₽",
-            recovery_price: "1300 ₽",
+            refill_price: "600",
+            recovery_price: "1300",
         },
     ]
