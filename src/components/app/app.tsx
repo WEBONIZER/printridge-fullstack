@@ -16,6 +16,7 @@ import MainMenu from "../main-menu/main-menu";
 import SitemapGenerator from "../sitemap-generator/sitemap-generator";
 import RepairLaptopsComponent from "../repair-laptops-component/repair-laptops-component";
 import RepairLaptopsItemComponent from "../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component";
+import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
 
 export const App: React.FC = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ export const App: React.FC = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />

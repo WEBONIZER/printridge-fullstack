@@ -1,5 +1,4 @@
 import styles from './refill-component.module.css'
-import { Navigate } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
 import FilterItemsComponent from '../filter-items-component/filter-items-component'
 import { refillData } from '../../utils/refill'
