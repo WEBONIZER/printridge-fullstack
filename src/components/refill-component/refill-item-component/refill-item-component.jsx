@@ -104,11 +104,11 @@ function RefillItemComponent() {
                             <p className={styles.boxes_title}>Цены</p>
                             <div className={styles.text_box}>
                                 <h3 className={styles.blue_text}>{`Заправка ${data.modelCart}`}</h3>
-                                <p className={styles.black_text}>{data.refill_price}</p>
+                                <p className={styles.black_text}>{parseInt(data.refill_price, 10)}</p>
                             </div>
                             <div className={styles.text_box}>
                                 <h3 className={styles.blue_text}>{`Восстановление ${data.modelCart}`}</h3>
-                                <p className={styles.black_text}>{data.recovery_price}</p>
+                                <p className={styles.black_text}>{parseInt(data.recovery_price, 10)}</p>
                             </div>
                             <div className={styles.text_box}>
                                 <p className={styles.blue_text}>Замена чипа</p>
