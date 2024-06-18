@@ -6144,7 +6144,7 @@ export const repairPrintersPrice = [
         examples: [],
     },
     {
-        model: "4060",
+        model: "bizhub 4060",
         format: "A3",
         speed: 45,
         capacity: 20000,
