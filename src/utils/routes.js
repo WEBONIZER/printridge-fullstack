@@ -4541,311 +4541,303 @@ export const repairPrintersPrice = [
         vendor: "samsung",
     },
     {
-        model: "3020",
+        model: "Phaser3020",
         vendor: "xerox",
     },
     {
-        model: "3260",
+        model: "Phaser3260",
         vendor: "xerox",
     },
     {
-        model: "3052",
+        model: "Phaser3052",
         vendor: "xerox",
     },
     {
-        model: "3250",
+        model: "Phaser3250",
         vendor: "xerox",
     },
     {
-        model: "3420",
+        model: "Phaser3420",
         vendor: "xerox",
     },
     {
-        model: "3320",
+        model: "Phaser3320",
         vendor: "xerox",
     },
     {
-        model: "3500",
+        model: "Phaser3500",
         vendor: "xerox",
     },
     {
-        model: "3610",
+        model: "Phaser3610",
         vendor: "xerox",
     },
     {
-        model: "4500",
+        model: "Phaser4500",
         vendor: "xerox",
     },
     {
-        model: "4510",
+        model: "WorkCentre4510",
         vendor: "xerox",
     },
     {
-        model: "4622",
+        model: "Phaser4622",
         vendor: "xerox",
     },
     {
-        model: "4600",
+        model: "Phaser4600",
         vendor: "xerox",
     },
     {
-        model: "4620",
+        model: "WorkCentre4620",
         vendor: "xerox",
     },
     {
-        model: "5335",
+        model: "Phaser5335",
         vendor: "xerox",
     },
     {
-        model: "5550",
+        model: "Phaser5550",
         vendor: "xerox",
     },
     {
-        model: "3025",
+        model: "WorkCentre3025",
         vendor: "xerox",
     },
     {
-        model: "3225",
+        model: "WorkCentre3225",
         vendor: "xerox",
     },
     {
-        model: "3215",
+        model: "WorkCentre3215",
         vendor: "xerox",
     },
     {
-        model: "3315",
+        model: "WorkCentre3315",
         vendor: "xerox",
     },
     {
-        model: "3210",
+        model: "WorkCentre3210",
         vendor: "xerox",
     },
     {
-        model: "3220",
+        model: "WorkCentre3220",
         vendor: "xerox",
     },
     {
-        model: "3635",
+        model: "Phaser3635",
         vendor: "xerox",
     },
     {
-        model: "3325",
+        model: "WorkCentre3325",
         vendor: "xerox",
     },
     {
-        model: "3615",
+        model: "WorkCentre3615",
         vendor: "xerox",
     },
     {
-        model: "3655",
+        model: "WorkCentre3655",
         vendor: "xerox",
     },
     {
-        model: "4250",
+        model: "WorkCentre4250",
         vendor: "xerox",
     },
     {
-        model: "4260",
+        model: "WorkCentre4260",
         vendor: "xerox",
     },
     {
-        model: "4265",
+        model: "WorkCentre4265",
         vendor: "xerox",
     },
     {
-        model: "5016",
+        model: "WorkCentre5016",
         vendor: "xerox",
     },
     {
-        model: "5022",
+        model: "WorkCentre5022",
         vendor: "xerox",
     },
     {
-        model: "5021",
+        model: "WorkCentre5021",
         vendor: "xerox",
     },
     {
-        model: "5024",
+        model: "WorkCentre5024",
         vendor: "xerox",
     },
     {
-        model: "5222",
+        model: "WorkCentre5222",
         vendor: "xerox",
     },
     {
-        model: "5225",
+        model: "WorkCentre5225",
         vendor: "xerox",
     },
     {
-        model: "5325",
+        model: "WorkCentre5325",
         vendor: "xerox",
     },
     {
-        model: "5230",
+        model: "WorkCentre5230",
         vendor: "xerox",
     },
     {
-        model: "5330",
+        model: "WorkCentre5330",
         vendor: "xerox",
     },
     {
-        model: "5632",
+        model: "WorkCentre5632",
         vendor: "xerox",
     },
     {
-        model: "5735",
+        model: "WorkCentre5735",
         vendor: "xerox",
     },
     {
-        model: "5335",
+        model: "WorkCentre5335",
         vendor: "xerox",
     },
     {
-        model: "5945",
+        model: "WorkCentre5945",
         vendor: "xerox",
     },
     {
-        model: "5845",
+        model: "WorkCentre5845",
         vendor: "xerox",
     },
     {
-        model: "5955",
+        model: "WorkCentre5955",
         vendor: "xerox",
     },
     {
-        model: "5855",
+        model: "WorkCentre5855",
         vendor: "xerox",
     },
     {
-        model: "5865",
+        model: "WorkCentre5865",
         vendor: "xerox",
     },
     {
-        model: "5875",
+        model: "WorkCentre5875",
         vendor: "xerox",
     },
     {
-        model: "5890",
+        model: "WorkCentre5890",
         vendor: "xerox",
     },
     {
-        model: "6000",
+        model: "Phaser6000",
         vendor: "xerox",
     },
     {
-        model: "6022",
+        model: "Phaser6022",
         vendor: "xerox",
     },
     {
-        model: "6020",
+        model: "Phaser6020",
         vendor: "xerox",
     },
     {
-        model: "6010",
+        model: "Phaser6010",
         vendor: "xerox",
     },
     {
-        model: "6500",
+        model: "Phaser6500",
         vendor: "xerox",
     },
     {
-        model: "6280",
+        model: "Phaser6280",
         vendor: "xerox",
     },
     {
-        model: "6280",
+        model: "Phaser6600",
         vendor: "xerox",
     },
     {
-        model: "6600",
+        model: "Phaser6360",
         vendor: "xerox",
     },
     {
-        model: "6360",
+        model: "Phaser6700",
         vendor: "xerox",
     },
     {
-        model: "6360",
+        model: "Phaser7100",
         vendor: "xerox",
     },
     {
-        model: "6700",
+        model: "Phaser7500",
         vendor: "xerox",
     },
     {
-        model: "7100",
+        model: "Phaser7800",
         vendor: "xerox",
     },
     {
-        model: "7500",
+        model: "WorkCentre6015",
         vendor: "xerox",
     },
     {
-        model: "7800",
+        model: "WorkCentre6025",
         vendor: "xerox",
     },
     {
-        model: "6015",
+        model: "WorkCentre6027",
         vendor: "xerox",
     },
     {
-        model: "6025",
+        model: "WorkCentre6505",
         vendor: "xerox",
     },
     {
-        model: "6027",
+        model: "WorkCentre6605",
         vendor: "xerox",
     },
     {
-        model: "6505",
+        model: "WorkCentre6655",
         vendor: "xerox",
     },
     {
-        model: "6605",
+        model: "WorkCentre6400",
         vendor: "xerox",
     },
     {
-        model: "6655",
+        model: "WorkCentre7120",
         vendor: "xerox",
     },
     {
-        model: "6400",
+        model: "WorkCentre7125",
         vendor: "xerox",
     },
     {
-        model: "7120",
+        model: "WorkCentre7220",
         vendor: "xerox",
     },
     {
-        model: "7125",
+        model: "WorkCentre7220",
         vendor: "xerox",
     },
     {
-        model: "7220",
+        model: "WorkCentre7830",
         vendor: "xerox",
     },
     {
-        model: "7220",
+        model: "WorkCentre7225",
         vendor: "xerox",
     },
     {
-        model: "7830",
+        model: "WorkCentre7835",
         vendor: "xerox",
     },
     {
-        model: "7225",
+        model: "WorkCentre7845",
         vendor: "xerox",
     },
     {
-        model: "7835",
-        vendor: "xerox",
-    },
-    {
-        model: "7845",
-        vendor: "xerox",
-    },
-    {
-        model: "7855",
+        model: "WorkCentre7855",
         vendor: "xerox",
     },
     {
@@ -5221,83 +5213,83 @@ export const repairPrintersPrice = [
         vendor: "kyocera",
     },
     {
-        model: "1400",
+        model: "PagePro1400",
         vendor: "minolta",
     },
     {
-        model: "1350",
+        model: "PagePro1350",
         vendor: "minolta",
     },
     {
-        model: "1300",
+        model: "PagePro1300",
         vendor: "minolta",
     },
     {
-        model: "20p",
+        model: "bizhub20p",
         vendor: "minolta",
     },
     {
-        model: "3300P",
+        model: "bizhub3300P",
         vendor: "minolta",
     },
     {
-        model: "4000P",
+        model: "bizhub4000P",
         vendor: "minolta",
     },
     {
-        model: "4700P",
+        model: "bizhub4700P",
         vendor: "minolta",
     },
     {
-        model: "4650",
+        model: "PagePro4650",
         vendor: "minolta",
     },
     {
-        model: "5650",
+        model: "PagePro5650",
         vendor: "minolta",
     },
     {
-        model: "40P",
+        model: "bizhub40P",
         vendor: "minolta",
     },
     {
-        model: "9100",
+        model: "PagePro9100",
         vendor: "minolta",
     },
     {
-        model: "4060",
+        model: "bizhub4060",
         vendor: "minolta",
     },
     {
-        model: "1390MF",
+        model: "PagePro1390MF",
         vendor: "minolta",
     },
     {
-        model: "1380MF",
+        model: "PagePro1380MF",
         vendor: "minolta",
     },
     {
-        model: "190f",
+        model: "bizhub190f",
         vendor: "minolta",
     },
     {
-        model: "20",
+        model: "bizhub20",
         vendor: "minolta",
     },
     {
-        model: "1480MF",
+        model: "PagePro1480MF",
         vendor: "minolta",
     },
     {
-        model: "43",
+        model: "bizhub43",
         vendor: "minolta",
     },
     {
-        model: "1490MF",
+        model: "PagePro1490MF",
         vendor: "minolta",
     },
     {
-        model: "160",
+        model: "bizhub160",
         vendor: "minolta",
     },
     {
@@ -5305,11 +5297,11 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "25e",
+        model: "bizhub25e",
         vendor: "minolta",
     },
     {
-        model: "131f",
+        model: "bizhub131f",
         vendor: "minolta",
     },
     {
@@ -5317,11 +5309,11 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "130f",
+        model: "bizhub130f",
         vendor: "minolta",
     },
     {
-        model: "161",
+        model: "bizhub161",
         vendor: "minolta",
     },
     {
@@ -5329,31 +5321,31 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "4050",
+        model: "bizhub4050",
         vendor: "minolta",
     },
     {
-        model: "3320",
+        model: "bizhub3320",
         vendor: "minolta",
     },
     {
-        model: "4020",
+        model: "bizhub4020",
         vendor: "minolta",
     },
     {
-        model: "4750",
+        model: "bizhub4750",
         vendor: "minolta",
     },
     {
-        model: "185",
+        model: "bizhub185",
         vendor: "minolta",
     },
     {
-        model: "210",
+        model: "bizhub210",
         vendor: "minolta",
     },
     {
-        model: "162",
+        model: "bizhub162",
         vendor: "minolta",
     },
     {
@@ -5365,15 +5357,15 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "195",
+        model: "bizhub195",
         vendor: "minolta",
     },
     {
-        model: "165",
+        model: "bizhub165",
         vendor: "minolta",
     },
     {
-        model: "215",
+        model: "bizhub215",
         vendor: "minolta",
     },
     {
@@ -5385,19 +5377,19 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "224e",
+        model: "bizhub224e",
         vendor: "minolta",
     },
     {
-        model: "250",
+        model: "bizhub250",
         vendor: "minolta",
     },
     {
-        model: "223",
+        model: "bizhub223",
         vendor: "minolta",
     },
     {
-        model: "36",
+        model: "bizhub36",
         vendor: "minolta",
     },
     {
@@ -5409,91 +5401,91 @@ export const repairPrintersPrice = [
         vendor: "minolta",
     },
     {
-        model: "184",
+        model: "bizhub184",
         vendor: "minolta",
     },
     {
-        model: "363",
+        model: "bizhub363",
         vendor: "minolta",
     },
     {
-        model: "42",
+        model: "bizhub42",
         vendor: "minolta",
     },
     {
-        model: "423",
+        model: "bizhub423",
         vendor: "minolta",
     },
     {
-        model: "364e",
+        model: "bizhub364e",
         vendor: "minolta",
     },
     {
-        model: "284e",
+        model: "bizhub284e",
         vendor: "minolta",
     },
     {
-        model: "454e",
+        model: "bizhub454e",
         vendor: "minolta",
     },
     {
-        model: "420",
+        model: "bizhub420",
         vendor: "minolta",
     },
     {
-        model: "421",
+        model: "bizhub421",
         vendor: "minolta",
     },
     {
-        model: "283",
+        model: "bizhub283",
         vendor: "minolta",
     },
     {
-        model: "552",
+        model: "bizhub552",
         vendor: "minolta",
     },
     {
-        model: "554e",
+        model: "bizhub554e",
         vendor: "minolta",
     },
     {
-        model: "500",
+        model: "bizhub500",
         vendor: "minolta",
     },
     {
-        model: "501",
+        model: "bizhub501",
         vendor: "minolta",
     },
     {
-        model: "654e",
+        model: "bizhub654e",
         vendor: "minolta",
     },
     {
-        model: "362",
+        model: "bizhub362",
         vendor: "minolta",
     },
     {
-        model: "222",
+        model: "bizhub222",
         vendor: "minolta",
     },
     {
-        model: "350",
+        model: "bizhub350",
         vendor: "minolta",
     },
     {
-        model: "754e",
+        model: "bizhub754e",
         vendor: "minolta",
     },
     {
-        model: "600",
+        model: "bizhub600",
         vendor: "minolta",
     },
     {
-        model: "601",
+        model: "bizhub601",
         vendor: "minolta",
     },
     {
-        model: "211",
+        model: "bizhub211",
         vendor: "minolta",
     },
     {
