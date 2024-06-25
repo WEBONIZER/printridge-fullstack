@@ -121,7 +121,17 @@
     <loc>https://printridge.ru/contacts</loc>
     <lastmod>2024-02-09</lastmod>
   </url>
-  <url> <loc>https://printridge.ru/refill/hp/W1360A_136A</loc> <lastmod>2024-06-18</lastmod> <priority>1.0</priority> </url>
+
+
+ <url> <loc>https://printridge.ru/refill/hp/W2210A-207A</loc> <lastmod>2024-06-25</lastmod> <priority>1.0</priority> </url>
+
+<url> <loc>https://printridge.ru/refill/hp/W2211A-207A</loc> <lastmod>2024-06-25</lastmod> <priority>1.0</priority> </url>
+
+<url> <loc>https://printridge.ru/refill/hp/W2212A-207A</loc> <lastmod>2024-06-25</lastmod> <priority>1.0</priority> </url>
+
+<url> <loc>https://printridge.ru/refill/hp/W2213A-207A</loc> <lastmod>2024-06-25</lastmod> <priority>1.0</priority> </url>
+
+<url> <loc>https://printridge.ru/refill/hp/W1360A_136A</loc> <lastmod>2024-06-18</lastmod> <priority>1.0</priority> </url>
 
 <url> <loc>https://printridge.ru/refill/hp/W1360X_136X</loc> <lastmod>2024-06-18</lastmod> <priority>1.0</priority> </url>
 

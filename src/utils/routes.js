@@ -7,6 +7,22 @@ export const refillData =
             vendor: "hp",
         },
         {
+            modelCart: "W2210A-207A",
+            vendor: "hp",
+        },
+        {
+            modelCart: "W2211A-207A",
+            vendor: "hp",
+        },
+        {
+            modelCart: "W2212A-207A",
+            vendor: "hp",
+        },
+        {
+            modelCart: "W2213A-207A",
+            vendor: "hp",
+        },
+        {
             modelCart: "W1360X_136X",
             vendor: "hp",
         },
