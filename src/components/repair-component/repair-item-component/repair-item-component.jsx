@@ -1,5 +1,4 @@
 import styles from './repair-item-component.module.css'
-import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { repair } from '../../../utils/repair';
 import Tabs from '../../tabs/tabs';
@@ -16,7 +15,7 @@ function RepairItemComponent() {
     return (data &&
         <div>
             <div className={styles.container}>
-                <h1 className={styles.header}>Ремонт {`${data.model}`}</h1>
+                <h1 className={styles.header}>Ремонт {`${data.vendor.toUpperCase()} ${data.model}`}</h1>
                 <div className={styles.img_desc_box}>
                     <div className={styles.price_container}>
 

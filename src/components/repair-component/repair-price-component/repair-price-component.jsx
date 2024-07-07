@@ -64,8 +64,8 @@ const RepairPriceComponent = ({ data }) => {
                 <script type="application/ld+json">
                     {JSON.stringify(schemaData)}
                 </script>
-                <title>{`Ремонт ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Ремонт ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <title>{`Ремонт ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <meta name="title" content={`Ремонт ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
                     content={`ремонт ${model.toUpperCase()}, ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
@@ -73,7 +73,7 @@ const RepairPriceComponent = ({ data }) => {
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`ремонт ${model.toUpperCase()}
+                    content={`ремонт ${vendor.toUpperCase()} ${model.toUpperCase()}
                     Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
                     Диагностика ${data.price.diagnostics}
                     ТО ${data.price.TO}
