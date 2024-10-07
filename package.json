@@ -86,7 +86,8 @@
     "serve": "vite preview",
     "start:csr": "vite",
     "start:ssr": "node server",
-    "prod": "npm run build:ssr && npm run start:ssr"
+    "prod": "npm run build:ssr && npm run start:ssr",
+    "docker": "docker compose up -d"
   },
   "type": "module",
   "version": "0.1.0"
