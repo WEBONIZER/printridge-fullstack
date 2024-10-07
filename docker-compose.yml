@@ -15,4 +15,4 @@ services:
     volumes:
       - "../env:/home/env"
     ports:
-      - "443:3000"
+      - "3000:3000"
