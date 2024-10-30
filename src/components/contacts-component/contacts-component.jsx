@@ -115,7 +115,7 @@ const ContactsComponent = () => {
                     </Link>
                     <Link
                         className={styles.info_row}
-                        to="https://t.me/DenFoxPrint"
+                        to="https://t.me/DenBrontosaur"
                         target="_blank"
                         rel="noopener noreferrer"
                     >

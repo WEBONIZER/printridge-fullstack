@@ -243,23 +243,6 @@ export const repairPrintersPrice = [
     },
     {
         vendor: 'hp',
-        model: 'CP5225',
-        cartridges: [
-            "CE740A",
-            "CE741A",
-            "CE742A",
-            "CE743A",
-        ],
-        device: 'printer',
-        type: 'color',
-        format: 'A3',
-        capacity: 7300,
-        speed: 20,
-        price: {},
-        examples: [],
-    },
-    {
-        vendor: 'hp',
         model: 'M175',
         cartridges: [
             "CE310A",

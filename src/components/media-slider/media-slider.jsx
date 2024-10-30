@@ -4,12 +4,20 @@ import { useSelector, useDispatch } from "react-redux"
 import { PHOTO_BUTTON, VIDEO_BUTTON } from '../../services/actions/buttons'
 import VideosComponent from './videos-component/videos-component'
 import PhotosComponent from './photos-component/photos-component'
+import { useEffect } from 'react';
 
 const MediaSlider = ({ photos, videos }) => {
 
     const dispatch = useDispatch();
 
     const { photoButton, videoButton } = useSelector((state) => state.buttons);
+
+    useEffect(() => {
+        dispatch({
+            type: PHOTO_BUTTON,
+            photoButton: 'photo'
+        })
+    }, [photos])
 
     const handleClickPhoto = () => {
         dispatch({
@@ -49,7 +57,7 @@ const MediaSlider = ({ photos, videos }) => {
                     Видео
                 </Link>}
             </div>
-            {photoButton === 'photo' && <PhotosComponent imgagesNameArr={photos} />}
+            {photos.length > 0 && photoButton === 'photo' && <PhotosComponent imgagesNameArr={photos} />}
             {videos.length > 0 && videoButton === 'video' && <VideosComponent videosArr={videos} />}
         </div>
     );
