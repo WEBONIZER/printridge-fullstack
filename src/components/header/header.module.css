@@ -27,7 +27,7 @@
 
 .logo_and_menu {
   width: 100%;
-  height: 36px;
+  height: 46px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -40,10 +40,10 @@
 
 .link {
   margin: 0;
-  width: 112px;
-  height: 36px;
+  width: 172px;
+  height: 46px;
   background-image: url("https://storage.yandexcloud.net/printridge/printridge_logo.svg");
-  background-size: 112px 36px;
+  background-size: 172px 46px;
   background-position: left center;
   background-repeat: no-repeat;
   cursor: pointer;
@@ -145,13 +145,13 @@
   }
 
   .logo_and_menu {
-    height: 2.5vw;
+    height: 3.19vw;
   }
 
   .link {
-    width: 7.77vw;
-    height: 2.5vw;
-    background-size: 7.77vw 2.5vw;
+    width: 11.94vw;
+    height: 3.19vw;
+    background-size: 11.94vw 3.19vw;
   }
 
   .slogan_box {
