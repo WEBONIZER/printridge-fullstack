@@ -17,11 +17,22 @@ function FooterComponent() {
                             to={`yandexnavi://search?text='Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'`}
                         >{'Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'}</Link>
                     </div>
-                    <p className={styles.site_name_text}>{'Printridge'}</p>
+                    <Link
+                        className={styles.site_name_text}
+                        to='/'
+                    />
                 </div>
                 <div className={styles.menu_box}>
                     <MainMenu position={'footer'} />
-                    <Link className={styles.user_agreement_text}>{'Пользовательское соглашение'}</Link>
+                    <Link
+                        className={styles.user_agreement_text}
+                        to='https://webonizer.site/'
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {'Дизайн и разработка'}
+                        <div className={styles.webonizer_logo} />
+                    </Link>
                 </div>
             </div>
             <div className={styles.footer_box}>
@@ -36,6 +47,10 @@ function FooterComponent() {
                         to={`mailto:sales@printridge.ru`}
                     >{'sales@printridge.ru'}</Link>
                 </div>
+                <Link
+                    className={styles.site_name_text_mobile}
+                    to='/'
+                />
                 <div className={styles.social_box}>
                     <SocialIcons />
                 </div>

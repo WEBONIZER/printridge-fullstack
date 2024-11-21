@@ -37,18 +37,14 @@ function HeaderComponent() {
                     <div className={styles.logo_and_menu}>
                         <NavLink
                             className={styles.link}
-                            to="/">
-                            Printridge
-                        </NavLink>
+                            to="/" />
                         <MainMenu position={'header'} />
                     </div>
                     <div className={styles.logo_and_menu_mobile}>
                         <div className={styles.logo_and_menu_mobile_button}>
                             <NavLink
                                 className={styles.link}
-                                to="/">
-                                Printridge
-                            </NavLink>
+                                to="/" />
                             <NavLink
                                 className={styles.mobile_menu_button}
                                 onClick={handleClick} />

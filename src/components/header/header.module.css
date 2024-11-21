@@ -39,11 +39,14 @@
 }
 
 .link {
-  text-decoration: none;
   margin: 0;
-  color: #0c0c0c;
-  font-size: 30px;
-  font-weight: 700;
+  width: 112px;
+  height: 36px;
+  background-image: url("https://storage.yandexcloud.net/printridge/printridge_logo.svg");
+  background-size: 112px 36px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .phone_social_box {
@@ -127,63 +130,65 @@
 }
 
 @media all and (max-width: 1440px) {
-.container {
-  margin: 1.11vw auto 0;
-  height: 41.66vw;
-}
+  .container {
+    margin: 1.11vw auto 0;
+    height: 41.66vw;
+  }
 
-.logo_container {
-  height: 100%;
-  border-radius: 2.77vw;
-}
+  .logo_container {
+    height: 100%;
+    border-radius: 2.77vw;
+  }
 
-.info_box {
-  margin: 3.47vw;
-}
+  .info_box {
+    margin: 3.47vw;
+  }
 
-.logo_and_menu {
-  height: 2.5vw;
-}
+  .logo_and_menu {
+    height: 2.5vw;
+  }
 
-.link {
-  font-size: 2.08vw;
-}
+  .link {
+    width: 7.77vw;
+    height: 2.5vw;
+    background-size: 7.77vw 2.5vw;
+  }
 
-.slogan_box {
-  max-height: 23.54vw;
-  gap: 1.66vw;
-}
+  .slogan_box {
+    max-height: 23.54vw;
+    gap: 1.66vw;
+  }
 
-.slogan_big {
-  font-size: 4.37vw;
-}
+  .slogan_big {
+    font-size: 4.37vw;
+  }
 
-.slogan_small {
-  font-size: 1.8vw;
-}
+  .slogan_small {
+    font-size: 1.8vw;
+  }
 
-.images_box {
-  height: 41.66vw;
-}
+  .images_box {
+    height: 41.66vw;
+  }
 
-.mail_box {
-  border: 0.27vw solid #005ce5;
-  border-radius: 2.77vw;
-  gap: 1.04vw;
-}
+  .mail_box {
+    border: 0.27vw solid #005ce5;
+    border-radius: 2.77vw;
+    gap: 1.04vw;
+  }
 
-.phone_box {
-  height: 2.36vw;
-  gap: 1.11vw;
-}
+  .phone_box {
+    height: 2.36vw;
+    gap: 1.11vw;
+  }
 
-.phone_text {
-  font-size: 1.66vw;
-}
+  .phone_text {
+    font-size: 1.66vw;
+  }
 
-.image {
-  border-radius: 2.77vw;
-}
+  .image {
+    border-radius: 2.77vw;
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -235,18 +240,16 @@
   }
 
   .link {
-    text-decoration: none;
-    margin: 0;
-    color: #0c0c0c;
-    font-size: 4.8vw;
-    font-weight: 700;
+    width: 29.86vw;
+    height: 9.6vw;
+    background-size: 29.86vw 9.6vw;
   }
 
   .mobile_menu_button {
     margin: 0;
     width: 12vw;
     height: 12vw;
-    background-image: url('../../images/mobile-menu-button.svg');
+    background-image: url("../../images/mobile-menu-button.svg");
     background-size: 12vw 12vw;
     text-decoration: none;
   }

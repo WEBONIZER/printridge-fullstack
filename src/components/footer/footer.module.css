@@ -53,25 +53,47 @@
 
 .site_name_text {
   margin: 0;
-  width: 100%;
+  width: 112px;
   height: 36px;
-  font-size: 30px;
-  font-weight: 500;
-  color: #fff;
+  background-image: url("https://storage.yandexcloud.net/printridge/printridge_logo_white.svg");
+  background-size: 112px 36px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.site_name_text_mobile {
+  display: none;
 }
 
 .user_agreement_text {
   margin: 0;
   width: 100%;
-  height: 18px;
-  font-size: 14px;
+  height: 23px;
+  color: #bdf0e7;
   font-weight: 400;
+  font-size: 14px;
   color: #fff;
   text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
 
 .user_agreement_text:hover {
   color: #005ce5;
+}
+
+.webonizer_logo {
+  margin: 0;
+  width: 112px;
+  height: 22px;
+  background-image: url("https://storage.yandexcloud.net/printridge/webonizer_logo_white.svg");
+  background-size: auto;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .menu_box {
@@ -140,64 +162,72 @@
     height: 22.5vw;
     gap: 1.11vw;
   }
-  
+
   .footer_box {
     border-radius: 2.77vw;
   }
-  
+
   .adress_box {
     margin: 3.47vw;
   }
-  
+
   .adress_container {
     height: 3.33vw;
     gap: 1.66vw;
   }
-  
+
   .location_img {
     width: 1.66vw;
     height: 1.66vw;
   }
-  
+
   .adress_text {
     font-size: 1.25vw;
   }
-  
+
   .site_name_text {
+    width: 7.77vw;
     height: 2.5vw;
-    font-size: 2.08vw;
+    background-size: 7.77vw 2.5vw;
   }
-  
+
   .user_agreement_text {
-    height: 1.25vw;
+    height: 1.59vw;
     font-size: 0.97vw;
+    gap: 0.69vw;
   }
-  
+
+  .webonizer_logo {
+    width: 7.77vw;
+    height: 1.52vw;
+    background-size: 7.77vw 1.52vw;
+  }
+
   .menu_box {
     margin: 3.47vw 3.47vw 3.47vw 0;
   }
-  
+
   .contacts_box {
     margin: 3.47vw;
     gap: 1.66vw;
   }
-  
+
   .contacts {
     margin: 0 0 5.55vw 0;
     height: 1.66vw;
     font-size: 1.25vw;
   }
-  
+
   .phone {
     height: 2.5vw;
     font-size: 2.08vw;
   }
-  
+
   .email {
     height: 2.5vw;
     font-size: 2.08vw;
   }
-  
+
   .social_box {
     margin: 3.47vw 3.47vw 3.47vw 0;
   }
@@ -227,6 +257,18 @@
     display: none;
   }
 
+  .site_name_text_mobile {
+    display: block;
+    margin-left: 6.4vw;
+    width: 29.86vw;
+    height: 9.6vw;
+    background-size: 29.86vw 9.6vw;
+    background-image: url("https://storage.yandexcloud.net/printridge/printridge_logo_white.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
   .adress_box {
     margin: 4.8vw auto;
     width: 87.05%;
@@ -236,7 +278,7 @@
     justify-content: center;
     align-items: flex-start;
   }
-  
+
   .adress_container {
     width: 100%;
     height: 9vw;
@@ -245,13 +287,13 @@
     align-items: flex-start;
     gap: 4.8vw;
   }
-  
+
   .location_img {
     margin: 0;
     width: 4.8vw;
     height: 4.8vw;
   }
-  
+
   .adress_text {
     margin: 0;
     width: 87.36%;
@@ -264,13 +306,17 @@
   .user_agreement_text {
     margin: 0;
     width: 100%;
-    height: 4vw;
-    font-size: 3.2vw;
-    font-weight: 400;
-    color: #fff;
-    text-decoration: none;
+    height: 6.13vw;
+    font-size: 3.73vw;
+    gap: 1.3vw;
   }
-  
+
+  .webonizer_logo {
+    width: 29.86vw;
+    height: 5.86vw;
+    background-size: 29.86vw 5.86vw;
+  }
+
   .menu_box {
     margin: 3.8vw auto 4.8vw auto;
     width: 87.05%;
@@ -280,7 +326,7 @@
     justify-content: flex-start;
     gap: 2.8vw;
   }
-  
+
   .contacts_box {
     margin: 4.8vw auto 0 auto;
     width: 87.05%;
@@ -291,7 +337,7 @@
     align-items: flex-start;
     gap: 2.8vw;
   }
-  
+
   .contacts {
     margin: 0;
     width: 100%;
@@ -300,7 +346,7 @@
     font-weight: 400;
     color: #fff;
   }
-  
+
   .phone {
     margin: 0;
     width: 100%;
@@ -309,7 +355,7 @@
     font-weight: 500;
     color: #fff;
   }
-  
+
   .email {
     margin: 0;
     width: 100%;
@@ -318,7 +364,7 @@
     font-weight: 500;
     color: #fff;
   }
-  
+
   .social_box {
     margin: 4.8vw auto 4.8vw auto;
     width: 87.05%;
