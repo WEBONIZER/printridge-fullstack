@@ -93,7 +93,7 @@ jobs:
 
             echo "${{ secrets.CERT }}" | base64 -d > .local/${{ vars.PROJECT }}.cer
             echo "${{ secrets.KEY }}" | base64 -d > .local/${{ vars.PROJECT }}.key
-
+ 
             sudo tee /home/${{ vars.PROJECT }}/.local/.env <<EOL
             HOST="${{ secrets.HOST }}"
             PASSWORD="${{ secrets.PASSWORD }}"
