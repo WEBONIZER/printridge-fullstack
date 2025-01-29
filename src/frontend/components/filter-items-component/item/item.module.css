@@ -1,0 +1,168 @@
+.price_row {
+  height: 60px;
+  width: 99.69%;
+  background-color: #fff;
+  color: #0c0c0c;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  border-radius: 20px;
+  border: 2px solid #89919d;
+}
+
+.price_row:hover {
+  background-color: #89919d;
+  color: #fff;
+}
+
+.link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.model_cart {
+  margin: auto 0 auto 36px;
+  width: 12.47%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.vendor {
+  margin: auto 0;
+  width: 34.95%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chip {
+  margin: auto 0;
+  width: 11.47%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.refill_price {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.recovery_price {
+  margin: auto 36px auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width: 1440px) {
+  .price_row {
+    height: 4.16vw;
+    gap: 1.04vw;
+    border-radius: 1.38vw;
+    border: 0.13vw solid #89919d;
+  }
+
+  .model_cart {
+    margin: auto 0 auto 2.5vw;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .vendor {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .chip {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .refill_price {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .recovery_price {
+    margin: auto 2.5vw auto 0;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .link {
+    height: 10.2vw;
+  }
+
+  .separator:nth-child(2),
+  .separator:nth-child(4) {
+    display: none;
+  }
+
+  .price_row {
+    width: 98.93%;
+    height: 100%;
+    gap: 3.27%;
+    border-radius: 3.2vw;
+  }
+
+  .model_cart {
+    margin: auto 0 auto 4.8vw;
+    width: 38.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .vendor {
+    display: none;
+  }
+
+  .chip {
+    display: none;
+  }
+
+  .refill_price {
+    width: 18.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .recovery_price {
+    margin: auto 4.8vw auto 0;
+    width: 30.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+}

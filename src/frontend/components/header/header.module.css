@@ -1,0 +1,332 @@
+.container {
+  margin: 24px auto 0;
+  width: 96.66%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.logo_container {
+  width: 74.71%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 40px;
+}
+
+.info_box {
+  margin: 3.47vw;
+  width: 90.19%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo_and_menu {
+  width: 100%;
+  height: 46px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_and_menu_mobile {
+  display: none;
+}
+
+.link {
+  margin: 0;
+  width: 172px;
+  height: 46px;
+  background-image: url("https://storage.yandexcloud.net/printridge/printridge_logo.svg");
+  background-size: 172px 46px;
+  background-position: left center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.phone_social_box {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.slogan_box {
+  width: 100%;
+  max-height: 339px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.slogan_big {
+  margin: 0;
+  color: #005ce5;
+  font-size: 64px;
+  font-weight: 500;
+}
+
+.slogan_small {
+  margin: 0;
+  color: #0c0c0c;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.images_box {
+  width: 24.13%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.mail_box {
+  width: 97.61%;
+  height: 29%;
+  border: 4px solid #005ce5;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.phone_box {
+  width: 79.26%;
+  height: 34px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.phone_box_image {
+  height: 90%;
+}
+
+.phone_text {
+  margin: 0;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.image {
+  width: 100%;
+  height: 67%;
+  border-radius: 40px;
+  background-image: url("../../images/image-printer-blue.svg");
+  background-size: 100% 100%;
+}
+
+@media all and (max-width: 1440px) {
+  .container {
+    margin: 1.11vw auto 0;
+    height: 41.66vw;
+  }
+
+  .logo_container {
+    height: 100%;
+    border-radius: 2.77vw;
+  }
+
+  .info_box {
+    margin: 3.47vw;
+  }
+
+  .logo_and_menu {
+    height: 3.19vw;
+  }
+
+  .link {
+    width: 11.94vw;
+    height: 3.19vw;
+    background-size: 11.94vw 3.19vw;
+  }
+
+  .slogan_box {
+    max-height: 23.54vw;
+    gap: 1.66vw;
+  }
+
+  .slogan_big {
+    font-size: 4.37vw;
+  }
+
+  .slogan_small {
+    font-size: 1.8vw;
+  }
+
+  .images_box {
+    height: 41.66vw;
+  }
+
+  .mail_box {
+    border: 0.27vw solid #005ce5;
+    border-radius: 2.77vw;
+    gap: 1.04vw;
+  }
+
+  .phone_box {
+    height: 2.36vw;
+    gap: 1.11vw;
+  }
+
+  .phone_text {
+    font-size: 1.66vw;
+  }
+
+  .image {
+    border-radius: 2.77vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    margin: 2.8vw auto 0;
+    width: 95.33%;
+    height: 128.8vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8vw;
+  }
+
+  .logo_container {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 6vw;
+  }
+
+  .info_box {
+    margin: 4.8vw;
+    width: 88.05%;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .logo_and_menu {
+    display: none;
+  }
+
+  .logo_and_menu_mobile_button {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo_and_menu_mobile {
+    width: 100%;
+    min-height: 12vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .link {
+    width: 29.86vw;
+    height: 9.6vw;
+    background-size: 29.86vw 9.6vw;
+  }
+
+  .mobile_menu_button {
+    margin: 0;
+    width: 12vw;
+    height: 12vw;
+    background-image: url("../../images/mobile-menu-button.svg");
+    background-size: 12vw 12vw;
+    text-decoration: none;
+  }
+
+  .phone_social_box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .slogan_box {
+    width: 100%;
+    max-height: 42.4vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8vw;
+  }
+
+  .slogan_big {
+    margin: 0;
+    color: #005ce5;
+    font-size: 6.8vw;
+    font-weight: 500;
+  }
+
+  .slogan_small {
+    margin: 0;
+    color: #0c0c0c;
+    font-size: 3.6vw;
+    font-weight: 400;
+  }
+
+  .images_box {
+    width: 100%;
+    height: 26vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .mail_box {
+    width: 100%;
+    height: 26vw;
+    background-color: #005ce5;
+    border-radius: 6vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.8vw;
+  }
+
+  .phone_box {
+    width: 79.26%;
+    height: 6.8vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3.2vw;
+  }
+
+  .phone_box_image {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .phone_text {
+    margin: 0;
+    color: #fff;
+    font-size: 4.8vw;
+    font-weight: 400;
+  }
+
+  .image {
+    display: none;
+  }
+}

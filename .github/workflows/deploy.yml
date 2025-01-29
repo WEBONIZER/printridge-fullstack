@@ -1,0 +1,127 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install curl gnupg lsb-release -y
+
+      - name: Add Docker GPG key and repository
+        run: |
+          curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
+          | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+          echo "deb [arch=$(dpkg --print-architecture) \
+          signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+          https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
+          | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+      - name: Install Docker and Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+          docker-ce docker-ce-cli \
+          containerd.io \
+          docker-compose-plugin
+
+      - name: Install Nginx
+        run: |
+          sudo apt-get install nginx -y
+          sudo systemctl restart nginx
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v0.1.4
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: |
+            sudo rm -rf /home/${{ vars.PROJECT }}
+
+            sudo apt-get update -y 
+            sudo apt-get upgrade -y
+
+            sudo apt-get install docker.io -y
+            sudo apt-get install docker-compose-v2 -y
+            sudo apt-get install nginx -y
+
+            sudo docker stop container
+            sudo docker rm container
+            sudo docker rmi -f image
+            sudo docker system prune -a -f
+
+            git clone https://\
+            ${{ secrets.GH_USER }}:\
+            ${{ secrets.GH_TOKEN }}@github.com/\
+            ${{ secrets.GH_USER }}/\
+            ${{ vars.PROJECT }}.git /home/\
+            ${{ vars.PROJECT }}
+
+            cd /home/${{ vars.PROJECT }} 
+
+            sudo tee /home/${{ vars.PROJECT }}/nginx.conf <<EOL
+            server {
+                listen 80;
+                server_name ${{ secrets.DOMAIN }};
+                location / {
+                    proxy_pass http://127.0.0.1:${{ secrets.HTTP }}/;
+                }
+            }
+
+            server {
+                listen 443 ssl;
+                server_name ${{ secrets.DOMAIN }};
+                ssl_certificate /home/${{ vars.PROJECT }}/.local/${{ vars.PROJECT }}.cer;
+                ssl_certificate_key /home/${{ vars.PROJECT }}/.local/${{ vars.PROJECT }}.key;
+                location / {
+                    proxy_pass http://127.0.0.1:${{ secrets.HTTP }}/;
+                }
+            }
+            EOL
+
+            sudo mkdir -p .local
+
+            echo "${{ secrets.CERT }}" | base64 -d > .local/${{ vars.PROJECT }}.cer
+            echo "${{ secrets.KEY }}" | base64 -d > .local/${{ vars.PROJECT }}.key
+
+            sudo tee /home/${{ vars.PROJECT }}/.local/.env <<EOL
+            HOST="${{ secrets.HOST }}"
+            PASSWORD="${{ secrets.PASSWORD }}"
+            USERNAME="${{ secrets.USERNAME }}"
+
+            PROJECT="${{ vars.PROJECT }}"
+
+            GH_USER="${{ secrets.GH_USER }}"
+            GH_TOKEN="${{ secrets.GH_TOKEN }}"
+            
+            DOMAIN="${{ secrets.DOMAIN }}"
+          
+            LOGIN="${{ secrets.LOGIN }}"
+            BEGET_API_PASSWORD="${{ secrets.BEGET_API_PASSWORD }}"
+
+            HTTP="${{ secrets.HTTP }}"
+
+            CERT="${{ secrets.CERT }}"
+            KEY="${{ secrets.KEY }}"
+            EOL
+
+            sudo sed -i "s\
+            |include /etc/nginx/sites-enabled/\*;\
+            |include /home/${{ vars.PROJECT }}/nginx.conf;\
+            |" /etc/nginx/nginx.conf
+
+            sudo docker compose --env-file .local/.env up -d
+
+            sudo systemctl restart nginx
+
+            sudo reboot

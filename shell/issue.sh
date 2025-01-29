@@ -1,0 +1,1 @@
+bun run src/utils/issue.ts --domain printridge.ru --certs letsencrypt

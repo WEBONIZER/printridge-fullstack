@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    margin: 0;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+} 
+
+@media all and (max-width: 768px) {
+    .container {
+        width: 100%;
+        gap: 5px;
+    }
+    .menu {
+        width: 45%;
+    } 
+    .feedbackbutton {
+        display: none;
+    }
+}

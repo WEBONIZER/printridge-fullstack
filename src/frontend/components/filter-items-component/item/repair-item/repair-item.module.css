@@ -1,0 +1,185 @@
+.price_row {
+  width: 99.69%;
+  height: 60px;
+  background-color: #fff;
+  color: #0c0c0c;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  border-radius: 20px;
+  border: 2px solid #89919d;
+}
+
+.price_row:hover {
+  background-color: #89919d;
+  color: #fff;
+}
+
+.link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.model {
+  margin: auto 0 auto 36px;
+  width: 15.47%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.type {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.device {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.format {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.speed {
+  margin: auto 0;
+  width: 11.6%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.capacity {
+  margin: auto 36px auto 0;
+  width: 20.12%;
+  height: 24px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+@media all and (max-width: 1440px) {
+  .price_row {
+    height: 4.16vw;
+    gap: 1.11vw;
+    border-radius: 1.38vw;
+    border: 0.13vw solid #89919d;
+  }
+
+  .model {
+    margin: auto 0 auto 2.5vw;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .type {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .device {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .format {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .speed {
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+
+  .capacity {
+    margin: auto 2.5vw auto 0;
+    height: 1.66vw;
+    font-size: 1.25vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .separator:nth-child(6),
+  .separator:nth-child(8),
+  .separator:nth-child(10) {
+    display: none;
+  }
+
+  .price_row {
+    height: 12vw;
+    gap: 2.8vw;
+    border-radius: 3.2vw;
+  }
+
+  .model {
+    margin: auto 0 auto 4.8vw;
+    width: 34.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .type {
+    width: 26.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .device {
+    display: none;
+  }
+
+  .format {
+    margin: auto 4.8vw auto 0;
+    width: 18.39%;
+    height: 3.6vw;
+    font-size: 2.8vw;
+  }
+
+  .speed {
+    display: none;
+  }
+
+  .capacity {
+    display: none;
+  }
+}

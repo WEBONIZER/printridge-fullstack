@@ -1,18 +1,23 @@
 services:
   web:
-    build: .
-    image: frontend_image
-    container_name: frontend_container
-    restart: always
+    build:
+      context: .
+      dockerfile: dockerfile
+
+    container_name: container
+    image: image
+
     stdin_open: true
     tty: true
+    restart: always
+
     deploy:
       replicas: 1
       resources:
         limits:
-          cpus: "2"
-          memory: "2G"
-    volumes:
-      - "../env:/home/env"
+          cpus: "1"
+          memory: "1G"
+
     ports:
       - "3000:3000"
+    network_mode: bridge

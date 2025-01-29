@@ -1,0 +1,129 @@
+.container {
+  margin: 16px 0;
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #89919d;
+  border-radius: 40px;
+  background-color: #fff;
+}
+
+.image {
+  margin: auto 0 auto 26px;
+  width: 120px;
+  height: 80%;
+  border-radius: 20px;
+}
+
+.info_box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  color: #0c0c0c;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.price {
+  margin: 0;
+  color: #0c0c0c;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.button {
+  width: 20%;
+  height: 64px;
+  margin: auto 26px auto 0;
+  text-decoration: none;
+  background-color: #005ce5;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@media all and (max-width: 1440px) {
+  .container {
+    margin: 1.11vw auto;
+    height: 8.33vw;
+    border: 0.13vw solid #89919d;
+    border-radius: 2.77vw;
+  }
+
+  .image {
+    margin: auto 0 auto 1.8vw;
+    width: 8.33vw;
+    border-radius: 13.8vw;
+  }
+
+  .info_box {
+    gap: 0.83vw;
+  }
+
+  .title {
+    font-size: 1.8vw;
+  }
+
+  .price {
+    font-size: 1.25vw;
+  }
+
+  .button {
+    height: 4.44vw;
+    margin: auto 1.8vw auto 0;
+    border-radius: 13.8vw;
+    font-size: 1.25vw;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    padding: 2.8vw 0;
+    margin: 2.8vw auto;
+    border-radius: 6vw;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .info_box {
+    margin: 0 auto 1.11vw;
+    width: 88.62%;
+    gap: 0.83vw;
+  }
+
+  .title {
+    font-size: 4.8vw;
+  }
+
+  .price {
+    font-size: 2.8vw;
+  }
+
+  .button {
+    width: 88.62%;
+    height: 6.44vw;
+    margin: auto 1.11vw auto 0;
+    border-radius: 6vw;
+    font-size: 3vw;
+  }
+}
