@@ -93,7 +93,7 @@ jobs:
 
             echo "${{ secrets.CERT }}" | base64 -d > .local/${{ vars.PROJECT }}.cer
             echo "${{ secrets.KEY }}" | base64 -d > .local/${{ vars.PROJECT }}.key
- 
+
             sudo tee /home/${{ vars.PROJECT }}/.local/.env <<EOL
             HOST="${{ secrets.HOST }}"
             PASSWORD="${{ secrets.PASSWORD }}"
@@ -103,9 +103,9 @@ jobs:
 
             GH_USER="${{ secrets.GH_USER }}"
             GH_TOKEN="${{ secrets.GH_TOKEN }}"
-            
+
             DOMAIN="${{ secrets.DOMAIN }}"
-          
+
             LOGIN="${{ secrets.LOGIN }}"
             BEGET_API_PASSWORD="${{ secrets.BEGET_API_PASSWORD }}"
 
