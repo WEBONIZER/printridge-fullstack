@@ -12,7 +12,7 @@ import { networkInterfaces } from "os";
 
 (async function (): Promise<void> {
   try {
-    const { HTTP } = config({ path: ".local/.env" }).parsed!;
+    const { HTTP } = config({ path: ".env" }).parsed!;
 
     const app = (await import("express")).default();
 
@@ -101,18 +101,11 @@ import { networkInterfaces } from "os";
     app.get("*", render404Page);
 
     app.listen(HTTP, () => {
-      const host = (
-        protocol: "http" | "https" | "ws" | "wss",
-        port: number
-      ) => {
-        const address = Object.values(networkInterfaces())
-          .flat()
-          .find((e) => e?.family === "IPv4" && !e?.internal)?.address;
+      const address = Object.values(networkInterfaces())
+        .flat()
+        .find((e: any) => e?.family === "IPv4" && !e?.internal)?.address!;
 
-        return [`${protocol}://${address}:${port}`];
-      };
-
-      console.log(host("http", +HTTP));
+      console.log([`http://${address}:${HTTP}`]);
     });
   } catch (error) {
     throw new Error(String(error));

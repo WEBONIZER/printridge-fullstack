@@ -87,14 +87,14 @@
   "name": "printridge",
   "private": false,
   "scripts": {
-    "append": "bash shell/append.sh",
-    "csr": "bash shell/start.sh",
-    "issue": "bash shell/issue.sh",
-    "prune": "bash shell/prune.sh",
-    "renew": "bash shell/renew.sh",
-    "secrets": "bash shell/secrets.sh",
+    "append": "bash cmd/append.sh",
+    "csr": "bash cmd/start.sh",
+    "issue": "bash cmd/issue.sh",
+    "prune": "bash cmd/prune.sh",
+    "renew": "bash cmd/renew.sh",
+    "secrets": "bash cmd/secrets.sh",
     "ssr": "nodemon",
-    "up": "bash shell/up.sh"
+    "up": "bash cmd/up.sh"
   },
   "type": "module",
   "version": "0.1.0"

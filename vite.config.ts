@@ -8,7 +8,7 @@ const options = {
 export default defineConfig({
   plugins: [(await import("@vitejs/plugin-react")).default()],
   define: {
-    "process.env": config({ path: ".local/.env" }).parsed!,
+    "process.env": config({ path: ".env" }).parsed!,
   },
   preview: options,
   server: options,

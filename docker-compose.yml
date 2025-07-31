@@ -1,23 +1,21 @@
+networks:
+  default:
+    driver: bridge
 services:
-  web:
+  application_service:
     build:
       context: .
-      dockerfile: dockerfile
-
-    container_name: container
-    image: image
-
-    stdin_open: true
-    tty: true
-    restart: always
-
+      dockerfile: bun.bookworm-slim.dockerfile
     deploy:
       replicas: 1
       resources:
         limits:
           cpus: "1"
           memory: "1G"
-
     ports:
       - "3000:3000"
-    network_mode: bridge
+    stdin_open: true
+    tty: true
+    restart: always
+    image: application_image
+    container_name: application_container

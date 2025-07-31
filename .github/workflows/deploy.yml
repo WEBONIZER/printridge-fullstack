@@ -2,93 +2,24 @@ name: Deploy to Hosting
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-      - name: Install dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y curl gnupg lsb-release
-      - name: Add Docker GPG key and repository
-        run: |
-          curl -fsSL https://download.docker.com/linux/ubuntu/gpg \
-          | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-          echo "deb [arch=$(dpkg --print-architecture) \
-          signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
-          https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" \
-          | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-      - name: Install Docker and Docker Compose
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-          docker-ce docker-ce-cli \
-          containerd.io \
-          docker-compose-plugin
       - name: Deploy to Hosting
-        uses: appleboy/ssh-action@v1.2.1
+        uses: appleboy/ssh-action@master
+        env:
+          WORKDIR: "/home/${{secrets.PROJECT}}"
+          GIT: "https://${{secrets.GH_USER}}:${{secrets.GH_TOKEN}}@github.com/${{secrets.GH_USER}}/${{secrets.PROJECT}}.git"
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          host: ${{secrets.HOST}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
           script: |
-            set -ex
-            export GPG_TTY=$(tty)
-            sudo pkill -9 caddy || true
-            sudo fuser -k 80/tcp || true
-            sudo fuser -k 443/tcp || true
-            sudo apt-get -o Dpkg::Options::="--force-confnew" full-upgrade -y
-            sudo apt install -y debian-keyring debian-archive-keyring apt-transport-https
-            curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' \
-            | sudo gpg --batch --yes --dearmor \
-            -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-            sudo mkdir -p /usr/share/keyrings
-            curl -L 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' \
-            | sudo gpg --batch --yes --dearmor \
-            -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
-            curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' \
-            | sudo tee /etc/apt/sources.list.d/caddy-stable.list
-            sudo apt-get update
-            sudo apt-get install -y caddy
-            sudo apt autoremove -y
-            sudo rm -rf /home/${{ secrets.PROJECT }}
-            sudo docker stop $(docker ps -aq) || true
-            sudo docker rm $(docker ps -aq) || true
-            sudo docker rmi -f $(docker images -q) || true
-            sudo docker volume rm $(docker volume ls -q) || true
-            sudo docker system prune -a -f
-            sudo mkdir -p /home/${{ secrets.PROJECT }}
-            git clone https://\
-            ${{ secrets.GH_USER }}:\
-            ${{ secrets.GH_TOKEN }}@github.com/\
-            ${{ secrets.GH_USER }}/\
-            ${{ secrets.PROJECT }}.git /home/\
-            ${{ secrets.PROJECT }}
-            cd "/home/${{ secrets.PROJECT }}"
-            sudo tee /etc/caddy/Caddyfile << EOL
-            {
-                email ${{ secrets.ADMIN_EMAIL }}
-                acme_ca https://acme-v02.api.letsencrypt.org/directory
-                renew_interval 24h
-            }
-            ${{ secrets.DOMAIN }} {
-                encode gzip
-                reverse_proxy 127.0.0.1:${{ secrets.HTTP }}
-                tls {
-                    protocols tls1.3
-                    ciphers TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
-                }
-            }
-            EOL
-            sudo caddy fmt --overwrite /etc/caddy/Caddyfile
-            sudo caddy validate --config /etc/caddy/Caddyfile
-            sudo chown -R caddy:caddy /etc/caddy
-            sudo systemctl daemon-reload
-            sudo systemctl restart caddy || (journalctl -u caddy --no-pager && exit 1)
-            sudo mkdir -p /home/${{ secrets.PROJECT }}/.local
-            echo "${{ secrets.ENV }}" | base64 -d > /home/${{ secrets.PROJECT }}/.local/.env
-            cd /home/${{ secrets.PROJECT }}
-            sudo docker compose --env-file .local/.env up -d
+            sudo rm -rf ${{env.WORKDIR}}
+            sudo mkdir -p ${{env.WORKDIR}}
+            cd ${{env.WORKDIR}}
+            git clone ${{env.GIT}} "."
+            echo "${{secrets.ENV}}" | base64 -d > ".env"
+            bash "cmd/hosting.sh"

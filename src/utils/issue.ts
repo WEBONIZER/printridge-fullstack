@@ -8,7 +8,7 @@ import { stringify } from "querystring";
       process.argv.slice(2)
     );
 
-    const { LOGIN, BEGET_API_PASSWORD } = config({ path: ".local/.env" })
+    const { LOGIN, BEGET_API_PASSWORD } = config({ path: ".env" })
       .parsed!;
 
     exec(

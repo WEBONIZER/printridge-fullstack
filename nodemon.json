@@ -1,5 +1,5 @@
 {
-  "exec": "bash shell/ssr.sh",
+  "exec": "bash cmd/ssr.sh",
   "ext": "*",
-  "watch": ["ssr"]
+  "watch": ["src"]
 }
