@@ -13,7 +13,7 @@ import SitemapGenerator from "../sitemap-generator/sitemap-generator";
 import RepairLaptopsComponent from "../repair-laptops-component/repair-laptops-component";
 import RepairLaptopsItemComponent from "../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component";
 import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
-import { FirstVisitModal } from '../midal-components/first-visit-modal/first-visit-modal'
+import { FirstVisitModal } from '../modal-components/first-visit-modal/first-visit-modal'
 import { Modal } from "../modal/modal";
 import { modalSlice } from "../../services/slices/modal";
 import { useDispatch_, useSelector_ } from "../../services/reducers/root-reducer";
