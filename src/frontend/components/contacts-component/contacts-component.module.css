@@ -42,7 +42,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/location_on.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/location_on.svg");
   background-size: 30px 30px;
   object-fit: cover;
   object-position: center;
@@ -52,7 +52,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/call-blue.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/call-blue.svg");
   background-size: 30px 30px;
   object-fit: cover;
   object-position: center;
@@ -62,7 +62,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/language-blue.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/language-blue.svg");
   background-size: 30px 30px;
   object-fit: cover;
   object-position: center;
@@ -72,7 +72,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/icon-vk.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-vk.svg");
   background-size: 30px 30px;
   object-fit: cover;
   object-position: center;
@@ -82,7 +82,7 @@
   margin: 0;
   width: 30px;
   height: 30px;
-  background-image: url("../../images/icon-telegram.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-telegram.svg");
   background-size: 30px 30px;
   object-fit: cover;
   object-position: center;
@@ -204,35 +204,35 @@
     width: 4.8vw;
     height: 4.8vw;
     background-size: 4.8vw 4.8vw;
-    background-image: url("../../images/location_on_white.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/location_on_white.svg");
   }
 
   .info_row_img_call {
     width: 4.8vw;
     height: 4.8vw;
     background-size: 4.8vw 4.8vw;
-    background-image: url("../../images/call_white.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/call_white.svg");
   }
 
   .info_row_img_earth {
     width: 4.8vw;
     height: 4.8vw;
     background-size: 4.8vw 4.8vw;
-    background-image: url("../../images/language_white.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/language_white.svg");
   }
 
   .info_row_img_vk {
     width: 4.8vw;
     height: 4.8vw;
     background-size: 4.8vw 4.8vw;
-    background-image: url("../../images/icon-vk_white.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-vk_white.svg");
   }
 
   .info_row_img_telegram {
     width: 4.8vw;
     height: 4.8vw;
     background-size: 4.8vw 4.8vw;
-    background-image: url("../../images/icon-telegram_white.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-telegram_white.svg");
   }
 
   .map_box {

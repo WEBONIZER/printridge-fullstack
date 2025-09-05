@@ -11,28 +11,28 @@
   width: 4.16vw;
   height: 4.16vw;
   text-decoration: none;
-  background-image: url("../../images/icon-vk.svg");
+  background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-vk.svg");
   background-size: 4.16vw 4.16vw;
   object-fit: cover;
   object-position: center;
 }
 
 .icon_vk:hover {
-    background-image: url("../../images/icon-vk-hover.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-vk-hover.svg");
 }
 
 .icon_telegram {
     width: 4.16vw;
     height: 4.16vw;
     text-decoration: none;
-    background-image: url("../../images/icon-telegram.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-telegram.svg");
     background-size: 4.16vw 4.16vw;
     object-fit: cover;
     object-position: center;
 }
 
 .icon_telegram:hover {
-    background-image: url("../../images/icon-telegram-hover.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-telegram-hover.svg");
 }
 
 @media all and (max-width: 768px) {
@@ -49,7 +49,7 @@
     width: 12vw;
     height: 12vw;
     text-decoration: none;
-    background-image: url("../../images/icon-vk.svg");
+    background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-vk.svg");
     background-size: 12vw 12vw;
     object-fit: cover;
     object-position: center;
@@ -59,7 +59,7 @@
       width: 12vw;
       height: 12vw;
       text-decoration: none;
-      background-image: url("../../images/icon-telegram.svg");
+      background-image: url("https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/icon-telegram.svg");
       background-size: 12vw 12vw;
       object-fit: cover;
       object-position: center;

@@ -1,6 +1,4 @@
 import styles from './social-icons.module.css'
-import imageVk from '../../images/social/icons8-vk-circled.svg';
-import imageTelegram from '../../images/social/icons8-telegram-app.svg';
 import { Link } from 'react-router-dom';
 
 const SocialIcons = () => {
