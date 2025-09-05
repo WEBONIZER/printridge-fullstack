@@ -31,13 +31,13 @@ export const App: React.FC = () => {
     if (!localStorage.getItem('printridgeFirstVisit')) {
       dispatch(modalSlice.actions.firstVisitModalState(true));
     }
-  }, [])
+  }, [firstVisitModal])
 
   return (
     <>
       {
         firstVisitModal &&
-        <Modal action={modalSlice.actions.feedbackButtonState}>
+        <Modal action={modalSlice.actions.firstVisitModalState}>
           <FirstVisitModal />
         </Modal>
       }
