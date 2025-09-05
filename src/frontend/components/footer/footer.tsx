@@ -1,17 +1,20 @@
 import styles from './footer.module.css'
-import locationImg from '../../images/location_on.svg'
-import MainMenu from '../main-menu/main-menu'
+import { MainMenu } from '../main-menu/main-menu'
 import { Link } from 'react-router-dom';
 import SocialIcons from '../social-icons/social-icons'
 
-function FooterComponent() {
+export const FooterComponent = () => {
 
     return (
         <section className={styles.footer}>
             <div className={styles.footer_box}>
                 <div className={styles.adress_box}>
                     <div className={styles.adress_container}>
-                        <img className={styles.location_img} src={locationImg} alt="location" />
+                        <img
+                            className={styles.location_img}
+                            src='https://s3.ru1.storage.beget.cloud/3aaacc647142-brontosaur/printridge/location_on.svg'
+                            alt="location"
+                        />
                         <Link
                             className={styles.adress_text}
                             to={`yandexnavi://search?text='Санкт-Петербург, Тамбовская улица, 32, оф. 508, 5-й этаж'`}
@@ -26,7 +29,7 @@ function FooterComponent() {
                     <MainMenu position={'footer'} />
                     <Link
                         className={styles.user_agreement_text}
-                        to='https://webonizer.site/'
+                        to='https://webonizer.su/'
                         target="_blank"
                         rel="noopener noreferrer"
                     >
@@ -58,5 +61,3 @@ function FooterComponent() {
         </section>
     );
 }
-
-export default FooterComponent;

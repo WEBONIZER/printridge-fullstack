@@ -1,7 +1,7 @@
 import styles from './feedback-form.module.css'
 import { useLocation } from 'react-router-dom'
 
-const FeedbackForm = () => {
+export const FeedbackForm = () => {
 
     const location = useLocation();
     const link = location.state.background.pathname
@@ -23,5 +23,3 @@ const FeedbackForm = () => {
         </div>
     )
 }
-
-export default FeedbackForm

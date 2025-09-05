@@ -1,27 +1,32 @@
 {
-    "compilerOptions": {
-      "target": "ES2022",
-      "lib": [
-        "dom",
-        "dom.iterable",
-        "esnext"
-      ],
-      "allowJs": true,
-      "skipLibCheck": true,
-      "esModuleInterop": true,
-      "allowSyntheticDefaultImports": true,
-      "strict": true,
-      "forceConsistentCasingInFileNames": true,
-      "noFallthroughCasesInSwitch": true,
-      "module": "esnext",
-      "moduleResolution": "node",
-      "resolveJsonModule": true,
-      "isolatedModules": true,
-      "noEmit": true,
-      "jsx": "react-jsx"
+  "compilerOptions": {
+    "target": "ES2022",
+    "paths": {
+      "COMPONENTS/*": ["./src/frontend/components/*"],
+      "PAGES/*": ["./src/frontend/pages/*"],
+      "STATE/*": ["./src/frontend/services/*"],
+      "UTILS/*": ["./src/frontend/utils/*"]
     },
-    "include": [
-      "./src",
-      "src/frontend/declarations"
-, "generate-sitemap.cjs"    ]
-  } 
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
+  },
+  "include": [
+    "./src/**/*", // Включает все файлы в src и подпапках
+    "src/frontend/declarations",
+    "generate-sitemap.cjs",
+    "**/*.ts",    // Все .ts файлы
+    "**/*.tsx"    // Все .tsx файлы
+  ]
+}

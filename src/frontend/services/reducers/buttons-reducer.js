@@ -5,7 +5,6 @@ import {
   } from "../actions/buttons";
 
 const initialState = {
-    mobileMenuButton: false,
     photoButton: 'photo',
     videoButton: '',
 }
@@ -13,11 +12,6 @@ const initialState = {
 export const buttonsReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case MENU_MOBILE_BUTTON: {
-            return {
-                mobileMenuButton: action.mobileMenuButton
-            };
-        }
         case PHOTO_BUTTON: {
             return {
               ...state,

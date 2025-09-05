@@ -1,10 +1,10 @@
-import HeaderComponent from '../../components/header/header'
-import FooterComponent from "../../components/footer/footer";
-import FeedbackButtonComponent from '../../components/feedback-button-component/feedback-button-component'
+import { HeaderComponent } from '../../components/header/header'
+import { FooterComponent } from "../../components/footer/footer";
+import { FeedbackButtonComponent } from '../../components/feedback-button-component/feedback-button-component'
 import styles from './layout.module.css'
 import { Outlet } from 'react-router-dom'
 
-const Layout = () => {
+export const Layout = () => {
     return (
         <div className={styles.app}>
             <HeaderComponent />
@@ -16,5 +16,3 @@ const Layout = () => {
         </div>
     )
 }
-
-export default Layout
