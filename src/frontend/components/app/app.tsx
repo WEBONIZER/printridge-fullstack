@@ -1,5 +1,5 @@
 import "./app.module.css";
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Layout } from "../../pages/layout/layout";
 import Main from "../../pages/main/main";
@@ -13,14 +13,34 @@ import SitemapGenerator from "../sitemap-generator/sitemap-generator";
 import RepairLaptopsComponent from "../repair-laptops-component/repair-laptops-component";
 import RepairLaptopsItemComponent from "../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component";
 import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
+import { FirstVisitModal } from '../midal-components/first-visit-modal/first-visit-modal'
+import { Modal } from "../modal/modal";
+import { modalSlice } from "../../services/slices/modal";
+import { useDispatch_, useSelector_ } from "../../services/reducers/root-reducer";
 
 export const App: React.FC = () => {
-  
+
+  const dispatch = useDispatch_();
+
+  const { firstVisitModal } = useSelector_((state: any) => state.modalSlice);
+
   const location = useLocation();
   const background = location.state && location.state.background;
 
+  useEffect(() => {
+    if (!localStorage.getItem('printridgeFirstVisit')) {
+      dispatch(modalSlice.actions.firstVisitModalState(true));
+    }
+  }, [])
+
   return (
     <>
+      {
+        firstVisitModal &&
+        <Modal action={modalSlice.actions.feedbackButtonState}>
+          <FirstVisitModal />
+        </Modal>
+      }
       <ScrollToTop />
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>

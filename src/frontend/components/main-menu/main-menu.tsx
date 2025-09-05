@@ -11,7 +11,7 @@ export const MainMenu = ({ position }: any) => {
     const handleClick = () => {
         dispatch(modalSlice.actions.mobileMenuButtonState(false));
     }
-    console.log(mobileMenuButton)
+    //console.log(mobileMenuButton)
     return (
         <nav className={position === 'header' && styles.main_menu_horisontal || (position === 'footer' && mobileMenuButton ? styles.main_menu_center_align : styles.main_menu_vertical)}>
             <Link
