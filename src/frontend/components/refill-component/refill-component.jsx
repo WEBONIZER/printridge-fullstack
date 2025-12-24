@@ -15,7 +15,9 @@ function RefillComponent() {
 
     const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
 
-    return (filterCategory.length > 0 &&
+    if (filterCategory.length === 0) return null;
+
+    return (
         <>
             <Helmet>
                 <title>{`Заправка картриджей ${vendor.toUpperCase()}`}</title>
@@ -32,14 +34,10 @@ function RefillComponent() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`Заправка картриджей ${vendor.toUpperCase()}`} />
                 <meta property="og:description" content={`Стоимость заправки картриджей ${vendor.toUpperCase()}`} />
-                <meta property="og:image" content={<img
-                    className={styles.image}
-                    src={img}
-                    alt={`Заправка картриджей ${vendor}`}
-                />} />
+                <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
-            < div className={styles.container}>
+            <div className={styles.container}>
                 <div className={styles.title_box}>
                     <p className={styles.description}>Выберите производителя и модель картриджа</p>
                 </div>

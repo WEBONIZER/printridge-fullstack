@@ -1,5 +1,4 @@
 import styles from './refill-item-component.module.css'
-import { Navigate } from 'react-router-dom';
 import { useParams } from "react-router-dom";
 import { refillData } from '../../../utils/refill';
 import Tabs from '../../tabs/tabs';
@@ -64,7 +63,9 @@ function RefillItemComponent() {
         }
     }
     //console.log(schemaData)
-    return (data &&
+    if (!data) return null;
+
+    return (
         <>
             <Helmet>
                 <script type="application/ld+json">

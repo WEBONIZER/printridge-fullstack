@@ -12,7 +12,11 @@ import { networkInterfaces } from "os";
 
 (async function (): Promise<void> {
   try {
-    const { HTTP } = config({ path: ".env" }).parsed!;
+    const parsed = config({ path: ".env" }).parsed;
+    if (!parsed || !parsed.HTTP) {
+      throw new Error("HTTP port not found in .env file");
+    }
+    const HTTP = parseInt(parsed.HTTP, 10);
 
     const app = (await import("express")).default();
 
@@ -52,7 +56,7 @@ import { networkInterfaces } from "os";
       res
         .status(404)
         .set({ "Content-Type": "text/html" })
-        .end(readFileSync("dist/client/404.html", "utf8"));
+        .end(readFileSync(resolve("dist/client/404.html"), "utf8"));
     };
 
     app.use((req: Request, res: Response, next: () => void) => {
@@ -103,9 +107,11 @@ import { networkInterfaces } from "os";
     app.listen(HTTP, () => {
       const address = Object.values(networkInterfaces())
         .flat()
-        .find((e: any) => e?.family === "IPv4" && !e?.internal)?.address!;
+        .find((e) => e?.family === "IPv4" && !e?.internal)?.address;
 
-      console.log([`http://${address}:${HTTP}`]);
+      if (address) {
+        console.log([`http://${address}:${HTTP}`]);
+      }
     });
   } catch (error) {
     throw new Error(String(error));

@@ -12,7 +12,9 @@ function RepairItemComponent() {
     const { model } = useParams()
     const data = repair.find((i) => i.model.replace(/\s/g, '') === model)
 
-    return (data &&
+    if (!data) return null;
+
+    return (
         <div>
             <div className={styles.container}>
                 <h1 className={styles.header}>Ремонт {`${data.vendor.toUpperCase()} ${data.model}`}</h1>

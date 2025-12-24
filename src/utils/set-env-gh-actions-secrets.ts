@@ -1,3 +1,5 @@
+export {};
+
 (async function (): Promise<void> {
   try {
     const { env } = (await import("minimist")).default(process.argv.slice(2));
