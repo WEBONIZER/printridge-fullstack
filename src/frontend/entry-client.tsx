@@ -7,8 +7,12 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./components/app/app";
 import { rootStore } from "./services/reducers";
+import { fetchCurrentUser } from "./services/slices/auth";
 
 if (typeof window !== "undefined") {
+  // Проверяем авторизацию при загрузке приложения
+  rootStore.dispatch(fetchCurrentUser());
+
   hydrateRoot(
     document.getElementById("root")!,
     <StrictMode>

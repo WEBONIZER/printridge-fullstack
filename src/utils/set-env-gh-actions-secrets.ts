@@ -1,5 +1,3 @@
-export {};
-
 (async function (): Promise<void> {
   try {
     const { env } = (await import("minimist")).default(process.argv.slice(2));
@@ -39,7 +37,7 @@ export {};
       return {
         encrypted_value: to_base64(
           crypto_box_seal(from_string(secretValue), from_base64(key, ORIGINAL)),
-          ORIGINAL
+          ORIGINAL,
         ),
         key_id,
       };
@@ -70,8 +68,15 @@ export {};
     };
 
     for (const [name, value] of Object.entries(parsed!)) {
-      await addSecret(name, value!);
+      await addSecret(name, value);
     }
+
+    await addSecret(
+      "ENV",
+      Buffer.from((await import("fs")).readFileSync(env, "utf-8")).toString(
+        "base64",
+      ),
+    );
   } catch (error) {
     throw new Error(String(error));
   }

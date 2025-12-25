@@ -1,0 +1,17 @@
+import { Router } from "express";
+import {
+  createExample,
+  getExampleByID,
+  updateExample,
+  deleteExample,
+  getPaginatedExamples
+} from "../controllers/examples-controllers";
+import { jwtMiddleware } from "../middlewares/jwt-middleware";
+
+export const examples = Router()
+  .get("/paginated", jwtMiddleware, getPaginatedExamples)
+  .post("/", jwtMiddleware, createExample)
+  .get("/:exampleId", jwtMiddleware, getExampleByID)
+  .put("/:exampleId", jwtMiddleware, updateExample)
+  .delete("/:exampleId", jwtMiddleware, deleteExample);
+

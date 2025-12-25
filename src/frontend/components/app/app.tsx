@@ -17,6 +17,8 @@ import { FirstVisitModal } from '../modal-components/first-visit-modal/first-vis
 import { Modal } from "../modal/modal";
 import { modalSlice } from "../../services/slices/modal";
 import { useDispatch_, useSelector_ } from "../../services/reducers/root-reducer";
+import { Login } from "../../pages/login/login";
+import { Profile } from "../../pages/profile/profile";
 
 export const App: React.FC = () => {
 
@@ -28,10 +30,11 @@ export const App: React.FC = () => {
   const background = location.state && location.state.background;
 
   useEffect(() => {
-    if (!localStorage.getItem('printridgeFirstVisit')) {
+    // Проверяем только на клиенте, чтобы избежать проблем с SSR hydration
+    if (typeof window !== 'undefined' && !localStorage.getItem('printridgeFirstVisit')) {
       dispatch(modalSlice.actions.firstVisitModalState(true));
     }
-  }, [firstVisitModal])
+  }, [dispatch])
 
   return (
     <>
@@ -55,6 +58,8 @@ export const App: React.FC = () => {
           <Route path="/contacts" element={<ContactsComponent />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
+        <Route path="/login" element={<Login />} />
+        <Route path="/profile/*" element={<Profile />} />
       </Routes>
     </>
   );
