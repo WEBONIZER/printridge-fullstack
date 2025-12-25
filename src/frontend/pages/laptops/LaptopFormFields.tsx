@@ -54,19 +54,19 @@ export const LaptopFormFields: React.FC<LaptopFormFieldsProps> = ({
         />
       </div>
       <div className={styles.formGroup}>
-        <label>Диагональ {formData.display && !onImageChange ? "(дюймы)" : ""}</label>
+        <label>Диагональ (дюймы)</label>
         <input
-          type={formData.display && !onImageChange ? "number" : "number"}
-          step={formData.display && !onImageChange ? "0.1" : undefined}
+          type="number"
+          step="0.1"
           value={formData.display}
           onChange={(e) => onFormDataChange({ display: e.target.value })}
         />
       </div>
       <div className={styles.formGroup}>
-        <label>Частота процессора {formData.processor && !onImageChange ? "(ГГц)" : ""}</label>
+        <label>Частота процессора (ГГц)</label>
         <input
-          type={formData.processor && !onImageChange ? "number" : "number"}
-          step={formData.processor && !onImageChange ? "0.1" : undefined}
+          type="number"
+          step="0.1"
           value={formData.processor}
           onChange={(e) => onFormDataChange({ processor: e.target.value })}
         />
