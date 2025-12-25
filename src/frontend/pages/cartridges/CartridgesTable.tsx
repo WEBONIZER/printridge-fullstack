@@ -1,0 +1,69 @@
+import React from "react";
+import { Cartridge, Printer } from "../../utils/api";
+import styles from "./cartridges.module.css";
+
+interface CartridgesTableProps {
+  cartridges: Cartridge[];
+  linkedPrintersMap: Map<string, Printer[]>;
+  hasImage: (cartridge: Cartridge) => boolean;
+  onCartridgeClick: (cartridge: Cartridge) => void;
+}
+
+export const CartridgesTable: React.FC<CartridgesTableProps> = ({
+  cartridges,
+  linkedPrintersMap,
+  hasImage,
+  onCartridgeClick,
+}) => {
+  return (
+    <div className={styles.tableContainer}>
+      <table className={styles.table}>
+        <thead>
+          <tr>
+            <th>Картинка</th>
+            <th>Модель</th>
+            <th>Производитель</th>
+            <th>Устройства</th>
+            <th>Цена заправки</th>
+            <th>Цена восстановления</th>
+            <th>Ресурс</th>
+            <th>Чип</th>
+          </tr>
+        </thead>
+        <tbody>
+          {cartridges.map((cartridge) => (
+            <tr
+              key={cartridge._id}
+              onClick={() => onCartridgeClick(cartridge)}
+              className={styles.tableRow}
+            >
+              <td>
+                {hasImage(cartridge) ? (
+                  <span className={styles.statusIcon} style={{ color: "green" }}>✓</span>
+                ) : (
+                  <span className={styles.statusIcon} style={{ color: "red" }}>✗</span>
+                )}
+              </td>
+              <td>{cartridge.modelCart}</td>
+              <td>{cartridge.vendor}</td>
+              <td>
+                {(() => {
+                  const linkedPrinters = linkedPrintersMap.get(cartridge._id) || [];
+                  if (linkedPrinters.length > 0) {
+                    return linkedPrinters.map(p => `${p.vendor} ${p.model}`).join(", ");
+                  }
+                  return "Нет привязанных устройств";
+                })()}
+              </td>
+              <td>{cartridge.refill_price} ₽</td>
+              <td>{cartridge.recovery_price} ₽</td>
+              <td>{cartridge.resource || "-"}</td>
+              <td>{cartridge.chip ? "Да" : "Нет"}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
