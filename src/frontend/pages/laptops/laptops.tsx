@@ -13,6 +13,7 @@ export const LaptopsPage: React.FC = () => {
   const { items, isLoading, error, pagination } = useSelector_((state) => state.laptops);
   const [vendorFilter, setVendorFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
+  const [publicFilter, setPublicFilter] = useState<string>("all");
   const [selectedItem, setSelectedItem] = useState<Laptop | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
@@ -29,9 +30,16 @@ export const LaptopsPage: React.FC = () => {
   const filteredItems = useMemo(() => {
     return items.filter((item) => {
       if (vendorFilter && item.vendor !== vendorFilter) return false;
+      
+      if (publicFilter !== "all") {
+        const isPublic = item.public !== false;
+        if (publicFilter === "true" && !isPublic) return false;
+        if (publicFilter === "false" && isPublic) return false;
+      }
+      
       return true;
     });
-  }, [items, vendorFilter, hasImageFilter]);
+  }, [items, vendorFilter, hasImageFilter, publicFilter]);
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -55,8 +63,10 @@ export const LaptopsPage: React.FC = () => {
 
       <LaptopsFilters
         vendorFilter={vendorFilter}
+        publicFilter={publicFilter}
         vendors={vendors}
         onVendorFilterChange={setVendorFilter}
+        onPublicFilterChange={setPublicFilter}
       />
 
       <LaptopsTable

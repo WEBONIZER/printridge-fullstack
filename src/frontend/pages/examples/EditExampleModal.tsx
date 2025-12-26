@@ -16,6 +16,7 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
     cartridgeId: example.cartridgeId || "",
     printerId: example.printerId || "",
     laptopId: example.laptopId || "",
+    public: example.public !== false,
   });
   const [isSaving, setIsSaving] = useState(false);
 
@@ -28,6 +29,7 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
         cartridgeId: formData.cartridgeId || undefined,
         printerId: formData.printerId || undefined,
         laptopId: formData.laptopId || undefined,
+        public: formData.public,
       });
       onSave();
     } catch (error) {

@@ -18,6 +18,7 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
     format: "",
     capacity: "",
     speed: "",
+    public: true,
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -69,6 +70,7 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
         format: formData.format.trim() || undefined,
         capacity: formData.capacity ? parseFloat(formData.capacity) : undefined,
         speed: formData.speed ? parseFloat(formData.speed) : undefined,
+        public: formData.public,
       };
 
       const createdPrinter = await createPrinter(printerData);

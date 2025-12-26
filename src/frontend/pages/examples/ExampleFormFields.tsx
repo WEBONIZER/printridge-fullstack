@@ -7,6 +7,7 @@ interface ExampleFormData {
   cartridgeId: string;
   printerId: string;
   laptopId: string;
+  public?: boolean;
 }
 
 interface ExampleFormFieldsProps {
@@ -63,6 +64,16 @@ export const ExampleFormFields: React.FC<ExampleFormFieldsProps> = ({
           value={formData.laptopId}
           onChange={(e) => onFormDataChange({ laptopId: e.target.value })}
         />
+      </div>
+      <div className={styles.formGroup}>
+        <label>
+          <input
+            type="checkbox"
+            checked={formData.public !== false}
+            onChange={(e) => onFormDataChange({ public: e.target.checked })}
+          />
+          Публичный
+        </label>
       </div>
       {onVideoChange && (
         <div className={styles.formGroup}>

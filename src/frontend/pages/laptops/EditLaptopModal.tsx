@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Laptop } from "../../utils/api";
+import React, { useState, useEffect } from "react";
+import { Laptop, uploadImage, updateImage } from "../../utils/api";
 import { LaptopFormFields } from "./LaptopFormFields";
 import styles from "./laptops.module.css";
 
@@ -21,8 +21,31 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
     video: laptop.video || "",
     ram: laptop.ram || "",
     ramType: laptop.ramType || "",
+    public: laptop.public !== false,
   });
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
+  const [currentImageSrc, setCurrentImageSrc] = useState<string | null>(null);
+
+  useEffect(() => {
+    if ((laptop as any).photo) {
+      const photo = (laptop as any).photo;
+      if (typeof photo === 'object' && photo !== null && photo.src) {
+        setCurrentImageSrc(photo.src);
+      }
+    }
+  }, [laptop._id]);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setImageFile(e.target.files[0]);
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setCurrentImageSrc(event.target?.result as string);
+      };
+      reader.readAsDataURL(e.target.files[0]);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +57,18 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
         display: formData.display ? parseFloat(formData.display as any) : undefined,
         processor: formData.processor ? parseFloat(formData.processor as any) : undefined,
         ram: formData.ram ? parseFloat(formData.ram as any) : undefined,
+        public: formData.public,
       });
+
+      if (imageFile) {
+        const photo = (laptop as any).photo;
+        if (photo && typeof photo === 'object' && photo._id) {
+          await updateImage(photo._id, imageFile, { laptopId: laptop._id });
+        } else {
+          await uploadImage(imageFile, { laptopId: laptop._id });
+        }
+      }
+
       onSave();
     } catch (error) {
       console.error("Ошибка при сохранении:", error);
@@ -57,6 +91,8 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
           <LaptopFormFields
             formData={formData}
             onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+            imagePreview={currentImageSrc}
+            onImageChange={handleImageChange}
           />
 
           <div className={styles.modalActions}>

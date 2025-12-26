@@ -15,6 +15,7 @@ export const CreateExampleModal: React.FC<CreateExampleModalProps> = ({ onClose,
     cartridgeId: "",
     printerId: "",
     laptopId: "",
+    public: true,
   });
   const [videoFile, setVideoFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -34,6 +35,7 @@ export const CreateExampleModal: React.FC<CreateExampleModalProps> = ({ onClose,
         cartridgeId: formData.cartridgeId.trim() || undefined,
         printerId: formData.printerId.trim() || undefined,
         laptopId: formData.laptopId.trim() || undefined,
+        public: formData.public,
       };
 
       const createdExample = await createExample(exampleData);

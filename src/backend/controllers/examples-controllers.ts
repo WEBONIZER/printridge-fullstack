@@ -9,6 +9,7 @@ interface ExampleData {
   cartridgeId?: string;
   printerId?: string;
   laptopId?: string;
+  public?: boolean;
 }
 
 export const createExample = async (req: Request, res: Response) => {
@@ -36,6 +37,7 @@ export const createExample = async (req: Request, res: Response) => {
       cartridgeId: data.cartridgeId || undefined,
       printerId: data.printerId || undefined,
       laptopId: data.laptopId || undefined,
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
     });
 
     const savedExample = await example.save();
@@ -144,6 +146,10 @@ export const updateExample = async (req: Request, res: Response) => {
 
     if (data.laptopId !== undefined) {
       existingExample.laptopId = data.laptopId || undefined;
+    }
+
+    if (data.public !== undefined) {
+      existingExample.public = data.public === true || String(data.public).toLowerCase() === 'true';
     }
 
     const savedExample = await existingExample.save();
@@ -267,6 +273,43 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     console.error('Get paginated examples error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+export const toggleExamplePublicStatus = async (req: Request, res: Response) => {
+  try {
+    const { exampleId } = req.params;
+    const { public: publicStatus } = req.body;
+
+    if (!exampleId) {
+      return res.status(400).json({ error: 'ID примера обязателен' });
+    }
+
+    if (typeof publicStatus !== 'boolean') {
+      return res.status(400).json({ error: 'Поле public должно быть boolean' });
+    }
+
+    const example = await ExampleModel.findById(exampleId);
+
+    if (!example) {
+      return res.status(404).json({ error: 'Пример не найден' });
+    }
+
+    example.public = publicStatus;
+    await example.save();
+
+    res.status(200).json({
+      success: true,
+      data: example,
+      message: `Статус public успешно изменен на ${publicStatus}`,
+    });
+
+  } catch (error: any) {
+    console.error('Toggle example public status error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined

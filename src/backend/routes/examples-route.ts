@@ -4,7 +4,8 @@ import {
   getExampleByID,
   updateExample,
   deleteExample,
-  getPaginatedExamples
+  getPaginatedExamples,
+  toggleExamplePublicStatus,
 } from "../controllers/examples-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 
@@ -13,5 +14,6 @@ export const examples = Router()
   .post("/", jwtMiddleware, createExample)
   .get("/:exampleId", jwtMiddleware, getExampleByID)
   .put("/:exampleId", jwtMiddleware, updateExample)
-  .delete("/:exampleId", jwtMiddleware, deleteExample);
+  .delete("/:exampleId", jwtMiddleware, deleteExample)
+  .patch("/:exampleId/public", jwtMiddleware, toggleExamplePublicStatus);
 

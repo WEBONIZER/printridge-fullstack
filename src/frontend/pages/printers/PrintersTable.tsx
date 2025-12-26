@@ -5,14 +5,12 @@ import styles from "./printers.module.css";
 interface PrintersTableProps {
   printers: Printer[];
   linkedCartridgesMap: Map<string, Cartridge[]>;
-  hasImage: (printer: Printer) => boolean;
   onPrinterClick: (printer: Printer) => void;
 }
 
 export const PrintersTable: React.FC<PrintersTableProps> = ({
   printers,
   linkedCartridgesMap,
-  hasImage,
   onPrinterClick,
 }) => {
   return (
@@ -39,11 +37,27 @@ export const PrintersTable: React.FC<PrintersTableProps> = ({
               className={styles.tableRow}
             >
               <td>
-                {hasImage(printer) ? (
-                  <span className={styles.statusIcon} style={{ color: "green" }}>✓</span>
-                ) : (
-                  <span className={styles.statusIcon} style={{ color: "red" }}>✗</span>
-                )}
+                {(() => {
+                  const photoSrc = printer.photo && typeof printer.photo === 'object' && printer.photo.src
+                    ? printer.photo.src
+                    : printer.vendor && printer.model
+                      ? `https://storage.yandexcloud.net/printridge/repair/${printer.vendor}/${printer.model}.png`
+                      : null;
+                  
+                  return photoSrc ? (
+                    <img
+                      key={`${printer._id}-${photoSrc}`}
+                      src={photoSrc}
+                      alt={printer.model}
+                      className={styles.deviceImage}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <span className={styles.statusIcon} style={{ color: "#ccc" }}>-</span>
+                  );
+                })()}
               </td>
               <td>{printer.model}</td>
               <td>{printer.vendor}</td>

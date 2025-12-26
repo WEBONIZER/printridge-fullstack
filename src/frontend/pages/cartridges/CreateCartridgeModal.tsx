@@ -18,6 +18,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
     recovery_price: "",
     resource: "",
     chip: false,
+    public: true,
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -69,6 +70,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
         recovery_price: formData.recovery_price,
         resource: formData.resource ? parseFloat(formData.resource) : undefined,
         chip: formData.chip,
+        public: formData.public,
       };
 
       const createdCartridge = await createCartridge(cartridgeData);

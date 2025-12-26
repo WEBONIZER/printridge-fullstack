@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import mongoose from "mongoose";
 import { PrinterModel } from "../models/printer-model";
 import { PriceModel } from "../models/price-model";
+import { PhotoModel } from "../models/printridge-photo-model";
 import { IPrinterSchema } from "../../utils/types";
 import { getPrinterPrice } from "../utils/price-helpers";
 
@@ -13,6 +14,7 @@ interface PrinterData {
   format?: string;
   capacity?: number;
   speed?: number;
+  public?: boolean;
 }
 
 // Создать принтер
@@ -49,6 +51,7 @@ export const createPrinter = async (req: Request, res: Response) => {
       format: data.format?.trim() || undefined,
       capacity: data.capacity || undefined,
       speed: data.speed || undefined,
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
     });
 
     const savedPrinter = await printer.save();
@@ -149,7 +152,11 @@ export const getPrinterByID = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Принтер не найден' });
     }
 
+    // Получаем фото для принтера
+    const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
+    
     const printerObj = printer.toObject() as any;
+    printerObj.photo = photo || null;
 
     res.status(200).json({
       success: true,
@@ -194,7 +201,7 @@ export const updatePrinter = async (req: Request, res: Response) => {
     }
 
     if (data.model !== undefined) {
-      existingPrinter.model = data.model.trim();
+      existingPrinter.set('model', data.model.trim());
     }
 
     if (data.device !== undefined) {
@@ -217,8 +224,16 @@ export const updatePrinter = async (req: Request, res: Response) => {
       existingPrinter.speed = data.speed || undefined;
     }
 
+    if (data.public !== undefined) {
+      existingPrinter.public = data.public === true || String(data.public).toLowerCase() === 'true';
+    }
+
     const savedPrinter = await existingPrinter.save();
     const printerObj = savedPrinter.toObject() as any;
+    
+    // Получаем фото для принтера
+    const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
+    printerObj.photo = photo || null;
 
     res.status(200).json({
       success: true,
@@ -315,7 +330,7 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
       baseQuery.model = { $regex: escapeRegex(model), $options: 'i' };
     }
 
-    const [total, printers] = await Promise.all([
+    const [total, printersData] = await Promise.all([
       PrinterModel.countDocuments(baseQuery),
       PrinterModel.find(baseQuery)
         .skip(skip)
@@ -323,6 +338,17 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
         .sort({ createdAt: -1 })
         .lean(),
     ]);
+
+    // Получаем фото для всех принтеров
+    const printerIds = printersData.map(p => p._id.toString());
+    const photos = await PhotoModel.find({ printerId: { $in: printerIds } }).lean();
+    const photoMap = new Map(photos.map(p => [p.printerId, p]));
+
+    // Добавляем фото к каждому принтеру
+    const printers = printersData.map(printer => ({
+      ...printer,
+      photo: photoMap.get(printer._id.toString()) || null
+    }));
 
     res.status(200).json({
       success: true,
@@ -355,6 +381,43 @@ export const getPrinterVendors = async (req: Request, res: Response) => {
     });
   } catch (error: any) {
     console.error('Get printer vendors error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+export const togglePrinterPublicStatus = async (req: Request, res: Response) => {
+  try {
+    const { printerId } = req.params;
+    const { public: publicStatus } = req.body;
+
+    if (!printerId) {
+      return res.status(400).json({ error: 'ID принтера обязателен' });
+    }
+
+    if (typeof publicStatus !== 'boolean') {
+      return res.status(400).json({ error: 'Поле public должно быть boolean' });
+    }
+
+    const printer = await PrinterModel.findById(printerId);
+
+    if (!printer) {
+      return res.status(404).json({ error: 'Принтер не найден' });
+    }
+
+    printer.public = publicStatus;
+    await printer.save();
+
+    res.status(200).json({
+      success: true,
+      data: printer,
+      message: `Статус public успешно изменен на ${publicStatus}`,
+    });
+
+  } catch (error: any) {
+    console.error('Toggle printer public status error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined

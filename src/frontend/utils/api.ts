@@ -132,6 +132,12 @@ export const deleteCartridge = async (cartridgeId: string) => {
   return response.data;
 };
 
+// Изменить статус public для картриджа
+export const toggleCartridgePublicStatus = async (cartridgeId: string, publicStatus: boolean) => {
+  const response = await apiClient.patch<BaseResponse<Cartridge>>(`/cartridges/all-items/${cartridgeId}/public`, { public: publicStatus });
+  return response.data;
+};
+
 // ==================== IMAGES API ====================
 
 export interface Image {
@@ -247,6 +253,12 @@ export const deleteExample = async (exampleId: string) => {
   return response.data;
 };
 
+// Изменить статус public для примера
+export const toggleExamplePublicStatus = async (exampleId: string, publicStatus: boolean) => {
+  const response = await apiClient.patch<BaseResponse<Example>>(`/examples/${exampleId}/public`, { public: publicStatus });
+  return response.data;
+};
+
 // ==================== VIDEOS API ====================
 
 export interface Video {
@@ -339,6 +351,7 @@ export const deleteVideo = async (videoId: string) => {
 
 export interface Printer extends IPrinterSchema {
   _id: string;
+  photo?: any;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -381,6 +394,12 @@ export const updatePrinter = async (printerId: string, data: Partial<IPrinterSch
 // Удалить принтер
 export const deletePrinter = async (printerId: string) => {
   const response = await apiClient.delete<{ success: boolean; message: string }>(`/printers/${printerId}`);
+  return response.data;
+};
+
+// Изменить статус public для принтера
+export const togglePrinterPublicStatus = async (printerId: string, publicStatus: boolean) => {
+  const response = await apiClient.patch<BaseResponse<Printer>>(`/printers/${printerId}/public`, { public: publicStatus });
   return response.data;
 };
 
@@ -435,6 +454,7 @@ export const deleteCompatibility = async (compatibilityId: string) => {
 
 export interface Laptop extends ILaptopSchema {
   _id: string;
+  photo?: any;
   createdAt?: string;
   updatedAt?: string;
 }
@@ -471,5 +491,11 @@ export const updateLaptop = async (laptopId: string, data: Partial<ILaptopSchema
 // Удалить ноутбук
 export const deleteLaptop = async (laptopId: string) => {
   const response = await apiClient.delete<{ success: boolean; message: string }>(`/laptops/${laptopId}`);
+  return response.data;
+};
+
+// Изменить статус public для ноутбука
+export const toggleLaptopPublicStatus = async (laptopId: string, publicStatus: boolean) => {
+  const response = await apiClient.patch<BaseResponse<Laptop>>(`/laptops/${laptopId}/public`, { public: publicStatus });
   return response.data;
 };

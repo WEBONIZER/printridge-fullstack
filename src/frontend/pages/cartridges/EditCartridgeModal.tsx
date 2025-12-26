@@ -19,6 +19,7 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
     recovery_price: cartridge.recovery_price || "",
     resource: cartridge.resource || "",
     chip: Boolean(cartridge.chip) || false,
+    public: cartridge.public !== false,
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -132,6 +133,7 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
         {
           ...formData,
           resource: formData.resource ? parseFloat(formData.resource as any) : undefined,
+          public: formData.public,
         },
         imageFile || undefined
       );

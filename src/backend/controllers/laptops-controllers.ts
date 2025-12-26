@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { LaptopModel } from "../models/laptop-model";
 import { LaptopPriceModel } from "../models/laptop-price-model";
+import { PhotoModel } from "../models/printridge-photo-model";
 import { ILaptopSchema } from "../../utils/types";
 import { getLaptopPrice } from "../utils/price-helpers";
 
@@ -15,6 +16,7 @@ interface LaptopData {
   video?: string;
   ram?: number;
   ramType?: string;
+  public?: boolean;
 }
 
 // Создать ноутбук
@@ -54,6 +56,7 @@ export const createLaptop = async (req: Request, res: Response) => {
       video: data.video?.trim() || undefined,
       ram: data.ram || undefined,
       ramType: data.ramType?.trim() || undefined,
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
     });
 
     const savedLaptop = await laptop.save();
@@ -140,7 +143,11 @@ export const getLaptopByID = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Ноутбук не найден' });
     }
 
+    // Получаем фото для ноутбука
+    const photo = await PhotoModel.findOne({ laptopId: laptopId }).lean();
+    
     const laptopObj = laptop.toObject() as any;
+    laptopObj.photo = photo || null;
 
     res.status(200).json({
       success: true,
@@ -211,8 +218,16 @@ export const updateLaptop = async (req: Request, res: Response) => {
       existingLaptop.ramType = data.ramType?.trim() || undefined;
     }
 
+    if (data.public !== undefined) {
+      existingLaptop.public = data.public === true || String(data.public).toLowerCase() === 'true';
+    }
+
     const savedLaptop = await existingLaptop.save();
     const laptopObj = savedLaptop.toObject() as any;
+    
+    // Получаем фото для ноутбука
+    const photo = await PhotoModel.findOne({ laptopId: laptopId }).lean();
+    laptopObj.photo = photo || null;
 
     res.status(200).json({
       success: true,
@@ -308,7 +323,7 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
       ];
     }
 
-    const [total, laptops] = await Promise.all([
+    const [total, laptopsData] = await Promise.all([
       LaptopModel.countDocuments(baseQuery),
       LaptopModel.find(baseQuery)
         .skip(skip)
@@ -316,6 +331,17 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
         .sort({ createdAt: -1 })
         .lean(),
     ]);
+
+    // Получаем фото для всех ноутбуков
+    const laptopIds = laptopsData.map(l => l._id.toString());
+    const photos = await PhotoModel.find({ laptopId: { $in: laptopIds } }).lean();
+    const photoMap = new Map(photos.map(p => [p.laptopId, p]));
+
+    // Добавляем фото к каждому ноутбуку
+    const laptops = laptopsData.map(laptop => ({
+      ...laptop,
+      photo: photoMap.get(laptop._id.toString()) || null
+    }));
 
     res.status(200).json({
       success: true,
@@ -329,6 +355,43 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     console.error('Get paginated laptops error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+export const toggleLaptopPublicStatus = async (req: Request, res: Response) => {
+  try {
+    const { laptopId } = req.params;
+    const { public: publicStatus } = req.body;
+
+    if (!laptopId) {
+      return res.status(400).json({ error: 'ID ноутбука обязателен' });
+    }
+
+    if (typeof publicStatus !== 'boolean') {
+      return res.status(400).json({ error: 'Поле public должно быть boolean' });
+    }
+
+    const laptop = await LaptopModel.findById(laptopId);
+
+    if (!laptop) {
+      return res.status(404).json({ error: 'Ноутбук не найден' });
+    }
+
+    laptop.public = publicStatus;
+    await laptop.save();
+
+    res.status(200).json({
+      success: true,
+      data: laptop,
+      message: `Статус public успешно изменен на ${publicStatus}`,
+    });
+
+  } catch (error: any) {
+    console.error('Toggle laptop public status error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined

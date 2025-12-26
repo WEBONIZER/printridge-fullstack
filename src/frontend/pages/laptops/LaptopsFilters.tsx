@@ -3,14 +3,18 @@ import styles from "./laptops.module.css";
 
 interface LaptopsFiltersProps {
   vendorFilter: string;
+  publicFilter: string;
   vendors: string[];
   onVendorFilterChange: (value: string) => void;
+  onPublicFilterChange: (value: string) => void;
 }
 
 export const LaptopsFilters: React.FC<LaptopsFiltersProps> = ({
   vendorFilter,
+  publicFilter,
   vendors,
   onVendorFilterChange,
+  onPublicFilterChange,
 }) => {
   return (
     <div className={styles.filters}>
@@ -27,6 +31,18 @@ export const LaptopsFilters: React.FC<LaptopsFiltersProps> = ({
               {vendor}
             </option>
           ))}
+        </select>
+      </div>
+      <div className={styles.filterGroup}>
+        <label>Публичный статус:</label>
+        <select
+          value={publicFilter}
+          onChange={(e) => onPublicFilterChange(e.target.value)}
+          className={styles.select}
+        >
+          <option value="all">Все</option>
+          <option value="true">Публичные</option>
+          <option value="false">Скрытые</option>
         </select>
       </div>
     </div>

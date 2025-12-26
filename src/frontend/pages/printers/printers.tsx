@@ -15,6 +15,7 @@ export const PrintersPage: React.FC = () => {
   const [vendorFilter, setVendorFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
   const [hasLinkedCartridgesFilter, setHasLinkedCartridgesFilter] = useState<string>("all");
+  const [publicFilter, setPublicFilter] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [selectedItem, setSelectedItem] = useState<Printer | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -90,9 +91,15 @@ export const PrintersPage: React.FC = () => {
         if (hasLinkedCartridgesFilter === "no" && linkedCartridges.length > 0) return false;
       }
       
+      if (publicFilter !== "all") {
+        const isPublic = item.public !== false;
+        if (publicFilter === "true" && !isPublic) return false;
+        if (publicFilter === "false" && isPublic) return false;
+      }
+      
       return true;
     });
-  }, [items, hasImageFilter, hasLinkedCartridgesFilter, linkedCartridgesMap]);
+  }, [items, hasImageFilter, hasLinkedCartridgesFilter, publicFilter, linkedCartridgesMap]);
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -118,6 +125,7 @@ export const PrintersPage: React.FC = () => {
         vendorFilter={vendorFilter}
         hasImageFilter={hasImageFilter}
         hasLinkedCartridgesFilter={hasLinkedCartridgesFilter}
+        publicFilter={publicFilter}
         vendors={vendors}
         onVendorFilterChange={(value) => {
           setVendorFilter(value);
@@ -125,12 +133,12 @@ export const PrintersPage: React.FC = () => {
         }}
         onHasImageFilterChange={setHasImageFilter}
         onHasLinkedCartridgesFilterChange={setHasLinkedCartridgesFilter}
+        onPublicFilterChange={setPublicFilter}
       />
 
       <PrintersTable
         printers={filteredItems}
         linkedCartridgesMap={linkedCartridgesMap}
-        hasImage={hasImage}
         onPrinterClick={(printer) => {
           setSelectedItem(printer);
           setIsModalOpen(true);

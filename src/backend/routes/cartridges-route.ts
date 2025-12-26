@@ -6,6 +6,7 @@ import {
   updateCartridge,
   getPaginatedCartridges,
   getCartridgeVendors,
+  toggleCartridgePublicStatus,
 } from "../controllers/cartridges-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 import { processImageMiddleware, uploadSingle } from '../../utils/functions'
@@ -46,3 +47,6 @@ export const cartridges = Router()
 
   // Динамические DELETE роуты
   .delete("/all-items/:cartridgeId", jwtMiddleware, deleteCartridgeByID)
+
+  // Динамические PATCH роуты для изменения статуса public
+  .patch("/all-items/:cartridgeId/public", jwtMiddleware, toggleCartridgePublicStatus)

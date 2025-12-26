@@ -16,6 +16,7 @@ export const LaptopsTable: React.FC<LaptopsTableProps> = ({
       <table className={styles.table}>
         <thead>
           <tr>
+            <th>Картинка</th>
             <th>Модель</th>
             <th>Серия</th>
             <th>Производитель</th>
@@ -33,6 +34,29 @@ export const LaptopsTable: React.FC<LaptopsTableProps> = ({
               onClick={() => onLaptopClick(laptop)}
               className={styles.tableRow}
             >
+              <td>
+                {(() => {
+                  const photoSrc = laptop.photo && typeof laptop.photo === 'object' && laptop.photo.src
+                    ? laptop.photo.src
+                    : laptop.vendor && laptop.model
+                      ? `https://storage.yandexcloud.net/printridge/laptops/${laptop.vendor}/${laptop.model}.png`
+                      : null;
+                  
+                  return photoSrc ? (
+                    <img
+                      key={`${laptop._id}-${photoSrc}`}
+                      src={photoSrc}
+                      alt={laptop.model}
+                      className={styles.deviceImage}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <span className={styles.statusIcon} style={{ color: "#ccc" }}>-</span>
+                  );
+                })()}
+              </td>
               <td>{laptop.model}</td>
               <td>{laptop.series || "-"}</td>
               <td>{laptop.vendor}</td>

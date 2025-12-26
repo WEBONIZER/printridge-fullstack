@@ -8,6 +8,7 @@ export interface CartridgeData {
     recovery_price: string | number;
     chip: boolean | string;
     resource?: number;
+    public?: boolean;
   }
 
 export interface RequestCustom extends Request {
@@ -34,6 +35,7 @@ export interface IPrinterSchema {
     format?: string;
     capacity?: number;
     speed?: number;
+    public?: boolean;
 }
 
 // Совместимость устройств (связь картридж-принтер)
@@ -57,6 +59,7 @@ export interface IExampleSchema {
     cartridgeId?: string;
     printerId?: string;
     laptopId?: string;
+    public?: boolean;
 }
 
 export interface ICartridgeSchema {
@@ -69,6 +72,7 @@ export interface ICartridgeSchema {
     devices: string;
     refill_price: string;
     recovery_price: string;
+    public?: boolean;
 }
 
 export interface ICartridge extends Omit<ICartridgeSchema, 'photo'> {
@@ -111,6 +115,7 @@ export interface ILaptopSchema {
     video?: string;
     ram?: number;
     ramType?: string;
+    public?: boolean;
 }
 
 // Модель прайса для ноутбуков

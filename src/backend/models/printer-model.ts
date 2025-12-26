@@ -31,6 +31,11 @@ export const printerSchema = new Schema<IPrinterSchema>(
       type: Number,
       required: false,
     },
+    public: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
   },
   {
     timestamps: true,
@@ -40,5 +45,5 @@ export const printerSchema = new Schema<IPrinterSchema>(
 // Уникальный индекс на комбинацию vendor + model
 printerSchema.index({ vendor: 1, model: 1 }, { unique: true });
 
-export const PrinterModel = model<IPrinterSchema>("printer", printerSchema);
+export const PrinterModel = model<IPrinterSchema>("printridge-printer", printerSchema);
 

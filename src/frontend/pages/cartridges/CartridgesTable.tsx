@@ -5,14 +5,12 @@ import styles from "./cartridges.module.css";
 interface CartridgesTableProps {
   cartridges: Cartridge[];
   linkedPrintersMap: Map<string, Printer[]>;
-  hasImage: (cartridge: Cartridge) => boolean;
   onCartridgeClick: (cartridge: Cartridge) => void;
 }
 
 export const CartridgesTable: React.FC<CartridgesTableProps> = ({
   cartridges,
   linkedPrintersMap,
-  hasImage,
   onCartridgeClick,
 }) => {
   return (
@@ -38,11 +36,27 @@ export const CartridgesTable: React.FC<CartridgesTableProps> = ({
               className={styles.tableRow}
             >
               <td>
-                {hasImage(cartridge) ? (
-                  <span className={styles.statusIcon} style={{ color: "green" }}>✓</span>
-                ) : (
-                  <span className={styles.statusIcon} style={{ color: "red" }}>✗</span>
-                )}
+                {(() => {
+                  const photoSrc = cartridge.photo && typeof cartridge.photo === 'object' && cartridge.photo.src
+                    ? cartridge.photo.src
+                    : cartridge.vendor && cartridge.modelCart
+                      ? `https://storage.yandexcloud.net/printridge/refill/${cartridge.vendor}/${cartridge.modelCart}.png`
+                      : null;
+                  
+                  return photoSrc ? (
+                    <img
+                      key={`${cartridge._id}-${photoSrc}`}
+                      src={photoSrc}
+                      alt={cartridge.modelCart}
+                      className={styles.deviceImage}
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).style.display = 'none';
+                      }}
+                    />
+                  ) : (
+                    <span className={styles.statusIcon} style={{ color: "#ccc" }}>-</span>
+                  );
+                })()}
               </td>
               <td>{cartridge.modelCart}</td>
               <td>{cartridge.vendor}</td>

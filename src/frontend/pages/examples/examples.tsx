@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { useDispatch_, useSelector_ } from "../../services/reducers/root-reducer";
 import { fetchExamples } from "../../services/slices/examples";
 import { Example } from "../../utils/api";
 import { ExamplesTable } from "./ExamplesTable";
+import { ExamplesFilters } from "./ExamplesFilters";
 import { EditExampleModal } from "./EditExampleModal";
 import { CreateExampleModal } from "./CreateExampleModal";
 import styles from "./examples.module.css";
@@ -13,10 +14,22 @@ export const ExamplesPage: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<Example | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [publicFilter, setPublicFilter] = useState<string>("all");
 
   useEffect(() => {
     dispatch(fetchExamples({ page: 1, limit: 1000 }));
   }, [dispatch]);
+
+  const filteredItems = useMemo(() => {
+    return items.filter((item) => {
+      if (publicFilter !== "all") {
+        const isPublic = item.public !== false;
+        if (publicFilter === "true" && !isPublic) return false;
+        if (publicFilter === "false" && isPublic) return false;
+      }
+      return true;
+    });
+  }, [items, publicFilter]);
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -38,15 +51,20 @@ export const ExamplesPage: React.FC = () => {
         </button>
       </div>
 
+      <ExamplesFilters
+        publicFilter={publicFilter}
+        onPublicFilterChange={setPublicFilter}
+      />
+
       <ExamplesTable
-        examples={items}
+        examples={filteredItems}
         onExampleClick={(example) => {
           setSelectedItem(example);
           setIsModalOpen(true);
         }}
       />
 
-      {items.length === 0 && (
+      {filteredItems.length === 0 && (
         <div className={styles.empty}>Примеры не найдены</div>
       )}
 

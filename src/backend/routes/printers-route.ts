@@ -6,6 +6,7 @@ import {
   updatePrinter,
   getPaginatedPrinters,
   getPrinterVendors,
+  togglePrinterPublicStatus,
 } from "../controllers/printers-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 
@@ -24,5 +25,8 @@ export const printers = Router()
   .put("/:printerId", jwtMiddleware, updatePrinter)
 
   // Динамические DELETE роуты
-  .delete("/:printerId", jwtMiddleware, deletePrinter);
+  .delete("/:printerId", jwtMiddleware, deletePrinter)
+
+  // Динамические PATCH роуты для изменения статуса public
+  .patch("/:printerId/public", jwtMiddleware, togglePrinterPublicStatus);
 

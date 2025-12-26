@@ -36,10 +36,15 @@ export const cartridgeSchema = new Schema<ICartridgeSchema>(
       type: String,
       required: true,
     },
+    public: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
   },
   {
     timestamps: true,
   },
 );
 
-export const CartridgeModel = model<ICartridgeSchema>("cartridge", cartridgeSchema);
+export const CartridgeModel = model<ICartridgeSchema>("printridge-cartridge", cartridgeSchema);

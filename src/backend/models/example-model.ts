@@ -23,6 +23,11 @@ export const exampleSchema = new Schema<IExampleSchema>(
       type: String,
       required: false,
     },
+    public: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
   },
   {
     timestamps: true,

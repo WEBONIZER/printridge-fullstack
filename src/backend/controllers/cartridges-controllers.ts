@@ -39,7 +39,8 @@ export const createCartridge = async (req: Request, res: Response) => {
       recovery_price: String(data.recovery_price),
       chip: data.chip === true || data.chip === 'true',
       resource: data.resource || undefined,
-      photo: new mongoose.Types.ObjectId()
+      photo: new mongoose.Types.ObjectId(),
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
     });
 
     const savedCartridge = await cartridge.save();
@@ -161,6 +162,9 @@ export const updateCartridge = async (req: any, res: Response, next: NextFunctio
     if (data.recovery_price !== undefined) cartridge.recovery_price = String(data.recovery_price);
     if (data.chip !== undefined) cartridge.chip = data.chip === true || data.chip === 'true';
     if (data.resource !== undefined) cartridge.resource = data.resource;
+    if (data.public !== undefined) {
+      cartridge.public = data.public === true || String(data.public).toLowerCase() === 'true';
+    }
 
     await cartridge.save();
 
@@ -307,6 +311,60 @@ export const getCartridgeVendors = async (
       res.status(500).json({
         error: 'Внутренняя ошибка сервера',
         details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      });
+    }
+  }
+};
+
+export const toggleCartridgePublicStatus = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+): Promise<void> => {
+  try {
+    const { cartridgeId } = req.params;
+    const { public: publicStatus } = req.body;
+
+    if (!cartridgeId) {
+      if (!res.headersSent) {
+        res.status(400).send({ status: "error", message: "ID картриджа обязателен" });
+      }
+      return;
+    }
+
+    if (typeof publicStatus !== 'boolean') {
+      if (!res.headersSent) {
+        res.status(400).send({ status: "error", message: "Поле public должно быть boolean" });
+      }
+      return;
+    }
+
+    const cartridge = await CartridgeModel.findById(cartridgeId);
+
+    if (!cartridge) {
+      if (!res.headersSent) {
+        res.status(404).send({ status: "error", message: "Картридж не найден" });
+      }
+      return;
+    }
+
+    cartridge.public = publicStatus;
+    await cartridge.save();
+
+    if (res.headersSent) return;
+
+    res.status(200).send({
+      status: "success",
+      data: cartridge,
+      message: `Статус public успешно изменен на ${publicStatus}`,
+    });
+
+  } catch (error: any) {
+    console.error("❌ Error toggling cartridge public status:", error);
+    if (!res.headersSent) {
+      res.status(500).send({
+        status: "error",
+        message: "Ошибка на сервере при изменении статуса public"
       });
     }
   }

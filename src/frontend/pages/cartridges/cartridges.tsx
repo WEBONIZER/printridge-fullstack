@@ -15,6 +15,7 @@ export const CartridgesPage: React.FC = () => {
   const [vendorFilter, setVendorFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
   const [hasLinkedDevicesFilter, setHasLinkedDevicesFilter] = useState<string>("all");
+  const [publicFilter, setPublicFilter] = useState<string>("all");
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [selectedItem, setSelectedItem] = useState<Cartridge | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -94,9 +95,15 @@ export const CartridgesPage: React.FC = () => {
         if (hasLinkedDevicesFilter === "no" && linkedPrinters.length > 0) return false;
       }
       
+      if (publicFilter !== "all") {
+        const isPublic = item.public !== false;
+        if (publicFilter === "true" && !isPublic) return false;
+        if (publicFilter === "false" && isPublic) return false;
+      }
+      
       return true;
     });
-  }, [items, hasImageFilter, hasLinkedDevicesFilter, linkedPrintersMap]);
+  }, [items, hasImageFilter, hasLinkedDevicesFilter, publicFilter, linkedPrintersMap]);
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -122,6 +129,7 @@ export const CartridgesPage: React.FC = () => {
         vendorFilter={vendorFilter}
         hasImageFilter={hasImageFilter}
         hasLinkedDevicesFilter={hasLinkedDevicesFilter}
+        publicFilter={publicFilter}
         vendors={vendors}
         onVendorFilterChange={(value) => {
           setVendorFilter(value);
@@ -129,12 +137,12 @@ export const CartridgesPage: React.FC = () => {
         }}
         onHasImageFilterChange={setHasImageFilter}
         onHasLinkedDevicesFilterChange={setHasLinkedDevicesFilter}
+        onPublicFilterChange={setPublicFilter}
       />
 
       <CartridgesTable
         cartridges={filteredItems}
         linkedPrintersMap={linkedPrintersMap}
-        hasImage={hasImage}
         onCartridgeClick={(cartridge) => {
           setSelectedItem(cartridge);
           setIsModalOpen(true);

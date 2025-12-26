@@ -9,11 +9,13 @@ interface PrinterFormData {
   format: string;
   capacity: string;
   speed: string;
+  public?: boolean;
 }
 
 interface PrinterFormFieldsProps {
   formData: PrinterFormData;
   onFormDataChange: (data: Partial<PrinterFormData>) => void;
+  imagePreview?: string | null;
   onImageChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isCreateMode?: boolean;
 }
@@ -21,6 +23,7 @@ interface PrinterFormFieldsProps {
 export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
   formData,
   onFormDataChange,
+  imagePreview,
   onImageChange,
   isCreateMode = false,
 }) => {
@@ -109,9 +112,22 @@ export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
           onChange={(e) => onFormDataChange({ speed: e.target.value })}
         />
       </div>
+      <div className={styles.formGroup}>
+        <label>
+          <input
+            type="checkbox"
+            checked={formData.public !== false}
+            onChange={(e) => onFormDataChange({ public: e.target.checked })}
+          />
+          Публичный
+        </label>
+      </div>
       {onImageChange && (
         <div className={styles.formGroup}>
           <label>Изображение</label>
+          {imagePreview && (
+            <img src={imagePreview} alt="Preview" className={styles.imagePreview} />
+          )}
           <input
             type="file"
             accept="image/*"

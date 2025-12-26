@@ -12,17 +12,20 @@ interface LaptopFormData {
   video: string;
   ram: string;
   ramType: string;
+  public?: boolean;
 }
 
 interface LaptopFormFieldsProps {
   formData: LaptopFormData;
   onFormDataChange: (data: Partial<LaptopFormData>) => void;
+  imagePreview?: string | null;
   onImageChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const LaptopFormFields: React.FC<LaptopFormFieldsProps> = ({
   formData,
   onFormDataChange,
+  imagePreview,
   onImageChange,
 }) => {
   return (
@@ -111,9 +114,22 @@ export const LaptopFormFields: React.FC<LaptopFormFieldsProps> = ({
           onChange={(e) => onFormDataChange({ ramType: e.target.value })}
         />
       </div>
+      <div className={styles.formGroup}>
+        <label>
+          <input
+            type="checkbox"
+            checked={formData.public !== false}
+            onChange={(e) => onFormDataChange({ public: e.target.checked })}
+          />
+          Публичный
+        </label>
+      </div>
       {onImageChange && (
         <div className={styles.formGroup}>
           <label>Изображение</label>
+          {imagePreview && (
+            <img src={imagePreview} alt="Preview" className={styles.imagePreview} />
+          )}
           <input
             type="file"
             accept="image/*"

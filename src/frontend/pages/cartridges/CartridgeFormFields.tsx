@@ -9,6 +9,7 @@ interface CartridgeFormData {
   recovery_price: string;
   resource: string;
   chip: boolean;
+  public?: boolean;
 }
 
 interface CartridgeFormFieldsProps {
@@ -88,6 +89,16 @@ export const CartridgeFormFields: React.FC<CartridgeFormFieldsProps> = ({
             onChange={(e) => onFormDataChange({ chip: e.target.checked })}
           />
           {isCreateMode ? "Чип" : "С чипом"}
+        </label>
+      </div>
+      <div className={styles.formGroup}>
+        <label>
+          <input
+            type="checkbox"
+            checked={formData.public !== false}
+            onChange={(e) => onFormDataChange({ public: e.target.checked })}
+          />
+          Публичный
         </label>
       </div>
       <div className={styles.formGroup}>

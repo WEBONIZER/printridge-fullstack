@@ -43,6 +43,11 @@ export const laptopSchema = new Schema<ILaptopSchema>(
       type: String,
       required: false,
     },
+    public: {
+      type: Boolean,
+      default: true,
+      required: false,
+    },
   },
   {
     timestamps: true,

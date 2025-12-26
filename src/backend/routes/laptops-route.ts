@@ -4,7 +4,8 @@ import {
   deleteLaptop,
   getLaptopByID,
   updateLaptop,
-  getPaginatedLaptops
+  getPaginatedLaptops,
+  toggleLaptopPublicStatus,
 } from "../controllers/laptops-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 
@@ -22,5 +23,8 @@ export const laptops = Router()
   .put("/:laptopId", jwtMiddleware, updateLaptop)
 
   // Динамические DELETE роуты
-  .delete("/:laptopId", jwtMiddleware, deleteLaptop);
+  .delete("/:laptopId", jwtMiddleware, deleteLaptop)
+
+  // Динамические PATCH роуты для изменения статуса public
+  .patch("/:laptopId/public", jwtMiddleware, toggleLaptopPublicStatus);
 

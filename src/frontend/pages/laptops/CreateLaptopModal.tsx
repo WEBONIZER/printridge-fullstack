@@ -20,6 +20,7 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
     video: "",
     ram: "",
     ramType: "",
+    public: true,
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -44,6 +45,7 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
         video: formData.video.trim() || undefined,
         ram: formData.ram ? parseFloat(formData.ram) : undefined,
         ramType: formData.ramType.trim() || undefined,
+        public: formData.public,
       };
 
       const createdLaptop = await createLaptop(laptopData);
