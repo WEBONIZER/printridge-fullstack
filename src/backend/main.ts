@@ -221,8 +221,13 @@ import { connect, set } from "mongoose";
     const { pathsToRender } = await import("../frontend/utils/routes");
     pathsToRender.forEach((path) => app.get(path, renderPage));
 
-    // Динамические маршруты теперь обрабатываются через React Router на клиенте
-    // SSR маршруты для конкретных элементов больше не нужны, так как данные берутся из базы
+    // SSR роуты для динамических страниц (для прямого доступа и обновления страницы)
+    app.get("/refill/:vendor", renderPage);
+    app.get("/refill/:vendor/:model", renderPage);
+    app.get("/repair/:vendor", renderPage);
+    app.get("/repair/:vendor/:model", renderPage);
+    app.get("/remont-noutbukov/:vendor", renderPage);
+    app.get("/remont-noutbukov/:vendor/:model", renderPage);
 
     // Роуты для авторизации и профиля
     app.get("/login", renderPage);

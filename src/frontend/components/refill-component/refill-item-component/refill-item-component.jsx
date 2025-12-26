@@ -156,7 +156,7 @@ function RefillItemComponent() {
                                             const vendorUrl = (printer.vendor || cartridge.vendor || '').toLowerCase();
                                             return (
                                                 <span key={printer._id || index}>
-                                                    {index > 0 && ', '}
+                                                    {index > 0 && ' / '}
                                                     <Link
                                                         to={`/repair/${vendorUrl}/${modelUrl}`}
                                                         target="_blank"
