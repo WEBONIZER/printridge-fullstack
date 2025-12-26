@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Laptop, uploadImage, updateImage } from "../../utils/api";
 import { LaptopFormFields } from "./LaptopFormFields";
+import { LaptopPriceSection } from "./LaptopPriceSection";
 import styles from "./laptops.module.css";
 
 interface EditLaptopModalProps {
@@ -26,6 +27,7 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [currentImageSrc, setCurrentImageSrc] = useState<string | null>(null);
+  const [selectedPriceId, setSelectedPriceId] = useState<string | null>((laptop as any).price || null);
 
   useEffect(() => {
     if ((laptop as any).photo) {
@@ -58,6 +60,7 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
         processor: formData.processor ? parseFloat(formData.processor as any) : undefined,
         ram: formData.ram ? parseFloat(formData.ram as any) : undefined,
         public: formData.public,
+        price: selectedPriceId || undefined,
       });
 
       if (imageFile) {
@@ -93,6 +96,12 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
             onFormDataChange={(data) => setFormData({ ...formData, ...data })}
             imagePreview={currentImageSrc}
             onImageChange={handleImageChange}
+          />
+
+          <LaptopPriceSection
+            currentPriceId={(laptop as any).price}
+            display={formData.display ? parseFloat(formData.display as any) : undefined}
+            onPriceChange={setSelectedPriceId}
           />
 
           <div className={styles.modalActions}>

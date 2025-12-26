@@ -6,6 +6,7 @@ import { LaptopsFilters } from "./LaptopsFilters";
 import { LaptopsTable } from "./LaptopsTable";
 import { EditLaptopModal } from "./EditLaptopModal";
 import { CreateLaptopModal } from "./CreateLaptopModal";
+import { LaptopPriceTemplatesModal } from "./LaptopPriceTemplatesModal";
 import styles from "./laptops.module.css";
 
 export const LaptopsPage: React.FC = () => {
@@ -19,6 +20,7 @@ export const LaptopsPage: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<Laptop | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isPriceTemplatesModalOpen, setIsPriceTemplatesModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -58,12 +60,21 @@ export const LaptopsPage: React.FC = () => {
     <div className={styles.container}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
         <h1 className={styles.title}>Ноутбуки</h1>
-        <button
-          onClick={() => setIsCreateModalOpen(true)}
-          className={styles.addButton}
-        >
-          Добавить
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            onClick={() => setIsPriceTemplatesModalOpen(true)}
+            className={styles.addButton}
+            style={{ backgroundColor: "#17a2b8" }}
+          >
+            Прайсы
+          </button>
+          <button
+            onClick={() => setIsCreateModalOpen(true)}
+            className={styles.addButton}
+          >
+            Добавить
+          </button>
+        </div>
       </div>
 
       <LaptopsFilters
@@ -115,6 +126,10 @@ export const LaptopsPage: React.FC = () => {
             setIsCreateModalOpen(false);
           }}
         />
+      )}
+
+      {isPriceTemplatesModalOpen && (
+        <LaptopPriceTemplatesModal onClose={() => setIsPriceTemplatesModalOpen(false)} />
       )}
     </div>
   );

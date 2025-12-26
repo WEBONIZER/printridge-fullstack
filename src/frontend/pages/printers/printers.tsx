@@ -7,6 +7,7 @@ import { PrintersTable } from "./PrintersTable";
 import { PaginationControls } from "./PaginationControls";
 import { EditPrinterModal } from "./EditPrinterModal";
 import { CreatePrinterModal } from "./CreatePrinterModal";
+import { PrinterPriceTemplatesModal } from "./PrinterPriceTemplatesModal";
 import styles from "./printers.module.css";
 
 export const PrintersPage: React.FC = () => {
@@ -22,6 +23,7 @@ export const PrintersPage: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<Printer | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
+  const [isPriceTemplatesModalOpen, setIsPriceTemplatesModalOpen] = useState(false);
   const [vendors, setVendors] = useState<string[]>([]);
   const [linkedCartridgesMap, setLinkedCartridgesMap] = useState<Map<string, Cartridge[]>>(new Map());
   const [isLoadingLinkedDevices, setIsLoadingLinkedDevices] = useState<boolean>(false);
@@ -106,12 +108,21 @@ export const PrintersPage: React.FC = () => {
     <div className={styles.container}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "20px" }}>
         <h1 className={styles.title}>Принтеры</h1>
-        <button
-          onClick={() => setIsCreateModalOpen(true)}
-          className={styles.addButton}
-        >
-          Добавить
-        </button>
+        <div style={{ display: "flex", gap: "10px" }}>
+          <button
+            onClick={() => setIsPriceTemplatesModalOpen(true)}
+            className={styles.addButton}
+            style={{ backgroundColor: "#17a2b8" }}
+          >
+            Прайсы
+          </button>
+          <button
+            onClick={() => setIsCreateModalOpen(true)}
+            className={styles.addButton}
+          >
+            Добавить
+          </button>
+        </div>
       </div>
 
       <PrintersFilters
@@ -188,6 +199,10 @@ export const PrintersPage: React.FC = () => {
             setIsCreateModalOpen(false);
           }}
         />
+      )}
+
+      {isPriceTemplatesModalOpen && (
+        <PrinterPriceTemplatesModal onClose={() => setIsPriceTemplatesModalOpen(false)} />
       )}
     </div>
   );

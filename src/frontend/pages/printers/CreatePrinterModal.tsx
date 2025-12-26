@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Printer, Cartridge, createPrinter, uploadImage, getPaginatedCartridges, createCompatibility } from "../../utils/api";
+import { Printer, Cartridge, createPrinter, uploadImage, getPaginatedCartridges, createCompatibility, searchPrinterModels } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
+import { PrinterPriceSection } from "./PrinterPriceSection";
 import styles from "./printers.module.css";
 
 interface CreatePrinterModalProps {
@@ -26,6 +27,7 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
   const [allCartridges, setAllCartridges] = useState<Cartridge[]>([]);
   const [selectedCartridges, setSelectedCartridges] = useState<Cartridge[]>([]);
   const [isLoadingCartridges, setIsLoadingCartridges] = useState(false);
+  const [selectedPriceId, setSelectedPriceId] = useState<string | null>(null);
 
   useEffect(() => {
     loadCartridges();
@@ -57,6 +59,16 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
     setImageFile(e.target.files?.[0] || null);
   };
 
+  const handleSearchModels = async (query: string): Promise<string[]> => {
+    try {
+      const response = await searchPrinterModels(query);
+      return response.data || [];
+    } catch (error) {
+      console.error("Ошибка поиска моделей:", error);
+      return [];
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -71,6 +83,7 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
         capacity: formData.capacity ? parseFloat(formData.capacity) : undefined,
         speed: formData.speed ? parseFloat(formData.speed) : undefined,
         public: formData.public,
+        price: selectedPriceId || undefined,
       };
 
       const createdPrinter = await createPrinter(printerData);
@@ -123,6 +136,15 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
             onFormDataChange={(data) => setFormData({ ...formData, ...data })}
             onImageChange={handleImageChange}
             isCreateMode={true}
+            onSearchModels={handleSearchModels}
+          />
+
+          <PrinterPriceSection
+            device={formData.device}
+            type={formData.type}
+            format={formData.format}
+            capacity={formData.capacity ? parseFloat(formData.capacity) : undefined}
+            onPriceChange={setSelectedPriceId}
           />
 
           <div className={styles.linkedItems}>

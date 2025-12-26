@@ -1,4 +1,5 @@
 import React from "react";
+import { ModelAutocomplete } from "../../components/ModelAutocomplete";
 import styles from "./cartridges.module.css";
 
 interface CartridgeFormData {
@@ -18,6 +19,7 @@ interface CartridgeFormFieldsProps {
   imagePreview?: string | null;
   onImageChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isCreateMode?: boolean;
+  onSearchModels?: (query: string) => Promise<string[]>;
 }
 
 export const CartridgeFormFields: React.FC<CartridgeFormFieldsProps> = ({
@@ -26,17 +28,28 @@ export const CartridgeFormFields: React.FC<CartridgeFormFieldsProps> = ({
   imagePreview,
   onImageChange,
   isCreateMode = false,
+  onSearchModels,
 }) => {
   return (
     <>
       <div className={styles.formGroup}>
         <label>Модель *</label>
-        <input
-          type="text"
-          value={formData.modelCart}
-          onChange={(e) => onFormDataChange({ modelCart: e.target.value })}
-          required
-        />
+        {isCreateMode && onSearchModels ? (
+          <ModelAutocomplete
+            value={formData.modelCart}
+            onChange={(value) => onFormDataChange({ modelCart: value })}
+            onSearch={onSearchModels}
+            placeholder="Введите модель"
+            required
+          />
+        ) : (
+          <input
+            type="text"
+            value={formData.modelCart}
+            onChange={(e) => onFormDataChange({ modelCart: e.target.value })}
+            required
+          />
+        )}
       </div>
       <div className={styles.formGroup}>
         <label>Производитель *</label>

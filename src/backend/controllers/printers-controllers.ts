@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 import { PrinterModel } from "../models/printer-model";
-import { PriceModel } from "../models/price-model";
 import { PhotoModel } from "../models/printridge-photo-model";
+import { PrinterPriceTemplateModel } from "../models/printer-price-template-model";
 import { IPrinterSchema } from "../../utils/types";
-import { getPrinterPrice } from "../utils/price-helpers";
+import { determinePrinterPriceType, getPrinterPriceId } from "../utils/device-price-helpers";
 
 interface PrinterData {
   vendor: string;
@@ -15,6 +15,7 @@ interface PrinterData {
   capacity?: number;
   speed?: number;
   public?: boolean;
+  price?: string;
 }
 
 // Создать принтер
@@ -43,6 +44,26 @@ export const createPrinter = async (req: Request, res: Response) => {
       return res.status(409).json({ error: 'Принтер с такой комбинацией vendor и model уже существует' });
     }
 
+    // Определяем тип прайса и получаем его ID
+    let priceId: string | null = null;
+    try {
+      const priceType = determinePrinterPriceType(
+        data.device?.trim(),
+        data.type?.trim(),
+        data.format?.trim(),
+        data.capacity
+      );
+      
+      if (priceType) {
+        priceId = await getPrinterPriceId(priceType);
+        if (priceId) {
+          console.log(`✓ Найден прайс для принтера ${data.vendor} ${data.model}: ${priceType}`);
+        }
+      }
+    } catch (priceError: any) {
+      console.error('Ошибка при определении прайса для принтера:', priceError.message);
+    }
+
     const printer = new PrinterModel({
       vendor: data.vendor.trim(),
       model: data.model.trim(),
@@ -51,49 +72,12 @@ export const createPrinter = async (req: Request, res: Response) => {
       format: data.format?.trim() || undefined,
       capacity: data.capacity || undefined,
       speed: data.speed || undefined,
-      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
+      price: priceId || undefined,
     });
 
     const savedPrinter = await printer.save();
     const printerObj = savedPrinter.toObject() as any;
-    const printerId = savedPrinter._id.toString();
-
-    // Создаем прайс для принтера, если указаны необходимые параметры
-    try {
-      const priceData = await getPrinterPrice(
-        data.device?.trim(),
-        data.type?.trim(),
-        data.format?.trim(),
-        data.capacity
-      );
-
-      if (priceData) {
-        // Проверяем, не существует ли уже прайс для этого принтера
-        const existingPrice = await PriceModel.findOne({ printerId });
-
-        if (!existingPrice) {
-          const price = new PriceModel({
-            diagnostics: priceData.diagnostics,
-            TO: priceData.TO,
-            rollers: priceData.rollers,
-            drum: priceData.drum,
-            laser: priceData.laser,
-            therm: priceData.therm,
-            reducer: priceData.reducer,
-            scaner: priceData.scaner || undefined,
-            adf: priceData.adf || undefined,
-            duplex: priceData.duplex,
-            electronics: priceData.electronics,
-            printerId: printerId,
-          });
-
-          await price.save();
-          console.log(`✅ Создан прайс для принтера ${data.vendor} ${data.model}`);
-        }
-      }
-    } catch (priceError: any) {
-      console.error('Ошибка при создании прайса для принтера:', priceError.message);
-    }
 
     res.status(201).json({
       success: true,
@@ -155,8 +139,19 @@ export const getPrinterByID = async (req: Request, res: Response) => {
     // Получаем фото для принтера
     const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
     
+    // Получаем прайс, если он указан
+    let priceTemplate = null;
+    if (printer.price) {
+      try {
+        priceTemplate = await PrinterPriceTemplateModel.findById(printer.price).lean();
+      } catch (error) {
+        console.error('Error fetching price template:', error);
+      }
+    }
+    
     const printerObj = printer.toObject() as any;
     printerObj.photo = photo || null;
+    printerObj.priceTemplate = priceTemplate;
 
     res.status(200).json({
       success: true,
@@ -228,27 +223,57 @@ export const updatePrinter = async (req: Request, res: Response) => {
       existingPrinter.public = data.public === true || String(data.public).toLowerCase() === 'true';
     }
 
+    // Если price передан явно, используем его
+    if (data.price !== undefined) {
+      if (data.price === null || data.price === '') {
+        existingPrinter.price = undefined;
+      } else {
+        existingPrinter.price = data.price;
+      }
+    } else if (data.device !== undefined || data.type !== undefined || data.format !== undefined || data.capacity !== undefined) {
+      // Обновляем прайс автоматически, если изменились параметры, влияющие на него
+      try {
+        const priceType = determinePrinterPriceType(
+          existingPrinter.device,
+          existingPrinter.type,
+          existingPrinter.format,
+          existingPrinter.capacity
+        );
+        
+        if (priceType) {
+          const priceId = await getPrinterPriceId(priceType);
+          if (priceId) {
+            existingPrinter.price = priceId;
+          }
+        } else {
+          existingPrinter.price = undefined;
+        }
+      } catch (priceError: any) {
+        console.error('Ошибка при обновлении прайса для принтера:', priceError.message);
+      }
+    }
+
     const savedPrinter = await existingPrinter.save();
     const printerObj = savedPrinter.toObject() as any;
     
     // Получаем фото для принтера
     const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
     printerObj.photo = photo || null;
+    
+    // Получаем прайс, если он указан
+    let priceTemplate = null;
+    if (printerObj.price) {
+      try {
+        priceTemplate = await PrinterPriceTemplateModel.findById(printerObj.price).lean();
+      } catch (error) {
+        console.error('Error fetching price template:', error);
+      }
+    }
+    printerObj.priceTemplate = priceTemplate;
 
     res.status(200).json({
       success: true,
-      data: {
-        id: printerObj._id,
-        vendor: printerObj.vendor,
-        model: printerObj.model,
-        device: printerObj.device,
-        type: printerObj.type,
-        format: printerObj.format,
-        capacity: printerObj.capacity,
-        speed: printerObj.speed,
-        createdAt: printerObj.createdAt,
-        updatedAt: printerObj.updatedAt
-      },
+      data: printerObj,
       message: 'Принтер успешно обновлен'
     });
 
@@ -374,10 +399,18 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     const photos = await PhotoModel.find({ printerId: { $in: printerIds } }).lean();
     const photoMap = new Map(photos.map(p => [p.printerId, p]));
 
-    // Добавляем фото к каждому принтеру
+    // Получаем прайсы для всех принтеров
+    const priceIds = printersData
+      .map(p => p.price)
+      .filter(priceId => priceId) as string[];
+    const priceTemplates = await PrinterPriceTemplateModel.find({ _id: { $in: priceIds } }).lean();
+    const priceMap = new Map(priceTemplates.map(p => [p._id.toString(), p]));
+
+    // Добавляем фото и прайсы к каждому принтеру
     let printers = printersData.map(printer => ({
       ...printer,
-      photo: photoMap.get(printer._id.toString()) || null
+      photo: photoMap.get(printer._id.toString()) || null,
+      priceTemplate: printer.price ? priceMap.get(printer.price) || null : null
     }));
 
     // Фильтрация по наличию картинки
@@ -428,6 +461,42 @@ export const getPrinterVendors = async (req: Request, res: Response) => {
     });
   } catch (error: any) {
     console.error('Get printer vendors error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+// Поиск моделей принтеров по частичному совпадению
+export const searchPrinterModels = async (req: Request, res: Response) => {
+  try {
+    const query = (req.query.q as string || '').trim();
+    const limit = Math.min(20, Math.max(1, parseInt(req.query.limit as string) || 10));
+
+    if (!query) {
+      res.status(200).json({
+        success: true,
+        data: [],
+      });
+      return;
+    }
+
+    const escapeRegex = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedQuery = escapeRegex(query);
+
+    const allModels = await PrinterModel.distinct('model', {
+      model: { $regex: escapedQuery, $options: 'i' }
+    });
+
+    const sortedModels = allModels.filter(Boolean).sort().slice(0, limit);
+
+    res.status(200).json({
+      success: true,
+      data: sortedModels,
+    });
+  } catch (error: any) {
+    console.error('Search printer models error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined

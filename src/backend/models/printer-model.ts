@@ -36,6 +36,10 @@ export const printerSchema = new Schema<IPrinterSchema>(
       default: true,
       required: false,
     },
+    price: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: true,

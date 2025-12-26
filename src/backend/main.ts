@@ -159,6 +159,12 @@ import { connect, set } from "mongoose";
     
     const { laptopPrices } = await import("./routes/laptop-prices-route");
     app.use("/laptop-prices", laptopPrices);
+    
+    const { printerPriceTemplates } = await import("./routes/printer-price-templates-route");
+    app.use("/printer-price-templates", printerPriceTemplates);
+    
+    const { laptopPriceTemplates } = await import("./routes/laptop-price-templates-route");
+    app.use("/laptop-price-templates", laptopPriceTemplates);
 
     // Раздаем статические файлы из dist/client (CSS, JS, изображения)
     app.use(

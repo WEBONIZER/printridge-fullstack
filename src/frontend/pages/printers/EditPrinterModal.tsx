@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Printer, Cartridge, updatePrinter, uploadImage, updateImage, getPaginatedCartridges, getCartridgesByPrinterId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
+import { PrinterPriceSection } from "./PrinterPriceSection";
 import styles from "./printers.module.css";
 
 interface EditPrinterModalProps {
@@ -21,6 +22,7 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     speed: printer.speed || "",
     public: printer.public !== false,
   });
+  const [selectedPriceId, setSelectedPriceId] = useState<string | null>((printer as any).price || null);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
   const [currentImageSrc, setCurrentImageSrc] = useState<string | null>(null);
@@ -134,6 +136,7 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
         capacity: formData.capacity ? parseFloat(formData.capacity as any) : undefined,
         speed: formData.speed ? parseFloat(formData.speed as any) : undefined,
         public: formData.public,
+        price: selectedPriceId || undefined,
       });
 
       if (imageFile) {
@@ -169,6 +172,15 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
             onFormDataChange={(data) => setFormData({ ...formData, ...data })}
             imagePreview={currentImageSrc}
             onImageChange={handleImageChange}
+          />
+
+          <PrinterPriceSection
+            currentPriceId={(printer as any).price}
+            device={formData.device}
+            type={formData.type}
+            format={formData.format}
+            capacity={formData.capacity ? parseFloat(formData.capacity as any) : undefined}
+            onPriceChange={setSelectedPriceId}
           />
 
           <div className={styles.formGroup}>

@@ -1,8 +1,27 @@
-import { Schema, model } from "mongoose";
-import { IPriceSchema } from "../../utils/types";
+import mongoose, { Schema, model } from "mongoose";
 
-export const priceSchema = new Schema<IPriceSchema>(
+export interface IPrinterPriceTemplateSchema {
+  priceType: string; // например "monoPrinter10k40kA4"
+  diagnostics: number;
+  TO: number;
+  rollers: number;
+  drum: number;
+  laser: number;
+  therm: number;
+  reducer: number;
+  scaner?: number | null;
+  adf?: number | null;
+  duplex: number;
+  electronics: number;
+}
+
+export const printerPriceTemplateSchema = new Schema<IPrinterPriceTemplateSchema>(
   {
+    priceType: {
+      type: String,
+      required: true,
+      unique: true,
+    },
     diagnostics: {
       type: Number,
       required: true,
@@ -47,18 +66,11 @@ export const priceSchema = new Schema<IPriceSchema>(
       type: Number,
       required: true,
     },
-    printerId: {
-      type: String,
-      required: true,
-    },
   },
   {
     timestamps: true,
   }
 );
 
-// Уникальный индекс на printerId (один прайс на один принтер)
-priceSchema.index({ printerId: 1 }, { unique: true });
-
-export const PriceModel = model<IPriceSchema>("printridge-printers-price", priceSchema);
+export const PrinterPriceTemplateModel = model<IPrinterPriceTemplateSchema>("printridge-printer-price-template", printerPriceTemplateSchema);
 

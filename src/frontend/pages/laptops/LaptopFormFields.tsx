@@ -1,4 +1,5 @@
 import React from "react";
+import { ModelAutocomplete } from "../../components/ModelAutocomplete";
 import styles from "./laptops.module.css";
 
 interface LaptopFormData {
@@ -20,6 +21,8 @@ interface LaptopFormFieldsProps {
   onFormDataChange: (data: Partial<LaptopFormData>) => void;
   imagePreview?: string | null;
   onImageChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  isCreateMode?: boolean;
+  onSearchModels?: (query: string) => Promise<string[]>;
 }
 
 export const LaptopFormFields: React.FC<LaptopFormFieldsProps> = ({
@@ -27,17 +30,29 @@ export const LaptopFormFields: React.FC<LaptopFormFieldsProps> = ({
   onFormDataChange,
   imagePreview,
   onImageChange,
+  isCreateMode = false,
+  onSearchModels,
 }) => {
   return (
     <>
       <div className={styles.formGroup}>
         <label>Модель *</label>
-        <input
-          type="text"
-          value={formData.model}
-          onChange={(e) => onFormDataChange({ model: e.target.value })}
-          required
-        />
+        {isCreateMode && onSearchModels ? (
+          <ModelAutocomplete
+            value={formData.model}
+            onChange={(value) => onFormDataChange({ model: value })}
+            onSearch={onSearchModels}
+            placeholder="Введите модель"
+            required
+          />
+        ) : (
+          <input
+            type="text"
+            value={formData.model}
+            onChange={(e) => onFormDataChange({ model: e.target.value })}
+            required
+          />
+        )}
       </div>
       <div className={styles.formGroup}>
         <label>Серия</label>

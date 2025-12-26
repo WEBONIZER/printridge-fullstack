@@ -7,6 +7,7 @@ import {
   getPaginatedCartridges,
   getCartridgeVendors,
   toggleCartridgePublicStatus,
+  searchCartridgeModels,
 } from "../controllers/cartridges-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 import { processImageMiddleware, uploadSingle } from '../../utils/functions'
@@ -35,6 +36,7 @@ export const cartridges = Router()
   // Статические GET роуты
   .get("/vendors", jwtMiddleware, getCartridgeVendors)
   .get("/paginated", jwtMiddleware, getPaginatedCartridges)
+  .get("/search-models", jwtMiddleware, searchCartridgeModels)
 
   // Статические POST роуты
   .post("/all-items", jwtMiddleware, createCartridge)

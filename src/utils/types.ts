@@ -36,6 +36,7 @@ export interface IPrinterSchema {
     capacity?: number;
     speed?: number;
     public?: boolean;
+    price?: string; // ID прайса из printer-price-template
 }
 
 // Совместимость устройств (связь картридж-принтер)
@@ -116,6 +117,7 @@ export interface ILaptopSchema {
     ram?: number;
     ramType?: string;
     public?: boolean;
+    price?: string; // ID прайса из laptop-price-template
 }
 
 // Модель прайса для ноутбуков
@@ -131,4 +133,37 @@ export interface ILaptopPriceSchema {
     ramReplacement: number;
     electronics: number;
     laptopId: string;
+}
+
+// Прайс-шаблон для принтеров
+export interface IPrinterPriceTemplateSchema {
+    _id?: string;
+    priceType: string;
+    diagnostics: number;
+    TO: number;
+    rollers: number;
+    drum: number;
+    laser: number;
+    therm: number;
+    reducer: number;
+    scaner?: number | null;
+    adf?: number | null;
+    duplex: number;
+    electronics: number;
+}
+
+// Прайс-шаблон для ноутбуков
+export interface ILaptopPriceTemplateSchema {
+    _id?: string;
+    priceType: string;
+    diagnostics: number;
+    TO: number;
+    thermalPaste: number;
+    installOS: number;
+    installPO: number;
+    antivirus: number;
+    matrixReplacement: number;
+    batteryReplacement: number;
+    ramReplacement: number;
+    electronics: number;
 }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility } from "../../utils/api";
+import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility, searchCartridgeModels } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import styles from "./cartridges.module.css";
@@ -55,6 +55,16 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setImageFile(e.target.files?.[0] || null);
+  };
+
+  const handleSearchModels = async (query: string): Promise<string[]> => {
+    try {
+      const response = await searchCartridgeModels(query);
+      return response.data || [];
+    } catch (error) {
+      console.error("Ошибка поиска моделей:", error);
+      return [];
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -123,6 +133,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
             onFormDataChange={(data) => setFormData({ ...formData, ...data })}
             onImageChange={handleImageChange}
             isCreateMode={true}
+            onSearchModels={handleSearchModels}
           />
 
           <div className={styles.linkedItems}>

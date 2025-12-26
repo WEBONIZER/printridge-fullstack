@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import { LaptopModel } from "../models/laptop-model";
-import { LaptopPriceModel } from "../models/laptop-price-model";
 import { PhotoModel } from "../models/printridge-photo-model";
+import { LaptopPriceTemplateModel } from "../models/laptop-price-template-model";
 import { ILaptopSchema } from "../../utils/types";
-import { getLaptopPrice } from "../utils/price-helpers";
+import { determineLaptopPriceType, getLaptopPriceId } from "../utils/device-price-helpers";
 
 interface LaptopData {
   model: string;
@@ -17,6 +17,7 @@ interface LaptopData {
   ram?: number;
   ramType?: string;
   public?: boolean;
+  price?: string;
 }
 
 // Создать ноутбук
@@ -45,6 +46,21 @@ export const createLaptop = async (req: Request, res: Response) => {
       return res.status(409).json({ error: 'Ноутбук с такой комбинацией vendor и model уже существует' });
     }
 
+    // Определяем тип прайса и получаем его ID
+    let priceId: string | null = null;
+    try {
+      const priceType = determineLaptopPriceType(data.display);
+      
+      if (priceType) {
+        priceId = await getLaptopPriceId(priceType);
+        if (priceId) {
+          console.log(`✓ Найден прайс для ноутбука ${data.vendor} ${data.model}: ${priceType}`);
+        }
+      }
+    } catch (priceError: any) {
+      console.error('Ошибка при определении прайса для ноутбука:', priceError.message);
+    }
+
     const laptop = new LaptopModel({
       model: data.model.trim(),
       series: data.series?.trim() || undefined,
@@ -56,43 +72,12 @@ export const createLaptop = async (req: Request, res: Response) => {
       video: data.video?.trim() || undefined,
       ram: data.ram || undefined,
       ramType: data.ramType?.trim() || undefined,
-      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
+      price: priceId || undefined,
     });
 
     const savedLaptop = await laptop.save();
     const laptopObj = savedLaptop.toObject() as any;
-    const laptopId = savedLaptop._id.toString();
-
-    // Создаем прайс для ноутбука, если указана диагональ
-    try {
-      const priceData = await getLaptopPrice(data.display);
-
-      if (priceData) {
-        // Проверяем, не существует ли уже прайс для этого ноутбука
-        const existingPrice = await LaptopPriceModel.findOne({ laptopId });
-
-        if (!existingPrice) {
-          const price = new LaptopPriceModel({
-            diagnostics: priceData.diagnostics,
-            TO: priceData.TO,
-            thermalPaste: priceData.thermalPaste,
-            installOS: priceData.installOS,
-            installPO: priceData.installPO,
-            antivirus: priceData.antivirus,
-            matrixReplacement: priceData.matrixReplacement,
-            batteryReplacement: priceData.batteryReplacement,
-            ramReplacement: priceData.ramReplacement,
-            electronics: priceData.electronics,
-            laptopId: laptopId,
-          });
-
-          await price.save();
-          console.log(`✅ Создан прайс для ноутбука ${data.vendor} ${data.model}`);
-        }
-      }
-    } catch (priceError: any) {
-      console.error('Ошибка при создании прайса для ноутбука:', priceError.message);
-    }
 
     res.status(201).json({
       success: true,
@@ -146,8 +131,19 @@ export const getLaptopByID = async (req: Request, res: Response) => {
     // Получаем фото для ноутбука
     const photo = await PhotoModel.findOne({ laptopId: laptopId }).lean();
     
+    // Получаем прайс, если он указан
+    let priceTemplate = null;
+    if (laptop.price) {
+      try {
+        priceTemplate = await LaptopPriceTemplateModel.findById(laptop.price).lean();
+      } catch (error) {
+        console.error('Error fetching price template:', error);
+      }
+    }
+    
     const laptopObj = laptop.toObject() as any;
     laptopObj.photo = photo || null;
+    laptopObj.priceTemplate = priceTemplate;
 
     res.status(200).json({
       success: true,
@@ -222,30 +218,52 @@ export const updateLaptop = async (req: Request, res: Response) => {
       existingLaptop.public = data.public === true || String(data.public).toLowerCase() === 'true';
     }
 
+    // Если price передан явно, используем его
+    if (data.price !== undefined) {
+      if (data.price === null || data.price === '') {
+        existingLaptop.price = undefined;
+      } else {
+        existingLaptop.price = data.price;
+      }
+    } else if (data.display !== undefined) {
+      // Обновляем прайс автоматически, если изменилась диагональ
+      try {
+        const priceType = determineLaptopPriceType(existingLaptop.display);
+        
+        if (priceType) {
+          const priceId = await getLaptopPriceId(priceType);
+          if (priceId) {
+            existingLaptop.price = priceId;
+          }
+        } else {
+          existingLaptop.price = undefined;
+        }
+      } catch (priceError: any) {
+        console.error('Ошибка при обновлении прайса для ноутбука:', priceError.message);
+      }
+    }
+
     const savedLaptop = await existingLaptop.save();
     const laptopObj = savedLaptop.toObject() as any;
     
     // Получаем фото для ноутбука
     const photo = await PhotoModel.findOne({ laptopId: laptopId }).lean();
     laptopObj.photo = photo || null;
+    
+    // Получаем прайс, если он указан
+    let priceTemplate = null;
+    if (laptopObj.price) {
+      try {
+        priceTemplate = await LaptopPriceTemplateModel.findById(laptopObj.price).lean();
+      } catch (error) {
+        console.error('Error fetching price template:', error);
+      }
+    }
+    laptopObj.priceTemplate = priceTemplate;
 
     res.status(200).json({
       success: true,
-      data: {
-        id: laptopObj._id,
-        model: laptopObj.model,
-        series: laptopObj.series,
-        vendor: laptopObj.vendor,
-        display: laptopObj.display,
-        processor: laptopObj.processor,
-        processorVendor: laptopObj.processorVendor,
-        processorName: laptopObj.processorName,
-        video: laptopObj.video,
-        ram: laptopObj.ram,
-        ramType: laptopObj.ramType,
-        createdAt: laptopObj.createdAt,
-        updatedAt: laptopObj.updatedAt
-      },
+      data: laptopObj,
       message: 'Ноутбук успешно обновлен'
     });
 
@@ -353,10 +371,18 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
     const photos = await PhotoModel.find({ laptopId: { $in: laptopIds } }).lean();
     const photoMap = new Map(photos.map(p => [p.laptopId, p]));
 
-    // Добавляем фото к каждому ноутбуку
+    // Получаем прайсы для всех ноутбуков
+    const priceIds = laptopsData
+      .map(l => l.price)
+      .filter(priceId => priceId) as string[];
+    const priceTemplates = await LaptopPriceTemplateModel.find({ _id: { $in: priceIds } }).lean();
+    const priceMap = new Map(priceTemplates.map(p => [p._id.toString(), p]));
+
+    // Добавляем фото и прайсы к каждому ноутбуку
     let laptops = laptopsData.map(laptop => ({
       ...laptop,
-      photo: photoMap.get(laptop._id.toString()) || null
+      photo: photoMap.get(laptop._id.toString()) || null,
+      priceTemplate: laptop.price ? priceMap.get(laptop.price) || null : null
     }));
 
     // Фильтрация по наличию картинки
@@ -388,6 +414,42 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     console.error('Get paginated laptops error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+// Поиск моделей ноутбуков по частичному совпадению
+export const searchLaptopModels = async (req: Request, res: Response) => {
+  try {
+    const query = (req.query.q as string || '').trim();
+    const limit = Math.min(20, Math.max(1, parseInt(req.query.limit as string) || 10));
+
+    if (!query) {
+      res.status(200).json({
+        success: true,
+        data: [],
+      });
+      return;
+    }
+
+    const escapeRegex = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedQuery = escapeRegex(query);
+
+    const allModels = await LaptopModel.distinct('model', {
+      model: { $regex: escapedQuery, $options: 'i' }
+    });
+
+    const sortedModels = allModels.filter(Boolean).sort().slice(0, limit);
+
+    res.status(200).json({
+      success: true,
+      data: sortedModels,
+    });
+  } catch (error: any) {
+    console.error('Search laptop models error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined

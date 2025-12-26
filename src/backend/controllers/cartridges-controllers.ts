@@ -365,6 +365,52 @@ export const getCartridgeVendors = async (
   }
 };
 
+// Поиск моделей картриджей по частичному совпадению
+export const searchCartridgeModels = async (
+  req: any,
+  res: Response,
+  next: NextFunction,
+): Promise<void> => {
+  try {
+    const query = (req.query.q as string || '').trim();
+    const limit = Math.min(20, Math.max(1, parseInt(req.query.limit as string) || 10));
+
+    if (!query) {
+      if (!res.headersSent) {
+        res.status(200).json({
+          success: true,
+          data: [],
+        });
+      }
+      return;
+    }
+
+    const escapeRegex = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escapedQuery = escapeRegex(query);
+
+    const allModels = await CartridgeModel.distinct('modelCart', {
+      modelCart: { $regex: escapedQuery, $options: 'i' }
+    });
+
+    const sortedModels = allModels.filter(Boolean).sort().slice(0, limit);
+
+    if (res.headersSent) return;
+
+    res.status(200).json({
+      success: true,
+      data: sortedModels,
+    });
+  } catch (error: any) {
+    console.error("❌ Error searching cartridge models:", error);
+    if (!res.headersSent) {
+      res.status(500).json({
+        error: 'Внутренняя ошибка сервера',
+        details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      });
+    }
+  }
+};
+
 export const toggleCartridgePublicStatus = async (
   req: Request,
   res: Response,

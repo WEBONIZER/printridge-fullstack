@@ -1,4 +1,5 @@
 import React from "react";
+import { ModelAutocomplete } from "../../components/ModelAutocomplete";
 import styles from "./printers.module.css";
 
 interface PrinterFormData {
@@ -18,6 +19,7 @@ interface PrinterFormFieldsProps {
   imagePreview?: string | null;
   onImageChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isCreateMode?: boolean;
+  onSearchModels?: (query: string) => Promise<string[]>;
 }
 
 export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
@@ -26,6 +28,7 @@ export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
   imagePreview,
   onImageChange,
   isCreateMode = false,
+  onSearchModels,
 }) => {
   return (
     <>
@@ -40,12 +43,22 @@ export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
       </div>
       <div className={styles.formGroup}>
         <label>Модель *</label>
-        <input
-          type="text"
-          value={formData.model}
-          onChange={(e) => onFormDataChange({ model: e.target.value })}
-          required
-        />
+        {isCreateMode && onSearchModels ? (
+          <ModelAutocomplete
+            value={formData.model}
+            onChange={(value) => onFormDataChange({ model: value })}
+            onSearch={onSearchModels}
+            placeholder="Введите модель"
+            required
+          />
+        ) : (
+          <input
+            type="text"
+            value={formData.model}
+            onChange={(e) => onFormDataChange({ model: e.target.value })}
+            required
+          />
+        )}
       </div>
       <div className={styles.formGroup}>
         <label>Устройство</label>

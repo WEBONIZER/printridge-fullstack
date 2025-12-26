@@ -6,12 +6,14 @@ import {
   updateLaptop,
   getPaginatedLaptops,
   toggleLaptopPublicStatus,
+  searchLaptopModels,
 } from "../controllers/laptops-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 
 export const laptops = Router()
   // Статические GET роуты
   .get("/paginated", jwtMiddleware, getPaginatedLaptops)
+  .get("/search-models", jwtMiddleware, searchLaptopModels)
 
   // Статические POST роуты
   .post("/", jwtMiddleware, createLaptop)

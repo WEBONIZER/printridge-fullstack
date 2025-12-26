@@ -48,6 +48,10 @@ export const laptopSchema = new Schema<ILaptopSchema>(
       default: true,
       required: false,
     },
+    price: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: true,

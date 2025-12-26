@@ -1,5 +1,5 @@
 import apiClient from "./axios";
-import { CartridgeData, IPrinterSchema, IExampleSchema, ICompatibilitySchema, ILaptopSchema } from "../../utils/types";
+import { CartridgeData, IPrinterSchema, IExampleSchema, ICompatibilitySchema, ILaptopSchema, IPrinterPriceTemplateSchema, ILaptopPriceTemplateSchema } from "../../utils/types";
 
 // ==================== TYPES ====================
 
@@ -96,6 +96,14 @@ export const getPaginatedCartridges = async (params?: PaginationParams & {
 // Получить все уникальные производители картриджей
 export const getCartridgeVendors = async () => {
   const response = await apiClient.get<{ success: boolean; data: string[] }>("/cartridges/vendors");
+  return response.data;
+};
+
+// Поиск моделей картриджей
+export const searchCartridgeModels = async (query: string, limit: number = 10) => {
+  const response = await apiClient.get<{ success: boolean; data: string[] }>("/cartridges/search-models", {
+    params: { q: query, limit },
+  });
   return response.data;
 };
 
@@ -380,6 +388,14 @@ export const getPrinterVendors = async () => {
   return response.data;
 };
 
+// Поиск моделей принтеров
+export const searchPrinterModels = async (query: string, limit: number = 10) => {
+  const response = await apiClient.get<{ success: boolean; data: string[] }>("/printers/search-models", {
+    params: { q: query, limit },
+  });
+  return response.data;
+};
+
 // Создать принтер
 export const createPrinter = async (data: IPrinterSchema) => {
   const response = await apiClient.post<BaseResponse<Printer>>("/printers/", data);
@@ -506,5 +522,53 @@ export const deleteLaptop = async (laptopId: string) => {
 // Изменить статус public для ноутбука
 export const toggleLaptopPublicStatus = async (laptopId: string, publicStatus: boolean) => {
   const response = await apiClient.patch<BaseResponse<Laptop>>(`/laptops/${laptopId}/public`, { public: publicStatus });
+  return response.data;
+};
+
+// Поиск моделей ноутбуков
+export const searchLaptopModels = async (query: string, limit: number = 10) => {
+  const response = await apiClient.get<{ success: boolean; data: string[] }>("/laptops/search-models", {
+    params: { q: query, limit },
+  });
+  return response.data;
+};
+
+// ==================== PRINTER PRICE TEMPLATES API ====================
+
+// Получить все прайс-шаблоны принтеров
+export const getAllPrinterPriceTemplates = async () => {
+  const response = await apiClient.get<{ success: boolean; data: IPrinterPriceTemplateSchema[] }>("/printer-price-templates/");
+  return response.data;
+};
+
+// Получить прайс-шаблон принтера по ID
+export const getPrinterPriceTemplateById = async (templateId: string) => {
+  const response = await apiClient.get<BaseResponse<IPrinterPriceTemplateSchema>>(`/printer-price-templates/${templateId}`);
+  return response.data;
+};
+
+// Обновить прайс-шаблон принтера
+export const updatePrinterPriceTemplate = async (templateId: string, data: Partial<IPrinterPriceTemplateSchema>) => {
+  const response = await apiClient.put<BaseResponse<IPrinterPriceTemplateSchema>>(`/printer-price-templates/${templateId}`, data);
+  return response.data;
+};
+
+// ==================== LAPTOP PRICE TEMPLATES API ====================
+
+// Получить все прайс-шаблоны ноутбуков
+export const getAllLaptopPriceTemplates = async () => {
+  const response = await apiClient.get<{ success: boolean; data: ILaptopPriceTemplateSchema[] }>("/laptop-price-templates/");
+  return response.data;
+};
+
+// Получить прайс-шаблон ноутбука по ID
+export const getLaptopPriceTemplateById = async (templateId: string) => {
+  const response = await apiClient.get<BaseResponse<ILaptopPriceTemplateSchema>>(`/laptop-price-templates/${templateId}`);
+  return response.data;
+};
+
+// Обновить прайс-шаблон ноутбука
+export const updateLaptopPriceTemplate = async (templateId: string, data: Partial<ILaptopPriceTemplateSchema>) => {
+  const response = await apiClient.put<BaseResponse<ILaptopPriceTemplateSchema>>(`/laptop-price-templates/${templateId}`, data);
   return response.data;
 };

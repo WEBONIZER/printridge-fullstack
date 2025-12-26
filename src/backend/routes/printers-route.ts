@@ -7,6 +7,7 @@ import {
   getPaginatedPrinters,
   getPrinterVendors,
   togglePrinterPublicStatus,
+  searchPrinterModels,
 } from "../controllers/printers-controllers";
 import { jwtMiddleware } from "../middlewares/jwt-middleware";
 
@@ -14,6 +15,7 @@ export const printers = Router()
   // Статические GET роуты
   .get("/vendors", jwtMiddleware, getPrinterVendors)
   .get("/paginated", jwtMiddleware, getPaginatedPrinters)
+  .get("/search-models", jwtMiddleware, searchPrinterModels)
 
   // Статические POST роуты
   .post("/", jwtMiddleware, createPrinter)
