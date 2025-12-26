@@ -55,12 +55,17 @@ import { connect, set } from "mongoose";
     const express = (await import("express")).default;
     const app = express();
 
-    // Настройка CORS для разработки (должно быть ПЕРВЫМ middleware)
+    // Настройка CORS (должно быть ПЕРВЫМ middleware)
     app.use((req, res, next) => {
       const origin = req.headers.origin;
+      const allowedOrigins = [
+        'http://localhost',
+        'http://127.0.0.1',
+        'https://printridge.ru',
+      ];
       
-      // Разрешаем запросы с localhost (любого порта) и 127.0.0.1
-      if (origin && (origin.includes('localhost') || origin.includes('127.0.0.1'))) {
+      // Разрешаем запросы с разрешенных доменов
+      if (origin && allowedOrigins.some(allowed => origin.includes(allowed))) {
         res.setHeader('Access-Control-Allow-Origin', origin);
         res.setHeader('Access-Control-Allow-Credentials', 'true');
       }
