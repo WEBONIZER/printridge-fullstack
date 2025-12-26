@@ -1,28 +1,25 @@
 import styles from './image-repair-box.module.css'
-import { useParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer"
 
-const ImageRapairBox = () => {
-
-    const { model, vendor } = useParams()
+const ImageRepairBox = ({ printer }) => {
 
     const { ref } = useInView({
-        threshold: 0.2, // Элемент грузится только тогда, когда он на 20% видим
-        triggerOnce: true // Если элемент уже был загружен ранее, он не размонтируется и не грузится снова
-      });
+        threshold: 0.2,
+        triggerOnce: true
+    });
 
-    const img = `https://storage.yandexcloud.net/printridge/repair/${vendor}/${model}.png`;
+    const img = printer?.photo?.src || (printer ? `https://storage.yandexcloud.net/printridge/repair/${printer.vendor}/${printer.model}.png` : null);
+
+    if (!img) return null;
 
     return (
-        img && (
-            <img
-                className={styles.image}
-                src={img}
-                alt={`Ремонт ${model}`}
-                ref={ref}
-            />
-        )
+        <img
+            className={styles.image}
+            src={img}
+            alt={`Ремонт ${printer?.model || ''}`}
+            ref={ref}
+        />
     )
 }
 
-export default ImageRapairBox
+export default ImageRepairBox

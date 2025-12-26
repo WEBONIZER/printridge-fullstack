@@ -2,10 +2,6 @@ import { resolve } from "path";
 import { NextFunction, Request, Response } from "express";
 import { readFileSync } from "fs";
 import { Helmet } from "react-helmet";
-import { laptopRepairPrice } from "../frontend/utils/laptops-price";
-import { refillData } from "../frontend/utils/refill";
-import { repairPrintersPrice } from "../frontend/utils/repair-price";
-import { pathsToRender } from "../frontend/utils/routes";
 import { render } from "../../dist/server/entry-server";
 import { config } from "dotenv";
 import { networkInterfaces } from "os";
@@ -166,6 +162,10 @@ import { connect, set } from "mongoose";
     const { laptopPriceTemplates } = await import("./routes/laptop-price-templates-route");
     app.use("/laptop-price-templates", laptopPriceTemplates);
 
+    // Роут для sitemap.xml (ДО статических файлов, чтобы не перехватывался)
+    const { generateSitemap } = await import("./controllers/sitemap-controller");
+    app.get("/sitemap.xml", generateSitemap);
+
     // Раздаем статические файлы из dist/client (CSS, JS, изображения)
     app.use(
       (await import("serve-static")).default(resolve("dist/client"), {
@@ -209,52 +209,20 @@ import { connect, set } from "mongoose";
     };
 
     // Middleware: блокируем запросы с query параметрами (например: /page?id=123)
-    // Исключаем API роуты из этой проверки
+    // Исключаем API роуты и sitemap из этой проверки
     app.use((req: Request, res: Response, next: () => void) => {
-      if (req.originalUrl.includes("?") && !req.originalUrl.startsWith("/cartridges")) {
+      if (req.originalUrl.includes("?") && !req.originalUrl.startsWith("/cartridges") && !req.originalUrl.startsWith("/sitemap.xml")) {
         return render404Page(req, res);
       }
       next();
     });
 
     // Регистрируем основные маршруты из routes.js
+    const { pathsToRender } = await import("../frontend/utils/routes");
     pathsToRender.forEach((path) => app.get(path, renderPage));
 
-    // Динамические маршруты для заправки картриджей: /refill/:vendor/:model
-    refillData.forEach((cart) => {
-      const path = `/refill/${cart.vendor}/${cart.modelCart}`;
-      app.get(path, (req: Request, res: Response, next: NextFunction) => {
-        if (cart.vendor && cart.modelCart) {
-          renderPage(req, res, next);
-        } else {
-          render404Page(req, res);
-        }
-      });
-    });
-
-    // Динамические маршруты для ремонта принтеров: /repair/:vendor/:model
-    repairPrintersPrice.forEach((printer) => {
-      const path = `/repair/${printer.vendor}/${printer.model}`;
-      app.get(path, (req: Request, res: Response, next: NextFunction) => {
-        if (printer.vendor && printer.model) {
-          renderPage(req, res, next);
-        } else {
-          render404Page(req, res);
-        }
-      });
-    });
-
-    // Динамические маршруты для ремонта ноутбуков: /remont-noutbukov/:vendor/:model
-    laptopRepairPrice.forEach((laptop) => {
-      const path = `/remont-noutbukov/${laptop.vendor}/${laptop.model}`;
-      app.get(path, (req: Request, res: Response, next: NextFunction) => {
-        if (laptop.vendor && laptop.model) {
-          renderPage(req, res, next);
-        } else {
-          render404Page(req, res);
-        }
-      });
-    });
+    // Динамические маршруты теперь обрабатываются через React Router на клиенте
+    // SSR маршруты для конкретных элементов больше не нужны, так как данные берутся из базы
 
     // Роуты для авторизации и профиля
     app.get("/login", renderPage);
@@ -266,7 +234,10 @@ import { connect, set } from "mongoose";
 
     // Запускаем сервер на порту из .env файла
     // Сервер слушает на всех интерфейсах (0.0.0.0)
-    app.listen(HTTP, "0.0.0.0", () => {
+    // Увеличиваем timeout для загрузки больших файлов (видео)
+    const server = app.listen(HTTP, "0.0.0.0", () => {
+      // Устанавливаем timeout в 10 минут для загрузки больших файлов
+      server.timeout = 600000;
       // Находим внешний IPv4 адрес и выводим в консоль
       const address = Object.values(networkInterfaces())
         .flat()

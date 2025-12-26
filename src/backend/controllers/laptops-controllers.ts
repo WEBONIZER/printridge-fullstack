@@ -2,7 +2,6 @@ import { Request, Response } from "express";
 import { LaptopModel } from "../models/laptop-model";
 import { PhotoModel } from "../models/printridge-photo-model";
 import { LaptopPriceTemplateModel } from "../models/laptop-price-template-model";
-import { ILaptopSchema } from "../../utils/types";
 import { determineLaptopPriceType, getLaptopPriceId } from "../utils/device-price-helpers";
 
 interface LaptopData {
@@ -184,7 +183,7 @@ export const updateLaptop = async (req: Request, res: Response) => {
     }
 
     if (data.model !== undefined) {
-      existingLaptop.model = data.model.trim();
+      existingLaptop.set('model', data.model.trim());
     }
     if (data.series !== undefined) {
       existingLaptop.series = data.series?.trim() || undefined;

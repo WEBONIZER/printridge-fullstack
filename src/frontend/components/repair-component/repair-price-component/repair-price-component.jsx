@@ -1,16 +1,17 @@
 import styles from './repair-price-component.module.css'
-import { useParams } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
+import { useParams, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
-const RepairPriceComponent = ({ data }) => {
+const RepairPriceComponent = ({ priceTemplate, printer }) => {
 
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
+    const { vendor, model } = useParams();
 
-    const { vendor, model } = useParams()
+    if (!priceTemplate) return null;
 
-    const img = `https://storage.yandexcloud.net/printridge/repair/${vendor}/${model}.png`;
+    const img = printer?.photo?.src || `https://storage.yandexcloud.net/printridge/repair/${vendor}/${model}.png`;
+    const deviceText = printer?.device === 'printer' ? 'принтера' : printer?.device === 'MFU' ? 'МФУ' : 'устройства';
 
     const schemaData = {
         "@context": "https://schema.org/",
@@ -44,13 +45,13 @@ const RepairPriceComponent = ({ data }) => {
         },
         "serviceOutput": {
             "@type": "Product",
-            "name": `Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}`,
+            "name": `Ремонт ${deviceText} ${vendor?.toUpperCase()} ${model?.toUpperCase()}`,
             "image": `${img}`,
-            "description": `Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${model.toUpperCase()}`,
+            "description": `Ремонт ${deviceText} ${model?.toUpperCase()}`,
             "offers": {
                 "@type": "Offer",
                 "priceCurrency": "RUB",
-                "price": data.price.diagnostics,
+                "price": priceTemplate.diagnostics || 0,
                 "url": `${canonicalUrl}`,
                 "priceValidUntil": new Date().toLocaleDateString(),
                 "availability": "https://schema.org/InStock"
@@ -64,27 +65,27 @@ const RepairPriceComponent = ({ data }) => {
                 <script type="application/ld+json">
                     {JSON.stringify(schemaData)}
                 </script>
-                <title>{`Ремонт ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Ремонт ${vendor.toUpperCase()} ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <title>{`Ремонт ${vendor?.toUpperCase()} ${model?.toUpperCase()} в Санкт-Петербурге`}</title>
+                <meta name="title" content={`Ремонт ${vendor?.toUpperCase()} ${model?.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
-                    content={`ремонт ${model.toUpperCase()}, ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, техническое обслуживание ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
+                    content={`ремонт ${model?.toUpperCase()}, ремонт ${deviceText} ${vendor?.toUpperCase()} ${model?.toUpperCase()}, техническое обслуживание ${deviceText} ${vendor?.toUpperCase()} ${model?.toUpperCase()}, в Санкт-Петербурге, в спб, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`ремонт ${vendor.toUpperCase()} ${model.toUpperCase()}
-                    Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}
-                    Диагностика ${data.price.diagnostics}
-                    ТО ${data.price.TO}
-                    Замена роликов ${data.price.rollers}
-                    Ремонт барабана ${data.price.drum}
-                    Ремонт термоблока (печки) ${data.price.therm}
-                    Ремонт электроники ${data.price.electronics}`}
+                    content={`ремонт ${vendor?.toUpperCase()} ${model?.toUpperCase()}
+                    Стоимость ремонта ${deviceText} ${vendor?.toUpperCase()} ${model}
+                    Диагностика ${priceTemplate.diagnostics || 0}
+                    ТО ${priceTemplate.TO || 0}
+                    Замена роликов ${priceTemplate.rollers || 0}
+                    Ремонт барабана ${priceTemplate.drum || 0}
+                    Ремонт термоблока (печки) ${priceTemplate.therm || 0}
+                    Ремонт электроники ${priceTemplate.electronics || 0}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Ремонт ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${model.toUpperCase()} в Санкт-Петербурге`} />
-                <meta property="og:description" content={`Стоимость ремонта ${data.device === 'printer' ? 'принтера' : 'МФУ'} ${vendor.toUpperCase()} ${model}`} />
+                <meta property="og:title" content={`Ремонт ${deviceText} ${model?.toUpperCase()} в Санкт-Петербурге`} />
+                <meta property="og:description" content={`Стоимость ремонта ${deviceText} ${vendor?.toUpperCase()} ${model}`} />
                 <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
@@ -93,48 +94,52 @@ const RepairPriceComponent = ({ data }) => {
                 <div className={styles.price_wrap_box}>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Диагностика</p>
-                        <p className={styles.price}>{data.price.diagnostics}</p>
+                        <p className={styles.price}>{priceTemplate.diagnostics || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>ТО</p>
-                        <p className={styles.price}>{data.price.TO}</p>
+                        <p className={styles.price}>{priceTemplate.TO || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Замена роликов</p>
-                        <p className={styles.price}>{data.price.rollers}</p>
+                        <p className={styles.price}>{priceTemplate.rollers || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт барабана</p>
-                        <p className={styles.price}>{data.price.drum}</p>
+                        <p className={styles.price}>{priceTemplate.drum || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт термоблока (печки)</p>
-                        <p className={styles.price}>{data.price.therm}</p>
+                        <p className={styles.price}>{priceTemplate.therm || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт дуплекса</p>
-                        <p className={styles.price}>{data.price.duplex}</p>
+                        <p className={styles.price}>{priceTemplate.duplex || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт редуктора</p>
-                        <p className={styles.price}>{data.price.reducer}</p>
+                        <p className={styles.price}>{priceTemplate.reducer || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт лазера</p>
-                        <p className={styles.price}>{data.price.laser}</p>
+                        <p className={styles.price}>{priceTemplate.laser || 0}</p>
                     </div>
                     <div className={styles.text_box}>
                         <p className={styles.text}>Ремонт электроники</p>
-                        <p className={styles.price}>{data.price.electronics}</p>
+                        <p className={styles.price}>{priceTemplate.electronics || 0}</p>
                     </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.text}>Ремонт сканера</p>
-                        <p className={styles.price}>{data.price.scaner ? data.price.scaner : '-'}</p>
-                    </div>
-                    <div className={styles.text_box}>
-                        <p className={styles.text}>Ремонт автоподатчика (ADF)</p>
-                        <p className={styles.price}>{data.price.adf ? data.price.adf : '-'}</p>
-                    </div>
+                    {priceTemplate.scaner !== undefined && priceTemplate.scaner !== null && (
+                        <div className={styles.text_box}>
+                            <p className={styles.text}>Ремонт сканера</p>
+                            <p className={styles.price}>{priceTemplate.scaner}</p>
+                        </div>
+                    )}
+                    {priceTemplate.adf !== undefined && priceTemplate.adf !== null && (
+                        <div className={styles.text_box}>
+                            <p className={styles.text}>Ремонт автоподатчика (ADF)</p>
+                            <p className={styles.price}>{priceTemplate.adf}</p>
+                        </div>
+                    )}
                 </div>
             </div>
         </>

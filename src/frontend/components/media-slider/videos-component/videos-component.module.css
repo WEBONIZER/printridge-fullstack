@@ -1,74 +1,187 @@
 .container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    position: relative;
+    width: 92.81%;
+    margin: 30px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
-.container iframe {
-  border-radius: 20px;
+.videoWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.button_left {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  left: 0;
-  margin: 0;
-  width: 6%;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.5vw;
-  background-color: rgb(231, 239, 244, 0.2);
-  cursor: pointer;
+.video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 500px;
+    max-height: 70vh;
+    border-radius: 12px;
+    background: #000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.noVideo {
+    padding: 40px;
+    text-align: center;
+    color: #89919d;
+    font-size: 18px;
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 12px;
+}
+
+.errorMessage {
+    margin-top: 15px;
+    padding: 15px;
+    background: #fee;
+    border: 1px solid #fcc;
+    border-radius: 8px;
+    color: #c33;
+    font-size: 14px;
+    text-align: center;
+}
+
+.errorMessage small {
+    display: block;
+    margin-top: 8px;
+    color: #999;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.counter {
+    margin-top: 15px;
+    text-align: center;
+    color: #89919d;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.button_left,
 .button_right {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  right: 0;
-  margin: 0;
-  width: 6%;
-  border: none;
-  border-radius: 5px;
-  font-size: 1.5vw;
-  background-color: rgb(231, 239, 244, 0.2);
-  cursor: pointer;
+    min-width: 60px;
+    height: 60px;
+    background-color: #005ce5;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+    flex-shrink: 0;
 }
 
-.button_left:hover {
-  background-color: rgb(200, 221, 234, 0.3);
-}
-
+.button_left:hover,
 .button_right:hover {
-  background-color: rgb(200, 221, 234, 0.3);
+    background-color: #76a6ee;
+    transform: scale(1.1);
+}
+
+.button_left:disabled,
+.button_right:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button_left:disabled:hover,
+.button_right:disabled:hover {
+    transform: none;
+}
+
+@media all and (max-width: 1440px) {
+    .container {
+        width: 92.81%;
+        gap: 1.38vw;
+    }
+
+    .video {
+        min-height: 34.72vw;
+        max-height: 70vh;
+        border-radius: 0.83vw;
+    }
+
+    .noVideo {
+        min-height: 34.72vw;
+        border-radius: 0.83vw;
+        font-size: 1.25vw;
+        padding: 2.77vw;
+    }
+
+    .button_left,
+    .button_right {
+        min-width: 4.16vw;
+        height: 4.16vw;
+        font-size: 2.5vw;
+        border-radius: 50%;
+    }
+
+    .counter {
+        margin-top: 1.04vw;
+        font-size: 1.11vw;
+    }
 }
 
 @media all and (max-width: 768px) {
-  .container {
-    width: 91.9%;
-    margin: 14px auto;
-  }
+    .container {
+        width: 92.81%;
+        gap: 2.8vw;
+        flex-direction: column;
+    }
 
-  .button_right {
-    width: 6%;
-    border-radius: 5px;
-    font-size: 3.5vw;
-  }
+    .video {
+        min-height: 50vw;
+        max-height: 60vh;
+        border-radius: 3.2vw;
+    }
 
-  .button_left {
-    width: 6%;
-    border-radius: 5px;
-    font-size: 3.5vw;
-  }
+    .noVideo {
+        min-height: 50vw;
+        border-radius: 3.2vw;
+        font-size: 3.6vw;
+        padding: 5.6vw;
+    }
+
+    .button_left,
+    .button_right {
+        min-width: 12vw;
+        height: 12vw;
+        font-size: 7.2vw;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .button_left {
+        left: 2vw;
+    }
+
+    .button_right {
+        right: 2vw;
+    }
+
+    .videoWrapper {
+        width: 100%;
+    }
+
+    .counter {
+        margin-top: 2.8vw;
+        font-size: 3.2vw;
+    }
 }

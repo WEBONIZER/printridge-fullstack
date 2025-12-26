@@ -1,33 +1,61 @@
 import styles from './repair-item.module.css';
-import { FC } from "react";
+import { FC, forwardRef } from "react";
 import { Link, useLocation } from 'react-router-dom';
 
-const RepairItem: FC = ({ type, device, vend, model, format, speed, capacity, examples }: any) => {
+interface RepairItemProps {
+    printer: {
+        _id: string;
+        model: string;
+        vendor: string;
+        type?: string;
+        device?: string;
+        format?: string;
+        speed?: string;
+        capacity?: string;
+    };
+}
 
+const RepairItem: FC<RepairItemProps> = forwardRef<HTMLAnchorElement, RepairItemProps>(({ printer }, ref) => {
     const location = useLocation();
     const locationPathname = location.pathname;
 
+    const type = printer.type || '';
+    const device = printer.device || '';
+    const format = printer.format || '';
+    const speed = printer.speed || '';
+    const capacity = printer.capacity || '';
+
+    const typeText = type === 'mono' 
+        ? (device === 'printer' ? 'Монохромный' : 'Монохромное')
+        : (device === 'printer' ? 'Цветной' : 'Цветное');
+    
+    const deviceText = device === 'printer' ? 'Принтер' : 'МФУ';
+    const speedText = speed ? `Скорость ${speed}` : '';
+    const capacityText = capacity ? `Нагрузка до ${capacity} стр./месяц` : '';
+
     return (
         <Link
-            key={model}
-            to={`${locationPathname}/${model.replace(/\s/g, '')}`}
+            ref={ref}
+            to={`${locationPathname}/${printer.model.replace(/\s/g, '')}`}
             className={styles.link}
         >
             <div className={styles.price_row}>
-                <p className={styles.model}>{model}</p>
+                <p className={styles.model}>{printer.model}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.type}>{type === 'mono' ? (device === 'printer' ? 'Монохромный' : 'Монохромное') : (device === 'printer' ? 'Цветной' : 'Цветное')}</p>
+                <p className={styles.type}>{typeText}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.device}>{device === 'printer' ? 'Принтер' : 'МФУ'}</p>
+                <p className={styles.device}>{deviceText}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.format}>{format}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.speed}>{`Скорость ${speed}`}</p>
+                <p className={styles.speed}>{speedText}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.capacity}>{`Нагрузка до ${capacity} стр./месяц`}</p>
+                <p className={styles.capacity}>{capacityText}</p>
             </div>
         </Link>
     );
-}
- 
+});
+
+RepairItem.displayName = 'RepairItem';
+
 export default RepairItem;

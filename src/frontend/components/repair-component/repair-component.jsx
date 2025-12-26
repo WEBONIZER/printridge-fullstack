@@ -1,22 +1,99 @@
 import styles from './repair-component.module.css'
-import { Navigate } from 'react-router-dom';
 import { useParams, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 import RepairItemsComponent from '../filter-items-component/repair-items-component/repair-items-component'
 import VendorMenuRepair from '../vendor-menu/vendor-menu-reoair/vendor-menu-repair'
-import { repair } from '../../utils/repair'
 import { Filter } from '../filter/filter'
 import { Helmet } from "react-helmet";
+import { getPaginatedPrinters } from '../../utils/api';
+import Spinner from '../spinner/spinner';
 
 function RepairComponent() {
 
     const { vendor } = useParams()
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
-    const filterCategory = repair.filter((i) => i.vendor === vendor)
+    const filterValue = useSelector((state) => {
+        const value = state.filter?.value?.value;
+        return typeof value === 'string' ? value : '';
+    });
+    const [printers, setPrinters] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isInitialLoad, setIsInitialLoad] = useState(true);
+    const [hasMore, setHasMore] = useState(true);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [filterDebounce, setFilterDebounce] = useState('');
+    const limit = 30;
 
     const img = `https://storage.yandexcloud.net/printridge/logo_no_back_color_invert.png`;
 
-    return (filterCategory.length > 0 ?
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setFilterDebounce(filterValue);
+        }, 500);
+
+        return () => clearTimeout(timer);
+    }, [filterValue]);
+
+    useEffect(() => {
+        loadPrinters(true);
+    }, [vendor, filterDebounce]);
+
+    const loadPrinters = async (reset = false) => {
+        if (reset) {
+            setPrinters([]);
+            setCurrentPage(1);
+            setIsLoading(true);
+            if (isInitialLoad) {
+                setIsInitialLoad(false);
+            }
+        } else {
+            setIsLoading(true);
+        }
+
+        try {
+            const pageToLoad = reset ? 1 : currentPage;
+            const response = await getPaginatedPrinters({
+                page: pageToLoad,
+                limit,
+                vendor: vendor || undefined,
+                model: filterDebounce.trim() || undefined,
+                public: 'true'
+            });
+
+            const filteredData = response.data.filter(printer => printer.public !== false);
+            
+            if (reset) {
+                setPrinters(filteredData);
+            } else {
+                setPrinters(prev => [...prev, ...filteredData]);
+            }
+
+            setHasMore(response.data.length === limit && response.pagination.currentPage < response.pagination.totalPages);
+            if (!reset) {
+                setCurrentPage(prev => prev + 1);
+            } else {
+                setCurrentPage(2);
+            }
+        } catch (error) {
+            console.error('Ошибка загрузки принтеров:', error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleLoadMore = () => {
+        if (!isLoading && hasMore) {
+            loadPrinters(false);
+        }
+    };
+
+    if (isInitialLoad && isLoading && printers.length === 0) {
+        return <Spinner />;
+    }
+
+    return (
         <>
             <Helmet>
                 <title>{`Ремонт принтеров и МФУ ${vendor.toUpperCase()}`}</title>
@@ -33,23 +110,23 @@ function RepairComponent() {
                 <meta property="og:type" content="article" />
                 <meta property="og:title" content={`Ремонт принтеров и МФУ ${vendor.toUpperCase()}`} />
                 <meta property="og:description" content={`Прайс по ремонту принтеров и МФУ ${vendor.toUpperCase()}`} />
-                <meta property="og:image" content={<img
-                    className={styles.image}
-                    src={img}
-                    alt={`Заправка принтеров ${vendor}`}
-                />} />
+                <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
-            < div className={styles.container}>
+            <div className={styles.container}>
                 <div className={styles.title_box}>
                     <p className={styles.description}>Выберите производителя и модель принтера</p>
                 </div>
                 <VendorMenuRepair />
                 <Filter />
-                <RepairItemsComponent data={filterCategory} />
+                <RepairItemsComponent 
+                    data={printers} 
+                    onLoadMore={handleLoadMore}
+                    hasMore={hasMore}
+                    isLoading={isLoading}
+                />
             </div>
-        </> :
-        <Navigate to="/404" replace />
+        </>
     );
 }
 

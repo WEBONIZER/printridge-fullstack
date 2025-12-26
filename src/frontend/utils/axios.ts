@@ -18,6 +18,20 @@ export const apiClient = axios.create({
   withCredentials: true, // Важно! Позволяет отправлять cookies (httpOnly cookies)
 });
 
+// Request interceptor
+apiClient.interceptors.request.use(
+  (config) => {
+    if (config.data instanceof FormData) {
+      // Убеждаемся, что Content-Type не установлен для FormData
+      delete config.headers['Content-Type'];
+    }
+    return config;
+  },
+  (error) => {
+    return Promise.reject(error);
+  }
+);
+
 // Interceptor для обработки ошибок
 apiClient.interceptors.response.use(
   (response) => response,

@@ -1,30 +1,133 @@
 import styles from './tabs.module.css';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import TabContent from './tab-contenet/tab-contenet'
-import { sanitizeHtml } from '../../utils/html-sanitizer'
+import { useState, useEffect } from 'react';
+import TabContent from './tab-contenet/tab-contenet';
+import { sanitizeHtml } from '../../utils/html-sanitizer';
+import { getExamplePhotos, getExampleVideos } from '../../utils/api';
 
 function Tabs({ items }) {
-    
-    const [active, setActive] = useState(0);
+    const [activeTab, setActiveTab] = useState(0);
+    const [activeMediaType, setActiveMediaType] = useState('photos'); // 'photos' или 'videos'
+    const [examplesWithMedia, setExamplesWithMedia] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
-    const openTab = e => setActive(e.target.dataset.index);
+    useEffect(() => {
+        const loadMedia = async () => {
+            setIsLoading(true);
+            setActiveTab(0); // Сбрасываем активную вкладку при загрузке новых примеров
+            try {
+                const examplesData = await Promise.all(
+                    items.map(async (example) => {
+                        try {
+                            const [photosRes, videosRes] = await Promise.all([
+                                getExamplePhotos(example._id),
+                                getExampleVideos(example._id)
+                            ]);
+
+                            // getExamplePhotos/getExampleVideos возвращают response.data
+                            // который содержит { success: true, data: [...], pagination: {...} }
+                            const photos = (photosRes?.data || []);
+                            const videos = (videosRes?.data || []);
+
+                            return {
+                                ...example,
+                                photos: photos,
+                                videos: videos
+                            };
+                        } catch (error) {
+                            console.error(`Ошибка загрузки медиа для примера ${example._id}:`, error);
+                            return {
+                                ...example,
+                                photos: [],
+                                videos: []
+                            };
+                        }
+                    })
+                );
+                setExamplesWithMedia(examplesData);
+                
+                // Автоматически выбираем тип медиа в зависимости от наличия
+                const firstExample = examplesData[0];
+                if (firstExample) {
+                    if (firstExample.photos.length > 0) {
+                        setActiveMediaType('photos');
+                    } else if (firstExample.videos.length > 0) {
+                        setActiveMediaType('videos');
+                    }
+                }
+            } catch (error) {
+                console.error('Ошибка загрузки примеров:', error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        if (items && items.length > 0) {
+            loadMedia();
+        } else {
+            setIsLoading(false);
+            setExamplesWithMedia([]);
+        }
+    }, [items]);
+
+    const handleTabClick = (index) => {
+        if (index < 0 || index >= examplesWithMedia.length) {
+            return;
+        }
+        setActiveTab(index);
+        // При смене вкладки автоматически выбираем тип медиа
+        const example = examplesWithMedia[index];
+        if (example) {
+            if (example.photos && example.photos.length > 0) {
+                setActiveMediaType('photos');
+            } else if (example.videos && example.videos.length > 0) {
+                setActiveMediaType('videos');
+            }
+        }
+    };
+
+    if (isLoading) {
+        return <div className={styles.loading}>Загрузка...</div>;
+    }
+
+    if (!examplesWithMedia || examplesWithMedia.length === 0) {
+        return null;
+    }
+
+    const currentExample = examplesWithMedia[activeTab];
+    const hasPhotos = currentExample?.photos?.length > 0;
+    const hasVideos = currentExample?.videos?.length > 0;
 
     return (
         <div className={styles.box}>
             <h2 className={styles.title}>Примеры нашей работы</h2>
-            <div className={styles.tab}>
-                {items.map((n, i) => (
-                    <NavLink
-                        key={i}
-                        className={`${styles.link} ${active.toString() === i.toString() ? styles.active : ''}`}
-                        onClick={openTab}
-                        data-index={i}
-                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(n.title || '') }}
+            
+            {/* Вкладки примеров */}
+            <div className={styles.tabs}>
+                {examplesWithMedia.map((example, index) => (
+                    <button
+                        key={example._id || index}
+                        type="button"
+                        className={`${styles.tab} ${activeTab === index ? styles.active : ''}`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            handleTabClick(index);
+                        }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(example.title || '') }}
                     />
                 ))}
             </div>
-            {items[active] && <TabContent {...items[active]} />}
+
+            {/* Контент вкладки */}
+            {currentExample && (
+                <TabContent
+                    {...currentExample}
+                    activeMediaType={activeMediaType}
+                    onMediaTypeChange={setActiveMediaType}
+                    hasPhotos={hasPhotos}
+                    hasVideos={hasVideos}
+                />
+            )}
         </div>
     );
 }

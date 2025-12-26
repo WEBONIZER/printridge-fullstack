@@ -20,6 +20,13 @@ const Filter: FC = () => {
         })
     }, [value, dispatch])
 
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    };
+
     return (
         <input
             type="text"
@@ -27,6 +34,8 @@ const Filter: FC = () => {
             placeholder={service}
             className={styles.input}
             onChange={(e) => setValue(e.target.value)}
+            onKeyDown={handleKeyDown}
+            autoComplete="off"
         />
     )
 }

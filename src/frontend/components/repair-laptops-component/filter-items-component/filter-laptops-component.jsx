@@ -1,24 +1,42 @@
 import LaptopItem from './laptop-item/laptop-item'
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
 import styles from './filter-laptops-component.module.css'
+import Spinner from '../../spinner/spinner';
 
-function FilterLaptopsComponent({ data }) {
+function FilterLaptopsComponent({ data, onLoadMore, hasMore, isLoading }) {
 
     const { vendor } = useParams()
-    const filterValue = useSelector((state) => state.filter.value.value);
-    const filteredData = data.filter(i => (
-        i.model.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()))
-        ||
-        i.series.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()));
+    const observerRef = useRef(null);
+    const lastItemRef = useRef(null);
+
+    useEffect(() => {
+        if (observerRef.current) {
+            observerRef.current.disconnect();
+        }
+
+        observerRef.current = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && hasMore && !isLoading) {
+                    onLoadMore();
+                }
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '100px'
+            }
+        );
+
+        if (lastItemRef.current) {
+            observerRef.current.observe(lastItemRef.current);
+        }
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, [hasMore, isLoading, onLoadMore, data.length]);
 
     return (
         <div className={styles.price_container}>
@@ -35,18 +53,19 @@ function FilterLaptopsComponent({ data }) {
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.ramType}>{'Тип памяти'}</p>
             </div>
-            {filteredData.map((i, key) => {
-                return (
-                    <LaptopItem
-                        vend={i.vendor}
-                        processorVendor={i.processorVendor}
-                        model={i.model}
-                        display={i.display}
-                        ram={i.ram}
-                        ramType={i.ramType}
-                    />
-                )
-            })}
+            {data && data
+                .filter(laptop => laptop.public !== false)
+                .map((laptop, key, filteredArray) => {
+                    const isLastItem = key === filteredArray.length - 1;
+                    return (
+                        <LaptopItem
+                            key={laptop._id || key}
+                            ref={isLastItem ? lastItemRef : null}
+                            laptop={laptop}
+                        />
+                    )
+                })}
+            {isLoading && data.length > 0 && <Spinner />}
         </div>
     )
 }

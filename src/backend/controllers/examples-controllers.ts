@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 import { ExampleModel } from "../models/example-model";
-import { IExampleSchema } from "../../utils/types";
 import { sanitizeHtml, escapeHtmlText } from "../utils/html-sanitizer";
 import { generateRouteFromTitle } from "../utils/transliterate";
 

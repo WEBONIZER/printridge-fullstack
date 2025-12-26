@@ -301,17 +301,19 @@ export const getPaginatedCartridges = async (
     let filteredCartridges = cartridges;
     if (hasImage === 'yes') {
       filteredCartridges = cartridges.filter(cart => {
-        if (typeof cart.photo === 'object' && cart.photo !== null) {
-          return !!(cart.photo.src || cart.photo._id);
+        const photo = cart.photo as any;
+        if (typeof photo === 'object' && photo !== null && !(photo instanceof mongoose.Types.ObjectId)) {
+          return !!(photo.src || photo._id);
         }
-        return !!cart.photo;
+        return !!photo;
       });
     } else if (hasImage === 'no') {
       filteredCartridges = cartridges.filter(cart => {
-        if (typeof cart.photo === 'object' && cart.photo !== null) {
-          return !(cart.photo.src || cart.photo._id);
+        const photo = cart.photo as any;
+        if (typeof photo === 'object' && photo !== null && !(photo instanceof mongoose.Types.ObjectId)) {
+          return !(photo.src || photo._id);
         }
-        return !cart.photo;
+        return !photo;
       });
     }
 

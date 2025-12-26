@@ -1,53 +1,29 @@
 import styles from './photos-component.module.css'
 import { useState } from "react";
-import { useLocation } from 'react-router-dom';
-import { useParams } from "react-router-dom";
 import { useInView } from "react-intersection-observer"
 
 const PhotosComponent = ({ imgagesNameArr }) => {
 
-    const location = useLocation();
-    const { model, vendor } = useParams();
-
     const { ref } = useInView({
-        threshold: 0.2, // Элемент грузится только тогда, когда он на 20% видим
-        triggerOnce: true // Если элемент уже был загружен ранее, он не размонтируется и не грузится снова
+        threshold: 0.2,
+        triggerOnce: true
       });
 
     const [currentImg, setCurrentImg] = useState(0);
 
-    const imagesArr = [];
+    const imagesArr = Array.isArray(imgagesNameArr) 
+        ? imgagesNameArr.map((item, key) => {
+            const src = typeof item === 'string' ? item : (item.src || item.item || '');
+            return {
+                src: src,
+                alt: typeof item === 'string' ? `Фото ${key + 1}` : (item.alt || `Фото ${key + 1}`),
+            };
+          })
+        : [];
 
-    const pullImagesToArr = () => {
-
-        location.pathname.includes('refill') &&
-            imgagesNameArr.map((i, key) => {
-                const img = {
-                    src: `https://storage.yandexcloud.net/printridge/examples/refill/${vendor}/${model}/${i.item}`,
-                    alt: `Заправка ${model}`,
-                };
-                imagesArr.push(img);
-
-            }) ||
-            location.pathname.includes('repair') &&
-            imgagesNameArr.map((i, key) => {
-                const img = {
-                    src: `https://storage.yandexcloud.net/printridge/examples/repair/${vendor}/${model}/${i.item}`,
-                    alt: `Ремонт ${model}`,
-                };
-                imagesArr.push(img);
-            }) ||
-            location.pathname.includes('remont-noutbukov') &&
-            imgagesNameArr.map((i, key) => {
-                const img = {
-                    src: `https://storage.yandexcloud.net/printridge/examples/remont-noutbukov/${vendor}/${model}/${i.item}`,
-                    alt: `Ремонт ${model}`,
-                };
-                imagesArr.push(img);
-            })
-        return imagesArr;
+    if (imagesArr.length === 0) {
+        return null;
     }
-    pullImagesToArr()
 
     const nextSlide = () => {
         setCurrentImg(currentImg === imagesArr.length - 1 ? 0 : currentImg + 1);
@@ -67,8 +43,8 @@ const PhotosComponent = ({ imgagesNameArr }) => {
                     {"<"}
                 </button>
                 <img
-                    src={imagesArr[currentImg].src}
-                    alt={imagesArr[currentImg].alt}
+                    src={imagesArr[currentImg]?.src}
+                    alt={imagesArr[currentImg]?.alt}
                     className={styles.img}
                     ref={ref}
                 />

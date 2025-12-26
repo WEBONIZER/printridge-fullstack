@@ -1,25 +1,42 @@
 import RepairItem from '../item/repair-item/repair-item'
 import { useParams } from "react-router-dom";
-import { Filter } from '../../filter/filter'
-import { useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
 import styles from './repair-items-component.module.css'
+import Spinner from '../../spinner/spinner';
 
-function RepairItemsComponent({ data }) {
+function RepairItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
 
     const { vendor } = useParams()
-    const filterValue = useSelector((state) => state.filter.value.value);
-    const filteredData = data.filter(i => (
-        i.model.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()))
-        ||
-        i.vendor.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()));
+    const observerRef = useRef(null);
+    const lastItemRef = useRef(null);
+
+    useEffect(() => {
+        if (observerRef.current) {
+            observerRef.current.disconnect();
+        }
+
+        observerRef.current = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && hasMore && !isLoading) {
+                    onLoadMore();
+                }
+            },
+            { 
+                threshold: 0.1,
+                rootMargin: '100px'
+            }
+        );
+
+        if (lastItemRef.current) {
+            observerRef.current.observe(lastItemRef.current);
+        }
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, [hasMore, isLoading, onLoadMore, data.length]);
 
     return (
         <div className={styles.price_container}>
@@ -28,7 +45,7 @@ function RepairItemsComponent({ data }) {
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.type}>{'Способ печати'}</p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.device}>{'Устройство'}</p>
+                <p className={styles.device}>{'Тип устройства'}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.format}>{'Формат'}</p>
                 <p className={styles.separator}>{'|'}</p>
@@ -36,23 +53,21 @@ function RepairItemsComponent({ data }) {
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.capacity}>{'Нагрузка'}</p>
             </div>
-            {filteredData.map((i, key) => {
-                return (
-                    <RepairItem
-                        type={i.type}
-                        device={i.device}
-                        vend={i.vendor}
-                        model={i.model}
-                        format={i.format}
-                        speed={i.speed}
-                        capacity={i.capacity}
-                        key={key}
-                        examples={i.examples}
-                    />
-                )
-            })}
+            {data && data
+                .filter(printer => printer.public !== false)
+                .map((printer, key, filteredArray) => {
+                    const isLastItem = key === filteredArray.length - 1;
+                    return (
+                        <RepairItem
+                            key={printer._id || key}
+                            ref={isLastItem ? lastItemRef : null}
+                            printer={printer}
+                        />
+                    )
+                })}
+            {isLoading && data.length > 0 && <Spinner />}
         </div>
     )
 }
 
-export default RepairItemsComponent;
+export default RepairItemsComponent

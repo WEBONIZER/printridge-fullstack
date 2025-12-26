@@ -2,6 +2,7 @@ import { Request, Response } from "express";
 import * as uuid from "uuid";
 import { s3Operation, uploadVideoSingle } from "../../utils/functions";
 import { VideoModel } from "../models/video-model";
+import { processVideo, getVideoInfo } from "../../utils/video-processor";
 
 export const uploadVideo = async (req: Request & { file?: Express.Multer.File }, res: Response) => {
   try {
@@ -11,8 +12,36 @@ export const uploadVideo = async (req: Request & { file?: Express.Multer.File },
       return res.status(400).json({ error: 'Файл обязателен' });
     }
 
-    // Определяем расширение файла
-    const extension = file.originalname.split('.').pop() || 'mp4';
+    // Получаем информацию о видео
+    const videoInfo = await getVideoInfo(file.buffer);
+
+    // Обрабатываем видео (сжимаем и конвертируем) - ВСЕГДА для больших файлов
+    // processVideo автоматически выберет оптимальные параметры в зависимости от размера
+    let processedBuffer = file.buffer;
+    const fileSizeMB = file.buffer.length / 1024 / 1024;
+    const shouldProcess = fileSizeMB > 10; // Обрабатываем файлы больше 10MB
+
+    if (shouldProcess) {
+      // processVideo автоматически выберет оптимальные параметры
+      processedBuffer = await processVideo(file.buffer);
+      
+      const processedInfo = await getVideoInfo(processedBuffer);
+      const processedSizeMB = processedInfo.size / 1024 / 1024;
+      
+      // Если файл все еще слишком большой, применяем экстремальное сжатие
+      if (processedSizeMB > 500) {
+        processedBuffer = await processVideo(file.buffer, {
+          maxWidth: 854, // 480p
+          maxHeight: 480,
+          bitrate: '800k',
+          quality: 30, // Максимальное сжатие
+          format: 'mp4'
+        });
+      }
+    }
+
+    // Определяем расширение файла (всегда mp4 после обработки)
+    const extension = shouldProcess ? 'mp4' : (file.originalname.split('.').pop() || 'mp4');
     const fileKey = `videos/${uuid.v4()}.${extension}`;
 
     // Загружаем в S3
@@ -20,8 +49,8 @@ export const uploadVideo = async (req: Request & { file?: Express.Multer.File },
       operation: 'upload',
       folder: 'videos',
       fileKey,
-      fileBuffer: file.buffer,
-      contentType: file.mimetype
+      fileBuffer: processedBuffer,
+      contentType: 'video/mp4' // Всегда mp4 после обработки
     });
 
     if (!uploadResult.success) {
@@ -102,16 +131,45 @@ export const updateVideo = async (req: Request & { file?: Express.Multer.File },
       oldFileKey = video.src.replace(prefixToRemove, "");
     }
 
+    // Получаем информацию о видео
+    const videoInfo = await getVideoInfo(file.buffer);
+    console.log('Исходное видео для обновления:', {
+      size: `${(videoInfo.size / 1024 / 1024).toFixed(2)} MB`,
+      resolution: videoInfo.width && videoInfo.height ? `${videoInfo.width}x${videoInfo.height}` : 'неизвестно'
+    });
+
+    // Обрабатываем видео (сжимаем и конвертируем)
+    let processedBuffer = file.buffer;
+    const shouldProcess = file.buffer.length > 10 * 1024 * 1024; // Обрабатываем файлы больше 10MB
+
+    if (shouldProcess) {
+      console.log('Начинаем обработку видео для обновления...');
+      processedBuffer = await processVideo(file.buffer, {
+        maxWidth: 1920,
+        maxHeight: 1080,
+        bitrate: '2M',
+        quality: 23,
+        format: 'mp4'
+      });
+      
+      const processedInfo = await getVideoInfo(processedBuffer);
+      const compressionRatio = ((1 - processedInfo.size / videoInfo.size) * 100).toFixed(1);
+      console.log('Обработанное видео:', {
+        size: `${(processedInfo.size / 1024 / 1024).toFixed(2)} MB`,
+        compression: `${compressionRatio}%`
+      });
+    }
+
     // Загружаем новое видео в S3
-    const extension = file.originalname.split('.').pop() || 'mp4';
+    const extension = shouldProcess ? 'mp4' : (file.originalname.split('.').pop() || 'mp4');
     const fileKey = `videos/${uuid.v4()}.${extension}`;
 
     const updateResult = await s3Operation({
       operation: 'update',
       folder: 'videos',
       fileKey,
-      fileBuffer: file.buffer,
-      contentType: file.mimetype,
+      fileBuffer: processedBuffer,
+      contentType: 'video/mp4', // Всегда mp4 после обработки
       oldFileKey,
       oldFolder: 'videos'
     });

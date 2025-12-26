@@ -11,5 +11,13 @@ export default defineConfig({
     "process.env": config({ path: ".env" }).parsed!,
   },
   preview: options,
-  server: options,
+  server: {
+    ...options,
+    proxy: {
+      "/sitemap.xml": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+      },
+    },
+  },
 });

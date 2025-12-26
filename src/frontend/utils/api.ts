@@ -129,11 +129,7 @@ export const updateCartridge = async (cartridgeId: string, data: Partial<Cartrid
     formData.append("file", file);
   }
   
-  const response = await apiClient.put<BaseResponse<Cartridge>>(`/cartridges/all-items/${cartridgeId}`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-  });
+  const response = await apiClient.put<BaseResponse<Cartridge>>(`/cartridges/all-items/${cartridgeId}`, formData);
   return response.data;
 };
 
@@ -180,11 +176,7 @@ export const uploadImage = async (file: File, data?: {
     });
   }
 
-  const response = await apiClient.post<BaseResponse<Image>>("/images/upload", formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-  });
+  const response = await apiClient.post<BaseResponse<Image>>("/images/upload", formData);
   return response.data;
 };
 
@@ -205,11 +197,7 @@ export const updateImage = async (imageId: string, file: File, data?: {
     });
   }
 
-  const response = await apiClient.put<BaseResponse<Image>>(`/images/${imageId}`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-  });
+  const response = await apiClient.put<BaseResponse<Image>>(`/images/${imageId}`, formData);
   return response.data;
 };
 
@@ -323,22 +311,29 @@ export const uploadVideo = async (file: File, data?: {
   laptopId?: string;
   exampleId?: string;
 }) => {
+  if (!file || !(file instanceof File)) {
+    throw new Error('Неверный файл для загрузки');
+  }
+
   const formData = new FormData();
   formData.append("file", file);
+
   if (data) {
     Object.entries(data).forEach(([key, value]) => {
-      if (value) {
-        formData.append(key, value);
+      if (value !== undefined && value !== null) {
+        formData.append(key, String(value));
       }
     });
   }
 
-  const response = await apiClient.post<BaseResponse<Video>>("/videos/upload", formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
-  });
-  return response.data;
+  try {
+    const response = await apiClient.post<BaseResponse<Video>>("/videos/upload", formData, {
+      timeout: 600000,
+    });
+    return response.data;
+  } catch (error: any) {
+    throw error;
+  }
 };
 
 // Получить видео по ID
@@ -365,9 +360,7 @@ export const updateVideo = async (videoId: string, file: File, data?: {
   }
 
   const response = await apiClient.put<BaseResponse<Video>>(`/videos/${videoId}`, formData, {
-    headers: {
-      "Content-Type": "multipart/form-data",
-    },
+    timeout: 600000, // 10 минут для загрузки больших видеофайлов
   });
   return response.data;
 };

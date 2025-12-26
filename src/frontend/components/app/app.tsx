@@ -9,7 +9,6 @@ import ContactsComponent from "../contacts-component/contacts-component";
 import RefillItemComponent from "../refill-component/refill-item-component/refill-item-component";
 import RepairItemComponent from "../repair-component/repair-item-component/repair-item-component";
 import NotFound404 from "../../pages/not-found/not-found";
-import SitemapGenerator from "../sitemap-generator/sitemap-generator";
 import RepairLaptopsComponent from "../repair-laptops-component/repair-laptops-component";
 import RepairLaptopsItemComponent from "../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component";
 import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
@@ -48,7 +47,6 @@ export const App: React.FC = () => {
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="/map" element={<SitemapGenerator />} />
           <Route path="/repair/:vendor" element={<RepairComponent />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillComponent />} />

@@ -1,24 +1,39 @@
 import Item from './item/item'
 import { useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
 import styles from './filter-items-component.module.css'
+import Spinner from '../spinner/spinner';
 
-function FilterItemsComponent({ data }) {
+function FilterItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
 
     const { vendor } = useParams()
-    const filterValue = useSelector((state) => state.filter.value.value);
-    const filteredData = data.filter(i => (
-        i.modelCart.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()))
-        ||
-        i.devices.toLowerCase().includes(filterValue === undefined
-            ?
-            ''
-            :
-            filterValue.toLowerCase()));
+    const observerRef = useRef(null);
+    const lastItemRef = useRef(null);
+
+    useEffect(() => {
+        if (observerRef.current) {
+            observerRef.current.disconnect();
+        }
+
+        observerRef.current = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting && hasMore && !isLoading) {
+                    onLoadMore();
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (lastItemRef.current) {
+            observerRef.current.observe(lastItemRef.current);
+        }
+
+        return () => {
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
+        };
+    }, [hasMore, isLoading, onLoadMore, data.length]);
 
     return (
         <div className={styles.price_container}>
@@ -33,20 +48,19 @@ function FilterItemsComponent({ data }) {
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.recovery_price}>{'Восстановление'}</p>
             </div>
-            {filteredData && filteredData.map((i, key) => {
-                return (
-                    <Item
-                        modelCart={i.modelCart}
-                        vend={i.vendor}
-                        chip={i.chip}
-                        devices={i.devices}
-                        recovery_price={i.recovery_price}
-                        refill_price={i.refill_price}
-                        key={key}
-                        examples={i.examples}
-                    />
-                )
-            })}
+            {data && data
+                .filter(cartridge => cartridge.public !== false)
+                .map((i, key, filteredArray) => {
+                    const isLastItem = key === filteredArray.length - 1;
+                    return (
+                        <div key={i._id || key} ref={isLastItem ? lastItemRef : null} style={{ display: 'contents' }}>
+                            <Item
+                                cartridge={i}
+                            />
+                        </div>
+                    )
+                })}
+            {isLoading && data.length > 0 && <Spinner />}
         </div>
     );
 }

@@ -189,9 +189,13 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
       // Загружаем новые видео
       for (const [tempId, videoFile] of videoFiles) {
         try {
+          if (!(videoFile instanceof File)) {
+            continue;
+          }
+          
           await uploadVideo(videoFile, { exampleId: example._id });
         } catch (error) {
-          console.error("Ошибка загрузки видео:", error);
+          console.error(`Ошибка загрузки видео ${tempId}:`, error);
         }
       }
 
