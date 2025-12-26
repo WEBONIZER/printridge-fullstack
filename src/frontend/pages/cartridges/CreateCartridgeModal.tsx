@@ -2,14 +2,16 @@ import React, { useState, useEffect } from "react";
 import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility, searchCartridgeModels } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
+import { CreatePrinterModal } from "../printers/CreatePrinterModal";
 import styles from "./cartridges.module.css";
 
 interface CreateCartridgeModalProps {
   onClose: () => void;
   onSave: () => void;
+  isNested?: boolean;
 }
 
-export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onClose, onSave }) => {
+export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onClose, onSave, isNested = false }) => {
   const [formData, setFormData] = useState({
     modelCart: "",
     vendor: "",
@@ -26,6 +28,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
   const [allPrinters, setAllPrinters] = useState<Printer[]>([]);
   const [selectedPrinters, setSelectedPrinters] = useState<Printer[]>([]);
   const [isLoadingPrinters, setIsLoadingPrinters] = useState(false);
+  const [isCreatePrinterModalOpen, setIsCreatePrinterModalOpen] = useState(false);
 
   useEffect(() => {
     loadPrinters();
@@ -51,6 +54,15 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
 
   const handleRemovePrinter = (printerId: string) => {
     setSelectedPrinters(selectedPrinters.filter((p) => p._id !== printerId));
+  };
+
+  const handleCreateNewPrinter = () => {
+    setIsCreatePrinterModalOpen(true);
+  };
+
+  const handlePrinterCreated = async () => {
+    await loadPrinters();
+    setIsCreatePrinterModalOpen(false);
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -119,47 +131,57 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
   };
 
   return (
-    <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.modalHeader}>
-          <h2>Добавить картридж</h2>
-          <button onClick={onClose} className={styles.closeButton}>
-            ×
-          </button>
-        </div>
-        <form onSubmit={handleSubmit} className={styles.modalForm}>
-          <CartridgeFormFields
-            formData={formData}
-            onFormDataChange={(data) => setFormData({ ...formData, ...data })}
-            onImageChange={handleImageChange}
-            isCreateMode={true}
-            onSearchModels={handleSearchModels}
-          />
-
-          <div className={styles.linkedItems}>
-            <label>Привязать принтеры</label>
-            <PrinterLinkingSection
-              allPrinters={allPrinters}
-              selectedPrinters={selectedPrinters}
-              linkedPrinters={[]}
-              isLoadingPrinters={isLoadingPrinters}
-              onPrinterSelect={handlePrinterSelect}
-              onRemovePrinter={handleRemovePrinter}
-              isEditMode={false}
+    <>
+      {isCreatePrinterModalOpen && (
+        <CreatePrinterModal
+          onClose={() => setIsCreatePrinterModalOpen(false)}
+          onSave={handlePrinterCreated}
+          isNested={true}
+        />
+      )}
+      <div className={`${styles.modalOverlay} ${isNested ? styles.modalOverlayNested : ''}`} onClick={onClose}>
+        <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.modalHeader}>
+            <h2>Добавить картридж</h2>
+            <button onClick={onClose} className={styles.closeButton}>
+              ×
+            </button>
+          </div>
+          <form onSubmit={handleSubmit} className={styles.modalForm}>
+            <CartridgeFormFields
+              formData={formData}
+              onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+              onImageChange={handleImageChange}
+              isCreateMode={true}
+              onSearchModels={handleSearchModels}
             />
-          </div>
 
-          <div className={styles.modalActions}>
-            <button type="button" onClick={onClose} disabled={isSaving}>
-              Отмена
-            </button>
-            <button type="submit" disabled={isSaving}>
-              {isSaving ? "Сохранение..." : "Создать"}
-            </button>
-          </div>
-        </form>
+            <div className={styles.linkedItems}>
+              <label>Привязать принтеры</label>
+              <PrinterLinkingSection
+                allPrinters={allPrinters}
+                selectedPrinters={selectedPrinters}
+                linkedPrinters={[]}
+                isLoadingPrinters={isLoadingPrinters}
+                onPrinterSelect={handlePrinterSelect}
+                onRemovePrinter={handleRemovePrinter}
+                onCreateNewPrinter={handleCreateNewPrinter}
+                isEditMode={false}
+              />
+            </div>
+
+            <div className={styles.modalActions}>
+              <button type="button" onClick={onClose} disabled={isSaving}>
+                Отмена
+              </button>
+              <button type="submit" disabled={isSaving}>
+                {isSaving ? "Сохранение..." : "Создать"}
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

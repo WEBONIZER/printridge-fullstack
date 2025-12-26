@@ -12,6 +12,7 @@ interface PrinterLinkingSectionProps {
   onRemovePrinter?: (printerId: string) => void;
   onCreateCompatibility?: () => void;
   onDeleteCompatibility?: (printerId: string) => void;
+  onCreateNewPrinter?: () => void;
   isEditMode?: boolean;
 }
 
@@ -24,6 +25,7 @@ export const PrinterLinkingSection: React.FC<PrinterLinkingSectionProps> = ({
   onRemovePrinter,
   onCreateCompatibility,
   onDeleteCompatibility,
+  onCreateNewPrinter,
   isEditMode = false,
 }) => {
   if (isLoadingPrinters) {
@@ -32,13 +34,27 @@ export const PrinterLinkingSection: React.FC<PrinterLinkingSectionProps> = ({
 
   return (
     <>
-      <DeviceSearch
-        items={allPrinters}
-        onSelect={onPrinterSelect}
-        placeholder={isEditMode ? "Поиск принтера по модели или производителю..." : "Поиск принтера..."}
-        displayField="model"
-        searchFields={["model", "vendor"]}
-      />
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+        <div style={{ flex: 1 }}>
+          <DeviceSearch
+            items={allPrinters}
+            onSelect={onPrinterSelect}
+            placeholder={isEditMode ? "Поиск принтера по модели или производителю..." : "Поиск принтера..."}
+            displayField="model"
+            searchFields={["model", "vendor"]}
+          />
+        </div>
+        {onCreateNewPrinter && (
+          <button
+            type="button"
+            onClick={onCreateNewPrinter}
+            className={styles.linkButton}
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            + Добавить принтер
+          </button>
+        )}
+      </div>
       {selectedPrinters.length > 0 && onCreateCompatibility && (
         <button
           type="button"

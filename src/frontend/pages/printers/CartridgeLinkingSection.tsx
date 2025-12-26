@@ -12,6 +12,7 @@ interface CartridgeLinkingSectionProps {
   onRemoveCartridge?: (cartridgeId: string) => void;
   onCreateCompatibility?: () => void;
   onDeleteCompatibility?: (cartridgeId: string) => void;
+  onCreateNewCartridge?: () => void;
   isEditMode?: boolean;
 }
 
@@ -24,6 +25,7 @@ export const CartridgeLinkingSection: React.FC<CartridgeLinkingSectionProps> = (
   onRemoveCartridge,
   onCreateCompatibility,
   onDeleteCompatibility,
+  onCreateNewCartridge,
   isEditMode = false,
 }) => {
   if (isLoadingCartridges) {
@@ -32,13 +34,27 @@ export const CartridgeLinkingSection: React.FC<CartridgeLinkingSectionProps> = (
 
   return (
     <>
-      <DeviceSearch
-        items={allCartridges}
-        onSelect={onCartridgeSelect}
-        placeholder={isEditMode ? "Поиск картриджа по модели или производителю..." : "Поиск картриджа..."}
-        displayField="modelCart"
-        searchFields={["modelCart", "vendor"]}
-      />
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+        <div style={{ flex: 1 }}>
+          <DeviceSearch
+            items={allCartridges}
+            onSelect={onCartridgeSelect}
+            placeholder={isEditMode ? "Поиск картриджа по модели или производителю..." : "Поиск картриджа..."}
+            displayField="modelCart"
+            searchFields={["modelCart", "vendor"]}
+          />
+        </div>
+        {onCreateNewCartridge && (
+          <button
+            type="button"
+            onClick={onCreateNewCartridge}
+            className={styles.linkButton}
+            style={{ whiteSpace: 'nowrap' }}
+          >
+            + Добавить картридж
+          </button>
+        )}
+      </div>
       {selectedCartridges.length > 0 && onCreateCompatibility && (
         <button
           type="button"

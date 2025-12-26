@@ -116,6 +116,10 @@
   z-index: 1000;
 }
 
+.modalOverlay.modalOverlayNested {
+  z-index: 2000 !important;
+}
+
 .modal {
   background: white;
   border-radius: 8px;

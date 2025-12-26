@@ -3,6 +3,7 @@ import { Printer, Cartridge, updatePrinter, uploadImage, updateImage, getPaginat
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
 import { PrinterPriceSection } from "./PrinterPriceSection";
+import { CreateCartridgeModal } from "../cartridges/CreateCartridgeModal";
 import styles from "./printers.module.css";
 
 interface EditPrinterModalProps {
@@ -32,6 +33,7 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
   const [linkedCartridges, setLinkedCartridges] = useState<Cartridge[]>([]);
   const [compatibilityMap, setCompatibilityMap] = useState<Map<string, string>>(new Map());
   const [isLoadingCartridges, setIsLoadingCartridges] = useState(false);
+  const [isCreateCartridgeModalOpen, setIsCreateCartridgeModalOpen] = useState(false);
 
   useEffect(() => {
     if ((printer as any).photo) {
@@ -116,6 +118,15 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     }
   };
 
+  const handleCreateNewCartridge = () => {
+    setIsCreateCartridgeModalOpen(true);
+  };
+
+  const handleCartridgeCreated = async () => {
+    await loadCartridges();
+    setIsCreateCartridgeModalOpen(false);
+  };
+
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       setImageFile(e.target.files[0]);
@@ -158,56 +169,66 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
   };
 
   return (
-    <div className={styles.modalOverlay} onClick={onClose}>
-      <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-        <div className={styles.modalHeader}>
-          <h2>Редактировать принтер</h2>
-          <button className={styles.closeButton} onClick={onClose}>
-            ×
-          </button>
-        </div>
-        <form onSubmit={handleSubmit} className={styles.modalForm}>
-          <PrinterFormFields
-            formData={formData}
-            onFormDataChange={(data) => setFormData({ ...formData, ...data })}
-            imagePreview={currentImageSrc}
-            onImageChange={handleImageChange}
-          />
-
-          <PrinterPriceSection
-            currentPriceId={(printer as any).price}
-            device={formData.device}
-            type={formData.type}
-            format={formData.format}
-            capacity={formData.capacity ? parseFloat(formData.capacity as any) : undefined}
-            onPriceChange={setSelectedPriceId}
-          />
-
-          <div className={styles.formGroup}>
-            <label>Привязать картриджи</label>
-            <CartridgeLinkingSection
-              allCartridges={allCartridges}
-              selectedCartridges={selectedCartridges}
-              linkedCartridges={linkedCartridges}
-              isLoadingCartridges={isLoadingCartridges}
-              onCartridgeSelect={handleCartridgeSelect}
-              onCreateCompatibility={handleCreateCompatibility}
-              onDeleteCompatibility={handleDeleteCompatibility}
-              isEditMode={true}
+    <>
+      {isCreateCartridgeModalOpen && (
+        <CreateCartridgeModal
+          onClose={() => setIsCreateCartridgeModalOpen(false)}
+          onSave={handleCartridgeCreated}
+          isNested={true}
+        />
+      )}
+      <div className={styles.modalOverlay} onClick={onClose}>
+        <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
+          <div className={styles.modalHeader}>
+            <h2>Редактировать принтер</h2>
+            <button className={styles.closeButton} onClick={onClose}>
+              ×
+            </button>
+          </div>
+          <form onSubmit={handleSubmit} className={styles.modalForm}>
+            <PrinterFormFields
+              formData={formData}
+              onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+              imagePreview={currentImageSrc}
+              onImageChange={handleImageChange}
             />
-          </div>
 
-          <div className={styles.modalActions}>
-            <button type="button" onClick={onClose} disabled={isSaving}>
-              Отмена
-            </button>
-            <button type="submit" disabled={isSaving}>
-              {isSaving ? "Сохранение..." : "Сохранить"}
-            </button>
-          </div>
-        </form>
+            <PrinterPriceSection
+              currentPriceId={(printer as any).price}
+              device={formData.device}
+              type={formData.type}
+              format={formData.format}
+              capacity={formData.capacity ? parseFloat(formData.capacity as any) : undefined}
+              onPriceChange={setSelectedPriceId}
+            />
+
+            <div className={styles.formGroup}>
+              <label>Привязать картриджи</label>
+              <CartridgeLinkingSection
+                allCartridges={allCartridges}
+                selectedCartridges={selectedCartridges}
+                linkedCartridges={linkedCartridges}
+                isLoadingCartridges={isLoadingCartridges}
+                onCartridgeSelect={handleCartridgeSelect}
+                onCreateCompatibility={handleCreateCompatibility}
+                onDeleteCompatibility={handleDeleteCompatibility}
+                onCreateNewCartridge={handleCreateNewCartridge}
+                isEditMode={true}
+              />
+            </div>
+
+            <div className={styles.modalActions}>
+              <button type="button" onClick={onClose} disabled={isSaving}>
+                Отмена
+              </button>
+              <button type="submit" disabled={isSaving}>
+                {isSaving ? "Сохранение..." : "Сохранить"}
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
