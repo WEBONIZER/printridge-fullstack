@@ -315,6 +315,9 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     const limit = Math.min(10000, Math.max(1, parseInt(req.query.limit as string) || 10));
     const vendor = req.query.vendor as string || '';
     const model = req.query.model as string || '';
+    const hasImage = req.query.hasImage as string || '';
+    const hasLinkedCartridges = req.query.hasLinkedCartridges as string || '';
+    const publicFilter = req.query.public as string || '';
 
     const skip = (page - 1) * limit;
 
@@ -328,6 +331,33 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
 
     if (model) {
       baseQuery.model = { $regex: escapeRegex(model), $options: 'i' };
+    }
+
+    if (publicFilter === 'true') {
+      baseQuery.public = { $ne: false };
+    } else if (publicFilter === 'false') {
+      baseQuery.public = false;
+    }
+
+    // Получаем ID принтеров с/без связей для фильтрации
+    let filteredPrinterIds: string[] | null = null;
+    if (hasLinkedCartridges === 'yes' || hasLinkedCartridges === 'no') {
+      const { CompatibilityModel: CompatModel } = require("../models/compatibility-model");
+      const compatibilities = await CompatModel.find({}).lean();
+      const printerIdsWithLinks = new Set(compatibilities.map((c: any) => c.printerId.toString()));
+      
+      if (hasLinkedCartridges === 'yes') {
+        filteredPrinterIds = Array.from(printerIdsWithLinks) as string[];
+      } else {
+        const allPrinters = await PrinterModel.find({}, { _id: 1 }).lean();
+        filteredPrinterIds = allPrinters
+          .map((p: any) => p._id.toString())
+          .filter((id: string) => !printerIdsWithLinks.has(id));
+      }
+    }
+
+    if (filteredPrinterIds !== null) {
+      baseQuery._id = { $in: filteredPrinterIds.map(id => new mongoose.Types.ObjectId(id)) };
     }
 
     const [total, printersData] = await Promise.all([
@@ -345,18 +375,35 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     const photoMap = new Map(photos.map(p => [p.printerId, p]));
 
     // Добавляем фото к каждому принтеру
-    const printers = printersData.map(printer => ({
+    let printers = printersData.map(printer => ({
       ...printer,
       photo: photoMap.get(printer._id.toString()) || null
     }));
+
+    // Фильтрация по наличию картинки
+    if (hasImage === 'yes') {
+      printers = printers.filter(printer => {
+        if (typeof printer.photo === 'object' && printer.photo !== null) {
+          return !!(printer.photo.src || printer.photo._id);
+        }
+        return !!printer.photo;
+      });
+    } else if (hasImage === 'no') {
+      printers = printers.filter(printer => {
+        if (typeof printer.photo === 'object' && printer.photo !== null) {
+          return !(printer.photo.src || printer.photo._id);
+        }
+        return !printer.photo;
+      });
+    }
 
     res.status(200).json({
       success: true,
       data: printers,
       pagination: {
         currentPage: page,
-        totalPages: Math.ceil(total / limit),
-        totalItems: total
+        totalPages: Math.ceil((hasImage ? printers.length : total) / limit),
+        totalItems: hasImage ? printers.length : total
       }
     });
 

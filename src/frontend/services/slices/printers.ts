@@ -25,7 +25,7 @@ const initialState: PrintersState = {
 
 export const fetchPrinters = createAsyncThunk(
   "printers/fetchPrinters",
-  async (params?: { page?: number; limit?: number; vendor?: string; model?: string }, { rejectWithValue }) => {
+  async (params?: { page?: number; limit?: number; vendor?: string; model?: string; hasImage?: string; hasLinkedCartridges?: string; public?: string }, { rejectWithValue }) => {
     try {
       const response = await getPaginatedPrinters(params);
       return response;

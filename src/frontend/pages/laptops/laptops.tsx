@@ -12,6 +12,8 @@ export const LaptopsPage: React.FC = () => {
   const dispatch = useDispatch_();
   const { items, isLoading, error, pagination } = useSelector_((state) => state.laptops);
   const [vendorFilter, setVendorFilter] = useState<string>("");
+  const [modelFilterInput, setModelFilterInput] = useState<string>("");
+  const [modelFilter, setModelFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
   const [publicFilter, setPublicFilter] = useState<string>("all");
   const [selectedItem, setSelectedItem] = useState<Laptop | null>(null);
@@ -19,27 +21,30 @@ export const LaptopsPage: React.FC = () => {
   const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
 
   useEffect(() => {
-    dispatch(fetchLaptops({ page: 1, limit: 1000 }));
-  }, [dispatch]);
+    const timer = setTimeout(() => {
+      setModelFilter(modelFilterInput);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [modelFilterInput]);
+
+  useEffect(() => {
+    dispatch(fetchLaptops({ 
+      page: 1, 
+      limit: 1000,
+      vendor: vendorFilter || undefined,
+      model: modelFilter || undefined,
+      hasImage: hasImageFilter !== "all" ? hasImageFilter : undefined,
+      public: publicFilter !== "all" ? publicFilter : undefined
+    }));
+  }, [dispatch, vendorFilter, modelFilter, hasImageFilter, publicFilter]);
 
   const vendors = useMemo(() => {
     const uniqueVendors = new Set(items.map((item) => item.vendor).filter(Boolean));
     return Array.from(uniqueVendors).sort();
   }, [items]);
 
-  const filteredItems = useMemo(() => {
-    return items.filter((item) => {
-      if (vendorFilter && item.vendor !== vendorFilter) return false;
-      
-      if (publicFilter !== "all") {
-        const isPublic = item.public !== false;
-        if (publicFilter === "true" && !isPublic) return false;
-        if (publicFilter === "false" && isPublic) return false;
-      }
-      
-      return true;
-    });
-  }, [items, vendorFilter, hasImageFilter, publicFilter]);
+  const filteredItems = items;
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -63,10 +68,16 @@ export const LaptopsPage: React.FC = () => {
 
       <LaptopsFilters
         vendorFilter={vendorFilter}
+        modelFilter={modelFilterInput}
         publicFilter={publicFilter}
         vendors={vendors}
-        onVendorFilterChange={setVendorFilter}
-        onPublicFilterChange={setPublicFilter}
+        onVendorFilterChange={(value) => {
+          setVendorFilter(value);
+        }}
+        onModelFilterChange={setModelFilterInput}
+        onPublicFilterChange={(value) => {
+          setPublicFilter(value);
+        }}
       />
 
       <LaptopsTable

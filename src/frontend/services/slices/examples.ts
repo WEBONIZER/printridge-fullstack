@@ -25,7 +25,7 @@ const initialState: ExamplesState = {
 
 export const fetchExamples = createAsyncThunk(
   "examples/fetchExamples",
-  async (params?: { page?: number; limit?: number; title?: string; cartridgeId?: string; printerId?: string; laptopId?: string }, { rejectWithValue }) => {
+  async (params?: { page?: number; limit?: number; title?: string; cartridgeId?: string; printerId?: string; laptopId?: string; public?: string }, { rejectWithValue }) => {
     try {
       const response = await getPaginatedExamples(params);
       return response;

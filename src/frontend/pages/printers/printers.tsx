@@ -13,6 +13,8 @@ export const PrintersPage: React.FC = () => {
   const dispatch = useDispatch_();
   const { items, isLoading, error, pagination } = useSelector_((state) => state.printers);
   const [vendorFilter, setVendorFilter] = useState<string>("");
+  const [modelFilterInput, setModelFilterInput] = useState<string>("");
+  const [modelFilter, setModelFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
   const [hasLinkedCartridgesFilter, setHasLinkedCartridgesFilter] = useState<string>("all");
   const [publicFilter, setPublicFilter] = useState<string>("all");
@@ -29,8 +31,25 @@ export const PrintersPage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(fetchPrinters({ page: currentPage, limit: 30, vendor: vendorFilter || undefined }));
-  }, [dispatch, currentPage, vendorFilter]);
+    const timer = setTimeout(() => {
+      setModelFilter(modelFilterInput);
+      setCurrentPage(1);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [modelFilterInput]);
+
+  useEffect(() => {
+    dispatch(fetchPrinters({ 
+      page: currentPage, 
+      limit: 30, 
+      vendor: vendorFilter || undefined,
+      model: modelFilter || undefined,
+      hasImage: hasImageFilter !== "all" ? hasImageFilter : undefined,
+      hasLinkedCartridges: hasLinkedCartridgesFilter !== "all" ? hasLinkedCartridgesFilter : undefined,
+      public: publicFilter !== "all" ? publicFilter : undefined
+    }));
+  }, [dispatch, currentPage, vendorFilter, modelFilter, hasImageFilter, hasLinkedCartridgesFilter, publicFilter]);
 
   useEffect(() => {
     if (items.length > 0) {
@@ -73,33 +92,7 @@ export const PrintersPage: React.FC = () => {
     }
   };
 
-  const hasImage = (printer: Printer): boolean => {
-    return false;
-  };
-
-  const filteredItems = useMemo(() => {
-    return items.filter((item) => {
-      if (hasImageFilter === "yes" && !hasImage(item)) return false;
-      if (hasImageFilter === "no" && hasImage(item)) return false;
-      
-      if (hasLinkedCartridgesFilter !== "all") {
-        const linkedCartridges = linkedCartridgesMap.get(item._id);
-        if (linkedCartridges === undefined) {
-          return true;
-        }
-        if (hasLinkedCartridgesFilter === "yes" && linkedCartridges.length === 0) return false;
-        if (hasLinkedCartridgesFilter === "no" && linkedCartridges.length > 0) return false;
-      }
-      
-      if (publicFilter !== "all") {
-        const isPublic = item.public !== false;
-        if (publicFilter === "true" && !isPublic) return false;
-        if (publicFilter === "false" && isPublic) return false;
-      }
-      
-      return true;
-    });
-  }, [items, hasImageFilter, hasLinkedCartridgesFilter, publicFilter, linkedCartridgesMap]);
+  const filteredItems = items;
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -123,6 +116,7 @@ export const PrintersPage: React.FC = () => {
 
       <PrintersFilters
         vendorFilter={vendorFilter}
+        modelFilter={modelFilterInput}
         hasImageFilter={hasImageFilter}
         hasLinkedCartridgesFilter={hasLinkedCartridgesFilter}
         publicFilter={publicFilter}
@@ -131,9 +125,19 @@ export const PrintersPage: React.FC = () => {
           setVendorFilter(value);
           setCurrentPage(1);
         }}
-        onHasImageFilterChange={setHasImageFilter}
-        onHasLinkedCartridgesFilterChange={setHasLinkedCartridgesFilter}
-        onPublicFilterChange={setPublicFilter}
+        onModelFilterChange={setModelFilterInput}
+        onHasImageFilterChange={(value) => {
+          setHasImageFilter(value);
+          setCurrentPage(1);
+        }}
+        onHasLinkedCartridgesFilterChange={(value) => {
+          setHasLinkedCartridgesFilter(value);
+          setCurrentPage(1);
+        }}
+        onPublicFilterChange={(value) => {
+          setPublicFilter(value);
+          setCurrentPage(1);
+        }}
       />
 
       <PrintersTable

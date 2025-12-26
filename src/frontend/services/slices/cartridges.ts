@@ -25,7 +25,7 @@ const initialState: CartridgesState = {
 
 export const fetchCartridges = createAsyncThunk(
   "cartridges/fetchCartridges",
-  async (params?: { page?: number; limit?: number; modelCart?: string; vendor?: string }, { rejectWithValue }) => {
+  async (params?: { page?: number; limit?: number; modelCart?: string; vendor?: string; hasImage?: string; hasLinkedDevices?: string; public?: string }, { rejectWithValue }) => {
     try {
       const response = await getPaginatedCartridges(params);
       return response;

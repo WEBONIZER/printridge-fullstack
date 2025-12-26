@@ -3,11 +3,13 @@ import styles from "./printers.module.css";
 
 interface PrintersFiltersProps {
   vendorFilter: string;
+  modelFilter: string;
   hasImageFilter: string;
   hasLinkedCartridgesFilter: string;
   publicFilter: string;
   vendors: string[];
   onVendorFilterChange: (value: string) => void;
+  onModelFilterChange: (value: string) => void;
   onHasImageFilterChange: (value: string) => void;
   onHasLinkedCartridgesFilterChange: (value: string) => void;
   onPublicFilterChange: (value: string) => void;
@@ -15,11 +17,13 @@ interface PrintersFiltersProps {
 
 export const PrintersFilters: React.FC<PrintersFiltersProps> = ({
   vendorFilter,
+  modelFilter,
   hasImageFilter,
   hasLinkedCartridgesFilter,
   publicFilter,
   vendors,
   onVendorFilterChange,
+  onModelFilterChange,
   onHasImageFilterChange,
   onHasLinkedCartridgesFilterChange,
   onPublicFilterChange,
@@ -40,6 +44,16 @@ export const PrintersFilters: React.FC<PrintersFiltersProps> = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className={styles.filterGroup}>
+        <label>Модель:</label>
+        <input
+          type="text"
+          value={modelFilter}
+          onChange={(e) => onModelFilterChange(e.target.value)}
+          placeholder="Введите модель..."
+          className={styles.input}
+        />
       </div>
       <div className={styles.filterGroup}>
         <label>Наличие картинки:</label>

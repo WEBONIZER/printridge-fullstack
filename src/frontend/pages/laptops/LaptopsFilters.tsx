@@ -3,17 +3,21 @@ import styles from "./laptops.module.css";
 
 interface LaptopsFiltersProps {
   vendorFilter: string;
+  modelFilter: string;
   publicFilter: string;
   vendors: string[];
   onVendorFilterChange: (value: string) => void;
+  onModelFilterChange: (value: string) => void;
   onPublicFilterChange: (value: string) => void;
 }
 
 export const LaptopsFilters: React.FC<LaptopsFiltersProps> = ({
   vendorFilter,
+  modelFilter,
   publicFilter,
   vendors,
   onVendorFilterChange,
+  onModelFilterChange,
   onPublicFilterChange,
 }) => {
   return (
@@ -32,6 +36,16 @@ export const LaptopsFilters: React.FC<LaptopsFiltersProps> = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className={styles.filterGroup}>
+        <label>Модель:</label>
+        <input
+          type="text"
+          value={modelFilter}
+          onChange={(e) => onModelFilterChange(e.target.value)}
+          placeholder="Введите модель..."
+          className={styles.input}
+        />
       </div>
       <div className={styles.filterGroup}>
         <label>Публичный статус:</label>

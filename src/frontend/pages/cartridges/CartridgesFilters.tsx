@@ -3,11 +3,13 @@ import styles from "./cartridges.module.css";
 
 interface CartridgesFiltersProps {
   vendorFilter: string;
+  modelFilter: string;
   hasImageFilter: string;
   hasLinkedDevicesFilter: string;
   publicFilter: string;
   vendors: string[];
   onVendorFilterChange: (value: string) => void;
+  onModelFilterChange: (value: string) => void;
   onHasImageFilterChange: (value: string) => void;
   onHasLinkedDevicesFilterChange: (value: string) => void;
   onPublicFilterChange: (value: string) => void;
@@ -15,11 +17,13 @@ interface CartridgesFiltersProps {
 
 export const CartridgesFilters: React.FC<CartridgesFiltersProps> = ({
   vendorFilter,
+  modelFilter,
   hasImageFilter,
   hasLinkedDevicesFilter,
   publicFilter,
   vendors,
   onVendorFilterChange,
+  onModelFilterChange,
   onHasImageFilterChange,
   onHasLinkedDevicesFilterChange,
   onPublicFilterChange,
@@ -40,6 +44,16 @@ export const CartridgesFilters: React.FC<CartridgesFiltersProps> = ({
             </option>
           ))}
         </select>
+      </div>
+      <div className={styles.filterGroup}>
+        <label>Модель:</label>
+        <input
+          type="text"
+          value={modelFilter}
+          onChange={(e) => onModelFilterChange(e.target.value)}
+          placeholder="Введите модель..."
+          className={styles.input}
+        />
       </div>
       <div className={styles.filterGroup}>
         <label>Наличие картинки:</label>

@@ -305,22 +305,38 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
     const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 10));
     const search = (req.query.search as string) || '';
     const vendor = (req.query.vendor as string) || '';
+    const model = (req.query.model as string) || '';
+    const hasImage = req.query.hasImage as string || '';
+    const publicFilter = req.query.public as string || '';
 
     const skip = (page - 1) * limit;
 
     const baseQuery: any = {};
 
+    const escapeRegex = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
     if (vendor) {
-      baseQuery.vendor = { $regex: vendor, $options: 'i' };
+      baseQuery.vendor = { $regex: escapeRegex(vendor), $options: 'i' };
     }
 
-    if (search) {
+    if (model) {
+      baseQuery.model = { $regex: escapeRegex(model), $options: 'i' };
+    }
+
+    if (search && !model) {
+      const escapedSearch = escapeRegex(search);
       baseQuery.$or = [
-        { model: { $regex: search, $options: 'i' } },
-        { series: { $regex: search, $options: 'i' } },
-        { vendor: { $regex: search, $options: 'i' } },
-        { processorName: { $regex: search, $options: 'i' } },
+        { model: { $regex: escapedSearch, $options: 'i' } },
+        { series: { $regex: escapedSearch, $options: 'i' } },
+        { vendor: { $regex: escapedSearch, $options: 'i' } },
+        { processorName: { $regex: escapedSearch, $options: 'i' } },
       ];
+    }
+
+    if (publicFilter === 'true') {
+      baseQuery.public = { $ne: false };
+    } else if (publicFilter === 'false') {
+      baseQuery.public = false;
     }
 
     const [total, laptopsData] = await Promise.all([
@@ -338,18 +354,35 @@ export const getPaginatedLaptops = async (req: Request, res: Response) => {
     const photoMap = new Map(photos.map(p => [p.laptopId, p]));
 
     // Добавляем фото к каждому ноутбуку
-    const laptops = laptopsData.map(laptop => ({
+    let laptops = laptopsData.map(laptop => ({
       ...laptop,
       photo: photoMap.get(laptop._id.toString()) || null
     }));
+
+    // Фильтрация по наличию картинки
+    if (hasImage === 'yes') {
+      laptops = laptops.filter(laptop => {
+        if (typeof laptop.photo === 'object' && laptop.photo !== null) {
+          return !!(laptop.photo.src || laptop.photo._id);
+        }
+        return !!laptop.photo;
+      });
+    } else if (hasImage === 'no') {
+      laptops = laptops.filter(laptop => {
+        if (typeof laptop.photo === 'object' && laptop.photo !== null) {
+          return !(laptop.photo.src || laptop.photo._id);
+        }
+        return !laptop.photo;
+      });
+    }
 
     res.status(200).json({
       success: true,
       data: laptops,
       pagination: {
         currentPage: page,
-        totalPages: Math.ceil(total / limit),
-        totalItems: total
+        totalPages: Math.ceil((hasImage ? laptops.length : total) / limit),
+        totalItems: hasImage ? laptops.length : total
       }
     });
 

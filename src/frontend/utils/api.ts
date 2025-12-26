@@ -83,6 +83,9 @@ export interface Cartridge extends CartridgeData {
 export const getPaginatedCartridges = async (params?: PaginationParams & {
   modelCart?: string;
   vendor?: string;
+  hasImage?: string;
+  hasLinkedDevices?: string;
+  public?: string;
 }) => {
   const response = await apiClient.get<PaginatedResponse<Cartridge>>("/cartridges/paginated", {
     params,
@@ -222,6 +225,7 @@ export const getPaginatedExamples = async (params?: PaginationParams & {
   cartridgeId?: string;
   printerId?: string;
   laptopId?: string;
+  public?: string;
 }) => {
   const response = await apiClient.get<PaginatedResponse<Example>>("/examples/paginated", {
     params,
@@ -360,6 +364,9 @@ export interface Printer extends IPrinterSchema {
 export const getPaginatedPrinters = async (params?: PaginationParams & {
   vendor?: string;
   model?: string;
+  hasImage?: string;
+  hasLinkedCartridges?: string;
+  public?: string;
 }) => {
   const response = await apiClient.get<PaginatedResponse<Printer>>("/printers/paginated", {
     params,
@@ -463,6 +470,8 @@ export interface Laptop extends ILaptopSchema {
 export const getPaginatedLaptops = async (params?: PaginationParams & {
   vendor?: string;
   model?: string;
+  hasImage?: string;
+  public?: string;
 }) => {
   const response = await apiClient.get<PaginatedResponse<Laptop>>("/laptops/paginated", {
     params,

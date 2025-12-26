@@ -13,6 +13,8 @@ export const CartridgesPage: React.FC = () => {
   const dispatch = useDispatch_();
   const { items, isLoading, error, pagination } = useSelector_((state) => state.cartridges);
   const [vendorFilter, setVendorFilter] = useState<string>("");
+  const [modelFilterInput, setModelFilterInput] = useState<string>("");
+  const [modelFilter, setModelFilter] = useState<string>("");
   const [hasImageFilter, setHasImageFilter] = useState<string>("all");
   const [hasLinkedDevicesFilter, setHasLinkedDevicesFilter] = useState<string>("all");
   const [publicFilter, setPublicFilter] = useState<string>("all");
@@ -29,8 +31,25 @@ export const CartridgesPage: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(fetchCartridges({ page: currentPage, limit: 30, vendor: vendorFilter || undefined }));
-  }, [dispatch, currentPage, vendorFilter]);
+    const timer = setTimeout(() => {
+      setModelFilter(modelFilterInput);
+      setCurrentPage(1);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [modelFilterInput]);
+
+  useEffect(() => {
+    dispatch(fetchCartridges({ 
+      page: currentPage, 
+      limit: 30, 
+      vendor: vendorFilter || undefined,
+      modelCart: modelFilter || undefined,
+      hasImage: hasImageFilter !== "all" ? hasImageFilter : undefined,
+      hasLinkedDevices: hasLinkedDevicesFilter !== "all" ? hasLinkedDevicesFilter : undefined,
+      public: publicFilter !== "all" ? publicFilter : undefined
+    }));
+  }, [dispatch, currentPage, vendorFilter, modelFilter, hasImageFilter, hasLinkedDevicesFilter, publicFilter]);
 
   useEffect(() => {
     if (items.length > 0) {
@@ -73,37 +92,7 @@ export const CartridgesPage: React.FC = () => {
     }
   };
 
-  const hasImage = (cartridge: Cartridge): boolean => {
-    if (!cartridge.photo) return false;
-    if (typeof cartridge.photo === 'object' && cartridge.photo !== null) {
-      return !!(cartridge.photo.src || cartridge.photo._id);
-    }
-    return !!cartridge.photo;
-  };
-
-  const filteredItems = useMemo(() => {
-    return items.filter((item) => {
-      if (hasImageFilter === "yes" && !hasImage(item)) return false;
-      if (hasImageFilter === "no" && hasImage(item)) return false;
-      
-      if (hasLinkedDevicesFilter !== "all") {
-        const linkedPrinters = linkedPrintersMap.get(item._id);
-        if (linkedPrinters === undefined) {
-          return true;
-        }
-        if (hasLinkedDevicesFilter === "yes" && linkedPrinters.length === 0) return false;
-        if (hasLinkedDevicesFilter === "no" && linkedPrinters.length > 0) return false;
-      }
-      
-      if (publicFilter !== "all") {
-        const isPublic = item.public !== false;
-        if (publicFilter === "true" && !isPublic) return false;
-        if (publicFilter === "false" && isPublic) return false;
-      }
-      
-      return true;
-    });
-  }, [items, hasImageFilter, hasLinkedDevicesFilter, publicFilter, linkedPrintersMap]);
+  const filteredItems = items;
 
   if (isLoading) {
     return <div className={styles.loading}>Загрузка...</div>;
@@ -127,6 +116,7 @@ export const CartridgesPage: React.FC = () => {
 
       <CartridgesFilters
         vendorFilter={vendorFilter}
+        modelFilter={modelFilterInput}
         hasImageFilter={hasImageFilter}
         hasLinkedDevicesFilter={hasLinkedDevicesFilter}
         publicFilter={publicFilter}
@@ -135,9 +125,19 @@ export const CartridgesPage: React.FC = () => {
           setVendorFilter(value);
           setCurrentPage(1);
         }}
-        onHasImageFilterChange={setHasImageFilter}
-        onHasLinkedDevicesFilterChange={setHasLinkedDevicesFilter}
-        onPublicFilterChange={setPublicFilter}
+        onModelFilterChange={setModelFilterInput}
+        onHasImageFilterChange={(value) => {
+          setHasImageFilter(value);
+          setCurrentPage(1);
+        }}
+        onHasLinkedDevicesFilterChange={(value) => {
+          setHasLinkedDevicesFilter(value);
+          setCurrentPage(1);
+        }}
+        onPublicFilterChange={(value) => {
+          setPublicFilter(value);
+          setCurrentPage(1);
+        }}
       />
 
       <CartridgesTable

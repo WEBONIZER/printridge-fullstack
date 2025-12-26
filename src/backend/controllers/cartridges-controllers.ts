@@ -1,6 +1,7 @@
 import { Request, NextFunction, Response } from "express";
 import mongoose, { Schema } from "mongoose";
 import { CartridgeModel } from "../models/cartridge-model";
+import { CompatibilityModel } from "../models/compatibility-model";
 import { CartridgeData } from "../../utils/types";
 
 export const createCartridge = async (req: Request, res: Response) => {
@@ -238,6 +239,9 @@ export const getPaginatedCartridges = async (
     const limit = Math.min(10000, Math.max(1, parseInt(req.query.limit as string) || 10));
     const modelCart = req.query.modelCart as string || '';
     const vendor = req.query.vendor as string || '';
+    const hasImage = req.query.hasImage as string || '';
+    const hasLinkedDevices = req.query.hasLinkedDevices as string || '';
+    const publicFilter = req.query.public as string || '';
 
     const skip = (page - 1) * limit;
 
@@ -255,6 +259,33 @@ export const getPaginatedCartridges = async (
       baseQuery.vendor = { $regex: escapeRegex(vendor), $options: 'i' };
     }
 
+    if (publicFilter === 'true') {
+      baseQuery.public = { $ne: false };
+    } else if (publicFilter === 'false') {
+      baseQuery.public = false;
+    }
+
+    // Получаем ID картриджей с/без связей для фильтрации
+    let filteredCartridgeIds: string[] | null = null;
+    if (hasLinkedDevices === 'yes' || hasLinkedDevices === 'no') {
+      const compatibilities = await CompatibilityModel.find({}).lean();
+      const cartridgeIdsWithLinks = new Set(compatibilities.map(c => c.cartridgeId.toString()));
+      
+      if (hasLinkedDevices === 'yes') {
+        filteredCartridgeIds = Array.from(cartridgeIdsWithLinks);
+      } else {
+        // Для 'no' нужно получить все ID картриджей и исключить те, что есть в связях
+        const allCartridges = await CartridgeModel.find({}, { _id: 1 }).lean();
+        filteredCartridgeIds = allCartridges
+          .map(c => c._id.toString())
+          .filter(id => !cartridgeIdsWithLinks.has(id));
+      }
+    }
+
+    if (filteredCartridgeIds !== null) {
+      baseQuery._id = { $in: filteredCartridgeIds.map(id => new mongoose.Types.ObjectId(id)) };
+    }
+
     // Параллельные запросы для производительности
     const [total, cartridges] = await Promise.all([
       CartridgeModel.countDocuments(baseQuery),
@@ -266,15 +297,33 @@ export const getPaginatedCartridges = async (
         .lean(),
     ]);
 
+    // Фильтрация по наличию картинки на клиенте после populate
+    let filteredCartridges = cartridges;
+    if (hasImage === 'yes') {
+      filteredCartridges = cartridges.filter(cart => {
+        if (typeof cart.photo === 'object' && cart.photo !== null) {
+          return !!(cart.photo.src || cart.photo._id);
+        }
+        return !!cart.photo;
+      });
+    } else if (hasImage === 'no') {
+      filteredCartridges = cartridges.filter(cart => {
+        if (typeof cart.photo === 'object' && cart.photo !== null) {
+          return !(cart.photo.src || cart.photo._id);
+        }
+        return !cart.photo;
+      });
+    }
+
     if (res.headersSent) return;
 
     res.status(200).send({
       status: "success",
-      data: cartridges,
+      data: filteredCartridges,
       pagination: {
         currentPage: page,
-        totalPages: Math.ceil(total / limit),
-        totalItems: total
+        totalPages: Math.ceil((hasImage ? filteredCartridges.length : total) / limit),
+        totalItems: hasImage ? filteredCartridges.length : total
       }
     });
 

@@ -25,7 +25,7 @@ const initialState: LaptopsState = {
 
 export const fetchLaptops = createAsyncThunk(
   "laptops/fetchLaptops",
-  async (params?: { page?: number; limit?: number; vendor?: string; model?: string }, { rejectWithValue }) => {
+  async (params?: { page?: number; limit?: number; vendor?: string; model?: string; hasImage?: string; public?: string }, { rejectWithValue }) => {
     try {
       const response = await getPaginatedLaptops(params);
       return response;
