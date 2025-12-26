@@ -2,6 +2,8 @@ import { Request, Response } from "express";
 import mongoose from "mongoose";
 import { ExampleModel } from "../models/example-model";
 import { IExampleSchema } from "../../utils/types";
+import { sanitizeHtml, escapeHtmlText } from "../utils/html-sanitizer";
+import { generateRouteFromTitle } from "../utils/transliterate";
 
 interface ExampleData {
   title: string;
@@ -9,7 +11,18 @@ interface ExampleData {
   cartridgeId?: string;
   printerId?: string;
   laptopId?: string;
+  cartridgeNames?: string[];
+  printerNames?: string[];
+  laptopNames?: string[];
   public?: boolean;
+  // SEO метатеги
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  route?: string;
 }
 
 export const createExample = async (req: Request, res: Response) => {
@@ -31,13 +44,43 @@ export const createExample = async (req: Request, res: Response) => {
       return res.status(400).json({ error: 'Поле text обязательно' });
     }
 
+    // Санитизируем HTML перед сохранением
+    const sanitizedText = sanitizeHtml(data.text.trim());
+    // Экранируем title (не должен содержать HTML)
+    const escapedTitle = escapeHtmlText(data.title.trim());
+    
+    // Генерируем route из title, если не передан явно
+    let route = data.route?.trim() || generateRouteFromTitle(escapedTitle);
+    
+    // Проверяем уникальность route и добавляем суффикс если нужно
+    if (route) {
+      let uniqueRoute = route;
+      let counter = 1;
+      while (await ExampleModel.findOne({ route: uniqueRoute })) {
+        uniqueRoute = `${route}-${counter}`;
+        counter++;
+      }
+      route = uniqueRoute;
+    }
+
     const example = new ExampleModel({
-      title: data.title.trim(),
-      text: data.text.trim(),
+      title: escapedTitle,
+      text: sanitizedText,
       cartridgeId: data.cartridgeId || undefined,
       printerId: data.printerId || undefined,
       laptopId: data.laptopId || undefined,
-      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
+      cartridgeNames: Array.isArray(data.cartridgeNames) ? data.cartridgeNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
+      printerNames: Array.isArray(data.printerNames) ? data.printerNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
+      laptopNames: Array.isArray(data.laptopNames) ? data.laptopNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
+      // SEO метатеги
+      metaTitle: data.metaTitle ? escapeHtmlText(data.metaTitle.trim().substring(0, 60)) : undefined,
+      metaDescription: data.metaDescription ? escapeHtmlText(data.metaDescription.trim().substring(0, 160)) : undefined,
+      metaKeywords: data.metaKeywords ? escapeHtmlText(data.metaKeywords.trim()) : undefined,
+      ogTitle: data.ogTitle ? escapeHtmlText(data.ogTitle.trim().substring(0, 60)) : undefined,
+      ogDescription: data.ogDescription ? escapeHtmlText(data.ogDescription.trim().substring(0, 200)) : undefined,
+      ogImage: data.ogImage ? data.ogImage.trim() : undefined,
+      route: route || undefined,
     });
 
     const savedExample = await example.save();
@@ -52,6 +95,17 @@ export const createExample = async (req: Request, res: Response) => {
         cartridgeId: exampleObj.cartridgeId,
         printerId: exampleObj.printerId,
         laptopId: exampleObj.laptopId,
+        cartridgeNames: exampleObj.cartridgeNames || [],
+        printerNames: exampleObj.printerNames || [],
+        laptopNames: exampleObj.laptopNames || [],
+        public: exampleObj.public,
+        metaTitle: exampleObj.metaTitle,
+        metaDescription: exampleObj.metaDescription,
+        metaKeywords: exampleObj.metaKeywords,
+        ogTitle: exampleObj.ogTitle,
+        ogDescription: exampleObj.ogDescription,
+        ogImage: exampleObj.ogImage,
+        route: exampleObj.route,
         createdAt: exampleObj.createdAt,
         updatedAt: exampleObj.updatedAt
       },
@@ -129,11 +183,45 @@ export const updateExample = async (req: Request, res: Response) => {
     }
 
     if (data.title !== undefined) {
-      existingExample.title = data.title.trim();
+      // Экранируем title (не должен содержать HTML)
+      const newTitle = escapeHtmlText(data.title.trim());
+      existingExample.title = newTitle;
+      
+      // Если title изменился и route не передан явно, перегенерируем route
+      if (!data.route) {
+        const newRoute = generateRouteFromTitle(newTitle);
+        if (newRoute) {
+          let uniqueRoute = newRoute;
+          let counter = 1;
+          // Проверяем уникальность, исключая текущий пример
+          while (await ExampleModel.findOne({ route: uniqueRoute, _id: { $ne: existingExample._id } })) {
+            uniqueRoute = `${newRoute}-${counter}`;
+            counter++;
+          }
+          existingExample.route = uniqueRoute;
+        }
+      }
+    }
+
+    if (data.route !== undefined && data.route !== null) {
+      // Если route передан явно, используем его (с проверкой уникальности)
+      const newRoute = data.route.trim();
+      if (newRoute) {
+        let uniqueRoute = newRoute;
+        let counter = 1;
+        while (await ExampleModel.findOne({ route: uniqueRoute, _id: { $ne: existingExample._id } })) {
+          uniqueRoute = `${newRoute}-${counter}`;
+          counter++;
+        }
+        existingExample.route = uniqueRoute;
+      } else {
+        existingExample.route = undefined;
+      }
     }
 
     if (data.text !== undefined) {
-      existingExample.text = data.text.trim();
+      // Санитизируем HTML перед сохранением
+      existingExample.text = sanitizeHtml(data.text.trim());
     }
 
     if (data.cartridgeId !== undefined) {
@@ -148,8 +236,40 @@ export const updateExample = async (req: Request, res: Response) => {
       existingExample.laptopId = data.laptopId || undefined;
     }
 
+    if (data.cartridgeNames !== undefined) {
+      existingExample.cartridgeNames = Array.isArray(data.cartridgeNames) ? data.cartridgeNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
+    }
+
+    if (data.printerNames !== undefined) {
+      existingExample.printerNames = Array.isArray(data.printerNames) ? data.printerNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
+    }
+
+    if (data.laptopNames !== undefined) {
+      existingExample.laptopNames = Array.isArray(data.laptopNames) ? data.laptopNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
+    }
+
     if (data.public !== undefined) {
       existingExample.public = data.public === true || String(data.public).toLowerCase() === 'true';
+    }
+
+    // SEO метатеги
+    if (data.metaTitle !== undefined) {
+      existingExample.metaTitle = data.metaTitle ? escapeHtmlText(data.metaTitle.trim().substring(0, 60)) : undefined;
+    }
+    if (data.metaDescription !== undefined) {
+      existingExample.metaDescription = data.metaDescription ? escapeHtmlText(data.metaDescription.trim().substring(0, 160)) : undefined;
+    }
+    if (data.metaKeywords !== undefined) {
+      existingExample.metaKeywords = data.metaKeywords ? escapeHtmlText(data.metaKeywords.trim()) : undefined;
+    }
+    if (data.ogTitle !== undefined) {
+      existingExample.ogTitle = data.ogTitle ? escapeHtmlText(data.ogTitle.trim().substring(0, 60)) : undefined;
+    }
+    if (data.ogDescription !== undefined) {
+      existingExample.ogDescription = data.ogDescription ? escapeHtmlText(data.ogDescription.trim().substring(0, 200)) : undefined;
+    }
+    if (data.ogImage !== undefined) {
+      existingExample.ogImage = data.ogImage ? data.ogImage.trim() : undefined;
     }
 
     const savedExample = await existingExample.save();
@@ -164,6 +284,17 @@ export const updateExample = async (req: Request, res: Response) => {
         cartridgeId: exampleObj.cartridgeId,
         printerId: exampleObj.printerId,
         laptopId: exampleObj.laptopId,
+        cartridgeNames: exampleObj.cartridgeNames || [],
+        printerNames: exampleObj.printerNames || [],
+        laptopNames: exampleObj.laptopNames || [],
+        public: exampleObj.public,
+        metaTitle: exampleObj.metaTitle,
+        metaDescription: exampleObj.metaDescription,
+        metaKeywords: exampleObj.metaKeywords,
+        ogTitle: exampleObj.ogTitle,
+        ogDescription: exampleObj.ogDescription,
+        ogImage: exampleObj.ogImage,
+        route: exampleObj.route,
         createdAt: exampleObj.createdAt,
         updatedAt: exampleObj.updatedAt
       },

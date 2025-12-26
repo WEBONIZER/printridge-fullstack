@@ -1,6 +1,10 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /map
+Disallow: /login
+Disallow: /profile
+Disallow: /profile/
+Disallow: /api/
 
 Host: https://printridge.ru/
 Sitemap: https://printridge.ru/sitemap.xml

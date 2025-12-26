@@ -1,6 +1,7 @@
 import React from "react";
 import { Example, Cartridge, Printer, Laptop } from "../../utils/api";
 import styles from "./examples.module.css";
+import { sanitizeHtml } from "../../utils/html-sanitizer";
 
 interface ExamplesTableProps {
   examples: Example[];
@@ -17,22 +18,9 @@ export const ExamplesTable: React.FC<ExamplesTableProps> = ({
   laptopsMap,
   onExampleClick,
 }) => {
-  const getCartridgeModel = (cartridgeId: string | undefined): string => {
-    if (!cartridgeId) return "-";
-    const cartridge = cartridgesMap.get(cartridgeId);
-    return cartridge ? cartridge.modelCart : "-";
-  };
-
-  const getPrinterModel = (printerId: string | undefined): string => {
-    if (!printerId) return "-";
-    const printer = printersMap.get(printerId);
-    return printer ? printer.model : "-";
-  };
-
-  const getLaptopModel = (laptopId: string | undefined): string => {
-    if (!laptopId) return "-";
-    const laptop = laptopsMap.get(laptopId);
-    return laptop ? laptop.model : "-";
+  const formatDeviceNames = (names: string[] | undefined): string => {
+    if (!names || !Array.isArray(names) || names.length === 0) return "-";
+    return names.filter(name => name && name.trim()).join(", ");
   };
 
   return (
@@ -56,11 +44,11 @@ export const ExamplesTable: React.FC<ExamplesTableProps> = ({
             >
               <td>{example.title}</td>
               <td className={styles.textCell}>
-                <div dangerouslySetInnerHTML={{ __html: example.text.substring(0, 100) + (example.text.length > 100 ? "..." : "") }} />
+                <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(example.text.substring(0, 100) + (example.text.length > 100 ? "..." : "")) }} />
               </td>
-              <td>{getCartridgeModel(example.cartridgeId)}</td>
-              <td>{getPrinterModel(example.printerId)}</td>
-              <td>{getLaptopModel(example.laptopId)}</td>
+              <td title={formatDeviceNames(example.cartridgeNames)}>{formatDeviceNames(example.cartridgeNames)}</td>
+              <td title={formatDeviceNames(example.printerNames)}>{formatDeviceNames(example.printerNames)}</td>
+              <td title={formatDeviceNames(example.laptopNames)}>{formatDeviceNames(example.laptopNames)}</td>
             </tr>
           ))}
         </tbody>

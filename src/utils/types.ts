@@ -60,7 +60,18 @@ export interface IExampleSchema {
     cartridgeId?: string;
     printerId?: string;
     laptopId?: string;
+    cartridgeNames?: string[];
+    printerNames?: string[];
+    laptopNames?: string[];
     public?: boolean;
+    // SEO метатеги
+    metaTitle?: string; // Title для SEO (50-60 символов)
+    metaDescription?: string; // Description для SEO (150-160 символов)
+    metaKeywords?: string; // Keywords для SEO (через запятую)
+    ogTitle?: string; // Open Graph title
+    ogDescription?: string; // Open Graph description
+    ogImage?: string; // Open Graph image URL
+    route?: string; // URL-friendly маршрут для блога (генерируется из title)
 }
 
 export interface ICartridgeSchema {

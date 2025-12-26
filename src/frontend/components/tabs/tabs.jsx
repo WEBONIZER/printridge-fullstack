@@ -2,6 +2,7 @@ import styles from './tabs.module.css';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import TabContent from './tab-contenet/tab-contenet'
+import { sanitizeHtml } from '../../utils/html-sanitizer'
 
 function Tabs({ items }) {
     
@@ -19,9 +20,8 @@ function Tabs({ items }) {
                         className={`${styles.link} ${active.toString() === i.toString() ? styles.active : ''}`}
                         onClick={openTab}
                         data-index={i}
-                    >
-                        {n.title}
-                    </NavLink>
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(n.title || '') }}
+                    />
                 ))}
             </div>
             {items[active] && <TabContent {...items[active]} />}

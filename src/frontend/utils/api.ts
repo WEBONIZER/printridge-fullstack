@@ -100,11 +100,11 @@ export const getCartridgeVendors = async () => {
 };
 
 // Поиск моделей картриджей
-export const searchCartridgeModels = async (query: string, limit: number = 10) => {
+export const searchCartridgeModels = async (query: string, limit: number = 10): Promise<string[]> => {
   const response = await apiClient.get<{ success: boolean; data: string[] }>("/cartridges/search-models", {
     params: { q: query, limit },
   });
-  return response.data;
+  return response.data.data || [];
 };
 
 // Создать картридж
@@ -223,6 +223,9 @@ export const deleteImage = async (imageId: string) => {
 
 export interface Example extends IExampleSchema {
   _id: string;
+  cartridgeNames?: string[];
+  printerNames?: string[];
+  laptopNames?: string[];
   createdAt?: string;
   updatedAt?: string;
 }
@@ -268,6 +271,22 @@ export const deleteExample = async (exampleId: string) => {
 // Изменить статус public для примера
 export const toggleExamplePublicStatus = async (exampleId: string, publicStatus: boolean) => {
   const response = await apiClient.patch<BaseResponse<Example>>(`/examples/${exampleId}/public`, { public: publicStatus });
+  return response.data;
+};
+
+// Получить фотографии примера
+export const getExamplePhotos = async (exampleId: string) => {
+  const response = await apiClient.get<PaginatedResponse<Image>>("/images/paginated", {
+    params: { exampleId, limit: 1000 }
+  });
+  return response.data;
+};
+
+// Получить видео примера
+export const getExampleVideos = async (exampleId: string) => {
+  const response = await apiClient.get<PaginatedResponse<Video>>("/videos/paginated", {
+    params: { exampleId, limit: 1000 }
+  });
   return response.data;
 };
 
@@ -389,11 +408,11 @@ export const getPrinterVendors = async () => {
 };
 
 // Поиск моделей принтеров
-export const searchPrinterModels = async (query: string, limit: number = 10) => {
+export const searchPrinterModels = async (query: string, limit: number = 10): Promise<string[]> => {
   const response = await apiClient.get<{ success: boolean; data: string[] }>("/printers/search-models", {
     params: { q: query, limit },
   });
-  return response.data;
+  return response.data.data || [];
 };
 
 // Создать принтер
@@ -526,11 +545,11 @@ export const toggleLaptopPublicStatus = async (laptopId: string, publicStatus: b
 };
 
 // Поиск моделей ноутбуков
-export const searchLaptopModels = async (query: string, limit: number = 10) => {
+export const searchLaptopModels = async (query: string, limit: number = 10): Promise<string[]> => {
   const response = await apiClient.get<{ success: boolean; data: string[] }>("/laptops/search-models", {
     params: { q: query, limit },
   });
-  return response.data;
+  return response.data.data || [];
 };
 
 // ==================== PRINTER PRICE TEMPLATES API ====================

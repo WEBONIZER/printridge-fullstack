@@ -23,10 +23,63 @@ export const exampleSchema = new Schema<IExampleSchema>(
       type: String,
       required: false,
     },
+    cartridgeNames: {
+      type: [String],
+      required: false,
+      default: [],
+    },
+    printerNames: {
+      type: [String],
+      required: false,
+      default: [],
+    },
+    laptopNames: {
+      type: [String],
+      required: false,
+      default: [],
+    },
     public: {
       type: Boolean,
       default: true,
       required: false,
+    },
+    // SEO метатеги
+    metaTitle: {
+      type: String,
+      required: false,
+      maxlength: 60,
+    },
+    metaDescription: {
+      type: String,
+      required: false,
+      maxlength: 160,
+    },
+    metaKeywords: {
+      type: String,
+      required: false,
+    },
+    ogTitle: {
+      type: String,
+      required: false,
+      maxlength: 60,
+    },
+    ogDescription: {
+      type: String,
+      required: false,
+      maxlength: 200,
+    },
+    ogImage: {
+      type: String,
+      required: false,
+    },
+    route: {
+      type: String,
+      required: false,
+      unique: true,
+      sparse: true,
+      maxlength: 100,
+      lowercase: true,
+      trim: true,
     },
   },
   {

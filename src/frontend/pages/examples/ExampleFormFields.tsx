@@ -1,25 +1,48 @@
 import React from "react";
+import { HtmlEditor } from "./HtmlEditor";
+import { DeviceNamesSelector } from "./DeviceNamesSelector";
+import { MediaUploader } from "./MediaUploader";
+import { SeoFields } from "./SeoFields";
+import { Image, Video } from "../../utils/api";
 import styles from "./examples.module.css";
 
 interface ExampleFormData {
   title: string;
   text: string;
-  cartridgeId: string;
-  printerId: string;
-  laptopId: string;
+  cartridgeNames: string[];
+  printerNames: string[];
+  laptopNames: string[];
   public?: boolean;
+  // SEO метатеги
+  metaTitle?: string;
+  metaDescription?: string;
+  metaKeywords?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
+  route?: string;
 }
 
 interface ExampleFormFieldsProps {
   formData: ExampleFormData;
   onFormDataChange: (data: Partial<ExampleFormData>) => void;
-  onVideoChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  photos?: Image[];
+  videos?: Video[];
+  onPhotoAdd?: (file: File) => Promise<void>;
+  onVideoAdd?: (file: File) => Promise<void>;
+  onPhotoDelete?: (photoId: string) => Promise<void>;
+  onVideoDelete?: (videoId: string) => Promise<void>;
 }
 
 export const ExampleFormFields: React.FC<ExampleFormFieldsProps> = ({
   formData,
   onFormDataChange,
-  onVideoChange,
+  photos = [],
+  videos = [],
+  onPhotoAdd,
+  onVideoAdd,
+  onPhotoDelete,
+  onVideoDelete,
 }) => {
   return (
     <>
@@ -32,39 +55,48 @@ export const ExampleFormFields: React.FC<ExampleFormFieldsProps> = ({
           required
         />
       </div>
-      <div className={styles.formGroup}>
-        <label>Текст (HTML) *</label>
-        <textarea
-          value={formData.text}
-          onChange={(e) => onFormDataChange({ text: e.target.value })}
-          required
-          rows={10}
+
+      <HtmlEditor
+        value={formData.text}
+        onChange={(value) => onFormDataChange({ text: value })}
+        label="Текст (HTML) *"
+        required
+      />
+
+      <DeviceNamesSelector
+        deviceType="cartridge"
+        selectedNames={formData.cartridgeNames || []}
+        onNamesChange={(names) => onFormDataChange({ cartridgeNames: names })}
+        label="Картриджи"
+      />
+
+      <DeviceNamesSelector
+        deviceType="printer"
+        selectedNames={formData.printerNames || []}
+        onNamesChange={(names) => onFormDataChange({ printerNames: names })}
+        label="Принтеры"
+      />
+
+      <DeviceNamesSelector
+        deviceType="laptop"
+        selectedNames={formData.laptopNames || []}
+        onNamesChange={(names) => onFormDataChange({ laptopNames: names })}
+        label="Ноутбуки"
+      />
+
+      {(onPhotoAdd || onVideoAdd || onPhotoDelete || onVideoDelete) && (
+        <MediaUploader
+          photos={photos}
+          videos={videos}
+          onPhotosChange={() => {}}
+          onVideosChange={() => {}}
+          onPhotoAdd={onPhotoAdd || (async () => {})}
+          onVideoAdd={onVideoAdd || (async () => {})}
+          onPhotoDelete={onPhotoDelete || (async () => {})}
+          onVideoDelete={onVideoDelete || (async () => {})}
         />
-      </div>
-      <div className={styles.formGroup}>
-        <label>Картридж ID</label>
-        <input
-          type="text"
-          value={formData.cartridgeId}
-          onChange={(e) => onFormDataChange({ cartridgeId: e.target.value })}
-        />
-      </div>
-      <div className={styles.formGroup}>
-        <label>Принтер ID</label>
-        <input
-          type="text"
-          value={formData.printerId}
-          onChange={(e) => onFormDataChange({ printerId: e.target.value })}
-        />
-      </div>
-      <div className={styles.formGroup}>
-        <label>Ноутбук ID</label>
-        <input
-          type="text"
-          value={formData.laptopId}
-          onChange={(e) => onFormDataChange({ laptopId: e.target.value })}
-        />
-      </div>
+      )}
+
       <div className={styles.formGroup}>
         <label>
           <input
@@ -75,17 +107,14 @@ export const ExampleFormFields: React.FC<ExampleFormFieldsProps> = ({
           Публичный
         </label>
       </div>
-      {onVideoChange && (
-        <div className={styles.formGroup}>
-          <label>Видео</label>
-          <input
-            type="file"
-            accept="video/*"
-            onChange={onVideoChange}
-          />
-        </div>
-      )}
+
+      <SeoFields
+        formData={formData}
+        onFormDataChange={onFormDataChange}
+        title={formData.title}
+        text={formData.text}
+        photos={photos}
+      />
     </>
   );
 };
-

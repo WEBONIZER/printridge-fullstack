@@ -3,84 +3,186 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f5f5f5;
-  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 1.042vw;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .loginBox {
   background: white;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 2.083vw;
+  border-radius: 0.417vw;
+  box-shadow: 0 0.104vw 0.521vw rgba(0, 0, 0, 0.1), 0 0.417vw 1.25vw rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px;
+  max-width: 20.833vw;
 }
 
 .title {
-  margin: 0 0 30px 0;
+  margin: 0 0 1.563vw 0;
   text-align: center;
-  font-size: 28px;
+  font-size: 1.458vw;
   color: #333;
+  font-weight: 600;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.042vw;
 }
 
 .formGroup {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.417vw;
 }
 
 .formGroup label {
   font-weight: 500;
   color: #555;
-  font-size: 14px;
+  font-size: 0.729vw;
 }
 
 .input {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
-  transition: border-color 0.3s;
+  padding: 0.625vw;
+  border: 0.052vw solid #dee2e6;
+  border-radius: 0.208vw;
+  font-size: 0.833vw;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: white;
 }
 
 .input:focus {
   outline: none;
   border-color: #007bff;
+  box-shadow: 0 0 0 0.156vw rgba(0, 123, 255, 0.1);
 }
 
 .button {
-  padding: 12px;
-  background-color: #007bff;
+  padding: 0.625vw;
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
+  border-radius: 0.208vw;
+  font-size: 0.833vw;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .button:hover:not(:disabled) {
-  background-color: #0056b3;
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  transform: translateY(-0.052vw);
+  box-shadow: 0 0.208vw 0.417vw rgba(0, 123, 255, 0.3);
 }
 
 .button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+  transform: none;
 }
 
 .error {
   color: #dc3545;
-  font-size: 14px;
-  padding: 10px;
+  font-size: 0.729vw;
+  padding: 0.521vw;
   background-color: #f8d7da;
-  border: 1px solid #f5c6cb;
-  border-radius: 4px;
+  border: 0.052vw solid #f5c6cb;
+  border-radius: 0.208vw;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.953vw;
+  }
+
+  .loginBox {
+    padding: 3.906vw;
+    border-radius: 0.781vw;
+    max-width: 39.063vw;
+  }
+
+  .title {
+    margin: 0 0 2.93vw 0;
+    font-size: 2.734vw;
+  }
+
+  .form {
+    gap: 1.953vw;
+  }
+
+  .formGroup {
+    gap: 0.781vw;
+  }
+
+  .formGroup label {
+    font-size: 1.367vw;
+  }
+
+  .input {
+    padding: 1.172vw;
+    border-radius: 0.391vw;
+    font-size: 1.562vw;
+  }
+
+  .button {
+    padding: 1.172vw;
+    border-radius: 0.391vw;
+    font-size: 1.562vw;
+  }
+
+  .error {
+    font-size: 1.367vw;
+    padding: 0.977vw;
+    border-radius: 0.391vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2.604vw;
+  }
+
+  .loginBox {
+    padding: 5.208vw;
+    border-radius: 1.042vw;
+    max-width: 100%;
+  }
+
+  .title {
+    margin: 0 0 3.906vw 0;
+    font-size: 3.646vw;
+  }
+
+  .form {
+    gap: 2.604vw;
+  }
+
+  .formGroup {
+    gap: 1.042vw;
+  }
+
+  .formGroup label {
+    font-size: 1.823vw;
+  }
+
+  .input {
+    padding: 1.563vw;
+    border-radius: 0.521vw;
+    font-size: 2.083vw;
+  }
+
+  .button {
+    padding: 1.563vw;
+    border-radius: 0.521vw;
+    font-size: 2.083vw;
+  }
+
+  .error {
+    font-size: 1.823vw;
+    padding: 1.302vw;
+    border-radius: 0.521vw;
+  }
+}

@@ -254,3 +254,60 @@ export const deleteImage = async (req: Request, res: Response) => {
   }
 };
 
+export const getPaginatedImages = async (req: Request, res: Response) => {
+  try {
+    const page = Math.max(1, parseInt(req.query.page as string) || 1);
+    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 10));
+    const cartridgeId = req.query.cartridgeId as string || '';
+    const printerId = req.query.printerId as string || '';
+    const laptopId = req.query.laptopId as string || '';
+    const exampleId = req.query.exampleId as string || '';
+
+    const skip = (page - 1) * limit;
+
+    const baseQuery: any = {};
+
+    if (cartridgeId) {
+      baseQuery.cartridgeId = cartridgeId;
+    }
+
+    if (printerId) {
+      baseQuery.printerId = printerId;
+    }
+
+    if (laptopId) {
+      baseQuery.laptopId = laptopId;
+    }
+
+    if (exampleId) {
+      baseQuery.exampleId = exampleId;
+    }
+
+    const [total, images] = await Promise.all([
+      PhotoModel.countDocuments(baseQuery),
+      PhotoModel.find(baseQuery)
+        .skip(skip)
+        .limit(limit)
+        .sort({ createdAt: -1 })
+        .lean(),
+    ]);
+
+    res.status(200).json({
+      success: true,
+      data: images,
+      pagination: {
+        currentPage: page,
+        totalPages: Math.ceil(total / limit),
+        totalItems: total
+      }
+    });
+
+  } catch (error: any) {
+    console.error('Get paginated images error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
