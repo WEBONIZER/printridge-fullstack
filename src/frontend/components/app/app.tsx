@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Layout } from "../../pages/layout/layout";
 import Main from "../../pages/main/main";
-import RepairComponent from "../repair-component/repair-component";
-import RefillComponent from "../refill-component/refill-component";
-import ContactsComponent from "../contacts-component/contacts-component";
-import RefillItemComponent from "../refill-component/refill-item-component/refill-item-component";
-import RepairItemComponent from "../repair-component/repair-item-component/repair-item-component";
+import RepairPrintersPage from "../../pages/repair-printers-page/repair-printers-page";
+import RefillCartridgesPage from "../../pages/refill-cartridges-page/refill-cartridges-page";
+import ContactsPage from "../../pages/contacts-page/contacts-page";
+import RefillItemComponent from "../../pages/refill-cartridges-page/refill-item-component/refill-item-component";
+import RepairItemComponent from "../../pages/repair-printers-page/repair-item-component/repair-item-component";
 import NotFound404 from "../../pages/not-found/not-found";
-import RepairLaptopsComponent from "../repair-laptops-component/repair-laptops-component";
-import RepairLaptopsItemComponent from "../repair-laptops-component/repair-laptops-item-component/repair-laptops-item-component";
+import RepairLaptopsPage from "../../pages/repair-laptops-page/repair-laptops-page";
+import RepairLaptopsItemComponent from "../../pages/repair-laptops-page/repair-laptops-item-component/repair-laptops-item-component";
 import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
 import { FirstVisitModal } from '../modal-components/first-visit-modal/first-visit-modal'
 import { Modal } from "../modal/modal";
@@ -47,13 +47,13 @@ export const App: React.FC = () => {
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
-          <Route path="/repair/:vendor" element={<RepairComponent />} />
+          <Route path="/repair/:vendor" element={<RepairPrintersPage />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
-          <Route path="/refill/:vendor" element={<RefillComponent />} />
+          <Route path="/refill/:vendor" element={<RefillCartridgesPage />} />
           <Route path="/refill/:vendor/:model" element={<RefillItemComponent />} />
-          <Route path="/remont-noutbukov/:vendor" element={<RepairLaptopsComponent />} />
+          <Route path="/remont-noutbukov/:vendor" element={<RepairLaptopsPage />} />
           <Route path="/remont-noutbukov/:vendor/:model" element={<RepairLaptopsItemComponent />} />
-          <Route path="/contacts" element={<ContactsComponent />} />
+          <Route path="/contacts" element={<ContactsPage />} />
           <Route path="*" element={<NotFound404 />} />
         </Route>
         <Route path="/login" element={<Login />} />
