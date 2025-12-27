@@ -2,17 +2,19 @@ import { Request, Response } from "express";
 import { CartridgeModel } from "../models/cartridge-model";
 import { PrinterModel } from "../models/printer-model";
 import { LaptopModel } from "../models/laptop-model";
+import { ExampleModel } from "../models/example-model";
 
 export const generateSitemap = async (req: Request, res: Response): Promise<void> => {
   try {
-    // Получаем все публичные картриджи, принтеры и ноутбуки, а также уникальные вендоры
-    const [cartridges, printers, laptops, cartridgeVendors, printerVendors, laptopVendors] = await Promise.all([
+    // Получаем все публичные картриджи, принтеры и ноутбуки, а также уникальные вендоры и примеры (блоги)
+    const [cartridges, printers, laptops, cartridgeVendors, printerVendors, laptopVendors, examples] = await Promise.all([
       CartridgeModel.find({ public: true }).select('vendor modelCart updatedAt').lean(),
       PrinterModel.find({ public: true }).select('vendor model updatedAt').lean(),
       LaptopModel.find({ public: true }).select('vendor model updatedAt').lean(),
       CartridgeModel.distinct('vendor', { public: true }),
       PrinterModel.distinct('vendor', { public: true }),
       LaptopModel.distinct('vendor', { public: true }),
+      ExampleModel.find({ public: { $ne: false } }).select('route _id updatedAt').lean(),
     ]);
 
     const today = new Date().toISOString().split('T')[0];
@@ -34,6 +36,11 @@ export const generateSitemap = async (req: Request, res: Response): Promise<void
     <loc>https://printridge.ru/contacts</loc>
     <lastmod>${today}</lastmod>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://printridge.ru/blog</loc>
+    <lastmod>${today}</lastmod>
+    <priority>0.8</priority>
   </url>
 `;
 
@@ -105,6 +112,20 @@ export const generateSitemap = async (req: Request, res: Response): Promise<void
     <loc>https://printridge.ru/remont-noutbukov/${laptop.vendor}/${model}</loc>
     <lastmod>${lastmod}</lastmod>
     <priority>1.0</priority>
+  </url>
+`;
+    });
+
+    // Добавляем статьи блога
+    examples.forEach((example) => {
+      const route = example.route || example._id;
+      const lastmod = example.updatedAt 
+        ? new Date(example.updatedAt).toISOString().split('T')[0]
+        : new Date().toISOString().split('T')[0];
+      xml += `  <url>
+    <loc>https://printridge.ru/blog/${route}</loc>
+    <lastmod>${lastmod}</lastmod>
+    <priority>0.9</priority>
   </url>
 `;
     });
