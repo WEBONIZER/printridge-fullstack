@@ -108,6 +108,43 @@
   color: #0c0c0c;
 }
 
+.related_devices {
+  margin-top: 2.77vw;
+  padding: 2.08vw;
+  background-color: #f8f9fa;
+  border-radius: 1.38vw;
+}
+
+.related_devices_title {
+  margin: 0 0 1.38vw 0;
+  font-size: 2.08vw;
+  font-weight: 600;
+  color: #0c0c0c;
+}
+
+.related_devices_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.69vw;
+}
+
+.related_device_link {
+  padding: 0.69vw 1.38vw;
+  background-color: #fff;
+  border: 0.13vw solid #89919d;
+  border-radius: 0.69vw;
+  color: #005ce5;
+  text-decoration: none;
+  font-size: 1.25vw;
+  transition: all 0.3s;
+}
+
+.related_device_link:hover {
+  background-color: #005ce5;
+  color: #fff;
+  border-color: #005ce5;
+}
+
 @media all and (max-width: 1024px) {
   .container {
     margin: 1.38vw auto 0;
@@ -185,6 +222,27 @@
   .media_title {
     margin-bottom: 2.6vw;
     font-size: 3.12vw;
+  }
+
+  .related_devices {
+    margin-top: 3.47vw;
+    padding: 2.6vw;
+    border-radius: 1.73vw;
+  }
+
+  .related_devices_title {
+    margin-bottom: 1.73vw;
+    font-size: 2.6vw;
+  }
+
+  .related_devices_list {
+    gap: 0.86vw;
+  }
+
+  .related_device_link {
+    padding: 0.86vw 1.73vw;
+    border-radius: 0.86vw;
+    font-size: 1.56vw;
   }
 }
 
@@ -266,5 +324,27 @@
   .media_title {
     margin-bottom: 4.8vw;
     font-size: 5.2vw;
+  }
+
+  .related_devices {
+    margin-top: 4.8vw;
+    padding: 4.8vw;
+    border-radius: 3.2vw;
+  }
+
+  .related_devices_title {
+    margin-bottom: 2.8vw;
+    font-size: 4.8vw;
+  }
+
+  .related_devices_list {
+    gap: 1.4vw;
+  }
+
+  .related_device_link {
+    padding: 1.4vw 2.8vw;
+    border-width: 0.27vw;
+    border-radius: 3.2vw;
+    font-size: 3.2vw;
   }
 }

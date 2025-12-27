@@ -164,6 +164,43 @@
   border-top: 0.069vw solid #e0e0e0;
 }
 
+.related_devices {
+  margin-top: 1.38vw;
+  padding: 1.38vw;
+  background-color: #f8f9fa;
+  border-radius: 1.38vw;
+}
+
+.related_devices_title {
+  margin: 0 0 0.69vw 0;
+  font-size: 1.25vw;
+  font-weight: 600;
+  color: #0c0c0c;
+}
+
+.related_devices_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.69vw;
+}
+
+.related_device_link {
+  padding: 0.55vw 1.11vw;
+  background-color: #fff;
+  border: 0.069vw solid #89919d;
+  border-radius: 0.69vw;
+  color: #005ce5;
+  text-decoration: none;
+  font-size: 1.11vw;
+  transition: all 0.3s;
+}
+
+.related_device_link:hover {
+  background-color: #005ce5;
+  color: #fff;
+  border-color: #005ce5;
+}
+
 .blog_date {
   font-size: 1.11vw;
   color: #666;
@@ -243,6 +280,27 @@
 
   .read_more {
     font-size: 1.56vw;
+  }
+
+  .related_devices {
+    margin-top: 1.73vw;
+    padding: 1.73vw;
+    border-radius: 1.73vw;
+  }
+
+  .related_devices_title {
+    margin-bottom: 0.86vw;
+    font-size: 1.56vw;
+  }
+
+  .related_devices_list {
+    gap: 0.86vw;
+  }
+
+  .related_device_link {
+    padding: 0.69vw 1.38vw;
+    border-radius: 0.86vw;
+    font-size: 1.38vw;
   }
 
   .blog_date {
@@ -342,6 +400,28 @@
     gap: 2.8vw;
     padding-top: 2.8vw;
     border-top-width: 0.27vw;
+  }
+
+  .related_devices {
+    margin-top: 2.8vw;
+    padding: 2.8vw;
+    border-radius: 3.2vw;
+  }
+
+  .related_devices_title {
+    margin-bottom: 1.4vw;
+    font-size: 3.2vw;
+  }
+
+  .related_devices_list {
+    gap: 1.4vw;
+  }
+
+  .related_device_link {
+    padding: 1.4vw 2.8vw;
+    border-width: 0.27vw;
+    border-radius: 3.2vw;
+    font-size: 2.8vw;
   }
 
   .blog_date {
