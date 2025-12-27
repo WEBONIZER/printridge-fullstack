@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Example, updateExample, uploadImage, uploadVideo, deleteImage, deleteVideo, getExamplePhotos, getExampleVideos, Image, Video } from "../../utils/api";
+import { Example, updateExample, deleteExample, uploadImage, uploadVideo, deleteImage, deleteVideo, getExamplePhotos, getExampleVideos, Image, Video } from "../../utils/api";
 import { ExampleFormFields } from "./ExampleFormFields";
 import styles from "./examples.module.css";
 
@@ -32,6 +32,7 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
   const [videoFiles, setVideoFiles] = useState<Map<string, File>>(new Map());
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const loadMedia = async () => {
@@ -208,6 +209,22 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
     }
   };
 
+  const handleDelete = async () => {
+    if (!window.confirm(`Вы уверены, что хотите удалить пример "${example.title}"? Это действие нельзя отменить.`)) {
+      return;
+    }
+
+    setIsDeleting(true);
+    try {
+      await deleteExample(example._id);
+      onSave();
+    } catch (error) {
+      console.error("Ошибка при удалении:", error);
+      alert("Ошибка при удалении примера");
+      setIsDeleting(false);
+    }
+  };
+
   if (isLoading) {
     return (
       <div className={styles.modalOverlay} onClick={onClose}>
@@ -240,10 +257,18 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
           />
 
           <div className={styles.modalActions}>
-            <button type="button" onClick={onClose} disabled={isSaving}>
+            <button 
+              type="button" 
+              onClick={handleDelete} 
+              disabled={isSaving || isDeleting}
+              className={styles.deleteButton}
+            >
+              {isDeleting ? "Удаление..." : "Удалить"}
+            </button>
+            <button type="button" onClick={onClose} disabled={isSaving || isDeleting}>
               Отмена
             </button>
-            <button type="submit" disabled={isSaving}>
+            <button type="submit" disabled={isSaving || isDeleting}>
               {isSaving ? "Сохранение..." : "Сохранить"}
             </button>
           </div>
