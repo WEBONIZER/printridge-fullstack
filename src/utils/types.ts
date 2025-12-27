@@ -30,13 +30,13 @@ export interface IVideo {
 export interface IPrinterSchema {
     vendor: string;
     model: string;
-    device?: string;
-    type?: string;
-    format?: string;
+    device?: "printer" | "MFU";
+    type?: "color" | "mono";
+    format?: "A3" | "A4";
     capacity?: number;
     speed?: number;
     public?: boolean;
-    price?: string; // ID прайса из printer-price-template
+    price?: string;
 }
 
 // Совместимость устройств (связь картридж-принтер)

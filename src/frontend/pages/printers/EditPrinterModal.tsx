@@ -143,7 +143,11 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     setIsSaving(true);
     try {
       await updatePrinter(printer._id, {
-        ...formData,
+        vendor: formData.vendor.trim(),
+        model: formData.model.trim(),
+        device: formData.device.trim() || undefined,
+        type: formData.type.trim() || undefined,
+        format: formData.format.trim() || undefined,
         capacity: formData.capacity ? parseFloat(formData.capacity as any) : undefined,
         speed: formData.speed ? parseFloat(formData.speed as any) : undefined,
         public: formData.public,

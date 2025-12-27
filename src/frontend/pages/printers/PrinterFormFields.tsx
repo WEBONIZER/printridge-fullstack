@@ -62,41 +62,25 @@ export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
       </div>
       <div className={styles.formGroup}>
         <label>Устройство</label>
-        {isCreateMode ? (
-          <input
-            type="text"
-            value={formData.device}
-            onChange={(e) => onFormDataChange({ device: e.target.value })}
-          />
-        ) : (
-          <select
-            value={formData.device}
-            onChange={(e) => onFormDataChange({ device: e.target.value })}
-          >
-            <option value="">Не указано</option>
-            <option value="printer">Принтер</option>
-            <option value="MFU">МФУ</option>
-          </select>
-        )}
+        <select
+          value={formData.device}
+          onChange={(e) => onFormDataChange({ device: e.target.value })}
+        >
+          <option value="">Не указано</option>
+          <option value="printer">Принтер</option>
+          <option value="MFU">МФУ</option>
+        </select>
       </div>
       <div className={styles.formGroup}>
         <label>Тип</label>
-        {isCreateMode ? (
-          <input
-            type="text"
-            value={formData.type}
-            onChange={(e) => onFormDataChange({ type: e.target.value })}
-          />
-        ) : (
-          <select
-            value={formData.type}
-            onChange={(e) => onFormDataChange({ type: e.target.value })}
-          >
-            <option value="">Не указано</option>
-            <option value="mono">Монохромный</option>
-            <option value="color">Цветной</option>
-          </select>
-        )}
+        <select
+          value={formData.type}
+          onChange={(e) => onFormDataChange({ type: e.target.value })}
+        >
+          <option value="">Не указано</option>
+          <option value="mono">Монохромный</option>
+          <option value="color">Цветной</option>
+        </select>
       </div>
       <div className={styles.formGroup}>
         <label>Формат</label>

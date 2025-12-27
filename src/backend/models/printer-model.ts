@@ -13,14 +13,17 @@ export const printerSchema = new Schema<IPrinterSchema>(
     },
     device: {
       type: String,
+      enum: ["printer", "MFU"],
       required: false,
     },
     type: {
       type: String,
+      enum: ["color", "mono"],
       required: false,
     },
     format: {
       type: String,
+      enum: ["A3", "A4"],
       required: false,
     },
     capacity: {
