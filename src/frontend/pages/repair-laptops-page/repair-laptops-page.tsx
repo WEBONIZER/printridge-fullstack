@@ -1,13 +1,13 @@
 import styles from './repair-laptops-page.module.css'
 import { useParams, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import FilterLaptopsComponent from './filter-items-component/filter-laptops-component'
-import VendorMenuLaptops from '../../components/vendor-menu/vendor-menu-laptops/vendor-menu-laptops'
+import { VendorMenuLaptops } from '../../components/vendor-menu/vendor-menu-laptops/vendor-menu-laptops.tsx'
 import { Filter } from '../../components/filter/filter'
 import { Helmet } from "react-helmet";
 import { getPaginatedLaptops, Laptop } from '../../utils/api';
-import Spinner from '../../components/spinner/spinner';
+import { Spinner } from '../../components/spinner/spinner';
 
 function RepairLaptopsPage() {
 
@@ -15,7 +15,7 @@ function RepairLaptopsPage() {
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterValue = useSelector((state: any) => {
-        const value = state.filter?.value?.value;
+        const value = state.filter?.value;
         return typeof value === 'string' ? value : '';
     });
     const [laptops, setLaptops] = useState<Laptop[]>([]);
@@ -40,7 +40,13 @@ function RepairLaptopsPage() {
         loadLaptops(true);
     }, [vendor, filterDebounce]);
 
-    const loadLaptops = async (reset = false) => {
+    const currentPageRef = useRef(currentPage);
+    
+    useEffect(() => {
+        currentPageRef.current = currentPage;
+    }, [currentPage]);
+
+    const loadLaptops = useCallback(async (reset = false, page?: number) => {
         if (reset) {
             setLaptops([]);
             setCurrentPage(1);
@@ -53,7 +59,7 @@ function RepairLaptopsPage() {
         }
 
         try {
-            const pageToLoad = reset ? 1 : currentPage;
+            const pageToLoad = page !== undefined ? page : (reset ? 1 : currentPageRef.current);
             const response = await getPaginatedLaptops({
                 page: pageToLoad,
                 limit,
@@ -66,28 +72,30 @@ function RepairLaptopsPage() {
             
             if (reset) {
                 setLaptops(filteredData);
+                setCurrentPage(2);
             } else {
                 setLaptops(prev => [...prev, ...filteredData]);
+                setCurrentPage(prev => prev + 1);
             }
 
             setHasMore(response.data.length === limit && response.pagination.currentPage < response.pagination.totalPages);
-            if (!reset) {
-                setCurrentPage(prev => prev + 1);
-            } else {
-                setCurrentPage(2);
-            }
         } catch (error) {
             console.error('Ошибка загрузки ноутбуков:', error);
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [vendor, filterDebounce, isInitialLoad]);
 
-    const handleLoadMore = () => {
+    useEffect(() => {
+        loadLaptops(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [vendor, filterDebounce]);
+
+    const handleLoadMore = useCallback(() => {
         if (!isLoading && hasMore) {
-            loadLaptops(false);
+            loadLaptops(false, currentPageRef.current);
         }
-    };
+    }, [isLoading, hasMore, loadLaptops]);
 
     if (isInitialLoad && isLoading && laptops.length === 0) {
         return <Spinner />;

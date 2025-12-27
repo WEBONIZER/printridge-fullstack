@@ -1,13 +1,13 @@
 import styles from './repair-printers-page.module.css'
 import { useParams, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import RepairItemsComponent from '../../components/filter-items-component/repair-items-component/repair-items-component'
-import VendorMenuRepair from '../../components/vendor-menu/vendor-menu-reoair/vendor-menu-repair'
+import { RepairItemsComponent } from '../../components/filter-items-component/repair-items-component/repair-items-component'
+import { VendorMenuRepair } from '../../components/vendor-menu/vendor-menu-reoair/vendor-menu-repair.tsx'
 import { Filter } from '../../components/filter/filter'
 import { Helmet } from "react-helmet";
 import { getPaginatedPrinters, Printer } from '../../utils/api';
-import Spinner from '../../components/spinner/spinner';
+import { Spinner } from '../../components/spinner/spinner';
 
 function RepairPrintersPage() {
 
@@ -15,7 +15,7 @@ function RepairPrintersPage() {
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterValue = useSelector((state: any) => {
-        const value = state.filter?.value?.value;
+        const value = state.filter?.value;
         return typeof value === 'string' ? value : '';
     });
     const [printers, setPrinters] = useState<Printer[]>([]);
@@ -36,11 +36,13 @@ function RepairPrintersPage() {
         return () => clearTimeout(timer);
     }, [filterValue]);
 
+    const currentPageRef = useRef(currentPage);
+    
     useEffect(() => {
-        loadPrinters(true);
-    }, [vendor, filterDebounce]);
+        currentPageRef.current = currentPage;
+    }, [currentPage]);
 
-    const loadPrinters = async (reset = false) => {
+    const loadPrinters = useCallback(async (reset = false, page?: number) => {
         if (reset) {
             setPrinters([]);
             setCurrentPage(1);
@@ -53,7 +55,7 @@ function RepairPrintersPage() {
         }
 
         try {
-            const pageToLoad = reset ? 1 : currentPage;
+            const pageToLoad = page !== undefined ? page : (reset ? 1 : currentPageRef.current);
             const response = await getPaginatedPrinters({
                 page: pageToLoad,
                 limit,
@@ -66,28 +68,30 @@ function RepairPrintersPage() {
             
             if (reset) {
                 setPrinters(filteredData);
+                setCurrentPage(2);
             } else {
                 setPrinters(prev => [...prev, ...filteredData]);
+                setCurrentPage(prev => prev + 1);
             }
 
             setHasMore(response.data.length === limit && response.pagination.currentPage < response.pagination.totalPages);
-            if (!reset) {
-                setCurrentPage(prev => prev + 1);
-            } else {
-                setCurrentPage(2);
-            }
         } catch (error) {
             console.error('Ошибка загрузки принтеров:', error);
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [vendor, filterDebounce, isInitialLoad]);
 
-    const handleLoadMore = () => {
+    useEffect(() => {
+        loadPrinters(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [vendor, filterDebounce]);
+
+    const handleLoadMore = useCallback(() => {
         if (!isLoading && hasMore) {
-            loadPrinters(false);
+            loadPrinters(false, currentPageRef.current);
         }
-    };
+    }, [isLoading, hasMore, loadPrinters]);
 
     if (isInitialLoad && isLoading && printers.length === 0) {
         return <Spinner />;

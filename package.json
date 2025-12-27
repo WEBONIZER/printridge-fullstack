@@ -116,9 +116,7 @@
     "ssr": "nodemon",
     "server": "bun run src/backend/main.ts",
     "dev": "vite",
-    "up": "bash cmd/up.sh",
-    "install-ffmpeg": "bash scripts/install-ffmpeg.sh",
-    "install-ffmpeg-win": "powershell -ExecutionPolicy Bypass -File scripts/install-ffmpeg.ps1"
+    "up": "bash cmd/up.sh"
   },
   "type": "module",
   "version": "0.1.0"

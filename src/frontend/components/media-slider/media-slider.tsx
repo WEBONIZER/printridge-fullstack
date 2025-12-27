@@ -1,44 +1,34 @@
 import styles from './media-slider.module.css'
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from "react-redux"
-import { PHOTO_BUTTON, VIDEO_BUTTON } from '../../services/actions/buttons'
-import VideosComponent from './videos-component/videos-component'
-import PhotosComponent from './photos-component/photos-component'
-import { useEffect } from 'react';
+import { useDispatch_, useSelector_ } from '../../services/reducers/root-reducer';
+import { setPhotoButton, setVideoButton } from '../../services/slices/buttons';
+import { VideosComponent } from './videos-component/videos-component'
+import { PhotosComponent } from './photos-component/photos-component'
+import { useEffect, FC } from 'react';
 
-const MediaSlider = ({ photos, videos }) => {
+interface MediaSliderProps {
+    photos: Array<string | { src: string; alt?: string }>;
+    videos: string[];
+}
 
-    const dispatch = useDispatch();
+export const MediaSlider: FC<MediaSliderProps> = ({ photos, videos }) => {
 
-    const { photoButton, videoButton } = useSelector((state) => state.buttons);
+    const dispatch = useDispatch_();
+
+    const { photoButton, videoButton } = useSelector_((state) => state.buttons);
 
     useEffect(() => {
-        dispatch({
-            type: PHOTO_BUTTON,
-            photoButton: 'photo'
-        })
-    }, [photos])
+        dispatch(setPhotoButton('photo'));
+    }, [photos, dispatch])
 
     const handleClickPhoto = () => {
-        dispatch({
-            type: PHOTO_BUTTON,
-            photoButton: 'photo'
-        })
-        dispatch({
-            type: VIDEO_BUTTON,
-            videoButton: ''
-        })
+        dispatch(setPhotoButton('photo'));
+        dispatch(setVideoButton(''));
     }
 
     const handleClickVideo = () => {
-        dispatch({
-            type: PHOTO_BUTTON,
-            photoButton: ''
-        })
-        dispatch({
-            type: VIDEO_BUTTON,
-            videoButton: 'video'
-        })
+        dispatch(setPhotoButton(''));
+        dispatch(setVideoButton('video'));
     }
     
     return (
@@ -47,12 +37,14 @@ const MediaSlider = ({ photos, videos }) => {
                 <Link
                     className={photoButton === 'photo' ? styles.button_active : styles.button}
                     onClick={handleClickPhoto}
+                    to="#"
                 >
                     Фото
                 </Link>
                 {videos.length > 0 && <Link
                     className={videoButton === 'video' ? styles.button_active : styles.button}
                     onClick={handleClickVideo}
+                    to="#"
                 >
                     Видео
                 </Link>}
@@ -63,4 +55,3 @@ const MediaSlider = ({ photos, videos }) => {
     );
 };
 
-export default MediaSlider;

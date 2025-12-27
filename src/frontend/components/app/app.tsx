@@ -2,13 +2,13 @@ import "./app.module.css";
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { Layout } from "../../pages/layout/layout";
-import Main from "../../pages/main/main";
+import { Main } from "../../pages/main/main";
 import RepairPrintersPage from "../../pages/repair-printers-page/repair-printers-page";
 import RefillCartridgesPage from "../../pages/refill-cartridges-page/refill-cartridges-page";
 import ContactsPage from "../../pages/contacts-page/contacts-page";
 import RefillItemComponent from "../../pages/refill-cartridges-page/refill-item-component/refill-item-component";
 import RepairItemComponent from "../../pages/repair-printers-page/repair-item-component/repair-item-component";
-import NotFound404 from "../../pages/not-found/not-found";
+import { NotFound404 } from "../../pages/not-found/not-found";
 import RepairLaptopsPage from "../../pages/repair-laptops-page/repair-laptops-page";
 import RepairLaptopsItemComponent from "../../pages/repair-laptops-page/repair-laptops-item-component/repair-laptops-item-component";
 import { ScrollToTop } from '../scroll-to-top/scroll-to-top'
@@ -25,22 +25,28 @@ export const App: React.FC = () => {
 
   const dispatch = useDispatch_();
 
-  const { firstVisitModal } = useSelector_((state: any) => state.modalSlice);
+  const { firstVisitModal } = useSelector_((state) => state.modal);
+  const [isClient, setIsClient] = React.useState(false);
 
   const location = useLocation();
   const background = location.state && location.state.background;
 
   useEffect(() => {
+    setIsClient(true);
     // Проверяем только на клиенте, чтобы избежать проблем с SSR hydration
-    if (typeof window !== 'undefined' && !localStorage.getItem('printridgeFirstVisit')) {
-      dispatch(modalSlice.actions.firstVisitModalState(true));
+    if (!localStorage.getItem('printridgeFirstVisit')) {
+      const timer = setTimeout(() => {
+        dispatch(modalSlice.actions.firstVisitModalState(true));
+      }, 15000); // 15 секунд задержки
+      
+      return () => clearTimeout(timer);
     }
   }, [dispatch])
 
   return (
     <>
       {
-        firstVisitModal &&
+        isClient && firstVisitModal &&
         <Modal action={modalSlice.actions.firstVisitModalState}>
           <FirstVisitModal />
         </Modal>

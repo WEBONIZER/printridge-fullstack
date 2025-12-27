@@ -1,12 +1,11 @@
 import styles from './spinner.module.css'
+import { FC } from 'react';
 
-function Spinner() {
+export const Spinner: FC = () => {
     return (
         <div className={styles.container}>
             <div className={styles.spinner}></div>
         </div>
     );
 }
-
-export default Spinner;
 

@@ -6,7 +6,7 @@ import { modalSlice } from "../../services/slices/modal";
 export const MainMenu = ({ position }: any) => {
 
     const dispatch = useDispatch_();
-    const { mobileMenuButton } = useSelector_((state: any) => state.modalSlice);
+    const { mobileMenuButton } = useSelector_((state) => state.modal);
 
     const handleClick = () => {
         dispatch(modalSlice.actions.mobileMenuButtonState(false));

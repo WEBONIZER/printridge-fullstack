@@ -7,7 +7,7 @@ import { Modal } from "../modal/modal";
 
 export const HeaderComponent = () => {
 
-    const { mobileMenuButton } = useSelector_((state: any) => state.modalSlice);
+    const { mobileMenuButton } = useSelector_((state) => state.modal);
     const dispatch = useDispatch_();
 
     const location = useLocation();

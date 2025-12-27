@@ -1,7 +1,8 @@
 import style from './vendor-menu.module.css'
 import { NavLink, useParams } from 'react-router-dom'
+import { FC } from 'react'
 
-function VendorMenu() {
+export const VendorMenu: FC = () => {
 
     const { vendor } = useParams()
 
@@ -56,4 +57,3 @@ function VendorMenu() {
     )
 }
 
-export { VendorMenu }

@@ -1,8 +1,9 @@
 import styles from './not-found.module.css';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import { FC } from 'react';
 
-function NotFound404() {
+export const NotFound404: FC = () => {
 
     const navigate = useNavigate();
     const canonicalUrl = ``;
@@ -28,11 +29,10 @@ function NotFound404() {
                     <h1 className={styles.title}>404 - Страница не найдена</h1>
                 </div>
                 <Link className={styles.button} to='/'>Вернуться на главную</Link>
-                <Link className={styles.button} onClick={() => { navigate(-1) }}>Вернуться назад</Link>
+                <Link className={styles.button} onClick={() => { navigate(-1) }} to='#'>Вернуться назад</Link>
             </div>
             <Navigate to="/404" replace />
         </>
     );
 }
 
-export default NotFound404;

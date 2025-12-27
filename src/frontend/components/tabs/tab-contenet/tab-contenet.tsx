@@ -1,10 +1,21 @@
 import styles from './tab-contenet.module.css';
 import { sanitizeHtml } from '../../../utils/html-sanitizer';
-import PhotoGallery from '../../photo-gallery/photo-gallery';
-import VideosComponent from '../../media-slider/videos-component/videos-component';
-import { useEffect } from 'react';
+import { PhotoGallery } from '../../photo-gallery/photo-gallery';
+import { VideosComponent } from '../../media-slider/videos-component/videos-component';
+import { FC } from 'react';
 
-function TabContent({ 
+interface TabContentProps {
+    title?: string;
+    text?: string;
+    photos?: Array<string | { src: string; alt?: string }>;
+    videos?: string[];
+    activeMediaType: 'photos' | 'videos';
+    onMediaTypeChange: (type: 'photos' | 'videos') => void;
+    hasPhotos: boolean;
+    hasVideos: boolean;
+}
+
+export const TabContent: FC<TabContentProps> = ({ 
     title, 
     text, 
     photos = [], 
@@ -13,23 +24,23 @@ function TabContent({
     onMediaTypeChange,
     hasPhotos,
     hasVideos
-}) {
+}) => {
     const sanitizedTitle = sanitizeHtml(title || '');
     const sanitizedText = sanitizeHtml(text || '');
 
     // Нормализуем фотографии
     const normalizedPhotos = photos.map(p => {
         if (typeof p === 'string') return p;
-        return p.src || p;
-    }).filter(url => url);
+        return (p as { src: string; alt?: string }).src || '';
+    }).filter((url): url is string => !!url);
 
     // Нормализуем видео - убеждаемся, что URL полные
     const normalizedVideos = videos.map(v => {
-        let url;
+        let url: string | null = null;
         if (typeof v === 'string') {
             url = v;
         } else {
-            url = v.src || v;
+            url = (v as any).src || v;
         }
         
         // Если URL относительный, делаем его абсолютным
@@ -49,7 +60,7 @@ function TabContent({
             }
             
             // Если URL содержит домен S3 или другой домен без протокола, добавляем https://
-            if (url.includes('s3.') || url.includes('storage.') || url.includes('amazonaws.com') || url.includes('beget.cloud')) {
+            if (url.includes('s3.') || url.includes('storage.') || url.includes('amazonaws.com') || url.includes('beget.cloud') || url.includes('yandexcloud.net')) {
                 return `https://${url}`;
             }
             
@@ -57,7 +68,7 @@ function TabContent({
             return url;
         }
         return null;
-    }).filter(url => url && typeof url === 'string');
+    }).filter((url): url is string => url !== null && typeof url === 'string');
 
     return (
         <div className={styles.tabcontent}>
@@ -105,4 +116,3 @@ function TabContent({
     );
 }
 
-export default TabContent;

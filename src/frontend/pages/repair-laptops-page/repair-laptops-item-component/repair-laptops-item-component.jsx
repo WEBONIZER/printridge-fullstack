@@ -2,12 +2,12 @@ import styles from './repair-laptops-item-component.module.css'
 import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { Helmet } from "react-helmet";
-import Tabs from '../../../components/tabs/tabs';
+import { Tabs } from '../../../components/tabs/tabs';
 import ImageRapairBox from '../image-repair-laptops/image-repair-laptops'
 import DescriptionRepairBox from '../description-repair-laptops/description-repair-laptops'
 import RepairPriceComponent from '../repair-laptops-price-component/repair-laptops-price-component'
 import { getPaginatedLaptops, getPaginatedExamples, getLaptopPriceTemplateById } from '../../../utils/api';
-import Spinner from '../../../components/spinner/spinner';
+import { Spinner } from '../../../components/spinner/spinner';
 
 function RepairLaptopsItemComponent() {
 

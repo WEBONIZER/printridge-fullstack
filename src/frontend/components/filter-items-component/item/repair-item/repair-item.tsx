@@ -1,5 +1,5 @@
 import styles from './repair-item.module.css';
-import { FC, forwardRef } from "react";
+import { forwardRef } from "react";
 import { Link, useLocation } from 'react-router-dom';
 
 interface RepairItemProps {
@@ -10,20 +10,20 @@ interface RepairItemProps {
         type?: string;
         device?: string;
         format?: string;
-        speed?: string;
-        capacity?: string;
+        speed?: string | number;
+        capacity?: string | number;
     };
 }
 
-const RepairItem: FC<RepairItemProps> = forwardRef<HTMLAnchorElement, RepairItemProps>(({ printer }, ref) => {
+const RepairItem = forwardRef<HTMLAnchorElement, RepairItemProps>(({ printer }, ref) => {
     const location = useLocation();
     const locationPathname = location.pathname;
 
     const type = printer.type || '';
     const device = printer.device || '';
     const format = printer.format || '';
-    const speed = printer.speed || '';
-    const capacity = printer.capacity || '';
+    const speed = printer.speed ? String(printer.speed) : '';
+    const capacity = printer.capacity ? String(printer.capacity) : '';
 
     const typeText = type === 'mono' 
         ? (device === 'printer' ? 'Монохромный' : 'Монохромное')

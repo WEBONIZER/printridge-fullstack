@@ -217,9 +217,13 @@ import { connect, set } from "mongoose";
       next();
     });
 
-    // Регистрируем основные маршруты из routes.js
-    const { pathsToRender } = await import("../frontend/utils/routes");
-    pathsToRender.forEach((path) => app.get(path, renderPage));
+    // Регистрируем основные статические маршруты
+    app.get("/", renderPage);
+    app.get("/contacts", renderPage);
+    app.get("/refill", renderPage);
+    app.get("/repair", renderPage);
+    app.get("/remont-noutbukov", renderPage);
+    app.get("/blog", renderPage);
 
     // SSR роуты для динамических страниц (для прямого доступа и обновления страницы)
     app.get("/refill/:vendor", renderPage);

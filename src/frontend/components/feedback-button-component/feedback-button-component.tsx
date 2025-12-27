@@ -7,7 +7,7 @@ import { FeedbackForm } from "../forms/feedback-form/feedback-form";
 
 export const FeedbackButtonComponent = () => {
 
-    const { feedbackModalButton } = useSelector_((state: any) => state.modalSlice);
+    const { feedbackModalButton } = useSelector_((state) => state.modal);
 
     return (
         <>

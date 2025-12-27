@@ -1,13 +1,22 @@
 import styles from './tabs.module.css';
-import { useState, useEffect } from 'react';
-import TabContent from './tab-contenet/tab-contenet';
+import { useState, useEffect, FC } from 'react';
+import { TabContent } from './tab-contenet/tab-contenet';
 import { sanitizeHtml } from '../../utils/html-sanitizer';
-import { getExamplePhotos, getExampleVideos } from '../../utils/api';
+import { getExamplePhotos, getExampleVideos, Example } from '../../utils/api';
 
-function Tabs({ items }) {
+interface TabsProps {
+    items: Example[];
+}
+
+interface ExampleWithMedia extends Example {
+    photos: Array<{ src: string; alt?: string }>;
+    videos: string[];
+}
+
+export const Tabs: FC<TabsProps> = ({ items }) => {
     const [activeTab, setActiveTab] = useState(0);
-    const [activeMediaType, setActiveMediaType] = useState('photos'); // 'photos' или 'videos'
-    const [examplesWithMedia, setExamplesWithMedia] = useState([]);
+    const [activeMediaType, setActiveMediaType] = useState<'photos' | 'videos'>('photos');
+    const [examplesWithMedia, setExamplesWithMedia] = useState<ExampleWithMedia[]>([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
@@ -25,8 +34,9 @@ function Tabs({ items }) {
 
                             // getExamplePhotos/getExampleVideos возвращают response.data
                             // который содержит { success: true, data: [...], pagination: {...} }
-                            const photos = (photosRes?.data || []);
-                            const videos = (videosRes?.data || []);
+                            const photos = (photosRes?.data || []) as Array<{ src: string; alt?: string }>;
+                            const videosData = videosRes?.data || [];
+                            const videos = videosData.map((v: any) => typeof v === 'string' ? v : (v.src || v)).filter((url: any): url is string => typeof url === 'string');
 
                             return {
                                 ...example,
@@ -69,7 +79,7 @@ function Tabs({ items }) {
         }
     }, [items]);
 
-    const handleTabClick = (index) => {
+    const handleTabClick = (index: number) => {
         if (index < 0 || index >= examplesWithMedia.length) {
             return;
         }
@@ -132,4 +142,3 @@ function Tabs({ items }) {
     );
 }
 
-export default Tabs;

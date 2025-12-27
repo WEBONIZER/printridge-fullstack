@@ -1,9 +1,10 @@
 import styles from './navigate.module.css'
-import { VendorMenu } from '../../components/vendor-menu/vendor-menu'
-import { VendorMenuRepair } from '../../components/vendor-menu/vendor-menu-reoair/vendor-menu-repair'
+import { VendorMenu } from '../../components/vendor-menu/vendor-menu.tsx'
+import { VendorMenuRepair } from '../../components/vendor-menu/vendor-menu-reoair/vendor-menu-repair.tsx'
 import { useLocation } from 'react-router-dom';
+import { FC } from 'react';
 
-function NavigationMenu() {
+export const NavigationMenu: FC = () => {
 
     const location = useLocation();
 
@@ -14,4 +15,3 @@ function NavigationMenu() {
     );
 }
 
-export default NavigationMenu;

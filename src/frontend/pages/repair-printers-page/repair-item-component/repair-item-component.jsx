@@ -1,13 +1,13 @@
 import styles from './repair-item-component.module.css'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
-import Tabs from '../../../components/tabs/tabs';
+import { Tabs } from '../../../components/tabs/tabs';
 import ImageRepairBox from '../image-repair-box/image-repair-box'
 import DescriptionRepairBox from '../description-repair-box/description-repair-box'
 import UseCartridges from '../use-cartridges/use-cartridges'
 import RepairPriceComponent from '../repair-price-component/repair-price-component'
 import { getPaginatedPrinters, getCartridgesByPrinterId, getPaginatedExamples, getPrinterPriceTemplateById } from '../../../utils/api';
-import Spinner from '../../../components/spinner/spinner';
+import { Spinner } from '../../../components/spinner/spinner';
 
 function RepairItemComponent() {
 

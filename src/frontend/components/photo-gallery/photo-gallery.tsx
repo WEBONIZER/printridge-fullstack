@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import { useState, FC, KeyboardEvent, MouseEvent } from 'react';
 import styles from './photo-gallery.module.css';
 
-const PhotoGallery = ({ photos = [] }) => {
-    const [selectedIndex, setSelectedIndex] = useState(null);
+interface Photo {
+    src: string;
+    alt?: string;
+}
+
+interface PhotoGalleryProps {
+    photos?: Array<string | Photo>;
+}
+
+export const PhotoGallery: FC<PhotoGalleryProps> = ({ photos = [] }) => {
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Нормализуем массив фотографий
@@ -11,16 +20,16 @@ const PhotoGallery = ({ photos = [] }) => {
             return { src: photo, alt: `Фото ${index + 1}` };
         }
         return {
-            src: photo.src || photo,
+            src: photo.src || '',
             alt: photo.alt || `Фото ${index + 1}`
         };
-    }).filter(photo => photo.src);
+    }).filter((photo): photo is Photo => !!photo.src);
 
     if (normalizedPhotos.length === 0) {
         return null;
     }
 
-    const openModal = (index) => {
+    const openModal = (index: number) => {
         setSelectedIndex(index);
         setIsModalOpen(true);
         document.body.style.overflow = 'hidden'; // Блокируем скролл страницы
@@ -32,17 +41,21 @@ const PhotoGallery = ({ photos = [] }) => {
         document.body.style.overflow = 'unset'; // Разблокируем скролл
     };
 
-    const nextPhoto = (e) => {
+    const nextPhoto = (e: MouseEvent | KeyboardEvent) => {
         e.stopPropagation();
-        setSelectedIndex((prev) => (prev + 1) % normalizedPhotos.length);
+        if (selectedIndex !== null) {
+            setSelectedIndex((selectedIndex + 1) % normalizedPhotos.length);
+        }
     };
 
-    const prevPhoto = (e) => {
+    const prevPhoto = (e: MouseEvent | KeyboardEvent) => {
         e.stopPropagation();
-        setSelectedIndex((prev) => (prev - 1 + normalizedPhotos.length) % normalizedPhotos.length);
+        if (selectedIndex !== null) {
+            setSelectedIndex((selectedIndex - 1 + normalizedPhotos.length) % normalizedPhotos.length);
+        }
     };
 
-    const handleKeyDown = (e) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
             closeModal();
         } else if (e.key === 'ArrowRight') {
@@ -128,6 +141,4 @@ const PhotoGallery = ({ photos = [] }) => {
         </>
     );
 };
-
-export default PhotoGallery;
 

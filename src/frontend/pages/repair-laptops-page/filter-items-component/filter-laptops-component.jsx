@@ -2,7 +2,7 @@ import LaptopItem from './laptop-item/laptop-item'
 import { useParams } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import styles from './filter-laptops-component.module.css'
-import Spinner from '../../../components/spinner/spinner';
+import { Spinner } from '../../../components/spinner/spinner';
 
 function FilterLaptopsComponent({ data, onLoadMore, hasMore, isLoading }) {
 

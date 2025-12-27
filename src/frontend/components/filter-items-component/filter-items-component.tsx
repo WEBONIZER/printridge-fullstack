@@ -1,14 +1,20 @@
 import Item from './item/item'
-import { useParams } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, FC } from "react";
 import styles from './filter-items-component.module.css'
-import Spinner from '../spinner/spinner';
+import { Spinner } from '../spinner/spinner';
+import { Cartridge } from '../../utils/api';
 
-function FilterItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
+interface FilterItemsComponentProps {
+    data: Cartridge[];
+    onLoadMore: () => void;
+    hasMore: boolean;
+    isLoading: boolean;
+}
 
-    const { vendor } = useParams()
-    const observerRef = useRef(null);
-    const lastItemRef = useRef(null);
+export const FilterItemsComponent: FC<FilterItemsComponentProps> = ({ data, onLoadMore, hasMore, isLoading }) => {
+
+    const observerRef = useRef<IntersectionObserver | null>(null);
+    const lastItemRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         if (observerRef.current) {
@@ -21,7 +27,10 @@ function FilterItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
                     onLoadMore();
                 }
             },
-            { threshold: 0.1 }
+            { 
+                threshold: 0.1,
+                rootMargin: '100px'
+            }
         );
 
         if (lastItemRef.current) {
@@ -51,18 +60,19 @@ function FilterItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
             {data && data
                 .filter(cartridge => cartridge.public !== false)
                 .map((i, key, filteredArray) => {
-                    const isLastItem = key === filteredArray.length - 1;
                     return (
-                        <div key={i._id || key} ref={isLastItem ? lastItemRef : null} style={{ display: 'contents' }}>
+                        <div key={i._id || key} style={{ display: 'contents' }}>
                             <Item
                                 cartridge={i}
                             />
                         </div>
                     )
                 })}
+            {data && data.filter(cartridge => cartridge.public !== false).length > 0 && (
+                <div ref={lastItemRef} style={{ height: '1px', width: '100%' }} />
+            )}
             {isLoading && data.length > 0 && <Spinner />}
         </div>
     );
 }
 
-export default FilterItemsComponent;

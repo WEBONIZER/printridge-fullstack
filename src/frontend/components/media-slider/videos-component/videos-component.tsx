@@ -1,10 +1,14 @@
 import styles from './videos-component.module.css'
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef, FC } from "react";
 
-const VideosComponent = ({ videosArr }) => {
+interface VideosComponentProps {
+    videosArr: string[];
+}
+
+export const VideosComponent: FC<VideosComponentProps> = ({ videosArr }) => {
     const [currentVideo, setCurrentVideo] = useState(0);
-    const [videoError, setVideoError] = useState(null);
-    const videoRef = useRef(null);
+    const [videoError, setVideoError] = useState<string | null>(null);
+    const videoRef = useRef<HTMLVideoElement | null>(null);
 
     if (!videosArr || videosArr.length === 0) {
         return null;
@@ -16,8 +20,8 @@ const VideosComponent = ({ videosArr }) => {
             return v;
         }
         // Если это объект Video с полем src
-        return v.src || v;
-    }).filter(url => url && typeof url === 'string'); // Фильтруем пустые значения и проверяем тип
+        return (v as any).src || v;
+    }).filter((url): url is string => url && typeof url === 'string'); // Фильтруем пустые значения и проверяем тип
 
     if (videoUrls.length === 0) {
         return null;
@@ -33,8 +37,8 @@ const VideosComponent = ({ videosArr }) => {
         setVideoError(null);
     };
 
-    const handleVideoError = (e) => {
-        const video = e.target;
+    const handleVideoError = (e: React.SyntheticEvent<HTMLVideoElement, Event>) => {
+        const video = e.target as HTMLVideoElement;
         const error = video.error;
         let errorMessage = 'Ошибка загрузки видео.';
         
@@ -151,4 +155,3 @@ const VideosComponent = ({ videosArr }) => {
     )
 }
 
-export default VideosComponent

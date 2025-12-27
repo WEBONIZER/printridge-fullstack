@@ -1,14 +1,20 @@
 import RepairItem from '../item/repair-item/repair-item'
-import { useParams } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, FC } from "react";
 import styles from './repair-items-component.module.css'
-import Spinner from '../../spinner/spinner';
+import { Spinner } from '../../spinner/spinner';
+import { Printer } from '../../../utils/api';
 
-function RepairItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
+interface RepairItemsComponentProps {
+    data: Printer[];
+    onLoadMore: () => void;
+    hasMore: boolean;
+    isLoading: boolean;
+}
 
-    const { vendor } = useParams()
-    const observerRef = useRef(null);
-    const lastItemRef = useRef(null);
+export const RepairItemsComponent: FC<RepairItemsComponentProps> = ({ data, onLoadMore, hasMore, isLoading }) => {
+
+    const observerRef = useRef<IntersectionObserver | null>(null);
+    const lastItemRef = useRef<HTMLAnchorElement | null>(null);
 
     useEffect(() => {
         if (observerRef.current) {
@@ -60,7 +66,7 @@ function RepairItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
                     return (
                         <RepairItem
                             key={printer._id || key}
-                            ref={isLastItem ? lastItemRef : null}
+                            ref={isLastItem ? lastItemRef : undefined}
                             printer={printer}
                         />
                     )
@@ -70,4 +76,3 @@ function RepairItemsComponent({ data, onLoadMore, hasMore, isLoading }) {
     )
 }
 
-export default RepairItemsComponent

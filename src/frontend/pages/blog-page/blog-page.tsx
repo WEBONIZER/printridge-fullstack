@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 import { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { getPaginatedExamples, getExamplePhotos, Example } from '../../utils/api';
-import Spinner from '../../components/spinner/spinner';
+import { Spinner } from '../../components/spinner/spinner';
 
 export const BlogsPage = () => {
 

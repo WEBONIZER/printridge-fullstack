@@ -1,10 +1,11 @@
 import styles from './main.module.css'
-import MainPageDescriptionBox from '../../components/main-page-description-box/main-page-description-box'
+import { MainPageDescriptionBox } from '../../components/main-page-description-box/main-page-description-box'
 import { mainDescriptionBoxes } from '../../utils/main-description-boxes'
 import { useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import { FC } from 'react';
 
-const Main = () => {
+export const Main: FC = () => {
 
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
@@ -88,4 +89,3 @@ const Main = () => {
     );
 }
 
-export default Main;

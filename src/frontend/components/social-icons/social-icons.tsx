@@ -1,10 +1,9 @@
 import styles from './social-icons.module.css'
 import { Link } from 'react-router-dom';
+import { FC } from 'react';
 
-const SocialIcons = () => {
-
-
-
+export const SocialIcons: FC = () => {
+    
     return (
         <div className={styles.icons_box}>
             <Link
@@ -23,4 +22,3 @@ const SocialIcons = () => {
     )
 }
 
-export default SocialIcons

@@ -1,9 +1,4 @@
-import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { refillReducer } from './refill';
-import { repairReducer } from './repair';
-import { filterReducer } from './filter';
-import { buttonsReducer } from './buttons-reducer';
 import { useDispatch, useSelector, useStore } from "react-redux";
 import { modalSlice } from "../slices/modal";
 import authReducer from "../slices/auth";
@@ -11,22 +6,20 @@ import cartridgesReducer from "../slices/cartridges";
 import printersReducer from "../slices/printers";
 import examplesReducer from "../slices/examples";
 import laptopsReducer from "../slices/laptops";
-
-export const rootReducer = combineReducers({
-  refill: refillReducer,
-  repair: repairReducer,
-  filter: filterReducer,
-  buttons: buttonsReducer,
-  modalSlice: modalSlice.reducer,
-  auth: authReducer,
-  cartridges: cartridgesReducer,
-  printers: printersReducer,
-  examples: examplesReducer,
-  laptops: laptopsReducer,
-});
+import filterReducer from "../slices/filter";
+import buttonsReducer from "../slices/buttons";
 
 export const rootStore = configureStore({
-  reducer: rootReducer,
+  reducer: {
+    modal: modalSlice.reducer,
+    auth: authReducer,
+    cartridges: cartridgesReducer,
+    printers: printersReducer,
+    examples: examplesReducer,
+    laptops: laptopsReducer,
+    filter: filterReducer,
+    buttons: buttonsReducer,
+  },
 });
 
 export type RootState = ReturnType<typeof rootStore.getState>;

@@ -1,10 +1,11 @@
 import styles from './feedback-form.module.css'
 import { useLocation } from 'react-router-dom'
+import { FC } from 'react';
 
-export const FeedbackForm = () => {
+export const FeedbackForm: FC = () => {
 
     const location = useLocation();
-    const link = location.state.background.pathname
+    const link = location.state?.background?.pathname || location.pathname;
     const service = link.includes('repair') ? 'ремонт принтера' : link.includes('refill') ? 'заправку картриджа' : null;
 
     return (
@@ -15,7 +16,7 @@ export const FeedbackForm = () => {
                 <input type="text" placeholder="Введите ваше имя" name="username" required />
                 <input type="email" placeholder="Введите ваш e-mail" />
                 <input type="tel" placeholder="Введите ваш номер телефона" />
-                <textarea rows="8" cols="50" placeholder="Введите текст" name="description" required></textarea>
+                <textarea rows={8} cols={50} placeholder="Введите текст" name="description" required></textarea>
             </div>
             <button className={styles.button}>
                 Отправить

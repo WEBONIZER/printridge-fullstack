@@ -3,9 +3,9 @@ import { useParams, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { useEffect, useState } from 'react';
 import { getExampleByRoute, getExamplePhotos, getExampleVideos, Example } from '../../../utils/api';
-import PhotoGallery from '../../../components/photo-gallery/photo-gallery';
-import VideosComponent from '../../../components/media-slider/videos-component/videos-component';
-import Spinner from '../../../components/spinner/spinner';
+import { PhotoGallery } from '../../../components/photo-gallery/photo-gallery';
+import { VideosComponent } from '../../../components/media-slider/videos-component/videos-component';
+import { Spinner } from '../../../components/spinner/spinner';
 import { sanitizeHtml } from '../../../utils/html-sanitizer';
 
 export const BlogItemPage = () => {

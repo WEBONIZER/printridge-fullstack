@@ -1,16 +1,7 @@
 import styles from './item.module.css';
 import { Link, useLocation } from 'react-router-dom';
 import { FC, useEffect, useState } from "react";
-import { getPrintersByCartridgeId, Printer } from '../../../utils/api';
-
-interface Cartridge {
-    _id: string;
-    modelCart: string;
-    vendor: string;
-    chip: boolean;
-    recovery_price: number;
-    refill_price: number;
-}
+import { getPrintersByCartridgeId, Printer, Cartridge } from '../../../utils/api';
 
 interface ItemProps {
     cartridge: Cartridge;
@@ -21,6 +12,11 @@ const Item: FC<ItemProps> = ({ cartridge }) => {
     const locationPathname = location.pathname;
     const [printers, setPrinters] = useState<Printer[]>([]);
     const [isLoading, setIsLoading] = useState(true);
+    
+    // Преобразуем chip в boolean если это строка
+    const chipValue = typeof cartridge.chip === 'string' 
+        ? cartridge.chip.toLowerCase() === 'true' || cartridge.chip === '1'
+        : Boolean(cartridge.chip);
 
     useEffect(() => {
         const loadPrinters = async () => {
@@ -49,37 +45,42 @@ const Item: FC<ItemProps> = ({ cartridge }) => {
                 <p className={styles.vendor}>
                     {isLoading ? 'Загрузка...' : (
                         <>
-                            {`${(cartridge.vendor || '').toUpperCase()} `}
-                            {printers.length > 0 && printers.map((printer, index) => {
-                                if (!printer.model) return null;
-                                const modelUrl = printer.model.replace(/\s/g, '');
-                                const vendorUrl = (printer.vendor || cartridge.vendor || '').toLowerCase();
-                                return (
-                                    <span key={printer._id || index}>
-                                        {index > 0 && ' / '}
-                                        <Link
-                                            to={`/repair/${vendorUrl}/${modelUrl}`}
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                            }}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            style={{ 
-                                                color: 'inherit', 
-                                                textDecoration: 'underline',
-                                                cursor: 'pointer'
-                                            }}
-                                        >
-                                            {printer.model}
-                                        </Link>
-                                    </span>
-                                );
-                            })}
+                            <span>{`${(cartridge.vendor || '').toUpperCase()}`}</span>
+                            <span>{'\u00A0'}</span>
+                            {printers.length > 0 ? (
+                                printers.map((printer, index) => {
+                                    if (!printer.model) return null;
+                                    const modelUrl = printer.model.replace(/\s/g, '');
+                                    const vendorUrl = (printer.vendor || cartridge.vendor || '').toLowerCase();
+                                    return (
+                                        <span key={printer._id || index}>
+                                            {index > 0 && ' / '}
+                                            <Link
+                                                to={`/repair/${vendorUrl}/${modelUrl}`}
+                                                onClick={(e) => {
+                                                    e.stopPropagation();
+                                                }}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                style={{ 
+                                                    color: 'inherit', 
+                                                    textDecoration: 'underline',
+                                                    cursor: 'pointer'
+                                                }}
+                                            >
+                                                {printer.model}
+                                            </Link>
+                                        </span>
+                                    );
+                                })
+                            ) : (
+                                <span>{cartridge.devices || 'Не указано'}</span>
+                            )}
                         </>
                     )}
                 </p>
                 <p className={styles.separator}>{'|'}</p>
-                <p className={styles.chip}>{cartridge.chip ? 'уточняйте' : 'не требуется'}</p>
+                <p className={styles.chip}>{chipValue ? 'уточняйте' : 'не требуется'}</p>
                 <p className={styles.separator}>{'|'}</p>
                 <p className={styles.refill_price}>{cartridge.refill_price}</p>
                 <p className={styles.separator}>{'|'}</p>

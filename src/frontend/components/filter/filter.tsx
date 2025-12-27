@@ -1,12 +1,12 @@
 import styles from './filter.module.css'
 import { useEffect, useState, FC } from "react";
-import { useDispatch } from "react-redux";
-import { SEARCH_DATA_REQUEST } from '../../services/actions/filter'
+import { useDispatch_ } from '../../services/reducers/root-reducer';
+import { setSearchValue } from '../../services/slices/filter';
 import { useLocation } from 'react-router-dom';
 
 const Filter: FC = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch_();
     const location = useLocation();
 
     const link = location.pathname
@@ -14,10 +14,7 @@ const Filter: FC = () => {
     const [value, setValue] = useState('');
 
     useEffect(() => {
-        dispatch({
-            type: SEARCH_DATA_REQUEST,
-            value: value,
-        })
+        dispatch(setSearchValue(value));
     }, [value, dispatch])
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {

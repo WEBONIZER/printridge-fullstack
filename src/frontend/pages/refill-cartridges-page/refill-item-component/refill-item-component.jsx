@@ -2,13 +2,13 @@ import styles from './refill-item-component.module.css'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Tabs from '../../../components/tabs/tabs';
+import { Tabs } from '../../../components/tabs/tabs';
 import ImageBox from './image-box/image-box'
 import DescriptionBox from './description-box/description-box'
 import { useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { getPaginatedCartridges, getPrintersByCartridgeId, getPaginatedExamples } from '../../../utils/api';
-import Spinner from '../../../components/spinner/spinner';
+import { Spinner } from '../../../components/spinner/spinner';
 
 function RefillItemComponent() {
 
@@ -38,19 +38,19 @@ function RefillItemComponent() {
                     if (foundCartridge) {
                         setCartridge(foundCartridge);
 
-                    const [printersResponse, examplesResponse] = await Promise.all([
-                        getPrintersByCartridgeId(foundCartridge._id),
-                        getPaginatedExamples({
-                            page: 1,
-                            limit: 100,
-                            cartridgeId: foundCartridge._id,
-                            public: 'true'
-                        })
-                    ]);
+                        const [printersResponse, examplesResponse] = await Promise.all([
+                            getPrintersByCartridgeId(foundCartridge._id),
+                            getPaginatedExamples({
+                                page: 1,
+                                limit: 100,
+                                cartridgeId: foundCartridge._id,
+                                public: 'true'
+                            })
+                        ]);
 
-                    setPrinters(printersResponse.data || []);
-                    const filteredExamples = (examplesResponse.data || []).filter(example => example.public !== false);
-                    setExamples(filteredExamples);
+                        setPrinters(printersResponse.data || []);
+                        const filteredExamples = (examplesResponse.data || []).filter(example => example.public !== false);
+                        setExamples(filteredExamples);
                     }
                 }
             } catch (error) {
@@ -149,6 +149,8 @@ function RefillItemComponent() {
                             <div className={styles.text_box}>
                                 <p className={styles.blue_text}>Совместимые модели</p>
                                 <p className={styles.black_text}>
+                                    <span>{`${(cartridge.vendor || '').toUpperCase()}`}</span>
+                                    <span>{'\u00A0'}</span>
                                     {printers.length > 0 ? (
                                         printers.map((printer, index) => {
                                             if (!printer.model) return null;
@@ -161,8 +163,8 @@ function RefillItemComponent() {
                                                         to={`/repair/${vendorUrl}/${modelUrl}`}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        style={{ 
-                                                            color: 'inherit', 
+                                                        style={{
+                                                            color: 'inherit',
                                                             textDecoration: 'underline',
                                                             cursor: 'pointer'
                                                         }}
@@ -173,7 +175,7 @@ function RefillItemComponent() {
                                             );
                                         })
                                     ) : (
-                                        'Не указано'
+                                        cartridge.devices || 'Не указано'
                                     )}
                                 </p>
                             </div>

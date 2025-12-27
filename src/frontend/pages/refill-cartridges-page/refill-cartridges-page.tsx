@@ -1,13 +1,13 @@
 import styles from './refill-cartridges-page.module.css'
 import { useParams, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useSelector } from 'react-redux';
-import FilterItemsComponent from '../../components/filter-items-component/filter-items-component'
+import { FilterItemsComponent } from '../../components/filter-items-component/filter-items-component'
 import { VendorMenu } from '../../components/vendor-menu/vendor-menu'
 import { Filter } from '../../components/filter/filter'
 import { Helmet } from "react-helmet";
 import { getPaginatedCartridges, Cartridge } from '../../utils/api';
-import Spinner from '../../components/spinner/spinner';
+import { Spinner } from '../../components/spinner/spinner';
 
 function RefillCartridgesPage() {
 
@@ -15,7 +15,7 @@ function RefillCartridgesPage() {
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const filterValue = useSelector((state: any) => {
-        const value = state.filter?.value?.value;
+        const value = state.filter?.value;
         return typeof value === 'string' ? value : '';
     });
     const [cartridges, setCartridges] = useState<Cartridge[]>([]);
@@ -36,11 +36,13 @@ function RefillCartridgesPage() {
         return () => clearTimeout(timer);
     }, [filterValue]);
 
+    const currentPageRef = useRef(currentPage);
+    
     useEffect(() => {
-        loadCartridges(true);
-    }, [vendor, filterDebounce]);
+        currentPageRef.current = currentPage;
+    }, [currentPage]);
 
-    const loadCartridges = async (reset = false) => {
+    const loadCartridges = useCallback(async (reset = false, page?: number) => {
         if (reset) {
             setCartridges([]);
             setCurrentPage(1);
@@ -53,7 +55,7 @@ function RefillCartridgesPage() {
         }
 
         try {
-            const pageToLoad = reset ? 1 : currentPage;
+            const pageToLoad = page !== undefined ? page : (reset ? 1 : currentPageRef.current);
             const response = await getPaginatedCartridges({
                 page: pageToLoad,
                 limit,
@@ -66,28 +68,30 @@ function RefillCartridgesPage() {
             
             if (reset) {
                 setCartridges(filteredData);
+                setCurrentPage(2);
             } else {
                 setCartridges(prev => [...prev, ...filteredData]);
+                setCurrentPage(prev => prev + 1);
             }
 
             setHasMore(response.data.length === limit && response.pagination.currentPage < response.pagination.totalPages);
-            if (!reset) {
-                setCurrentPage(prev => prev + 1);
-            } else {
-                setCurrentPage(2);
-            }
         } catch (error) {
             console.error('Ошибка загрузки картриджей:', error);
         } finally {
             setIsLoading(false);
         }
-    };
+    }, [vendor, filterDebounce, isInitialLoad]);
 
-    const handleLoadMore = () => {
+    useEffect(() => {
+        loadCartridges(true);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [vendor, filterDebounce]);
+
+    const handleLoadMore = useCallback(() => {
         if (!isLoading && hasMore) {
-            loadCartridges(false);
+            loadCartridges(false, currentPageRef.current);
         }
-    };
+    }, [isLoading, hasMore, loadCartridges]);
 
     if (isInitialLoad && isLoading && cartridges.length === 0) {
         return <Spinner />;

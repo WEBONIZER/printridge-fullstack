@@ -1,7 +1,7 @@
 import styles from './footer.module.css'
 import { MainMenu } from '../main-menu/main-menu'
 import { Link } from 'react-router-dom';
-import SocialIcons from '../social-icons/social-icons'
+import { SocialIcons } from '../social-icons/social-icons'
 
 export const FooterComponent = () => {
 

@@ -1,8 +1,12 @@
 import styles from './photos-component.module.css'
-import { useState } from "react";
+import { useState, FC } from "react";
 import { useInView } from "react-intersection-observer"
 
-const PhotosComponent = ({ imgagesNameArr }) => {
+interface PhotosComponentProps {
+    imgagesNameArr: Array<string | { src: string; alt?: string }>;
+}
+
+export const PhotosComponent: FC<PhotosComponentProps> = ({ imgagesNameArr }) => {
 
     const { ref } = useInView({
         threshold: 0.2,
@@ -13,7 +17,7 @@ const PhotosComponent = ({ imgagesNameArr }) => {
 
     const imagesArr = Array.isArray(imgagesNameArr) 
         ? imgagesNameArr.map((item, key) => {
-            const src = typeof item === 'string' ? item : (item.src || item.item || '');
+            const src = typeof item === 'string' ? item : (item.src || '');
             return {
                 src: src,
                 alt: typeof item === 'string' ? `Фото ${key + 1}` : (item.alt || `Фото ${key + 1}`),
@@ -72,4 +76,3 @@ const PhotosComponent = ({ imgagesNameArr }) => {
     )
 }
 
-export default PhotosComponent

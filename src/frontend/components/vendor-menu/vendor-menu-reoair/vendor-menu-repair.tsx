@@ -1,7 +1,8 @@
 import style from './vendor-menu-repair.module.css'
 import { NavLink, useParams } from 'react-router-dom'
+import { FC } from 'react'
 
-function VendorMenuRepair() {
+export const VendorMenuRepair: FC = () => {
 
     const { vendor } = useParams()
 
@@ -56,4 +57,3 @@ function VendorMenuRepair() {
     )
 }
 
-export default VendorMenuRepair

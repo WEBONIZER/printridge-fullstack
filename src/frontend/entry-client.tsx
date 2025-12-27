@@ -6,7 +6,7 @@ import { hydrateRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { App } from "./components/app/app";
-import { rootStore } from "./services/reducers";
+import { rootStore } from "./services/reducers/root-reducer";
 import { fetchCurrentUser } from "./services/slices/auth";
 
 if (typeof window !== "undefined") {
