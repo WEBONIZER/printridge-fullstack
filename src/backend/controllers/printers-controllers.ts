@@ -137,7 +137,8 @@ export const getPrinterByID = async (req: Request, res: Response) => {
     }
 
     // Получаем фото для принтера
-    const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
+    // Ищем фото по printerId, конвертируя в строку для совместимости
+    const photo = await PhotoModel.findOne({ printerId: String(printerId) }).lean();
     
     // Получаем прайс, если он указан
     let priceTemplate = null;
@@ -257,7 +258,8 @@ export const updatePrinter = async (req: Request, res: Response) => {
     const printerObj = savedPrinter.toObject() as any;
     
     // Получаем фото для принтера
-    const photo = await PhotoModel.findOne({ printerId: printerId }).lean();
+    // Ищем фото по printerId, конвертируя в строку для совместимости
+    const photo = await PhotoModel.findOne({ printerId: String(printerId) }).lean();
     printerObj.photo = photo || null;
     
     // Получаем прайс, если он указан
@@ -397,7 +399,12 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     // Получаем фото для всех принтеров
     const printerIds = printersData.map(p => p._id.toString());
     const photos = await PhotoModel.find({ printerId: { $in: printerIds } }).lean();
-    const photoMap = new Map(photos.map(p => [p.printerId, p]));
+    console.log(`📸 Found ${photos.length} photos for ${printerIds.length} printers`);
+    console.log('📸 Printer IDs:', printerIds.slice(0, 5), '...');
+    console.log('📸 Photo printerIds:', photos.map(p => p.printerId).slice(0, 5), '...');
+    
+    // Создаем карту, где ключ - это строковое представление printerId
+    const photoMap = new Map(photos.map(p => [String(p.printerId || ''), p]));
 
     // Получаем прайсы для всех принтеров
     const priceIds = printersData
@@ -407,11 +414,18 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     const priceMap = new Map(priceTemplates.map(p => [p._id.toString(), p]));
 
     // Добавляем фото и прайсы к каждому принтеру
-    let printers = printersData.map(printer => ({
-      ...printer,
-      photo: photoMap.get(printer._id.toString()) || null,
-      priceTemplate: printer.price ? priceMap.get(printer.price) || null : null
-    }));
+    let printers = printersData.map(printer => {
+      const printerIdStr = printer._id.toString();
+      const photo = photoMap.get(printerIdStr) || null;
+      if (photo) {
+        console.log(`✅ Found photo for printer ${printerIdStr}`);
+      }
+      return {
+        ...printer,
+        photo: photo,
+        priceTemplate: printer.price ? priceMap.get(printer.price) || null : null
+      };
+    });
 
     // Фильтрация по наличию картинки
     if (hasImage === 'yes') {

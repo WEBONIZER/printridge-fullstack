@@ -193,7 +193,15 @@ export const PrintersPage: React.FC = () => {
         <CreatePrinterModal
           onClose={() => setIsCreateModalOpen(false)}
           onSave={() => {
-            dispatch(fetchPrinters({ page: currentPage, limit: 30, vendor: vendorFilter || undefined })).then(() => {
+            dispatch(fetchPrinters({ 
+              page: currentPage, 
+              limit: 30, 
+              vendor: vendorFilter || undefined,
+              model: modelFilter || undefined,
+              hasImage: hasImageFilter !== "all" ? hasImageFilter : undefined,
+              hasLinkedCartridges: hasLinkedCartridgesFilter !== "all" ? hasLinkedCartridgesFilter : undefined,
+              public: publicFilter !== "all" ? publicFilter : undefined
+            })).then(() => {
               loadLinkedCartridgesForAll();
             });
             setIsCreateModalOpen(false);

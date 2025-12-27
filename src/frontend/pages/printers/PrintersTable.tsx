@@ -38,19 +38,32 @@ export const PrintersTable: React.FC<PrintersTableProps> = ({
             >
               <td>
                 {(() => {
-                  const photoSrc = printer.photo && typeof printer.photo === 'object' && printer.photo.src
-                    ? printer.photo.src
-                    : printer.vendor && printer.model
-                      ? `https://storage.yandexcloud.net/printridge/repair/${printer.vendor}/${printer.model}.png`
-                      : null;
+                  // Проверяем наличие фото в разных форматах
+                  let photoSrc: string | null = null;
+                  
+                  if (printer.photo) {
+                    if (typeof printer.photo === 'object' && printer.photo !== null) {
+                      // Если photo - объект, берем src
+                      photoSrc = printer.photo.src || null;
+                    } else if (typeof printer.photo === 'string') {
+                      // Если photo - строка (URL)
+                      photoSrc = printer.photo;
+                    }
+                  }
+                  
+                  // Если фото не найдено, используем fallback URL
+                  if (!photoSrc && printer.vendor && printer.model) {
+                    photoSrc = `https://storage.yandexcloud.net/printridge/repair/${printer.vendor}/${printer.model}.png`;
+                  }
                   
                   return photoSrc ? (
                     <img
                       key={`${printer._id}-${photoSrc}`}
                       src={photoSrc}
-                      alt={printer.model}
+                      alt={`${printer.vendor} ${printer.model}`}
                       className={styles.deviceImage}
                       onError={(e) => {
+                        // При ошибке загрузки скрываем изображение
                         (e.target as HTMLImageElement).style.display = 'none';
                       }}
                     />

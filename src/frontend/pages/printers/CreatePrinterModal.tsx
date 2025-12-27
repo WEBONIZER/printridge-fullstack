@@ -130,15 +130,25 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
 
       const createdPrinter = await createPrinter(printerData);
       const printerId = createdPrinter.data._id;
+      console.log("✅ Принтер создан с ID:", printerId);
 
+      // Сначала загружаем изображение, если оно есть
       if (imageFile) {
         try {
-          await uploadImage(imageFile, { printerId });
-        } catch (error) {
-          console.error("Ошибка загрузки изображения:", error);
+          console.log("📤 Загрузка изображения для принтера:", printerId);
+          const uploadResult = await uploadImage(imageFile, { printerId });
+          console.log("✅ Изображение успешно загружено для принтера:", uploadResult);
+          console.log("📸 Photo data:", uploadResult.data);
+        } catch (error: any) {
+          console.error("❌ Ошибка загрузки изображения:", error);
+          console.error("❌ Error details:", error.response?.data);
+          alert(error.response?.data?.error || "Ошибка загрузки изображения");
         }
+      } else {
+        console.log("⚠️ Изображение не выбрано");
       }
 
+      // Затем создаем связи с картриджами
       if (selectedCartridges.length > 0) {
         for (const cartridge of selectedCartridges) {
           try {
@@ -153,6 +163,9 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
           }
         }
       }
+
+      // Небольшая задержка, чтобы изображение успело связаться с принтером
+      await new Promise(resolve => setTimeout(resolve, 500));
 
       onSave();
     } catch (error: any) {
