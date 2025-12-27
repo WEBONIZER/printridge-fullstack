@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility, searchCartridgeModels } from "../../utils/api";
+import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility, searchCartridgeModels, getCartridgeVendors } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import { CreatePrinterModal } from "../printers/CreatePrinterModal";
@@ -29,10 +29,26 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
   const [selectedPrinters, setSelectedPrinters] = useState<Printer[]>([]);
   const [isLoadingPrinters, setIsLoadingPrinters] = useState(false);
   const [isCreatePrinterModalOpen, setIsCreatePrinterModalOpen] = useState(false);
+  const [allVendors, setAllVendors] = useState<string[]>([]);
 
   useEffect(() => {
     loadPrinters();
+    loadVendors();
   }, []);
+
+  const loadVendors = async () => {
+    try {
+      const response = await getCartridgeVendors();
+      if (response && response.data && Array.isArray(response.data)) {
+        setAllVendors(response.data);
+      } else {
+        setAllVendors([]);
+      }
+    } catch (error) {
+      console.error("Ошибка загрузки производителей:", error);
+      setAllVendors([]);
+    }
+  };
 
   const loadPrinters = async () => {
     try {
@@ -77,6 +93,20 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
       console.error("Ошибка поиска моделей:", error);
       return [];
     }
+  };
+
+  const handleSearchVendors = async (query: string): Promise<string[]> => {
+    if (allVendors.length === 0) {
+      return [];
+    }
+    const queryLower = query.toLowerCase().trim();
+    if (!queryLower) {
+      return allVendors.slice(0, 20);
+    }
+    const filtered = allVendors
+      .filter(vendor => vendor && typeof vendor === 'string' && vendor.toLowerCase().includes(queryLower))
+      .slice(0, 20);
+    return filtered;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -154,6 +184,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
               onImageChange={handleImageChange}
               isCreateMode={true}
               onSearchModels={handleSearchModels}
+              onSearchVendors={handleSearchVendors}
             />
 
             <div className={styles.linkedItems}>

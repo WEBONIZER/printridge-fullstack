@@ -37,22 +37,18 @@ export const ModelAutocomplete: React.FC<ModelAutocompleteProps> = ({
 
   useEffect(() => {
     const searchModels = async () => {
-      if (!value.trim()) {
-        setSuggestions([]);
-        setHasSearched(false);
-        setShowSuggestions(false);
-        return;
-      }
-
+      const trimmedValue = value.trim();
+      
       setIsSearching(true);
       setHasSearched(true);
       try {
-        const results = await onSearch(value.trim());
+        const results = await onSearch(trimmedValue);
         setSuggestions(results);
-        setShowSuggestions(true);
+        setShowSuggestions(results.length > 0);
       } catch (error) {
         console.error("Ошибка поиска моделей:", error);
         setSuggestions([]);
+        setShowSuggestions(false);
       } finally {
         setIsSearching(false);
       }
@@ -72,8 +68,23 @@ export const ModelAutocomplete: React.FC<ModelAutocompleteProps> = ({
     inputRef.current?.blur();
   };
 
-  const handleInputFocus = () => {
-    if (suggestions.length > 0 || (hasSearched && value.trim())) {
+  const handleInputFocus = async () => {
+    if (suggestions.length > 0) {
+      setShowSuggestions(true);
+    } else if (!hasSearched) {
+      // Если еще не было поиска, запускаем поиск с текущим значением (может быть пустым)
+      try {
+        setIsSearching(true);
+        const results = await onSearch(value.trim());
+        setSuggestions(results);
+        setShowSuggestions(results.length > 0);
+        setHasSearched(true);
+      } catch (error) {
+        console.error("Ошибка поиска при фокусе:", error);
+      } finally {
+        setIsSearching(false);
+      }
+    } else if (hasSearched && value.trim()) {
       setShowSuggestions(true);
     }
   };

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Cartridge, Printer, updateCartridge, uploadImage, updateImage, getPaginatedPrinters, getPrintersByCartridgeId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities } from "../../utils/api";
+import { Cartridge, Printer, updateCartridge, uploadImage, updateImage, getPaginatedPrinters, getPrintersByCartridgeId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities, getCartridgeVendors } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import { CreatePrinterModal } from "../printers/CreatePrinterModal";
@@ -32,6 +32,7 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
   const [compatibilityMap, setCompatibilityMap] = useState<Map<string, string>>(new Map());
   const [isLoadingPrinters, setIsLoadingPrinters] = useState(false);
   const [isCreatePrinterModalOpen, setIsCreatePrinterModalOpen] = useState(false);
+  const [allVendors, setAllVendors] = useState<string[]>([]);
 
   useEffect(() => {
     if (cartridge.photo) {
@@ -42,7 +43,22 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
     
     loadPrinters();
     loadLinkedPrinters();
+    loadVendors();
   }, [cartridge._id]);
+
+  const loadVendors = async () => {
+    try {
+      const response = await getCartridgeVendors();
+      if (response && response.data && Array.isArray(response.data)) {
+        setAllVendors(response.data);
+      } else {
+        setAllVendors([]);
+      }
+    } catch (error) {
+      console.error("Ошибка загрузки производителей:", error);
+      setAllVendors([]);
+    }
+  };
 
   const loadPrinters = async () => {
     try {
@@ -135,6 +151,20 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
     }
   };
 
+  const handleSearchVendors = async (query: string): Promise<string[]> => {
+    if (allVendors.length === 0) {
+      return [];
+    }
+    const queryLower = query.toLowerCase().trim();
+    if (!queryLower) {
+      return allVendors.slice(0, 20);
+    }
+    const filtered = allVendors
+      .filter(vendor => vendor && typeof vendor === 'string' && vendor.toLowerCase().includes(queryLower))
+      .slice(0, 20);
+    return filtered;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -142,8 +172,13 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
       await updateCartridge(
         cartridge._id,
         {
-          ...formData,
+          modelCart: formData.modelCart.trim(),
+          vendor: formData.vendor.trim(),
+          devices: formData.devices.trim() || undefined,
+          refill_price: formData.refill_price.trim(),
+          recovery_price: formData.recovery_price.trim(),
           resource: formData.resource ? parseFloat(formData.resource as any) : undefined,
+          chip: formData.chip,
           public: formData.public,
         },
         imageFile || undefined
@@ -187,6 +222,7 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
               onFormDataChange={(data) => setFormData({ ...formData, ...data })}
               imagePreview={currentImageSrc}
               onImageChange={handleImageChange}
+              onSearchVendors={handleSearchVendors}
             />
 
             <div className={styles.formGroup}>

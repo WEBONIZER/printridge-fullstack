@@ -64,7 +64,7 @@ export const CartridgesTable: React.FC<CartridgesTableProps> = ({
                 {(() => {
                   const linkedPrinters = linkedPrintersMap.get(cartridge._id) || [];
                   if (linkedPrinters.length > 0) {
-                    return linkedPrinters.map(p => `${p.vendor} ${p.model}`).join(", ");
+                    return linkedPrinters.map(p => `${p.model}`).join(", ");
                   }
                   return "Нет привязанных устройств";
                 })()}

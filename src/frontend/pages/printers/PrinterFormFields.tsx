@@ -20,6 +20,7 @@ interface PrinterFormFieldsProps {
   onImageChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   isCreateMode?: boolean;
   onSearchModels?: (query: string) => Promise<string[]>;
+  onSearchVendors?: (query: string) => Promise<string[]>;
 }
 
 export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
@@ -29,17 +30,28 @@ export const PrinterFormFields: React.FC<PrinterFormFieldsProps> = ({
   onImageChange,
   isCreateMode = false,
   onSearchModels,
+  onSearchVendors,
 }) => {
   return (
     <>
       <div className={styles.formGroup}>
         <label>Производитель *</label>
-        <input
-          type="text"
-          value={formData.vendor}
-          onChange={(e) => onFormDataChange({ vendor: e.target.value })}
-          required
-        />
+        {onSearchVendors ? (
+          <ModelAutocomplete
+            value={formData.vendor}
+            onChange={(value) => onFormDataChange({ vendor: value })}
+            onSearch={onSearchVendors}
+            placeholder="Введите производителя"
+            required
+          />
+        ) : (
+          <input
+            type="text"
+            value={formData.vendor}
+            onChange={(e) => onFormDataChange({ vendor: e.target.value })}
+            required
+          />
+        )}
       </div>
       <div className={styles.formGroup}>
         <label>Модель *</label>

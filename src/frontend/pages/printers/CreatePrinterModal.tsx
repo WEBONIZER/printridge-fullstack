@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Printer, Cartridge, createPrinter, uploadImage, getPaginatedCartridges, createCompatibility, searchPrinterModels } from "../../utils/api";
+import { Printer, Cartridge, createPrinter, uploadImage, getPaginatedCartridges, createCompatibility, searchPrinterModels, getPrinterVendors } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
 import { PrinterPriceSection } from "./PrinterPriceSection";
@@ -31,10 +31,26 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
   const [isLoadingCartridges, setIsLoadingCartridges] = useState(false);
   const [selectedPriceId, setSelectedPriceId] = useState<string | null>(null);
   const [isCreateCartridgeModalOpen, setIsCreateCartridgeModalOpen] = useState(false);
+  const [allVendors, setAllVendors] = useState<string[]>([]);
 
   useEffect(() => {
     loadCartridges();
+    loadVendors();
   }, []);
+
+  const loadVendors = async () => {
+    try {
+      const response = await getPrinterVendors();
+      if (response && response.data && Array.isArray(response.data)) {
+        setAllVendors(response.data);
+      } else {
+        setAllVendors([]);
+      }
+    } catch (error) {
+      console.error("Ошибка загрузки производителей:", error);
+      setAllVendors([]);
+    }
+  };
 
   const loadCartridges = async () => {
     try {
@@ -79,6 +95,20 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
       console.error("Ошибка поиска моделей:", error);
       return [];
     }
+  };
+
+  const handleSearchVendors = async (query: string): Promise<string[]> => {
+    if (allVendors.length === 0) {
+      return [];
+    }
+    const queryLower = query.toLowerCase().trim();
+    if (!queryLower) {
+      return allVendors.slice(0, 20);
+    }
+    const filtered = allVendors
+      .filter(vendor => vendor && typeof vendor === 'string' && vendor.toLowerCase().includes(queryLower))
+      .slice(0, 20);
+    return filtered;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -157,6 +187,7 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
               onImageChange={handleImageChange}
               isCreateMode={true}
               onSearchModels={handleSearchModels}
+              onSearchVendors={handleSearchVendors}
             />
 
             <PrinterPriceSection

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Printer, Cartridge, updatePrinter, uploadImage, updateImage, getPaginatedCartridges, getCartridgesByPrinterId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities } from "../../utils/api";
+import { Printer, Cartridge, updatePrinter, uploadImage, updateImage, getPaginatedCartridges, getCartridgesByPrinterId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities, getPrinterVendors } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
 import { PrinterPriceSection } from "./PrinterPriceSection";
@@ -34,6 +34,7 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
   const [compatibilityMap, setCompatibilityMap] = useState<Map<string, string>>(new Map());
   const [isLoadingCartridges, setIsLoadingCartridges] = useState(false);
   const [isCreateCartridgeModalOpen, setIsCreateCartridgeModalOpen] = useState(false);
+  const [allVendors, setAllVendors] = useState<string[]>([]);
 
   useEffect(() => {
     if ((printer as any).photo) {
@@ -45,7 +46,22 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     
     loadCartridges();
     loadLinkedCartridges();
+    loadVendors();
   }, [printer._id]);
+
+  const loadVendors = async () => {
+    try {
+      const response = await getPrinterVendors();
+      if (response && response.data && Array.isArray(response.data)) {
+        setAllVendors(response.data);
+      } else {
+        setAllVendors([]);
+      }
+    } catch (error) {
+      console.error("Ошибка загрузки производителей:", error);
+      setAllVendors([]);
+    }
+  };
 
   const loadCartridges = async () => {
     try {
@@ -138,6 +154,20 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     }
   };
 
+  const handleSearchVendors = async (query: string): Promise<string[]> => {
+    if (allVendors.length === 0) {
+      return [];
+    }
+    const queryLower = query.toLowerCase().trim();
+    if (!queryLower) {
+      return allVendors.slice(0, 20);
+    }
+    const filtered = allVendors
+      .filter(vendor => vendor && typeof vendor === 'string' && vendor.toLowerCase().includes(queryLower))
+      .slice(0, 20);
+    return filtered;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -195,6 +225,7 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
               onFormDataChange={(data) => setFormData({ ...formData, ...data })}
               imagePreview={currentImageSrc}
               onImageChange={handleImageChange}
+              onSearchVendors={handleSearchVendors}
             />
 
             <PrinterPriceSection
