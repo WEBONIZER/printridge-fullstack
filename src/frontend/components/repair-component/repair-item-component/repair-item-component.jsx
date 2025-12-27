@@ -35,8 +35,8 @@ function RepairItemComponent() {
                 });
 
                 // Ищем принтер, у которого model совпадает (с учетом пробелов)
-                const foundPrinter = printersResponse.data.find(p => 
-                    p.model.replace(/\s/g, '') === searchModel || 
+                const foundPrinter = printersResponse.data.find(p =>
+                    p.model.replace(/\s/g, '') === searchModel ||
                     p.model === searchModel ||
                     p.model.toLowerCase().replace(/\s/g, '') === searchModel.toLowerCase()
                 ) || printersResponse.data[0];
@@ -138,7 +138,7 @@ function RepairItemComponent() {
                 </div>
             </div>
             {priceTemplate && <RepairPriceComponent priceTemplate={priceTemplate} printer={printer} />}
-            <DescriptionRepairBox />
+            <DescriptionRepairBox printer={printer} />
             {cartridges.length > 0 && <UseCartridges cartridgesArray={cartridges} />}
             {examples.length > 0 && <Tabs items={examples} />}
         </div>

@@ -30,8 +30,8 @@ function RepairLaptopsItemComponent() {
                     public: 'true'
                 });
 
-                const foundLaptop = laptopsResponse.data.find(l => 
-                    l.model.replace(/\s/g, '') === searchModel || 
+                const foundLaptop = laptopsResponse.data.find(l =>
+                    l.model.replace(/\s/g, '') === searchModel ||
                     l.model === searchModel ||
                     l.model.toLowerCase().replace(/\s/g, '') === searchModel.toLowerCase()
                 ) || laptopsResponse.data[0];
@@ -83,7 +83,7 @@ function RepairLaptopsItemComponent() {
     const location = useLocation();
     const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const seriesText = laptop.series ? `${laptop.series} ` : '';
-    const processorText = laptop.processorVendor 
+    const processorText = laptop.processorVendor
         ? (laptop.processorName ? `${laptop.processorVendor} ${laptop.processorName}` : laptop.processorVendor)
         : '';
     const displayText = laptop.display ? `${laptop.display} "` : '';
@@ -111,50 +111,50 @@ function RepairLaptopsItemComponent() {
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
             <div>
-            <div className={styles.container}>
-                <h1 className={styles.header}>Ремонт ноутбука {`${laptop.vendor.toUpperCase()} ${seriesText}${laptop.model}`}</h1>
-                <div className={styles.img_desc_box}>
-                    <div className={styles.price_container}>                        
-                        <div className={styles.specifications}>
-                            {displayText && (
-                                <div className={styles.text_box}>
-                                    <p className={styles.blue_text}>Диагональ экрана:</p>
-                                    <p className={styles.black_text}>{displayText}</p>
-                                </div>
-                            )}
-                            {processorText && (
-                                <div className={styles.text_box}>
-                                    <p className={styles.blue_text}>Процессор:</p>
-                                    <p className={styles.black_text}>{processorText}</p>
-                                </div>
-                            )}
-                            {laptop.video && (
-                                <div className={styles.text_box}>
-                                    <p className={styles.blue_text}>Видео:</p>
-                                    <p className={styles.black_text}>{laptop.video}</p>
-                                </div>
-                            )}
-                            {ramText && (
-                                <div className={styles.text_box}>
-                                    <p className={styles.blue_text}>Оперативная память:</p>
-                                    <p className={styles.black_text}>{ramText}</p>
-                                </div>
-                            )}
-                            {laptop.ramType && (
-                                <div className={styles.text_box}>
-                                    <p className={styles.blue_text}>Тип оперативной памяти:</p>
-                                    <p className={styles.black_text}>{laptop.ramType}</p>
-                                </div>
-                            )}
+                <div className={styles.container}>
+                    <h1 className={styles.header}>Ремонт ноутбука {`${laptop.vendor.toUpperCase()} ${seriesText}${laptop.model}`}</h1>
+                    <div className={styles.img_desc_box}>
+                        <div className={styles.price_container}>
+                            <div className={styles.specifications}>
+                                {displayText && (
+                                    <div className={styles.text_box}>
+                                        <p className={styles.blue_text}>Диагональ экрана:</p>
+                                        <p className={styles.black_text}>{displayText}</p>
+                                    </div>
+                                )}
+                                {processorText && (
+                                    <div className={styles.text_box}>
+                                        <p className={styles.blue_text}>Процессор:</p>
+                                        <p className={styles.black_text}>{processorText}</p>
+                                    </div>
+                                )}
+                                {laptop.video && (
+                                    <div className={styles.text_box}>
+                                        <p className={styles.blue_text}>Видео:</p>
+                                        <p className={styles.black_text}>{laptop.video}</p>
+                                    </div>
+                                )}
+                                {ramText && (
+                                    <div className={styles.text_box}>
+                                        <p className={styles.blue_text}>Оперативная память:</p>
+                                        <p className={styles.black_text}>{ramText}</p>
+                                    </div>
+                                )}
+                                {laptop.ramType && (
+                                    <div className={styles.text_box}>
+                                        <p className={styles.blue_text}>Тип оперативной памяти:</p>
+                                        <p className={styles.black_text}>{laptop.ramType}</p>
+                                    </div>
+                                )}
+                            </div>
                         </div>
+                        <ImageRapairBox laptop={laptop} />
+                        <h2 className={styles.header_mobile}>Ремонт ноутбука {`${laptop.vendor.toUpperCase()} ${seriesText}${laptop.model}`}</h2>
                     </div>
-                    <ImageRapairBox laptop={laptop} />
-                    <h2 className={styles.header_mobile}>Ремонт ноутбука {`${laptop.vendor.toUpperCase()} ${seriesText}${laptop.model}`}</h2>
                 </div>
-            </div>
-            {priceTemplate && <RepairPriceComponent priceTemplate={priceTemplate} laptop={laptop} />}
-            <DescriptionRepairBox />
-            {examples.length > 0 && <Tabs items={examples} />}
+                {priceTemplate && <RepairPriceComponent priceTemplate={priceTemplate} laptop={laptop} />}
+                <DescriptionRepairBox laptop={laptop} />
+                {examples.length > 0 && <Tabs items={examples} />}
             </div>
         </>
     );

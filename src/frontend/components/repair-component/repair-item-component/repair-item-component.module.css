@@ -163,6 +163,7 @@
 
   .specifications {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -172,11 +173,12 @@
   .text_box {
     margin: 0;
     width: 100%;
-    height: 4vw;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     justify-content: space-between;
+    gap: 0.69vw;
   }
 
   .blue_text {
