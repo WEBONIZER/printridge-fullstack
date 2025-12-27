@@ -38,9 +38,31 @@
 
 .blogs_list {
   width: 92.81%;
+  max-height: 83.33vw;
   display: flex;
   flex-direction: column;
   gap: 2.77vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.69vw;
+}
+
+.blogs_list::-webkit-scrollbar {
+  width: 0.55vw;
+}
+
+.blogs_list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0.69vw;
+}
+
+.blogs_list::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.69vw;
+}
+
+.blogs_list::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .blog_item {
@@ -179,7 +201,21 @@
   }
 
   .blogs_list {
+    max-height: 104.16vw;
     gap: 3.47vw;
+    padding-right: 0.86vw;
+  }
+
+  .blogs_list::-webkit-scrollbar {
+    width: 0.69vw;
+  }
+
+  .blogs_list::-webkit-scrollbar-track {
+    border-radius: 0.86vw;
+  }
+
+  .blogs_list::-webkit-scrollbar-thumb {
+    border-radius: 0.86vw;
   }
 
   .blog_item {
@@ -247,7 +283,21 @@
 
   .blogs_list {
     width: 88.62%;
+    max-height: 120vw;
     gap: 4.8vw;
+    padding-right: 1.4vw;
+  }
+
+  .blogs_list::-webkit-scrollbar {
+    width: 1.4vw;
+  }
+
+  .blogs_list::-webkit-scrollbar-track {
+    border-radius: 1.4vw;
+  }
+
+  .blogs_list::-webkit-scrollbar-thumb {
+    border-radius: 1.4vw;
   }
 
   .blog_item {
