@@ -180,14 +180,26 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
           resource: formData.resource ? parseFloat(formData.resource as any) : undefined,
           chip: formData.chip,
           public: formData.public,
-        },
-        imageFile || undefined
+        }
       );
 
-      if (imageFile && cartridge.photo && typeof cartridge.photo === 'object' && cartridge.photo._id) {
-        await updateImage(cartridge.photo._id, imageFile, { cartridgeId: cartridge._id });
-      } else if (imageFile && (!cartridge.photo || (typeof cartridge.photo === 'object' && !cartridge.photo._id))) {
-        await uploadImage(imageFile, { cartridgeId: cartridge._id });
+      if (imageFile) {
+        try {
+          const photo = cartridge.photo;
+          if (photo && typeof photo === 'object' && photo._id) {
+            await updateImage(photo._id, imageFile, { cartridgeId: cartridge._id });
+          } else {
+            const uploadResult = await uploadImage(imageFile, { cartridgeId: cartridge._id });
+            // Обновляем картридж, чтобы установить ссылку на загруженное фото
+            if (uploadResult.data && (uploadResult.data as any).id) {
+              const photoId = (uploadResult.data as any).id;
+              await updateCartridge(cartridge._id, { photo: photoId } as any, undefined);
+            }
+          }
+        } catch (error: any) {
+          console.error("Ошибка загрузки изображения:", error);
+          alert(error.response?.data?.error || "Ошибка загрузки изображения");
+        }
       }
 
       onSave();

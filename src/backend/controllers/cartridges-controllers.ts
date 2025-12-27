@@ -50,7 +50,7 @@ export const createCartridge = async (req: Request, res: Response) => {
     res.status(201).json({
       success: true,
       data: {
-        id: cartridgeObj._id,
+        _id: cartridgeObj._id,
         modelCart: cartridgeObj.modelCart,
         vendor: cartridgeObj.vendor,
         devices: cartridgeObj.devices,
@@ -59,6 +59,7 @@ export const createCartridge = async (req: Request, res: Response) => {
         chip: cartridgeObj.chip,
         resource: cartridgeObj.resource,
         photo: cartridgeObj.photo,
+        public: cartridgeObj.public,
         createdAt: cartridgeObj.createdAt,
         updatedAt: cartridgeObj.updatedAt
       }
@@ -165,6 +166,53 @@ export const updateCartridge = async (req: any, res: Response, next: NextFunctio
     if (data.resource !== undefined) cartridge.resource = data.resource;
     if (data.public !== undefined) {
       cartridge.public = data.public === true || String(data.public).toLowerCase() === 'true';
+    }
+    // Обновление ссылки на фото, если передано
+    if ((data as any).photo !== undefined) {
+      cartridge.photo = new mongoose.Types.ObjectId((data as any).photo);
+    }
+
+    // Обработка загрузки изображения, если файл был передан
+    if (req.file) {
+      try {
+        const { s3Operation } = await import("../../utils/functions");
+        const uuid = await import("uuid");
+        const { PhotoModel } = await import("../models/printridge-photo-model");
+
+        // Загружаем в S3
+        const fileKey = `images/${uuid.v4()}.webp`;
+        const uploadResult = await s3Operation({
+          operation: 'upload',
+          folder: 'images',
+          fileKey,
+          fileBuffer: req.file.buffer,
+          contentType: 'image/webp'
+        });
+
+        if (uploadResult.success && uploadResult.url) {
+          // Проверяем, есть ли уже фото у картриджа
+          const existingPhoto = await PhotoModel.findOne({ cartridgeId: String(cartridgeId) });
+          
+          if (existingPhoto) {
+            // Обновляем существующее фото
+            existingPhoto.src = uploadResult.url;
+            await existingPhoto.save();
+            cartridge.photo = existingPhoto._id;
+          } else {
+            // Создаем новое фото
+            const photo = new PhotoModel({
+              src: uploadResult.url,
+              alt: `${cartridge.vendor} ${cartridge.modelCart}`,
+              cartridgeId: String(cartridgeId)
+            });
+            await photo.save();
+            cartridge.photo = photo._id;
+          }
+        }
+      } catch (imageError: any) {
+        console.error("❌ Error uploading image for cartridge:", imageError);
+        // Продолжаем выполнение даже если загрузка изображения не удалась
+      }
     }
 
     await cartridge.save();

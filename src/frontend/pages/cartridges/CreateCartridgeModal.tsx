@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Printer, createCartridge, uploadImage, getPaginatedPrinters, createCompatibility, searchCartridgeModels, getCartridgeVendors } from "../../utils/api";
+import { Printer, createCartridge, uploadImage, updateCartridge, getPaginatedPrinters, createCompatibility, searchCartridgeModels, getCartridgeVendors } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import { CreatePrinterModal } from "../printers/CreatePrinterModal";
@@ -130,9 +130,16 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
 
       if (imageFile) {
         try {
-          await uploadImage(imageFile, { cartridgeId });
-        } catch (error) {
+          const uploadResult = await uploadImage(imageFile, { cartridgeId });
+          // Обновляем картридж, чтобы установить ссылку на загруженное фото
+          if (uploadResult.data && (uploadResult.data as any).id) {
+            const photoId = (uploadResult.data as any).id;
+            // Обновляем картридж с ID фото
+            await updateCartridge(cartridgeId, { photo: photoId } as any, undefined);
+          }
+        } catch (error: any) {
           console.error("Ошибка загрузки изображения:", error);
+          alert(error.response?.data?.error || "Ошибка загрузки изображения");
         }
       }
 
