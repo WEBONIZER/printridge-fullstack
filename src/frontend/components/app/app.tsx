@@ -18,6 +18,8 @@ import { modalSlice } from "../../services/slices/modal";
 import { useDispatch_, useSelector_ } from "../../services/reducers/root-reducer";
 import { Login } from "../../pages/login/login";
 import { Profile } from "../../pages/profile/profile";
+import { BlogsPage } from '../../pages/blog-page/blog-page'
+import { BlogItemPage } from '../../pages/blog-page/blog-item-page/blog-item-page'
 
 export const App: React.FC = () => {
 
@@ -47,6 +49,8 @@ export const App: React.FC = () => {
       <Routes location={background || location}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
+          <Route path="/blog" element={<BlogsPage />} />
+          <Route path="/blog/:itemRoute" element={<BlogItemPage />} />
           <Route path="/repair/:vendor" element={<RepairPrintersPage />} />
           <Route path="/repair/:vendor/:model" element={<RepairItemComponent />} />
           <Route path="/refill/:vendor" element={<RefillCartridgesPage />} />

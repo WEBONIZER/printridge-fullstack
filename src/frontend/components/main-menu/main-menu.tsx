@@ -44,6 +44,13 @@ export const MainMenu = ({ position }: any) => {
             </Link>
             <Link
                 className={position === 'header' ? styles.link : styles.link_footer}
+                to="/blog"
+                onClick={handleClick}
+            >
+                Блог
+            </Link>
+            <Link
+                className={position === 'header' ? styles.link : styles.link_footer}
                 to="/contacts"
                 onClick={handleClick}
             >

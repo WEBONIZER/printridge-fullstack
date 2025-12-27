@@ -55,12 +55,14 @@ export const HeaderComponent = () => {
                                 location.pathname.includes('refill') && `Заправка картриджей ${vendor === undefined ? '' : vendor.toUpperCase()}` ||
                                 location.pathname.includes('repair') && 'Ремонт принтеров и МФУ' ||
                                 location.pathname.includes('remont-noutbukov') && 'Ремонт ноутбуков' ||
+                                location.pathname.includes('blog') && 'Блог Printridge' ||
                                 'Printridge — решение проблем с компьютерной техникой'
                             }</p>
                             <p className={styles.slogan_small}>{
                                 location.pathname.includes('refill') && 'Заправка картриджей помогает существенно экономить на печати' ||
                                 location.pathname.includes('repair') && 'Ремонт принтеров и МФУ осуществляется на выезде и в нашем офисе' ||
                                 location.pathname.includes('remont-noutbukov') && 'Ремонт ноутбуков осуществляется на выезде и в нашем офисе' ||
+                                location.pathname.includes('blog') && 'Блог о ремонте техники и заправке картриджей' ||
                                 'Заправка картриджей всех видов и ремонт принтеров любой модели и любой сложности'
                             }</p>
                         </div>

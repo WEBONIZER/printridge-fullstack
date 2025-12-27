@@ -136,7 +136,12 @@ export const getExampleByID = async (req: Request, res: Response) => {
   try {
     const { exampleId } = req.params;
 
-    const example = await ExampleModel.findById(exampleId);
+    let example;
+    if (mongoose.Types.ObjectId.isValid(exampleId)) {
+      example = await ExampleModel.findById(exampleId);
+    } else {
+      example = await ExampleModel.findOne({ route: exampleId });
+    }
 
     if (!example) {
       return res.status(404).json({ error: 'Пример не найден' });
@@ -151,6 +156,35 @@ export const getExampleByID = async (req: Request, res: Response) => {
 
   } catch (error: any) {
     console.error('Get example error:', error);
+    res.status(500).json({
+      error: 'Внутренняя ошибка сервера',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
+// Публичный endpoint для получения примера по route (для блога)
+export const getExampleByRoute = async (req: Request, res: Response) => {
+  try {
+    const { route } = req.params;
+
+    if (!route) {
+      return res.status(400).json({ error: 'Route обязателен' });
+    }
+
+    const example = await ExampleModel.findOne({ route, public: { $ne: false } }).lean();
+
+    if (!example) {
+      return res.status(404).json({ error: 'Статья не найдена' });
+    }
+
+    res.status(200).json({
+      success: true,
+      data: example
+    });
+
+  } catch (error: any) {
+    console.error('Get example by route error:', error);
     res.status(500).json({
       error: 'Внутренняя ошибка сервера',
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
@@ -356,6 +390,7 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
     const page = Math.max(1, parseInt(req.query.page as string) || 1);
     const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 10));
     const title = req.query.title as string || '';
+    const text = req.query.text as string || '';
     const cartridgeId = req.query.cartridgeId as string || '';
     const printerId = req.query.printerId as string || '';
     const laptopId = req.query.laptopId as string || '';
@@ -367,7 +402,18 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
     const escapeRegex = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
     if (title) {
-      baseQuery.title = { $regex: escapeRegex(title), $options: 'i' };
+      baseQuery.$or = [
+        { title: { $regex: escapeRegex(title), $options: 'i' } },
+        { text: { $regex: escapeRegex(title), $options: 'i' } }
+      ];
+    }
+
+    if (text) {
+      if (baseQuery.$or) {
+        baseQuery.$or.push({ text: { $regex: escapeRegex(text), $options: 'i' } });
+      } else {
+        baseQuery.text = { $regex: escapeRegex(text), $options: 'i' };
+      }
     }
 
     if (cartridgeId) {

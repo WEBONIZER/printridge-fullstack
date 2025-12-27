@@ -244,6 +244,12 @@ export const getExampleById = async (exampleId: string) => {
   return response.data;
 };
 
+// Получить пример по route (публичный endpoint для блога)
+export const getExampleByRoute = async (route: string) => {
+  const response = await apiClient.get<BaseResponse<Example>>(`/examples/route/${route}`);
+  return response.data;
+};
+
 // Обновить пример
 export const updateExample = async (exampleId: string, data: Partial<IExampleSchema>) => {
   const response = await apiClient.put<BaseResponse<Example>>(`/examples/${exampleId}`, data);

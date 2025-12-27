@@ -15,23 +15,23 @@ import { connect, set } from "mongoose";
     if (!parsed) {
       throw new Error(".env file not found or is empty");
     }
-    
+
     if (!parsed.HTTP) {
       throw new Error("HTTP port not found in .env file");
     }
-    
+
     if (!parsed.MONGO_URL) {
       console.error("❌ MONGO_URL not found in .env file");
       console.error("Available env variables:", Object.keys(parsed).join(", "));
       console.error("Please add MONGO_URL to your .env file. Example: MONGO_URL=mongodb://localhost:27017/printridge");
       throw new Error("MONGO_URL not found in .env file");
     }
-    
+
     const HTTP = parseInt(parsed.HTTP, 10);
     const MONGO_URL = parsed.MONGO_URL;
 
     set("strictQuery", false);
-    
+
     // Импортируем модели перед подключением, чтобы они были зарегистрированы
     await import("./models/printridge-photo-model");
     await import("./models/example-model");
@@ -43,7 +43,7 @@ import { connect, set } from "mongoose";
     await import("./models/price-model");
     await import("./models/laptop-model");
     await import("./models/laptop-price-model");
-    
+
     await connect(MONGO_URL);
     console.log("✅ Подключение к MongoDB установлено");
 
@@ -59,22 +59,22 @@ import { connect, set } from "mongoose";
         'http://127.0.0.1',
         'https://printridge.ru',
       ];
-      
+
       // Разрешаем запросы с разрешенных доменов
       if (origin && allowedOrigins.some(allowed => origin.includes(allowed))) {
         res.setHeader('Access-Control-Allow-Origin', origin);
         res.setHeader('Access-Control-Allow-Credentials', 'true');
       }
-      
+
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH');
       res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization, X-Requested-With, Accept');
       res.setHeader('Access-Control-Max-Age', '86400'); // 24 часа
-      
+
       // Обработка preflight запросов (OPTIONS)
       if (req.method === 'OPTIONS') {
         return res.status(200).end();
       }
-      
+
       next();
     });
 
@@ -88,15 +88,15 @@ import { connect, set } from "mongoose";
     // Парсинг JSON тела запросов для API (исключаем multipart/form-data для multer)
     app.use((req, res, next) => {
       const contentType = (req.headers['content-type'] || '').toLowerCase();
-      
+
       if (contentType.includes('multipart/form-data')) {
         return next();
       }
-      
+
       if (req.method === 'GET' || req.method === 'HEAD' || req.method === 'DELETE') {
         return next();
       }
-      
+
       if (contentType.includes('application/json')) {
         express.json()(req, res, (err) => {
           if (err) {
@@ -106,59 +106,59 @@ import { connect, set } from "mongoose";
         });
         return;
       }
-      
+
       next();
     });
-    
+
     app.use((req, res, next) => {
       const contentType = (req.headers['content-type'] || '').toLowerCase();
-      
+
       if (contentType.includes('multipart/form-data')) {
         return next();
       }
-      
+
       if (contentType.includes('application/x-www-form-urlencoded')) {
         express.urlencoded({ extended: true })(req, res, next);
         return;
       }
-      
+
       next();
     });
 
     // Подключаем API роуты
     const { auth } = await import("./routes/auth-route");
     app.use("/auth", auth);
-    
+
     const { cartridges } = await import("./routes/cartridges-route");
     app.use("/cartridges", cartridges);
-    
+
     const { images } = await import("./routes/images-route");
     app.use("/images", images);
-    
+
     const { examples } = await import("./routes/examples-route");
     app.use("/examples", examples);
-    
+
     const { videos } = await import("./routes/videos-route");
     app.use("/videos", videos);
-    
+
     const { printers } = await import("./routes/printers-route");
     app.use("/printers", printers);
-    
+
     const { compatibilities } = await import("./routes/compatibilities-route");
     app.use("/compatibilities", compatibilities);
-    
+
     const { prices } = await import("./routes/prices-route");
     app.use("/prices", prices);
-    
+
     const { laptops } = await import("./routes/laptops-route");
     app.use("/laptops", laptops);
-    
+
     const { laptopPrices } = await import("./routes/laptop-prices-route");
     app.use("/laptop-prices", laptopPrices);
-    
+
     const { printerPriceTemplates } = await import("./routes/printer-price-templates-route");
     app.use("/printer-price-templates", printerPriceTemplates);
-    
+
     const { laptopPriceTemplates } = await import("./routes/laptop-price-templates-route");
     app.use("/laptop-price-templates", laptopPriceTemplates);
 
@@ -228,6 +228,7 @@ import { connect, set } from "mongoose";
     app.get("/repair/:vendor/:model", renderPage);
     app.get("/remont-noutbukov/:vendor", renderPage);
     app.get("/remont-noutbukov/:vendor/:model", renderPage);
+    app.get("/blog/:itemRoute", renderPage);
 
     // Роуты для авторизации и профиля
     app.get("/login", renderPage);
