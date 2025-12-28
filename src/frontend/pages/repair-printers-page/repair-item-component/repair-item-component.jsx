@@ -24,22 +24,27 @@ function RepairItemComponent() {
             try {
                 // Получаем принтер по vendor и model
                 // model в URL уже без пробелов, но в базе может быть с пробелами
-                // Ищем по точному совпадению или по частичному совпадению
-                const searchModel = model || '';
+                // Нормализуем model из URL для поиска
+                const searchModel = (model || '').toLowerCase();
+                const normalizedSearchModel = searchModel.replace(/\s/g, '');
+                
                 const printersResponse = await getPaginatedPrinters({
                     page: 1,
-                    limit: 10, // Берем больше, чтобы найти нужный
+                    limit: 100, // Берем больше, чтобы найти нужный
                     vendor: vendor || undefined,
-                    model: searchModel || undefined,
+                    model: normalizedSearchModel || undefined,
                     public: 'true'
                 });
 
-                // Ищем принтер, у которого model совпадает (с учетом пробелов)
-                const foundPrinter = printersResponse.data.find(p =>
-                    p.model.replace(/\s/g, '') === searchModel ||
-                    p.model === searchModel ||
-                    p.model.toLowerCase().replace(/\s/g, '') === searchModel.toLowerCase()
-                ) || printersResponse.data[0];
+                // Ищем принтер, у которого нормализованный model совпадает с нормализованным searchModel
+                const foundPrinter = printersResponse.data.find(p => {
+                    const normalizedPrinterModel = (p.model || '').toLowerCase().replace(/\s/g, '');
+                    return normalizedPrinterModel === normalizedSearchModel;
+                }) || printersResponse.data.find(p => {
+                    // Fallback: ищем по частичному совпадению
+                    const printerModel = (p.model || '').toLowerCase();
+                    return printerModel.includes(normalizedSearchModel) || normalizedSearchModel.includes(printerModel.replace(/\s/g, ''));
+                }) || printersResponse.data[0];
 
                 if (foundPrinter) {
                     if (foundPrinter.public === false) {

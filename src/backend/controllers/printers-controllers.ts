@@ -357,7 +357,18 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     }
 
     if (model) {
-      baseQuery.model = { $regex: escapeRegex(model), $options: 'i' };
+      // Нормализуем model из запроса (убираем пробелы для сравнения)
+      const normalizedModel = model.replace(/\s/g, '').toLowerCase();
+      // Ищем по regex, который учитывает пробелы (модель может быть с пробелами или без)
+      // Создаем regex, который игнорирует пробелы в базе данных
+      // Экранируем специальные символы и добавляем \s* между символами для игнорирования пробелов
+      const escapedModel = escapeRegex(normalizedModel);
+      // Добавляем \s* между каждым символом для игнорирования пробелов, но не в начале и не в конце
+      const regexPattern = escapedModel.split('').map((char, index, array) => {
+        if (index === 0) return char;
+        return `\\s*${char}`;
+      }).join('');
+      baseQuery.model = { $regex: regexPattern, $options: 'i' };
     }
 
     if (publicFilter === 'true') {
