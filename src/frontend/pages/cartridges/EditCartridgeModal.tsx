@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Cartridge, Printer, updateCartridge, uploadImage, updateImage, getPaginatedPrinters, getPrintersByCartridgeId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities, getCartridgeVendors } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import { CreatePrinterModal } from "../printers/CreatePrinterModal";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generateCartridgeSeoSuggestions, canGenerateCartridgeSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./cartridges.module.css";
 
 interface EditCartridgeModalProps {
@@ -21,6 +23,10 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
     resource: cartridge.resource || "",
     chip: Boolean(cartridge.chip) || false,
     public: cartridge.public !== false,
+    descriptionText: (cartridge as any).descriptionText || "",
+    seoTitle: (cartridge as any).seoTitle || "",
+    seoDescription: (cartridge as any).seoDescription || "",
+    seoKeywords: (cartridge as any).seoKeywords || "",
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -165,6 +171,18 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
     return filtered;
   };
 
+  const seoSuggestions = useMemo(() => {
+    return canGenerateCartridgeSuggestions(formData.vendor, formData.modelCart)
+      ? generateCartridgeSeoSuggestions(
+          formData.vendor,
+          formData.modelCart,
+          formData.devices,
+          formData.refill_price,
+          formData.recovery_price
+        )
+      : null;
+  }, [formData.vendor, formData.modelCart, formData.devices, formData.refill_price, formData.recovery_price]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -180,6 +198,7 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
           resource: formData.resource ? parseFloat(formData.resource as any) : undefined,
           chip: formData.chip,
           public: formData.public,
+          descriptionText: formData.descriptionText?.trim() || undefined,
         }
       );
 
@@ -235,6 +254,16 @@ export const EditCartridgeModal: React.FC<EditCartridgeModalProps> = ({ cartridg
               imagePreview={currentImageSrc}
               onImageChange={handleImageChange}
               onSearchVendors={handleSearchVendors}
+            />
+
+            <DeviceSeoFields
+              formData={{
+                seoTitle: formData.seoTitle,
+                seoDescription: formData.seoDescription,
+                seoKeywords: formData.seoKeywords,
+              }}
+              onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+              suggestions={seoSuggestions}
             />
 
             <div className={styles.formGroup}>

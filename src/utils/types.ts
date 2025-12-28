@@ -9,6 +9,10 @@ export interface CartridgeData {
     chip: boolean | string;
     resource?: number;
     public?: boolean;
+    descriptionText?: string;
+    seoTitle?: string;
+    seoDescription?: string;
+    seoKeywords?: string;
   }
 
 export interface RequestCustom extends Request {
@@ -37,6 +41,10 @@ export interface IPrinterSchema {
     speed?: number;
     public?: boolean;
     price?: string;
+    descriptionText?: string;
+    seoTitle?: string;
+    seoDescription?: string;
+    seoKeywords?: string;
 }
 
 // Совместимость устройств (связь картридж-принтер)
@@ -85,6 +93,10 @@ export interface ICartridgeSchema {
     refill_price: string;
     recovery_price: string;
     public?: boolean;
+    descriptionText?: string;
+    seoTitle?: string;
+    seoDescription?: string;
+    seoKeywords?: string;
 }
 
 export interface ICartridge extends Omit<ICartridgeSchema, 'photo'> {
@@ -129,6 +141,10 @@ export interface ILaptopSchema {
     ramType?: string;
     public?: boolean;
     price?: string; // ID прайса из laptop-price-template
+    descriptionText?: string;
+    seoTitle?: string;
+    seoDescription?: string;
+    seoKeywords?: string;
 }
 
 // Модель прайса для ноутбуков

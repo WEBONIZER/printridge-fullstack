@@ -11,6 +11,10 @@ interface CartridgeFormData {
   resource: string;
   chip: boolean;
   public?: boolean;
+  descriptionText?: string;
+  seoTitle?: string;
+  seoDescription?: string;
+  seoKeywords?: string;
 }
 
 interface CartridgeFormFieldsProps {
@@ -125,6 +129,18 @@ export const CartridgeFormFields: React.FC<CartridgeFormFieldsProps> = ({
           />
           Публичный
         </label>
+      </div>
+      <div className={styles.formGroup}>
+        <label>Дополнительное описание (для SEO)</label>
+        <textarea
+          value={formData.descriptionText || ""}
+          onChange={(e) => onFormDataChange({ descriptionText: e.target.value })}
+          rows={6}
+          placeholder="Введите дополнительное описание для этого картриджа. Этот текст будет отображаться на странице товара и поможет улучшить SEO."
+        />
+        <small style={{ color: '#666', fontSize: '12px' }}>
+          Это поле необязательно. Используйте его для добавления уникального контента на страницу товара.
+        </small>
       </div>
       <div className={styles.formGroup}>
         <label>Изображение</label>

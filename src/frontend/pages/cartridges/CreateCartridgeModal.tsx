@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Printer, createCartridge, uploadImage, updateCartridge, getPaginatedPrinters, createCompatibility, searchCartridgeModels, getCartridgeVendors } from "../../utils/api";
 import { CartridgeFormFields } from "./CartridgeFormFields";
 import { PrinterLinkingSection } from "./PrinterLinkingSection";
 import { CreatePrinterModal } from "../printers/CreatePrinterModal";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generateCartridgeSeoSuggestions, canGenerateCartridgeSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./cartridges.module.css";
 
 interface CreateCartridgeModalProps {
@@ -21,6 +23,10 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
     resource: "",
     chip: false,
     public: true,
+    descriptionText: "",
+    seoTitle: "",
+    seoDescription: "",
+    seoKeywords: "",
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -109,6 +115,18 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
     return filtered;
   };
 
+  const seoSuggestions = useMemo(() => {
+    return canGenerateCartridgeSuggestions(formData.vendor, formData.modelCart)
+      ? generateCartridgeSeoSuggestions(
+          formData.vendor,
+          formData.modelCart,
+          formData.devices,
+          formData.refill_price,
+          formData.recovery_price
+        )
+      : null;
+  }, [formData.vendor, formData.modelCart, formData.devices, formData.refill_price, formData.recovery_price]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -123,6 +141,7 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
         resource: formData.resource ? parseFloat(formData.resource) : undefined,
         chip: formData.chip,
         public: formData.public,
+        descriptionText: formData.descriptionText?.trim() || undefined,
       };
 
       const createdCartridge = await createCartridge(cartridgeData);
@@ -192,6 +211,16 @@ export const CreateCartridgeModal: React.FC<CreateCartridgeModalProps> = ({ onCl
               isCreateMode={true}
               onSearchModels={handleSearchModels}
               onSearchVendors={handleSearchVendors}
+            />
+
+            <DeviceSeoFields
+              formData={{
+                seoTitle: formData.seoTitle,
+                seoDescription: formData.seoDescription,
+                seoKeywords: formData.seoKeywords,
+              }}
+              onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+              suggestions={seoSuggestions}
             />
 
             <div className={styles.linkedItems}>

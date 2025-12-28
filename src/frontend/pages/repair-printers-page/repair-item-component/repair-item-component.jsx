@@ -1,5 +1,5 @@
 import styles from './repair-item-component.module.css'
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { Tabs } from '../../../components/tabs/tabs';
 import ImageRepairBox from '../image-repair-box/image-repair-box'
@@ -8,10 +8,13 @@ import UseCartridges from '../use-cartridges/use-cartridges'
 import RepairPriceComponent from '../repair-price-component/repair-price-component'
 import { getPaginatedPrinters, getCartridgesByPrinterId, getPaginatedExamples, getPrinterPriceTemplateById } from '../../../utils/api';
 import { Spinner } from '../../../components/spinner/spinner';
+import { Helmet } from "react-helmet";
 
 function RepairItemComponent() {
 
     const { vendor, model } = useParams()
+    const location = useLocation();
+    const canonicalUrl = `https://printridge.ru${location.pathname}`;
     const [printer, setPrinter] = useState(null);
     const [cartridges, setCartridges] = useState([]);
     const [examples, setExamples] = useState([]);
@@ -99,8 +102,27 @@ function RepairItemComponent() {
     const speedText = printer.speed ? `${printer.speed} стр./мин.` : '';
     const capacityText = printer.capacity ? `${printer.capacity} в месяц` : '';
 
+    // SEO мета-теги
+    const seoTitle = printer.seoTitle || `Ремонт ${printer.vendor.toUpperCase()} ${printer.model.toUpperCase()} в Санкт-Петербурге`;
+    const seoDescription = printer.seoDescription || `Ремонт ${deviceText.toLowerCase()} ${printer.vendor.toUpperCase()} ${printer.model.toUpperCase()} в Санкт-Петербурге. Выезд мастера. Гарантия. Профессиональный сервис.`;
+    const seoKeywords = printer.seoKeywords || `ремонт ${printer.model.toLowerCase()}, ремонт ${deviceText.toLowerCase()} ${printer.vendor.toLowerCase()}, ремонт принтеров спб, ремонт мфу спб, выезд мастера`;
+    const img = printer?.photo?.src || `https://storage.yandexcloud.net/printridge/repair/${printer.vendor}/${printer.model}.png`;
+
     return (
-        <div>
+        <>
+            <Helmet>
+                <title>{seoTitle}</title>
+                <meta name="title" content={seoTitle} />
+                <meta name="description" content={seoDescription} />
+                <meta name="keywords" content={seoKeywords} />
+                <link rel="canonical" href={canonicalUrl} />
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content={seoTitle} />
+                <meta property="og:description" content={seoDescription} />
+                <meta property="og:image" content={img} />
+                <meta property="og:url" content={canonicalUrl} />
+            </Helmet>
+            <div>
             <div className={styles.container}>
                 <h1 className={styles.header}>Ремонт {`${printer.vendor.toUpperCase()} ${printer.model}`}</h1>
                 <div className={styles.img_desc_box}>
@@ -147,6 +169,7 @@ function RepairItemComponent() {
             {cartridges.length > 0 && <UseCartridges cartridgesArray={cartridges} />}
             {examples.length > 0 && <Tabs items={examples} />}
         </div>
+        </>
     );
 }
 

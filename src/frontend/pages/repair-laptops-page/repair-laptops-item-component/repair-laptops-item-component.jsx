@@ -93,20 +93,20 @@ function RepairLaptopsItemComponent() {
     return (
         <>
             <Helmet>
-                <title>{`Ремонт ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}`}</title>
-                <meta name="title" content={`Ремонт ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}`} />
+                <title>{laptop.seoTitle || `Ремонт ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}`}</title>
+                <meta name="title" content={laptop.seoTitle || `Ремонт ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}`} />
                 <meta
                     name="keywords"
-                    content={`ремонт ноутбука ${laptop.model.toUpperCase()}, чистка ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}, удаление вирусов, установка windows, в Санкт-Петербурге, выезд, на выезде`}
+                    content={laptop.seoKeywords || `ремонт ноутбука ${laptop.model.toUpperCase()}, чистка ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model.toUpperCase()}, удаление вирусов, установка windows, в Санкт-Петербурге, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`Ремонт ноутбука ${laptop.model.toUpperCase()}, стоимость ремонта ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model}`}
+                    content={laptop.seoDescription || `Ремонт ноутбука ${laptop.model.toUpperCase()}, стоимость ремонта ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Ремонт ноутбука ${laptop.model.toUpperCase()}`} />
-                <meta property="og:description" content={`Стоимость ремонта ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model}`} />
+                <meta property="og:title" content={laptop.seoTitle || `Ремонт ноутбука ${laptop.model.toUpperCase()}`} />
+                <meta property="og:description" content={laptop.seoDescription || `Стоимость ремонта ноутбука ${laptop.vendor.toUpperCase()} ${laptop.model}`} />
                 <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>

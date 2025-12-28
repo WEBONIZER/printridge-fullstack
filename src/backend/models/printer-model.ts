@@ -43,6 +43,22 @@ export const printerSchema = new Schema<IPrinterSchema>(
       type: String,
       required: false,
     },
+    descriptionText: {
+      type: String,
+      required: false,
+    },
+    seoTitle: {
+      type: String,
+      required: false,
+    },
+    seoDescription: {
+      type: String,
+      required: false,
+    },
+    seoKeywords: {
+      type: String,
+      required: false,
+    },
   },
   {
     timestamps: true,

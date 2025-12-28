@@ -73,6 +73,10 @@ export const createLaptop = async (req: Request, res: Response) => {
       ramType: data.ramType?.trim() || undefined,
       public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
       price: priceId || undefined,
+      descriptionText: data.descriptionText?.trim() || undefined,
+      seoTitle: data.seoTitle?.trim() || undefined,
+      seoDescription: data.seoDescription?.trim() || undefined,
+      seoKeywords: data.seoKeywords?.trim() || undefined,
     });
 
     const savedLaptop = await laptop.save();
@@ -211,6 +215,22 @@ export const updateLaptop = async (req: Request, res: Response) => {
     }
     if (data.ramType !== undefined) {
       existingLaptop.ramType = data.ramType?.trim() || undefined;
+    }
+
+    if (data.descriptionText !== undefined) {
+      existingLaptop.descriptionText = data.descriptionText?.trim() || undefined;
+    }
+
+    if (data.seoTitle !== undefined) {
+      existingLaptop.seoTitle = data.seoTitle?.trim() || undefined;
+    }
+
+    if (data.seoDescription !== undefined) {
+      existingLaptop.seoDescription = data.seoDescription?.trim() || undefined;
+    }
+
+    if (data.seoKeywords !== undefined) {
+      existingLaptop.seoKeywords = data.seoKeywords?.trim() || undefined;
     }
 
     if (data.public !== undefined) {

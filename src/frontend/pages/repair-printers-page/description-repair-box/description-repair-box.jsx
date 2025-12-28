@@ -1,4 +1,5 @@
 import styles from './description-repair-box.module.css'
+import React from 'react';
 
 const DescriptionRepairBox = ({ printer }) => {
     if (!printer) return null;
@@ -18,10 +19,23 @@ const DescriptionRepairBox = ({ printer }) => {
                 <strong>-</strong> Профессиональная диагностика и ремонт {deviceText} {`${printer.vendor?.toUpperCase() || ''} ${printer.model || ''}`}<br />
                 <strong>-</strong> Оперативное устранение неисправностей на выезде<br />
                 <strong>-</strong> Использование оригинальных и качественных совместимых запчастей<br />
-                <strong>-</strong> Прозрачная ценовая политика и индивидуальный подход.<br /><br /><br /><br />
+                <strong>-</strong> Прозрачная ценовая политика и индивидуальный подход.<br /><br />
                 Не тратьте время на поиски другого сервиса — доверьте ваш принтер профессионалам!<br /><br />
                 Мы гарантируем быстрый и качественный ремонт вашего аппарата, минимизируя простои и обеспечивая ваше спокойствие.<br /><br />
-                Обращайтесь к нам прямо сейчас для бесплатной диагностики и узнайте точную стоимость ремонта вашего <strong>{deviceText} {`${printer.vendor?.toUpperCase() || ''} ${printer.model || ''}`}</strong>!
+                Обращайтесь к нам прямо сейчас для бесплатной диагностики и узнайте точную стоимость ремонта вашего <strong>{deviceText} {`${printer.vendor?.toUpperCase() || ''} ${printer.model || ''}`}</strong>!<br /><br />
+                {printer?.descriptionText && typeof printer.descriptionText === 'string' && printer.descriptionText.trim().length > 0 && (
+                    <>
+                        <strong>Дополнительная информация:</strong><br /><br />
+                        {printer.descriptionText.split('\n').map((paragraph, index, array) => (
+                            paragraph.trim() && (
+                                <React.Fragment key={index}>
+                                    {paragraph.trim()}
+                                    {index < array.length - 1 && <><br /><br /></>}
+                                </React.Fragment>
+                            )
+                        ))}
+                    </>
+                )}
             </p>
         </div>
     )

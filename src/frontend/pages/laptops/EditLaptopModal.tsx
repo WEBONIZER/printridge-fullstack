@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Laptop, uploadImage, updateImage } from "../../utils/api";
 import { LaptopFormFields } from "./LaptopFormFields";
 import { LaptopPriceSection } from "./LaptopPriceSection";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generateLaptopSeoSuggestions, canGenerateLaptopSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./laptops.module.css";
 
 interface EditLaptopModalProps {
@@ -23,6 +25,10 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
     ram: laptop.ram || "",
     ramType: laptop.ramType || "",
     public: laptop.public !== false,
+    descriptionText: (laptop as any).descriptionText || "",
+    seoTitle: (laptop as any).seoTitle || "",
+    seoDescription: (laptop as any).seoDescription || "",
+    seoKeywords: (laptop as any).seoKeywords || "",
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -49,6 +55,20 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
     }
   };
 
+  const seoSuggestions = useMemo(() => {
+    return canGenerateLaptopSuggestions(formData.vendor, formData.model)
+      ? generateLaptopSeoSuggestions(
+          formData.vendor,
+          formData.model,
+          formData.series,
+          formData.processorVendor,
+          formData.processorName,
+          formData.display ? parseFloat(formData.display as any) : undefined,
+          formData.ram ? parseFloat(formData.ram as any) : undefined
+        )
+      : null;
+  }, [formData.vendor, formData.model, formData.series, formData.processorVendor, formData.processorName, formData.display, formData.ram]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -61,6 +81,7 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
         ram: formData.ram ? parseFloat(formData.ram as any) : undefined,
         public: formData.public,
         price: selectedPriceId || undefined,
+        descriptionText: formData.descriptionText?.trim() || undefined,
       });
 
       if (imageFile) {
@@ -102,6 +123,16 @@ export const EditLaptopModal: React.FC<EditLaptopModalProps> = ({ laptop, onClos
             currentPriceId={(laptop as any).price}
             display={formData.display ? parseFloat(formData.display as any) : undefined}
             onPriceChange={setSelectedPriceId}
+          />
+
+          <DeviceSeoFields
+            formData={{
+              seoTitle: formData.seoTitle,
+              seoDescription: formData.seoDescription,
+              seoKeywords: formData.seoKeywords,
+            }}
+            onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+            suggestions={seoSuggestions}
           />
 
           <div className={styles.modalActions}>

@@ -1,7 +1,8 @@
 import styles from './description-box.module.css'
 import { useParams } from "react-router-dom";
+import React from 'react';
 
-const DescriptionBox = () => {
+const DescriptionBox = ({ cartridge }) => {
 
     const { model, vendor } = useParams()
 
@@ -25,6 +26,19 @@ const DescriptionBox = () => {
             <strong>-</strong> Индивидуальный подход к каждому клиенту<br />
             <strong>-</strong> Профессиональная консультация и быстрая диагностика проблем<br /><br />
             Заправка и восстановление картриджа {`${vendor.toUpperCase()} ${model}`} никогда не были такими простыми и удобными! Доверьте эту задачу нашим профессионалам, и получите качественный результат без задержек и лишней суеты. Обращайтесь к нам прямо сейчас, чтобы заказать заправку картриджа и обеспечить плавную и бесперебойную работу вашего принтера!<br /><br />
+            {cartridge?.descriptionText && typeof cartridge.descriptionText === 'string' && cartridge.descriptionText.trim().length > 0 && (
+                <>
+                    <strong>Дополнительная информация:</strong><br /><br />
+                    {cartridge.descriptionText.split('\n').map((paragraph, index, array) => (
+                        paragraph.trim() && (
+                            <React.Fragment key={index}>
+                                {paragraph.trim()}
+                                {index < array.length - 1 && <><br /><br /></>}
+                            </React.Fragment>
+                        )
+                    ))}
+                </>
+            )}
         </p>
     )
 }

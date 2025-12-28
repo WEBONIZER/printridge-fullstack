@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 import { createLaptop, uploadImage, searchLaptopModels } from "../../utils/api";
 import { LaptopFormFields } from "./LaptopFormFields";
 import { LaptopPriceSection } from "./LaptopPriceSection";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generateLaptopSeoSuggestions, canGenerateLaptopSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./laptops.module.css";
 
 interface CreateLaptopModalProps {
@@ -22,6 +24,10 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
     ram: "",
     ramType: "",
     public: true,
+    descriptionText: "",
+    seoTitle: "",
+    seoDescription: "",
+    seoKeywords: "",
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -33,13 +39,26 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
 
   const handleSearchModels = async (query: string): Promise<string[]> => {
     try {
-      const response = await searchLaptopModels(query);
-      return response.data || [];
+      return await searchLaptopModels(query);
     } catch (error) {
       console.error("Ошибка поиска моделей:", error);
       return [];
     }
   };
+
+  const seoSuggestions = useMemo(() => {
+    return canGenerateLaptopSuggestions(formData.vendor, formData.model)
+      ? generateLaptopSeoSuggestions(
+          formData.vendor,
+          formData.model,
+          formData.series,
+          formData.processorVendor,
+          formData.processorName,
+          formData.display ? parseFloat(formData.display) : undefined,
+          formData.ram ? parseFloat(formData.ram) : undefined
+        )
+      : null;
+  }, [formData.vendor, formData.model, formData.series, formData.processorVendor, formData.processorName, formData.display, formData.ram]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,6 +78,10 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
         ramType: formData.ramType.trim() || undefined,
         public: formData.public,
         price: selectedPriceId || undefined,
+        descriptionText: formData.descriptionText?.trim() || undefined,
+        seoTitle: formData.seoTitle?.trim() || undefined,
+        seoDescription: formData.seoDescription?.trim() || undefined,
+        seoKeywords: formData.seoKeywords?.trim() || undefined,
       };
 
       const createdLaptop = await createLaptop(laptopData);
@@ -102,6 +125,16 @@ export const CreateLaptopModal: React.FC<CreateLaptopModalProps> = ({ onClose, o
           <LaptopPriceSection
             display={formData.display ? parseFloat(formData.display) : undefined}
             onPriceChange={setSelectedPriceId}
+          />
+
+          <DeviceSeoFields
+            formData={{
+              seoTitle: formData.seoTitle,
+              seoDescription: formData.seoDescription,
+              seoKeywords: formData.seoKeywords,
+            }}
+            onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+            suggestions={seoSuggestions}
           />
 
           <div className={styles.modalActions}>

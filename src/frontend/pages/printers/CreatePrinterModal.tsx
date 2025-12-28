@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Printer, Cartridge, createPrinter, uploadImage, getPaginatedCartridges, createCompatibility, searchPrinterModels, getPrinterVendors } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
 import { PrinterPriceSection } from "./PrinterPriceSection";
 import { CreateCartridgeModal } from "../cartridges/CreateCartridgeModal";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generatePrinterSeoSuggestions, canGeneratePrinterSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./printers.module.css";
 
 interface CreatePrinterModalProps {
@@ -22,6 +24,10 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
     capacity: "",
     speed: "",
     public: true,
+    descriptionText: "",
+    seoTitle: "",
+    seoDescription: "",
+    seoKeywords: "",
   });
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [isSaving, setIsSaving] = useState(false);
@@ -111,6 +117,20 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
     return filtered;
   };
 
+  const seoSuggestions = useMemo(() => {
+    return canGeneratePrinterSuggestions(formData.vendor, formData.model)
+      ? generatePrinterSeoSuggestions(
+          formData.vendor,
+          formData.model,
+          formData.device,
+          formData.type,
+          formData.format,
+          formData.speed ? parseFloat(formData.speed) : undefined,
+          formData.capacity ? parseFloat(formData.capacity) : undefined
+        )
+      : null;
+  }, [formData.vendor, formData.model, formData.device, formData.type, formData.format, formData.speed, formData.capacity]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
@@ -126,6 +146,10 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
         speed: formData.speed ? parseFloat(formData.speed) : undefined,
         public: formData.public,
         price: selectedPriceId || undefined,
+        descriptionText: formData.descriptionText?.trim() || undefined,
+        seoTitle: formData.seoTitle?.trim() || undefined,
+        seoDescription: formData.seoDescription?.trim() || undefined,
+        seoKeywords: formData.seoKeywords?.trim() || undefined,
       };
 
       const createdPrinter = await createPrinter(printerData);
@@ -209,6 +233,16 @@ export const CreatePrinterModal: React.FC<CreatePrinterModalProps> = ({ onClose,
               format={formData.format}
               capacity={formData.capacity ? parseFloat(formData.capacity) : undefined}
               onPriceChange={setSelectedPriceId}
+            />
+
+            <DeviceSeoFields
+              formData={{
+                seoTitle: formData.seoTitle,
+                seoDescription: formData.seoDescription,
+                seoKeywords: formData.seoKeywords,
+              }}
+              onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+              suggestions={seoSuggestions}
             />
 
             <div className={styles.linkedItems}>

@@ -74,6 +74,10 @@ export const createPrinter = async (req: Request, res: Response) => {
       speed: data.speed || undefined,
       public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
       price: priceId || undefined,
+      descriptionText: data.descriptionText?.trim() || undefined,
+      seoTitle: data.seoTitle?.trim() || undefined,
+      seoDescription: data.seoDescription?.trim() || undefined,
+      seoKeywords: data.seoKeywords?.trim() || undefined,
     });
 
     const savedPrinter = await printer.save();
@@ -218,6 +222,22 @@ export const updatePrinter = async (req: Request, res: Response) => {
 
     if (data.speed !== undefined) {
       existingPrinter.speed = data.speed || undefined;
+    }
+
+    if (data.descriptionText !== undefined) {
+      existingPrinter.descriptionText = data.descriptionText?.trim() || undefined;
+    }
+
+    if (data.seoTitle !== undefined) {
+      existingPrinter.seoTitle = data.seoTitle?.trim() || undefined;
+    }
+
+    if (data.seoDescription !== undefined) {
+      existingPrinter.seoDescription = data.seoDescription?.trim() || undefined;
+    }
+
+    if (data.seoKeywords !== undefined) {
+      existingPrinter.seoKeywords = data.seoKeywords?.trim() || undefined;
     }
 
     if (data.public !== undefined) {

@@ -1,4 +1,5 @@
 import styles from './description-repair-laptops.module.css'
+import React from 'react';
 
 const DescriptionRepairBox = ({ laptop }) => {
     if (!laptop) return null;
@@ -27,7 +28,6 @@ const DescriptionRepairBox = ({ laptop }) => {
                 <strong>Прозрачность работы и согласование всех нюансов</strong><br /><br />
 
                 Мы обязательно предупредим вас о всех возможных нюансах и последствиях ремонта. Это позволит вам быть в курсе каждой детали и принять взвешенные решения.<br /><br />
-
                 <strong>Почему выбирают нас:</strong><br />
                 <strong>-</strong> Квалифицированные специалисты с большим опытом работы<br />
                 <strong>-</strong> Быстрая и точная диагностика проблем<br />
@@ -36,6 +36,19 @@ const DescriptionRepairBox = ({ laptop }) => {
                 <strong>-</strong> Полная прозрачность цен и согласование всех работ<br /><br />
 
                 Не откладывайте ремонт вашего ноутбука <strong>{vendorModel}</strong> на потом! Обратитесь к нашим профессионалам и получите быстрый и качественный ремонт по самым выгодным условиям. Ваш ноутбук будет работать как новый, а вы сможете снова наслаждаться полноценной работой устройства без боязни за его надежность. Свяжитесь с нами прямо сейчас и убедитесь в высоком качестве наших услуг!<br /><br />
+                {laptop?.descriptionText && typeof laptop.descriptionText === 'string' && laptop.descriptionText.trim().length > 0 && (
+                    <>
+                        <strong>Дополнительная информация:</strong><br /><br />
+                        {laptop.descriptionText.split('\n').map((paragraph, index, array) => (
+                            paragraph.trim() && (
+                                <React.Fragment key={index}>
+                                    {paragraph.trim()}
+                                    {index < array.length - 1 && <><br /><br /></>}
+                                </React.Fragment>
+                            )
+                        ))}
+                    </>
+                )}
             </p>
         </div>
     )

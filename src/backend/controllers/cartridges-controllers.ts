@@ -41,7 +41,11 @@ export const createCartridge = async (req: Request, res: Response) => {
       chip: data.chip === true || data.chip === 'true',
       resource: data.resource || undefined,
       photo: new mongoose.Types.ObjectId(),
-      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true
+      public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
+      descriptionText: data.descriptionText?.trim() || undefined,
+      seoTitle: data.seoTitle?.trim() || undefined,
+      seoDescription: data.seoDescription?.trim() || undefined,
+      seoKeywords: data.seoKeywords?.trim() || undefined,
     });
 
     const savedCartridge = await cartridge.save();
@@ -164,6 +168,10 @@ export const updateCartridge = async (req: any, res: Response, next: NextFunctio
     if (data.recovery_price !== undefined) cartridge.recovery_price = String(data.recovery_price);
     if (data.chip !== undefined) cartridge.chip = data.chip === true || data.chip === 'true';
     if (data.resource !== undefined) cartridge.resource = data.resource;
+    if (data.descriptionText !== undefined) cartridge.descriptionText = data.descriptionText?.trim() || undefined;
+    if (data.seoTitle !== undefined) cartridge.seoTitle = data.seoTitle?.trim() || undefined;
+    if (data.seoDescription !== undefined) cartridge.seoDescription = data.seoDescription?.trim() || undefined;
+    if (data.seoKeywords !== undefined) cartridge.seoKeywords = data.seoKeywords?.trim() || undefined;
     if (data.public !== undefined) {
       cartridge.public = data.public === true || String(data.public).toLowerCase() === 'true';
     }

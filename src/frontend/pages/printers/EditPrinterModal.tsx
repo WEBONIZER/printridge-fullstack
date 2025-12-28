@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Printer, Cartridge, updatePrinter, uploadImage, updateImage, getPaginatedCartridges, getCartridgesByPrinterId, createCompatibility, deleteCompatibility, getPaginatedCompatibilities, getPrinterVendors } from "../../utils/api";
 import { PrinterFormFields } from "./PrinterFormFields";
 import { CartridgeLinkingSection } from "./CartridgeLinkingSection";
 import { PrinterPriceSection } from "./PrinterPriceSection";
 import { CreateCartridgeModal } from "../cartridges/CreateCartridgeModal";
+import { DeviceSeoFields } from "../../components/DeviceSeoFields/DeviceSeoFields";
+import { generatePrinterSeoSuggestions, canGeneratePrinterSuggestions } from "../../utils/device-seo-suggestions";
 import styles from "./printers.module.css";
 
 interface EditPrinterModalProps {
@@ -22,6 +24,10 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
     capacity: printer.capacity || "",
     speed: printer.speed || "",
     public: printer.public !== false,
+    descriptionText: (printer as any).descriptionText || "",
+    seoTitle: (printer as any).seoTitle || "",
+    seoDescription: (printer as any).seoDescription || "",
+    seoKeywords: (printer as any).seoKeywords || "",
   });
   const [selectedPriceId, setSelectedPriceId] = useState<string | null>((printer as any).price || null);
   const [imageFile, setImageFile] = useState<File | null>(null);
@@ -182,6 +188,10 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
         speed: formData.speed ? parseFloat(formData.speed as any) : undefined,
         public: formData.public,
         price: selectedPriceId || undefined,
+        descriptionText: formData.descriptionText?.trim() || undefined,
+        seoTitle: formData.seoTitle?.trim() || undefined,
+        seoDescription: formData.seoDescription?.trim() || undefined,
+        seoKeywords: formData.seoKeywords?.trim() || undefined,
       });
 
       if (imageFile) {
@@ -236,6 +246,32 @@ export const EditPrinterModal: React.FC<EditPrinterModalProps> = ({ printer, onC
               capacity={formData.capacity ? parseFloat(formData.capacity as any) : undefined}
               onPriceChange={setSelectedPriceId}
             />
+
+            {useMemo(() => {
+              const suggestions = canGeneratePrinterSuggestions(formData.vendor, formData.model)
+                ? generatePrinterSeoSuggestions(
+                    formData.vendor,
+                    formData.model,
+                    formData.device,
+                    formData.type,
+                    formData.format,
+                    formData.speed ? parseFloat(formData.speed as any) : undefined,
+                    formData.capacity ? parseFloat(formData.capacity as any) : undefined
+                  )
+                : null;
+
+              return (
+                <DeviceSeoFields
+                  formData={{
+                    seoTitle: formData.seoTitle,
+                    seoDescription: formData.seoDescription,
+                    seoKeywords: formData.seoKeywords,
+                  }}
+                  onFormDataChange={(data) => setFormData({ ...formData, ...data })}
+                  suggestions={suggestions}
+                />
+              );
+            }, [formData.vendor, formData.model, formData.device, formData.type, formData.format, formData.speed, formData.capacity, formData.seoTitle, formData.seoDescription, formData.seoKeywords])}
 
             <div className={styles.formGroup}>
               <label>Привязать картриджи</label>

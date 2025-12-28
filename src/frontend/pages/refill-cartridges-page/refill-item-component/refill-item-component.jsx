@@ -124,20 +124,20 @@ function RefillItemComponent() {
                 <script type="application/ld+json">
                     {JSON.stringify(schemaData)}
                 </script>
-                <title>{`Заправка ${model.toUpperCase()} в Санкт-Петербурге`}</title>
-                <meta name="title" content={`Заправка ${model.toUpperCase()} в Санкт-Петербурге`} />
+                <title>{cartridge.seoTitle || `Заправка ${model.toUpperCase()} в Санкт-Петербурге`}</title>
+                <meta name="title" content={cartridge.seoTitle || `Заправка ${model.toUpperCase()} в Санкт-Петербурге`} />
                 <meta
                     name="keywords"
-                    content={`заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${devicesString}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`}
+                    content={cartridge.seoKeywords || `заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, заправить картридж ${vendor.toUpperCase()} ${model.toUpperCase()}, для ${devicesString}, восстановление картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}, в Санкт-Петербурге, выезд, на выезде`}
                 />
                 <link rel="canonical" href={canonicalUrl} />
                 <meta
                     name="description"
-                    content={`заправка ${model.toUpperCase()}, заправка картриджа ${cartridge.modelCart} - ${cartridge.refill_price} Восстановление ${cartridge.modelCart} ${cartridge.recovery_price}`}
+                    content={cartridge.seoDescription || `заправка ${model.toUpperCase()}, заправка картриджа ${cartridge.modelCart} - ${cartridge.refill_price} Восстановление ${cartridge.modelCart} ${cartridge.recovery_price}`}
                 />
                 <meta property="og:type" content="article" />
-                <meta property="og:title" content={`Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
-                <meta property="og:description" content={`Стоимость заправки ${cartridge.modelCart} - ${cartridge.refill_price}, стоимость восстановления ${cartridge.modelCart} ${cartridge.recovery_price}`} />
+                <meta property="og:title" content={cartridge.seoTitle || `Заправка картриджа ${vendor.toUpperCase()} ${model.toUpperCase()}`} />
+                <meta property="og:description" content={cartridge.seoDescription || `Стоимость заправки ${cartridge.modelCart} - ${cartridge.refill_price}, стоимость восстановления ${cartridge.modelCart} ${cartridge.recovery_price}`} />
                 <meta property="og:image" content={img} />
                 <meta property="og:url" content={canonicalUrl} />
             </Helmet>
@@ -201,7 +201,7 @@ function RefillItemComponent() {
                         <ImageBox cartridge={cartridge} />
                         <h2 className={styles.name_mobile}>Заправка {`${cartridge.modelCart}`}</h2>
                     </div>
-                    <DescriptionBox />
+                    <DescriptionBox cartridge={cartridge} />
                 </div>
                 {examples.length !== 0 && <Tabs items={examples} />}
             </div>
