@@ -62,19 +62,15 @@ export const uploadImage = async (req: Request & { file?: Express.Multer.File },
 
     if (cartridgeId) {
       photoData.cartridgeId = String(cartridgeId);
-      console.log('📸 Saving photo with cartridgeId:', photoData.cartridgeId);
     }
     if (printerId) {
       photoData.printerId = String(printerId);
-      console.log('📸 Saving photo with printerId:', photoData.printerId);
     }
     if (laptopId) {
       photoData.laptopId = String(laptopId);
-      console.log('📸 Saving photo with laptopId:', photoData.laptopId);
     }
     if (exampleId) {
       photoData.exampleId = String(exampleId);
-      console.log('📸 Saving photo with exampleId:', photoData.exampleId);
     }
 
     if (cartridgeId || printerId || laptopId || exampleId) {

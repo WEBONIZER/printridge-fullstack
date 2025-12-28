@@ -1,6 +1,6 @@
 import React from "react";
 import { HtmlEditor } from "./HtmlEditor";
-import { DeviceNamesSelector } from "./DeviceNamesSelector";
+import { DeviceIdsSelector } from "./DeviceIdsSelector";
 import { MediaUploader } from "./MediaUploader";
 import { SeoFields } from "./SeoFields";
 import { Image, Video } from "../../utils/api";
@@ -9,9 +9,9 @@ import styles from "./examples.module.css";
 interface ExampleFormData {
   title: string;
   text: string;
-  cartridgeNames: string[];
-  printerNames: string[];
-  laptopNames: string[];
+  cartridgeIds?: string[];
+  printerIds?: string[];
+  laptopIds?: string[];
   public?: boolean;
   // SEO метатеги
   metaTitle?: string;
@@ -63,25 +63,25 @@ export const ExampleFormFields: React.FC<ExampleFormFieldsProps> = ({
         required
       />
 
-      <DeviceNamesSelector
+      <DeviceIdsSelector
         deviceType="cartridge"
-        selectedNames={formData.cartridgeNames || []}
-        onNamesChange={(names) => onFormDataChange({ cartridgeNames: names })}
-        label="Картриджи"
+        selectedIds={formData.cartridgeIds || []}
+        onIdsChange={(ids) => onFormDataChange({ cartridgeIds: ids })}
+        label="Картриджи (связь по ID)"
       />
 
-      <DeviceNamesSelector
+      <DeviceIdsSelector
         deviceType="printer"
-        selectedNames={formData.printerNames || []}
-        onNamesChange={(names) => onFormDataChange({ printerNames: names })}
-        label="Принтеры"
+        selectedIds={formData.printerIds || []}
+        onIdsChange={(ids) => onFormDataChange({ printerIds: ids })}
+        label="Принтеры (связь по ID)"
       />
 
-      <DeviceNamesSelector
+      <DeviceIdsSelector
         deviceType="laptop"
-        selectedNames={formData.laptopNames || []}
-        onNamesChange={(names) => onFormDataChange({ laptopNames: names })}
-        label="Ноутбуки"
+        selectedIds={formData.laptopIds || []}
+        onIdsChange={(ids) => onFormDataChange({ laptopIds: ids })}
+        label="Ноутбуки (связь по ID)"
       />
 
       {(onPhotoAdd || onVideoAdd || onPhotoDelete || onVideoDelete) && (

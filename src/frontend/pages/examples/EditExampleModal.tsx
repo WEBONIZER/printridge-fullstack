@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Example, updateExample, deleteExample, uploadImage, uploadVideo, deleteImage, deleteVideo, getExamplePhotos, getExampleVideos, Image, Video } from "../../utils/api";
+import { Example, updateExample, deleteExample, uploadImage, uploadVideo, deleteImage, deleteVideo, getExamplePhotos, getExampleVideos, getExampleById, Image, Video } from "../../utils/api";
 import { ExampleFormFields } from "./ExampleFormFields";
 import styles from "./examples.module.css";
 
@@ -13,9 +13,9 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
   const [formData, setFormData] = useState({
     title: example.title || "",
     text: example.text || "",
-    cartridgeNames: example.cartridgeNames || [],
-    printerNames: example.printerNames || [],
-    laptopNames: example.laptopNames || [],
+    cartridgeIds: (example as any).cartridgeIds || [],
+    printerIds: (example as any).printerIds || [],
+    laptopIds: (example as any).laptopIds || [],
     public: example.public !== false,
     // SEO метатеги
     metaTitle: example.metaTitle || "",
@@ -38,10 +38,21 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
     const loadMedia = async () => {
       try {
         setIsLoading(true);
-        const [photosRes, videosRes] = await Promise.all([
+        const [photosRes, videosRes, exampleRes] = await Promise.all([
           getExamplePhotos(example._id),
           getExampleVideos(example._id),
+          getExampleById(example._id),
         ]);
+        
+        // Загружаем ID устройств из API
+        if (exampleRes?.data) {
+          setFormData(prev => ({
+            ...prev,
+            cartridgeIds: exampleRes.data.cartridgeIds || [],
+            printerIds: exampleRes.data.printerIds || [],
+            laptopIds: exampleRes.data.laptopIds || [],
+          }));
+        }
         
         // API возвращает PaginatedResponse, где data - это массив
         const photosData = photosRes?.data || [];
@@ -165,9 +176,9 @@ export const EditExampleModal: React.FC<EditExampleModalProps> = ({ example, onC
       await updateExample(example._id, {
         title: formData.title.trim(),
         text: formData.text.trim(),
-        cartridgeNames: formData.cartridgeNames,
-        printerNames: formData.printerNames,
-        laptopNames: formData.laptopNames,
+        cartridgeIds: formData.cartridgeIds,
+        printerIds: formData.printerIds,
+        laptopIds: formData.laptopIds,
         public: formData.public,
         // SEO метатеги
         metaTitle: formData.metaTitle?.trim() || undefined,

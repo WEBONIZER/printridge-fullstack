@@ -49,8 +49,10 @@ export interface IPrinterSchema {
 
 // Совместимость устройств (связь картридж-принтер)
 export interface ICompatibilitySchema {
-    cartridgeId: string;
-    printerId: string;
+    cartridgeId?: string;
+    printerId?: string;
+    laptopId?: string;
+    exampleId?: string;
 }
 
 export interface IPhoto {

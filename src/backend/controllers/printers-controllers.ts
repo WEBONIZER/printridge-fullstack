@@ -430,9 +430,6 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
     // Получаем фото для всех принтеров
     const printerIds = printersData.map(p => p._id.toString());
     const photos = await PhotoModel.find({ printerId: { $in: printerIds } }).lean();
-    console.log(`📸 Found ${photos.length} photos for ${printerIds.length} printers`);
-    console.log('📸 Printer IDs:', printerIds.slice(0, 5), '...');
-    console.log('📸 Photo printerIds:', photos.map(p => p.printerId).slice(0, 5), '...');
     
     // Создаем карту, где ключ - это строковое представление printerId
     const photoMap = new Map(photos.map(p => [String(p.printerId || ''), p]));
@@ -449,7 +446,6 @@ export const getPaginatedPrinters = async (req: Request, res: Response) => {
       const printerIdStr = printer._id.toString();
       const photo = photoMap.get(printerIdStr) || null;
       if (photo) {
-        console.log(`✅ Found photo for printer ${printerIdStr}`);
       }
       return {
         ...printer,

@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
 import mongoose from "mongoose";
 import { ExampleModel } from "../models/example-model";
+import { CompatibilityModel } from "../models/compatibility-model";
+import { CartridgeModel } from "../models/cartridge-model";
+import { PrinterModel } from "../models/printer-model";
+import { LaptopModel } from "../models/laptop-model";
 import { sanitizeHtml, escapeHtmlText } from "../utils/html-sanitizer";
 import { generateRouteFromTitle } from "../utils/transliterate";
 
@@ -10,9 +14,9 @@ interface ExampleData {
   cartridgeId?: string;
   printerId?: string;
   laptopId?: string;
-  cartridgeNames?: string[];
-  printerNames?: string[];
-  laptopNames?: string[];
+  cartridgeIds?: string[];
+  printerIds?: string[];
+  laptopIds?: string[];
   public?: boolean;
   // SEO метатеги
   metaTitle?: string;
@@ -68,9 +72,6 @@ export const createExample = async (req: Request, res: Response) => {
       cartridgeId: data.cartridgeId || undefined,
       printerId: data.printerId || undefined,
       laptopId: data.laptopId || undefined,
-      cartridgeNames: Array.isArray(data.cartridgeNames) ? data.cartridgeNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
-      printerNames: Array.isArray(data.printerNames) ? data.printerNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
-      laptopNames: Array.isArray(data.laptopNames) ? data.laptopNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [],
       public: data.public !== undefined ? (data.public === true || String(data.public).toLowerCase() === 'true') : true,
       // SEO метатеги
       metaTitle: data.metaTitle ? escapeHtmlText(data.metaTitle.trim().substring(0, 60)) : undefined,
@@ -83,7 +84,92 @@ export const createExample = async (req: Request, res: Response) => {
     });
 
     const savedExample = await example.save();
+    const exampleId = savedExample._id.toString();
     const exampleObj = savedExample.toObject() as any;
+
+    // Сохраняем связи через CompatibilityModel
+    // Используем create вместо replaceOne, чтобы избежать конфликтов со старыми индексами
+    const compatibilityPromises: Promise<any>[] = [];
+
+    // Обрабатываем массивы ID устройств
+    if (Array.isArray(data.cartridgeIds) && data.cartridgeIds.length > 0) {
+      data.cartridgeIds.forEach((cartridgeId: string) => {
+        if (cartridgeId && cartridgeId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId, 
+              cartridgeId: cartridgeId.trim()
+            })
+          );
+        }
+      });
+    }
+
+    if (Array.isArray(data.printerIds) && data.printerIds.length > 0) {
+      data.printerIds.forEach((printerId: string) => {
+        if (printerId && printerId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId, 
+              printerId: printerId.trim()
+            })
+          );
+        }
+      });
+    }
+
+    if (Array.isArray(data.laptopIds) && data.laptopIds.length > 0) {
+      data.laptopIds.forEach((laptopId: string) => {
+        if (laptopId && laptopId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId, 
+              laptopId: laptopId.trim()
+            })
+          );
+        }
+      });
+    }
+
+    // Обрабатываем одиночные ID для обратной совместимости
+    if (data.cartridgeId && !Array.isArray(data.cartridgeIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId, 
+          cartridgeId: data.cartridgeId.trim()
+        })
+      );
+    }
+
+    if (data.printerId && !Array.isArray(data.printerIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId, 
+          printerId: data.printerId.trim()
+        })
+      );
+    }
+
+    if (data.laptopId && !Array.isArray(data.laptopIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId, 
+          laptopId: data.laptopId.trim()
+        })
+      );
+    }
+
+    if (compatibilityPromises.length > 0) {
+      try {
+        await Promise.all(compatibilityPromises);
+      } catch (error: any) {
+        // Игнорируем ошибки дубликатов (E11000) от старого индекса exampleId_1_deviceType_1_deviceId_1
+        // После запуска скрипта drop-old-indexes.ts эти ошибки исчезнут
+        if (error.code !== 11000 || !error.message?.includes('exampleId_1_deviceType_1_deviceId_1')) {
+          throw error;
+        }
+      }
+    }
 
     res.status(201).json({
       success: true,
@@ -94,9 +180,6 @@ export const createExample = async (req: Request, res: Response) => {
         cartridgeId: exampleObj.cartridgeId,
         printerId: exampleObj.printerId,
         laptopId: exampleObj.laptopId,
-        cartridgeNames: exampleObj.cartridgeNames || [],
-        printerNames: exampleObj.printerNames || [],
-        laptopNames: exampleObj.laptopNames || [],
         public: exampleObj.public,
         metaTitle: exampleObj.metaTitle,
         metaDescription: exampleObj.metaDescription,
@@ -148,6 +231,29 @@ export const getExampleByID = async (req: Request, res: Response) => {
     }
 
     const exampleObj = example.toObject() as any;
+    const exampleIdStr = exampleObj._id.toString();
+
+    // Получаем связанные устройства через CompatibilityModel
+    const compatibilities = await CompatibilityModel.find({ exampleId: exampleIdStr }).lean();
+    const cartridgeIds: string[] = [];
+    const printerIds: string[] = [];
+    const laptopIds: string[] = [];
+
+    compatibilities.forEach((comp: any) => {
+      if (comp.cartridgeId) {
+        cartridgeIds.push(comp.cartridgeId);
+      }
+      if (comp.printerId) {
+        printerIds.push(comp.printerId);
+      }
+      if (comp.laptopId) {
+        laptopIds.push(comp.laptopId);
+      }
+    });
+
+    exampleObj.cartridgeIds = [...new Set(cartridgeIds)];
+    exampleObj.printerIds = [...new Set(printerIds)];
+    exampleObj.laptopIds = [...new Set(laptopIds)];
 
     res.status(200).json({
       success: true,
@@ -269,18 +375,6 @@ export const updateExample = async (req: Request, res: Response) => {
       existingExample.laptopId = data.laptopId || undefined;
     }
 
-    if (data.cartridgeNames !== undefined) {
-      existingExample.cartridgeNames = Array.isArray(data.cartridgeNames) ? data.cartridgeNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
-    }
-
-    if (data.printerNames !== undefined) {
-      existingExample.printerNames = Array.isArray(data.printerNames) ? data.printerNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
-    }
-
-    if (data.laptopNames !== undefined) {
-      existingExample.laptopNames = Array.isArray(data.laptopNames) ? data.laptopNames.filter((n: string) => n && n.trim()).map((n: string) => n.trim()) : [];
-    }
-
     if (data.public !== undefined) {
       existingExample.public = data.public === true || String(data.public).toLowerCase() === 'true';
     }
@@ -306,7 +400,87 @@ export const updateExample = async (req: Request, res: Response) => {
     }
 
     const savedExample = await existingExample.save();
+    const exampleIdStr = savedExample._id.toString();
     const exampleObj = savedExample.toObject() as any;
+
+    // Обновляем связи через CompatibilityModel
+    // Сначала удаляем ВСЕ старые связи для этого примера (любые документы с таким exampleId)
+    await CompatibilityModel.deleteMany({ exampleId: exampleIdStr });
+
+    // Создаем новые связи используя create (не replaceOne, чтобы избежать конфликтов со старыми индексами)
+    const compatibilityPromises: Promise<any>[] = [];
+
+    if (Array.isArray(data.cartridgeIds) && data.cartridgeIds.length > 0) {
+      data.cartridgeIds.forEach((cartridgeId: string) => {
+        if (cartridgeId && cartridgeId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId: exampleIdStr, 
+              cartridgeId: cartridgeId.trim()
+            })
+          );
+        }
+      });
+    } else if (data.cartridgeId && !Array.isArray(data.cartridgeIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId: exampleIdStr, 
+          cartridgeId: data.cartridgeId.trim()
+        })
+      );
+    }
+
+    if (Array.isArray(data.printerIds) && data.printerIds.length > 0) {
+      data.printerIds.forEach((printerId: string) => {
+        if (printerId && printerId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId: exampleIdStr, 
+              printerId: printerId.trim()
+            })
+          );
+        }
+      });
+    } else if (data.printerId && !Array.isArray(data.printerIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId: exampleIdStr, 
+          printerId: data.printerId.trim()
+        })
+      );
+    }
+
+    if (Array.isArray(data.laptopIds) && data.laptopIds.length > 0) {
+      data.laptopIds.forEach((laptopId: string) => {
+        if (laptopId && laptopId.trim()) {
+          compatibilityPromises.push(
+            CompatibilityModel.create({
+              exampleId: exampleIdStr, 
+              laptopId: laptopId.trim()
+            })
+          );
+        }
+      });
+    } else if (data.laptopId && !Array.isArray(data.laptopIds)) {
+      compatibilityPromises.push(
+        CompatibilityModel.create({
+          exampleId: exampleIdStr, 
+          laptopId: data.laptopId.trim()
+        })
+      );
+    }
+
+    if (compatibilityPromises.length > 0) {
+      try {
+        await Promise.all(compatibilityPromises);
+      } catch (error: any) {
+        // Игнорируем ошибки дубликатов (E11000) от старого индекса exampleId_1_deviceType_1_deviceId_1
+        // После запуска скрипта drop-old-indexes.ts эти ошибки исчезнут
+        if (error.code !== 11000 || !error.message?.includes('exampleId_1_deviceType_1_deviceId_1')) {
+          throw error;
+        }
+      }
+    }
 
     res.status(200).json({
       success: true,
@@ -317,9 +491,6 @@ export const updateExample = async (req: Request, res: Response) => {
         cartridgeId: exampleObj.cartridgeId,
         printerId: exampleObj.printerId,
         laptopId: exampleObj.laptopId,
-        cartridgeNames: exampleObj.cartridgeNames || [],
-        printerNames: exampleObj.printerNames || [],
-        laptopNames: exampleObj.laptopNames || [],
         public: exampleObj.public,
         metaTitle: exampleObj.metaTitle,
         metaDescription: exampleObj.metaDescription,
@@ -369,6 +540,9 @@ export const deleteExample = async (req: Request, res: Response) => {
       return res.status(404).json({ error: 'Пример не найден' });
     }
 
+    // Удаляем все связи примера с устройствами
+    await CompatibilityModel.deleteMany({ exampleId });
+    
     await ExampleModel.findByIdAndDelete(exampleId);
 
     res.status(200).json({
@@ -394,6 +568,7 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
     const cartridgeId = req.query.cartridgeId as string || '';
     const printerId = req.query.printerId as string || '';
     const laptopId = req.query.laptopId as string || '';
+    const publicFilter = req.query.public as string || '';
 
     const skip = (page - 1) * limit;
 
@@ -416,16 +591,37 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
       }
     }
 
-    if (cartridgeId) {
-      baseQuery.cartridgeId = cartridgeId;
+    if (publicFilter === 'true') {
+      baseQuery.public = { $ne: false };
+    } else if (publicFilter === 'false') {
+      baseQuery.public = false;
     }
 
-    if (printerId) {
-      baseQuery.printerId = printerId;
-    }
+    // Ищем примеры через CompatibilityModel, если передан deviceId
+    let exampleIds: string[] = [];
+    if (cartridgeId || printerId || laptopId) {
+      const compatibilityQuery: any = {};
+      
+      if (cartridgeId) {
+        compatibilityQuery.cartridgeId = cartridgeId;
+        compatibilityQuery.exampleId = { $exists: true, $ne: null };
+      } else if (printerId) {
+        compatibilityQuery.printerId = printerId;
+        compatibilityQuery.exampleId = { $exists: true, $ne: null };
+      } else if (laptopId) {
+        compatibilityQuery.laptopId = laptopId;
+        compatibilityQuery.exampleId = { $exists: true, $ne: null };
+      }
 
-    if (laptopId) {
-      baseQuery.laptopId = laptopId;
+      const compatibilities = await CompatibilityModel.find(compatibilityQuery).select('exampleId').lean();
+      exampleIds = compatibilities.map((c: any) => c.exampleId).filter(Boolean);
+      
+      if (exampleIds.length > 0) {
+        baseQuery._id = { $in: exampleIds.map((id: string) => new mongoose.Types.ObjectId(id)) };
+      } else {
+        // Если ничего не найдено, возвращаем пустой результат
+        baseQuery._id = { $in: [] };
+      }
     }
 
     const [total, examples] = await Promise.all([
@@ -437,9 +633,103 @@ export const getPaginatedExamples = async (req: Request, res: Response) => {
         .lean(),
     ]);
 
+    // Загружаем связанные устройства через CompatibilityModel для каждого примера
+    const loadedExampleIds = examples.map((e: any) => e._id.toString());
+    const compatibilities = await CompatibilityModel.find({ 
+      exampleId: { $in: loadedExampleIds, $exists: true, $ne: null } 
+    }).lean();
+    
+    // Группируем связи по exampleId
+    const compatibilitiesByExample = new Map<string, { cartridgeIds: string[], printerIds: string[], laptopIds: string[] }>();
+    compatibilities.forEach((comp: any) => {
+      if (comp.exampleId) {
+        if (!compatibilitiesByExample.has(comp.exampleId)) {
+          compatibilitiesByExample.set(comp.exampleId, { cartridgeIds: [], printerIds: [], laptopIds: [] });
+        }
+        const devices = compatibilitiesByExample.get(comp.exampleId)!;
+        if (comp.cartridgeId) devices.cartridgeIds.push(comp.cartridgeId);
+        if (comp.printerId) devices.printerIds.push(comp.printerId);
+        if (comp.laptopId) devices.laptopIds.push(comp.laptopId);
+      }
+    });
+
+    // Собираем все ID устройств
+    const allCartridgeIds = new Set<string>();
+    const allPrinterIds = new Set<string>();
+    const allLaptopIds = new Set<string>();
+    
+    compatibilitiesByExample.forEach((devices) => {
+      devices.cartridgeIds.forEach(id => allCartridgeIds.add(id));
+      devices.printerIds.forEach(id => allPrinterIds.add(id));
+      devices.laptopIds.forEach(id => allLaptopIds.add(id));
+    });
+
+    // Загружаем данные устройств
+    const [cartridges, printers, laptops] = await Promise.all([
+      allCartridgeIds.size > 0 
+        ? CartridgeModel.find({ _id: { $in: Array.from(allCartridgeIds) } }).select('_id vendor modelCart').lean()
+        : Promise.resolve([]),
+      allPrinterIds.size > 0
+        ? PrinterModel.find({ _id: { $in: Array.from(allPrinterIds) } }).select('_id vendor model').lean()
+        : Promise.resolve([]),
+      allLaptopIds.size > 0
+        ? LaptopModel.find({ _id: { $in: Array.from(allLaptopIds) } }).select('_id vendor model series').lean()
+        : Promise.resolve([]),
+    ]);
+
+    // Создаем карты устройств
+    const cartridgesMap = new Map(cartridges.map((c: any) => [c._id.toString(), c]));
+    const printersMap = new Map(printers.map((p: any) => [p._id.toString(), p]));
+    const laptopsMap = new Map(laptops.map((l: any) => [l._id.toString(), l]));
+
+    // Добавляем связанные устройства к каждому примеру
+    const examplesWithDevices = examples.map((example: any) => {
+      const exampleIdStr = example._id.toString();
+      const devices = compatibilitiesByExample.get(exampleIdStr) || { cartridgeIds: [], printerIds: [], laptopIds: [] };
+      
+      const cartridgeNames: string[] = [];
+      const printerNames: string[] = [];
+      const laptopNames: string[] = [];
+      
+      devices.cartridgeIds.forEach(cartridgeId => {
+        const cartridge = cartridgesMap.get(cartridgeId);
+        if (cartridge) {
+          const name = `${cartridge.vendor?.toUpperCase() || ''} ${cartridge.modelCart || ''}`.trim();
+          if (name) cartridgeNames.push(name);
+        }
+      });
+      
+      devices.printerIds.forEach(printerId => {
+        const printer = printersMap.get(printerId);
+        if (printer) {
+          const name = `${printer.vendor?.toUpperCase() || ''} ${printer.model || ''}`.trim();
+          if (name) printerNames.push(name);
+        }
+      });
+      
+      devices.laptopIds.forEach(laptopId => {
+        const laptop = laptopsMap.get(laptopId);
+        if (laptop) {
+          const series = laptop.series ? `${laptop.series} ` : '';
+          const name = `${laptop.vendor?.toUpperCase() || ''} ${series}${laptop.model || ''}`.trim();
+          if (name) laptopNames.push(name);
+        }
+      });
+
+      return {
+        ...example,
+        cartridgeIds: [...new Set(devices.cartridgeIds)],
+        printerIds: [...new Set(devices.printerIds)],
+        laptopIds: [...new Set(devices.laptopIds)],
+        cartridgeNames: [...new Set(cartridgeNames)],
+        printerNames: [...new Set(printerNames)],
+        laptopNames: [...new Set(laptopNames)],
+      };
+    });
+
     res.status(200).json({
       success: true,
-      data: examples,
+      data: examplesWithDevices,
       pagination: {
         currentPage: page,
         totalPages: Math.ceil(total / limit),

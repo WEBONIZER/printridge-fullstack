@@ -151,42 +151,15 @@ export const BlogsPage = () => {
                     const devices: Array<{ type: 'cartridge' | 'printer' | 'laptop'; name: string; url: string }> = [];
                     const seenUrls = new Set<string>();
 
-                    // Обработка одиночного ID картриджа
-                    if (example.cartridgeId) {
-                        try {
-                            const cartridgeRes = await getCartridgeById(example.cartridgeId);
-                            if (cartridgeRes.data) {
-                                const cartridge = cartridgeRes.data;
-                                const vendorUrl = (cartridge.vendor || '').toLowerCase();
-                                const modelUrl = (cartridge.modelCart || '').replace(/\s/g, '');
-                                const url = `/refill/${vendorUrl}/${modelUrl}`;
-                                if (!seenUrls.has(url)) {
-                                    seenUrls.add(url);
-                                    devices.push({
-                                        type: 'cartridge',
-                                        name: cartridge.modelCart || '',
-                                        url
-                                    });
-                                }
-                            }
-                        } catch (error) {
-                            console.error('Ошибка загрузки картриджа:', error);
-                        }
-                    }
-
-                    // Обработка массива названий картриджей
-                    if (example.cartridgeNames && example.cartridgeNames.length > 0) {
+                    // Обработка массива ID картриджей
+                    const cartridgeIds = (example as any).cartridgeIds || [];
+                    if (cartridgeIds.length > 0) {
                         await Promise.all(
-                            example.cartridgeNames.map(async (name) => {
+                            cartridgeIds.map(async (cartridgeId: string) => {
                                 try {
-                                    const response = await getPaginatedCartridges({
-                                        page: 1,
-                                        limit: 1,
-                                        modelCart: name,
-                                        public: 'true'
-                                    });
-                                    if (response.data && response.data.length > 0) {
-                                        const cartridge = response.data[0];
+                                    const cartridgeRes = await getCartridgeById(cartridgeId);
+                                    if (cartridgeRes.data) {
+                                        const cartridge = cartridgeRes.data;
                                         const vendorUrl = (cartridge.vendor || '').toLowerCase();
                                         const modelUrl = (cartridge.modelCart || '').replace(/\s/g, '');
                                         const url = `/refill/${vendorUrl}/${modelUrl}`;
@@ -194,54 +167,27 @@ export const BlogsPage = () => {
                                             seenUrls.add(url);
                                             devices.push({
                                                 type: 'cartridge',
-                                                name: cartridge.modelCart || name,
+                                                name: cartridge.modelCart || '',
                                                 url
                                             });
                                         }
                                     }
                                 } catch (error) {
-                                    console.error('Ошибка загрузки картриджа по названию:', error);
+                                    console.error('Ошибка загрузки картриджа:', error);
                                 }
                             })
                         );
                     }
 
-                    // Обработка одиночного ID принтера
-                    if (example.printerId) {
-                        try {
-                            const printerRes = await getPrinterById(example.printerId);
-                            if (printerRes.data) {
-                                const printer = printerRes.data;
-                                const vendorUrl = (printer.vendor || '').toLowerCase();
-                                const modelUrl = (printer.model || '').replace(/\s/g, '');
-                                const url = `/repair/${vendorUrl}/${modelUrl}`;
-                                if (!seenUrls.has(url)) {
-                                    seenUrls.add(url);
-                                    devices.push({
-                                        type: 'printer',
-                                        name: printer.model || '',
-                                        url
-                                    });
-                                }
-                            }
-                        } catch (error) {
-                            console.error('Ошибка загрузки принтера:', error);
-                        }
-                    }
-
-                    // Обработка массива названий принтеров
-                    if (example.printerNames && example.printerNames.length > 0) {
+                    // Обработка массива ID принтеров
+                    const printerIds = (example as any).printerIds || [];
+                    if (printerIds.length > 0) {
                         await Promise.all(
-                            example.printerNames.map(async (name) => {
+                            printerIds.map(async (printerId: string) => {
                                 try {
-                                    const response = await getPaginatedPrinters({
-                                        page: 1,
-                                        limit: 1,
-                                        model: name,
-                                        public: 'true'
-                                    });
-                                    if (response.data && response.data.length > 0) {
-                                        const printer = response.data[0];
+                                    const printerRes = await getPrinterById(printerId);
+                                    if (printerRes.data) {
+                                        const printer = printerRes.data;
                                         const vendorUrl = (printer.vendor || '').toLowerCase();
                                         const modelUrl = (printer.model || '').replace(/\s/g, '');
                                         const url = `/repair/${vendorUrl}/${modelUrl}`;
@@ -249,54 +195,27 @@ export const BlogsPage = () => {
                                             seenUrls.add(url);
                                             devices.push({
                                                 type: 'printer',
-                                                name: printer.model || name,
+                                                name: printer.model || '',
                                                 url
                                             });
                                         }
                                     }
                                 } catch (error) {
-                                    console.error('Ошибка загрузки принтера по названию:', error);
+                                    console.error('Ошибка загрузки принтера:', error);
                                 }
                             })
                         );
                     }
 
-                    // Обработка одиночного ID ноутбука
-                    if (example.laptopId) {
-                        try {
-                            const laptopRes = await getLaptopById(example.laptopId);
-                            if (laptopRes.data) {
-                                const laptop = laptopRes.data;
-                                const vendorUrl = (laptop.vendor || '').toLowerCase();
-                                const modelUrl = (laptop.model || '').replace(/\s/g, '');
-                                const url = `/remont-noutbukov/${vendorUrl}/${modelUrl}`;
-                                if (!seenUrls.has(url)) {
-                                    seenUrls.add(url);
-                                    devices.push({
-                                        type: 'laptop',
-                                        name: laptop.model || '',
-                                        url
-                                    });
-                                }
-                            }
-                        } catch (error) {
-                            console.error('Ошибка загрузки ноутбука:', error);
-                        }
-                    }
-
-                    // Обработка массива названий ноутбуков
-                    if (example.laptopNames && example.laptopNames.length > 0) {
+                    // Обработка массива ID ноутбуков
+                    const laptopIds = (example as any).laptopIds || [];
+                    if (laptopIds.length > 0) {
                         await Promise.all(
-                            example.laptopNames.map(async (name) => {
+                            laptopIds.map(async (laptopId: string) => {
                                 try {
-                                    const response = await getPaginatedLaptops({
-                                        page: 1,
-                                        limit: 1,
-                                        model: name,
-                                        public: 'true'
-                                    });
-                                    if (response.data && response.data.length > 0) {
-                                        const laptop = response.data[0];
+                                    const laptopRes = await getLaptopById(laptopId);
+                                    if (laptopRes.data) {
+                                        const laptop = laptopRes.data;
                                         const vendorUrl = (laptop.vendor || '').toLowerCase();
                                         const modelUrl = (laptop.model || '').replace(/\s/g, '');
                                         const url = `/remont-noutbukov/${vendorUrl}/${modelUrl}`;
@@ -304,13 +223,13 @@ export const BlogsPage = () => {
                                             seenUrls.add(url);
                                             devices.push({
                                                 type: 'laptop',
-                                                name: laptop.model || name,
+                                                name: laptop.model || '',
                                                 url
                                             });
                                         }
                                     }
                                 } catch (error) {
-                                    console.error('Ошибка загрузки ноутбука по названию:', error);
+                                    console.error('Ошибка загрузки ноутбука:', error);
                                 }
                             })
                         );
